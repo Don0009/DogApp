@@ -37,6 +37,36 @@
                     <span class="link-title">Users</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('internet_home.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Internet Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('admin/internet_home/create/?lang=fr') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Internet Home (French)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('admin/internet_home/create/?lang=du') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Internet Home (Dutch)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('mobile_phone.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile Phone</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('number_porting.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile number(s) porting</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -49,15 +79,13 @@
         <div class="form-group border-bottom">
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight"
-                           value="sidebar-light" checked>
+                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight" value="sidebar-light" checked>
                     Light
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark"
-                           value="sidebar-dark">
+                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark" value="sidebar-dark">
                     Dark
                 </label>
             </div>
