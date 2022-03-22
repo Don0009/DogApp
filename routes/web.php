@@ -32,5 +32,6 @@ Route::prefix('admin')->group(function () {
         Route::resource('internet_home', 'orange\InternetHomeController');
         Route::resource('mobile_phone', 'orange\MobilePhoneController');
         Route::resource('number_porting', 'orange\NumberPortingController');
+        Route::resource('number_porting_du', 'orange\NumberPortingDuController');
     });
 });

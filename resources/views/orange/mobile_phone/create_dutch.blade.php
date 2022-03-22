@@ -272,7 +272,7 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="res_number" class="form-label">Numéro Réservé<span class="text-danger">*</span></label>
+                                <label for="res_number" class="form-label">Gereserveerd nr<span class="text-danger">*</span></label>
                                 <input type="res_number" class="form-control @error('res_number') is-invalid @enderror" id="res_number" autocomplete="off" placeholder="Comp Country" name="res_number" value="{{ old('res_number') }}" required>
                                 @error('res_number')
                                 <span class="invalid-feedback mb-3" role="alert">
@@ -281,7 +281,7 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="pricing_plan" class="form-label">Plan Tarifaire<span class="text-danger">*</span></label>
+                                <label for="pricing_plan" class="form-label">Tariefplan<span class="text-danger">*</span></label>
                                 <input type="pricing_plan" class="form-control @error('pricing_plan') is-invalid @enderror" id="pricing_plan" autocomplete="off" placeholder="Comp Country" name="pricing_plan" value="{{ old('pricing_plan') }}" required>
                                 @error('pricing_plan')
                                 <span class="invalid-feedback mb-3" role="alert">
@@ -290,7 +290,7 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="options_services" class="form-label">Option et Services<span class="text-danger">*</span></label>
+                                <label for="options_services" class="form-label">Optie en diensten<span class="text-danger">*</span></label>
                                 <textarea type="options_services" class="form-control @error('options_services') is-invalid @enderror" id="options_services" autocomplete="off" placeholder="Comp Country" row="5" name="options_services" value="{{ old('options_services') }}" required></textarea>
                                 @error('options_services')
                                 <span class="invalid-feedback mb-3" role="alert">
@@ -300,112 +300,111 @@
                             </div>
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <h5>Signature du client (titulaire de la carte principale</h5>
-                                    <label for="copy" class="form-label">Fait en 2 exemplaires à :<span class="text-danger">*</span></label>
+                                    <h5>Handtekening van de klant (houder hoofdkaart)</h5>
+                                    <label for="copy" class="form-label">Opgemaakt in 2 exemplaren te :<span class="text-danger">*</span></label>
                                     <input type="copy" class="form-control @error('copy') is-invalid @enderror" id="copy" autocomplete="off" placeholder="Done Copy" name="copy" value="{{ old('copy') }}" required>
-                                    <label for="the" class="form-label">Le:<span class="text-danger">*</span></label>
-                                    <input type="the" class="form-control @error('the') is-invalid @enderror" id="the" autocomplete="off" placeholder="The" name="the" value="{{ old('the') }}" required>
+                                    <label for="date" class="form-label">OP:<span class="text-danger">*</span></label>
+                                    <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
                                 </div>
                             </div>
 
-                            <p>LE CLIENT DÉCLARE AVOIR PRIS CONNAISSANCE, AVANT LA SIGNATURE DE LA PRÉSENTE DEMANDE
-                                DE CONTRAT, DES CONDITIONS GÉNÉRALES ET SPÉCIFIQUES, DE LA DESCRIPTION ET DES TARIFS
-                                DES SERVICES AUXQUELS IL SOUSCRIT ET DES CONDITIONS DU DROIT DE RÉTRACTATION, ET LES
-                                AVOIR ACCEPTÉS. LE CLIENT PEUT OBTENIR UNE COPIE DES CONDITIONS GÉNÉRALES DANS UN
-                                SHOP ORANGE OU LES CONSULTER SUR WWW.ORANGE.BE/CONDITIONSGENERALES. LE CLIENT
-                                DEMANDE D’ENTAMER L’EXÉCUTION DES SERVICES PENDANT LE DÉLAI DE RÉTRACTATION. </p>
+                            <p>DE KLANT VERKLAART VÓÓR DE ONDERTEKENING VAN DEZE CONTRACTAANVRAAG KENNIS TE
+                                HEBBEN GENOMEN VAN DE ALGEMENE EN BIJZONDERE VOORWAARDEN, DE BESCHRIJVING EN
+                                DE TARIEVEN VAN DE DIENSTEN WAAROP HIJ INTEKENT EN DE VOORWAARDEN VAN HET
+                                HERROEPINGSRECHT, EN DEZE TE HEBBEN AANVAARD. DE KLANT KAN EEN KOPIE VAN DE
+                                ALGEMENE VOORWAARDEN VERKRIJGEN IN EEN ORANGE-SHOP OF RAADPLEGEN OP
+                                WWW.ORANGE.BE/ALGEMENEVOORWAARDEN. DE KLANT VERZOEKT OM DE UITVOERING VAN DE
+                                DIENSTEN TIJDENS DE HERROEPINGSTERMIJN TE STARTEN.</p>
                             <p>
-                                <bold>N’oubliez pas de toujours joindre une copie recto verso de votre carte d’identité et des
-                                    statuts en cas de société</bold>
+                                Gelieve steeds een recto verso kopie van de identiteitskaart en in geval van een rechtspersoon een kopie
+                                van de statuten van de firma bij te voegen
                             </p>
-                            <h5>Signature du client : ..X...............</h5>
-                            <p>. Cette demande de contrat est valable et lie Orange Belgium s.a. sous condition que toutes les informations mentionnées soient correctes et
-                                complètes. Le client s’engage à informer immédiatement Orange Belgium s.a. de tout changement par écrit.</p>
-                            <p> .Orange Belgium s.a. se réserve le droit de limiter le(s) service(s) demandé(s) par le client après examen du dossier, conformément aux
-                                conditions générales d’Orange Belgium s.a. Orange Belgium s.a. s’engage à informer, par écrit, le client du résultat de cette demande de
-                                contrat. </p>
+                            <h5>Handtekening klant : ..X...............</h5>
+                            <p>• Deze abonnementsaanvraag heeft slechts waarde en verbindt Orange Belgium nv voor zover de hierin voorkomende vermeldingen juist en
+                                volledig zĳn. De klant verbindt er zich toe elke wĳziging onmiddellĳk schriftelĳk te melden aan Orange Belgium nv</p>
+                            <p>. Orange Belgium nv behoudt zich het recht voor om na onderzoek van het dossier de door de klant gevraagde dienst(en) te beperken,
+                                overeenkomstig de algemene abonnementsvoorwaarden van Orange Belgium nv. Orange Belgium nv verbindt zich ertoe de klant schriftelĳk
+                                op de hoogte te brengen van het resultaat van deze contractaanvraag.. </p>
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <h5>Paiement par carte de crédit
+                                    <h5>Betaling met kredietkaart
                                     </h5>
-                                    <p> Par la présente, j’autorise Orange Belgium s.a. jusqu’à révocation expresse à
-                                        débiter toutes les factures liées au présent contrat de la carte de crédit suivante :</p>
+                                    <p> Hierbĳ geef ik Orange Belgium nv de toestemming om tot uitdrukkelĳke herroeping,
+                                        alle facturen met betrekking tot dit contract te debiteren van de rekening van volgende
+                                        kredietkaart :</p>
 
-                                    <label for="credit_card_holder" class="form-label">Titulaire de la carte de crédit :<span class="text-danger">*</span></label>
+                                    <label for="credit_card_holder" class="form-label">Kaarthouder:<span class="text-danger">*</span></label>
                                     <input type="credit_card_holder" class="form-control @error('credit_card_holder') is-invalid @enderror" id="credit_card_holder" autocomplete="off" placeholder="Credit Card Holder" name="credit_card_holder" value="{{ old('credit_card_holder') }}" required>
 
-                                    <label for="code_generate" class="form-label">Code / alias généré par Ogone / Inginéco :<span class="text-danger">*</span></label>
+                                    <label for="code_generate" class="form-label">Code / alias gegenereerd door Ogone / Inginéco:<span class="text-danger">*</span></label>
                                     <input type="code_generate" class="form-control @error('code_generate') is-invalid @enderror" id="credit_card_holder" autocomplete="off" placeholder="Code Generate" name="code_generate" value="{{ old('code_generate') }}" required>
                                 </div>
                             </div>
-                            <h5>Signature du client: ..X...............</h5>
-
-
+                            <h5>Handtekening klant: ..X...............</h5>
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <h5>Mandat de domiciliation européenne SEPA - Business to consumer (CORE) pour un prélèvement récurrent</h5>
-                        <p>Référence du mandat (UMR): Cette référence vous sera communiqué via votre facture.</p>
-                        <p>En signant ce formulaire de mandat, vous autorisez Orange Belgium s.a. BE12ZZZ0456810810 à envoyer des instructions à votre banque pour débiter votre compte, et votre
-                            banque à débiter votre compte conformément aux instructions d’Orange Belgium s.a. BE12ZZZ0456810810. La pré-notification prévue par la Directive européenne
-                            concernant les services de paiement se fera via votre facture qui pourrait vous être envoyée en-deçà des 14 jours prévus dans ladite Directive. Vous bénéficiez d’un droit de
-                            remboursement par votre banque selon les conditions décrites dans la convention que vous avez passée avec celle-ci. Toute demande de remboursement doit être présentée
-                            dans les 8 semaines suivant la date de débit de votre compte.</p>
-                        <h4>Je soussigné,</h4>
+                        <h5>Mandaat SEPA Europese domiciliëring – Business to consumer (CORE) voor een terugkerende invordering.</h5>
+                        <p>Mandaatreferentie (UMR): Deze referentie zal je meegedeeld worden op je factuur</p>
+                        <p>Door dit mandaat te ondertekenen, geef je toestemming aan Orange Belgium nv BE12ZZZ0456810810 een opdracht te sturen naar je bank om een bedrag van je rekening te
+                            debiteren, en aan je bank om een bedrag van je rekening te debiteren in overeenstemming met de opdracht van Orange Belgium nv BE12ZZZ0456810810. De prenotificatie,
+                            bepaald in de Europese Richtlijn betreffende de betalingsdiensten, wordt meegedeeld via de factuur die je kan worden toegezonden binnen minder dan de 14 dagen
+                            vastgelegd in de Richtlijn. Je hebt het recht op terugbetaling door je bank volgens de voorwaarden die in je overeenkomst met de bank zijn vastgelegd. Je moet je verzoek
+                            tot terugbetaling indienen binnen de 8 weken na de datum waarop het bedrag van je rekening werd gedebiteerd.</p>
+                        <h4>Ondergetekende,</h4>
                         <div class="mb-2">
-                            <label for="account_holder_name" class="form-label">Nom du titulaire de compte<span class="text-danger">*</span></label>
+                            <label for="account_holder_name" class="form-label">Naam van de rekeninghouder<span class="text-danger">*</span></label>
                             <input type="account_holder_name" class="form-control @error('account_holder_name') is-invalid @enderror" id="account_holder_name" autocomplete="off" placeholder="Nom du titulaire de compte" name="account_holder_name" value="{{ old('account_holder_name') }}" required>
                         </div>
                         <div class="mb-2">
-                            <label for="street_and_number" class="form-label">Rue et numéro<span class="text-danger">*</span></label>
+                            <label for="street_and_number" class="form-label">Straat en nummer<span class="text-danger">*</span></label>
                             <input type="street_and_number" class="form-control @error('street_and_number') is-invalid @enderror" id="street_and_number" autocomplete="off" placeholder="Nom du titulaire de compte" name="street_and_number" value="{{ old('street_and_number') }}" required>
                         </div>
                         <div class="row">
                             <div class="col-10">
-                                <label for="postal_code_and_city" class="form-label">Code postal et ville<span class="text-danger">*</span></label>
+                                <label for="postal_code_and_city" class="form-label">Postcode en gemeente<span class="text-danger">*</span></label>
                                 <input type="postal_code_and_city" class="form-control @error('postal_code_and_city') is-invalid @enderror" id="postal_code_and_city" autocomplete="off" placeholder="Nom du titulaire de compte" name="postal_code_and_city" value="{{ old('postal_code_and_city') }}" required>
                             </div>
                             <div class="col-2">
-                                <label for="hold_country" class="form-label">Pays<span class="text-danger">*</span></label>
+                                <label for="hold_country" class="form-label">Land<span class="text-danger">*</span></label>
                                 <input type="hold_country" class="form-control @error('hold_country') is-invalid @enderror" id="hold_country" autocomplete="off" placeholder="Nom du titulaire de compte" name="hold_country" value="{{ old('hold_country') }}" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-9">
-                                <label for="iban_account_number" class="form-label">N° de compte IBAN<span class="text-danger">*</span></label>
+                                <label for="iban_account_number" class="form-label">IBAN-rekeningnummer<span class="text-danger">*</span></label>
                                 <input type="iban_account_number" class="form-control @error('iban_account_number') is-invalid @enderror" id="iban_account_number" autocomplete="off" placeholder="Nom du titulaire de compte" name="iban_account_number" value="{{ old('iban_account_number') }}" required>
                             </div>
                             <div class="col-3">
-                                <label for="bic_code" class="form-label">Code BIC<span class="text-danger">*</span></label>
+                                <label for="bic_code" class="form-label">BIC-code<span class="text-danger">*</span></label>
                                 <input type="bic_code" class="form-control @error('bic_code') is-invalid @enderror" id="bic_code" autocomplete="off" placeholder="Nom du titulaire de compte" name="bic_code" value="{{ old('bic_code') }}" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-9">
-                                <label for="underlying_contract_number" class="form-label">N° de contrat sous-jacent<span class="text-danger">*</span></label>
+                                <label for="underlying_contract_number" class="form-label">Nr. van het onderliggende contract<span class="text-danger">*</span></label>
                                 <input type="underlying_contract_number" class="form-control @error('underlying_contract_number') is-invalid @enderror" id="underlying_contract_number" autocomplete="off" placeholder="Nom du titulaire de compte" name="underlying_contract_number" value="{{ old('underlying_contract_number') }}" required>
                                 <div class="row">
                                     <div class="col-6">
-                                        <label for="a_date" class="form-label"> Date:<span class="text-danger">*</span></label>
+                                        <label for="a_date" class="form-label"> Datum (dag/maand/jaar)<span class="text-danger">*</span></label>
                                         <input class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="a_date" name="a_date" value="{{ old('a_date') }}" type="date">
-                                        <label for="location" class="form-label">Lieu<span class="text-danger">*</span></label>
+                                        <label for="location" class="form-label">Plaats<span class="text-danger">*</span></label>
                                         <input type="location" class="form-control @error('location') is-invalid @enderror" id="location" autocomplete="off" placeholder="Nom du titulaire de compte" name="location" value="{{ old('location') }}" required>
                                     </div>
                                     <div class="col-6">
-                                        <p>Si vous êtes déjà client Orange, veuillez ajouter votre numéro de
-                                            client. Si vous n’êtes pas encore client, notre agent introduira la
-                                            référence adéquate</p>
+                                        <p>Als je al Orange-klant bent, gelieve dan je klantnummer toe
+                                            te voegen. Indien je nog geen klant bent, dan zal onze agent
+                                            de juiste referentie invoeren.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-3">
-                                <label for="signature" class="form-label">Signature du titulaire de compte<span class="text-danger">*</span></label>
+                                <label for="signature" class="form-label">Handtekening (rekeninghouder)<span class="text-danger">*</span></label>
                                 <textarea type="signature" class="form-control @error('signature') is-invalid @enderror" id="signature" autocomplete="off" placeholder="Signature du titulaire de compte" name="signature" rows="8" value="{{ old('signature') }}" required></textarea>
                             </div>
 

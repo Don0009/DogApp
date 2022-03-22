@@ -303,8 +303,8 @@
                                     <h5>Signature du client (titulaire de la carte principale</h5>
                                     <label for="copy" class="form-label">Fait en 2 exemplaires à :<span class="text-danger">*</span></label>
                                     <input type="copy" class="form-control @error('copy') is-invalid @enderror" id="copy" autocomplete="off" placeholder="Done Copy" name="copy" value="{{ old('copy') }}" required>
-                                    <label for="the" class="form-label">Le:<span class="text-danger">*</span></label>
-                                    <input type="the" class="form-control @error('the') is-invalid @enderror" id="the" autocomplete="off" placeholder="The" name="the" value="{{ old('the') }}" required>
+                                    <label for="date" class="form-label">Le:<span class="text-danger">*</span></label>
+                                    <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
                                 </div>
                             </div>
 

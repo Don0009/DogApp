@@ -62,9 +62,27 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{ url('admin/mobile_phone/create/?lang=fr') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile Phone (French)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('admin/mobile_phone/create/?lang=du') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile Phone (Dutch)</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route('number_porting.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Mobile number(s) porting</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('number_porting_du.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile number(s) porting (Dutch)</span>
                 </a>
             </li>
         </ul>

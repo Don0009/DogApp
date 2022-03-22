@@ -4,9 +4,9 @@ namespace App\Http\Controllers\orange;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\NumberPorting;
+use App\NumberPortaingDu;
 
-class NumberPortingController extends Controller
+class NumberPortingDuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class NumberPortingController extends Controller
      */
     public function index()
     {
-
-        $nums = NumberPorting::all();
-        return view('orange.number_porting.index', compact('nums'));
+        $numdus = NumberPortaingDu::all();
+        return view('orange.number_porting_du.index', compact('numdus'));
     }
 
     /**
@@ -25,13 +24,9 @@ class NumberPortingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-
-        if ($request->lang == 'fr') {
-            return view('orange.number_porting.create_dut');
-        }
-        return view('orange.number_porting.create');
+        return view('orange.number_porting_du.create');
     }
 
     /**
@@ -42,9 +37,7 @@ class NumberPortingController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        NumberPorting::create($data);
-        return redirect()->route('number_porting.index');
+        //
     }
 
     /**

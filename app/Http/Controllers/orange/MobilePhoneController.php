@@ -24,8 +24,11 @@ class MobilePhoneController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        if ($request->lang == 'du') {
+            return view('orange.mobile_phone.create_dutch');
+        }
         return view('orange.mobile_phone.create');
     }
 

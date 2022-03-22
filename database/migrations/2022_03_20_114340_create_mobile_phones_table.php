@@ -48,7 +48,7 @@ class CreateMobilePhonesTable extends Migration
             $table->string('pricing_plan');
             $table->string('options_services');
             $table->string('copy');
-            $table->string('the');
+            $table->date('date');
             $table->string('credit_card_holder');
             $table->string('code_generate');
             $table->string('account_holder_name');
