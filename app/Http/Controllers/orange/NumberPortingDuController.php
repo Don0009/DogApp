@@ -37,7 +37,9 @@ class NumberPortingDuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        NumberPortaingDu::create($data);
+        return redirect()->route('number_porting_du.index');
     }
 
     /**
