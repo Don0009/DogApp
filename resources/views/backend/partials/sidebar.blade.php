@@ -37,6 +37,20 @@
                     <span class="link-title">Users</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('internet_tv.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">TV + internet aanvraag orange NL</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="{{ route('engie.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Contract Professionele Klanten</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

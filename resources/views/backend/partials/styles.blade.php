@@ -14,6 +14,8 @@
   <!-- Layout styles -->
     <link rel="stylesheet" href="{{asset('assets/css/demo_1/style.css')}}">
 
+
+
   <!-- End layout styles -->
   <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
 
@@ -22,3 +24,7 @@
     <link rel="stylesheet" href="{{asset('assets/vendors/jquery-tags-input/jquery.tagsinput.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/font-awesome/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css')}}">
+
+
+      <!-- internet_tv styles -->
+      <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">

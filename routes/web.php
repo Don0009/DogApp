@@ -29,5 +29,8 @@ Route::prefix('admin')->group(function () {
         Route::resource('permissions', 'Admin\PermissionController');
         Route::resource('roles', 'Admin\RoleController');
         Route::resource('users', 'Admin\UserController');
+        Route::resource('internet_tv', 'OrangeInternetTvController');
+        Route::resource('internet_tv', 'OrangeInternetTvController');
+        Route::resource('engie', 'EngieContractController');
     });
 });
