@@ -251,7 +251,51 @@
                                 <th>
                                     Desired start date 1
                                 </th>
-
+                                <th>
+                                    valid for the two energies
+                                </th>
+                                <th>
+                                    Code P
+                                </th>
+                                <th>
+                                    Monthly
+                                </th>
+                                <th>
+                                    Bimonthly
+                                </th>
+                                <th>
+                                    Quarterly Advance
+                                </th>
+                                <th>
+                                    By E-mail
+                                </th>
+                                <th>
+                                    Per Post
+                                </th>
+                                <th>
+                                    by Bank transfer
+                                </th>
+                                <th>
+                                    via domiciliëring
+                                </th>
+                                <th>
+                                    through a new
+                                </th>
+                                <th>
+                                    direct debit with the account number
+                                </th>
+                                <th>
+                                    Drawn up in three original copies, te
+                                </th>
+                                <th>
+                                    Which Of The Customer
+                                </th>
+                                <th>
+                                    Naam: [Handtekening]
+                                </th>
+                                <th>
+                                    You do not wish to receive commercial communications from ENGIE Electrabel
+                                </th>
                                 <th>
                                     Created At
                                 </th>
@@ -339,6 +383,21 @@
                                 <td>{{ $contract_pro->you_want_to_change_your_existing_7}}</td>
                                 <td>{{ $contract_pro->place_3}}</td>
                                 <td>{{ $contract_pro->desired_start_date_1}}</td>
+                                <td>{{ $contract_pro->valid_for_the_two_energies}}</td>
+                                <td>{{ $contract_pro->code_p}}</td>
+                                <td>{{ $contract_pro->monthly}}</td>
+                                <td>{{ $contract_pro->bimonthly}}</td>
+                                <td>{{ $contract_pro->quarterly_advance}}</td>
+                                <td>{{ $contract_pro->by_e_mail}}</td>
+                                <td>{{ $contract_pro->per_post}}</td>
+                                <td>{{ $contract_pro->by_bank_transfer}}</td>
+                                <td>{{ $contract_pro->via_domiciliëring}}</td>
+                                <td>{{ $contract_pro->through_a_new}}</td>
+                                <td>{{ $contract_pro->debit_account_number}}</td>
+                                <td>{{ $contract_pro->drawn_up}}</td>
+                                <td>{{ $contract_pro->of_which_the_customer}}</td>
+                                <td>{{ $contract_pro->handtekening}}</td>
+                                <td>{{ $contract_pro->do_not_wish_to_receive_commercial_communications}}</td>
                                 <td>
                                     {{ \Carbon\Carbon::parse($contract_pro->created_at)->diffForhumans() }}
                                 </td>

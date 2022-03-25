@@ -86,6 +86,21 @@ class CreateEngieContractsTable extends Migration
             $table->boolean('you_want_to_change_your_existing_7')->nullable();
             $table->string('place_3');
             $table->date('desired_start_date_1');
+            $table->boolean('valid_for_the_two_energies')->nullable();
+            $table->string('code_p');
+            $table->boolean('monthly')->nullable();
+            $table->boolean('bimonthly')->nullable();
+            $table->boolean('quarterly_advance')->nullable();
+            $table->boolean('by_e_mail')->nullable();
+            $table->boolean('per_post')->nullable();
+            $table->boolean('by_bank_transfer')->nullable();
+            $table->boolean('via_domiciliëring')->nullable();
+            $table->boolean('through_a_new')->nullable();
+            $table->string('debit_account_number');
+            $table->string('drawn_up');
+            $table->date('of_which_the_customer');
+            $table->string('handtekening');
+            $table->boolean('do_not_wish_to_receive_commercial_communications')->nullable();
             $table->timestamps();
         });
     }

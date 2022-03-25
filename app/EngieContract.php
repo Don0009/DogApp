@@ -14,5 +14,7 @@ class EngieContract extends Model
     ,'you_move_or_build_1','you_already_have_an_electricity_contract_1','you_want_to_change_your_existing_1','you_move_or_build_2','you_already_have_an_electricity_contract_2'
     ,'you_want_to_change_your_existing_2','you_want_to_change_your_existing_3','place_2','desired_start_date','clear_selection_1','you_move_or_build_3','you_already_have_an_electricity_contract_3','you_want_to_change_your_existing_4'
     ,'you_want_a_contract_for_an_extra_1','you_move_or_build_4','you_already_have_an_electricity_contract_4','you_want_to_change_your_existing_5','you_move_or_build_5','you_already_have_an_electricity_contract_5','you_want_to_change_your_existing_6'
-    ,'you_want_to_change_your_existing_7','place_3','desired_start_date_1'];
+    ,'you_want_to_change_your_existing_7','place_3','desired_start_date_1','valid_for_the_two_energies','code_p','monthly','bimonthly','quarterly_advance'
+    ,'by_e_mail','per_post','by_bank_transfer','via_domiciliëring','through_a_new','debit_account_number','drawn_up','of_which_the_customer','handtekening'
+    ,'do_not_wish_to_receive_commercial_communications'];
 }

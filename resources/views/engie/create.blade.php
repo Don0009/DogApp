@@ -823,6 +823,268 @@ uw contract kunt u elektriciteit en/of aardgas afnemen bij ENGIE Electrabel voor
 </div>
 </div>
 
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="sectiom">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="valid_for_the_two_energies">
+                            <label class="form-check-label" for="inlineCheckbox2">Tarief ‘leegstaande woning’ (geldig voor de twee energieën, geen forfaits en onbepaalde duur)</label>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="codep">Code P:</label>
+                        <div class="input-group mb-3">
+                            <input type="name" class="form-control" id="code_p" autocomplete="off"
+                                   placeholder="Code P" name="code_p">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        BETALINGSMODALITEITEN
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-4">
+                        U opteert voor
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="monthly">
+                            <label class="form-check-label" for="inlineCheckbox2">maandelijks</label>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="bimonthly">
+                            <label class="form-check-label" for="inlineCheckbox2">tweemaandelijks</label>
+                          </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="quarterly_advance">
+                            <label class="form-check-label" for="inlineCheckbox2">driemaandelijks voorschot</label>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        U wenst uw facturen en de bijbehorende correspondentie te ontvangen
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="by_e_mail">
+                            <label class="form-check-label" for="inlineCheckbox2">via e-mail (zie ook de Bijzondere voorwaarden)</label>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="per_post">
+                            <label class="form-check-label" for="inlineCheckbox2">per post</label>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        U betaalt
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="by_bank_transfer">
+                                    <label class="form-check-label" for="inlineCheckbox2">per overschrijving</label>
+                                  </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="via_domiciliëring">
+                                    <label class="form-check-label" for="inlineCheckbox2">via domiciliëring</label>
+                                  </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="through_a_new">
+                                    <label class="form-check-label" for="inlineCheckbox2">via een nieuw</label>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="directdebit">domiciliëring met het rekeningnummer IBAN</label>
+                                <div class="input-group ">
+                                    <input type="name" class="form-control" id="debit_account_number" autocomplete="off"
+                                           placeholder="domiciliëring met het rekeningnummer IBAN" name="debit_account_number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mt-4 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="">
+                                        ENGIE Electrabel stuurt u een schriftelijke bevestiging van uw contract(en). Vanaf de Ontvangstdag van de schriftelijke bevestiging heeft u
+                                        14 kalenderdagen om ons schriftelijk mee te delen dat u ervan afziet, zonder opgave van redenen. Uw schrijven dient gericht te zijn voor het
+                                        Vlaams Gewest aan Electrabel, Postbus 10070, 2600 Berchem en voor het Waals en het Brussels Hoofdstedelijk Gewest aan Electrabel, Boîte
+                                        Postale 10070, 5000 Namur. U kunt hiervoor gebruikmaken van de modeltekst voor herroeping die u terugvindt in de schriftelijke bevestiging
+                                        van het (de) Contract(en), maar u bent hiertoe niet verplicht. Als u ons verzocht heeft om de levering van elektriciteit en/of aardgas te laten
+                                        beginnen zonder het einde van de herroepingstermijn af te wachten, en u alsnog gebruik maakt van uw herroepingsrecht, betaalt u een
+                                        bedrag dat overeenstemt met de reeds door ENGIE Electrabel geleverde elektriciteit en/of aardgas in overeenstemming met het Wetboek van
+                                        economisch recht. Dit bedrag wordt berekend op basis van de totale prijs zoals vastgelegd in het contract en de door de distributienetbeheerder
+                                        gevalideerde verbruiksgegevens.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12">
+                            <label for="drawn_up">Opgemaakt in drie originele exemplaren, te</label>
+                            <div class="input-group ">
+                                <input type="name" class="form-control" id="drawn_up" autocomplete="off"
+                                       placeholder="Opgemaakt in drie originele exemplaren, te" name="drawn_up">
+                        </div>
+                    </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                            <label for="of_which_the_customer">op</label>
+                            <div class="input-group ">
+                                <input type="date" class="form-control" id="of_which_the_customer" autocomplete="off"
+                                       placeholder=" " name="of_which_the_customer">waarvan de klant erkent één exemplaar te hebben ontvangen
+                        </div>
+                    </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-12 mt-5">
+                            De Klant verklaart kennis genomen te hebben van de inhoud van dit (deze) Contract(en) dat (die)
+                            bestaat (bestaan) uit dit document, de Algemene Voorwaarden voor professionele klanten, de
+                            Bijzondere Voorwaarden en de prijsfiches, alsook deze te accepteren. Met zijn handtekening erkent
+                            de klant dat hij zich verbindt tegenover ENGIE Electrabel en dat hij geen openstaande schulden heeft
+                            bij ENGIE Electrabel.
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-12 mt-4">
+                            Ondertekend door
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="">
+                              <div class="">
+                                Voor Electrabel nv:
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-7">
+                            <div class="col-12 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="">
+                                            Dominik Vansteenbeeck
+                                        </div>
+                                        <div class="">
+                                            Verantwoordelijke
+                                        </div>
+                                        <div class="">
+                                            klantendiens
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-5">
+                            <div class="col-12 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <label for="handtekening">Naam: [Handtekening]</label>
+                                        <div class="input-group ">
+                                            <input type="name" class="form-control" id="handtekening" autocomplete="off"
+                                                   placeholder=" " name="handtekening">
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12">
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="You+do_not_wish_to_receive_commercial_communications">
+                <label class="form-check-label" for="inlineCheckbox2">U wenst geen commerciële communicatie van ENGIE Electrabel te ontvangen. (2) Enkel in te vullen indien u al ENGIE Electrabel klant bent. (3) Uw Contract wordt nadien verdergezet voor telkens 1 jaar of 3 jaar in geval van Easy3 pro vast. Tenzij anders vermeld in de Algemene Voorwaarden, kan u uw Contract(en)
+                    op ieder moment opzeggen, zonder verbrekingsvergoeding, mits het respecteren van een schriftelijke opzeg van 1 maand. (4) Enkel in te vullen voor een nieuwe klant, nieuw adres of voor bestaande klanten die kiezen voor een nieuwe energie. (5) We zullen u per brief een mandaat toesturen. Bezorg het ons ondertekend
+                    en gedateerd terug. Zonder dit document kunnen we uw domiciliëring niet activeren.</label>
+              </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                Algemene Voorwaarden van Electrabel nv
+            </div>
+            <div class="col-12">
+                (hierna ‘ENGIE Electrabel’ of ‘wij’) voor professionele klanten (versie 201810)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="">1 Contract</div>
+                <div>Uw Contract met ENGIE Electrabel bestaat uit deze Algemene Voorwaarden (AV), de Bijzondere Voorwaarden en de
+                    prijzen (BV). In geval van tegenstrijdigheid hebben de BV voorrang op de AV</div>
+                    <div>Uw Contract heeft betrekking op de levering van elektriciteit of aardgas (energie) of op de producten en/of diensten
+                        die u los van uw energie aankoopt. Er wordt telkens een afzonderlijk Contract afgesloten voor elk van deze energieën,
+                        deze producten en/of diensten</div>
+                        <div>Indien wij u de mogelijkheid bieden om onze contractuele voorwaarden te aanvaarden door gebruik te maken van een
+                            webformulier of e-mail of een unieke code die u telefonisch of via een webapplicatie activeert, dan vormt het feit dat u
+                            daarvan gebruik maakt een geldig bewijs in rechte van uw aanvaarding van onze contractuele voorwaarden.
+                            Indien wij uw standaardleverancier zijn is dit Contract van toepassing krachtens de wettelijke voorschriften die ENGIE
+                            Electrabel hebben aangeduid als standaardleverancier</div>
+                            <div class="mt-3">2. Definities</div>
+                            <div>Het Afnamepunt is het punt waar wij u elektrisch vermogen of aardgas ter beschikking stellen. Het is geïdentificeerd
+                                in de BV door een adres en heeft een unieke EAN-code.</div>
+                                <div>De Netwerkkosten zijn de tarieven voor het gebruik van het distributienet en voor de ondersteunende diensten, evenals de periodieke tarieven voor de aansluiting op het distributienet voor elektriciteit of aardgas, alsook de tarieven
+                                    voor het gebruik van het transportnet voor elektriciteit of aardgas</div>
+                                    <div>De Ontvangstdag/Ontvangst is de derde werkdag na de verzending van het document. Een werkdag is elke dag van
+                                        de week met uitzondering van zaterdagen, zondagen en wettelijke feestdagen.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
                         <button type="submit" class="btn btn-primary mt-5">Submit</button>
                         <a href="{{ route('engie.index') }}" class="btn btn-light mt-5">Cancel</a>

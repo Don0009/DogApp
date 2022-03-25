@@ -80,6 +80,12 @@ class EngieContractController extends Controller
             'desired_start_date' => 'required',
             'place_3' => 'required',
             'desired_start_date_1' => 'required',
+            'valid_for_the_two_energies' => 'required',
+            'code_p' => 'required',
+            'debit_account_number' => 'required',
+            'drawn_up' => 'required',
+            'handtekening' => 'required',
+
         ]);
 
         // dd($request->all());
@@ -93,6 +99,9 @@ class EngieContractController extends Controller
         $data = $request->all();
 
 
+        if(isset($data['of_which_the_customer'])){
+            $data['of_which_the_customer'] = Carbon::parse($data['of_which_the_customer']);
+        }
 
         if(isset($data['desired_start_date_1'])){
             $data['desired_start_date_1'] = Carbon::parse($data['desired_start_date_1']);
@@ -101,9 +110,93 @@ class EngieContractController extends Controller
         if(isset($data['desired_start_date'])){
             $data['desired_start_date'] = Carbon::parse($data['desired_start_date']);
         }
+        if(isset($data['do_not_wish_to_receive_commercial_communications'])){
+            if($data['do_not_wish_to_receive_commercial_communications'] == "on"){
+            $data['do_not_wish_to_receive_commercial_communications'] = true;
+            }  else{
+            $data['do_not_wish_to_receive_commercial_communications'] = false;
+            }
+        }
+        if(isset($data['handtekening'])){
+            if($data['handtekening'] == "on"){
+            $data['handtekening'] = true;
+            }  else{
+            $data['handtekening'] = false;
+            }
+        }
+        if(isset($data['drawn_up'])){
+            if($data['drawn_up'] == "on"){
+            $data['drawn_up'] = true;
+            }  else{
+            $data['drawn_up'] = false;
+            }
+        }
 
+        if(isset($data['debit_account_number'])){
+            if($data['debit_account_number'] == "on"){
+            $data['debit_account_number'] = true;
+            }  else{
+            $data['debit_account_number'] = false;
+            }
+        }
 
+        if(isset($data['through_a_new'])){
+            if($data['through_a_new'] == "on"){
+            $data['through_a_new'] = true;
+            }  else{
+            $data['through_a_new'] = false;
+            }
+        }
+        if(isset($data['via_domiciliëring'])){
+            if($data['via_domiciliëring'] == "on"){
+            $data['via_domiciliëring'] = true;
+            }  else{
+            $data['via_domiciliëring'] = false;
+            }
+        }
+        if(isset($data['by_bank_transfer'])){
+            if($data['by_bank_transfer'] == "on"){
+            $data['by_bank_transfer'] = true;
+            }  else{
+            $data['by_bank_transfer'] = false;
+            }
+        }
+        if(isset($data['per_post'])){
+            if($data['per_post'] == "on"){
+            $data['per_post'] = true;
+            }  else{
+            $data['per_post'] = false;
+            }
+        }
+        if(isset($data['by_e_mail'])){
+            if($data['by_e_mail'] == "on"){
+            $data['by_e_mail'] = true;
+            }  else{
+            $data['by_e_mail'] = false;
+            }
+        }
 
+        if(isset($data['quarterly_advance'])){
+            if($data['quarterly_advance'] == "on"){
+            $data['quarterly_advance'] = true;
+            }  else{
+            $data['quarterly_advance'] = false;
+            }
+        }
+        if(isset($data['bimonthly'])){
+            if($data['bimonthly'] == "on"){
+            $data['bimonthly'] = true;
+            }  else{
+            $data['bimonthly'] = false;
+            }
+        }
+        if(isset($data['monthly'])){
+            if($data['monthly'] == "on"){
+            $data['monthly'] = true;
+            }  else{
+            $data['monthly'] = false;
+            }
+        }
         if(isset($data['clear_selection_1'])){
             if($data['clear_selection_1'] == "on"){
             $data['clear_selection_1'] = true;
@@ -111,6 +204,15 @@ class EngieContractController extends Controller
             $data['clear_selection_1'] = false;
             }
         }
+
+        if(isset($data['valid_for_the_two_energies'])){
+            if($data['valid_for_the_two_energies'] == "on"){
+            $data['valid_for_the_two_energies'] = true;
+            }  else{
+            $data['valid_for_the_two_energies'] = false;
+            }
+        }
+
         if(isset($data['you_move_or_build_3'])){
             if($data['you_move_or_build_3'] == "on"){
             $data['you_move_or_build_3'] = true;
@@ -195,19 +297,6 @@ class EngieContractController extends Controller
             $data['place_3'] = false;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
         if(isset($data['you_want_to_change_your_existing_3'])){
             if($data['you_want_to_change_your_existing_3'] == "on"){
             $data['you_want_to_change_your_existing_3'] = true;
@@ -297,9 +386,6 @@ class EngieContractController extends Controller
             $data['clear_selection'] = false;
             }
         }
-
-
-
         if(isset($data['you_have_never_had_energy'])){
             if($data['you_have_never_had_energy'] == "on"){
             $data['you_have_never_had_energy'] = true;
