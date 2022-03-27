@@ -25,10 +25,26 @@ class EngieContractController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        $contract_pros= EngieContract::all();
-        return view ('engie.create',compact('contract_pros'));
+        // $contract_pros= EngieContract::all();
+        // return view ('engie.create',compact('contract_pros'));
+        $lang = $request->lang;
+        if($lang == "en"){
+            return view('engie.create');
+            }
+
+         elseif($lang == "crk"){
+            return view('engie.create_crk');
+         }
+
+         elseif($lang == "ccp"){
+            return view('engie.create_ccp');
+         }
+
+         elseif($lang == "ccr"){
+            return view('engie.create_ccr');
+         }
     }
 
     /**
@@ -85,7 +101,7 @@ class EngieContractController extends Controller
             'debit_account_number' => 'required',
             'drawn_up' => 'required',
             'handtekening' => 'required',
-
+            'of_which_the_customer' => 'required',
         ]);
 
         // dd($request->all());
@@ -110,6 +126,7 @@ class EngieContractController extends Controller
         if(isset($data['desired_start_date'])){
             $data['desired_start_date'] = Carbon::parse($data['desired_start_date']);
         }
+
         if(isset($data['do_not_wish_to_receive_commercial_communications'])){
             if($data['do_not_wish_to_receive_commercial_communications'] == "on"){
             $data['do_not_wish_to_receive_commercial_communications'] = true;

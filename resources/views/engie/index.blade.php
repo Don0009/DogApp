@@ -398,6 +398,7 @@
                                 <td>{{ $contract_pro->of_which_the_customer}}</td>
                                 <td>{{ $contract_pro->handtekening}}</td>
                                 <td>{{ $contract_pro->do_not_wish_to_receive_commercial_communications}}</td>
+
                                 <td>
                                     {{ \Carbon\Carbon::parse($contract_pro->created_at)->diffForhumans() }}
                                 </td>
