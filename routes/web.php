@@ -32,5 +32,6 @@ Route::prefix('admin')->group(function () {
         Route::resource('internet_tv', 'OrangeInternetTvController');
         Route::resource('internet_tv', 'OrangeInternetTvController');
         Route::resource('engie', 'EngieContractController');
+        Route::resource('pad_services', 'PadServicesController');
     });
 });

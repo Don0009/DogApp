@@ -51,6 +51,14 @@
                     <span class="link-title">Contract Professionele Klanten</span>
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a href="{{ route('pad_services.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">PAD Services</span>
+                </a>
+            </li>
+
         </ul>
     </div>
 </nav>

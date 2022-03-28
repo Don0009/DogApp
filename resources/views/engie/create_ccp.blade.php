@@ -991,7 +991,6 @@
                               <div class="">
                                 Pour Electrabel sa
                               </div>
-
                           </div>
                       </div>
                       <div class="row">

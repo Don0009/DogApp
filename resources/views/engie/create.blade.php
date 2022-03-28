@@ -34,7 +34,7 @@
         </nav>
     </div>
 
-    <form class="forms-sample" method="POST" action="{{ route('engie.store') }}">
+    <form class="forms-sample" method="POST" action="{{ route('pad_services.store') }}">
 @csrf
 <div class="section">
     <div class="container-fluid">

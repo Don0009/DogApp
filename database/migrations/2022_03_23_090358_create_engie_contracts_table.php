@@ -101,7 +101,6 @@ class CreateEngieContractsTable extends Migration
             $table->date('of_which_the_customer');
             $table->string('handtekening');
             $table->boolean('do_not_wish_to_receive_commercial_communications')->nullable();
-
             $table->timestamps();
         });
     }
