@@ -33,5 +33,6 @@ Route::prefix('admin')->group(function () {
         Route::resource('mobile_phone', 'orange\MobilePhoneController');
         Route::resource('number_porting', 'orange\NumberPortingController');
         Route::resource('number_porting_du', 'orange\NumberPortingDuController');
+        Route::resource('electricity_natural_gas', 'lampiris\ElectricityNaturalControllers');
     });
 });

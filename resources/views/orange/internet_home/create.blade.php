@@ -68,15 +68,15 @@
                                 </div>
                                 <div class="col">
                                     <h6>language:<span class="text-danger">*</span>
-                                        <h6>
-                                            <input type="radio" name="language" value="0">
-                                            <label for="language" class="form-label">NL</label>
-                                            <input type="radio" name="language" value="1">
-                                            <label for="language" class="form-label">FR</label>
-                                            <input type="radio" name="language" value="2">
-                                            <label for="language" class="form-label">UK</label>
-                                            <input type="radio" name="language" value="3">
-                                            <label for="language" class="form-label">DE</label>
+                                    </h6>
+                                    <input type="radio" name="language" value="0">
+                                    <label for="language" class="form-label">NL</label>
+                                    <input type="radio" name="language" value="1">
+                                    <label for="language" class="form-label">FR</label>
+                                    <input type="radio" name="language" value="2">
+                                    <label for="language" class="form-label">UK</label>
+                                    <input type="radio" name="language" value="3">
+                                    <label for="language" class="form-label">DE</label>
                                 </div>
                             </div>
 

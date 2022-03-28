@@ -85,6 +85,12 @@
                     <span class="link-title">Mobile number(s) porting (Dutch)</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('electricity_natural_gas.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Electricity And Natural Gas</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
