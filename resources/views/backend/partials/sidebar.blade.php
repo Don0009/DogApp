@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <div class="sidebar-header">
         <a href="{{url('/')}}" class="sidebar-brand">
-            Darzi.<span>PK</span>
+           Contract<span>Form</span>
         </a>
         <div class="sidebar-toggler not-active">
             <span></span>
@@ -55,7 +55,7 @@
             <li class="nav-item">
                 <a href="{{ route('pad_services.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title">PAD Services</span>
+                    <span class="link-title">PAD Services(incomplete)</span>
                 </a>
             </li>
 

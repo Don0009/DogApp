@@ -1260,10 +1260,10 @@ pas de dettes ouvertes auprès d’ENGIE Electrabel.
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-1">
                                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="professional_client_1">
                                                     </div>
-                                                    <div class="col-9">
+                                                    <div class="col-11">
                                                         <label class="form-check-label" for="inlineCheckbox2">Si client professionnel:</label>
                                                 </div>
 
@@ -1277,10 +1277,10 @@ pas de dettes ouvertes auprès d’ENGIE Electrabel.
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-6">
                                                         <label for="company_name">Nom de la société</label>
                                                     </div>
-                                                    <div class="col-9">
+                                                    <div class="col-6">
                                                         <input type="name" class="form-control" id="company_name" autocomplete="off"
                                                            placeholder="Date de naissance" name="company_name">
                                                 </div>
@@ -1293,10 +1293,10 @@ pas de dettes ouvertes auprès d’ENGIE Electrabel.
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-6">
                                                         <label for="legal_status">Forme juridique</label>
                                                     </div>
-                                                    <div class="col-9">
+                                                    <div class="col-6">
                                                         <input type="name" class="form-control" id="legal_status" autocomplete="off"
                                                        placeholder="Lieu de naissance" name="legal_status">
                                                 </div>
@@ -1312,10 +1312,10 @@ pas de dettes ouvertes auprès d’ENGIE Electrabel.
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-5">
                                                         <label for="customer_no_1">N° de Client</label>
                                                     </div>
-                                                    <div class="col-9">
+                                                    <div class="col-7">
                                                         <input type="number" class="form-control" id="customer_no_1" autocomplete="off"
                                                         placeholder="N° de Client" name="customer_no_1">
                                                 </div>
@@ -1329,10 +1329,10 @@ pas de dettes ouvertes auprès d’ENGIE Electrabel.
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-4">
                                                         <label for="code_nace">Code NACE</label>
                                                     </div>
-                                                    <div class="col-9">
+                                                    <div class="col-8">
                                                         <input type="name" class="form-control" id="code_nace" autocomplete="off"
                                                        placeholder="Code NACE" name="code_nace">
                                                 </div>
@@ -1364,10 +1364,10 @@ pas de dettes ouvertes auprès d’ENGIE Electrabel.
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <label for="rpm">RPM</label>
                                                     </div>
-                                                    <div class="col-9">
+                                                    <div class="col-10">
                                                         <input type="name" class="form-control" id="rpm" autocomplete="off"
                                                         placeholder="RPM" name="rpm">
                                                 </div>
@@ -1383,10 +1383,10 @@ pas de dettes ouvertes auprès d’ENGIE Electrabel.
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <label for="phone">Tél</label>
                                                     </div>
-                                                    <div class="col-9">
+                                                    <div class="col-10">
                                                         <input type="number" class="form-control" id="phone" autocomplete="off"
                                                         placeholder="Tél" name="phone">
 
@@ -1400,10 +1400,10 @@ pas de dettes ouvertes auprès d’ENGIE Electrabel.
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <label for="gsm">GSM</label>
                                                     </div>
-                                                    <div class="col-9">
+                                                    <div class="col-10">
                                                         <input type="name" class="form-control" id="gsm" autocomplete="off"
                                                        placeholder="GSM" name="gsm">
 
