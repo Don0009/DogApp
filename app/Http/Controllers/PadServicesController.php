@@ -59,6 +59,17 @@ class PadServicesController extends Controller
             'localité' => 'required',
             'document_id' => 'required',
             'représentée_par' => 'required',
+            'rue_1' => 'required',
+            'noo_1' => 'required',
+            'bte_1' => 'required',
+            'etage_1' => 'required',
+            'appartement_1' => 'required',
+            'code_postal_1' => 'required',
+            'localité_1' => 'required',
+            'year_of_first_use' => 'required',
+            'drawn_up' => 'required',
+            'of_which_you_acknowledge' => 'required',
+            'to_the_customer' => 'required',
         ]);
 
         // dd($request->all());
@@ -73,7 +84,73 @@ class PadServicesController extends Controller
         if(isset($data['date_of_birth'])){
             $data['date_of_birth'] = Carbon::parse($data['date_of_birth']);
         }
-
+        $data = $request->all();
+        if(isset($data['the'])){
+            $data['the'] = Carbon::parse($data['the']);
+        }
+        if(isset($data['if_you_do_not_wish_to_receive'])){
+            if($data['if_you_do_not_wish_to_receive'] == "on"){
+            $data['if_you_do_not_wish_to_receive'] = true;
+            }  else{
+            $data['if_you_do_not_wish_to_receive'] = false;
+            }
+        }
+        if(isset($data['electrical_installation_1'])){
+            if($data['electrical_installation_1'] == "on"){
+            $data['electrical_installation_1'] = true;
+            }  else{
+            $data['electrical_installation_1'] = false;
+            }
+        }
+        if(isset($data['gas_installation_1'])){
+            if($data['gas_installation_1'] == "on"){
+            $data['gas_installation_1'] = true;
+            }  else{
+            $data['gas_installation_1'] = false;
+            }
+        }
+        if(isset($data['oil_installation_1'])){
+            if($data['oil_installation_1'] == "on"){
+            $data['oil_installation_1'] = true;
+            }  else{
+            $data['oil_installation_1'] = false;
+            }
+        }
+        if(isset($data['you_are_not_customer_of_engie_electrabel'])){
+            if($data['you_are_not_customer_of_engie_electrabel'] == "on"){
+            $data['you_are_not_customer_of_engie_electrabel'] = true;
+            }  else{
+            $data['you_are_not_customer_of_engie_electrabel'] = false;
+            }
+        }
+        if(isset($data['oil_installation'])){
+            if($data['oil_installation'] == "on"){
+            $data['oil_installation'] = true;
+            }  else{
+            $data['oil_installation'] = false;
+            }
+        }
+        if(isset($data['gas_installation'])){
+            if($data['gas_installation'] == "on"){
+            $data['gas_installation'] = true;
+            }  else{
+            $data['gas_installation'] = false;
+            }
+        }
+        if(isset($data['electrical_installation'])){
+            if($data['electrical_installation'] == "on"){
+            $data['electrical_installation'] = true;
+            }  else{
+            $data['electrical_installation'] = false;
+            }
+        }
+        if(isset($data['you_are_a_customer_of_engie'])){
+            if($data['you_are_a_customer_of_engie'] == "on"){
+            $data['you_are_a_customer_of_engie'] = true;
+            }  else{
+            $data['you_are_a_customer_of_engie'] = false;
+            }
+        }
 
         if(isset($data['you_wish_to_be_kept_informed'])){
             if($data['you_wish_to_be_kept_informed'] == "on"){

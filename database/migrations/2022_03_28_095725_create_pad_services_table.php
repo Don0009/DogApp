@@ -51,7 +51,20 @@ class CreatePadServicesTable extends Migration
             $table->string('code_postal_1');
             $table->string('localité_1');
             $table->string('year_of_first_use');
-            $table->string('you_are_a_customer_of_engie');
+            $table->boolean('you_are_a_customer_of_engie')->nullable();
+            $table->boolean('oil_installation')->nullable();
+            $table->boolean('gas_installation')->nullable();
+            $table->boolean('electrical_installation')->nullable();
+            $table->boolean('you_are_not_customer_of_engie_electrabel')->nullable();
+            $table->boolean('oil_installation_1')->nullable();
+            $table->boolean('gas_installation_1')->nullable();
+            $table->boolean('electrical_installation_1')->nullable();
+
+            $table->boolean('if_you_do_not_wish_to_receive')->nullable();
+            $table->string('drawn_up');
+            $table->date('the');
+            $table->string('of_which_you_acknowledge');
+            $table->string('to_the_customer');
             $table->timestamps();
         });
     }

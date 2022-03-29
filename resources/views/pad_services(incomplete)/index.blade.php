@@ -140,6 +140,42 @@
                                     you Are a Customer Of Engie
                                 </th>
                                 <th>
+                                    Oil Installation
+                                </th>
+                                <th>
+                                    Gas Installation
+                                </th>
+                                <th>
+                                    Electrical installation
+                                </th>
+                                <th>
+                                    You are not a customer of ENGIE Electrabel
+                                </th>
+                                <th>
+                                    Oil Installation 1
+                                </th>
+                                <th>
+                                    Gas Installation 1
+                                </th>
+                                <th>
+                                    Electrical installation 1
+                                </th>
+                                <th>
+                                    If you do not wish to receive our promotional
+                                </th>
+                                <th>
+                                    Drawn up in three original copies
+                                </th>
+                                <th>
+                                    the
+                                </th>
+                                <th>
+                                    For Electrabel sa
+                                </th>
+                                <th>
+                                    To the customer
+                                </th>
+                                <th>
                                     Created At
                                 </th>
                                 <th>
@@ -189,6 +225,18 @@
                                 <td>{{ $pad_service->localité_1}}</td>
                                 <td>{{ $pad_service->year_of_first_use}}</td>
                                 <td>{{ $pad_service->you_are_a_customer_of_engie}}</td>
+                                <td>{{ $pad_service->oil_installation}}</td>
+                                <td>{{ $pad_service->gas_installation}}</td>
+                                <td>{{ $pad_service->electrical_installation}}</td>
+                                <td>{{ $pad_service->you_are_not_customer_of_engie_electrabel}}</td>
+                                <td>{{ $pad_service->oil_installation_1}}</td>
+                                <td>{{ $pad_service->gas_installation_1}}</td>
+                                <td>{{ $pad_service->electrical_installation_1}}</td>
+                                <td>{{ $pad_service->if_you_do_not_wish_to_receive}}</td>
+                                <td>{{ $pad_service->drawn_up}}</td>
+                                <td>{{ $pad_service->the}}</td>
+                                <td>{{ $pad_service->of_which_you_acknowledge}}</td>
+                                <td>{{ $pad_service->to_the_customer}}</td>
                                 <td>
                                     {{ \Carbon\Carbon::parse($pad_service->created_at)->diffForhumans() }}
                                 </td>
