@@ -476,71 +476,74 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <h5>Mandaat SEPA Europese domiciliëring - Business to consumer (CORE) voor een terugkerende invordering</h5>
-                        <p>Mandaatreferentie (UMR): Deze referentie zal je meegedeeld worden op je factuur.</p>
-                        <p>Door dit mandaat te ondertekenen, geef je toestemming aan Orange Belgium nv BE12ZZZ0456810810 een opdracht te sturen naar je bank om een bedrag van je rekening te
-                            debiteren, en aan je bank om een bedrag van je rekening te debiteren in overeenstemming met de opdracht van Orange Belgium nv BE12ZZZ0456810810. De prenoti
-                            ficatie,bepaald in de Europese Richtl ĳn betre ffende de betalingsdiensten,wordt meegedeeld via de factuur die je kan worden
-                            toegezonden binnen minder dan de 14 dagen vastgelegd in de Richtl ĳn. Je hebt het recht op terugbetaling door je bank volgens de
-                            voorwaarden die in je overeenkomst met de bank z ĳn vastgelegd. Je moet je verzoek
-                            tot terugbetaling indienen binnen de 8 weken na de datum waarop het bedrag van je rekening werd gedebiteerd. </p>
-                        <h4>Ondergetekende,</h4>
-                        <div class="mb-2">
-                            <label for="account_holder_name" class="form-label">Naam van de rekeninghouder<span class="text-danger">*</span></label>
-                            <input type="account_holder_name" class="form-control @error('account_holder_name') is-invalid @enderror" id="account_holder_name" autocomplete="off" placeholder="Naam van de rekeninghouder" name="account_holder_name" value="{{ old('account_holder_name') }}" required>
-                        </div>
-                        <div class="mb-2">
-                            <label for="street_and_number" class="form-label">Straat en nummer<span class="text-danger">*</span></label>
-                            <input type="street_and_number" class="form-control @error('street_and_number') is-invalid @enderror" id="street_and_number" autocomplete="off" placeholder="Straat en nummer" name="street_and_number" value="{{ old('street_and_number') }}" required>
-                        </div>
-                        <div class="row">
-                            <div class="col-10">
-                                <label for="postal_code_and_city" class="form-label">Postcode en gemeente<span class="text-danger">*</span></label>
-                                <input type="postal_code_and_city" class="form-control @error('postal_code_and_city') is-invalid @enderror" id="postal_code_and_city" autocomplete="off" placeholder="Postcode en gemeente" name="postal_code_and_city" value="{{ old('postal_code_and_city') }}" required>
+                        <div class="card-body">
+                            <h5>Mandaat SEPA Europese domiciliëring - Business to consumer (CORE) voor een terugkerende invordering</h5>
+                            <p>Mandaatreferentie (UMR): Deze referentie zal je meegedeeld worden op je factuur.</p>
+                            <p>Door dit mandaat te ondertekenen, geef je toestemming aan Orange Belgium nv BE12ZZZ0456810810 een opdracht te sturen naar je bank om een bedrag van je rekening te
+                                debiteren, en aan je bank om een bedrag van je rekening te debiteren in overeenstemming met de opdracht van Orange Belgium nv BE12ZZZ0456810810. De prenoti
+                                ficatie,bepaald in de Europese Richtl ĳn betre ffende de betalingsdiensten,wordt meegedeeld via de factuur die je kan worden
+                                toegezonden binnen minder dan de 14 dagen vastgelegd in de Richtl ĳn. Je hebt het recht op terugbetaling door je bank volgens de
+                                voorwaarden die in je overeenkomst met de bank z ĳn vastgelegd. Je moet je verzoek
+                                tot terugbetaling indienen binnen de 8 weken na de datum waarop het bedrag van je rekening werd gedebiteerd. </p>
+                            <h4>Ondergetekende,</h4>
+                            <div class="mb-2">
+                                <label for="account_holder_name" class="form-label">Naam van de rekeninghouder<span class="text-danger">*</span></label>
+                                <input type="account_holder_name" class="form-control @error('account_holder_name') is-invalid @enderror" id="account_holder_name" autocomplete="off" placeholder="Naam van de rekeninghouder" name="account_holder_name" value="{{ old('account_holder_name') }}" required>
                             </div>
-                            <div class="col-2">
-                                <label for="hold_country" class="form-label">Land<span class="text-danger">*</span></label>
-                                <input type="hold_country" class="form-control @error('hold_country') is-invalid @enderror" id="hold_country" autocomplete="off" placeholder="Nom du titulaire de compte" name="hold_country" value="{{ old('hold_country') }}" required>
+                            <div class="mb-2">
+                                <label for="street_and_number" class="form-label">Straat en nummer<span class="text-danger">*</span></label>
+                                <input type="street_and_number" class="form-control @error('street_and_number') is-invalid @enderror" id="street_and_number" autocomplete="off" placeholder="Straat en nummer" name="street_and_number" value="{{ old('street_and_number') }}" required>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-9">
-                                <label for="iban_account_number" class="form-label">IBAN-rekeningnummer<span class="text-danger">*</span></label>
-                                <input type="iban_account_number" class="form-control @error('iban_account_number') is-invalid @enderror" id="iban_account_number" autocomplete="off" placeholder="Nom du titulaire de compte" name="iban_account_number" value="{{ old('iban_account_number') }}" required>
-                            </div>
-                            <div class="col-3">
-                                <label for="bic_code" class="form-label">BIC-code<span class="text-danger">*</span></label>
-                                <input type="bic_code" class="form-control @error('bic_code') is-invalid @enderror" id="bic_code" autocomplete="off" placeholder="BIC-code" name="bic_code" value="{{ old('bic_code') }}" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-9">
-                                <label for="underlying_contract_number" class="form-label">Nr. van het onderliggende contract<span class="text-danger">*</span></label>
-                                <input type="underlying_contract_number" class="form-control @error('underlying_contract_number') is-invalid @enderror" id="underlying_contract_number" autocomplete="off" placeholder="Nr. van het onderliggende contract" name="underlying_contract_number" value="{{ old('underlying_contract_number') }}" required>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label for="a_date" class="form-label"> Datum (dag/maand/jaar)<span class="text-danger">*</span></label>
-                                        <input class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="a_date" name="a_date" value="{{ old('a_date') }}" type="date">
-                                        <label for="location" class="form-label">Plaats<span class="text-danger">*</span></label>
-                                        <input type="location" class="form-control @error('location') is-invalid @enderror" id="location" autocomplete="off" placeholder="Nom du titulaire de compte" name="location" value="{{ old('location') }}" required>
-                                    </div>
-                                    <div class="col-6">
-                                        <p>Als je al Orange-klant bent, gelieve dan je klantnummer toe
-                                            te voegen. Indien je nog geen klant bent, dan zal onze agent
-                                            de juiste referentie invoeren.</p>
-                                    </div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <label for="postal_code_and_city" class="form-label">Postcode en gemeente<span class="text-danger">*</span></label>
+                                    <input type="postal_code_and_city" class="form-control @error('postal_code_and_city') is-invalid @enderror" id="postal_code_and_city" autocomplete="off" placeholder="Postcode en gemeente" name="postal_code_and_city" value="{{ old('postal_code_and_city') }}" required>
+                                </div>
+                                <div class="col-2">
+                                    <label for="hold_country" class="form-label">Land<span class="text-danger">*</span></label>
+                                    <input type="hold_country" class="form-control @error('hold_country') is-invalid @enderror" id="hold_country" autocomplete="off" placeholder="Nom du titulaire de compte" name="hold_country" value="{{ old('hold_country') }}" required>
                                 </div>
                             </div>
-                            <div class="col-3">
-                                <label for="signature" class="form-label">Handtekening (rekeninghouder)<span class="text-danger">*</span></label>
-                                <textarea type="signature" class="form-control @error('signature') is-invalid @enderror" id="signature" autocomplete="off" placeholder="Handtekening (rekeninghouder)" name="signature" rows="8" value="{{ old('signature') }}" required></textarea>
+                            <div class="row">
+                                <div class="col-9">
+                                    <label for="iban_account_number" class="form-label">IBAN-rekeningnummer<span class="text-danger">*</span></label>
+                                    <input type="iban_account_number" class="form-control @error('iban_account_number') is-invalid @enderror" id="iban_account_number" autocomplete="off" placeholder="Nom du titulaire de compte" name="iban_account_number" value="{{ old('iban_account_number') }}" required>
+                                </div>
+                                <div class="col-3">
+                                    <label for="bic_code" class="form-label">BIC-code<span class="text-danger">*</span></label>
+                                    <input type="bic_code" class="form-control @error('bic_code') is-invalid @enderror" id="bic_code" autocomplete="off" placeholder="BIC-code" name="bic_code" value="{{ old('bic_code') }}" required>
+                                </div>
                             </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <label for="underlying_contract_number" class="form-label">Nr. van het onderliggende contract<span class="text-danger">*</span></label>
+                                    <input type="underlying_contract_number" class="form-control @error('underlying_contract_number') is-invalid @enderror" id="underlying_contract_number" autocomplete="off" placeholder="Nr. van het onderliggende contract" name="underlying_contract_number" value="{{ old('underlying_contract_number') }}" required>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="a_date" class="form-label"> Datum (dag/maand/jaar)<span class="text-danger">*</span></label>
+                                            <input class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="a_date" name="a_date" value="{{ old('a_date') }}" type="date">
+                                            <label for="location" class="form-label">Plaats<span class="text-danger">*</span></label>
+                                            <input type="location" class="form-control @error('location') is-invalid @enderror" id="location" autocomplete="off" placeholder="Nom du titulaire de compte" name="location" value="{{ old('location') }}" required>
+                                        </div>
+                                        <div class="col-6">
+                                            <p>Als je al Orange-klant bent, gelieve dan je klantnummer toe
+                                                te voegen. Indien je nog geen klant bent, dan zal onze agent
+                                                de juiste referentie invoeren.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label for="signature" class="form-label">Handtekening (rekeninghouder)<span class="text-danger">*</span></label>
+                                    <textarea type="signature" class="form-control @error('signature') is-invalid @enderror" id="signature" autocomplete="off" placeholder="Handtekening (rekeninghouder)" name="signature" rows="8" value="{{ old('signature') }}" required></textarea>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
-
-                    <button type="submit" class="btn btn-primary me-2">Submit</button>
-                    <button class="btn btn-secondary">Cancel</button>
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <button class="btn btn-secondary">Cancel</button>
+                    </div>
                 </div>
             </div>
         </form>

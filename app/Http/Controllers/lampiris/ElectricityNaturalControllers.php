@@ -16,7 +16,7 @@ class ElectricityNaturalControllers extends Controller
     public function index()
     {
         $gass = ElectricityNatural::all();
-        return view('electricity_natural_gas.index', compact('gass'));
+        return view('lampiris.electricity_natural_gas.index', compact('gass'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ElectricityNaturalControllers extends Controller
      */
     public function create()
     {
-        return view('electricity_natural_gas.create_dutch');
+        return view('lampiris.electricity_natural_gas.form');
     }
 
     /**
@@ -37,7 +37,9 @@ class ElectricityNaturalControllers extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        ElectricityNatural::create($data);
+        return redirect()->route('lampiris.electricity_natural_gas.index');
     }
 
     /**
