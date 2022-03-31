@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,35 @@
     <title>Contract Form</title>
     @include('backend.partials.styles')
     @yield('styles')
+
 </head>
+
 <body>
-<div class="main-wrapper">
+    <div class="main-wrapper">
 
-    <!-- partial:partials/_sidebar.html -->
-@include('backend.partials.sidebar')
-<!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        @include('backend.partials.sidebar')
+        <!-- partial -->
 
-    <div class="page-wrapper">
+        <div class="page-wrapper">
 
-        <!-- partial:partials/_navbar.html -->
-    @include('backend.partials.navbar')
-    <!-- partial -->
+            <!-- partial:partials/_navbar.html -->
+            @include('backend.partials.navbar')
+            <!-- partial -->
 
-        <div class="page-content">
-            @yield('content')
+            <div class="page-content">
+                @yield('content')
+            </div>
+
+            <!-- partial:partials/_footer.html -->
+            @include('backend.partials.footer')
+            <!-- partial -->
+
         </div>
-
-        <!-- partial:partials/_footer.html -->
-    @include('backend.partials.footer')
-    <!-- partial -->
-
     </div>
-</div>
 
-@include('backend.partials.scripts')
-@yield('scripts')
+    @include('backend.partials.scripts')
+    @yield('scripts')
 </body>
+
 </html>

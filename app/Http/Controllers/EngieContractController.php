@@ -454,7 +454,7 @@ class EngieContractController extends Controller
         $contract = EngieContract::create($data);
         // dd($contract);
         EngieContract::create($data);
-        return redirect()->route('engie.index')->with('success','Engie Contract created successfully!');
+        return redirect()->route('engies.index')->with('success','Engie Contract created successfully!');
     }
 
     /**

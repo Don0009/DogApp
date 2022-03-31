@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <div class="sidebar-header">
         <a href="{{url('/')}}" class="sidebar-brand">
-           Contract<span>Form</span>
+            Contract<span>Form</span>
         </a>
         <div class="sidebar-toggler not-active">
             <span></span>
@@ -38,6 +38,60 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{ route('internet_home.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Internet Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('admin/internet_home/create/?lang=fr') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Internet Home (French)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('admin/internet_home/create/?lang=du') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Internet Home (Dutch)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('mobile_phone.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile Phone</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('admin/mobile_phone/create/?lang=fr') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile Phone (French)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('admin/mobile_phone/create/?lang=du') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile Phone (Dutch)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('number_porting.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile number(s) porting</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('number_porting_du.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Mobile number(s) porting (Dutch)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('electricity_natural_gas.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Electricity And Natural Gas</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route('internet_tv.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">TV + internet aanvraag orange NL</span>
@@ -59,6 +113,7 @@
                 </a>
             </li>
 
+
         </ul>
     </div>
 </nav>
@@ -71,15 +126,13 @@
         <div class="form-group border-bottom">
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight"
-                           value="sidebar-light" checked>
+                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight" value="sidebar-light" checked>
                     Light
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark"
-                           value="sidebar-dark">
+                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark" value="sidebar-dark">
                     Dark
                 </label>
             </div>
