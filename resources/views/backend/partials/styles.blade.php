@@ -28,3 +28,6 @@
 
       <!-- internet_tv styles -->
       <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+
+      <link rel="stylesheet" href="{{asset('forms/Engie/pad_services_fr/edf56b10-b01b-11ec-abec-0cc47a792c0a_id_edf56b10-b01b-11ec-abec-0cc47a792c0a.html')}}">
+

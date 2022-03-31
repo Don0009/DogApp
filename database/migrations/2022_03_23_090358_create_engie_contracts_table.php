@@ -37,7 +37,7 @@ class CreateEngieContractsTable extends Migration
             $table->string('bus');
             $table->string('postcode');
             $table->string('place');
-            $table->string('documnet_id');
+
             $table->string('electrabel_sa_1');
             $table->string('electrabel_sa_2');
             $table->string('street_1');

@@ -1353,7 +1353,7 @@ vindt u op www.bipt.be/np.
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="op">op:</label>
-                                            <input type="text" class="form-control" id="op" autocomplete="off"
+                                            <input type="name" class="form-control" id="op" autocomplete="off"
                                                    placeholder="on" name="op">
                                         </div>
 

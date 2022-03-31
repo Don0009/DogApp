@@ -55,7 +55,7 @@
             <li class="nav-item">
                 <a href="{{ route('pad_services.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title">PAD Services(incomplete)</span>
+                    <span class="link-title">PAD Services</span>
                 </a>
             </li>
 

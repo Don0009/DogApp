@@ -27,25 +27,9 @@ class EngieContractController extends Controller
      */
     public function create(Request $request)
     {
-        // $contract_pros= EngieContract::all();
-        // return view ('engie.create',compact('contract_pros'));
-        $lang = $request->lang;
-        if($lang == "en"){
-            return view('engie.create');
-            }
-
-         elseif($lang == "crk"){
-            return view('engie.create_crk');
-         }
-
-         elseif($lang == "ccp"){
-            return view('engie.create_ccp');
-         }
-
-         elseif($lang == "ccr"){
-            return view('engie.create_ccr');
-         }
+        return view('engie.pdf_du');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -79,7 +63,7 @@ class EngieContractController extends Controller
             'bus' => 'required',
             'postcode' => 'required',
             'place' => 'required',
-            'documnet_id' => 'required',
+
             'electrabel_sa_1' => 'required',
             'electrabel_sa_2' => 'required',
             'street_1' => 'required',
