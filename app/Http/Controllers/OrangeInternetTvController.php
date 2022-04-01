@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\OrangeInternetTv;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -16,8 +17,13 @@ class OrangeInternetTvController extends Controller
      */
     public function index()
     {
-        $internet_tvs = OrangeInternetTv::all();
-     return view ('internet_tv.index',compact('internet_tvs'));
+        if (Auth::user()->hasRole('admin')) {
+            $internet_tvs = OrangeInternetTv::all();
+        } else {
+            $internet_tvs = OrangeInternetTv::where('user_id', Auth::user()->id)->get();
+        }
+
+        return view('internet_tv.index', compact('internet_tvs'));
     }
 
     /**
@@ -30,23 +36,20 @@ class OrangeInternetTvController extends Controller
         // dd($lang='du');
 
         $lang = $request->lang;
-// dd($lang);
-         if($lang == "du"){
+        // dd($lang);
+        if ($lang == "du") {
             return view('internet_tv.create');
-
-            }
-
-         else{
+        } else {
             return view('internet_tv.create_fr');
-         }
+        }
 
-    //  if(isset($data['stopping_2'])){
-    //     if($data['stopping_2'] == "on"){
-    //     $data['stopping_2'] = true;
-    //     }  else{
-    //     $data['stopping_2'] = false;
-    //     }
-    // }
+        //  if(isset($data['stopping_2'])){
+        //     if($data['stopping_2'] == "on"){
+        //     $data['stopping_2'] = true;
+        //     }  else{
+        //     $data['stopping_2'] = false;
+        //     }
+        // }
 
 
     }
@@ -160,303 +163,14 @@ class OrangeInternetTvController extends Controller
         ]);
 
         $data = $request->all();
+        $data['user_id'] = Auth::user()->id;
+
+
+
+
+
+
         // dd($data);
-        if(isset($data['desired_start_date_1'])){
-            $data['desired_start_date_1'] = Carbon::parse($data['date_of_birth']);
-        }
-
-
-        if(isset($data['one'])){
-            if($data['one'] == "on"){
-            $data['one'] = true;
-            }  else{
-            $data['one'] = false;
-            }
-        }
-
-        if(isset($data['two'])){
-            if($data['two'] == "on"){
-            $data['two'] = true;
-            }  else{
-            $data['two'] = false;
-            }
-        }
-
-
-        if(isset($data['three'])){
-            if($data['three'] == "on"){
-            $data['three'] = true;
-            }  else{
-            $data['three'] = false;
-            }
-        }
-
-
-        if(isset($data['and'])){
-            if($data['and'] == "on"){
-            $data['and'] = true;
-            }  else{
-            $data['and'] = false;
-            }
-        }
-
-
-
-
-        if(isset($data['neen'])){
-        if($data['neen'] == "on"){
-        $data['neen'] = true;
-        }  else{
-        $data['neen'] = false;
-        }
-    }
-
-    if(isset($data['care_of_the_automatic_migration'])){
-        if($data['care_of_the_automatic_migration'] == "on"){
-        $data['care_of_the_automatic_migration'] = true;
-        }  else{
-        $data['care_of_the_automatic_migration'] = false;
-        }
-    }
-
-
-    if(isset($data['i_do_not_wish_to_use_easy_switch'])){
-        if($data['i_do_not_wish_to_use_easy_switch'] == "on"){
-        $data['i_do_not_wish_to_use_easy_switch'] = true;
-        }  else{
-        $data['i_do_not_wish_to_use_easy_switch'] = false;
-        }
-    }
-
-
-
-    if(isset($data['stopping_5'])){
-        if($data['stopping_5'] == "on"){
-        $data['stopping_5'] = true;
-        }  else{
-        $data['stopping_5'] = false;
-        }
-    }
-
-
-    if(isset($data['stopping_2'])){
-        if($data['stopping_2'] == "on"){
-        $data['stopping_2'] = true;
-        }  else{
-        $data['stopping_2'] = false;
-        }
-    }
-
-
-    if(isset($data['stopping_3'])){
-        if($data['stopping_3'] == "on"){
-        $data['stopping_3'] = true;
-        }  else{
-        $data['stopping_3'] = false;
-        }
-    }
-
-
-
-    if(isset($data['stopping_4'])){
-        if($data['stopping_4'] == "on"){
-        $data['stopping_4'] = true;
-        }  else{
-        $data['stopping_4'] = false;
-        }
-    }
-
-
-    if(isset($data['immediately'])){
-        if($data['immediately'] == "on"){
-        $data['immediately'] = true;
-        }  else{
-        $data['immediately'] = false;
-        }
-    }
-
-
-
-    if(isset($data['on_the_installation_date'])){
-        if($data['on_the_installation_date'] == "on"){
-        $data['on_the_installation_date'] = true;
-        }  else{
-        $data['on_the_installation_date'] = false;
-        }
-    }
-
-
-    if(isset($data['transfer_to_orange'])){
-        if($data['transfer_to_orange'] == "on"){
-        $data['transfer_to_orange'] = true;
-        }  else{
-        $data['transfer_to_orange'] = false;
-        }
-    }
-
-
-
-    if(isset($data['stop'])){
-        if($data['stop'] == "on"){
-        $data['stop'] = true;
-        }  else{
-        $data['stop'] = false;
-        }
-    }
-
-
-    if(isset($data['immediately_2'])){
-        if($data['immediately_2'] == "on"){
-        $data['immediately_2'] = true;
-        }  else{
-        $data['immediately_2'] = false;
-        }
-    }
-
-
-
-
-    if(isset($data['on_the_installation_date'])){
-        if($data['on_the_installation_date'] == "on"){
-        $data['on_the_installation_date'] = true;
-        }  else{
-        $data['on_the_installation_date'] = false;
-        }
-    }
-
-
-
-
-    if(isset($data['transfer_to_orange_4'])){
-        if($data['transfer_to_orange_4'] == "on"){
-        $data['transfer_to_orange_4'] = true;
-        }  else{
-        $data['transfer_to_orange_4'] = false;
-        }
-    }
-
-    if(isset($data['stop_2'])){
-        if($data['stop_2'] == "on"){
-        $data['stop_2'] = true;
-        }  else{
-        $data['stop_2'] = false;
-        }
-    }
-
-
-    if(isset($data['immediately_3'])){
-        if($data['immediately_3'] == "on"){
-            $data['immediately_3'] = true;
-        }  else{
-        $data['immediately_3'] = false;
-        }
-    }
-
-
-    if(isset($data['installation_date_3'])){
-        if($data['installation_date_3'] == "on"){
-        $data['installation_date_3'] = true;
-        }  else{
-        $data['installation_date_3'] = false;
-        }
-    }
-
-
-    if(isset($data['transfer_to_orange_2'])){
-        if($data['transfer_to_orange_2'] == "on"){
-        $data['transfer_to_orange_2'] = true;
-        }  else{
-        $data['transfer_to_orange_2'] = false;
-        }
-    }
-
-
-
-
-    if(isset($data['stop_3'])){
-        if($data['stop_3'] == "on"){
-        $data['stop_3'] = true;
-        }  else{
-        $data['stop_3'] = false;
-        }
-    }
-
-
-
-
-    if(isset($data['immediately_4'])){
-        if($data['immediately_4'] == "on"){
-        $data['immediately_4'] = true;
-        }  else{
-        $data['immediately_4'] = false;
-        }
-    }
-
-
-
-    if(isset($data['on_the_installation_date_4'])){
-        if($data['on_the_installation_date_4'] == "on"){
-        $data['on_the_installation_date_4'] = true;
-        }  else{
-        $data['on_the_installation_date_4'] = false;
-        }
-    }
-
-
-
-
-
-    if(isset($data['transfer_to_orange_3'])){
-        if($data['transfer_to_orange_3'] == "on"){
-        $data['transfer_to_orange_3'] = true;
-        }  else{
-        $data['transfer_to_orange_3'] = false;
-        }
-    }
-
-
-    if(isset($data['stop_4'])){
-        if($data['stop_4'] == "on"){
-        $data['stop_4'] = true;
-        }  else{
-        $data['stop_4'] = false;
-        }
-    }
-
-
-    if(isset($data['immediately_5'])){
-        if($data['immediately_5'] == "on"){
-        $data['immediately_5'] = true;
-        }  else{
-        $data['immediately_5'] = false;
-        }
-    }
-
-
-
-    if(isset($data['on_the_installation_date_5'])){
-        if($data['on_the_installation_date_5'] == "on"){
-        $data['on_the_installation_date_5'] = true;
-        }  else{
-        $data['on_the_installation_date_5'] = false;
-        }
-    }
-
-
-
-
-
-
-    if(isset($data['op'])){
-        if($data['op'] == "on"){
-        $data['op'] = true;
-        }  else{
-        $data['op'] = false;
-        }
-    }
-
-
-    // dd($data);
         // dd($validator);
 
         // if($validator->fails()){
@@ -464,7 +178,7 @@ class OrangeInternetTvController extends Controller
         //     return redirect()->back()->withErrors($validator);
         // }
         OrangeInternetTv::create($data);
-        return redirect()->route('internet_tv.index')->with('success','Internet Tv created successfully!');
+        return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');
     }
 
     /**
@@ -473,9 +187,10 @@ class OrangeInternetTvController extends Controller
      * @param  \App\OrangeInternetTv  $orangeInternetTv
      * @return \Illuminate\Http\Response
      */
-    public function show(OrangeInternetTv $orangeInternetTv)
+    public function show(OrangeInternetTv $orangeInternetTv, $id)
     {
-        //
+        $orangeInternetTv = OrangeInternetTv::findOrFail($id);
+        return view('internet_tv.show', compact('orangeInternetTv'));
     }
 
     /**

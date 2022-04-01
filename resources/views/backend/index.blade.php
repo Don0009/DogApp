@@ -1,6 +1,6 @@
 @extends('layouts.backend')
 @section('content')
-<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+<!-- <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
     <div>
         <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
     </div>
@@ -22,10 +22,10 @@
             Download Report
         </button>
     </div>
-</div>
+</div> -->
 
 <div class="row">
-    <div class="col-12 col-xl-12 stretch-card">
+    <!-- <div class="col-12 col-xl-12 stretch-card">
         <div class="row flex-grow">
             <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
@@ -100,8 +100,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-12 col-xl-12 stretch-card">
+    </div> -->
+    <!-- <div class="col-12 col-xl-12 stretch-card">
         <div class="row flex-grow">
             <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
@@ -176,7 +176,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="col-12 col-xl-12 stretch-card">
         <div class="row flex-grow">
             <div class="col-md-4 grid-margin stretch-card">
@@ -198,12 +198,12 @@
                             </div>
                         </div>
                         <div class="row">
-                            <img src="{{asset('images/brands/orange.png')}}">
+                            <a href="{{ route('internet_tv.index') }}"><img src="{{asset('images/brands/orange.png')}}"></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 grid-margin stretch-card">
+            <!-- <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-baseline">
@@ -225,8 +225,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 grid-margin stretch-card">
+            </div> -->
+            <!-- <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-baseline">
@@ -249,10 +249,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
-    <div class="col-12 col-xl-12 stretch-card">
+    <!-- <div class="col-12 col-xl-12 stretch-card">
         <div class="row flex-grow">
             <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
@@ -304,10 +304,10 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 </div> <!-- row -->
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-12 col-xl-12 grid-margin stretch-card">
         <div class="card overflow-hidden">
             <div class="card-body">
@@ -345,7 +345,7 @@
             </div>
         </div>
     </div>
-</div> <!-- row -->
+</div> 
 
 <div class="row">
     <div class="col-lg-7 col-xl-8 grid-margin stretch-card">
@@ -410,7 +410,7 @@
             </div>
         </div>
     </div>
-</div> <!-- row -->
+</div> 
 
 <div class="row">
     <div class="col-lg-5 col-xl-4 grid-margin grid-margin-xl-0 stretch-card">
@@ -590,5 +590,5 @@
             </div>
         </div>
     </div>
-</div> <!-- row -->
+</div>  -->
 @endsection

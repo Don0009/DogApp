@@ -60,7 +60,7 @@
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="partner_apllication">Referentie van de MyPartner aanvraag:</label>
-                                        <input type="text" class="form-control" id="partner_apllication" autocomplete="off" placeholder="Référence de la demande MyPartner" name="partner_apllication">
+                                        <input type="text" class="form-control" id="partner_apllication" autocomplete="off" placeholder="Référence de la demande MyPartner" name="partner_apllication" value="{{ $orangeInternetTv->partner_apllication}} ">
                                     </div>
                                 </div>
 
@@ -73,13 +73,13 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="name">Naam:</label>
-                                        <input type="name" class="form-control" id="name" autocomplete="off" placeholder="Naam" name="name">
+                                        <input type="name" class="form-control" id="name" autocomplete="off" placeholder="Naam" name="name" value="{{ $orangeInternetTv->name}}">
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class=" col-6">
                                     <div class="form-group">
                                         <label for="first_name">Vooraam:</label>
-                                        <input type="name" class="form-control" id="first_name" autocomplete="off" placeholder="Vooraam" name="first_name">
+                                        <input type="name" class="form-control" id="first_name" autocomplete="off" placeholder="Vooraam" name="first_name" value="{{ $orangeInternetTv->first_name}}">
                                     </div>
                                 </div>
                             </div>
@@ -91,19 +91,19 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="street">Straat:</label>
-                                        <input type="name" class="form-control" id="street" autocomplete="off" placeholder="Straat" name="street">
+                                        <input type="name" class="form-control" id="street" autocomplete="off" placeholder="Straat" name="street" value="{{ $orangeInternetTv->street}}">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group">
                                         <label for="number">Nummer:</label>
-                                        <input type="number" class="form-control" id="number" autocomplete="off" placeholder="Nummer" name="number">
+                                        <input type="number" class="form-control" id="number" autocomplete="off" placeholder="Nummer" name="number" value="{{ $orangeInternetTv->number}}">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group">
                                         <label for="letter">Letter:</label>
-                                        <input type="mail" class="form-control" id="letter" autocomplete="off" placeholder="Lettre" name="letter">
+                                        <input type="mail" class="form-control" id="letter" autocomplete="off" placeholder="Lettre" name="letter" value="{{ $orangeInternetTv->letter}}">
                                     </div>
                                 </div>
                             </div>
@@ -115,19 +115,19 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="apartment_number">Appartementsnummer:</label>
-                                        <input type="name" class="form-control" id="apartment_number" autocomplete="off" placeholder="Appartementsnummer" name="apartment_number">
+                                        <input type="name" class="form-control" id="apartment_number" autocomplete="off" placeholder="Appartementsnummer" name="apartment_number" value="{{ $orangeInternetTv->apartment_number}}">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group">
                                         <label for="floor">Verdieping:</label>
-                                        <input type="name" class="form-control" id="floor" autocomplete="off" placeholder="Verdieping" name="floor">
+                                        <input type="name" class="form-control" id="floor" autocomplete="off" placeholder="Verdieping" name="floor" value="{{ $orangeInternetTv->floor}}">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group">
                                         <label for="bus">Bus:</label>
-                                        <input type="name" class="form-control" id="bus" autocomplete="off" placeholder="Bus" name="bus">
+                                        <input type="name" class="form-control" id="bus" autocomplete="off" placeholder="Bus" name="bus" value="{{ $orangeInternetTv->bus}}">
                                     </div>
                                 </div>
                             </div>
@@ -139,13 +139,13 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="township">Gemeente:</label>
-                                        <input type="name" class="form-control" id="township" autocomplete="off" placeholder="Gemeente" name="township">
+                                        <input type="name" class="form-control" id="township" autocomplete="off" placeholder="Gemeente" name="township" value="{{ $orangeInternetTv->township}}">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="postcode">Postcode:</label>
-                                        <input type="name" class="form-control" id="postcode" autocomplete="off" placeholder="Postcode" name="postcode">
+                                        <input type="name" class="form-control" id="postcode" autocomplete="off" placeholder="Postcode" name="postcode" value="{{ $orangeInternetTv->postcode}}">
                                     </div>
                                 </div>
                             </div>
@@ -165,7 +165,7 @@
 
                                     <div class="form-group">
                                         <label for="gsm">Gsm:</label>
-                                        <input type="name" class="form-control" id="gsm" autocomplete="off" placeholder="Gsm" name="gsm">
+                                        <input type="name" class="form-control" id="gsm" autocomplete="off" placeholder="Gsm" name="gsm" value="{{ $orangeInternetTv->gsm}}">
                                     </div>
                                 </div>
                             </div>
@@ -177,13 +177,13 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="mail">Mail :</label>
-                                        <input type="mail" class="form-control" id="mail" autocomplete="off" placeholder="Mail" name="mail">
+                                        <input type="mail" class="form-control" id="mail" autocomplete="off" placeholder="Mail" name="mail" value="{{ $orangeInternetTv->mail}}">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="id_card_number">Identiteitskaartnummer:</label>
-                                        <input type="text" class="form-control" id="id_card_number" autocomplete="off" placeholder="Identiteitskaartnummer" name="id_card_number">
+                                        <input type="text" class="form-control" id="id_card_number" autocomplete="off" placeholder="Identiteitskaartnummer" name="id_card_number" value="{{ $orangeInternetTv->id_card_number}}">
                                     </div>
                                 </div>
                             </div>
@@ -195,20 +195,20 @@
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="orange_customer_number">Orange-klantnummer:</label>
-                                        <input type="text" class="form-control" id="orange_customer_number" autocomplete="off" placeholder="Orange-klantnummer" name="orange_customer_number">
+                                        <input type="text" class="form-control" id="orange_customer_number" autocomplete="off" placeholder="Orange-klantnummer" name="orange_customer_number" value="{{ $orangeInternetTv->orange_customer_number}}">
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <div class="section">
+                    <div class=" section">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="name_of_your_current_provider">Naam van je huidige leverancier van internet- en tv-diensten:</label>
-                                        <input type="text" class="form-control" id="name_of_your_current_provider" autocomplete="off" placeholder="Naam van je huidige leverancier van internet- en tv-diensten" name="name_of_your_current_provider">
+                                        <input type="text" class="form-control" id="name_of_your_current_provider" autocomplete="off" placeholder="Naam van je huidige leverancier van internet- en tv-diensten" name="name_of_your_current_provider" value="{{ $orangeInternetTv->name_of_your_current_provider}}">
                                     </div>
                                 </div>
 
@@ -221,7 +221,7 @@
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="customer_number_at_your_current_supplier">Klantnummer bij je huidige leverancier van internet- en tv-diensten (enkel Telenet):</label>
-                                        <input type="text" class="form-control" id="customer_number_at_your_current_supplier" autocomplete="off" placeholder="Klantnummer bij je huidige leverancier van internet- en tv-diensten (enkel Telenet)" name="customer_number_at_your_current_supplier">
+                                        <input type="text" class="form-control" id="customer_number_at_your_current_supplier" autocomplete="off" placeholder="Klantnummer bij je huidige leverancier van internet- en tv-diensten (enkel Telenet)" name="customer_number_at_your_current_supplier" value="{{ $orangeInternetTv->customer_number_at_your_current_supplier}}">
                                     </div>
                                 </div>
 
@@ -238,7 +238,7 @@
 
                                     <h5>Extra TV Decoder?</h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="extra_decoder" value="0">
+                                        <input class="form-check-input" type="radio" name="extra_decoder" value="0" value="{{ $orangeInternetTv->extra_decoder}}">
                                         <label for="extra_decoder" class="form-label">1<span class="text-danger">*</span></label>
 
                                     </div>

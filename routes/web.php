@@ -23,21 +23,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('admin')->group(function () {
-    Route::group(['middleware' => ['auth', 'role:admin']], function () {
-        Route::get('/', 'Admin\AdminController@index')->name('dashboard');
-        Route::resource('permissions', 'Admin\PermissionController');
-        Route::resource('roles', 'Admin\RoleController');
-        Route::resource('users', 'Admin\UserController');
+    Route::get('/', 'Admin\AdminController@index')->name('dashboard');
+    Route::resource('permissions', 'Admin\PermissionController');
+    Route::resource('roles', 'Admin\RoleController');
+    Route::resource('users', 'Admin\UserController');
 
-        Route::resource('internet_home', 'orange\InternetHomeController');
-        Route::resource('mobile_phone', 'orange\MobilePhoneController');
-        Route::resource('number_porting', 'orange\NumberPortingController');
-        Route::resource('number_porting_du', 'orange\NumberPortingDuController');
-        Route::resource('electricity_natural_gas', 'lampiris\ElectricityNaturalControllers');
-        Route::resource('internet_tv', 'OrangeInternetTvController');
-        Route::resource('internet_tv', 'OrangeInternetTvController');
-        Route::resource('engie', 'EngieContractController');
-        Route::resource('pad_services', 'PadServicesController');
-    });
-});
+    Route::resource('internet_home', 'orange\InternetHomeController');
+    Route::resource('mobile_phone', 'orange\MobilePhoneController');
+    Route::resource('number_porting', 'orange\NumberPortingController');
+    Route::resource('number_porting_du', 'orange\NumberPortingDuController');
+    Route::resource('electricity_natural_gas', 'lampiris\ElectricityNaturalControllers');
+    Route::resource('internet_tv', 'OrangeInternetTvController');
+    Route::resource('engie', 'EngieContractController');
+    Route::resource('pad_services', 'PadServicesController');
