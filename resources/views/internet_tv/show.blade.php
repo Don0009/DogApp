@@ -244,11 +244,11 @@
                                     </div>
 
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="extra_decoder" value="1">
+                                        <input class="form-check-input" type="radio" name="extra_decoder" value="1" value="{{ $orangeInternetTv->extra_decoder}}">
                                         <label for="extra_decoder" class="form-label">2<span class="text-danger">*</span></label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="extra_decoder" value="2">
+                                        <input class="form-check-input" type="radio" name="extra_decoder" value="2" value="{{ $orangeInternetTv->extra_decoder}}">
                                         <label for="extra_decoder" class="form-label">3<span class="text-danger">*</span></label>
                                     </div>
                                 </div>
@@ -260,11 +260,11 @@
 
                                     <h5>Internet boost*? </h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="internet_boost" value="0">
+                                        <input class="form-check-input" type="radio" name="internet_boost" value="0" value="{{$orangeInternetTv->internet_boost}}">
                                         <label for="internet_boost" class="form-label">Ja<span class="text-danger">*</span></label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="internet_boost" value="1">
+                                        <input class="form-check-input" type="radio" name="internet_boost" value="1" value="{{$orangeInternetTv->internet_boost}}">
                                         <label for="internet_boost" class="form-label">Neen<span class="text-danger">*</span></label>
                                     </div>
                                 </div>
@@ -286,7 +286,7 @@
                                     <div class="col-4">
                                         <div class="form-group">
 
-                                            <input type="date" class="form-control" id="id_card_number_d1" autocomplete="off" placeholder="Datum 1" name="id_card_number_d1">
+                                            <input type="date" class="form-control" id="id_card_number_d1" autocomplete="off" placeholder="Datum 1" name="id_card_number_d1" value="{{$orangeInternetTv->id_card_number_d1}}">
                                         </div>
 
                                     </div>
@@ -305,7 +305,7 @@
                                     <div class="col-4">
                                         <div class="form-group">
 
-                                            <input type="date" class="form-control" id="id_card_number_d2" autocomplete="off" placeholder="Datum 2" name="id_card_number_d2">
+                                            <input type="date" class="form-control" id="id_card_number_d2" autocomplete="off" placeholder="Datum 2" name="id_card_number_d2" value="{{$orangeInternetTv->id_card_number_d2}}">
                                         </div>
 
                                     </div>
