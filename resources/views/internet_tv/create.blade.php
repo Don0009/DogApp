@@ -53,6 +53,9 @@
                 </div>
                 <form class="forms-sample" method="POST" action="{{ route('internet_tv.store') }}">
                     @csrf
+                    <div class="form-group">
+                        <input type="hidden" name="form_lang" value="{{ $lang }}">
+                    </div>
                     <div class="section">
                         <div class="container">
                             <h6 class="card-title">Mej. / Mevr. / Dhr. (Omcircelen wat past)</h6>
@@ -537,7 +540,7 @@
                                     </h4>
                                 </div>
 
-                                <div class="row">
+                                <div class="row pt-3 mb-3 border border-dark">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="operator_name">Naam operator:</label>
@@ -551,9 +554,7 @@
                                         </div>
 
                                     </div>
-                                </div>
 
-                                <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="easy_switch_id">Easy Switch ID:</label>
@@ -571,7 +572,7 @@
                                     </h4>
                                 </div>
 
-                                <div class="row">
+                                <div class="row pt-3 mb-3 border border-dark">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_1">Oproepnummer:</label>
@@ -590,7 +591,7 @@
                         </div>
                         <div class="section">
                             <div class="container">
-                                <div class="row">
+                                <div class="row pt-3 mb-3 border border-dark">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_2">Oproepnummer:</label>
@@ -614,7 +615,7 @@
                                     <h4>Overdracht mobiele nummers
                                     </h4>
                                 </div>
-                                <div class="row">
+                                <div class="row pt-3 mb-3 border border-dark">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_3">Oproepnummer:</label>
@@ -640,8 +641,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number">SIM nummer oorspronkelijke operator:</label>
@@ -656,8 +656,7 @@
 
                                     </div>
 
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="desired_transfer_date">Gewenste overdracht datum:</label>
@@ -688,7 +687,7 @@
                         </div>
                         <div class="section">
                             <div class="container">
-                                <div class="row">
+                                <div class="row pt-3 mb-3 border border-dark">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_5">Oproepnummer:</label>
@@ -716,8 +715,7 @@
                                         </div>
 
                                     </div>
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number_2">SIM nummer oorspronkelijke operator:</label>
@@ -732,8 +730,7 @@
 
                                     </div>
 
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="desired_transfer_date_1">Gewenste overdracht datum:</label>
@@ -766,7 +763,7 @@
 
                         <div class="section">
                             <div class="container">
-                                <div class="row">
+                                <div class="row pt-3 mb-3 border border-dark">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_6">Oproepnummer:</label>
@@ -792,8 +789,7 @@
 
 
 
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number_3">SIM nummer oorspronkelijke operator:</label>
@@ -808,8 +804,7 @@
 
                                     </div>
 
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="desired_transfer_date_2">Gewenste overdracht datum: </label>
@@ -834,7 +829,7 @@
                         </div>
                         <div class="section">
                             <div class="container">
-                                <div class="row">
+                                <div class="row pt-3 mb-3 border border-dark">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_7">Oproepnummer:</label>
@@ -861,8 +856,7 @@
 
 
 
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number_4">SIM nummer oorspronkelijke operator:</label>
@@ -877,8 +871,7 @@
 
                                     </div>
 
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="transfer_date_3">Gewenste overdracht datum:</label>
@@ -908,7 +901,7 @@
                         </div>
                         <div class="section">
                             <div class="container">
-                                <div class="row">
+                                <div class="row pt-3 mb-3 border border-dark">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_8">Oproepnummer: </label>
@@ -932,8 +925,7 @@
                                                     (Enkel van toepassing bij Easy Switch)</span></label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number_5">SIM nummer oorspronkelijke operator: </label>
@@ -946,8 +938,7 @@
                                             <input type="text" class="form-control" id="original_operator_4" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_4">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
+
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="desired_transfer_date_4">Gewenste overdracht datum:</label>

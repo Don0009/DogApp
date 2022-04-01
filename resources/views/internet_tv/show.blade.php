@@ -238,17 +238,17 @@
 
                                     <h5>Extra TV Decoder?</h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="extra_decoder" value="0" value="{{ $orangeInternetTv->extra_decoder}}">
+                                        <input class="form-check-input" type="radio" name="extra_decoder" value="0" {{ $orangeInternetTv->extra_decoder == 0 ? 'checked' : '' }}>
                                         <label for="extra_decoder" class="form-label">1<span class="text-danger">*</span></label>
 
                                     </div>
 
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="extra_decoder" value="1" value="{{ $orangeInternetTv->extra_decoder}}">
+                                        <input class="form-check-input" type="radio" name="extra_decoder" value="1" {{ $orangeInternetTv->extra_decoder == 1 ? 'checked' : '' }}>
                                         <label for="extra_decoder" class="form-label">2<span class="text-danger">*</span></label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="extra_decoder" value="2" value="{{ $orangeInternetTv->extra_decoder}}">
+                                        <input class="form-check-input" type="radio" name="extra_decoder" value="2" {{ $orangeInternetTv->extra_decoder == 2 ? 'checked' : '' }}>
                                         <label for="extra_decoder" class="form-label">3<span class="text-danger">*</span></label>
                                     </div>
                                 </div>
@@ -260,11 +260,11 @@
 
                                     <h5>Internet boost*? </h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="internet_boost" value="0" value="{{$orangeInternetTv->internet_boost}}">
+                                        <input class="form-check-input" type="radio" name="internet_boost" value="0" {{ $orangeInternetTv->internet_boost == 0 ? 'checked' : '' }}>
                                         <label for="internet_boost" class="form-label">Ja<span class="text-danger">*</span></label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="internet_boost" value="1" value="{{$orangeInternetTv->internet_boost}}">
+                                        <input class="form-check-input" type="radio" name="internet_boost" value="1" {{ $orangeInternetTv->internet_boost == 1 ? 'checked' : '' }}>
                                         <label for="internet_boost" class="form-label">Neen<span class="text-danger">*</span></label>
                                     </div>
                                 </div>
@@ -324,7 +324,7 @@
                                     <div class="col-4">
                                         <div class="form-group">
 
-                                            <input type="date" class="form-control" id="id_card_number_d3" autocomplete="off" placeholder="Datum 3" name="id_card_number_d3">
+                                            <input type="date" class="form-control" id="id_card_number_d3" autocomplete="off" placeholder="Datum 3" name="id_card_number_d3" value="{{$orangeInternetTv->id_card_number_d3}}">
                                         </div>
 
                                     </div>
@@ -340,7 +340,7 @@
                                 <div class="mb-3">
                                     <label for="exampleFormControlTextarea1" class="form-label">Bijkomende informatie voor de installateur (optioneel)</label>
                                     <h6></h6>
-                                    <textarea class="form-control" name="additional_information" values="additional_information" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                    <textarea class="form-control" name="additional_information" values="additional_information" id="exampleFormControlTextarea1" rows="5" value="{{$orangeInternetTv->additional_information}}"></textarea>
                                 </div>
                                 <div class="mb-3">
                                     <input type="file" class="form-control" id="file" autocomplete="off" placeholder="images" name="file">
@@ -368,13 +368,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="customer_number">Klantennummer:</label>
-                                            <input type="text" class="form-control" id="customer_number" autocomplete="off" placeholder="Klantennummer :" name="customer_number">
+                                            <input type="text" class="form-control" id="customer_number" autocomplete="off" placeholder="Klantennummer :" name="customer_number" value="{{$orangeInternetTv->customer_number}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="customer_type">Klanttype:</label>
-                                            <input type="name" class="form-control" id="customer_type" autocomplete="off" placeholder="Klanttype" name="customer_type">
+                                            <input type="name" class="form-control" id="customer_type" autocomplete="off" placeholder="Klanttype" name="customer_type" value="{{$orangeInternetTv->customer_type}}">
                                         </div>
 
                                     </div>
@@ -387,13 +387,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="title">Aanspreektitel:</label>
-                                            <input type="text" class="form-control" id="title" autocomplete="off" placeholder="Aanspreektitel" name="title">
+                                            <input type="text" class="form-control" id="title" autocomplete="off" placeholder="Aanspreektitel" name="title" value="{{$orangeInternetTv->title}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="language">Taal:</label>
-                                            <input type="name" class="form-control" id="language" autocomplete="off" placeholder="Taal" name="language">
+                                            <input type="name" class="form-control" id="language" autocomplete="off" placeholder="Taal" name="language" value="{{$orangeInternetTv->language}}">
                                         </div>
 
                                     </div>
@@ -406,13 +406,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="first_name_1">Voornaam:</label>
-                                            <input type="text" class="form-control" id="first_name_1" autocomplete="off" placeholder="Voornaam" name="first_name_1">
+                                            <input type="text" class="form-control" id="first_name_1" autocomplete="off" placeholder="Voornaam" name="first_name_1" value="{{$orangeInternetTv->first_name_1}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="name_1">Naam:</label>
-                                            <input type="name" class="form-control" id="name_1" autocomplete="off" placeholder="Naam" name="name_1">
+                                            <input type="name" class="form-control" id="name_1" autocomplete="off" placeholder="Naam" name="name_1" value="{{$orangeInternetTv->name_1}}">
                                         </div>
 
                                     </div>
@@ -425,13 +425,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="date_of_birth">Geboortedatum:</label>
-                                            <input type="date" class="form-control" id="date_of_birth" autocomplete="off" placeholder="Geboortedatum" name="date_of_birth">
+                                            <input type="date" class="form-control" id="date_of_birth" autocomplete="off" placeholder="Geboortedatum" name="date_of_birth" value="{{$orangeInternetTv->date_of_birth}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="number_identiteitskaart">Nummer identiteitskaart:</label>
-                                            <input type="name" class="form-control" id="number_identiteitskaart" autocomplete="off" placeholder="Nummer identiteitskaart:" name="number_identiteitskaart">
+                                            <input type="name" class="form-control" id="number_identiteitskaart" autocomplete="off" placeholder="Nummer identiteitskaart:" name="number_identiteitskaart" value="{{$orangeInternetTv->number_identiteitskaart}}">
                                         </div>
 
                                     </div>
@@ -444,13 +444,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="telephone">Telefoon:</label>
-                                            <input type="text" class="form-control" id="telephone" autocomplete="off" placeholder="Telefoon:" name="telephone">
+                                            <input type="text" class="form-control" id="telephone" autocomplete="off" placeholder="Telefoon:" name="telephone" value="{{$orangeInternetTv->telephone}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="email_address">Emailadres:</label>
-                                            <input type="name" class="form-control" id="email_address" autocomplete="off" placeholder="Emailadres:" name="email_address">
+                                            <input type="name" class="form-control" id="email_address" autocomplete="off" placeholder="Emailadres:" name="email_address" value="{{$orangeInternetTv->email_address}}">
                                         </div>
 
                                     </div>
@@ -463,13 +463,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="street_1">Straat:</label>
-                                            <input type="text" class="form-control" id="street_1" autocomplete="off" placeholder="Straat" name="street_1">
+                                            <input type="text" class="form-control" id="street_1" autocomplete="off" placeholder="Straat" name="street_1" value="{{$orangeInternetTv->street_1}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="number_1">Nummer:</label>
-                                            <input type="name" class="form-control" id="number_1" autocomplete="off" placeholder="Nummer" name="number_1">
+                                            <input type="name" class="form-control" id="number_1" autocomplete="off" placeholder="Nummer" name="number_1" value="{{$orangeInternetTv->number_1}}">
                                         </div>
 
                                     </div>
@@ -482,13 +482,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="postcode_1">Postcode:</label>
-                                            <input type="text" class="form-control" id="postcode_1" autocomplete="off" placeholder="Postcode" name="postcode_1">
+                                            <input type="text" class="form-control" id="postcode_1" autocomplete="off" placeholder="Postcode" name="postcode_1" value="{{$orangeInternetTv->postcode_1}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="place">Plaats:</label>
-                                            <input type="name" class="form-control" id="place" autocomplete="off" placeholder="Plaats" name="place">
+                                            <input type="name" class="form-control" id="place" autocomplete="off" placeholder="Plaats" name="place" value="{{$orangeInternetTv->place}}">
                                         </div>
 
                                     </div>
@@ -501,7 +501,7 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="vat_number">BTW nummer:</label>
-                                            <input type="text" class="form-control" id="vat_number" autocomplete="off" placeholder="BTW nummer" name="vat_number">
+                                            <input type="text" class="form-control" id="vat_number" autocomplete="off" placeholder="BTW nummer" name="vat_number" value="{{$orangeInternetTv->vat_number}}">
                                         </div>
                                     </div>
 
@@ -517,14 +517,14 @@
 
                                     <div class="form-check">
 
-                                        <input class="form-check-input" type="radio" name="care_of_the_automatic_migration" value="0">
+                                        <input class="form-check-input" type="radio" name="care_of_the_automatic_migration" value="0" {{ $orangeInternetTv->care_of_the_automatic_migration == 0 ? 'checked' : '' }}>
                                         <label for="extra_decoder" class="form-label"><span style="font-weight: bold">Ik wens gebruik</span> te maken de overstapdienst Easy Switch.
                                             Orange zorgt voor de automatische migratie en het opzeggen van de hieronder aangegeven
                                             diensten bij uw oorspronkelijke operator.</label>
                                     </div>
                                     <div class="form-check">
 
-                                        <input class="form-check-input" type="radio" name="care_of_the_automatic_migration" value="1">
+                                        <input class="form-check-input" type="radio" name="care_of_the_automatic_migration" value="1" {{ $orangeInternetTv->care_of_the_automatic_migration == 1 ? 'checked' : '' }}>
                                         <label for="extra_decoder" class="form-label"><span style="font-weight: bold">Ik wens geen gebruik</span> te maken van Easy Switch.
                                             Ik zorg zelf voor het opzeggen van mijn internet en tv-diensten bij mijn oorspronkelijke operator.
                                             Gewenste installatiedatum: datum overeengekomen met de klant.</label>
@@ -541,13 +541,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="operator_name">Naam operator:</label>
-                                            <input type="text" class="form-control" id="operator_name" autocomplete="off" placeholder="Naam operator" name="operator_name">
+                                            <input type="text" class="form-control" id="operator_name" autocomplete="off" placeholder="Naam operator" name="operator_name" value="{{$orangeInternetTv->operator_name}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="client_number">Naam operator:</label>
-                                            <input type="name" class="form-control" id="client_number" autocomplete="off" placeholder="Naam operator" name="client_number">
+                                            <input type="name" class="form-control" id="client_number" autocomplete="off" placeholder="Naam operator" name="client_number" value="{{$orangeInternetTv->client_number}}">
                                         </div>
 
                                     </div>
@@ -557,7 +557,7 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="easy_switch_id">Easy Switch ID:</label>
-                                            <input type="text" class="form-control" id="easy_switch_id" autocomplete="off" placeholder="Easy Switch ID :" name="easy_switch_id">
+                                            <input type="text" class="form-control" id="easy_switch_id" autocomplete="off" placeholder="Easy Switch ID :" name="easy_switch_id" value="{{$orangeInternetTv->easy_switch_id}}">
                                         </div>
                                     </div>
 
@@ -575,12 +575,12 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_1">Oproepnummer:</label>
-                                            <input type="text" class="form-control" id="call_number_1" autocomplete="off" placeholder="Oproepnummer" name="call_number_1">
+                                            <input type="text" class="form-control" id="call_number_1" autocomplete="off" placeholder="Oproepnummer" name="call_number_1" value="{{$orangeInternetTv->call_number_1}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="stopping_5" value="0">
+                                            <input class="form-check-input" type="radio" name="stopping_5" value="0" {{ $orangeInternetTv->stopping_5 == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"><span style="">Stopzetten (Enkel van toepassing bij Easy Switch)</span> </label>
                                         </div>
 
@@ -594,12 +594,12 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_2">Oproepnummer:</label>
-                                            <input type="text" class="form-control" id="call_number_2" autocomplete="off" placeholder="Oproepnummer" name="call_number_2">
+                                            <input type="text" class="form-control" id="call_number_2" autocomplete="off" placeholder="Oproepnummer" name="call_number_2" value="{{$orangeInternetTv->call_number_2}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="stopping_5" value="1">
+                                            <input class="form-check-input" type="radio" name="stopping_5" value="1" {{ $orangeInternetTv->stopping_5 == 1 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label">Stopzetten (Enkel van toepassing bij Easy Switch)</label>
                                         </div>
 
@@ -618,12 +618,12 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_3">Oproepnummer:</label>
-                                            <input type="text" class="form-control" id="call_number_3" autocomplete="off" placeholder="Oproepnummer" name="call_number_3">
+                                            <input type="text" class="form-control" id="call_number_3" autocomplete="off" placeholder="Oproepnummer" name="call_number_3" value="{{$orangeInternetTv->call_number_3}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="stopping_3" value="0">
+                                            <input class="form-check-input" type="radio" name="stopping_3" value="0" {{ $orangeInternetTv->stopping_3 == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"><span style="">Overdragen naar Orange</span> </label>
                                         </div>
 
@@ -632,7 +632,7 @@
                                     <div class="col-3">
                                         <div class="form-check topper">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="stopping_3" value="1">
+                                                <input class="form-check-input" type="radio" name="stopping_3" value="1" {{ $orangeInternetTv->stopping_3 == 1 ? 'checked' : '' }}>
                                                 <label class="form-check-label" for="flexRadioDefault1">
                                                     Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)
@@ -645,13 +645,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number">SIM nummer oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="sim_number" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number">
+                                            <input type="text" class="form-control" id="sim_number" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number" value="{{$orangeInternetTv->sim_number}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="original_operator">Oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="original_operator" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator">
+                                            <input type="text" class="form-control" id="original_operator" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator" value="{{$orangeInternetTv->original_operator}}">
                                         </div>
 
                                     </div>
@@ -661,19 +661,19 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="desired_transfer_date">Gewenste overdracht datum:</label>
-                                            <input type="text" class="form-control" id="desired_transfer_date" autocomplete="off" placeholder="Gewenste overdracht datum" name="desired_transfer_date">
+                                            <input type="text" class="form-control" id="desired_transfer_date" autocomplete="off" placeholder="Gewenste overdracht datum" name="desired_transfer_date" value="{{$orangeInternetTv->desired_transfer_date}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately" value="0">
+                                            <input class="form-check-input" type="radio" name="immediately" value="0" {{ $orangeInternetTv->immediately == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"><span>Onmiddellijk</span> </label>
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="immediately" value="1">
+                                                <input class="form-check-input" type="radio" name="immediately" value="1" {{ $orangeInternetTv->immediately == 1 ? 'checked' : '' }}>
                                                 <label class="form-check-label" for="flexRadioDefault1">
                                                     Op de installatiedatum
                                                     van Internet + TV
@@ -692,13 +692,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_5">Oproepnummer:</label>
-                                            <input type="text" class="form-control" id="call_number_5" autocomplete="off" placeholder="Oproepnummer" name="call_number_5">
+                                            <input type="text" class="form-control" id="call_number_5" autocomplete="off" placeholder="Oproepnummer" name="call_number_5" value="{{$orangeInternetTv->call_number_5}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
 
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange" value="0">
+                                            <input class="form-check-input" type="radio" name="transfer_to_orange" value="0" {{ $orangeInternetTv->transfer_to_orange == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"><span>Overdragen naar Orange</span> </label>
                                         </div>
 
@@ -707,7 +707,7 @@
                                     <div class="col-3">
                                         <div class="form-check topper">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="transfer_to_orange" value="1">
+                                                <input class="form-check-input" type="radio" name="transfer_to_orange" value="1" {{ $orangeInternetTv->transfer_to_orange == 1 ? 'checked' : '' }}>
                                                 <label class="form-check-label" for="flexRadioDefault1">
                                                     Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)
@@ -721,13 +721,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number_2">SIM nummer oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="sim_number_2" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number_2">
+                                            <input type="text" class="form-control" id="sim_number_2" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number_2" value="{{$orangeInternetTv->sim_number_2}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="original_operator_1">Oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="original_operator_1" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_1">
+                                            <input type="text" class="form-control" id="original_operator_1" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_1" value="{{$orangeInternetTv->original_operator_1}}">
                                         </div>
 
                                     </div>
@@ -737,12 +737,12 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="desired_transfer_date_1">Gewenste overdracht datum:</label>
-                                            <input type="text" class="form-control" id="desired_transfer_date_1" autocomplete="off" placeholder="Gewenste overdracht datum" name="desired_transfer_date_1">
+                                            <input type="text" class="form-control" id="desired_transfer_date_1" autocomplete="off" placeholder="Gewenste overdracht datum" name="desired_transfer_date_1" value="{{$orangeInternetTv->desired_transfer_date_1}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="Stopping" value="0">
+                                            <input class="form-check-input" type="radio" name="Stopping" value="0" {{ $orangeInternetTv->Stopping == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"><span>Onmiddellijk</span> </label>
                                         </div>
 
@@ -751,7 +751,7 @@
                                     <div class="col-3">
                                         <div class="form-check topper">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="Stopping" value="1">
+                                                <input class="form-check-input" type="radio" name="Stopping" value="1" {{ $orangeInternetTv->Stopping == 1 ? 'checked' : '' }}>
                                                 <label for="extra_decoder" class="form-label"><span> Op de installatiedatum
                                                         van Internet + TV</span> </label>
                                             </div>
@@ -770,12 +770,12 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_6">Oproepnummer:</label>
-                                            <input type="text" class="form-control" id="call_number_6" autocomplete="off" placeholder=">Oproepnummer" name="call_number_6">
+                                            <input type="text" class="form-control" id="call_number_6" autocomplete="off" placeholder=">Oproepnummer" name="call_number_6" value="{{$orangeInternetTv->call_number_6}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_4" value="0">
+                                            <input class="form-check-input" type="radio" name="transfer_to_orange_4" value="0" {{ $orangeInternetTv->transfer_to_orange_4 == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Overdragen naar Orange</span></label>
                                         </div>
 
@@ -783,7 +783,7 @@
 
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_4" value="1">
+                                            <input class="form-check-input" type="radio" name="transfer_to_orange_4" value="1" {{ $orangeInternetTv->transfer_to_orange_4 == 1 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)</span></label>
                                         </div>
@@ -797,13 +797,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number_3">SIM nummer oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="sim_number_3" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number_3">
+                                            <input type="text" class="form-control" id="sim_number_3" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number_3" value="{{$orangeInternetTv->sim_number_3}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="original_operator_2">Oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="original_operator_2" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_2">
+                                            <input type="text" class="form-control" id="original_operator_2" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_2" value="{{$orangeInternetTv->original_operator_2}}">
                                         </div>
 
                                     </div>
@@ -813,18 +813,18 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="desired_transfer_date_2">Gewenste overdracht datum: </label>
-                                            <input type="text" class="form-control" id="desired_transfer_date_2" autocomplete="off" placeholder="Gewenste overdracht datum" name="desired_transfer_date_2">
+                                            <input type="text" class="form-control" id="desired_transfer_date_2" autocomplete="off" placeholder="Gewenste overdracht datum" name="desired_transfer_date_2" value="{{$orangeInternetTv->desired_transfer_date_2}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately_3" value="0">
+                                            <input class="form-check-input" type="radio" name="immediately_3" value="0" {{ $orangeInternetTv->immediately_3 == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Onmiddellijk</span></label>
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately_3" value="1">
+                                            <input class="form-check-input" type="radio" name="immediately_3" value="1" {{ $orangeInternetTv->immediately_3 == 1 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">O p de installatiedatum
                                                     van Internet + TV</span></label>
                                         </div>
@@ -838,12 +838,12 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_7">Oproepnummer:</label>
-                                            <input type="text" class="form-control" id="call_number_7" autocomplete="off" placeholder="Oproepnummer" name="call_number_7">
+                                            <input type="text" class="form-control" id="call_number_7" autocomplete="off" placeholder="Oproepnummer" name="call_number_7" value="{{$orangeInternetTv->call_number_7}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_2" value="0">
+                                            <input class="form-check-input" type="radio" name="transfer_to_orange_2" value="0" {{ $orangeInternetTv->transfer_to_orange_2 == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Overdragen naar Orange</span></label>
                                         </div>
 
@@ -852,7 +852,7 @@
                                     <div class="col-3">
                                         <div class="form-check topper">
 
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_2" value="1">
+                                            <input class="form-check-input" type="radio" name="transfer_to_orange_2" value="1" {{ $orangeInternetTv->transfer_to_orange_2 == 1 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)</span></label>
                                         </div>
@@ -866,13 +866,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number_4">SIM nummer oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="sim_number_4" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number_4">
+                                            <input type="text" class="form-control" id="sim_number_4" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number_4" value="{{$orangeInternetTv->sim_number_4}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="original_operator_3">Oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="original_operator_3" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_3">
+                                            <input type="text" class="form-control" id="original_operator_3" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_3" value="{{$orangeInternetTv->original_operator_3}}">
                                         </div>
 
                                     </div>
@@ -882,12 +882,12 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="transfer_date_3">Gewenste overdracht datum:</label>
-                                            <input type="text" class="form-control" id="transfer_date_3" autocomplete="off" placeholder="Gewenste overdracht datum" name="transfer_date_3">
+                                            <input type="text" class="form-control" id="transfer_date_3" autocomplete="off" placeholder="Gewenste overdracht datum" name="transfer_date_3" value="{{$orangeInternetTv->transfer_date_3}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately_4" value="0">
+                                            <input class="form-check-input" type="radio" name="immediately_4" value="0" {{ $orangeInternetTv->immediately_4 == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Onmiddellijk</span></label>
                                         </div>
 
@@ -897,7 +897,7 @@
                                         <div class="form-check topper">
 
 
-                                            <input class="form-check-input" type="radio" name="immediately_4" value="1">
+                                            <input class="form-check-input" type="radio" name="immediately_4" value="1" {{ $orangeInternetTv->immediately_4 == 1 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style=""> Op de installatiedatum
                                                     van Internet + TV</span></label>
                                         </div>
@@ -912,13 +912,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_8">Oproepnummer: </label>
-                                            <input type="text" class="form-control" id="call_number_8" autocomplete="off" placeholder="Oproepnummer" name="call_number_8">
+                                            <input type="text" class="form-control" id="call_number_8" autocomplete="off" placeholder="Oproepnummer" name="call_number_8" value="{{$orangeInternetTv->call_number_8}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
 
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_3" value="0">
+                                            <input class="form-check-input" type="radio" name="transfer_to_orange_3" value="0" {{ $orangeInternetTv->transfer_to_orange_3 == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Overdragen naar Orange</span></label>
                                         </div>
 
@@ -927,7 +927,7 @@
                                     <div class="col-3">
                                         <div class="form-check topper">
 
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_3" value="1">
+                                            <input class="form-check-input" type="radio" name="transfer_to_orange_3" value="1" {{ $orangeInternetTv->transfer_to_orange_3 == 1 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)</span></label>
                                         </div>
@@ -937,13 +937,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="sim_number_5">SIM nummer oorspronkelijke operator: </label>
-                                            <input type="text" class="form-control" id="sim_number_5" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number_5">
+                                            <input type="text" class="form-control" id="sim_number_5" autocomplete="off" placeholder="SIM nummer oorspronkelijke operator" name="sim_number_5" value="{{$orangeInternetTv->sim_number_5}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="original_operator_4">Oorspronkelijke operator:</label>
-                                            <input type="text" class="form-control" id="original_operator_4" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_4">
+                                            <input type="text" class="form-control" id="original_operator_4" autocomplete="off" placeholder="Oorspronkelijke operator" name="original_operator_4" value="{{$orangeInternetTv->original_operator_4}}">
                                         </div>
                                     </div>
                                 </div>
@@ -951,12 +951,12 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="desired_transfer_date_4">Gewenste overdracht datum:</label>
-                                            <input type="text" class="form-control" id="desired_transfer_date_4" autocomplete="off" placeholder="Gewenste overdracht datum" name="desired_transfer_date_4">
+                                            <input type="text" class="form-control" id="desired_transfer_date_4" autocomplete="off" placeholder="Gewenste overdracht datum" name="desired_transfer_date_4" value="{{$orangeInternetTv->desired_transfer_date_4}}">
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately_5" value="0">
+                                            <input class="form-check-input" type="radio" name="immediately_5" value="0" {{ $orangeInternetTv->immediately_5 == 0 ? 'checked' : '' }}>
                                             <label for="extra_decoder" class="form-label"> <span style="">Onmiddellijk</span></label>
                                         </div>
 
@@ -964,7 +964,7 @@
 
                                     <div class="col-3">
                                         <div class="form-check ">
-                                            <input class="form-check-input" type="radio" name="immediately_5" value="1">
+                                            <input class="form-check-input" type="radio" name="immediately_5" value="1" {{ $orangeInternetTv->immediately_5 == 1 ? 'checked' : '' }}">
                                             <label for="extra_decoder" class="form-label">Op de installatiedatum
                                                 van Internet + TV<span class="text-danger">*</span></label>
 
@@ -1004,13 +1004,13 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="call_number_9">In tweevoud opgemaakt te:</label>
-                                            <input type="text" class="form-control" id="call_number_9" autocomplete="off" placeholder="In tweevoud opgemaakt te" name="call_number_9">
+                                            <input type="text" class="form-control" id="call_number_9" autocomplete="off" placeholder="In tweevoud opgemaakt te" name="call_number_9" value="{{$orangeInternetTv->call_number_9}}">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="op">op:</label>
-                                            <input type="text" class="form-control" id="op" autocomplete="off" placeholder="op" name="op">
+                                            <input type="text" class="form-control" id="op" autocomplete="off" placeholder="op" name="op" value="{{$orangeInternetTv->op}}">
                                         </div>
 
                                     </div>
@@ -1020,7 +1020,7 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="signature">Handtekening:</label>
-                                            <input type="file" class="form-control" id="file_1" autocomplete="off" placeholder="Handtekening" name="file_1">
+                                            <input type="file" class="form-control" id="file_1" autocomplete="off" placeholder="Handtekening" name="file_1" value="{{$orangeInternetTv->op}}">
                                         </div>
                                     </div>
                                 </div>

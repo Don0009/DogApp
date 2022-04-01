@@ -53,6 +53,9 @@
                 </div>
                 <form class="forms-sample" method="POST" action="{{ route('internet_tv.store') }}">
                     @csrf
+                    <div class="form-group">
+                        <input type="hidden" name="form_lang" value="{{ $lang }}">
+                    </div>
                     <div class="section">
                         <div class="container">
                             <h6 class="card-title">Mlle / Mme / M. (entourez)</h6>
@@ -534,7 +537,7 @@
                                 </h4>
                             </div>
 
-                            <div class="row">
+                            <div class="row pt-3 mb-3 border border-dark">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="operator_name">Nom de l’opérateur Easy Switch :</label>
@@ -548,17 +551,15 @@
                                     </div>
 
                                 </div>
-                            </div>
-
-                            <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="easy_switch_id">Easy Switch ID :</label>
                                         <input type="text" class="form-control" id="easy_switch_id" autocomplete="off" placeholder="Easy Switch ID :" name="easy_switch_id">
                                     </div>
                                 </div>
-
                             </div>
+
+
                         </div>
                     </div>
                     <div class="section">
@@ -568,7 +569,7 @@
                                 </h4>
                             </div>
 
-                            <div class="row">
+                            <div class="row pt-3 mb-3 border border-dark">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="call_number_1">Numéro d’appel :</label>
@@ -588,7 +589,7 @@
                     </div>
                     <div class="section">
                         <div class="container">
-                            <div class="row">
+                            <div class="row pt-3 mb-3 border border-dark">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="call_number_2">Numéro d’appel :</label>
@@ -612,7 +613,7 @@
                                 <h4>Numéros mobiles
                                 </h4>
                             </div>
-                            <div class="row">
+                            <div class="row pt-3 mb-3 border border-dark">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="call_number_3">Numéro d’appel</label>
@@ -642,8 +643,7 @@
 
 
 
-                            </div>
-                            <div class="row">
+
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="sim_number">Numéro SIM opérateur d’origine</label>
@@ -658,8 +658,7 @@
 
                                 </div>
 
-                            </div>
-                            <div class="row">
+
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="desired_transfer_date">Date de portage souhaitée :</label>
@@ -691,7 +690,7 @@
                     </div>
                     <div class="section">
                         <div class="container">
-                            <div class="row">
+                            <div class="row pt-3 mb-3 border border-dark">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="call_number_5">Numéro d’appel :</label>
@@ -721,8 +720,7 @@
 
 
 
-                            </div>
-                            <div class="row">
+
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="sim_number_2">Numéro SIM opérateur d’origine :</label>
@@ -737,8 +735,7 @@
 
                                 </div>
 
-                            </div>
-                            <div class="row">
+
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="desired_transfer_date_1">Date de portage souhaitée :</label>
@@ -770,7 +767,7 @@
 
                     <div class="section">
                         <div class="container">
-                            <div class="row">
+                            <div class="row pt-3 mb-3 border border-dark">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="call_number_6">Numéro d’appel :</label>
@@ -796,8 +793,7 @@
 
 
 
-                            </div>
-                            <div class="row">
+
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="sim_number_3">Numéro SIM opérateur d’origine :</label>
@@ -812,8 +808,7 @@
 
                                 </div>
 
-                            </div>
-                            <div class="row">
+
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="desired_transfer_date_2">Date de portage souhaitée :</label>
@@ -843,7 +838,7 @@
                     </div>
                     <div class="section">
                         <div class="container">
-                            <div class="row">
+                            <div class="row pt-3 mb-3 border border-dark">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="call_number_7">Numéro d’appel :</label>
@@ -858,6 +853,7 @@
 
                                 </div>
 
+
                                 <div class="col-3">
                                     <div class="form-check topper">
 
@@ -869,9 +865,6 @@
                                 </div>
 
 
-
-                            </div>
-                            <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="sim_number_4">Numéro SIM opérateur d’origine :</label>
@@ -886,8 +879,7 @@
 
                                 </div>
 
-                            </div>
-                            <div class="row">
+
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="transfer_date_3">Date de portage souhaitée :</label>
@@ -917,7 +909,7 @@
                     </div>
                     <div class="section">
                         <div class="container">
-                            <div class="row">
+                            <div class="row pt-3 mb-3 border border-dark">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="call_number_8">Numéro d’appel :</label>
@@ -945,8 +937,7 @@
 
 
 
-                            </div>
-                            <div class="row">
+                          
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="sim_number_5">Numéro SIM opérateur d’origine :</label>
@@ -961,8 +952,7 @@
 
                                 </div>
 
-                            </div>
-                            <div class="row">
+                            
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="desired_transfer_date_4">Date de portage souhaitée :</label>

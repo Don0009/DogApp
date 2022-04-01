@@ -33,14 +33,15 @@ class OrangeInternetTvController extends Controller
      */
     public function create(Request $request)
     {
-        // dd($lang='du');
+
 
         $lang = $request->lang;
         // dd($lang);
         if ($lang == "du") {
-            return view('internet_tv.create');
+            return view('internet_tv.create', compact('lang'));
         } else {
-            return view('internet_tv.create_fr');
+
+            return view('internet_tv.create_fr', compact('lang'));
         }
 
         //  if(isset($data['stopping_2'])){
