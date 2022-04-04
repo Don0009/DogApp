@@ -170,10 +170,6 @@ class OrangeInternetTvController extends Controller
         $data['user_id'] = Auth::user()->id;
 
 
-
-
-
-
         // dd($data);
         // dd($validator);
 
