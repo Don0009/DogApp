@@ -8,6 +8,9 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+use mikehaertl\pdftk\Pdf;
+use \Mail;
+
 class OrangeInternetTvController extends Controller
 {
     /**
@@ -178,7 +181,32 @@ class OrangeInternetTvController extends Controller
         //     dd($validator);
         //     return redirect()->back()->withErrors($validator);
         // }
-        OrangeInternetTv::create($data);
+
+        $pdf = new Pdf(public_path('notfill.pdf'), [
+//            'command' => '/some/other/path/to/pdftk',
+            // or on most Windows systems:
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            'useExec' => true,  // May help on Windows systems if execution fails
+        ]);
+
+        $data = OrangeInternetTv::create($data);
+
+        $data = OrangeInternetTv::findOrFail(1)->toArray();
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs('filled.pdf');;
+
+
+
+        Mail::send('emails.report', $data, function ($message) use ($data, $pdf) {
+            $message->to('musmangeee@gmail.com')
+                ->subject(Auth()->user()->name . " has submitted SSM Report." . 'Hello')
+//                ->cc($recipients)
+//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                ->attach(public_path('filled.pdf'), [
+                    'as' => 'name.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+        });
         return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');
     }
 
