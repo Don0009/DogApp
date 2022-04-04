@@ -191,7 +191,7 @@ class OrangeInternetTvController extends Controller
 
         $data = OrangeInternetTv::create($data);
 
-        $data = OrangeInternetTv::findOrFail(1)->toArray();
+        $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs('filled.pdf');;
 
@@ -206,6 +206,7 @@ class OrangeInternetTvController extends Controller
                     'as' => 'name.pdf',
                     'mime' => 'application/pdf',
                 ]);
+            $message->from('no-reply@ecosafety.nyc');
         });
         return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');
     }

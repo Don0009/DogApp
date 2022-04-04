@@ -26,7 +26,7 @@ class AmoCRMController extends Controller
     {
         $clientId = '4733cb95-e4d9-41bd-b8f7-c1279c96c0c6';
         $clientSecret = '2XYhPrUzgUaJYkwvUKL8D6qfQQFeJGy20tccCUwjMMgdRslvWz8PrWzqj1gc1dcG';
-        $redirectUri = 'https://example.com/';
+        $redirectUri = 'http://travelandelegance.com/public/amocrm/get_token';
 
         return new AmoCRMApiClient($clientId, $clientSecret, $redirectUri);
     }
