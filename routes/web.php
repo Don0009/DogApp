@@ -19,6 +19,10 @@ Route::get('/', function () {
     return redirect('login');
 });
 
+Route::get('/amocrm/get_token', [\App\Http\Controllers\AmoCRMController::class, 'get_token'])
+    ->middleware('auth') // Add this to integrate with Fortify and get your key safer and only in control panel
+    ->name('amocrm.integrate');
+
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Auth::routes();
 
