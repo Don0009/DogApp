@@ -189,7 +189,7 @@ class OrangeInternetTvController extends Controller
             'useExec' => true,  // May help on Windows systems if execution fails
         ]);
 
-        $data = OrangeInternetTv::create($data);
+        $data = $orange = OrangeInternetTv::create($data);
 
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
@@ -208,6 +208,14 @@ class OrangeInternetTvController extends Controller
                 ]);
             $message->from('no-reply@ecosafety.nyc');
         });
+
+        $amo = new AmoCRMController();
+        $lead_data = [];
+        $lead_data['NAME'] =  $orange->name ;
+        $lead_data['PHONE'] =  $orange->telephone;
+        $lead_data['EMAIL'] = $orange->email_address;
+        $lead_data['LEAD_NAME'] = 'Orange Internet TV Lead';
+        $amo->add_lead($lead_data);
         return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');
     }
 
