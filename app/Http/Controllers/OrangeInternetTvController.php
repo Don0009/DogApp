@@ -200,7 +200,7 @@ class OrangeInternetTvController extends Controller
         Mail::send('emails.report', $data, function ($message) use ($data, $pdf) {
             $message->to('musmangeee@gmail.com')
                 ->subject(Auth()->user()->name . " has submitted SSM Report." . 'Hello')
-//                ->cc($recipients)
+                ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
                 ->attach(public_path('filled.pdf'), [
                     'as' => 'name.pdf',
