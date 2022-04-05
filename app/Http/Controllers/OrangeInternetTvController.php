@@ -196,8 +196,9 @@ class OrangeInternetTvController extends Controller
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs($pdf_name);;
+        chmod(public_path($pdf_name), 0777);
 
-            dd($result);
+//        dd($result);
 
 
 
@@ -220,6 +221,7 @@ class OrangeInternetTvController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Orange Internet TV Lead';
         $amo->add_lead($lead_data);
+        unlink(public_path($pdf_name));
         return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');
     }
 
