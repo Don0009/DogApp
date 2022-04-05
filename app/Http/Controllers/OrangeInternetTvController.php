@@ -191,12 +191,12 @@ class OrangeInternetTvController extends Controller
 
         $data = $orange = OrangeInternetTv::create($data);
 
-        $pdf_name = now()->timestamp . '.pdf';
+        $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
 //        dd($pdf_name);
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs($pdf_name);;
-        chmod(public_path($pdf_name), 0777);
+//        chmod(public_path($pdf_name), 0777);
 
 //        dd($result);
 

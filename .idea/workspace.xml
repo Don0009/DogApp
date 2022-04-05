@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d05c62b9-e5cb-4b41-83e6-06a8a10ad743" name="Default Changelist" comment="" />
+    <list default="true" id="d05c62b9-e5cb-4b41-83e6-06a8a10ad743" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrangeInternetTvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrangeInternetTvController.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrangeInternetTvController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="181" column="45" selection-start-line="181" selection-start-column="45" selection-end-line="181" selection-end-column="45" />
+            <state relative-caret-position="137">
+              <caret line="193" column="39" selection-start-line="193" selection-start-column="39" selection-end-line="193" selection-end-column="39" />
               <folding>
                 <element signature="e#40#76#0#PHP" expanded="true" />
               </folding>
@@ -383,12 +385,12 @@
       <workItem from="1648926601913" duration="22180000" />
       <workItem from="1649060756110" duration="11101000" />
       <workItem from="1649086752315" duration="7772000" />
-      <workItem from="1649182836226" duration="5001000" />
+      <workItem from="1649182836226" duration="5270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57665000" />
+    <option name="totallyTimeSpent" value="57934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -546,8 +548,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrangeInternetTvController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="181" column="45" selection-start-line="181" selection-start-column="45" selection-end-line="181" selection-end-column="45" />
+        <state relative-caret-position="137">
+          <caret line="193" column="39" selection-start-line="193" selection-start-column="39" selection-end-line="193" selection-end-column="39" />
           <folding>
             <element signature="e#40#76#0#PHP" expanded="true" />
           </folding>
