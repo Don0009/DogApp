@@ -187,18 +187,20 @@ class OrangeInternetTvController extends Controller
 
         $data = $orange = OrangeInternetTv::create($data);
 
+        $pdf_name = now()->timestamp . '.pdf';
+//        dd($pdf_name);
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
-            ->saveAs('filled.pdf');;
+            ->saveAs($pdf_name);;
 
 
 
-        Mail::send('emails.report', $data, function ($message) use ($data, $pdf) {
+        Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
             $message->to('musmangeee@gmail.com')
-                ->subject(Auth()->user()->name . " has submitted SSM Report." . 'Hello')
+                ->subject("You have got a Orange Internet TV lead...!")
                 ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-                ->attach(public_path('filled.pdf'), [
+                ->attach(public_path($pdf_name), [
                     'as' => 'name.pdf',
                     'mime' => 'application/pdf',
                 ]);
