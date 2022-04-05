@@ -182,8 +182,12 @@ class OrangeInternetTvController extends Controller
 //            'command' => '/some/other/path/to/pdftk',
             // or on most Windows systems:
             'command' => '\snap\bin\pdftk',
+//            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 //            'useExec' => true,  // May help on Windows systems if execution fails
         ]);
+
+//        dd($pdf);
+
 
         $data = $orange = OrangeInternetTv::create($data);
 
@@ -192,6 +196,8 @@ class OrangeInternetTvController extends Controller
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs($pdf_name);;
+
+            dd($result);
 
 
 
