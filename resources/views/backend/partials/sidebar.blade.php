@@ -1,6 +1,6 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-        <a href="{{url('/')}}" class="sidebar-brand">
+        <a href="{{ url('/') }}" class="sidebar-brand">
             Contract<span>Form</span>
         </a>
         <div class="sidebar-toggler not-active">
@@ -95,6 +95,12 @@
                 <a href="{{ route('internet_tv.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title"> Internet + TV </span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('internet_tv.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title"> Telenet </span>
                 </a>
             </li>
 

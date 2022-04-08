@@ -44,4 +44,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('engie', 'EngieContractController');
     Route::resource('pad_services', 'PadServicesController');
     Route::get('/generate-pdf', 'PdfController@generatePDF');
+    Route::resource('telenet_new_subs', 'telenet\NewsubController');
+    Route::resource('telenet_question', 'telenet\QuestionController');
+    Route::resource('contractapp', 'telenet\ContractAppController');
+
 });
