@@ -18,6 +18,8 @@ class EngieContractController extends Controller
     {
         $contract_pros = EngieContract::all();
         return view ('engie.index',compact('contract_pros'));
+
+
     }
 
     /**
@@ -27,7 +29,7 @@ class EngieContractController extends Controller
      */
     public function create(Request $request)
     {
-        return view('engie.pdf_du');
+        return view('engie.create');
     }
 
 
@@ -49,9 +51,6 @@ class EngieContractController extends Controller
             'nace_code' => 'required',
             'tel' => 'required',
             'gsm' => 'required',
-            'e_mail' => 'required',
-            'you_wish_to_receive' => 'required',
-            'you_wish_to_be_informed' => 'required',
             'btw_be' => 'required',
             'rpr' => 'required',
             'company_name_1' => 'required',
@@ -78,12 +77,8 @@ class EngieContractController extends Controller
             'excluding_night' => 'required',
             'place_2' => 'required',
             'desired_start_date' => 'required',
-            'place_3' => 'required',
             'desired_start_date_1' => 'required',
-            'valid_for_the_two_energies' => 'required',
             'code_p' => 'required',
-            'debit_account_number' => 'required',
-            'drawn_up' => 'required',
             'handtekening' => 'required',
             'of_which_the_customer' => 'required',
         ]);
@@ -99,9 +94,6 @@ class EngieContractController extends Controller
         $data = $request->all();
 
 
-        if(isset($data['of_which_the_customer'])){
-            $data['of_which_the_customer'] = Carbon::parse($data['of_which_the_customer']);
-        }
 
         if(isset($data['desired_start_date_1'])){
             $data['desired_start_date_1'] = Carbon::parse($data['desired_start_date_1']);
@@ -116,13 +108,6 @@ class EngieContractController extends Controller
             $data['do_not_wish_to_receive_commercial_communications'] = true;
             }  else{
             $data['do_not_wish_to_receive_commercial_communications'] = false;
-            }
-        }
-        if(isset($data['handtekening'])){
-            if($data['handtekening'] == "on"){
-            $data['handtekening'] = true;
-            }  else{
-            $data['handtekening'] = false;
             }
         }
         if(isset($data['drawn_up'])){
@@ -450,11 +435,9 @@ class EngieContractController extends Controller
             $data['you_wish_to_be_informed'] = false;
             }
         }
-        // dd($data);
-        $contract = EngieContract::create($data);
-        // dd($contract);
+
         EngieContract::create($data);
-        return redirect()->route('engies.index')->with('success','Engie Contract created successfully!');
+        return redirect()->route('engie.index')->with('success','Engie Contract created successfully!');
     }
 
     /**

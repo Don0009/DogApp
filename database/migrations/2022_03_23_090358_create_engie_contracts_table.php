@@ -25,7 +25,6 @@ class CreateEngieContractsTable extends Migration
             $table->string('gsm');
             $table->string('e_mail');
             $table->string('you_wish_to_receive')->nullable();
-            $table->string('you_wish_to_be_informed')->nullable();
             $table->string('btw_be');
             $table->string('rpr');
             $table->char('company_name_1');
@@ -37,8 +36,9 @@ class CreateEngieContractsTable extends Migration
             $table->string('bus');
             $table->string('postcode');
             $table->string('place');
-
+            $table->string('documnet_id');
             $table->string('electrabel_sa_1');
+
             $table->string('electrabel_sa_2');
             $table->string('street_1');
             $table->string('no_1');
@@ -54,8 +54,7 @@ class CreateEngieContractsTable extends Migration
             $table->string('only_professional_use')->nullable();
             $table->string('in_case_of_moving_house')->nullable();
             $table->string('you_already_have_contract')->nullable();
-            $table->string('you_do_not_yet')->nullable();
-            $table->string('you_have_never_had_energy')->nullable();
+
             $table->string('clear_selection')->nullable();
             $table->string('you_move_or_build')->nullable();
             $table->string('you_already_have_an_electricity_contract')->nullable();
@@ -70,8 +69,6 @@ class CreateEngieContractsTable extends Migration
             $table->string('you_want_to_change_your_existing_3')->nullable();
             $table->string('place_2');
             $table->date('desired_start_date');
-
-
             $table->boolean('clear_selection_1')->nullable();
             $table->boolean('you_move_or_build_3')->nullable();
             $table->boolean('you_already_have_an_electricity_contract_3')->nullable();
@@ -83,7 +80,6 @@ class CreateEngieContractsTable extends Migration
             $table->boolean('you_move_or_build_5')->nullable();
             $table->boolean('you_already_have_an_electricity_contract_5')->nullable();
             $table->boolean('you_want_to_change_your_existing_6')->nullable();
-            $table->boolean('you_want_to_change_your_existing_7')->nullable();
             $table->string('place_3');
             $table->date('desired_start_date_1');
             $table->boolean('valid_for_the_two_energies')->nullable();

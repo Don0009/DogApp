@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\OrangeInternetTv;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+use mikehaertl\pdftk\Pdf;
+use \Mail;
 class OrangeInternetTvController extends Controller
 {
     /**
@@ -16,8 +19,13 @@ class OrangeInternetTvController extends Controller
      */
     public function index()
     {
-        $internet_tvs = OrangeInternetTv::all();
-     return view ('internet_tv.index',compact('internet_tvs'));
+        if (Auth::user()->hasRole('admin')) {
+            $internet_tvs = OrangeInternetTv::all();
+        } else {
+            $internet_tvs = OrangeInternetTv::where('user_id', Auth::user()->id)->get();
+        }
+
+        return view('internet_tv.index', compact('internet_tvs'));
     }
 
     /**
@@ -27,26 +35,24 @@ class OrangeInternetTvController extends Controller
      */
     public function create(Request $request)
     {
-        // dd($lang='du');
+
 
         $lang = $request->lang;
-// dd($lang);
-         if($lang == "du"){
-            return view('internet_tv.create');
+        // dd($lang);
+        if ($lang == "ccp") {
+            return view('internet_tv.create', compact('lang'));
+        } else {
 
-            }
+            return view('internet_tv.create_fr', compact('lang'));
+        }
 
-         else{
-            return view('internet_tv.create_fr');
-         }
-
-    //  if(isset($data['stopping_2'])){
-    //     if($data['stopping_2'] == "on"){
-    //     $data['stopping_2'] = true;
-    //     }  else{
-    //     $data['stopping_2'] = false;
-    //     }
-    // }
+        //  if(isset($data['stopping_2'])){
+        //     if($data['stopping_2'] == "on"){
+        //     $data['stopping_2'] = true;
+        //     }  else{
+        //     $data['stopping_2'] = false;
+        //     }
+        // }
 
 
     }
@@ -59,6 +65,53 @@ class OrangeInternetTvController extends Controller
      */
     public function store(Request $request)
     {
+        { // start
+
+    //         $form_lang = $request->form_lang;
+    // if($form_lang == "du"){
+    //    return view ('unfilled_form.orange.TV + internet aanvraag Orange NL.pdf' , compact('lang'));
+    // }
+    // else{
+    //     return view ('unfilled_form.orange.TV + internet aanvraag orange FR.pdf' , compact('lang'));
+    // }
+
+            $pdf = new Pdf(public_path('unfilled_form/orange/TV + internet aanvraag Orange FR.pdf'), [
+                //            'command' => '/some/other/path/to/pdftk',
+                            // or on most Windows systems:
+                            // 'command' => '/usr/bin/pdftk',
+                           'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+                //            'useExec' => true,  // May help on Windows systems if execution fails
+
+            ]);
+
+            // dd($pdf);
+
+            // data copied from Orange
+
+            $data = $request->all();
+            $data = $orange =  OrangeInternetTv::create($data);
+
+            $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+    //        dd($pdf_name);
+            $data = $data->toArray();
+            $result = $pdf->fillForm($data)->flatten()->needAppearances()
+                ->saveAs($pdf_name);
+    //        chmod(public_path($pdf_name), 0777);
+            dd($result);
+    //        dd($result);
+
+
+
+
+
+            // dd($request->all());
+
+            return redirect()->route('internet_tv.create');
+
+
+        } // end
+
+
         // dd( $request->all());
         $validator = Validator::make($request->all(), [
 
@@ -156,24 +209,55 @@ class OrangeInternetTvController extends Controller
             'call_number_9' => 'required',
             'op' => 'required',
             'file_1' => 'required',
-
         ]);
 
         $data = $request->all();
-        // dd($data);
-        if(isset($data['desired_start_date_1'])){
-            $data['desired_start_date_1'] = Carbon::parse($data['date_of_birth']);
-        }
+        $data['user_id'] = Auth::user()->id;
 
-    // dd($data);
+
+        // dd($data);
         // dd($validator);
 
         // if($validator->fails()){
         //     dd($validator);
         //     return redirect()->back()->withErrors($validator);
         // }
-        OrangeInternetTv::create($data);
-        return redirect()->route('internet_tv.index')->with('success','Internet Tv created successfully!');
+
+        $pdf = new Pdf(public_path('notfill.pdf'), [
+//            'command' => '/some/other/path/to/pdftk',
+            // or on most Windows systems:
+            'command' => '\snap\bin\pdftk',
+//            'useExec' => true,  // May help on Windows systems if execution fails
+        ]);
+
+        $data = $orange = OrangeInternetTv::create($data);
+
+        $data = $data->toArray();
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs('filled.pdf');;
+
+
+
+        Mail::send('emails.report', $data, function ($message) use ($data, $pdf) {
+            $message->to('musmangeee@gmail.com')
+                ->subject(Auth()->user()->name . " has submitted SSM Report." . 'Hello')
+                ->cc(['lasha@studiodlvx.be'])
+//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                ->attach(public_path('filled.pdf'), [
+                    'as' => 'name.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
+
+        $amo = new AmoCRMController();
+        $lead_data = [];
+        $lead_data['NAME'] =  $orange->name ;
+        $lead_data['PHONE'] =  $orange->telephone;
+        $lead_data['EMAIL'] = $orange->email_address;
+        $lead_data['LEAD_NAME'] = 'Orange Internet TV Lead';
+        $amo->add_lead($lead_data);
+        return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');
     }
 
     /**
@@ -182,9 +266,10 @@ class OrangeInternetTvController extends Controller
      * @param  \App\OrangeInternetTv  $orangeInternetTv
      * @return \Illuminate\Http\Response
      */
-    public function show(OrangeInternetTv $orangeInternetTv)
+    public function show(OrangeInternetTv $orangeInternetTv, $id)
     {
-        //
+        $orangeInternetTv = OrangeInternetTv::findOrFail($id);
+        return view('internet_tv.show', compact('orangeInternetTv'));
     }
 
     /**

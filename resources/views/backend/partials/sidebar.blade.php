@@ -13,13 +13,13 @@
         <ul class="nav">
             <li class="nav-item nav-category">Main</li>
             <li class="nav-item">
-                <a href="{{ url('/admin') }}" class="nav-link">
+                <a href="{{ url('/') }}" class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
                     <span class="link-title">Dashboard</span>
                 </a>
             </li>
             <li class="nav-item nav-category">Manage</li>
-            <li class="nav-item">
+             <li class="nav-item">
                 <a href="{{ url('/admin/roles') }}" class="nav-link">
                     <i class="link-icon" data-feather="shield"></i>
                     <span class="link-title">Roles</span>
@@ -94,15 +94,23 @@
             <li class="nav-item">
                 <a href="{{ route('internet_tv.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title">TV + internet aanvraag orange NL</span>
+                    <span class="link-title"> Internet + TV </span>
                 </a>
             </li>
 
 
-            <li class="nav-item">
+
+
+          <li class="nav-item">
                 <a href="{{ route('engie.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Contract Professionele Klanten</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('contract_professionele.index') }}" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Contract Residentile</span>
                 </a>
             </li>
 
@@ -115,27 +123,5 @@
 
 
         </ul>
-    </div>
-</nav>
-<nav class="settings-sidebar">
-    <div class="sidebar-body">
-        <a href="#" class="settings-sidebar-toggler">
-            <i data-feather="settings"></i>
-        </a>
-        <h6 class="text-muted">Sidebar:</h6>
-        <div class="form-group border-bottom">
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight" value="sidebar-light" checked>
-                    Light
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark" value="sidebar-dark">
-                    Dark
-                </label>
-            </div>
-        </div>
     </div>
 </nav>

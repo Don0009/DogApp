@@ -24,15 +24,15 @@
 @endsection
 @section('content')
 
-    {{-- <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+    <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('internet_tv.index') }}">internet tv</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('engie.index') }}">internet tv</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Create User</li>
             </ol>
         </nav>
-    </div> --}}
+    </div>
 
     <form class="forms-sample" method="POST" action="{{ route('engie.store') }}">
 @csrf
@@ -48,10 +48,10 @@
                                 <div class="row">
                                     <div class="col-9">
                                         <div class="electricity_natural_gas">
-                                        Contract elektriciteit en/of aardgas <span>- residentiële klanten</span>
+                                            Contrat électricité et/ou gaz naturel<span> - clients professionnels</span>
                                         </div>
                                         <div class="send_this_document" style="font-size: 8px">
-                                        Verstuur dit document naar Partner Line: via e-mail naar partnerlinenl.electrabel@engie.com, per post: Antwoordcode Electrabel – Partner Line, DA 852 – 546 – 3, 2600 Berchem of via fax naar 03 280 02 07
+                                            Veuillez renvoyer ce document à la Partner Line : par e-mail à partnerlinefr.electrabel@engie.com, par la poste : Code Réponse Electrabel – Ligne Partenaires, DA 852 – 546 – 3, 2600 Berchem ou par fax au 03 280 02 07
                                         </div>
                                     </div>
                                 </div>
@@ -72,9 +72,28 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="customer_data">
-                        Gegevens van de klant (1)
+                            Données du client (1)
 
-
+                            <div class="section">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="company_name">Nom de la société</label>
+                                                <input type="name" class="form-control" id="company_name" autocomplete="off"
+                                                       placeholder="Nom de la société" name="company_name">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="legal_form">Forme juridique</label>
+                                                <input type="name" class="form-control" id="legal_form" autocomplete="off"
+                                                       placeholder="Forme juridique" name="legal_form">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
                             <div class="section">
@@ -82,16 +101,16 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="name">Naam</label>
+                                                <label for="name">Nom</label>
                                                 <input type="name" class="form-control" id="name" autocomplete="off"
-                                                       placeholder="Naam" name="name">
+                                                       placeholder="Nom" name="name">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="first_name">Voornaam</label>
+                                                <label for="first_name">Prénom</label>
                                                 <input type="name" class="form-control" id="first_name" autocomplete="off"
-                                                       placeholder="Voornaam" name="first_name">
+                                                       placeholder="Prénom" name="first_name">
                                             </div>
                                         </div>
                                     </div>
@@ -102,32 +121,18 @@
                             <div class="section">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-12">
+                                        <div class="col-6">
                                             <div class="form-group">
-                                                <label for="client_number">Klantnummer</label>
+                                                <label for="client_number">N° de client</label>
                                                 <input type="name" class="form-control" id="client_number" autocomplete="off"
-                                                       placeholder="Klantnummer" name="client_number">
+                                                       placeholder="N° de client" name="client_number">
                                             </div>
                                         </div>
-                                        <!-- <div class="col-6">
+                                        <div class="col-6">
                                             <div class="form-group">
-                                                <label for="nace_code"> NACE code</label>
+                                                <label for="nace_code">(2) Code NACE</label>
                                                 <input type="name" class="form-control" id="nace_code" autocomplete="off"
-                                                       placeholder=" NACE code" name="nace_code">
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="section">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                    <div class="col-12">
-                                            <div class="form-group">
-                                                <label for="date_of_birth">Geboortedatum</label>
-                                                <input type="name" class="form-control" id="date_of_birth" autocomplete="off"
-                                                       placeholder="Geboortedatum" name="date_of_birth">
+                                                       placeholder="(2) Code NACE" name="nace_code">
                                             </div>
                                         </div>
                                     </div>
@@ -135,23 +140,21 @@
                             </div>
 
 
-
-
                             <div class="section">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="tel">Tel</label>
+                                                <label for="tel">Tél</label>
                                                 <input type="name" class="form-control" id="tel" autocomplete="off"
-                                                       placeholder="Tel" name="tel">
+                                                       placeholder="Tél" name="tel">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="gsm">Gsm</label>
+                                                <label for="gsm">GSM</label>
                                                 <input type="name" class="form-control" id="gsm" autocomplete="off"
-                                                       placeholder="Gsm" name="gsm">
+                                                       placeholder="GSM" name="gsm">
                                             </div>
                                         </div>
                                     </div>
@@ -178,23 +181,65 @@
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_wish_to_receive">
-                                <label class="form-check-label" for="inlineCheckbox2">U wenst de correspondentie met ENGIE Electrabel over uw contract(en) via e-mail te ontvangen
-(zie ook de Bijzondere Voorwaarden)</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez recevoir les communications concernant votre (vos) contrat(s) avec ENGIE Electrabel par
+                                    e-mail (voir aussi les Conditions Spécifiques)</label>
                               </div>
 
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_wish_to_be_informed">
-                                <label class="form-check-label" for="inlineCheckbox2">U wenst via e-mail op de hoogte te blijven van de producten, diensten en promoties van ENGIE Electrabel
-inzake energie, energie-efficiëntie, productie en opslag van energie, onderhoud en pechbijstand, smart
-producten en e-mobility en van haar partners inzake verwarming, isolatie en zonnepanelen</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez être tenu informé(e) par e-mail des produits, services et promotions d’ENGIE Electrabel
+                                    en matière d’énergie, d’efficacité énergétique, de production et de stockage d’énergie, d’entretien et
+                                    d’assistance en cas de panne, de produits smart et de l’e-mobility, et de ses partenaires en matière de
+                                    chauffage, d’isolation et de panneaux solaires</label>
                               </div>
 
 
 
 
+                            <div class="section">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="btw_be">TVA BE</label>
+                                                <input type="name" class="form-control" id="btw_be" autocomplete="off"
+                                                       placeholder="TVA BE" name="btw_be">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="rpr">RPM</label>
+                                                <input type="name" class="form-control" id="rpr" autocomplete="off"
+                                                       placeholder="RPM" name="rpr">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <label for="school_id" class="form-label">Verzendadres <span>(Te vervolledigen indien verschillend van leveringsadres.)</span></label>
+                            <label for="school_id" class="form-label">Adresse d’expédition <span> (A compléter si différente de l’adresse de livraison.)</span></label>
 
+
+                            <div class="section">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="company_name_1">Nom de la société</label>
+                                                <input type="name" class="form-control" id="company_name_1" autocomplete="off"
+                                                       placeholder="Nom de la société" name="company_name_1">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="legal_form_1">Forme juridique</label>
+                                                <input type="name" class="form-control" id="legal_form_1" autocomplete="off"
+                                                       placeholder="Forme juridique" name="legal_form_1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
 
@@ -204,16 +249,16 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="name_1">Naam</label>
+                                                <label for="name_1">Nom</label>
                                                 <input type="name" class="form-control" id="name_1" autocomplete="off"
-                                                       placeholder="Naam" name="name_1">
+                                                       placeholder="Nom" name="name_1">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="first_name_1">Voornaam</label>
+                                                <label for="first_name_1">Prénom</label>
                                                 <input type="name" class="form-control" id="first_name_1" autocomplete="off"
-                                                       placeholder="Voornaam" name="first_name_1">
+                                                       placeholder="Prénom" name="first_name_1">
                                             </div>
                                         </div>
                                     </div>
@@ -228,23 +273,23 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="street">Straat</label>
+                                                <label for="street">Rue</label>
                                                 <input type="name" class="form-control" id="street" autocomplete="off"
-                                                       placeholder="Straat" name="street">
+                                                       placeholder="Rue" name="street">
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="form-group">
-                                                <label for="no">Nr</label>
+                                                <label for="no">N°</label>
                                                 <input type="name" class="form-control" id="no" autocomplete="off"
-                                                       placeholder="Nr" name="no">
+                                                       placeholder="N°" name="no">
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="form-group">
-                                                <label for="bus">Bus</label>
+                                                <label for="bus">Bte</label>
                                                 <input type="name" class="form-control" id="bus" autocomplete="off"
-                                                       placeholder="Bus" name="bus">
+                                                       placeholder="Bte" name="bus">
                                             </div>
                                         </div>
                                     </div>
@@ -260,16 +305,16 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="postcode">Postcode</label>
+                                                <label for="postcode">Code Postal</label>
                                                 <input type="name" class="form-control" id="postcode" autocomplete="off"
-                                                       placeholder="Postcode" name="postcode">
+                                                       placeholder="Code Postal" name="postcode">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="place">Plaats</label>
+                                                <label for="place">Localité</label>
                                                 <input type="name" class="form-control" id="place" autocomplete="off"
-                                                       placeholder="Plaats" name="place">
+                                                       placeholder="Localité" name="place">
                                             </div>
                                         </div>
                                     </div>
@@ -319,11 +364,11 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
 
                                     <div class="col-12">
                                      <div class="form-group">
-                                         <label for="place">Electrabel nv vertegenwoordigd door:</label>
+                                         <label for="place">Electrabel sa représentée par :</label>
                                          <input type="name" class="form-control" id="electrabel_sa_1" autocomplete="off"
-                                                placeholder="Electrabel nv vertegenwoordigd door:" name="electrabel_sa_1">
+                                                placeholder="Electrabel sa représentée par :" name="electrabel_sa_1">
                                          <input type="name" class="form-control mt-2" id="electrabel_sa_2" autocomplete="off"
-                                                placeholder="Electrabel nv vertegenwoordigd door:" name="electrabel_sa_2">
+                                                placeholder="Electrabel sa représentée par :" name="electrabel_sa_2">
                                      </div>
                                     </div>
                                 </div>
@@ -345,10 +390,10 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
                                         <div class="col-12">
 
                                          <div class="form-group">
-                                            <label for="place">Leveringsadres (Afnamepunt)</label>
-                                             <label for="street_1">Straat</label>
+                                            <label for="place">Adresse de livraison (Point de prélèvement)</label>
+                                             <label for="street_1">Rue</label>
                                              <input type="name" class="form-control" id="street_1" autocomplete="off"
-                                                    placeholder="Straat" name="street_1">
+                                                    placeholder="Rue" name="street_1">
                                          </div>
                                         </div>
                                     </div>
@@ -358,26 +403,26 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
                                         <div class="col-3">
 
                                          <div class="form-group">
-                                             <label for="no_1">Nr</label>
+                                             <label for="no_1">N°</label>
                                              <input type="name" class="form-control" id="no_1" autocomplete="off"
-                                                    placeholder="Nr" name="no_1">
+                                                    placeholder="N°" name="no_1">
                                          </div>
                                         </div>
                                         <div class="col-3">
 
                                             <div class="form-group">
-                                                <label for="floor">Verdieping</label>
+                                                <label for="floor">Bte</label>
                                                 <input type="name" class="form-control" id="floor" autocomplete="off"
-                                                       placeholder="Verdieping" name="floor">
+                                                       placeholder="Bte" name="floor">
                                             </div>
                                            </div>
 
                                            <div class="col-3">
 
                                             <div class="form-group">
-                                                <label for="bus_1">Bus</label>
+                                                <label for="bus_1">Etage</label>
                                                 <input type="name" class="form-control" id="bus_1" autocomplete="off"
-                                                       placeholder="Bus" name="bus_1">
+                                                       placeholder="Etage" name="bus_1">
                                             </div>
                                            </div>
 
@@ -399,18 +444,18 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
                                         <div class="col-6">
 
                                          <div class="form-group">
-                                             <label for="place">Postcode</label>
+                                             <label for="place">Code postal</label>
                                              <input type="name" class="form-control" id="post_code" autocomplete="off"
-                                                    placeholder="Postcode" name="post_code">
+                                                    placeholder="Code postal" name="post_code">
                                          </div>
                                         </div>
 
 
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="place_1">Plaats</label>
+                                                <label for="place_1">Localité</label>
                                                 <input type="name" class="form-control" id="place_1" autocomplete="off"
-                                                       placeholder="Plaats" name="place_1">
+                                                       placeholder="Localité" name="place_1">
                                             </div>
 
                                            </div>
@@ -420,9 +465,9 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
 
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="electricity">EAN-nr. elektriciteit:</label>
+                                                <label for="electricity">N° EAN électricité :</label>
                                                 <input type="name" class="form-control" id="electricity" autocomplete="off"
-                                                       placeholder="EAN-nr. elektriciteit" name="electricity">
+                                                       placeholder="N° EAN électricité :" name="electricity">
                                             </div>
 
                                         </div>
@@ -433,9 +478,9 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
 
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="natural_gas">EAN-nr. aardgas:</label>
+                                                <label for="natural_gas">N° EAN gaz naturel :</label>
                                                 <input type="name" class="form-control" id="natural_gas" autocomplete="off"
-                                                       placeholder="EAN-nr. aardgas" name="natural_gas">
+                                                       placeholder="N° EAN gaz naturel :" name="natural_gas">
                                             </div>
 
 
@@ -447,11 +492,10 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
                                     <div class="row">
 
                                         <div class="col-12">
-
                                             <div class="form-group">
-                                                <label for="excluding_night">EAN-nr. exclusief nacht:</label>
+                                                <label for="excluding_night">N° EAN exclusif nuit :</label>
                                                 <input type="name" class="form-control" id="excluding_night" autocomplete="off"
-                                                       placeholder="EAN-nr. exclusief nacht" name="excluding_night">
+                                                       placeholder="N° EAN exclusif nuit :" name="excluding_night">
                                             </div>
 
                                         </div>
@@ -462,31 +506,21 @@ producten en e-mobility en van haar partners inzake verwarming, isolatie en zonn
 
 
                                       <div class="row">
-<div class="col-3">
-Gebruik:
-</div>
-                                        <div class="col-3">
+                                        Usage :
+                                        <div class="col-6">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="main_residence">
-                                                <label class="form-check-label" for="inlineCheckbox2">Hoofdverblijf</label>
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="gemengd_professioneel_verbruik">
+                                                <label class="form-check-label" for="inlineCheckbox2">semi professionne</label>
                                               </div>
                                         </div>
 
-                                        <div class="col-3">
+                                        <div class="col-6">
 
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="tweede_verblijf">
-                                                <label class="form-check-label" for="inlineCheckbox2">Tweede verblijf</label>
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="only_professional_use">
+                                                <label class="form-check-label" for="inlineCheckbox2">professionnel pu</label>
                                               </div>
                                            </div>
-
-                                           <div class="col-3">
-
-<div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="leegstaande_woning">
-    <label class="form-check-label" for="inlineCheckbox2">Leegstaande woning</label>
-  </div>
-</div>
 
 
                                     </div>
@@ -518,24 +552,24 @@ Gebruik:
     <div class="row">
         <div class="col-12">
             <div class="object_duration_price">
-            VOORWERP, DUUR EN PRIJS (In geval van meerkeuze, gelieve slechts één vakje aan te kruisen)
+                NOUVEAU CONTRAT / OUVERTURE DE COMPTEURS (Veuillez cocher une seule case en cas de choix multiple)
             </div>
         </div>
         <div class="col-12">
-            <div>Contract tussen <span>de klant</span> en <span>Electrabel nv,</span>, met hoofdkantoor te Simon Bolivarlaan 34 in 1000 Brussel, btw BE 0403.170.701 RPR Brussel. Hierna respectievelijk ‘u’ of ‘de klant’
-en ‘wij’ of ‘ENGIE Electrabel’ genoemd.</div>
+            <div>Contrat entre <span> le client</span> et <span>Electrabel sa,</span> ayant son siège Boulevard Simon Bolivar 34 à 1000 Bruxelles, TVA BE 0403.170.701 RPM Bruxelles. Dénommés ci-après respectivement
+                ‘vous’ ou ‘le Client’ et ‘nous’ ou ‘ENGIE Electrabel’.</div>
         </div>
         <div class="col-12">
-        De aanbiedingen, bijhorende prijsvoorwaarden en diensten worden toegelicht in de Bijzondere Voorwaarden en de prijsfiches waarvan u erkent kennis te hebben genomen. Met
-uw contract kunt u elektriciteit en/of aardgas afnemen bij ENGIE Electrabel voor het hoger vermelde Afnamepunt.
+            Les offres, conditions de prix et services correspondants sont détaillés dans les Conditions Spécifiques et les fiches de prix dont vous reconnaissez avoir pris connaissance. Votre
+            Contrat vous permet de prélever de l’électricité et/ou du gaz naturel auprès d’ENGIE Electrabel pour le Point de prélèvement susmentionné
         </div>
         <div class="col-12">
-        ndien er een of meerdere meters moeten worden geopend/gesloten, worden de kosten hiervoor aangerekend aan de Klant.
+            Si une ouverture ou fermeture du (des) compteur(s) est nécessaire, les frais liés à cette ouverture/fermeture seront facturés au Client
         </div>
         <div class="col-12">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="in_case_of_moving_house">
-                <label class="form-check-label" for="inlineCheckbox2">In geval van verhuis, gelieve het bijgevoegde ‘Energieovernamedocument’ in te vullen en te ondertekenen.</label>
+                <label class="form-check-label" for="inlineCheckbox2">En cas de déménagement, veuillez compléter et signer le ‘Document de reprise des énergies’ en annexe.</label>
               </div>
         </div>
     </div>
@@ -543,7 +577,7 @@ uw contract kunt u elektriciteit en/of aardgas afnemen bij ENGIE Electrabel voor
     <div class="row">
         <div class="col-12">
             <div class="customer">
-                KLANT
+                CLIENT
             </div>
         </div>
         <div class="col-md-12 grid-margin stretch-card">
@@ -553,19 +587,19 @@ uw contract kunt u elektriciteit en/of aardgas afnemen bij ENGIE Electrabel voor
                         <div class="col-4">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_contract">
-                                <label class="form-check-label" for="inlineCheckbox2">U hebt al een contract bij ENGIE Electrabel</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous disposez déjà d’un contrat chez ENGIE Electrabel</label>
                               </div>
                         </div>
                         <div class="col-4">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_do_not_yet">
-                                <label class="form-check-label" for="inlineCheckbox2">U hebt nog geen contract bij ENGIE Electrabel</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous ne disposez pas encore d’un contrat chez ENGIE Electrabel</label>
                               </div>
                         </div>
                         <div class="col-4">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_have_never_had_energy">
-                                <label class="form-check-label" for="inlineCheckbox2">U hebt nog nooit een energiecontract gehad</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous n’avez jamais eu de contrat énerg</label>
                               </div>
                         </div>
                     </div>
@@ -576,9 +610,9 @@ uw contract kunt u elektriciteit en/of aardgas afnemen bij ENGIE Electrabel voor
     <div class="row">
         <div class="col-12">
             <div class="electricity">
-            ELEKTRICITEIT <div class="form-check form-check-inline">
+                ELECTRICITÉ  <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="clear_selection">
-                    <label class="form-check-label" for="inlineCheckbox2">Selectie wissen</label>
+                    <label class="form-check-label" for="inlineCheckbox2">Effacer sélection</label>
                   </div>
             </div>
         </div>
@@ -589,23 +623,23 @@ uw contract kunt u elektriciteit en/of aardgas afnemen bij ENGIE Electrabel voor
                         <div class="col-3">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_move_or_build">
-                                <label class="form-check-label" for="inlineCheckbox2">U verhuist of bouwt</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous déménagez ou construisez</label>
                               </div>
 
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_an_electricity_contract">
-                                <label class="form-check-label" for="inlineCheckbox2">U hebt al een elektriciteitscontract bij een andere leverancier
-Naam van de leverancier</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous disposez déjà d’un contrat électricité chez un autre fournisseur
+                                    Nom du fournisseur</label>
                               </div>
 
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing">
-                                <label class="form-check-label" for="inlineCheckbox2">U wilt uw bestaande elektriciteitscontract wijzigen</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez modifier votre contrat électricité existant</label>
                               </div>
 
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_a_contract_for_an_extra">
-                                <label class="form-check-label" for="inlineCheckbox2">U wilt een contract voor een extra energievorm</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez un contrat pour une énergie supplémentaire</label>
                               </div>
                         </div>
 
@@ -614,51 +648,51 @@ Naam van de leverancier</label>
                                 <div class="col-4">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_move_or_build_1">
-                                        <label class="form-check-label" for="inlineCheckbox2">Uw elektriciteitsmeter is al geopend</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Votre compteur électricité est déjà ouvert</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_an_electricity_contract_1">
-                                        <label class="form-check-label" for="inlineCheckbox2">U wilt een nieuwe elektriciteitsmeter openen</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez ouvrir un nouveau compteur électricité</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing_1">
-                                        <label class="form-check-label" for="inlineCheckbox2">U wilt een bestaande elektriciteitsmeter openen</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez ouvrir un compteur électricité existant</label>
                                       </div>
                                 </div>
 
                                 <div class="col-3">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_move_or_build_2">
-                                        <label class="form-check-label" for="inlineCheckbox2">Easy (Vast 1 jaar)</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy pro (Fixe 1 an)</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_an_electricity_contract_2">
-                                        <label class="form-check-label" for="inlineCheckbox2">Easy (Geïndexeerd 1 jaar)</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy pro (Indexé 1 an)</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing_2">
-                                        <label class="form-check-label" for="inlineCheckbox2">Easy3 (Vast 3 jaar)</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy 3 pro (Fixe 3 ans)</label>
                                       </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing_3">
-                                        <label class="form-check-label" for="inlineCheckbox2">Optie
-                                            Gree</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Option
+                                            Green</label>
                                       </div>
                                 </div>
                                 <div class="col-3">
                                <div class="row">
                                    <div class="col-12">
-                                    <label class="form-check-label" for="inlineCheckbox2">Voorschot (€) (4)</label>
+                                    <label class="form-check-label" for="inlineCheckbox2">Provision (€) (4)</label>
                                    </div>
                                    <div class="col-12">
                                     <div class="form-group">
-                                        <label for="place_2">Plaats</label>
+                                        <label for="place_2"></label>
                                         <input type="name" class="form-control" id="place_2" autocomplete="off"
                                                placeholder="Plaats" name="place_2">
                                     </div>
@@ -668,10 +702,10 @@ Naam van de leverancier</label>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="place">Gewenste startdatum van uw nieuwe elektriciteitscontract:</label>
+                                    <label for="place">Date de démarrage souhaitée pour votre nouveau contrat gaz naturel :</label>
                                     <div class="input-group mb-3">
                                         <input type="date" class="form-control" id="desired_start_date" autocomplete="off"
-                                               placeholder="Gewenste startdatum van uw nieuwe elektriciteitscontract" name="desired_start_date">
+                                               placeholder="Date de démarrage souhaitée pour votre nouveau contrat gaz naturel :" name="desired_start_date">
                                 </div>
                             </div>
                         </div>
@@ -684,9 +718,9 @@ Naam van de leverancier</label>
     <div class="row">
         <div class="col-12">
             <div class="electricity">
-            AARDGAS  <div class="form-check form-check-inline">
+                GAZ  <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="clear_selection_1">
-                    <label class="form-check-label" for="inlineCheckbox2">Selectie wissen</label>
+                    <label class="form-check-label" for="inlineCheckbox2">Effacer sélection</label>
                   </div>
             </div>
         </div>
@@ -697,23 +731,23 @@ Naam van de leverancier</label>
                         <div class="col-3">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_move_or_build_3">
-                                <label class="form-check-label" for="inlineCheckbox2">U verhuist of bouwt</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous déménagez ou construisez</label>
                               </div>
 
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_an_electricity_contract_3">
-                                <label class="form-check-label" for="inlineCheckbox2">U hebt al een aardgascontract bij een andere leverancier
-Naam van de leverancier</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous disposez déjà d’un contrat gaz chez un autre fournisseur
+                                    Nom du fournisseur</label>
                               </div>
 
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing_4">
-                                <label class="form-check-label" for="inlineCheckbox2">U wilt uw bestaande aardgascontract wijzigen</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez modifier votre contrat gaz existant</label>
                               </div>
 
                               <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_a_contract_for_an_extra_1">
-                                <label class="form-check-label" for="inlineCheckbox2">U wilt een contract voor een extra energievorm</label>
+                                <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez un contrat pour une énergie supplémentaire</label>
                               </div>
                         </div>
 
@@ -722,41 +756,41 @@ Naam van de leverancier</label>
                                 <div class="col-4">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_move_or_build_4">
-                                        <label class="form-check-label" for="inlineCheckbox2">Uw aardgasmeter is al geopend</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Votre compteur gaz est déjà ouvert</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_an_electricity_contract_4">
-                                        <label class="form-check-label" for="inlineCheckbox2">U wilt een nieuwe aardgasmeter openen</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez ouvrir un nouveau compteur gaz</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing_5">
-                                        <label class="form-check-label" for="inlineCheckbox2">U wilt een bestaande aardgasmeter openen</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Vous souhaitez ouvrir un compteur gaz existant</label>
                                       </div>
                                 </div>
 
                                 <div class="col-5">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_move_or_build_5">
-                                        <label class="form-check-label" for="inlineCheckbox2">Easy (Vast 1 jaar)</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy pro (Fixe 1 an)</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_an_electricity_contract_5">
-                                        <label class="form-check-label" for="inlineCheckbox2">Easy (Geïndexeerd 1 jaar)</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy pro (Indexé 1 an)</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing_6">
-                                        <label class="form-check-label" for="inlineCheckbox2">Easy3 (Vast 3 jaar)</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy 3 pro (Fixe 3 ans)</label>
                                       </div>
                                 </div>
 
                                 <div class="col-3">
                                <div class="row">
                                    <div class="col-12">
-                                    <label class="form-check-label" for="inlineCheckbox2">Voorschot (€) (4)</label>
+                                    <label class="form-check-label" for="inlineCheckbox2">Provision (€) (4)</label>
                                    </div>
                                    <div class="col-12">
                                     <div class="form-group">
@@ -770,7 +804,7 @@ Naam van de leverancier</label>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="place">Gewenste startdatum van uw nieuwe aardgascontract:</label>
+                                    <label for="place">Date de démarrage souhaitée pour votre nouveau contrat gaz nature</label>
                                     <div class="input-group mb-3">
                                         <input type="date" class="form-control" id="desired_start_date_1" autocomplete="off"
                                                placeholder="Gewenste startdatum van uw nieuwe elektriciteitscontract" name="desired_start_date_1">
@@ -794,7 +828,7 @@ Naam van de leverancier</label>
                     <div class="col-6">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="valid_for_the_two_energies">
-                            <label class="form-check-label" for="inlineCheckbox2">Tarief ‘leegstaande woning’ (geldig voor de twee energieën, geen forfaits en onbepaalde duur)</label>
+                            <label class="form-check-label" for="inlineCheckbox2">Tarif ‘Maison vide’ (valable pour les 2 énergies, pas de forfaits et durée indéterminée)</label>
                           </div>
                     </div>
                     <div class="col-6">
@@ -816,79 +850,79 @@ Naam van de leverancier</label>
             <div class="col-6">
                 <div class="row">
                     <div class="col-12">
-                    BETALINGSMODALITEITEN
+                        MODALITÉS DE PAIEMENT
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 mt-4">
-                        U opteert voor
+                        Vous optez pour une provision
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="monthly">
-                            <label class="form-check-label" for="inlineCheckbox2">maandelijks</label>
+                            <label class="form-check-label" for="inlineCheckbox2">mensuelle</label>
                           </div>
                     </div>
                     <div class="col-4">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="bimonthly">
-                            <label class="form-check-label" for="inlineCheckbox2">tweemaandelijks</label>
+                            <label class="form-check-label" for="inlineCheckbox2">bimestrielle</label>
                           </div>
                     </div>
                     <div class="col-4">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="quarterly_advance">
-                            <label class="form-check-label" for="inlineCheckbox2">driemaandelijks voorschot</label>
+                            <label class="form-check-label" for="inlineCheckbox2">trimestrielle</label>
                           </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        U wenst uw facturen en de bijbehorende correspondentie te ontvangen
+                        Vous souhaitez recevoir vos factures et les communications à ce sujet
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="by_e_mail">
-                            <label class="form-check-label" for="inlineCheckbox2">via e-mail (zie ook de Bijzondere voorwaarden)</label>
+                            <label class="form-check-label" for="inlineCheckbox2">via e-mail (voir aussi les Conditions Spécifiques</label>
                           </div>
                     </div>
                     <div class="col-6">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="per_post">
-                            <label class="form-check-label" for="inlineCheckbox2">per post</label>
+                            <label class="form-check-label" for="inlineCheckbox2">via papier</label>
                           </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        U betaalt
+                        Vous payez
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="by_bank_transfer">
-                                    <label class="form-check-label" for="inlineCheckbox2">per overschrijving</label>
+                                    <label class="form-check-label" for="inlineCheckbox2">par virement bancaire</label>
                                   </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="via_domiciliëring">
-                                    <label class="form-check-label" for="inlineCheckbox2">via domiciliëring</label>
+                                    <label class="form-check-label" for="inlineCheckbox2">par domiciliation</label>
                                   </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="through_a_new">
-                                    <label class="form-check-label" for="inlineCheckbox2">via een nieuw</label>
+                                    <label class="form-check-label" for="inlineCheckbox2">via une nouvelle</label>
                                   </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <label for="directdebit">domiciliëring met het rekeningnummer IBAN</label>
+                                <label for="directdebit">domiciliation bancaire via le n° de compte IBAN</label>
                                 <div class="input-group ">
                                     <input type="name" class="form-control" id="debit_account_number" autocomplete="off"
                                            placeholder="domiciliëring met het rekeningnummer IBAN" name="debit_account_number">
@@ -900,15 +934,15 @@ Naam van de leverancier</label>
                             <div class="card">
                                 <div class="card-body">
                                     <div class="">
-                                        ENGIE Electrabel stuurt u een schriftelijke bevestiging van uw contract(en). Vanaf de Ontvangstdag van de schriftelijke bevestiging heeft u
-                                        14 kalenderdagen om ons schriftelijk mee te delen dat u ervan afziet, zonder opgave van redenen. Uw schrijven dient gericht te zijn voor het
-                                        Vlaams Gewest aan Electrabel, Postbus 10070, 2600 Berchem en voor het Waals en het Brussels Hoofdstedelijk Gewest aan Electrabel, Boîte
-                                        Postale 10070, 5000 Namur. U kunt hiervoor gebruikmaken van de modeltekst voor herroeping die u terugvindt in de schriftelijke bevestiging
-                                        van het (de) Contract(en), maar u bent hiertoe niet verplicht. Als u ons verzocht heeft om de levering van elektriciteit en/of aardgas te laten
-                                        beginnen zonder het einde van de herroepingstermijn af te wachten, en u alsnog gebruik maakt van uw herroepingsrecht, betaalt u een
-                                        bedrag dat overeenstemt met de reeds door ENGIE Electrabel geleverde elektriciteit en/of aardgas in overeenstemming met het Wetboek van
-                                        economisch recht. Dit bedrag wordt berekend op basis van de totale prijs zoals vastgelegd in het contract en de door de distributienetbeheerder
-                                        gevalideerde verbruiksgegevens.
+                                        ENGIE Electrabel vous enverra une confirmation écrite du Contrat ou de vos Contrats. Vous disposez de 14 jours calendrier à dater du jour de
+                                        réception de la confirmation écrite pour nous communiquer par écrit que vous y renoncez, sans motif particulier. Ce courrier doit être adressé
+                                        pour la Région wallonne et de Bruxelles-Capitale à Electrabel, Boîte postale 10070, 5000 Namur; pour la Région flamande à Electrabel,
+                                        Postbus 10070, 2600 Berchem. Si vous le souhaitez, vous pouvez utiliser le modèle de formulaire de rétractation que vous trouverez dans
+                                        la confirmation écrite de votre Contrat ou de vos Contrats. Si vous nous avez demandé de commencer la fourniture d’électricité et/ou de gaz
+                                        sans attendre l’expiration de votre délai de rétractation et que vous faites néanmoins usage de votre droit de rétractation, vous êtes redevable
+                                        d’un montant qui correspond à l’électricité et/ou au gaz déjà fourni(e)(s) par ENGIE Electrabel conformément au Code de Droit économique.
+                                        Ce montant sera calculé sur base du prix total convenu dans le contrat et en fonction des données de consommation validées par votre
+                                        gestionnaire de réseau de distribution.
                                     </div>
                                 </div>
                             </div>
@@ -922,42 +956,41 @@ Naam van de leverancier</label>
                     <div class="card-body">
                       <div class="row">
                         <div class="col-12">
-                            <label for="drawn_up">Opgemaakt in drie originele exemplaren, te</label>
+                            <label for="drawn_up">Etabli en trois exemplaires originaux, à</label>
                             <div class="input-group ">
                                 <input type="name" class="form-control" id="drawn_up" autocomplete="off"
-                                       placeholder="Opgemaakt in drie originele exemplaren, te" name="drawn_up">
+                                       placeholder="Etabli en trois exemplaires originaux, à" name="drawn_up">
                         </div>
                     </div>
                       </div>
                       <div class="row">
                         <div class="col-12">
-                            <label for="of_which_the_customer">op</label>
+                            <label for="of_which_the_customer">le</label>
                             <div class="input-group ">
                                 <input type="date" class="form-control" id="of_which_the_customer" autocomplete="off"
-                                       placeholder=" " name="of_which_the_customer">waarvan de klant erkent één exemplaar te hebben ontvangen
+                                       placeholder=" " name="of_which_the_customer">le Client reconnaissant avoir reçu un exemplaire.
                         </div>
                     </div>
                       </div>
                       <div class="row">
                           <div class="col-12 mt-5">
-                            De Klant verklaart kennis genomen te hebben van de inhoud van dit (deze) Contract(en) dat (die)
-                            bestaat (bestaan) uit dit document, de Algemene Voorwaarden voor professionele klanten, de
-                            Bijzondere Voorwaarden en de prijsfiches, alsook deze te accepteren. Met zijn handtekening erkent
-                            de klant dat hij zich verbindt tegenover ENGIE Electrabel en dat hij geen openstaande schulden heeft
-                            bij ENGIE Electrabel.
+                            Le Client déclare avoir pris connaissance du contenu du (des) présent(s) Contrat(s), qui est (sont)
+                            constitué(s) du présent document, des Conditions Spécifiques, des Conditions Générales applicables
+                            aux clients professionnels et des fiches de prix, et les avoir acceptés. Le Client reconnait que par sa
+                            signature il s’engage vis-à-vis d’ENGIE Electrabel et qu’il n’a pas de dettes ouvertes auprès d’ENGIE
+                            Electrabel.
                           </div>
                       </div>
                       <div class="row">
                           <div class="col-12 mt-4">
-                            Ondertekend door
+                            Signé par
                           </div>
                       </div>
                       <div class="row">
                           <div class="">
                               <div class="">
-                                Voor Electrabel nv:
+                                Pour Electrabel sa
                               </div>
-
                           </div>
                       </div>
                       <div class="row">
@@ -1004,10 +1037,11 @@ Naam van de leverancier</label>
         <div class="col-12">
 
             <div class="form-check form-check-inline">
+                n
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="You+do_not_wish_to_receive_commercial_communications">
                 <label class="form-check-label" for="inlineCheckbox2">U wenst geen commerciële communicatie van ENGIE Electrabel te ontvangen. (2) Enkel in te vullen indien u al ENGIE Electrabel klant bent. (3) Uw Contract wordt nadien verdergezet voor telkens 1 jaar of 3 jaar in geval van Easy3 pro vast. Tenzij anders vermeld in de Algemene Voorwaarden, kan u uw Contract(en)
                     op ieder moment opzeggen, zonder verbrekingsvergoeding, mits het respecteren van een schriftelijke opzeg van 1 maand. (4) Enkel in te vullen voor een nieuwe klant, nieuw adres of voor bestaande klanten die kiezen voor een nieuwe energie. (5) We zullen u per brief een mandaat toesturen. Bezorg het ons ondertekend
-                    en gedateerd terug. Zonder dit document kunnen we uw domiciliëring niet activeren.</label>
+                    en gedateerd terug. Zonder dit document kunnen we uw domiciliëring niet activeren</label>
               </div>
         </div>
     </div>

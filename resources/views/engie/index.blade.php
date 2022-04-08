@@ -10,9 +10,13 @@
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <a href="{{ route('engie.create') }}" class="btn btn-primary btn-icon-text">
+            <a href="{{ url('engie/create?lang=fr') }}" class="btn btn-primary btn-icon-text  mr-2">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create User
+                Create Engie French
+            </a>
+            <a href="{{ url('engie/create?lang=du') }}" class="btn btn-primary btn-icon-text">
+                <i class="btn-icon-prepend" data-feather="plus"></i>
+                Create Engie Dutch
             </a>
         </div>
     </div>
@@ -149,12 +153,6 @@
                                     You Already Have Contract
                                 </th>
                                 <th>
-                                    You Do Not Yet
-                                </th>
-                                <th>
-                                    You Have Never Had Energy
-                                </th>
-                                <th>
                                     Selectie wissen
                                 </th>
                                 <th>
@@ -239,12 +237,7 @@
                                 <th>
                                     You want to change your existing electricity 1
                                 </th>
-                                <th>
-                                    Option gree 1
-                                </th>
-                                <th>
-                                    Advance 1
-                                </th>
+
                                 <th>
                                     Place 1
                                 </th>
@@ -351,8 +344,6 @@
                                 <td>{{ $contract_pro->only_professional_use}}</td>
                                 <td>{{ $contract_pro->in_case_of_moving_house}}</td>
                                 <td>{{ $contract_pro->you_already_have_contract}}</td>
-                                <td>{{ $contract_pro->you_do_not_yet}}</td>
-                                <td>{{ $contract_pro->you_have_never_had_energy}}</td>
                                 <td>{{ $contract_pro->clear_selection}}</td>
                                 <td>{{ $contract_pro->you_move_or_build}}</td>
                                 <td>{{ $contract_pro->you_already_have_an_electricity_contract}}</td>
