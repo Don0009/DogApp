@@ -28,7 +28,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="section mb-3">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
                             <div class="col-6 mt-3">
                                 <div class="orange">
@@ -358,7 +358,7 @@
                             </div>
                         </div>
                         <div class="section">
-                            <div class="container-fluid">
+                            <div class="container">
                                 <div class="mb-3">
                                     <label for="exampleFormControlTextarea1" class="form-label">Bijkomende informatie voor de installateur (optioneel)</label>
                                     <h6></h6>
