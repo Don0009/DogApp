@@ -15,7 +15,8 @@ class CreateOrangeInternetTvsTable extends Migration
     {
         Schema::create('orange_internet_tvs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->string('mile');
             $table->string('form_lang');
             $table->string('partner_apllication');
             $table->char('name');

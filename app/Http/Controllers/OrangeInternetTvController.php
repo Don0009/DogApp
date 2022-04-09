@@ -181,8 +181,8 @@ class OrangeInternetTvController extends Controller
         $pdf = new Pdf(public_path('notfill.pdf'), [
 //            'command' => '/some/other/path/to/pdftk',
             // or on most Windows systems:
-            'command' => '/usr/bin/pdftk',
-//            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            // 'command' => '/usr/bin/pdftk',
+           'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 //            'useExec' => true,  // May help on Windows systems if execution fails
         ]);
 
@@ -203,7 +203,7 @@ class OrangeInternetTvController extends Controller
 
 
         Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-            $message->to('musmangeee@gmail.com')
+            $message->to('bazighminhas1@gmail.com')
                 ->subject("You have got a Orange Internet TV lead...!")
                 ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
