@@ -5,6 +5,59 @@
     <div class="col-md-12">
         <form class="forms-sample" action="{{ route('internet_home.store') }}" method="POST">
             @csrf()
+            <div class="section mb-3">
+                    <div class="row">
+                        <div class="col-6 mt-3">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="orange">
+                                        <p>Orange</p>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="">Orange Belgium s.a</div>
+                                    <div class="">Avenue du Bourget 3 | B - 1140 Bruxelles</div>
+                                    <div class="">TVA BE 0456.810.810 | RPM Bruxelles</div>
+                                    <div class="">www.orange.be</div>
+                                    <div class="">Tél. : +32 (0)2 745 95 00</div>
+                                    <div class="">ou gratuitement depuis votre GSM Orange : 5000</div>
+                                    <div class="">A remplir entièrement en lettres majuscules par le vendeur, à signer
+                                        par le client et à renvoyer par le vendeur avec tous les justificatifs à :
+                                        Orange Belgium s.a. • Département Provisioning • BP 951 •
+                                        B - 1140 BRUXELLES</div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-6 mt-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <label for="contract_number_1" class="form-label">N° de contrat :<span class="text-danger">*</span></label>
+                                        <input type="name" class="form-control @error('contract_number_1') is-invalid @enderror" id="contract_number_1" autocomplete="off" placeholder="N° de contrat" name="contract_number_1" value="{{ old('contract_number_1') }}" required>
+                                        @error('contract_number_1')
+                                        <span class="invalid-feedback mb-2" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label for="consultant_signature_1" class="form-label">Signature du consultant :<span class="text-danger">*</span></label>
+                                        <input type="name" class="form-control @error('consultant_signature_1') is-invalid @enderror" id="consultant_signature_1" autocomplete="off" placeholder="Signature du consultant" name="consultant_signature_1" value="{{ old('consultant_signature_1') }}" required>
+                                        @error('client_num')
+                                        <span class="invalid-feedback mb-2" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
             <h4>Demande de contrat Easy Internet @Home</h4>
             <div class="row">
                 <div class="col-6">
@@ -12,7 +65,7 @@
                         <div class="card-body">
                             <h6 class="card-title">Identification du client</h6>
                             <div class="2">
-                                <input type="checkbox" name="client_exist" value="0">
+                                <input type="checkbox" name="client_exist" value="0" required>
                                 <label for="client_exist" class="form-label">Client existant<span class="text-danger">*</span></label>
                                 @error('client_exist')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -48,7 +101,7 @@
                                 @enderror
                             </div>
                             <div class="mb-2">
-                                <input type="checkbox" name="new_client" value="0">
+                                <input type="checkbox" name="new_client" value="0" required>
                                 <label for="new_client" class="form-label">Nouveau clien<span class="text-danger">*</span></label>
                                 @error('new_client')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -342,7 +395,7 @@
                                 </div>
 
                                 <div class="col-12 mb-2">
-                                    <input type="checkbox" name="internet_home" value="0">
+                                    <input type="checkbox" name="internet_home" value="0" required>
                                     <label for="internet_home" class="form-label">Easy Internet @Home<span class="text-danger">*</span></label>
 
                                     <h5> + </h5>
@@ -358,7 +411,7 @@
 
                                 <div class="col-12">
                                     <div class="mb-2">
-                                        <input type="checkbox" name="boot_option" value="0">
+                                        <input type="checkbox" name="boot_option" value="0" required>
                                         <label for="boot_option" class="form-label">Option Data Boost<span class="text-danger">*</span></label>
                                         @error('boot_option')
                                         <span class="invalid-feedback mb-2" role="alert">

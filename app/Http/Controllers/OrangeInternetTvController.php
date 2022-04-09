@@ -42,9 +42,12 @@ class OrangeInternetTvController extends Controller
         // dd($lang);
         if ($lang == "du") {
             return view('internet_tv.create', compact('lang'));
-        } else {
+        } elseif ($lang == "fr"){
 
             return view('internet_tv.create_fr', compact('lang'));
+        }
+        elseif ($lang == "fr"){
+            return view('internet_home.create', compact('lang'));
         }
 
         //  if(isset($data['stopping_2'])){

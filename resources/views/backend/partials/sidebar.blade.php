@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li class="nav-item nav-category">Manage</li>
-            <!-- <li class="nav-item">
+            {{-- <!-- <li class="nav-item">
                 <a href="{{ url('/admin/roles') }}" class="nav-link">
                     <i class="link-icon" data-feather="shield"></i>
                     <span class="link-title">Roles</span>
@@ -90,7 +90,7 @@
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Electricity And Natural Gas</span>
                 </a>
-            </li> -->
+            </li> --> --}}
             <li class="nav-item">
                 <a href="{{ route('internet_tv.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
