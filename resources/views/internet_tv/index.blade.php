@@ -18,10 +18,6 @@
             <i class="btn-icon-prepend" data-feather="plus"></i>
             Create Internet Tv Dutch
         </a>
-        <a href="{{ url('internet_home/create?lang=fr') }}" class="btn btn-primary btn-icon-text">
-            <i class="btn-icon-prepend" data-feather="plus"></i>
-            Create Internet Home Dutch
-        </a>
     </div>
 </div>
 

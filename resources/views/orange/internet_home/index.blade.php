@@ -10,7 +10,7 @@
         </ol>
     </nav>
     <div class="d-flex align-items-center flex-wrap text-nowrap">
-        <a href="{{ route('internet_home.create') }}" class="btn btn-primary btn-icon-text">
+        <a href="{{ url('internet_home/create?lang=fr') }}" class="btn btn-primary btn-icon-text">
             <i class="btn-icon-prepend" data-feather="plus"></i>
             Create Internet Home
         </a>

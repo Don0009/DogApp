@@ -92,10 +92,41 @@
                 </a>
             </li> --> --}}
             <li class="nav-item">
-                <a href="{{ route('internet_tv.index') }}" class="nav-link">
-                    <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title"> Internet + TV </span>
+                <a class="nav-link" data-toggle="collapse" href="#orange" role="button" aria-expanded="false" aria-controls="orange">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Orange</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
+                <div class="collapse" id="orange">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('internet_tv.index') }}" class="nav-link">Internet + TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('internet_home.index') }}" class="nav-link">Internet Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Telnet</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="telnet">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('telenet_new_subs.index') }}" class="nav-link">Telenet Contract Aanvraag</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('telenet_question.index') }}" class="nav-link">Telenet contract</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('contractapp.index') }}" class="nav-link">MNP overdrachtsformulier</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
 

@@ -47,9 +47,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="container mb-3 text-center">
-                    <h3 class="card-title" style="text-align: center">Aanvraagformulier voor de installatie van Orange Internet + TV</h3>
-                    <h5 class="card-title">Gegevens van de aanvrager en installatie-adres</h5>
+                <div class="container mb-3 text-center migratiemandaat">
+                    <h2 style="text-align: center">Aanvraagformulier voor de installatie van Orange Internet + TV</h2>
+                    <h4>Gegevens van de aanvrager en installatie-adres</h4>
                 </div>
                 <form class="forms-sample" method="POST" action="{{ route('internet_tv.store') }}">
                     @csrf

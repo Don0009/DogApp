@@ -10,10 +10,9 @@
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-
-            <a href="{{ route('telenet_new_subs.create') }}" class="btn btn-primary btn-icon-text">
+            <a href="{{ route('telenet_question.create') }}" class="btn btn-primary btn-icon-text  mr-2">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Telnet Contract
+                Contract Question
             </a>
         </div>
     </div>

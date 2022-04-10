@@ -30,9 +30,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 <script src="{{asset('assets/vendors/moment/moment.min.js')}}"></script>
-<script src="{{asset('assets/vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.js')}}"></script>
-
-<script src="{{asset('assets/js/bootstrap-maxlength.js')}}"></script>
 <!-- partial:partials/success_error_msg.html -->
 @include('backend.partials.success_error_msg')
 <!-- partial -->

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\OKSign\OKSignController;
 use Illuminate\Support\Facades\Auth;
 use App\OrangeInternetTv;
 use Carbon\Carbon;
@@ -43,11 +44,7 @@ class OrangeInternetTvController extends Controller
         if ($lang == "du") {
             return view('internet_tv.create', compact('lang'));
         } elseif ($lang == "fr"){
-
             return view('internet_tv.create_fr', compact('lang'));
-        }
-        elseif ($lang == "fr"){
-            return view('internet_home.create', compact('lang'));
         }
 
         //  if(isset($data['stopping_2'])){
@@ -173,7 +170,7 @@ class OrangeInternetTvController extends Controller
         $data['user_id'] = Auth::user()->id;
 
 
-        // dd($data);
+//         dd($data);
         // dd($validator);
 
         // if($validator->fails()){
@@ -202,6 +199,10 @@ class OrangeInternetTvController extends Controller
 //        chmod(public_path($pdf_name), 0777);
 
 //        dd($result);
+        $okSign = new OKSignController();
+       $A =  $okSign->document_upload($pdf_name, 'orange_pdf');
+       dd($A);
+
 
 
 
