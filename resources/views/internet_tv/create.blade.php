@@ -28,7 +28,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="section mb-3">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
                             <div class="col-6 mt-3">
                                 <div class="orange">
@@ -48,8 +48,8 @@
                     </div>
                 </div>
                 <div class="container mb-3 text-center">
-                    <h3 class="card-title" style="text-align: center">Formulaire de demande d’installation Orange Internet + TV</h3>
-                    <h5 class="card-title">Identification du demandeur et adresse d’installation</h5>
+                    <h3 class="card-title" style="text-align: center">Aanvraagformulier voor de installatie van Orange Internet + TV</h3>
+                    <h5 class="card-title">Gegevens van de aanvrager en installatie-adres</h5>
                 </div>
                 <form class="forms-sample" method="POST" action="{{ route('internet_tv.store') }}">
                     @csrf
@@ -58,7 +58,26 @@
                     </div>
                     <div class="section">
                         <div class="container">
-                            <h6 class="card-title">Mej. / Mevr. / Dhr. (Omcircelen wat past)</h6>
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <div class="form-check form-check-inline">
+                                        <input required class="form-check-input" style="margin-left: 10px; margin-top: -6px" type="radio" name="mile" value="0">
+                                        <label for="extra_decoder" class="form-label mt-2" style="margin-left: 10px; margin-top: -4px">Mej.</label>
+
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input required class="form-check-input" type="radio" name="mile" value="1">
+                                        <label for="extra_decoder" class="form-label mt-2" style="margin-left: 10px; margin-top: -6px">Mevr</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input required class="form-check-input" type="radio" name="mile" value="2">
+                                        <label for="extra_decoder" class="form-label mt-2"  style="margin-left: 10px; padding-top: -4px">Dhr. (Omcircelen wat past)</label>
+                                    </div>
+                                </div>
+
+                            </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
@@ -242,17 +261,17 @@
                                     <h5>Extra TV Decoder?</h5>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="extra_decoder" value="0">
-                                        <label for="extra_decoder" class="form-label">1<span class="text-danger">*</span></label>
+                                        <label for="extra_decoder" class="form-label "  style="margin-left: 10px ; margin-top:15px">1</label>
 
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="extra_decoder" value="1">
-                                        <label for="extra_decoder" class="form-label">2<span class="text-danger">*</span></label>
+                                        <label for="extra_decoder" class="form-label" style="margin-left: 10px ; margin-top:15px">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="extra_decoder" value="2">
-                                        <label for="extra_decoder" class="form-label">3<span class="text-danger">*</span></label>
+                                        <label for="extra_decoder" class="form-label" style="margin-left: 10px ; margin-top:15px">3</label>
                                     </div>
                                 </div>
                             </div>
@@ -263,12 +282,12 @@
 
                                     <h5>Internet boost*? </h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="internet_boost" value="0">
-                                        <label for="internet_boost" class="form-label">Ja<span class="text-danger">*</span></label>
+                                        <input class="form-check-input " type="radio" name="internet_boost" value="0">
+                                        <label for="internet_boost" class="form-label"  style="margin-left: 10px ; margin-top:15px">Ja</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="internet_boost" value="1">
-                                        <label for="internet_boost" class="form-label">Neen<span class="text-danger">*</span></label>
+                                        <label for="internet_boost" class="form-label"  style="margin-left: 10px ; margin-top:15px">Neen</label>
                                     </div>
                                 </div>
                             </div>
@@ -279,12 +298,12 @@
                     <div class="section">
                         <div class="container">
                             <div class="migratiemandaat">
-                                <h4>Transfert de services internet et/ou TV</h4>
+                                <h4>Datums en tijdstip voor de installatie</h4>
 
-                                <h2 class="card-title">Vermeld hier jouw 3 favoriete datums en tijdstippen voor de installatie</h2>
+                                <h2 class="card-title">Vermeld hier jouw 3 favoriete datums en tijdstippen voor de installatie.</h2>
                                 <div class="row">
                                     <div class="col-3">
-                                        <h2 class="card-title">Datum 1: </h2>
+                                        <h2 class="card-title">Datum 1:</h2>
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group">
@@ -303,7 +322,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-3">
-                                        <h2 class="card-title">Datum 2 :</h2>
+                                        <h2 class="card-title">Datum 2:</h2>
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group">
@@ -313,7 +332,7 @@
 
                                     </div>
                                     <div class="col-5">
-                                        <p>voormiddag (8u-13u) / namiddag (12u-18u) / avond (17u-20u**</p>
+                                        <p>voormiddag (8u-13u) / namiddag (12u-18u) / avond (17u-20u**)</p>
                                     </div>
                                 </div>
                             </div>
@@ -339,24 +358,26 @@
                             </div>
                         </div>
                         <div class="section">
-                            <div class="container-fluid">
+                            <div class="container">
                                 <div class="mb-3">
                                     <label for="exampleFormControlTextarea1" class="form-label">Bijkomende informatie voor de installateur (optioneel)</label>
                                     <h6></h6>
                                     <textarea class="form-control" name="additional_information" values="additional_information" id="exampleFormControlTextarea1" rows="5"></textarea>
                                 </div>
+
                                 <div class="mb-3">
+                                    <label for="">Handtekening van de klant:</label>
                                     <input type="file" class="form-control" id="file" autocomplete="off" placeholder="images" name="file">
                                 </div>
 
                                 <div class="mb-3" style="font-size: 12px">
-                                    *Onder voorbehoud van beschikbaarheid op jouw adres.
+                                    *Onder voorbehoud van beschikbaarheid op jouw adres
                                 </div>
                                 <div class="mb-3" style="font-size: 12px">
                                     **Voor installaties ‘s avonds tussen 17 en 20 uur
                                 </div>
                                 <div class="mb-3" style="font-size: 12px">
-                                    of op zaterdag tussen 8 en 18 uur wordt 30 euro extra aangerekend.
+                                    of op zaterdag tussen 8 en 18 uur wordt 30 euro extra aangerekend
                                 </div>
                             </div>
                         </div>
@@ -520,15 +541,15 @@
 
                                     <div class="form-check">
 
-                                        <input class="form-check-input" type="radio" name="care_of_the_automatic_migration" value="0">
-                                        <label for="extra_decoder" class="form-label"><span style="font-weight: bold">Ik wens gebruik</span> te maken de overstapdienst Easy Switch.
+                                        <input class="form-check-input" type="radio" style="margin-left: 0px" name="care_of_the_automatic_migration" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 30px; margin-top:-20px"><span style="font-weight: bold">Ik wens gebruik</span> te maken de overstapdienst Easy Switch.
                                             Orange zorgt voor de automatische migratie en het opzeggen van de hieronder aangegeven
                                             diensten bij uw oorspronkelijke operator.</label>
                                     </div>
                                     <div class="form-check">
 
-                                        <input class="form-check-input" type="radio" name="care_of_the_automatic_migration" value="1">
-                                        <label for="extra_decoder" class="form-label"><span style="font-weight: bold">Ik wens geen gebruik</span> te maken van Easy Switch.
+                                        <input class="form-check-input" type="radio" style="margin-left: 0px" name="care_of_the_automatic_migration" value="1">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 30px; margin-top:-20px"><span style="font-weight: bold">Ik wens geen gebruik</span> te maken van Easy Switch.
                                             Ik zorg zelf voor het opzeggen van mijn internet en tv-diensten bij mijn oorspronkelijke operator.
                                             Gewenste installatiedatum: datum overeengekomen met de klant.</label>
                                     </div>
@@ -549,7 +570,7 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="client_number">Naam operator:</label>
+                                            <label for="client_number">Klantnummer:</label>
                                             <input type="name" class="form-control" id="client_number" autocomplete="off" placeholder="Naam operator" name="client_number">
                                         </div>
 
@@ -581,8 +602,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="stopping_5" value="0">
-                                            <label for="extra_decoder" class="form-label"><span style="">Stopzetten (Enkel van toepassing bij Easy Switch)</span> </label>
+                                            <input class="form-check-input ml-4" type="radio" name="stopping_5" value="0">
+                                            <label for="extra_decoder" class="form-label"  style="margin-left: 60px; margin-top:5px"><span style="">Stopzetten (Enkel van toepassing bij Easy Switch)</span> </label>
                                         </div>
 
                                     </div>
@@ -600,8 +621,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="stopping_5" value="1">
-                                            <label for="extra_decoder" class="form-label">Stopzetten (Enkel van toepassing bij Easy Switch)</label>
+                                            <input class="form-check-input ml-4" type="radio" name="stopping_5" value="1">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px; margin-top:5px">Stopzetten (Enkel van toepassing bij Easy Switch)</label>
                                         </div>
 
 
@@ -624,8 +645,8 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="stopping_3" value="0">
-                                            <label for="extra_decoder" class="form-label"><span style="">Overdragen naar Orange</span> </label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="stopping_3" value="0">
+                                            <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"><span style="">Overdragen naar Orange</span> </label>
                                         </div>
 
                                     </div>
@@ -634,7 +655,7 @@
                                         <div class="form-check topper">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="stopping_3" value="1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <label class="form-check-label mt-1" style="margin-left: 25px; margin-top:10px" for="flexRadioDefault1">
                                                     Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)
                                                 </label>
@@ -665,15 +686,15 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately" value="0">
-                                            <label for="extra_decoder" class="form-label"><span>Onmiddellijk</span> </label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="immediately" value="0">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px; margin-top:3px"><span>Onmiddellijk</span> </label>
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="immediately" value="1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <label class="form-check-label" style="margin-left: 25px; margin-top:3px" for="flexRadioDefault1">
                                                     Op de installatiedatum
                                                     van Internet + TV
 
@@ -697,8 +718,8 @@
                                     <div class="col-3">
                                         <div class="form-check topper">
 
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange" value="0">
-                                            <label for="extra_decoder" class="form-label"><span>Overdragen naar Orange</span> </label>
+                                            <input class="form-check-input" type="radio" style="margin-left:25px" name="transfer_to_orange" value="0">
+                                            <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px; margin-top:3px"><span>Overdragen naar Orange</span> </label>
                                         </div>
 
                                     </div>
@@ -707,7 +728,7 @@
                                         <div class="form-check topper">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="transfer_to_orange" value="1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <label class="form-check-label" style="margin-left: 25px; margin-top:3px" for="flexRadioDefault1">
                                                     Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)
                                                 </label>
@@ -739,8 +760,8 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="Stopping" value="0">
-                                            <label for="extra_decoder" class="form-label"><span>Onmiddellijk</span> </label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="Stopping" value="0">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px; margin-top:13px"><span>Onmiddellijk</span> </label>
                                         </div>
 
                                     </div>
@@ -749,7 +770,7 @@
                                         <div class="form-check topper">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="Stopping" value="1">
-                                                <label for="extra_decoder" class="form-label"><span> Op de installatiedatum
+                                                <label for="extra_decoder" class="form-label" style="margin-left: 25px"><span> Op de installatiedatum
                                                         van Internet + TV</span> </label>
                                             </div>
                                         </div>
@@ -772,8 +793,8 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_4" value="0">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Overdragen naar Orange</span></label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="transfer_to_orange_4" value="0">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px"> <span style="">Overdragen naar Orange</span></label>
                                         </div>
 
                                     </div>
@@ -781,7 +802,7 @@
                                     <div class="col-3">
                                         <div class="form-check topper">
                                             <input class="form-check-input" type="radio" name="transfer_to_orange_4" value="1">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Stopzetten
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 25px"> <span style="">Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)</span></label>
                                         </div>
 
@@ -813,14 +834,14 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately_3" value="0">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Onmiddellijk</span></label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="immediately_3" value="0">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px"> <span style="">Onmiddellijk</span></label>
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
                                             <input class="form-check-input" type="radio" name="immediately_3" value="1">
-                                            <label for="extra_decoder" class="form-label"> <span style="">O p de installatiedatum
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 25px"> <span style="">O p de installatiedatum
                                                     van Internet + TV</span></label>
                                         </div>
                                     </div>
@@ -838,8 +859,8 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_2" value="0">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Overdragen naar Orange</span></label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="transfer_to_orange_2" value="0">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px"> <span style="">Overdragen naar Orange</span></label>
                                         </div>
 
                                     </div>
@@ -848,7 +869,7 @@
                                         <div class="form-check topper">
 
                                             <input class="form-check-input" type="radio" name="transfer_to_orange_2" value="1">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Stopzetten
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 25px"> <span style="">Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)</span></label>
                                         </div>
 
@@ -880,8 +901,8 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately_4" value="0">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Onmiddellijk</span></label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="immediately_4" value="0">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px"> <span style="">Onmiddellijk</span></label>
                                         </div>
 
                                     </div>
@@ -891,7 +912,7 @@
 
 
                                             <input class="form-check-input" type="radio" name="immediately_4" value="1">
-                                            <label for="extra_decoder" class="form-label"> <span style=""> Op de installatiedatum
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 25px"> <span style=""> Op de installatiedatum
                                                     van Internet + TV</span></label>
                                         </div>
 
@@ -911,8 +932,8 @@
                                     <div class="col-3">
                                         <div class="form-check topper">
 
-                                            <input class="form-check-input" type="radio" name="transfer_to_orange_3" value="0">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Overdragen naar Orange</span></label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="transfer_to_orange_3" value="0">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px"> <span style="">Overdragen naar Orange</span></label>
                                         </div>
 
                                     </div>
@@ -921,7 +942,7 @@
                                         <div class="form-check topper">
 
                                             <input class="form-check-input" type="radio" name="transfer_to_orange_3" value="1">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Stopzetten
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 25px"> <span style="">Stopzetten
                                                     (Enkel van toepassing bij Easy Switch)</span></label>
                                         </div>
                                     </div>
@@ -947,8 +968,8 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-check topper">
-                                            <input class="form-check-input" type="radio" name="immediately_5" value="0">
-                                            <label for="extra_decoder" class="form-label"> <span style="">Onmiddellijk</span></label>
+                                            <input class="form-check-input" type="radio" style="margin-left: 25px" name="immediately_5" value="0">
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 60px"> <span style="">Onmiddellijk</span></label>
                                         </div>
 
                                     </div>
@@ -956,7 +977,7 @@
                                     <div class="col-3">
                                         <div class="form-check ">
                                             <input class="form-check-input" type="radio" name="immediately_5" value="1">
-                                            <label for="extra_decoder" class="form-label">Op de installatiedatum
+                                            <label for="extra_decoder" class="form-label" style="margin-left: 25px">Op de installatiedatum
                                                 van Internet + TV<span class="text-danger">*</span></label>
 
                                         </div>
@@ -971,7 +992,7 @@
                                         Volgens de wet mag het verlies van telefoondienst verstrekt aan de abonnee tijdens de nummeroverdrachtsprocedure niet langer dan
                                         1 werkdag duren. U dient een specifieke datum overeen te komen voor de overdracht van het nummer met uw operator. Indien de overdracht
                                         langer dan een werkdag duurt na de activering van de telefoondienst of indien de overeengekomen datum niet wordt nageleefd, hebt u recht op
-                                        een compensatie. Hiervoor moet u zich wenden tot uw nieuwe operator. Meer informatie over uw recht op compensatie bij vertraging in de nummeroverdracht vindt u op www.bipt.be/np
+                                        een compensatie. Hiervoor moet u zich wenden tot uw nieuwe operator. Meer informatie over uw recht op compensatie bij vertraging in de nummeroverdracht vindt u op www.bipt.be/np.
                                     </p>
                                     <p>De overdracht van nummers en vastelijndiensten naar Orange ontslaat u niet van de verplichting om uw contract met de oorspronkelijke operator te
                                         respecteren, op straffe van het betalen van nalatigheidsinteresten of een schadevergoeding aan deze operator.
@@ -982,7 +1003,7 @@
                                         van 10 euro. Voor meer informatie zie www.orange.be/easyswitch.</p>
 
                                     <p>De klant geeft Orange volmacht om in zijn naam het bestaande contract met betrekking tot de hierboven vermelde diensten en nummers met de
-                                        oorspronkelijke operator op te zeggen en naar Orange over te dragen. De overdracht kan enkel plaats vinden indien de klant de correcte en volledige gegevens meedeelt en de oorspronkelijke operator deze aanvraag geldig verklaart. Met het tekenen van dit document verklaart u zich akkoord
+                                        oorspronkelijke operator op te zeggen en naar Orange over te dragen. De overdracht kan enkel plaats vinden indien de klant de correcte en volledige gegevens meedeelt en de oorspronkelijke operator deze aanvraag geldig verklaart. Met het tekenen van dit document verklaart u zich akkoord
                                         met de algemene voorwaarden van Orange (link) en Easy Switch (link). Uitsluitend de persoon die geabonneerd is bij de oorspronkelijke operator
                                         kan dit document ondertekenen.</p>
                                 </div>
@@ -994,7 +1015,7 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="call_number_9">In tweevoud opgemaakt te:</label>
+                                            <label for="call_number_9">n tweevoud opgemaakt te:</label>
                                             <input type="text" class="form-control" id="call_number_9" autocomplete="off" placeholder="In tweevoud opgemaakt te" name="call_number_9">
                                         </div>
                                     </div>

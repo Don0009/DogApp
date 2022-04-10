@@ -1,6 +1,6 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-        <a href="{{ url('/') }}" class="sidebar-brand">
+        <a href="{{url('/')}}" class="sidebar-brand">
             Contract<span>Form</span>
         </a>
         <div class="sidebar-toggler not-active">
@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li class="nav-item nav-category">Manage</li>
-             <li class="nav-item">
+            {{-- <!-- <li class="nav-item">
                 <a href="{{ url('/admin/roles') }}" class="nav-link">
                     <i class="link-icon" data-feather="shield"></i>
                     <span class="link-title">Roles</span>
@@ -90,42 +90,30 @@
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Electricity And Natural Gas</span>
                 </a>
-            </li>
+            </li> --> --}}
             <li class="nav-item">
                 <a href="{{ route('internet_tv.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title"> Internet + TV </span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="{{ route('internet_tv.index') }}" class="nav-link">
-                    <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title"> Telenet </span>
-                </a>
-            </li>
 
 
 
 
-          <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="{{ route('engie.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Contract Professionele Klanten</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('contract_professionele.index') }}" class="nav-link">
-                    <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title">Contract Residentile</span>
                 </a>
             </li>
 
             <li class="nav-item">
                 <a href="{{ route('pad_services.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title">PAD Services</span>
+                    <span class="link-title">PAD Services(incomplete)</span>
                 </a>
-            </li>
+            </li> -->
 
 
         </ul>

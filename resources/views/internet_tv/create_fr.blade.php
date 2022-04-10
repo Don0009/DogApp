@@ -58,7 +58,26 @@
                     </div>
                     <div class="section">
                         <div class="container">
-                            <h6 class="card-title">Mlle / Mme / M. (entourez)</h6>
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <div class="form-check form-check-inline">
+                                        <input required class="form-check-input" style="margin-left: 10px; margin-top: -6px" type="radio" name="mile" value="0">
+                                        <label for="extra_decoder" class="form-label mt-2" style="margin-left: 10px; margin-top: -4px">Mlle</label>
+
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input required class="form-check-input" type="radio" name="mile" value="1">
+                                        <label for="extra_decoder" class="form-label mt-2" style="margin-left: 10px; margin-top: -6px">Mme</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input required class="form-check-input" type="radio" name="mile" value="2">
+                                        <label for="extra_decoder" class="form-label mt-2"  style="margin-left: 10px; padding-top: -4px">M. (entourez)</label>
+                                    </div>
+                                </div>
+
+                            </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
@@ -68,8 +87,7 @@
                                 </div>
 
                             </div>
-                        </div>
-                    </div>
+
                     <div class="section">
                         <div class="container">
                             <div class="row">
@@ -240,18 +258,18 @@
 
                                     <h5>Extra TV Decoder?</h5>
                                     <div class="form-check form-check-inline">
-                                        <input required class="form-check-input" type="radio" name="extra_decoder" value="0">
-                                        <label for="extra_decoder" class="form-label">1<span class="text-danger">*</span></label>
+                                        <input required class="form-check-input"  type="radio" name="extra_decoder" value="0">
+                                        <label for="extra_decoder" style="margin-left: 10px ; margin-top:15px" class="form-label">1</label>
 
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <input required class="form-check-input" type="radio" name="extra_decoder" value="1">
-                                        <label for="extra_decoder" class="form-label">2<span class="text-danger">*</span></label>
+                                        <label for="extra_decoder" class="form-label" style="margin-left: 10px ; margin-top:15px">2</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input required class="form-check-input" type="radio" name="extra_decoder" value="2">
-                                        <label for="extra_decoder" class="form-label">3<span class="text-danger">*</span></label>
+                                        <label for="extra_decoder" class="form-label" style="margin-left: 10px ; margin-top:15px">3</label>
                                     </div>
                                 </div>
                             </div>
@@ -262,12 +280,12 @@
 
                                     <h5>Internet boost*?</h5>
                                     <div class="form-check form-check-inline">
-                                        <input required class="form-check-input" type="radio" name="internet_boost" value="0">
-                                        <label for="internet_boost" class="form-label">Oui<span class="text-danger">*</span></label>
+                                        <input required class="form-check-input mt-1" style="margin-left: 4px" type="radio" name="internet_boost" value="0">
+                                        <label for="internet_boost" class="form-label"  style="margin-left: 10px ; margin-top:15px">Oui</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input required class="form-check-input" type="radio" name="internet_boost" value="1">
-                                        <label for="internet_boost" class="form-label">Non<span class="text-danger">*</span></label>
+                                        <input required class="form-check-input mt-1" style="margin-left: 10px" type="radio" name="internet_boost" value="1">
+                                        <label for="internet_boost" class="form-label"  style="margin-left: 10px ; margin-top:15px">Non</label>
                                     </div>
                                 </div>
                             </div>
@@ -344,6 +362,7 @@
                                 <textarea class="form-control" name="additional_information" values="additional_information" id="exampleFormControlTextarea1" rows="5"></textarea>
                             </div>
                             <div class="mb-3">
+                                <label for="">Signature du client :</label>
                                 <input required type="file" class="form-control" id="file" autocomplete="off" placeholder="images" name="file">
                             </div>
 
@@ -516,16 +535,16 @@
                                     Transfert de services internet et/ou TV
                                 </h4>
 
-                                <div class="form-check">
+                                <div class="form-check ml-4">
 
-                                    <input required class="form-check-input" type="radio" name="care_of_the_automatic_migration" value="0">
-                                    <label for="extra_decoder" class="form-label"><span style="font-weight: bold">Je souhaite utiliser</span> le service Easy Switch. Orange prend soin de la migration et de la résiliation
+                                    <input required class="form-check-input"  type="radio" name="care_of_the_automatic_migration" value="0">
+                                    <label for="extra_decoder" class="form-label mt-1" style="margin-left: 10px; margin-top:-20px"><span style="font-weight: bold">Je souhaite utiliser</span> le service Easy Switch. Orange prend soin de la migration et de la résiliation
                                         mentionnée ci-dessous auprès de votre opérateur d’origine</label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check  ml-4">
 
-                                    <input required class="form-check-input" type="radio" name="care_of_the_automatic_migration" value="1">
-                                    <label for="extra_decoder" class="form-label"><span style="font-weight: bold">Je souhaite utiliser</span> le service Easy Switch. Orange prend soin de la migration et de la résiliation
+                                    <input required class="form-check-input mt-1"  type="radio" name="care_of_the_automatic_migration" value="1">
+                                    <label for="extra_decoder" class="form-label mt-1" style="margin-left: 10px; margin-top:-20px" ><span style="font-weight: bold">Je souhaite utiliser</span> le service Easy Switch. Orange prend soin de la migration et de la résiliation
                                         mentionnée ci-dessous auprès de votre opérateur d’origine</label>
                                 </div>
                             </div>
@@ -578,8 +597,8 @@
                                 <div class="col-6">
                                     <div class="form-check topper">
 
-                                        <input required class="form-check-input" type="radio" name="stopping_5" value="0">
-                                        <label for="extra_decoder" class="form-label"><span style="">Supprimer (Uniquement applicable avec Easy Switch)</span> </label>
+                                        <input required class="form-check-input ml-4" type="radio" name="stopping_5" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"><span style="">Supprimer (Uniquement applicable avec Easy Switch)</span> </label>
                                     </div>
 
                                 </div>
@@ -597,8 +616,8 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-check topper">
-                                        <input required class="form-check-input" type="radio" name="stopping_5" value="1">
-                                        <label for="extra_decoder" class="form-label">Supprimer (Uniquement applicable avec Easy Switch)</label>
+                                        <input required class="form-check-input" style="margin-left: 25px" type="radio" name="stopping_5" value="1">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px">Supprimer (Uniquement applicable avec Easy Switch)</label>
                                     </div>
 
 
@@ -621,8 +640,8 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check topper">
-                                        <input required class="form-check-input" type="radio" name="stopping_3" value="0">
-                                        <label for="extra_decoder" class="form-label"><span style="">Transférer vers Orange</span> </label>
+                                        <input required class="form-check-input mt-1" style="margin-left: 25px" type="radio" name="stopping_3" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"><span style="">Transférer vers Orange</span> </label>
                                     </div>
 
                                 </div>
@@ -630,7 +649,7 @@
                                 <div class="col-3">
                                     <div class="form-check topper">
                                         <div class="form-check">
-                                            <input required class="form-check-input" type="radio" name="stopping_3" value="1">
+                                            <input required class="form-check-input mt-1" style="margin-left: -20px" type="radio" name="stopping_3" value="1">
                                             <label class="form-check-label" for="flexRadioDefault1">
                                                 Supprimer
                                                 (Uniquement applicable avec Easy Switch)
@@ -667,8 +686,8 @@
                                 <div class="col-3">
                                     <div class="form-check topper">
 
-                                        <input required class="form-check-input" type="radio" name="immediately" value="0">
-                                        <label for="extra_decoder" class="form-label"><span>Immédiatement</span> </label>
+                                        <input required class="form-check-input" type="radio" style="margin-left: 25px" name="immediately" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"><span>Immédiatement</span> </label>
                                     </div>
 
                                 </div>
@@ -677,7 +696,7 @@
                                     <div class="form-check topper">
                                         <div class="form-check">
                                             <input required class="form-check-input" type="radio" name="immediately" value="1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <label class="form-check-label mt-1"  style="margin-left: 30px; margin-top:-10px" for="flexRadioDefault1">
                                                 À la date d’installation d’ Internet + TV
                                             </label>
                                         </div>
@@ -699,8 +718,8 @@
                                 <div class="col-3">
                                     <div class="form-check topper">
 
-                                        <input required class="form-check-input" type="radio" name="transfer_to_orange" value="0">
-                                        <label for="extra_decoder" class="form-label"><span>Transférer vers Orange</span> </label>
+                                        <input required class="form-check-input" type="radio" style="margin-left: 25px" name="transfer_to_orange" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px" style="margin-left: 10px"><span>Transférer vers Orange</span> </label>
                                     </div>
 
                                 </div>
@@ -709,7 +728,7 @@
                                     <div class="form-check topper">
                                         <div class="form-check">
                                             <input required class="form-check-input" type="radio" name="transfer_to_orange" value="1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <label class="form-check-label mt-1" style="margin-left: 30px;" for="flexRadioDefault1">
                                                 Supprimer (Uniquement applicable avec Easy Switch)
                                             </label>
                                         </div>
@@ -743,8 +762,8 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check topper">
-                                        <input required class="form-check-input" type="radio" name="Stopping" value="0">
-                                        <label for="extra_decoder" class="form-label"><span>Immédiatemen</span> </label>
+                                        <input required class="form-check-input" type="radio" style="margin-left: 25px" name="Stopping" value="0">
+                                        <label for="extra_decoder" class="form-labelmt-1" style="margin-left: 60px"><span>Immédiatemen</span> </label>
                                     </div>
 
                                 </div>
@@ -753,7 +772,7 @@
                                     <div class="form-check topper">
                                         <div class="form-check">
                                             <input required class="form-check-input" type="radio" name="Stopping" value="1">
-                                            <label for="extra_decoder" class="form-label"><span> À la date d’installation d’ Internet + TV</span> </label>
+                                            <label for="extra_decoder" class="form-label mt-1" style="margin-left: 30px;"><span> À la date d’installation d’ Internet + TV</span> </label>
                                         </div>
                                     </div>
 
@@ -775,8 +794,8 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check topper">
-                                        <input required class="form-check-input" type="radio" name="transfer_to_orange_4" value="0">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Transférer vers Orange</span></label>
+                                        <input required class="form-check-input" style="margin-left: 25px" type="radio" name="transfer_to_orange_4" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"> <span>Transférer vers Orange</span></label>
                                     </div>
 
                                 </div>
@@ -784,7 +803,7 @@
                                 <div class="col-3">
                                     <div class="form-check topper">
                                         <input required class="form-check-input" type="radio" name="transfer_to_orange_4" value="1">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Supprimer
+                                        <label for="extra_decoder" class="form-label mt-1"  style="margin-left: 30px"> <span>Supprimer
                                                 (Uniquement applicable avec Easy Switch)</span></label>
                                     </div>
 
@@ -818,8 +837,8 @@
                                     <div class="form-check topper">
 
 
-                                        <input required class="form-check-input" type="radio" name="immediately_3" value="0">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Immédiatement</span></label>
+                                        <input required class="form-check-input" type="radio" style="margin-left: 25px" name="immediately_3" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"> <span style="">Immédiatement</span></label>
                                     </div>
 
                                 </div>
@@ -827,7 +846,7 @@
                                 <div class="col-3">
                                     <div class="form-check topper">
                                         <input required class="form-check-input" type="radio" name="immediately_3" value="1">
-                                        <label for="extra_decoder" class="form-label"> <span style="">À la date d’installation
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 30px"> <span style="">À la date d’installation
                                                 d’ Internet + TV</span></label>
                                     </div>
 
@@ -846,8 +865,8 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check topper">
-                                        <input required class="form-check-input" type="radio" name="transfer_to_orange_2" value="0">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Transférer vers Orange</span></label>
+                                        <input required class="form-check-input" type="radio" style="margin-left: 25px" name="transfer_to_orange_2" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"> <span>Transférer vers Orange</span></label>
                                     </div>
 
                                 </div>
@@ -856,8 +875,8 @@
                                 <div class="col-3">
                                     <div class="form-check topper">
 
-                                        <input required class="form-check-input" type="radio" name="transfer_to_orange_2" value="1">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Supprimer
+                                        <input required class="form-check-input" type="radio" style="margin-left: -15px" name="transfer_to_orange_2" value="1">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 30px"> <span style="">Supprimer
                                                 (Uniquement applicable avec Easy Switch)</span></label>
                                     </div>
 
@@ -887,8 +906,8 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check topper">
-                                        <input required class="form-check-input" type="radio" name="immediately_4" value="0">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Immédiatement</span></label>
+                                        <input required class="form-check-input" type="radio" style="margin-left: 25px" name="immediately_4" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"> <span>Immédiatement</span></label>
                                     </div>
 
                                 </div>
@@ -898,7 +917,7 @@
 
 
                                         <input required class="form-check-input" type="radio" name="immediately_4" value="1">
-                                        <label for="extra_decoder" class="form-label"> <span style="">À la date d’installation
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 30px"> <span>À la date d’installation
                                                 d’ Internet + TV</span></label>
                                     </div>
 
@@ -918,8 +937,8 @@
                                 <div class="col-3">
                                     <div class="form-check topper">
 
-                                        <input required class="form-check-input" type="radio" name="transfer_to_orange_3" value="0">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Transférer vers Orange</span></label>
+                                        <input required class="form-check-input" type="radio" style="margin-left: 25px" name="transfer_to_orange_3" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"> <span style="">Transférer vers Orange</span></label>
                                     </div>
 
                                 </div>
@@ -928,7 +947,7 @@
                                     <div class="form-check topper">
 
                                         <input required class="form-check-input" type="radio" name="transfer_to_orange_3" value="1">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Supprimer
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 30px"> <span style="">Supprimer
                                                 (Uniquement applicable avec Easy Switch)</span></label>
                                     </div>
 
@@ -960,16 +979,16 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check topper">
-                                        <input required class="form-check-input" type="radio" name="immediately_5" value="0">
-                                        <label for="extra_decoder" class="form-label"> <span style="">Immédiatement</span></label>
+                                        <input required class="form-check-input" type="radio" style="margin-left: 25px" name="immediately_5" value="0">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 60px"> <span style="">Immédiatement</span></label>
                                     </div>
 
                                 </div>
 
-                                <div class="col-3">
+                                <div class="col-3" style="margin-top: 30px">
                                     <div class="form-check ">
-                                        <input required class="form-check-input" type="radio" name="immediately_5" value="1">
-                                        <label for="extra_decoder" class="form-label">À la date d’installation d’ Internet + TV<span class="text-danger">*</span></label>
+                                        <input required class="form-check-input"  type="radio" name="immediately_5" value="1">
+                                        <label for="extra_decoder" class="form-label mt-1" style="margin-left: 30px">À la date d’installation d’ Internet + TV<span class="text-danger">*</span></label>
 
                                     </div>
 
@@ -1020,7 +1039,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label for="signature">Signature :</label>
+                                        <label for="signature">Signature du client : :</label>
                                         <input required type="file" class="form-control" id="file_1" autocomplete="off" placeholder="Signature" name="file_1">
                                     </div>
                                 </div>

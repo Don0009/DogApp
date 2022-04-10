@@ -15,6 +15,8 @@ class CreateInternetHomesTable extends Migration
     {
         Schema::create('internet_homes', function (Blueprint $table) {
             $table->id();
+            $table->string('contract_number_1');
+            $table->string('consultant_signature_1');
             $table->string('client_exist');
             $table->string('client_num');
             $table->string('exist_phone');

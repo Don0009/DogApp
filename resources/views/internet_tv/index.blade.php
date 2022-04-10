@@ -14,9 +14,13 @@
             <i class="btn-icon-prepend" data-feather="plus"></i>
             Create Internet Tv French
         </a>
-        <a href="{{ url('internet_tv/create?lang=du') }}" class="btn btn-primary btn-icon-text">
+        <a href="{{ url('internet_tv/create?lang=du') }}" class="btn btn-primary btn-icon-text mr-2">
             <i class="btn-icon-prepend" data-feather="plus"></i>
             Create Internet Tv Dutch
+        </a>
+        <a href="{{ url('internet_home/create?lang=fr') }}" class="btn btn-primary btn-icon-text">
+            <i class="btn-icon-prepend" data-feather="plus"></i>
+            Create Internet Home Dutch
         </a>
     </div>
 </div>
