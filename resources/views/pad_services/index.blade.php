@@ -47,6 +47,9 @@
                                     Date Of Birth
                                 </th>
                                 <th>
+                                   place Of Birth
+                                </th>
+                                <th>
                                     Customer No
                                 </th>
                                 <th>
@@ -105,6 +108,12 @@
                                 </th>
                                 <th>
                                     Localité
+                                </th>
+                                <th>
+                                    Document ID
+                                </th>
+                                <th>
+                                    Représent Par
                                 </th>
                                 <th>
                                     Rue 1
@@ -175,6 +184,93 @@
                                 <th>
                                     To the customer
                                 </th>
+
+
+
+                                <th>
+                                    Residential Customer 2
+                                </th>
+                                <th>
+                                    Madame 2
+                                </th>
+                                <th>
+                                    Monsieur 2
+                                </th>
+                                <th>
+                                    First Last Name 2
+                                </th>
+                                <th>
+                                    Date Of Birth 2
+                                </th>
+                                <th>
+                                    Place Of Birth 2
+                                </th>
+                                <th>
+                                    Customer No 2
+                                </th>
+                                <th>
+                                    professional client 2
+                                </th>
+                                <th>
+                                    Company Name 2
+                                </th>
+                                <th>
+                                    Legal Status 2
+                                </th>
+                                <th>
+                                    Customer No 2
+                                </th>
+                                <th>
+                                    Code NACE 2
+                                </th>
+                                <th>
+                                    TVA BE 2
+                                </th>
+                                <th>
+                                    RPM 2
+                                </th>
+                                <th>
+                                    Phone 2
+                                </th>
+                                <th>
+                                    GSM 2
+                                </th>
+                                <th>
+                                    E-mail 2
+                                </th>
+                                <th>
+                                    You Wish To Be Kept Informed 2
+                                </th>
+                                <th>
+                                    You Wish To Receive Communication 2
+                                </th>
+                                <th>
+                                    Rue 2
+                                </th>
+                                <th>
+                                    N° 2
+                                </th>
+                                <th>
+                                    Bte 2
+                                </th>
+                                <th>
+                                    Etage 2
+                                </th>
+                                <th>
+                                    Appartement 2
+                                </th>
+                                <th>
+                                    Code postal 2
+                                </th>
+                                <th>
+                                    Localité 2
+                                </th>
+                                <th>
+                                    Document ID 2
+                                </th>
+                                <th>
+                                    Représent Par 2
+                                </th>
                                 <th>
                                     Created At
                                 </th>
@@ -196,6 +292,7 @@
                                 <td>{{ $pad_service->first_last_name}}</td>
                                 <td>{{ $pad_service->customer_no}}</td>
                                 <td>{{ $pad_service->date_of_birth}}</td>
+                                <td>{{ $pad_service->place_of_birth}}</td>
                                 <td>{{ $pad_service->professional_client}}</td>
                                 <td>{{ $pad_service->company_name}}</td>
                                 <td>{{ $pad_service->legal_status}}</td>
@@ -216,6 +313,7 @@
                                 <td>{{ $pad_service->code_postal}}</td>
                                 <td>{{ $pad_service->localité}}</td>
                                 <td>{{ $pad_service->document_id}}</td>
+                                <td>{{ $pad_service->représentée_par_1}}</td>
                                 <td>{{ $pad_service->rue_1}}</td>
                                 <td>{{ $pad_service->noo_1}}</td>
                                 <td>{{ $pad_service->bte_1}}</td>
@@ -237,6 +335,58 @@
                                 <td>{{ $pad_service->the}}</td>
                                 <td>{{ $pad_service->of_which_you_acknowledge}}</td>
                                 <td>{{ $pad_service->to_the_customer}}</td>
+
+                                <td>{{ $pad_service->residential_customer_1}}</td>
+                                <td>{{ $pad_service->madame_1}}</td>
+                                <td>{{ $pad_service->monsieur_1}}</td>
+                                <td>{{ $pad_service->first_last_name_1}}</td>
+                                <td>{{ $pad_service->customer_no_2}}</td>
+                                <td>{{ $pad_service->date_of_birth_1}}</td>
+                                <td>{{ $pad_service->place_of_birth_1}}</td>
+                                <td>{{ $pad_service->professional_client_1}}</td>
+                                <td>{{ $pad_service->company_name_1}}</td>
+                                <td>{{ $pad_service->legal_status_1}}</td>
+                                <td>{{ $pad_service->customer_no_3}}</td>
+                                <td>{{ $pad_service->code_nace_1}}</td>
+                                <td>{{ $pad_service->tva_be_1}}</td>
+                                <td>{{ $pad_service->rpm_1}}</td>
+                                <td>{{ $pad_service->phone_1}}</td>
+                                <td>{{ $pad_service->gsm_1}}</td>
+                                <td>{{ $pad_service->email_1}}</td>
+                                <td>{{ $pad_service->you_wish_to_be_kept_informed_1}}</td>
+                                <td>{{ $pad_service->you_wish_to_receive_communications_1}}</td>
+                                <td>{{ $pad_service->rue_2}}</td>
+                                <td>{{ $pad_service->noo_2}}</td>
+                                <td>{{ $pad_service->bte_2}}</td>
+                                <td>{{ $pad_service->etage_2}}</td>
+                                <td>{{ $pad_service->appartement_2}}</td>
+                                <td>{{ $pad_service->code_postal_2}}</td>
+                                <td>{{ $pad_service->localité_2}}</td>
+                                <td>{{ $pad_service->document_id_2}}</td>
+                                <td>{{ $pad_service->représentée_par_2}}</td>
+
+
+                                <td>{{ $pad_service->rue_3}}</td>
+                                <td>{{ $pad_service->noo_3}}</td>
+                                <td>{{ $pad_service->bte_3}}</td>
+                                <td>{{ $pad_service->etage_3}}</td>
+                                <td>{{ $pad_service->appartement_3}}</td>
+                                <td>{{ $pad_service->code_postal_3}}</td>
+                                <td>{{ $pad_service->localité_3}}</td>
+                                <td>{{ $pad_service->year_of_first_use_3}}</td>
+                                <td>{{ $pad_service->you_are_a_customer_of_engie_3}}</td>
+                                <td>{{ $pad_service->oil_installation_3}}</td>
+                                <td>{{ $pad_service->gas_installation_3}}</td>
+                                <td>{{ $pad_service->electrical_installation_3}}</td>
+                                <td>{{ $pad_service->you_are_not_customer_of_engie_electrabel_3}}</td>
+                                <td>{{ $pad_service->oil_installation_4}}</td>
+                                <td>{{ $pad_service->gas_installation_4}}</td>
+                                <td>{{ $pad_service->electrical_installation_4}}</td>
+                                <td>{{ $pad_service->if_you_do_not_wish_to_receive_3}}</td>
+                                <td>{{ $pad_service->drawn_up_3}}</td>
+                                <td>{{ $pad_service->the_3}}</td>
+                                <td>{{ $pad_service->of_which_you_acknowledge_3}}</td>
+                                <td>{{ $pad_service->to_the_customer_3}}</td>
                                 <td>
                                     {{ \Carbon\Carbon::parse($pad_service->created_at)->diffForhumans() }}
                                 </td>

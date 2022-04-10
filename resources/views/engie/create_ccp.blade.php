@@ -24,15 +24,15 @@
 @endsection
 @section('content')
 
-    {{-- <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+    <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('internet_tv.index') }}">internet tv</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('engie.index') }}">internet tv</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Create User</li>
             </ol>
         </nav>
-    </div> --}}
+    </div>
 
     <form class="forms-sample" method="POST" action="{{ route('engie.store') }}">
 @csrf

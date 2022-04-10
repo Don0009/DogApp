@@ -17,6 +17,7 @@ class CreateOrangeInternetTvsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('form_lang');
+            $table->string('lang');
             $table->string('partner_apllication');
             $table->char('name');
             $table->char('first_name');

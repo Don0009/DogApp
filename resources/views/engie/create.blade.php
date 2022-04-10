@@ -28,13 +28,13 @@
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('internet_tv.index') }}">internet tv</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('engie.index') }}">internet tv</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Create User</li>
             </ol>
         </nav>
     </div>
 
-    <form class="forms-sample" method="POST" action="{{ route('pad_services.store') }}">
+    <form class="forms-sample" method="POST" action="{{ route('engie.store') }}">
 @csrf
 <div class="section">
     <div class="container-fluid">
@@ -179,17 +179,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_wish_to_receive">
-                                <label class="form-check-label" for="inlineCheckbox2">U wenst de correspondentie met ENGIE Electrabel over uw contract(en) via e-mail te ontvangen
-                                    (zie ook de Bijzondere Voorwaarden)</label>
+
+
+
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" value="0" name="you_wish_to_receive" id="you_wish_to_receive">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    U wenst de correspondentie met ENGIE Electrabel over uw contract(en) via e-mail te ontvangen
+                                    (zie ook de Bijzondere Voorwaarden)
+                                </label>
                               </div>
 
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_wish_to_be_informed">
-                                <label class="form-check-label" for="inlineCheckbox2">U wenst via e-mail op de hoogte te blijven van de producten, diensten en promoties van ENGIE Electrabel
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" value="1" name="you_wish_to_receive" id="you_wish_to_receive">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    U wenst via e-mail op de hoogte te blijven van de producten, diensten en promoties van ENGIE Electrabel
                                     inzake energie, energie-efficiëntie, productie en opslag van energie, onderhoud en pechbijstand, smart
-                                    producten en e-mobility en van haar partners inzake verwarming, isolatie en zonnepanelen.</label>
+                                    producten en e-mobility en van haar partners inzake verwarming, isolatie en zonnepanelen.
+                                </label>
                               </div>
 
 
@@ -506,20 +513,26 @@
 
                                       <div class="row">
 
+
                                         <div class="col-6">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="gemengd_professioneel_verbruik">
-                                                <label class="form-check-label" for="inlineCheckbox2">gemengd professioneel verbruik</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" value="0" name="gemengd_professioneel_verbruik" id="gemengd_professioneel_verbruik">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    gemengd professioneel verbruik
+                                                </label>
                                               </div>
                                         </div>
 
                                         <div class="col-6">
-
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="only_professional_use">
-                                                <label class="form-check-label" for="inlineCheckbox2">uitsluitend professioneel verbruik</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" value="1" name="gemengd_professioneel_verbruik" id="gemengd_professioneel_verbruik">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    uitsluitend professioneel verbruik
+                                                </label>
                                               </div>
-                                           </div>
+                                        </div>
+
+
 
 
                                     </div>
@@ -584,21 +597,28 @@ uw contract kunt u elektriciteit en/of aardgas afnemen bij ENGIE Electrabel voor
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_contract">
-                                <label class="form-check-label" for="inlineCheckbox2">U hebt al een contract bij ENGIE Electrabel</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="0" name="you_already_have_contract" id="you_already_have_contract">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    U hebt al een contract bij ENGIE Electrabel
+                                </label>
                               </div>
                         </div>
                         <div class="col-4">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_do_not_yet">
-                                <label class="form-check-label" for="inlineCheckbox2">U hebt nog geen contract bij ENGIE Electrabel</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="0" name="you_already_have_contract" id="you_already_have_contract">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    U hebt nog geen contract bij ENGIE Electrabel
+                                </label>
                               </div>
                         </div>
+
                         <div class="col-4">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_have_never_had_energy">
-                                <label class="form-check-label" for="inlineCheckbox2">U hebt nog nooit een energiecontract gehad</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="0" name="you_already_have_contract" id="you_already_have_contract">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    U hebt nog nooit een energiecontract gehad
+                                </label>
                               </div>
                         </div>
                     </div>
@@ -757,36 +777,34 @@ uw contract kunt u elektriciteit en/of aardgas afnemen bij ENGIE Electrabel voor
                                 <div class="col-4">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_move_or_build_4">
-                                        <label class="form-check-label" for="inlineCheckbox2">U verhuist of bouwt</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Uw aardgasmeter is al geopend</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_an_electricity_contract_4">
-                                        <label class="form-check-label" for="inlineCheckbox2">U hebt al een elektriciteitscontract bij een andere leverancier
-                                            Naam van de leverancie</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">U wilt een nieuwe aardgasmeter openen</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing_5">
-                                        <label class="form-check-label" for="inlineCheckbox2">U wilt uw bestaande elektriciteitscontract wijzigen</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">U wilt een bestaande aardgasmeter openen</label>
                                       </div>
                                 </div>
 
                                 <div class="col-5">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_move_or_build_5">
-                                        <label class="form-check-label" for="inlineCheckbox2">U verhuist of bouwt</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy pro (Vast 1 jaar)</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_already_have_an_electricity_contract_5">
-                                        <label class="form-check-label" for="inlineCheckbox2">U hebt al een elektriciteitscontract bij een andere leverancier
-                                            Naam van de leverancie</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy pro (Geïndexeerd 1 jaar)</label>
                                       </div>
 
                                       <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="you_want_to_change_your_existing_6">
-                                        <label class="form-check-label" for="inlineCheckbox2">U wilt uw bestaande elektriciteitscontract wijzigen</label>
+                                        <label class="form-check-label" for="inlineCheckbox2">Easy 3 pro (Vast 3 jaar)</label>
                                       </div>
                                 </div>
 

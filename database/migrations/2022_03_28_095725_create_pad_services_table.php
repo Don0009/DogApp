@@ -65,6 +65,58 @@ class CreatePadServicesTable extends Migration
             $table->date('the');
             $table->string('of_which_you_acknowledge');
             $table->string('to_the_customer');
+
+            $table->boolean('residential_customer_1')->nullable();
+            $table->boolean('madame_1')->nullable();
+            $table->boolean('monsieur_1')->nullable();
+            $table->string('first_last_name_1');
+            $table->integer('customer_no_2');
+            $table->date('date_of_birth_1');
+            $table->string('place_of_birth_1');
+            $table->boolean('professional_client_1')->nullable();
+            $table->string('company_name_1');
+            $table->string('legal_status_1');
+            $table->string('customer_no_3');
+            $table->string('code_nace_1');
+            $table->string('tva_be_1');
+            $table->string('rpm_1');
+            $table->integer('phone_1');
+            $table->string('gsm_1');
+            $table->string('email_1');
+            $table->boolean('you_wish_to_be_kept_informed_1')->nullable();
+            $table->boolean('you_wish_to_receive_communications_1')->nullable();
+            $table->string('rue_2');
+            $table->string('noo_2');
+            $table->string('bte_2');
+            $table->string('etage_2');
+            $table->string('appartement_2');
+            $table->string('code_postal_2');
+            $table->string('localité_2');
+            $table->string('document_id_2');
+            $table->string('représentée_par_2');
+
+            $table->string('rue_3');
+            $table->string('noo_3');
+            $table->string('bte_3');
+            $table->string('etage_3');
+            $table->string('appartement_3');
+            $table->string('code_postal_3');
+            $table->string('localité_3');
+            $table->string('year_of_first_use_3');
+            $table->boolean('you_are_a_customer_of_engie_3')->nullable();
+            $table->boolean('oil_installation_3')->nullable();
+            $table->boolean('gas_installation_3')->nullable();
+            $table->boolean('electrical_installation_3')->nullable();
+            $table->boolean('you_are_not_customer_of_engie_electrabel_3')->nullable();
+            $table->boolean('oil_installation_4')->nullable();
+            $table->boolean('gas_installation_4')->nullable();
+            $table->boolean('electrical_installation_4')->nullable();
+            $table->boolean('if_you_do_not_wish_to_receive_3')->nullable();
+            $table->string('drawn_up_3');
+            $table->date('the_3');
+            $table->string('of_which_you_acknowledge_3');
+            $table->string('to_the_customer_3');
+
             $table->timestamps();
         });
     }

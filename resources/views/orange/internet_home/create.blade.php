@@ -12,7 +12,7 @@
                         <div class="card-body">
                             <h6 class="card-title">Identification du client</h6>
                             <div class="2">
-                                <input type="checkbox" name="client_exist" value="0">
+                                <input type="radio" name="client_exist" value="0">
                                 <label for="client_exist" class="form-label">Client existant<span class="text-danger">*</span></label>
                                 @error('client_exist')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -48,7 +48,7 @@
                                 @enderror
                             </div>
                             <div class="mb-2">
-                                <input type="checkbox" name="new_client" value="0">
+                                <input type="radio" name="new_client" value="2">
                                 <label for="new_client" class="form-label">Nouveau clien<span class="text-danger">*</span></label>
                                 @error('new_client')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -62,9 +62,9 @@
                                     <input type="radio" name="title" value="0">
                                     <label for="title" class="form-label">Mme</label>
                                     <input type="radio" name="title" value="1">
-                                    <label for="title" class="form-label">Mlle</label>
+                                    <label for="Title" class="form-label">Mlle</label>
                                     <input type="radio" name="title" value="2">
-                                    <label for="title" class="form-label">M</label>
+                                    <label for="Title" class="form-label">M</label>
                                 </div>
                                 <div class="col">
                                     <h6>language:<span class="text-danger">*</span>

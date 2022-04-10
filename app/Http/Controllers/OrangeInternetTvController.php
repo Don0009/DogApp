@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 use mikehaertl\pdftk\Pdf;
-use Mail;
-
+use \Mail;
 class OrangeInternetTvController extends Controller
 {
     /**
@@ -40,7 +39,7 @@ class OrangeInternetTvController extends Controller
 
         $lang = $request->lang;
         // dd($lang);
-        if ($lang == "du") {
+        if ($lang == "ccp") {
             return view('internet_tv.create', compact('lang'));
         } else {
 
@@ -66,6 +65,53 @@ class OrangeInternetTvController extends Controller
      */
     public function store(Request $request)
     {
+        { // start
+
+    //         $form_lang = $request->form_lang;
+    // if($form_lang == "du"){
+    //    return view ('unfilled_form.orange.TV + internet aanvraag Orange NL.pdf' , compact('lang'));
+    // }
+    // else{
+    //     return view ('unfilled_form.orange.TV + internet aanvraag orange FR.pdf' , compact('lang'));
+    // }
+
+            $pdf = new Pdf(public_path('unfilled_form/orange/TV + internet aanvraag Orange FR.pdf'), [
+                //            'command' => '/some/other/path/to/pdftk',
+                            // or on most Windows systems:
+                            // 'command' => '/usr/bin/pdftk',
+                           'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+                //            'useExec' => true,  // May help on Windows systems if execution fails
+
+            ]);
+
+            // dd($pdf);
+
+            // data copied from Orange
+
+            $data = $request->all();
+            $data = $orange =  OrangeInternetTv::create($data);
+
+            $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+    //        dd($pdf_name);
+            $data = $data->toArray();
+            $result = $pdf->fillForm($data)->flatten()->needAppearances()
+                ->saveAs($pdf_name);
+    //        chmod(public_path($pdf_name), 0777);
+            dd($result);
+    //        dd($result);
+
+
+
+
+
+            // dd($request->all());
+
+            return redirect()->route('internet_tv.create');
+
+
+        } // end
+
+
         // dd( $request->all());
         $validator = Validator::make($request->all(), [
 
@@ -163,7 +209,6 @@ class OrangeInternetTvController extends Controller
             'call_number_9' => 'required',
             'op' => 'required',
             'file_1' => 'required',
-
         ]);
 
         $data = $request->all();
@@ -181,33 +226,24 @@ class OrangeInternetTvController extends Controller
         $pdf = new Pdf(public_path('notfill.pdf'), [
 //            'command' => '/some/other/path/to/pdftk',
             // or on most Windows systems:
-            'command' => '/usr/bin/pdftk',
-//            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            'command' => '\snap\bin\pdftk',
 //            'useExec' => true,  // May help on Windows systems if execution fails
         ]);
 
-//        dd($pdf);
-
-
         $data = $orange = OrangeInternetTv::create($data);
 
-        $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
-//        dd($pdf_name);
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
-            ->saveAs($pdf_name);;
-//        chmod(public_path($pdf_name), 0777);
-
-//        dd($result);
+            ->saveAs('filled.pdf');;
 
 
 
-        Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+        Mail::send('emails.report', $data, function ($message) use ($data, $pdf) {
             $message->to('musmangeee@gmail.com')
-                ->subject("You have got a Orange Internet TV lead...!")
+                ->subject(Auth()->user()->name . " has submitted SSM Report." . 'Hello')
                 ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-                ->attach(public_path($pdf_name), [
+                ->attach(public_path('filled.pdf'), [
                     'as' => 'name.pdf',
                     'mime' => 'application/pdf',
                 ]);
@@ -221,7 +257,6 @@ class OrangeInternetTvController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Orange Internet TV Lead';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
         return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');
     }
 

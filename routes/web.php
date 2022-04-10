@@ -42,6 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('electricity_natural_gas', 'lampiris\ElectricityNaturalControllers');
     Route::resource('internet_tv', 'OrangeInternetTvController');
     Route::resource('engie', 'EngieContractController');
+    Route::resource('contract_professionele', 'ContractResidentileController');
     Route::resource('pad_services', 'PadServicesController');
     Route::get('/generate-pdf', 'PdfController@generatePDF');
     Route::resource('telenet_new_subs', 'telenet\NewsubController');

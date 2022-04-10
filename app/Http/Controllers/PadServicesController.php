@@ -70,6 +70,38 @@ class PadServicesController extends Controller
             'drawn_up' => 'required',
             'of_which_you_acknowledge' => 'required',
             'to_the_customer' => 'required',
+            'first_last_name_1' => 'required',
+            'customer_no_2' => 'required',
+            'place_of_birth_1' => 'required',
+            'company_name_1' => 'required',
+            'legal_status_1' => 'required',
+            'customer_no_3' => 'required',
+            'code_nace_1' => 'required',
+            'tva_be_1' => 'required',
+            'rpm_1' => 'required',
+            'phone_1' => 'required',
+            'gsm_1' => 'required',
+            'email_1' => 'required',
+            'rue_2' => 'required',
+            'noo_2' => 'required',
+            'bte_2' => 'required',
+            'etage_2' => 'required',
+            'appartement_2' => 'required',
+            'code_postal_2' => 'required',
+            'localité_2' => 'required',
+            'document_id_2' => 'required',
+            'représentée_par_2' => 'required',
+            'rue_3' => 'required',
+            'noo_3' => 'required',
+            'bte_3' => 'required',
+            'etage_3' => 'required',
+            'appartement_3' => 'required',
+            'code_postal_3' => 'required',
+            'localité_3' => 'required',
+            'year_of_first_use_3' => 'required',
+            'drawn_up_3' => 'required',
+            'of_which_you_acknowledge_3' => 'required',
+            'to_the_customer_3' => 'required',
         ]);
 
         // dd($request->all());
@@ -77,16 +109,126 @@ class PadServicesController extends Controller
         // dd($validator,$request->all());
         if($validator->fails()){
 
-
+// dd($validator);
             return redirect()->back()->withErrors($validator);
         }
         $data = $request->all();
-        if(isset($data['date_of_birth'])){
+        if(isset($data['the_3'])){
+            $data['the_3'] = Carbon::parse($data['the_3']);
+        }
+        if(isset($data['date_of_birth_1'])){
+            $data['date_of_birth_1'] = Carbon::parse($data['date_of_birth_1']);
+        }
+                if(isset($data['date_of_birth'])){
             $data['date_of_birth'] = Carbon::parse($data['date_of_birth']);
         }
-        $data = $request->all();
         if(isset($data['the'])){
             $data['the'] = Carbon::parse($data['the']);
+        }
+        if(isset($data['you_are_a_customer_of_engie_3'])){
+            if($data['you_are_a_customer_of_engie_3'] == "on"){
+            $data['you_are_a_customer_of_engie_3'] = true;
+            }  else{
+            $data['you_are_a_customer_of_engie_3'] = false;
+            }
+        }
+        if(isset($data['oil_installation_3'])){
+            if($data['oil_installation_3'] == "on"){
+            $data['oil_installation_3'] = true;
+            }  else{
+            $data['oil_installation_3'] = false;
+            }
+        }
+        if(isset($data['gas_installation_3'])){
+            if($data['gas_installation_3'] == "on"){
+            $data['gas_installation_3'] = true;
+            }  else{
+            $data['gas_installation_3'] = false;
+            }
+        }
+        if(isset($data['electrical_installation_3'])){
+            if($data['electrical_installation_3'] == "on"){
+            $data['electrical_installation_3'] = true;
+            }  else{
+            $data['electrical_installation_3'] = false;
+            }
+        }
+        if(isset($data['you_are_not_customer_of_engie_electrabel_3'])){
+            if($data['you_are_not_customer_of_engie_electrabel_3'] == "on"){
+            $data['you_are_not_customer_of_engie_electrabel_3'] = true;
+            }  else{
+            $data['you_are_not_customer_of_engie_electrabel_3'] = false;
+            }
+        }
+        if(isset($data['oil_installation_4'])){
+            if($data['oil_installation_4'] == "on"){
+            $data['oil_installation_4'] = true;
+            }  else{
+            $data['oil_installation_4'] = false;
+            }
+        }
+        if(isset($data['gas_installation_4'])){
+            if($data['gas_installation_4'] == "on"){
+            $data['gas_installation_4'] = true;
+            }  else{
+            $data['gas_installation_4'] = false;
+            }
+        }
+        if(isset($data['electrical_installation_4'])){
+            if($data['electrical_installation_4'] == "on"){
+            $data['electrical_installation_4'] = true;
+            }  else{
+            $data['electrical_installation_4'] = false;
+            }
+        }
+        if(isset($data['if_you_do_not_wish_to_receive_3'])){
+            if($data['if_you_do_not_wish_to_receive_3'] == "on"){
+            $data['if_you_do_not_wish_to_receive_3'] = true;
+            }  else{
+            $data['if_you_do_not_wish_to_receive_3'] = false;
+            }
+        }
+        if(isset($data['you_wish_to_be_kept_informed_1'])){
+            if($data['you_wish_to_be_kept_informed_1'] == "on"){
+            $data['you_wish_to_be_kept_informed_1'] = true;
+            }  else{
+            $data['you_wish_to_be_kept_informed_1'] = false;
+            }
+        }
+        if(isset($data['you_wish_to_receive_communications_1'])){
+            if($data['you_wish_to_receive_communications_1'] == "on"){
+            $data['you_wish_to_receive_communications_1'] = true;
+            }  else{
+            $data['you_wish_to_receive_communications_1'] = false;
+            }
+        }
+        if(isset($data['professional_client_1'])){
+            if($data['professional_client_1'] == "on"){
+            $data['professional_client_1'] = true;
+            }  else{
+            $data['professional_client_1'] = false;
+            }
+        }
+        if(isset($data['residential_customer_1'])){
+            if($data['residential_customer_1'] == "on"){
+            $data['residential_customer_1'] = true;
+            }  else{
+            $data['residential_customer_1'] = false;
+            }
+        }
+        if(isset($data['madame_1'])){
+            if($data['madame_1'] == "on"){
+            $data['madame_1'] = true;
+            }  else{
+            $data['madame_1'] = false;
+            }
+        }
+        if(isset($data['monsieur_1'])){
+            if($data['monsieur_1'] == "on"){
+            $data['monsieur_1'] = true;
+            }  else{
+            $data['monsieur_1'] = false;
+            }
         }
         if(isset($data['if_you_do_not_wish_to_receive'])){
             if($data['if_you_do_not_wish_to_receive'] == "on"){
