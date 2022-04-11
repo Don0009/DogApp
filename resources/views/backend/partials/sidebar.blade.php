@@ -1,6 +1,6 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-        <a href="{{url('/')}}" class="sidebar-brand">
+        <a href="{{ url('/') }}" class="sidebar-brand">
             Contract<span>Form</span>
         </a>
         <div class="sidebar-toggler not-active">
@@ -92,7 +92,8 @@
                 </a>
             </li> --> --}}
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#orange" role="button" aria-expanded="false" aria-controls="orange">
+                <a class="nav-link" data-toggle="collapse" href="#orange" role="button" aria-expanded="false"
+                    aria-controls="orange">
                     <i class="link-icon" data-feather="inbox"></i>
                     <span class="link-title">Orange</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -105,25 +106,40 @@
                         <li class="nav-item">
                             <a href="{{ route('internet_home.index') }}" class="nav-link">Internet Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('mobile_phone.index') }}" class="nav-link">Mobile Phone</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('number_porting.index') }}" class="nav-link">Number Porting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('number_porting_du.index') }}" class="nav-link">Number Porting
+                                Dutch</a>
+                        </li>
+
                     </ul>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
+                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false"
+                    aria-controls="telnet">
                     <i class="link-icon" data-feather="inbox"></i>
-                    <span class="link-title">Telnet</span>
+                    <span class="link-title">Telenet</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
                 <div class="collapse" id="telnet">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="{{ route('telenet_new_subs.index') }}" class="nav-link">Telenet Contract Aanvraag</a>
+                            <a href="{{ route('telenet_new_subs.index') }}" class="nav-link">MNP
+                                overdrachtsformulier Telenet (nieuwe abonnementen)</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('telenet_question.index') }}" class="nav-link">Telenet contract</a>
+                            <a href="{{ route('telenet_question.index') }}" class="nav-link">Telenet contract
+                                (nieuwe abonnementen)</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('contractapp.index') }}" class="nav-link">MNP overdrachtsformulier</a>
+                            <a href="{{ route('contractapp.index') }}" class="nav-link">Telenet Contract
+                                Aanvraag</a>
                         </li>
                     </ul>
                 </div>

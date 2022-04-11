@@ -1,19 +1,19 @@
 @extends('layouts.backend')
 
 @section('content')
-
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Internet Tv</li>
+                <li class="breadcrumb-item active" aria-current="page">Contract Application</li>
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
 
-            <a href="{{ route('telenet_new_subs.create') }}" class="btn btn-primary btn-icon-text">
+            <a href="{{ route('contractapp.create') }}" class="btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Telnet Contract
+                Create Telenet Contract
             </a>
         </div>
     </div>
@@ -22,48 +22,49 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h6 class="card-title">Internet Tv</h6>
-                    <p class="card-description">All the internet tv are listed here.</p>
+                    <h6 class="card-title">Telenet Contract Application</h6>
+                    <p class="card-description">Listing of All the Telenet Contract Applications.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>
-                            <tr>
-                                <th>
-                                    #
-                                </th>
+                                <tr>
+                                    <th>
+                                        #
+                                    </th>
 
-                                <th>
-                                    Partner Apllication
-                                </th>
-                                <th>
-                                    Name
-                                </th>
-                                <th>Street</th>
-                                <th>Appartments Number</th>
-                                <th>Township</th>
-                                <th>MAil</th>
-                                <th>Orange Customer Number</th>
-                                <th>First Name</th>
-                                <th>Number</th>
-                                <th>Letter</th>
-                                <th>Bus</th>
-                                <th>PostCode</th>
-                                <th>GSM</th>
-                                <th>Id Card Number</th>
-                                <th>Name Of Your Current Provider</th>
-                                <th>Customer Number At Your Current Supplier</th>
-                                <th>Floor</th>
+                                    <th>
+                                        FIRST NAME
+                                    </th>
+                                    <th>
+                                        CONTACT NUMBER
+                                    </th>
+                                    <th>
+                                        EMAIL ADDRESS
+                                    </th>
 
-                                <th>
-                                    Created At
-                                </th>
-                                <th>
-                                    Updated At
-                                </th>
-                                <th>
-                                    Actions
-                                </th>
-                            </tr>
+                                    <th>
+                                        CREATED AT
+                                    </th>
+                                    <th>
+                                        UPDATED AT
+                                    </th>
+                                    <th>
+                                        ACTIONS
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>
+                                        <a href="" class="btn btn-sm btn-dark">Delete</a>
+                                    </td>
+
+                                </tr>
                             </thead>
                             <tbody>
 

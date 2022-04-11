@@ -199,9 +199,9 @@ class OrangeInternetTvController extends Controller
 //        chmod(public_path($pdf_name), 0777);
 
 //        dd($result);
-        $okSign = new OKSignController();
-       $A =  $okSign->document_upload($pdf_name, 'orange_pdf');
-       dd($A);
+    //     $okSign = new OKSignController();
+    //    $A =  $okSign->document_upload($pdf_name, 'orange_pdf');
+    //    dd($A);
 
 
 

@@ -21,7 +21,8 @@ class NewsubController extends Controller
     public function index()
     {
         //
-        return view('telenet.new_sub.index');
+        $data = TelenetNewSub::all();
+        return view('telenet.new_sub.index', compact('data'));
 
     }
 
