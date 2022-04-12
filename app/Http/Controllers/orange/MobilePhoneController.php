@@ -5,6 +5,7 @@ namespace App\Http\Controllers\orange;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\MobilePhone;
+use Illuminate\Support\Facades\Validator;
 
 class MobilePhoneController extends Controller
 {
@@ -40,6 +41,67 @@ class MobilePhoneController extends Controller
      */
     public function store(Request $request)
     {
+
+$validator = Validator::make($request->all(), [
+
+                // Validation Starts
+
+
+                'client_exist' => 'required',
+                'client_num' => 'required',
+
+                'exist_phone' => 'required',
+                'new_client' => 'required',
+                's_number' => 'required',
+                'language' => 'required',
+                'title' => 'required',
+                'customer_type' => 'required',
+                'name' => 'required',
+                'f_name' => 'required',
+                'street' => 'required',
+                'no' => 'required',
+                'box' => 'required',
+                'town' => 'required',
+
+                'postal_code' => 'required',
+                'country' => 'required',
+                'date_of_birth' => 'required',
+                'busines' => 'required',
+                'company_number' => 'required',
+                'legal_status' => 'required',
+                'company_name' => 'required',
+                'contact_person' => 'required',
+                'comp_street' => 'required',
+                'comp_no' => 'required',
+                'comp_box' => 'required',
+                'comp_postal_code' => 'required',
+                'comp_town' => 'required',
+                'comp_country' => 'required',
+                'sim' => 'required',
+                'res_number' => 'required',
+                'pricing_plan' => 'required',
+                'options_services' => 'required',
+                'copy' => 'required',
+                'date' => 'required',
+                'credit_card_holder' => 'required',
+                'code_generate' => 'required',
+                'account_holder_name' => 'required',
+                'street_and_number' => 'required',
+                'postal_code_and_city' => 'required',
+                'hold_country' => 'required',
+                'iban_account_number' => 'required',
+                'bic_code' => 'required',
+                'underlying_contract_number' => 'required',
+
+            ]);
+
+
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator);
+            }
+
+            // // Validation
+
         $data = $request->all();
         MobilePhone::create($data);
         return redirect()->route('mobile_phone.index');

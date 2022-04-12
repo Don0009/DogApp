@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\mega;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class NumberPortingController extends Controller
+class MegaController extends Controller
 {
     /**
      * Display a listing of the resource.

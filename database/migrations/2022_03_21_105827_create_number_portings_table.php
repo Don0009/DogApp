@@ -15,7 +15,8 @@ class CreateNumberPortingsTable extends Migration
     {
         Schema::create('number_portings', function (Blueprint $table) {
             $table->id();
-            $table->string('subscription');
+            $table->string('sign_of_customer');
+            $table->string('subscription')->nullable();
             $table->string('language');
             $table->string('title');
             $table->string('customer_type');
@@ -35,17 +36,17 @@ class CreateNumberPortingsTable extends Migration
             $table->string('company_name');
             $table->string('client_num');
             $table->string('contact_person');
-            $table->string('card_1');
+            $table->string('card_1')->nullable();
             $table->string('mobile_number_1');
             $table->string('sim_number_old_1');
             $table->string('sim_number_orange_1');
             $table->string('customer_number_1');
-            $table->string('card_2');
+            $table->string('card_2')->nullable();
             $table->string('mobile_number_2');
             $table->string('sim_number_old_2');
             $table->string('sim_number_orange_2');
             $table->string('customer_number_2');
-            $table->string('card_3');
+            $table->string('card_3')->nullable();
             $table->string('mobile_number_3');
             $table->string('sim_number_old_3');
             $table->string('sim_number_orange_3');

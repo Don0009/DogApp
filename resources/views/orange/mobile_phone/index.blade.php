@@ -42,9 +42,7 @@
                                     <th>
                                         Created At
                                     </th>
-                                    <th>
-                                        Updated At
-                                    </th>
+
                                     <th>
                                         Actions
                                     </th>
@@ -55,14 +53,15 @@
                                     <tr>
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $phone->name }}</td>
-                                        <td>{{ $phone->email }}</td>
+                                        <td>{{ $phone->exist_phone }}</td>
+                                        <td>{{ $phone->iban_account_number }}</td>
 
                                         <td>
                                             {{ \Carbon\Carbon::parse($phone->created_at)->diffForhumans() }}
                                         </td>
-                                        <td>
+                                        {{-- <td>
                                             {{ \Carbon\Carbon::parse($phone->updated_at)->diffForhumans() }}
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             <form class="d-inline-block"
                                                 action="{{ route('mobile_phone.destroy', $phone->id) }}" method="POST">
@@ -72,10 +71,10 @@
                                                     <i class="btn-icon-prepend" data-feather="trash"></i> Delete
                                                 </button>
                                             </form>
-                                            <a href="{{ route('mobile_phone.edit', $phone->id) }}"
+                                            {{-- <a href="{{ route('mobile_phone.edit', $phone->id) }}"
                                                 class="btn btn-warning btn-icon-text">
                                                 <i class="btn-icon-prepend" data-feather="edit"></i> Edit
-                                            </a>
+                                            </a> --}}
                                         </td>
                                     </tr>
                                 @endforeach

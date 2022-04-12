@@ -12,15 +12,31 @@
     <link rel="stylesheet" type="text/css" href="css/internet_tv.css">
 @endsection
 @section('content')
-    {{-- <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-        <nav class="page-breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-<li class="breadcrumb-item"><a href="{{ route('internet_tv.index') }}">internet tv</a></li>
-<li class="breadcrumb-item active" aria-current="page">Create User</li>
-</ol>
-</nav>
-</div> --}}
+    {{-- <div class="section mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mt-3">
+                    <div class="orange">
+                        <p>Orange</p>
+                    </div>
+                </div>
+                <div class="col-6 mt-5">
+                    <div class="text_orange">
+                        <span>Orange Belgium nv.</span>
+                    </div>
+                    <div class="text_orange"> Bourgetlaan 3 | Brussel 1140</div>
+                    <div class="text_orange">TEL. <span>+32 (0) 2 745 71 11 |</span> FAX +32 (0) 2 745 70
+                        00]</div>
+                    <div class="text_orange">BNP Paribas Fortis 210-0233334-04 <span>| IBAN</span>BE10
+                        2100 2333 3404 <span>| BIC:</span> GEBABEBB </div>
+                    <div class="text_orange">BTW <span>BE 0456.810.810 |</span> RPR Brussel
+                        <span>www.orange.be</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
 
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">

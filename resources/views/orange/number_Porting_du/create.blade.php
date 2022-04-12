@@ -1,14 +1,47 @@
 @extends('layouts.backend')
 
 @section('content')
+    {{-- start --}}
+
+
+
+    {{-- end --}}
     <div class="row">
         <div class="col-md-12">
+
+
             <form class="forms-sample" action="{{ route('number_porting_du.store') }}" method="POST">
                 @csrf()
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
+                                <div class="section mb-3">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-6 mt-3">
+                                                <div class="orange">
+                                                    <p>Orange</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 mt-5">
+                                                <div class="text_orange">
+                                                    <span>Orange Belgium nv.</span>
+                                                </div>
+                                                <div class="text_orange"> Bourgetlaan 3 | Brussel 1140</div>
+                                                <div class="text_orange">TEL. <span>+32 (0) 2 745 71 11 |</span> FAX +32
+                                                    (0) 2 745 70
+                                                    00]</div>
+                                                <div class="text_orange">BNP Paribas Fortis 210-0233334-04 <span>|
+                                                        IBAN</span>BE10
+                                                    2100 2333 3404 <span>| BIC:</span> GEBABEBB </div>
+                                                <div class="text_orange">BTW <span>BE 0456.810.810 |</span> RPR Brussel
+                                                    <span>www.orange.be</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <h4 class="mb-3" style="color: orangered; text-align:center;">Identificatie van de
                                     klant</h4>
                                 <div class="row">
@@ -23,8 +56,8 @@
                                     <div class=" row col-4">
                                         <h6>Taal:<span class="text-danger">*</span></h6>
                                         <input type="radio" name="language" value="0">
-                                        <label for="language" class="form-label">NL</label>
-                                        <input type="radio" name="language" value="1">
+                                        <label for="language" class="ml-1 form-label">NL</label>
+                                        <input type="radio" class="ml-1" name="language" value="1">
                                         <label for="language" class="form-label">FR</label>
                                         <input type="radio" name="language" value="2">
                                         <label for="language" class="form-label">UK</label>
@@ -265,7 +298,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-2">
+                                            <div class="mt-3 col-2">
                                                 <p>Gsm-nr</p>
                                             </div>
                                             <div class="col-6">
@@ -278,9 +311,9 @@
                                                 </div>
                                             </div>
                                             <div class="col-4">
-                                                <input type="checkbox" name="voice_1" value="0">
+                                                <input type="radio" name="voice_1" value="0">
                                                 <label for="voice_1" class="form-label">Voice</label>
-                                                <input type="checkbox" name="data_1" value="1">
+                                                <input type="radio" name="data_1" value="1" required>
                                                 <label for="data_1" class="form-label">Data/Fax</label>
                                             </div>
                                         </div>
@@ -322,12 +355,12 @@
                                     <div class="mt-3 card-body">
                                         <div class="row">
                                             <div class="col-6">
-                                                <input type="checkbox" name="new_prepaid_subscription_1" value="0">
+                                                <input type="radio" name="new_prepaid_subscription_1" value="0">
                                                 <label for="new_prepaid_subscription_1"
                                                     class="form-label">voorafbetaalde kaart</label>
                                             </div>
                                             <div class="col-6">
-                                                <input type="checkbox" name="new_prepaid_subscription_1" value="1">
+                                                <input type="radio" name="new_prepaid_subscription_1" value="1">
                                                 <label for="new_prepaid_subscription_1"
                                                     class="form-label">forfait/abonnement</label>
                                             </div>
@@ -382,12 +415,12 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-6">
-                                                <input type="checkbox" name="old_prepaid_subscription_2" value="0">
+                                                <input type="radio" name="old_prepaid_subscription_2" value="0">
                                                 <label for="old_prepaid_subscription_2"
                                                     class="form-label">voorafbetaalde kaart</label>
                                             </div>
                                             <div class="col-6">
-                                                <input type="checkbox" name="old_prepaid_subscription_2" value="1">
+                                                <input type="radio" name="old_prepaid_subscription_2" value="1">
                                                 <label for="old_prepaid_subscription_2"
                                                     class="form-label">forfait/abonnement</label>
                                             </div>
@@ -406,9 +439,9 @@
                                                 </div>
                                             </div>
                                             <div class="col-4">
-                                                <input type="checkbox" name="voice_2" value="0">
+                                                <input type="radio" name="voice_2" value="0">
                                                 <label for="voice_2" class="form-label">Voice</label>
-                                                <input type="checkbox" name="data_2" value="1">
+                                                <input type="radio" name="data_2" value="1">
                                                 <label for="data_2" class="form-label">Data/Fax</label>
                                             </div>
                                         </div>
@@ -446,12 +479,12 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-6">
-                                                <input type="checkbox" name="new_prepaid_subscription_2" value="0">
+                                                <input type="radio" name="new_prepaid_subscription_2" value="0">
                                                 <label for="new_prepaid_subscription_2"
                                                     class="form-label">voorafbetaalde kaart</label>
                                             </div>
                                             <div class="col-6">
-                                                <input type="checkbox" name="new_prepaid_subscription_2" value="1">
+                                                <input type="radio" name="new_prepaid_subscription_2" value="1">
                                                 <label for="new_prepaid_subscription_2"
                                                     class="form-label">forfait/abonnement</label>
                                             </div>
@@ -506,12 +539,12 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-6">
-                                                <input type="checkbox" name="old_prepaid_subscription_3" value="0">
+                                                <input type="radio" name="old_prepaid_subscription_3" value="0">
                                                 <label for="old_prepaid_subscription_3"
                                                     class="form-label">voorafbetaalde kaart</label>
                                             </div>
                                             <div class="col-6">
-                                                <input type="checkbox" name="old_prepaid_subscription_3" value="1">
+                                                <input type="radio" name="old_prepaid_subscription_3" value="1">
                                                 <label for="old_prepaid_subscription_3"
                                                     class="form-label">forfait/abonnement</label>
                                             </div>
@@ -530,9 +563,9 @@
                                                 </div>
                                             </div>
                                             <div class="col-4">
-                                                <input type="checkbox" name="voice_3" value="0">
+                                                <input type="radio" name="voice_3" value="0">
                                                 <label for="voice_3" class="form-label">Voice</label>
-                                                <input type="checkbox" name="data_3" value="1">
+                                                <input type="radio" name="data_3" value="1">
                                                 <label for="data_3" class="form-label">Data/Fax</label>
                                             </div>
                                         </div>
@@ -570,12 +603,12 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-6">
-                                                <input type="checkbox" name="new_prepaid_subscription_3" value="0">
+                                                <input type="radio" name="new_prepaid_subscription_3" value="0">
                                                 <label for="new_prepaid_subscription_3"
                                                     class="form-label">voorafbetaalde kaart</label>
                                             </div>
                                             <div class="col-6">
-                                                <input type="checkbox" name="new_prepaid_subscription_3" value="1">
+                                                <input type="radio" name="new_prepaid_subscription_3" value="1">
                                                 <label for="new_prepaid_subscription_3"
                                                     class="form-label">forfait/abonnement</label>
                                             </div>
@@ -630,8 +663,8 @@
                         <h5>De klant vraagt aan Orange in zĳn naam het (de) hierboven vernoemde contract(en) met de
                             bestaande operator te
                             beëindigen, en het (de) eraan gerelateerde MSISDN-nummer(s) over te dragen.</h5> --}}
-                        {{-- <div class="row">
-                            <div class="col-8">
+                        <div class="row">
+                            {{-- <div class="col-8">
                                 <div class="card">
                                     <div class="card-body">
                                         <p>De klant is ingelicht dat de overdracht van zĳn nummer naar Orange Belgium nv hem
@@ -649,8 +682,8 @@
                                             verantwoordelĳk ingeval van valse, onvolledige, onjuiste of onleesbare
                                             overdrachtsaanvraag. De klant erkent een
                                             overeenkomst en de algemene voorwaarden van Orange Belgium nv te hebben gekregen
-                                            en deze te aanvaarden</p>
-                                        <p>
+                                            en deze te aanvaarden</p> --}}
+                            {{-- <p>
                                             <bold>Als de klant een consument is en het contract is op afstand gesloten of
                                                 buiten de verkoopruimten van
                                                 Orange Belgium nv of van haar erkende handelsagenten, heeft de klant het
@@ -671,44 +704,40 @@
                                                 dat evenredig is aan hetgeen reeds geleverd is op het
                                                 moment dat hĳ Orange Belgium nv over de uitoefening van het herroepingsrecht
                                                 informeert.</bold>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="mb-2">
-                                            <label for="copies" class="form-label">Opgemaakt in 3 exemplaren te<span
-                                                    class="text-danger">*</span></label>
-                                            <input type="copies"
-                                                class="form-control @error('copies') is-invalid @enderror" id="copies"
-                                                autocomplete="off" placeholder="Opgemaakt in 3 exemplaren te" name="copies"
-                                                value="{{ old('copies') }}" required>
-                                            <label for="date" class="form-label">OP:<span
-                                                    class="text-danger">*</span></label>
-                                            <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
-                                                data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
-                                                inputmode="numeric" id="date" name="date" value="{{ old('date') }}"
-                                                type="date">
-                                            <label for="customer_sig" class="form-label">Handtekening van de
-                                                klant:<span class="text-danger">*</span></label>
-                                            <textarea type="customer_sig" class="form-control @error('customer_sig') is-invalid @enderror" id="customer_sig"
-                                                row="5" autocomplete="off" placeholder="Handtekening van de klant"
-                                                name="customer_sig" value="{{ old('customer_sig') }}"
-                                                required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-
-                        <button type="submit" class="btn btn-primary mt-3 me-2">Submit</button>
-                        <button class="btn btn-secondary mt-3 ">Cancel</button>
+                                        </p> --}}
+                        </div>
                     </div>
                 </div>
-
-            </form>
+                <div class=" mt-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <label for="copies" class="form-label">Opgemaakt in 3 exemplaren te<span
+                                        class="text-danger">*</span></label>
+                                <input type="copies" class="form-control @error('copies') is-invalid @enderror"
+                                    id="copies" autocomplete="off" placeholder="Opgemaakt in 3 exemplaren te" name="copies"
+                                    value="{{ old('copies') }}" required>
+                                <label for="date" class="mt-2 form-label">OP:<span class="text-danger">*</span></label>
+                                <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
+                                    data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
+                                    inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
+                                <label for="customer_sig" class="mt-2 form-label">Handtekening van de
+                                    klant:<span class="mt-2 text-danger">*</span></label>
+                                <textarea type="customer_sig" class="form-control @error('customer_sig') is-invalid @enderror" id="customer_sig"
+                                    row="5" autocomplete="off" placeholder="Handtekening van de klant"
+                                    name="customer_sig" value="{{ old('customer_sig') }}" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
+
+        <button type="submit" class="btn btn-primary mt-3 me-2 ml-4">Submit</button>
+        <button class="btn btn-secondary mt-3 ml-2">Cancel</button>
+    </div>
+    </div>
+
+    </form>
+    </div>
     </div>
 @endsection

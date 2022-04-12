@@ -15,10 +15,10 @@ class CreateMobilePhonesTable extends Migration
     {
         Schema::create('mobile_phones', function (Blueprint $table) {
             $table->id();
-            $table->string('client_exist');
+            $table->string('client_exist')->nullable();
             $table->string('client_num');
             $table->string('exist_phone');
-            $table->string('new_client');
+            $table->string('new_client')->nullable();
             $table->string('s_number');
             $table->string('language');
             $table->string('title');
@@ -32,7 +32,7 @@ class CreateMobilePhonesTable extends Migration
             $table->string('postal_code');
             $table->string('country');
             $table->date('date_of_birth');
-            $table->string('busines');
+            $table->string('busines')->nullable();
             $table->string('company_number');
             $table->string('legal_status');
             $table->string('company_name');

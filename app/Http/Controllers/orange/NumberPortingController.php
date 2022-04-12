@@ -5,6 +5,7 @@ namespace App\Http\Controllers\orange;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\NumberPorting;
+use Illuminate\Support\Facades\Validator;
 
 class NumberPortingController extends Controller
 {
@@ -42,9 +43,100 @@ class NumberPortingController extends Controller
      */
     public function store(Request $request)
     {
+
+        $validator = Validator::make($request->all(), [
+
+            // Validation Starts
+
+
+            'subscription' => 'required',
+
+            'language' => 'required',
+
+            'title' => 'required',
+
+            'customer_type' => 'required',
+
+            'name' => 'required',
+
+            'f_name' => 'required',
+
+            'street' => 'required',
+
+            'no' => 'required',
+
+            'box' => 'required',
+
+            'postal_code' => 'required',
+
+            'town' => 'required',
+
+            'country' => 'required',
+
+            'id_card' => 'required',
+
+            'mail' => 'required',
+
+            'busines' => 'required',
+
+            'company_number' => 'required',
+
+            'legal_status' => 'required',
+
+            'company_name' => 'required',
+
+            'client_num' => 'required',
+
+            'contact_person' => 'required',
+
+            'card_1' => 'required',
+
+            'mobile_number_1' => 'required',
+
+            'sim_number_old_1' => 'required',
+
+            'sim_number_orange_1' => 'required',
+
+            'customer_number_1' => 'required',
+
+            'card_2' => 'required',
+
+            'mobile_number_2' => 'required',
+
+            'sim_number_old_2' => 'required',
+
+            'sim_number_orange_2' => 'required',
+
+            'customer_number_2' => 'required',
+
+            'card_3' => 'required',
+
+            'mobile_number_3' => 'required',
+
+            'sim_number_old_3' => 'required',
+
+            'sim_number_orange_3' => 'required',
+
+            'customer_number_3' => 'required',
+
+            'duplicate' => 'required',
+            'date' => 'required',
+
+        ]);
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        }
+
+        // Validation Ends
+
+
         $data = $request->all();
+        // dd($data);
         NumberPorting::create($data);
         return redirect()->route('number_porting.index');
+
     }
 
     /**

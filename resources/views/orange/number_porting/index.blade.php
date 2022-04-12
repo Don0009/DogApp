@@ -34,14 +34,12 @@
                                         Name
                                     </th>
                                     <th>
-                                        Role
+                                        Email
                                     </th>
                                     <th>
                                         Created At
                                     </th>
-                                    <th>
-                                        Updated At
-                                    </th>
+
                                     <th>
                                         Actions
                                     </th>
@@ -52,7 +50,7 @@
                                     <tr>
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $num->name }}</td>
-                                        <td>{{ $num->email }}</td>
+                                        <td>{{ $num->mail }}</td>
 
                                         <td>
                                             {{ \Carbon\Carbon::parse($num->created_at)->diffForhumans() }}
@@ -69,10 +67,10 @@
                                                     <i class="btn-icon-prepend" data-feather="trash"></i> Delete
                                                 </button>
                                             </form>
-                                            <a href="{{ route('number_porting.edit', $num->id) }}"
+                                            {{-- <a href="{{ route('number_porting.edit', $num->id) }}"
                                                 class="btn btn-warning btn-icon-text">
                                                 <i class="btn-icon-prepend" data-feather="edit"></i> Edit
-                                            </a>
+                                            </a> --}}
                                         </td>
                                     </tr>
                                 @endforeach

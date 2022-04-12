@@ -1,6 +1,32 @@
 @extends('layouts.backend')
 
 @section('content')
+    {{-- start --}}
+
+    <div class="mb-3 container">
+        <div class="row">
+            <div class="col-6 mt-3">
+                <div class="orange">
+                    <p>Orange</p>
+                </div>
+            </div>
+            <div class="col-6 mt-5">
+                <div class="text_orange">
+                    <span>Orange Belgium nv.</span>
+                </div>
+                <div class="text_orange"> Bourgetlaan 3 | Brussel 1140</div>
+                <div class="text_orange">TEL. <span>+32 (0) 2 745 71 11 |</span> FAX +32 (0) 2 745 70
+                    00]</div>
+                <div class="text_orange">BNP Paribas Fortis 210-0233334-04 <span>| IBAN</span>BE10
+                    2100 2333 3404 <span>| BIC:</span> GEBABEBB </div>
+                <div class="text_orange">BTW <span>BE 0456.810.810 |</span> RPR Brussel
+                    <span>www.orange.be</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- end --}}
     <div class="row">
         <div class="col-md-12">
             <form class="forms-sample" action="{{ route('mobile_phone.store') }}" method="POST">
@@ -11,7 +37,7 @@
                             <div class="card-body">
                                 <h6 style="color: orangered;" class="card-title">Identification du client Orange </h6>
                                 <div class="mb-3">
-                                    <input type="checkbox" name="client_exist" value="0">
+                                    <input type="radio" name="client_exist" value="0">
                                     <label for="client_exist" class="form-label">Client existant<span
                                             class="text-danger">*</span></label>
                                     @error('client_exist')
@@ -46,7 +72,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <input type="checkbox" name="new_client" value="0">
+                                    <input type="radio" name="new_client" value="0">
                                     <label for="new_client" class="form-label">Nouveau client<span
                                             class="text-danger">*</span></label>
                                     @error('new_client')
@@ -189,7 +215,7 @@
 
                                 </div>
                                 <div class="mb-3">
-                                    <input type="checkbox" name="busines" value="0">
+                                    <input type="radio" name="busines" value="0">
                                     <label for="busines" class="form-label">Entreprise<span
                                             class="text-danger">*</span></label>
                                     @error('busines')
@@ -524,7 +550,7 @@
                                             <input class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0"
                                                 data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
                                                 inputmode="numeric" id="a_date" name="a_date" value="{{ old('a_date') }}"
-                                                type="date">
+                                                type="date" required>
                                             <label for="location" class="mt-3 form-label">Lieu<span
                                                     class="text-danger">*</span></label>
                                             <input type="location"

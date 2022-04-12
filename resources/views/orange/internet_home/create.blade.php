@@ -6,75 +6,37 @@
             <form class="forms-sample" action="{{ route('internet_home.store') }}" method="POST">
                 @csrf()
                 <div class="section mb-3">
-                    <div class="row">
-                        <div class="col-6 mt-3">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="orange">
-                                        <p>Orange</p>
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="">Orange Belgium s.a</div>
-                                    <div class="">Avenue du Bourget 3 | B - 1140 Bruxelles</div>
-                                    <div class="">TVA BE 0456.810.810 | RPM Bruxelles</div>
-                                    <div class="">www.orange.be</div>
-                                    <div style="color: orangered" class=""><b>Tél. : +32 (0)2 745 95 00</b>
-                                    </div>
-                                    <div class="">ou gratuitement depuis votre GSM Orange : 5000</div>
-                                    <div class="">A remplir entièrement en lettres majuscules par le vendeur,
-                                        à signer
-                                        par le client et à renvoyer par le vendeur avec tous les justificatifs à :
-                                        Orange Belgium s.a. • Département Provisioning • BP 951 •
-                                        B - 1140 BRUXELLES</div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 mt-3">
+                                <div class="orange">
+                                    <p>Orange</p>
                                 </div>
                             </div>
-
-
-
-                        </div>
-                        <div class="col-6 mt-5">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="mb-2">
-                                        <label for="contract_number_1" class="form-label">N° de contrat :<span
-                                                class="text-danger">*</span></label>
-                                        <input type="name"
-                                            class="form-control @error('contract_number_1') is-invalid @enderror"
-                                            id="contract_number_1" autocomplete="off" placeholder="N° de contrat"
-                                            name="contract_number_1" value="{{ old('contract_number_1') }}" required>
-                                        @error('contract_number_1')
-                                            <span class="invalid-feedback mb-2" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-
-                                    <div class="mb-2">
-                                        <label for="consultant_signature_1" class="form-label">Signature du consultant
-                                            :<span class="text-danger">*</span></label>
-                                        <input type="name"
-                                            class="form-control @error('consultant_signature_1') is-invalid @enderror"
-                                            id="consultant_signature_1" autocomplete="off"
-                                            placeholder="Signature du consultant" name="consultant_signature_1"
-                                            value="{{ old('consultant_signature_1') }}" required>
-                                        @error('client_num')
-                                            <span class="invalid-feedback mb-2" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
+                            <div class="col-6 mt-5">
+                                <div class="text_orange">
+                                    <span>Orange Belgium nv.</span>
+                                </div>
+                                <div class="text_orange"> Bourgetlaan 3 | Brussel 1140</div>
+                                <div class="text_orange">TEL. <span>+32 (0) 2 745 71 11 |</span> FAX +32 (0) 2 745 70
+                                    00]</div>
+                                <div class="text_orange">BNP Paribas Fortis 210-0233334-04 <span>| IBAN</span>BE10
+                                    2100 2333 3404 <span>| BIC:</span> GEBABEBB </div>
+                                <div class="text_orange">BTW <span>BE 0456.810.810 |</span> RPR Brussel
+                                    <span>www.orange.be</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <h4 style="color: orangered;">Demande de contrat Easy Internet @Home</h4>
+                <h4 class="mb-3" style="color: orangered; text-align:center;">Demande de contrat Easy Internet
+                    @Home</h4>
                 <div class="row">
                     <div class="col-6">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Identification du client</h6>
+                                <h6 style="color: orangered; text-align:center;" class="card-title">Identification du
+                                    client</h6>
                                 <div class="2">
                                     <input type="checkbox" name="client_exist" value="0" required>
                                     <label for="client_exist" class="form-label">Client existant<span
@@ -328,7 +290,8 @@
                                     </div>
                                 </div>
 
-                                <h5>Société (personne morale, indépendant)<span class="text-danger">*</span></h5>
+                                <h5 class="mt-3 mb-3" style="color: orangered; text-align:center;">Société (personne
+                                    morale, indépendant)<span class="text-danger">*</span></h5>
 
                                 <div class="mb-2">
                                     <label for="company_name" class="form-label">Nom de la société<span
@@ -401,7 +364,9 @@
                                     </div>
                                 </div>
 
-                                <h5>Adresse de facturation (si différente de l’adresse du client)</h5>
+                                <h5 class="mt-4 mb-3" style="color: orangered; text-align:center;">Adresse de
+                                    facturation (si différente de
+                                    l’adresse du client)</h5>
 
                                 <div class="row">
                                     <div class="col-6">
@@ -472,7 +437,7 @@
                                     @enderror
                                 </div>
 
-                                <p class="text-justify">
+                                {{-- <p class="text-justify">
                                     Si le client est un consommateur et si le contrat est conclu à distance ou en
                                     dehors des établissements d’Orange Belgium s.a. ou de ceux de ses agents
                                     commerciaux agréés, le client a le droit de se rétracter du contrat sans devoir
@@ -488,15 +453,16 @@
                                     l’exécution des services pendant le délai de rétractation, il est tenu de payer un
                                     montant proportionné à ce qui a été fourni au moment qu’il a informé Orange
                                     Belgium s.a. de l’exercice du droit de rétractation.
-                                </p>
+                                </p> --}}
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="mt-3 col-6">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Choix d’activation</h6>
+                                <h6 style="color: orangered; text-align:center;" class="card-title">Choix d’activation
+                                </h6>
                                 <div class="row">
                                     <div class="col-12 mb-2">
                                         <label for="card_number" class="form-label">N° carte SIM<span
@@ -542,7 +508,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="mb-2">
-                                            <h5>Adresse principale d’utilisation du service</h5>
+                                            <h5 style="color: orangered; text-align:center;">Adresse principale
+                                                d’utilisation du service</h5>
                                         </div>
                                     </div>
 
@@ -599,7 +566,9 @@
 
                                     <div class="col-12">
                                         <div class="mb-2">
-                                            <h5>Signature du client (titulaire de la carte principale)</h5>
+                                            <h5 class="mt-3 mb-2" style="color: orangered; text-align:center;">
+                                                Signature du client (titulaire
+                                                de la carte principale)</h5>
                                             <label for="copy" class="form-label">Fait en 3 exemplaires à:<span
                                                     class="text-danger">*</span></label>
                                             <input type="copy" class="form-control @error('copy') is-invalid @enderror"
@@ -613,7 +582,7 @@
                                                 type="date">
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    {{-- <div class="col-12">
                                         <p class="text-justify">
                                             LE CLIENT DÉCLARE AVOIR PRIS CONNAISSANCE, AVANT LA SIGNATURE DE LA PRÉSENTE
                                             DEMANDE
@@ -626,7 +595,7 @@
                                             SHOP ORANGE OU LES CONSULTER SUR WWW.ORANGE.BE/CONDITIONSGENERALES. LE CLIENT
                                             DEMANDE D’ENTAMER L’EXÉCUTION DES SERVICES PENDANT LE DÉLAI DE RÉTRACTATION.
                                         </p>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-12">
                                         <div class="mb-2">
                                             {{-- <h5 class="mt-2 mb-2">Signature du client : ..X...............</h5> --}}
@@ -637,7 +606,7 @@
                                                     required></textarea>
 
                                             </div>
-                                            <p style="text-align: justify;"> Cette demande de contrat est valable et lie
+                                            {{-- <p style="text-align: justify;"> Cette demande de contrat est valable et lie
                                                 Orange Belgium s.a. sous
                                                 condition que toutes les informations mentionnées soient correctes et
                                                 complètes. Le client s’engage à informer immédiatement Orange Belgium s.a.
@@ -645,17 +614,17 @@
                                             <p>. Cette demande de contrat est valable et lie Orange Belgium s.a. sous
                                                 condition que toutes les informations mentionnées soient correctes et
                                                 complètes. Le client s’engage à informer immédiatement Orange Belgium s.a.
-                                                de tout changement par écrit</p>
+                                                de tout changement par écrit</p> --}}
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="mb-2">
                                             <h5 style="color: orangered" class="mb-3">Paiement par carte de
                                                 crédit</h5>
-                                            <p> Par la présente, j’autorise Orange Belgium s.a. jusqu’à révocation expresse
+                                            {{-- <p> Par la présente, j’autorise Orange Belgium s.a. jusqu’à révocation expresse
                                                 à
                                                 débiter toutes les factures liées au présent contrat de la carte de crédit
-                                                suivante :</p>
+                                                suivante :</p> --}}
 
                                             <label for="credit_card_holder" class="form-label">Titulaire de la carte de
                                                 crédit:<span class="text-danger">*</span></label>
@@ -681,142 +650,141 @@
                                                 value="{{ old('code_generate') }}" required>
 
                                         </div>
-                                        <h5>Signature du client : ...X...............</h5>
+                                        <label for="date_signature_customer" class="mt-2">Signature du client
+                                            :</label>
+                                        <div class="form-group">
+                                            <textarea name="date_signature_customer_2" class="form-control" id="exampleFormControlTextarea3" rows="6"
+                                                required></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5>Mandat de domiciliation européenne SEPA - Business to consumer (CORE) pour un
-                                    prélèvement récurrent</h5>
-                                <p>Référence du mandat (UMR): Cette référence vous sera communiqué via votre facture.</p>
-                                <p>En signant ce formulaire de mandat, vous autorisez Orange Belgium s.a. BE12ZZZ0456810810
-                                    à envoyer des instructions à votre banque pour débiter votre compte, et votre
-                                    banque à débiter votre compte conformément aux instructions d’Orange Belgium s.a.
-                                    BE12ZZZ0456810810. La pré-notification prévue par la Directive européenne
-                                    concernant les services de paiement se fera via votre facture qui pourrait vous être
-                                    envoyée en-deçà des 14 jours prévus dans ladite Directive. Vous bénéficiez d’un droit de
-                                    remboursement par votre banque selon les conditions décrites dans la convention que vous
-                                    avez passée avec celle-ci. Toute demande de remboursement doit être présentée
-                                    dans les 8 semaines suivant la date de débit de votre compte.</p>
-                                <h4 style="color: orangered" class="mt-2 mb-2">Je soussigné,</h4>
-                                <div class="mb-2">
-                                    <label for="account_holder_name" class="form-label">Nom du titulaire de compte<span
-                                            class="text-danger">*</span></label>
-                                    <input type="account_holder_name"
-                                        class="form-control @error('account_holder_name') is-invalid @enderror"
-                                        id="account_holder_name" autocomplete="off" placeholder="Nom du titulaire de compte"
-                                        name="account_holder_name" value="{{ old('account_holder_name') }}" required>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="street_and_number" class="form-label">Rue et numéro<span
-                                            class="text-danger">*</span></label>
-                                    <input type="street_and_number"
-                                        class="form-control @error('street_and_number') is-invalid @enderror"
-                                        id="street_and_number" autocomplete="off" placeholder="Nom du titulaire de compte"
-                                        name="street_and_number" value="{{ old('street_and_number') }}" required>
-                                </div>
-                                <div class="row">
-                                    <div class="col-10">
-                                        <label for="postal_code_and_city" class="form-label">Code postal et ville<span
-                                                class="text-danger">*</span></label>
-                                        <input type="postal_code_and_city"
-                                            class="form-control @error('postal_code_and_city') is-invalid @enderror"
-                                            id="postal_code_and_city" autocomplete="off"
-                                            placeholder="Nom du titulaire de compte" name="postal_code_and_city"
-                                            value="{{ old('postal_code_and_city') }}" required>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mt-3 mr-3 card">
+                                <div class="card-body">
+
+                                    <h4 style="color: orangered" class="mt-4 mb-2">Je soussigné,</h4>
+                                    <div class="mb-2">
+                                        <label for="account_holder_name" class="form-label">Nom du titulaire de
+                                            compte<span class="text-danger">*</span></label>
+                                        <input type="account_holder_name"
+                                            class="form-control @error('account_holder_name') is-invalid @enderror"
+                                            id="account_holder_name" autocomplete="off"
+                                            placeholder="Nom du titulaire de compte" name="account_holder_name"
+                                            value="{{ old('account_holder_name') }}" required>
                                     </div>
-                                    <div class="col-2">
-                                        <label for="hold_country" class="form-label">Pays<span
+                                    <div class="mb-2">
+                                        <label for="street_and_number" class="form-label">Rue et numéro<span
                                                 class="text-danger">*</span></label>
-                                        <input type="hold_country"
-                                            class="form-control @error('hold_country') is-invalid @enderror"
-                                            id="hold_country" autocomplete="off" placeholder="Nom du titulaire de compte"
-                                            name="hold_country" value="{{ old('hold_country') }}" required>
+                                        <input type="street_and_number"
+                                            class="form-control @error('street_and_number') is-invalid @enderror"
+                                            id="street_and_number" autocomplete="off"
+                                            placeholder="Nom du titulaire de compte" name="street_and_number"
+                                            value="{{ old('street_and_number') }}" required>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-9">
-                                        <label for="iban_account_number" class="form-label">N° de compte IBAN<span
-                                                class="text-danger">*</span></label>
-                                        <input type="iban_account_number"
-                                            class="form-control @error('iban_account_number') is-invalid @enderror"
-                                            id="iban_account_number" autocomplete="off"
-                                            placeholder="Nom du titulaire de compte" name="iban_account_number"
-                                            value="{{ old('iban_account_number') }}" required>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="mb-2">
-                                            <label for="bic_code" class="form-label">Code BIC<span
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <label for="postal_code_and_city" class="form-label">Code postal et
+                                                ville<span class="text-danger">*</span></label>
+                                            <input type="postal_code_and_city"
+                                                class="form-control @error('postal_code_and_city') is-invalid @enderror"
+                                                id="postal_code_and_city" autocomplete="off"
+                                                placeholder="Nom du titulaire de compte" name="postal_code_and_city"
+                                                value="{{ old('postal_code_and_city') }}" required>
+                                        </div>
+                                        <div class="col-2">
+                                            <label for="hold_country" class="form-label">Pays<span
                                                     class="text-danger">*</span></label>
-                                            <input type="bic_code"
-                                                class="form-control @error('bic_code') is-invalid @enderror" id="bic_code"
-                                                autocomplete="off" placeholder="Nom du titulaire de compte" name="bic_code"
-                                                value="{{ old('bic_code') }}" required>
+                                            <input type="hold_country"
+                                                class="form-control @error('hold_country') is-invalid @enderror"
+                                                id="hold_country" autocomplete="off"
+                                                placeholder="Nom du titulaire de compte" name="hold_country"
+                                                value="{{ old('hold_country') }}" required>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-9">
-                                        <div class="mb-2">
-                                            <label for="underlying_contract_number" class="form-label">N° de contrat
-                                                sous-jacent<span class="text-danger">*</span></label>
-                                            <input type="underlying_contract_number"
-                                                class="form-control @error('underlying_contract_number') is-invalid @enderror"
-                                                id="underlying_contract_number" autocomplete="off"
-                                                placeholder="Nom du titulaire de compte" name="underlying_contract_number"
-                                                value="{{ old('underlying_contract_number') }}" required>
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <label for="iban_account_number" class="form-label">N° de compte IBAN<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="iban_account_number"
+                                                class="form-control @error('iban_account_number') is-invalid @enderror"
+                                                id="iban_account_number" autocomplete="off"
+                                                placeholder="Nom du titulaire de compte" name="iban_account_number"
+                                                value="{{ old('iban_account_number') }}" required>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="mb-2">
-                                                    <label for="a_date" class="form-label"> Date:<span
-                                                            class="text-danger">*</span></label>
-                                                    <input
-                                                        class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0"
-                                                        data-inputmask="'alias': 'datetime'"
-                                                        data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
-                                                        id="a_date" name="a_date" value="{{ old('a_date') }}"
-                                                        type="date">
-                                                    <label for="location" class="form-label">Lieu<span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="location"
-                                                        class="form-control @error('location') is-invalid @enderror"
-                                                        id="location" autocomplete="off"
-                                                        placeholder="Nom du titulaire de compte" name="location"
-                                                        value="{{ old('location') }}" required>
+                                        <div class="col-3">
+                                            <div class="mb-2">
+                                                <label for="bic_code" class="mt-3 form-label">Code BIC<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="bic_code"
+                                                    class="form-control @error('bic_code') is-invalid @enderror"
+                                                    id="bic_code" autocomplete="off"
+                                                    placeholder="Nom du titulaire de compte" name="bic_code"
+                                                    value="{{ old('bic_code') }}" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <div class="mb-2">
+                                                <label for="underlying_contract_number" class="form-label">N° de
+                                                    contrat
+                                                    sous-jacent<span class="text-danger">*</span></label>
+                                                <input type="underlying_contract_number"
+                                                    class="form-control @error('underlying_contract_number') is-invalid @enderror"
+                                                    id="underlying_contract_number" autocomplete="off"
+                                                    placeholder="Nom du titulaire de compte"
+                                                    name="underlying_contract_number"
+                                                    value="{{ old('underlying_contract_number') }}" required>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="mb-2">
+                                                        <label for="a_date" class="form-label"> Date:<span
+                                                                class="text-danger">*</span></label>
+                                                        <input
+                                                            class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0"
+                                                            data-inputmask="'alias': 'datetime'"
+                                                            data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
+                                                            id="a_date" name="a_date" value="{{ old('a_date') }}"
+                                                            type="date">
+                                                        <label for="location" class="mt-3 form-label">Lieu<span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="location"
+                                                            class="form-control @error('location') is-invalid @enderror"
+                                                            id="location" autocomplete="off"
+                                                            placeholder="Nom du titulaire de compte" name="location"
+                                                            value="{{ old('location') }}" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p>Si vous êtes déjà client Orange, veuillez ajouter votre numéro de
+                                                        client. Si vous n’êtes pas encore client, notre agent introduira la
+                                                        référence adéquate</p>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <p>Si vous êtes déjà client Orange, veuillez ajouter votre numéro de
-                                                    client. Si vous n’êtes pas encore client, notre agent introduira la
-                                                    référence adéquate</p>
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <label for="signature" class="form-label">Signature du titulaire de compte<span
-                                                class="text-danger">*</span></label>
-                                        <textarea type="signature" class="form-control @error('signature') is-invalid @enderror" id="signature"
-                                            autocomplete="off" placeholder="Signature du titulaire de compte"
-                                            name="signature" rows="8" value="{{ old('signature') }}"
-                                            required></textarea>
-                                    </div>
+                                        <div class="col-3">
+                                            <label for="signature" class="form-label">Signature du titulaire de
+                                                compte<span class="text-danger">*</span></label>
+                                            <textarea type="signature" class="form-control @error('signature') is-invalid @enderror" id="signature"
+                                                autocomplete="off" placeholder="Signature du titulaire de compte"
+                                                name="signature" rows="8" value="{{ old('signature') }}"
+                                                required></textarea>
+                                        </div>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Submit</button>
-                            <button class="btn btn-secondary">Cancel</button>
+                            <div class="mt-2 mb-2">
+                                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                                <button class="btn btn-secondary">Cancel</button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
             </form>
 
