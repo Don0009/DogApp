@@ -52,5 +52,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('contract_professionele', 'ContractResidentileController');
     Route::resource('pad_services', 'PadServicesController');
     Route::get('/generate-pdf', 'PdfController@generatePDF');
-
 });

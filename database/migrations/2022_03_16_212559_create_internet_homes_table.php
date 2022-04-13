@@ -51,8 +51,12 @@ class CreateInternetHomesTable extends Migration
             $table->string('comp_postal_code');
             $table->string('comp_country');
             $table->string('card_number');
-            $table->string('internet_home');
-            $table->string('boot_option');
+            $table->string('internet_home_boot_option');
+            $table->string('main_address_street');
+            $table->string('main_address_no');
+            $table->string('main_address_box');
+            $table->string('main_address_town');
+            $table->string('main_address_postal_code');
             $table->string('copy');
             $table->date('date');
             $table->string('credit_card_holder');
