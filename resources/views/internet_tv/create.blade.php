@@ -289,10 +289,10 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="migratiemandaat">
-                                            <h4 class="mb-2">Opties (check-list)</h4>
+                                            <h4 class="mb-4">Opties (check-list)</h4>
                                         </div>
 
-                                        <h5>Extra TV Decoder?</h5>
+                                        <h5 class="mt-3">Extra TV Decoder?</h5>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="extra_decoder" value="0">
                                             <label for="extra_decoder" class="form-label "
@@ -413,7 +413,7 @@
                                     <div class="mb-3">
                                         <label for="">Handtekening van de klant:</label>
                                         <input type="file" class="form-control" id="file" autocomplete="off"
-                                            placeholder="images" name="file">
+                                            placeholder="images" name="file" required>
                                     </div>
 
                                     <div class="mb-3" style="font-size: 12px">
@@ -460,7 +460,7 @@
                                             <div class="form-group">
                                                 <label for="title">Aanspreektitel:</label>
                                                 <input type="text" class="form-control" id="title" autocomplete="off"
-                                                    placeholder="Aanspreektitel" name="title">
+                                                    placeholder="Aanspreektitel" name="title" required>
                                             </div>
                                         </div>
                                         <div class="col-6">

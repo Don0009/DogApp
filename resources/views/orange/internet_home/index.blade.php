@@ -11,7 +11,11 @@
         <div class="d-flex align-items-center flex-wrap text-nowrap">
             <a href="{{ url('internet_home/create?lang=fr') }}" class="btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Internet Home
+                Create Internet Home French
+            </a>
+            <a href="{{ url('internet_home/create?lang=du') }}" class="ml-2 btn btn-primary btn-icon-text">
+                <i class="btn-icon-prepend" data-feather="plus"></i>
+                Create Internet Home Dutch
             </a>
         </div>
     </div>

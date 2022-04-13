@@ -532,7 +532,7 @@
                                  </div>
                                  <div class="row"> <label for="sign_of_customer"><b>Signature du
                                              client:<b></label></div>
-                                 <textarea name="sign_of_customer" id="" cols="30" rows="5"></textarea>
+                                 <textarea name="sign_of_customer" id="" cols="30" rows="5" required></textarea>
                              </div>
 
 

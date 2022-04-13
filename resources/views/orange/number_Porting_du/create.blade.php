@@ -65,7 +65,7 @@
                                         <label for="language" class="form-label">DE</label>
                                     </div>
                                     <div class="col-4">
-                                        <input type="checkbox" name="subscription" value="0">
+                                        <input type="radio" name="subscription" value="0">
                                         <label for="subscription" class="form-label">De abonnementsaanvraag volgt in
                                             bĳlage<span class="text-danger">*</span></label>
                                         @error('subscription')
@@ -292,7 +292,7 @@
                                                     class="form-label">voorafbetaalde kaart</label>
                                             </div>
                                             <div class="col-6">
-                                                <input type="checkbox" name="old_prepaid_subscription_1" value="1">
+                                                <input type="radio" name="old_prepaid_subscription_1" value="1">
                                                 <label for="old_prepaid_subscription_1"
                                                     class="form-label">forfait/abonnement</label>
                                             </div>
