@@ -16,12 +16,14 @@ class CreateInternetHomesTable extends Migration
         Schema::create('internet_homes', function (Blueprint $table) {
             $table->id();
             $table->string('contract_number_1');
+            // $table->string('contract_num');
+            // $table->string('sign_of_customer');
             $table->string('consultant_signature_1');
-            $table->string('client_exist');
+            $table->string('client_exist')->nullable();
             $table->string('client_num');
             $table->string('exist_phone');
             $table->string('exist_mail');
-            $table->string('new_client');
+            $table->string('new_client')->nullable();
             $table->string('title');
             $table->string('language');
             $table->string('name');
@@ -52,7 +54,7 @@ class CreateInternetHomesTable extends Migration
             $table->string('comp_country');
             $table->string('card_number');
             $table->string('internet_home');
-            $table->string('boot_option');
+            $table->string('boot_option')->nullable();
             $table->string('copy');
             $table->date('date');
             $table->string('credit_card_holder');

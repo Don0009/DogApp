@@ -13,10 +13,10 @@
                 <i class="btn-icon-prepend" data-feather="plus"></i>
                 Create Internet Home French
             </a>
-            <a href="{{ url('internet_home/create?lang=du') }}" class="ml-2 btn btn-primary btn-icon-text">
+            {{-- <a href="{{ url('internet_home/create?lang=du') }}" class="ml-2 btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
                 Create Internet Home Dutch
-            </a>
+            </a> --}}
         </div>
     </div>
 
@@ -42,9 +42,9 @@
                                     <th>
                                         Created At
                                     </th>
-                                    <th>
+                                    {{-- <th>
                                         Updated At
-                                    </th>
+                                    </th> --}}
                                     <th>
                                         Actions
                                     </th>
@@ -55,14 +55,14 @@
                                     <tr>
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $home->name }}</td>
-                                        <td>{{ $home->email }}</td>
+                                        <td>{{ $home->mail }}</td>
 
                                         <td>
                                             {{ \Carbon\Carbon::parse($home->created_at)->diffForhumans() }}
                                         </td>
-                                        <td>
+                                        {{-- <td>
                                             {{ \Carbon\Carbon::parse($home->updated_at)->diffForhumans() }}
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             <form class="d-inline-block"
                                                 action="{{ route('internet_home.destroy', $home->id) }}" method="POST">

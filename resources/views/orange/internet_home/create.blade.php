@@ -43,16 +43,54 @@
                                     @Home</h4>
                                 <h6 style="color: orangered; text-align:center;" class="card-title">Identification du
                                     client</h6>
-                                <div class="mb-2 container">
-                                    <input type="checkbox" name="client_exist" value="0" required>
-                                    <label for="client_exist" class="form-label">Client existant<span
-                                            class="text-danger">*</span></label>
-                                    @error('client_exist')
-                                        <span class="invalid-feedback mb-2" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
+
+                                {{-- New Box Starts --}}
+                                <div class="container">
+                                    <div class="row">
+                                        {{-- changed --}}
+
+                                        <div class="mb-2 container">
+                                            <input type="radio" name="client_exist" value="0" required>
+                                            <label for="client_exist" class="mb-3 form-label">Client existant<span
+                                                    class="text-danger">*</span></label>
+                                            @error('client_exist')
+                                                <span class="invalid-feedback mb-2" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+
+
+                                        <div class="mb-2 col-md-6">
+                                            <label for="contract_number_1" class="form-label">N° De Contrat:<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text"
+                                                class="form-control @error('contract_number_1') is-invalid @enderror"
+                                                id="contract_number_1" autocomplete="off" placeholder=" N° De Contrat"
+                                                name="contract_number_1" value="{{ old('contract_number_1') }}" required>
+                                            @error('contract_number_1')
+                                                <span class="invalid-feedback mb-2" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                        <div class="mb-2 col-md-6">
+                                            <label for="consultant_signature_1" class="form-label">Signature Du
+                                                Consultant<span class="text-danger">*</span></label>
+                                            <textarea type="consultant_signature_1" class="form-control @error('consultant_signature_1') is-invalid @enderror"
+                                                id="consultant_signature_1" autocomplete="off" placeholder="Signature Du
+                                                Consultant" name="consultant_signature_1" rows="2"
+                                                value="{{ old('consultant_signature_1') }}" required></textarea>
+
+                                            @error('consultant_signature_1')
+                                                <span class="invalid-feedback mb-2" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                 </div>
+                                {{-- New Box Ends --}}
                                 <div class="container">
                                     <div class="row">
                                         {{-- changed --}}
@@ -69,6 +107,7 @@
                                                 </span>
                                             @enderror
                                         </div>
+
                                         <div class="mb-2 col-md-4">
                                             <label for="exist_phone" class="form-label">N° de GSM <span
                                                     class="text-danger">*</span></label>
@@ -97,8 +136,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                {{-- pasted the check box --}}
+
                                 <div class="mb-2 container">
-                                    <input type="checkbox" name="new_client" value="0" required>
+                                    <input type="radio" name="new_client" value="0" required>
                                     <label for="new_client" class="mb-3 form-label">Nouveau clien<span
                                             class="text-danger">*</span></label>
                                     @error('new_client')
@@ -195,8 +236,9 @@
                                             <div class="mb-2">
                                                 <label for="town" class="form-label">Ville:<span
                                                         class="text-danger">*</span></label>
-                                                <input type="town" class="form-control @error('town') is-invalid @enderror"
-                                                    id="town" autocomplete="off" placeholder="Town" name="town"
+                                                <input type="town"
+                                                    class="form-control @error('town') is-invalid @enderror" id="town"
+                                                    autocomplete="off" placeholder="Town" name="town"
                                                     value="{{ old('town') }}" required>
                                             </div>
                                         </div>
@@ -512,7 +554,7 @@
                                         </div>
 
                                         <div class="col-12 mb-2">
-                                            <input type="checkbox" name="internet_home" value="0" required>
+                                            <input type="radio" name="internet_home" value="0" required>
                                             <label for="internet_home" class="form-label">Easy Internet @Home<span
                                                     class="text-danger">*</span></label>
 
@@ -529,7 +571,7 @@
 
                                         <div class="col-12">
                                             <div class="mb-2">
-                                                <input type="checkbox" name="boot_option" value="0" required>
+                                                <input type="radio" name="boot_option" value="0" required>
                                                 <label for="boot_option" class="form-label">Option Data Boost<span
                                                         class="text-danger">*</span></label>
                                                 @error('boot_option')
@@ -685,7 +727,7 @@
                                                     data-inputmask="'alias': 'datetime'"
                                                     data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
                                                     id="card_expiration_date" name="card_expiration_date"
-                                                    value="{{ old('card_expiration_date') }}" type="date">
+                                                    value="{{ old('card_expiration_date') }}" type="date" required>
                                                 <label for="code_generate" class="mt-3 form-label">Code / alias généré par
                                                     Ogone
                                                     / Inginéco :<span class="text-danger">*</span></label>

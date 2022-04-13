@@ -279,7 +279,8 @@
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-7">
+                            <div class="col-12">
+                                {{-- changed --}}
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 style="color: orangered; text-align:center;">Gegevens oude simkaart</h4>
@@ -347,67 +348,70 @@
                                 </div>
 
                             </div>
-                            <div class="mt-3 col-5">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 style="color: orangered; text-align:center;">Gegevens nieuwe simkaart</h4>
-                                    </div>
-                                    <div class="mt-3 card-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <input type="radio" name="new_prepaid_subscription_1" value="0">
-                                                <label for="new_prepaid_subscription_1"
-                                                    class="form-label">voorafbetaalde kaart</label>
-                                            </div>
-                                            <div class="col-6">
-                                                <input type="radio" name="new_prepaid_subscription_1" value="1">
-                                                <label for="new_prepaid_subscription_1"
-                                                    class="form-label">forfait/abonnement</label>
-                                            </div>
+                            <div class="mt-3 col-12">
+                                <div class="container">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 style="color: orangered; text-align:center;">Gegevens nieuwe simkaart</h4>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="mb-2">
-                                                    <label for="temp_mobile_no_1" class="form-label">Tĳdelĳk
-                                                        gsm-nr<span class="text-danger">*</span></label>
-                                                    <input type="temp_mobile_no_1"
-                                                        class="form-control @error('temp_mobile_no_1') is-invalid @enderror"
-                                                        id="temp_mobile_no_1" autocomplete="off"
-                                                        placeholder="Tĳdelĳk gsm-nr" name="temp_mobile_no_1"
-                                                        value="{{ old('temp_mobile_no_1') }}" required>
+                                        <div class="mt-3 card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <input type="radio" name="new_prepaid_subscription_1" value="0">
+                                                    <label for="new_prepaid_subscription_1"
+                                                        class="form-label">voorafbetaalde kaart</label>
                                                 </div>
-                                                <div class="mb-2">
-                                                    <label for="chosen_formula_1" class="form-label">Gekozen
-                                                        formule<span class="text-danger">*</span></label>
-                                                    <input type="chosen_formula_1"
-                                                        class="form-control @error('chosen_formula_1') is-invalid @enderror"
-                                                        id="chosen_formula_1" autocomplete="off"
-                                                        placeholder="Gekozen formule" name="chosen_formula_1"
-                                                        value="{{ old('chosen_formula_1') }}" required>
+                                                <div class="col-6">
+                                                    <input type="radio" name="new_prepaid_subscription_1" value="1">
+                                                    <label for="new_prepaid_subscription_1"
+                                                        class="form-label">forfait/abonnement</label>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="mb-2">
-                                                    <label for="new_sim_card_1" class="form-label">Simkaartnr<span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="new_sim_card_1"
-                                                        class="form-control @error('new_sim_card_1') is-invalid @enderror"
-                                                        id="new_sim_card_1" autocomplete="off" placeholder="Simkaartnr"
-                                                        name="new_sim_card_1" value="{{ old('new_sim_card_1') }}"
-                                                        required>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="mb-2">
+                                                        <label for="temp_mobile_no_1" class="form-label">Tĳdelĳk
+                                                            gsm-nr<span class="text-danger">*</span></label>
+                                                        <input type="temp_mobile_no_1"
+                                                            class="form-control @error('temp_mobile_no_1') is-invalid @enderror"
+                                                            id="temp_mobile_no_1" autocomplete="off"
+                                                            placeholder="Tĳdelĳk gsm-nr" name="temp_mobile_no_1"
+                                                            value="{{ old('temp_mobile_no_1') }}" required>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="chosen_formula_1" class="form-label">Gekozen
+                                                            formule<span class="text-danger">*</span></label>
+                                                        <input type="chosen_formula_1"
+                                                            class="form-control @error('chosen_formula_1') is-invalid @enderror"
+                                                            id="chosen_formula_1" autocomplete="off"
+                                                            placeholder="Gekozen formule" name="chosen_formula_1"
+                                                            value="{{ old('chosen_formula_1') }}" required>
+                                                    </div>
                                                 </div>
-                                                <div class="mb-2">
-                                                    <input type="text_1"
-                                                        class="form-control @error('text_1') is-invalid @enderror"
-                                                        id="text_1" autocomplete="off" placeholder="Text" name="text_1"
-                                                        value="{{ old('text_1') }}" required>
+                                                <div class="col-6">
+                                                    <div class="mb-2">
+                                                        <label for="new_sim_card_1" class="form-label">Simkaartnr<span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="new_sim_card_1"
+                                                            class="form-control @error('new_sim_card_1') is-invalid @enderror"
+                                                            id="new_sim_card_1" autocomplete="off" placeholder="Simkaartnr"
+                                                            name="new_sim_card_1" value="{{ old('new_sim_card_1') }}"
+                                                            required>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <input type="text_1"
+                                                            class="form-control @error('text_1') is-invalid @enderror"
+                                                            id="text_1" autocomplete="off" placeholder="Text" name="text_1"
+                                                            value="{{ old('text_1') }}" required>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            {{-- changed --}}
                         </div>
                         <div class="row">
                             <div class="col-7">

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\orange;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\InternetHome;
+use Illuminate\Support\Facades\Validator;
+
 
 class InternetHomeController extends Controller
 {
@@ -41,6 +43,75 @@ class InternetHomeController extends Controller
      */
     public function store(Request $request)
     {
+
+        $validator = Validator::make($request->all(), [
+
+            // Validation Starts
+
+
+            'contract_number_1' => 'required',
+            'consultant_signature_1' => 'required',
+            'client_exist' => 'required',
+            'client_num' => 'required',
+            'exist_phone' => 'required',
+            'exist_mail' => 'required',
+            'new_client' => 'required',
+            'title' => 'required',
+            'language' => 'required',
+            'name' => 'required',
+            'f_name' => 'required',
+            'street' => 'required',
+            'no' => 'required',
+            'box' => 'required',
+            'town' => 'required',
+            'postal_code' => 'required',
+            'country' => 'required',
+            'date_of_birth' => 'required',
+            'telephone' => 'required',
+            'mob_num' => 'required',
+            'account_number' => 'required',
+            'mail' => 'required',
+            'profession' => 'required',
+            'company_name' => 'required',
+            'legal_status' => 'required',
+            'company_number' => 'required',
+            'contact_person' => 'required',
+            'phone_number' => 'required',
+            'fax' => 'required',
+            'comp_street' => 'required',
+            'comp_no' => 'required',
+            'comp_box' => 'required',
+            'comp_town' => 'required',
+            'comp_postal_code' => 'required',
+            'comp_country' => 'required',
+            'card_number' => 'required',
+            'internet_home' => 'required',
+            'boot_option' => 'required',
+            'copy' => 'required',
+            'date' => 'required',
+            'credit_card_holder' => 'required',
+            'card_expiration_date' => 'required',
+            'code_generate' => 'required',
+            'account_holder_name' => 'required',
+            'street_and_number' => 'required',
+            'postal_code_and_city' => 'required',
+            'hold_country' => 'required',
+            'iban_account_number' => 'required',
+            'bic_code' => 'required',
+            'underlying_contract_number' => 'required',
+            'signature' => 'required',
+            'a_date' => 'required',
+            'location' => 'required',
+
+        ]);
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        }
+
+
+
         $data = $request->all();
         InternetHome::create($data);
         return redirect()->route('internet_home.index');

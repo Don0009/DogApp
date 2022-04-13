@@ -67,7 +67,7 @@
                                  </div>
                              </div>
                              <div class="row">
-                                 <h5 class="mr-3 mt-2" style="color:orangered;">Type de client:<span
+                                 <h5 class="mr-3 mt-2 mb-3" style="color:orangered;">Type de client:<span
                                          class="text-danger">*</span></h5>
                                  <input type="radio" name="customer_type" value="0">
                                  <label for="customer_type" class="form-label">Personne physique</label>
@@ -537,11 +537,13 @@
 
 
                          </div>
+
                      </div>
+                     <button class="btn btn-primary mb-2 mt-3">Submit</button>
+                     <button class="btn btn-secondary mb-2 mt-3 ml-3">Cancel</button>
                  </div>
 
-                 <button class="btn btn-info mb-2 mt-3">Submit</button>
-                 <button class="btn btn-secondary mb-2 mt-3 ml-3">Cancel</button>
+
              </div>
      </div>
      </form>
