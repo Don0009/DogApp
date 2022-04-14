@@ -50,7 +50,7 @@
                                      @enderror
                                  </div>
                                  <div class="row">
-                                     <div class="row col-md-3">
+                                     <div class="col-md-3">
                                          <h6 style="color: orangered;" class="mr-3">Langue:<span
                                                  class="text-danger">*</span></h6>
                                          <input type="radio" name="language" value="0">
@@ -58,7 +58,7 @@
                                          <input type="radio" name="language" value="1">
                                          <label for="language" class="form-label">FR</label>
                                      </div>
-                                     <div class="row col-md-6">
+                                     <div class="col-md-6">
                                          <h5 style="color: orangered;">Titre:<span class="text-danger">*</span></h5>
                                          <input type="radio" name="title" class="ml-1" value="0">
                                          <label for="title" class="mr-2 form-label">Mme</label>
@@ -68,7 +68,7 @@
                                          <label for="title" class="mr-2 form-label">M</label>
                                      </div>
                                  </div>
-                                 <div class="row">
+                                 <div class="">
                                      <h5 class="mr-3 mt-2 mb-3" style="color:orangered;">Type de client:<span
                                              class="text-danger">*</span></h5>
                                      <input type="radio" name="customer_type" value="0">
@@ -191,7 +191,7 @@
                                              @enderror
                                          </div>
                                      </div>
-                                     <div class="mb-3">
+                                     <div class="mb-3 col-12">
                                          <input type="radio" name="busines" value="0">
                                          <label for="busines" class="form-label">Entreprise<span
                                                  class="text-danger">*</span></label>
@@ -524,16 +524,16 @@
                                     </bold> --}}
                                  </p>
 
-                                 <div style="float: left;" class="col-4">
+                                 <div class="mb-3 ">
 
-
-                                     <label for="duplicate" class="mt-3 form-label">Fait en 2 exemplaires à:
+                                     {{-- col-4 removed --}}
+                                     <label for="duplicate" class="form-label">Fait en 2 exemplaires à:
                                          <span class="text-danger">*</span></label>
 
                                      <input type="duplicate" class="form-control @error('duplicate') is-invalid @enderror"
                                          id="duplicate" autocomplete="off" placeholder="Credit Card Holder" name="duplicate"
                                          value="{{ old('duplicate') }}" required>
-                                     <div class="mb-2">
+                                     <div class="mb-3">
                                          <label for="date" class="mt-3 form-label">Le:<span
                                                  class="text-danger">*</span></label>
                                          <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
@@ -541,8 +541,11 @@
                                              inputmode="numeric" id="date" name="date" value="{{ old('date') }}"
                                              type="date">
                                      </div>
-                                     <div class="row"> <label for="sign_of_customer"><b>Signature du
-                                                 client:<b></label></div>
+                                     <div class="mb-2 mt-2">
+                                         {{-- row remocved --}}
+                                         <label for="sign_of_customer"><b>Signature du
+                                                 client:<b></label>
+                                     </div>
                                      <textarea name="sign_of_customer" id="" cols="30" rows="5" required></textarea>
                                  </div>
 

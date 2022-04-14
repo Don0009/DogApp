@@ -36,6 +36,8 @@
 
             <div class="col-md-12">
                 <div class="card">
+                    <img class="mt-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+                        src="{{ asset('images/brands/telenet_brand.jpeg') }}" height="75px" width="220px" alt="">
 
                     <div class="card-header">
                         Données Cliënt: Cliënt Résidentiel
@@ -48,7 +50,8 @@
 
 
                         <div class="mb-3">
-                            <label for="client_num" class="form-label">Nom :<span class="text-danger">*</span></label>
+                            <label for="client_num" class="form-label">Nom :<span
+                                    class="text-danger">*</span></label>
                             <input type="text" name="name" class="form-control">
                             @error('name')
                                 <span class="text-danger"> {{ $message }}</span>

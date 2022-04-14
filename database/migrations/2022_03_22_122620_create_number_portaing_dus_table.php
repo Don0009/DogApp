@@ -73,6 +73,9 @@ class CreateNumberPortaingDusTable extends Migration
             $table->string('copies');
             $table->date('date');
             $table->string('customer_sig');
+
+
+
             $table->timestamps();
         });
     }

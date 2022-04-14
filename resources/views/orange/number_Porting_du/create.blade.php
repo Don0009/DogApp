@@ -424,131 +424,134 @@
 
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="card">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card">
+
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input type="radio" name="old_prepaid_subscription_3" value="0">
+                                                        <label for="old_prepaid_subscription_3"
+                                                            class="form-label">voorafbetaalde
+                                                            kaart</label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="radio" name="old_prepaid_subscription_3" value="1">
+                                                        <label for="old_prepaid_subscription_3"
+                                                            class="form-label">forfait/abonnement</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>Gsm-nr</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text" id="basic-addon1">04</span>
+                                                            <input type="num_mobile_3" class="form-control"
+                                                                aria-describedby="basic-addon1" name="code_mobile_3">
+                                                            <input type="num_mobile_3" class="form-control"
+                                                                aria-describedby="basic-addon1" name="num_mobile_3">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="radio" name="voice_3" value="0">
+                                                        <label for="voice_3" class="form-label">Voice</label>
+                                                        <input type="radio" name="data_3" value="1">
+                                                        <label for="data_3" class="form-label">Data/Fax</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>Simkaartnr</p>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="mb-2">
+                                                            <input type="sim_card_3"
+                                                                class="form-control @error('sim_card_3') is-invalid @enderror"
+                                                                id="sim_card_3" autocomplete="off" placeholder="Simkaartnr"
+                                                                name="sim_card_3" value="{{ old('sim_card_3') }}"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>Klantnr.*</p>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <div class="mb-2">
+                                                            <input type="customer_no_3"
+                                                                class="form-control @error('customer_no_3') is-invalid @enderror"
+                                                                id="customer_no_3" autocomplete="off" placeholder="Klantnr"
+                                                                name="customer_no_3" value="{{ old('customer_no_3') }}"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+
 
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <input type="radio" name="old_prepaid_subscription_3" value="0">
-                                                    <label for="old_prepaid_subscription_3"
+                                                    <input type="radio" name="new_prepaid_subscription_3" value="0">
+                                                    <label for="new_prepaid_subscription_3"
                                                         class="form-label">voorafbetaalde
                                                         kaart</label>
                                                 </div>
                                                 <div class="col-6">
-                                                    <input type="radio" name="old_prepaid_subscription_3" value="1">
-                                                    <label for="old_prepaid_subscription_3"
+                                                    <input type="radio" name="new_prepaid_subscription_3" value="1">
+                                                    <label for="new_prepaid_subscription_3"
                                                         class="form-label">forfait/abonnement</label>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-2">
-                                                    <p>Gsm-nr</p>
+                                                <div class="col-6">
+                                                    <div class="mb-2">
+                                                        <label for="temp_mobile_no_3" class="form-label">Tĳdelĳk
+                                                            gsm-nr<span class="text-danger">*</span></label>
+                                                        <input type="temp_mobile_no_3"
+                                                            class="form-control @error('temp_mobile_no_3') is-invalid @enderror"
+                                                            id="temp_mobile_no_3" autocomplete="off"
+                                                            placeholder="Tĳdelĳk gsm-nr" name="temp_mobile_no_3"
+                                                            value="{{ old('temp_mobile_no_3') }}" required>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="chosen_formula_3" class="form-label">Gekozen
+                                                            formule<span class="text-danger">*</span></label>
+                                                        <input type="chosen_formula_3"
+                                                            class="form-control @error('chosen_formula_3') is-invalid @enderror"
+                                                            id="chosen_formula_3" autocomplete="off"
+                                                            placeholder="Gekozen formule" name="chosen_formula_3"
+                                                            value="{{ old('chosen_formula_3') }}" required>
+                                                    </div>
                                                 </div>
                                                 <div class="col-6">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="basic-addon1">04</span>
-                                                        <input type="num_mobile_3" class="form-control"
-                                                            aria-describedby="basic-addon1" name="code_mobile_3">
-                                                        <input type="num_mobile_3" class="form-control"
-                                                            aria-describedby="basic-addon1" name="num_mobile_3">
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <input type="radio" name="voice_3" value="0">
-                                                    <label for="voice_3" class="form-label">Voice</label>
-                                                    <input type="radio" name="data_3" value="1">
-                                                    <label for="data_3" class="form-label">Data/Fax</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-2">
-                                                    <p>Simkaartnr</p>
-                                                </div>
-                                                <div class="col-10">
                                                     <div class="mb-2">
-                                                        <input type="sim_card_3"
-                                                            class="form-control @error('sim_card_3') is-invalid @enderror"
-                                                            id="sim_card_3" autocomplete="off" placeholder="Simkaartnr"
-                                                            name="sim_card_3" value="{{ old('sim_card_3') }}" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-2">
-                                                    <p>Klantnr.*</p>
-                                                </div>
-                                                <div class="col-10">
-                                                    <div class="mb-2">
-                                                        <input type="customer_no_3"
-                                                            class="form-control @error('customer_no_3') is-invalid @enderror"
-                                                            id="customer_no_3" autocomplete="off" placeholder="Klantnr"
-                                                            name="customer_no_3" value="{{ old('customer_no_3') }}"
+                                                        <label for="new_sim_card_3" class="form-label">Simkaartnr<span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="new_sim_card_3"
+                                                            class="form-control @error('new_sim_card_3') is-invalid @enderror"
+                                                            id="legal_status" autocomplete="off" placeholder="Simkaartnr"
+                                                            name="new_sim_card_3" value="{{ old('new_sim_card_3') }}"
                                                             required>
                                                     </div>
+                                                    <div class="mb-2">
+                                                        <input type="text_3"
+                                                            class="form-control @error('text_3') is-invalid @enderror"
+                                                            id="text_3" autocomplete="off" placeholder="Text" name="text_3"
+                                                            value="{{ old('text_3') }}" required>
+                                                    </div>
                                                 </div>
                                             </div>
+
+
 
                                         </div>
-                                    </div>
-                                    <div class="col-12">
-
-
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <input type="radio" name="new_prepaid_subscription_3" value="0">
-                                                <label for="new_prepaid_subscription_3"
-                                                    class="form-label">voorafbetaalde
-                                                    kaart</label>
-                                            </div>
-                                            <div class="col-6">
-                                                <input type="radio" name="new_prepaid_subscription_3" value="1">
-                                                <label for="new_prepaid_subscription_3"
-                                                    class="form-label">forfait/abonnement</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="mb-2">
-                                                    <label for="temp_mobile_no_3" class="form-label">Tĳdelĳk
-                                                        gsm-nr<span class="text-danger">*</span></label>
-                                                    <input type="temp_mobile_no_3"
-                                                        class="form-control @error('temp_mobile_no_3') is-invalid @enderror"
-                                                        id="temp_mobile_no_3" autocomplete="off"
-                                                        placeholder="Tĳdelĳk gsm-nr" name="temp_mobile_no_3"
-                                                        value="{{ old('temp_mobile_no_3') }}" required>
-                                                </div>
-                                                <div class="mb-2">
-                                                    <label for="chosen_formula_3" class="form-label">Gekozen
-                                                        formule<span class="text-danger">*</span></label>
-                                                    <input type="chosen_formula_3"
-                                                        class="form-control @error('chosen_formula_3') is-invalid @enderror"
-                                                        id="chosen_formula_3" autocomplete="off"
-                                                        placeholder="Gekozen formule" name="chosen_formula_3"
-                                                        value="{{ old('chosen_formula_3') }}" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="mb-2">
-                                                    <label for="new_sim_card_3" class="form-label">Simkaartnr<span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="new_sim_card_3"
-                                                        class="form-control @error('new_sim_card_3') is-invalid @enderror"
-                                                        id="legal_status" autocomplete="off" placeholder="Simkaartnr"
-                                                        name="new_sim_card_3" value="{{ old('new_sim_card_3') }}"
-                                                        required>
-                                                </div>
-                                                <div class="mb-2">
-                                                    <input type="text_3"
-                                                        class="form-control @error('text_3') is-invalid @enderror"
-                                                        id="text_3" autocomplete="off" placeholder="Text" name="text_3"
-                                                        value="{{ old('text_3') }}" required>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
                                     </div>
                                 </div>
                                 {{-- xxxx --}}
@@ -687,7 +690,26 @@
 
                             {{-- end of master card body --}}
 
-                            mmm
+
+                            <div class="container mb-4">
+                                <div class="mb-2">
+                                    <label for="copies" class="form-label">Opgemaakt in 3 exemplaren te<span
+                                            class="text-danger">*</span></label>
+                                    <input type="copies" class="form-control @error('copies') is-invalid @enderror"
+                                        id="copies" autocomplete="off" placeholder="Opgemaakt in 3 exemplaren te"
+                                        name="copies" value="{{ old('copies') }}" required>
+                                    <label for="date" class="mt-2 form-label">OP:<span
+                                            class="text-danger">*</span></label>
+                                    <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
+                                        data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
+                                        inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
+                                    <label for="customer_sig" class="mt-2 mb-3 form-label">Handtekening van de
+                                        klant:<span class="mt-2 text-danger">*</span></label>
+                                    <textarea type="customer_sig" class="form-control @error('customer_sig') is-invalid @enderror" id="customer_sig"
+                                        row="5" autocomplete="off" placeholder="Handtekening van de klant"
+                                        name="customer_sig" value="{{ old('customer_sig') }}" required></textarea>
+                                </div>
+                            </div>
                         </div>
 
                         {{-- end of first contaibner --}}
@@ -706,33 +728,19 @@
                 </div>
         </div>
         <div class="mt-3 col-md-12">
-            <div class="container">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="mb-2">
-                            <label for="copies" class="form-label">Opgemaakt in 3 exemplaren te<span
-                                    class="text-danger">*</span></label>
-                            <input type="copies" class="form-control @error('copies') is-invalid @enderror" id="copies"
-                                autocomplete="off" placeholder="Opgemaakt in 3 exemplaren te" name="copies"
-                                value="{{ old('copies') }}" required>
-                            <label for="date" class="mt-2 form-label">OP:<span class="text-danger">*</span></label>
-                            <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
-                                data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
-                                inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
-                            <label for="customer_sig" class="mt-2 form-label">Handtekening van de
-                                klant:<span class="mt-2 text-danger">*</span></label>
-                            <textarea type="customer_sig" class="form-control @error('customer_sig') is-invalid @enderror" id="customer_sig"
-                                row="5" autocomplete="off" placeholder="Handtekening van de klant" name="customer_sig"
-                                value="{{ old('customer_sig') }}" required></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
-    <button type="submit" class="btn btn-primary mt-3 me-2 ml-4">Submit</button>
-    <button class="btn btn-secondary mt-3 ml-2">Cancel</button>
+
+            <div class="card-body">
+
+
+
+            </div>
+
+
+
+        </div>
+        <button type="submit" class="btn btn-primary mt-3 me-2 ml-4">Submit</button>
+        <button class="btn btn-secondary mt-3 ml-2">Cancel</button>
     </div>
     </div>
 

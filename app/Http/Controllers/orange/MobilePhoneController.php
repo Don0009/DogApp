@@ -51,7 +51,11 @@ $validator = Validator::make($request->all(), [
 
 
                 'client_exist' => 'required',
+                'sign_1' => 'required',
+                'sign_2' => 'required',
+
                 'client_num' => 'required',
+
 
                 'exist_phone' => 'required',
                 'new_client' => 'required',

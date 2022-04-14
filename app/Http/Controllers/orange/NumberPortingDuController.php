@@ -109,6 +109,7 @@ class NumberPortingDuController extends Controller
                 'date' => 'required',
 
                 'customer_sig' => 'required',
+                // 'sign_3'=> 'required',
 
 
 

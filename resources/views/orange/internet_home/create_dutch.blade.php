@@ -53,6 +53,56 @@
                                 <div class="container">
                                     <h6 class="card-title">identity Fiction of the customer</h6>
 
+                                    {{-- zaq --}}
+                                    <div class="container">
+                                        <div class="row">
+                                            {{-- changed --}}
+
+                                            {{-- <div class="mb-2 container">
+                                                <input type="radio" name="client_exist" value="0" required>
+                                                <label for="client_exist" class="mb-3 form-label">Client existant<span
+                                                        class="text-danger">*</span></label>
+                                                @error('client_exist')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div> --}}
+
+
+                                            <div class="mb-2 col-md-6">
+                                                <label for="contract_number_1" class="form-label">Contractnummer:<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text"
+                                                    class="form-control @error('contract_number_1') is-invalid @enderror"
+                                                    id="contract_number_1" autocomplete="off" placeholder=" N° De Contrat"
+                                                    name="contract_number_1" value="{{ old('contract_number_1') }}"
+                                                    required>
+                                                @error('contract_number_1')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-2 col-md-6">
+                                                <label for="consultant_signature_1" class="form-label">Handtekening
+                                                    consultant<span class="text-danger">*</span></label>
+                                                <textarea type="consultant_signature_1" class="form-control @error('consultant_signature_1') is-invalid @enderror"
+                                                    id="consultant_signature_1" autocomplete="off" placeholder="Signature Du
+                                                    Consultant" name="consultant_signature_1" rows="2"
+                                                    value="{{ old('consultant_signature_1') }}" required></textarea>
+
+                                                @error('consultant_signature_1')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- New Box Ends --}}
+                                    {{-- zaq --}}
+
                                     <div class="mb-3">
                                         <input type="radio" name="client_exist" value="0">
                                         <label for="client_exist" class="form-label">Bestaande klant<span
@@ -63,46 +113,53 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="client_num" class="form-label">Klantnr<span
-                                                class="text-danger">*</span></label>
-                                        <input type="client_num"
-                                            class="form-control @error('client_num') is-invalid @enderror" id="client_num"
-                                            autocomplete="off" placeholder="Klantnr" name="client_num"
-                                            value="{{ old('client_num') }}" required>
-                                        @error('client_num')
-                                            <span class="invalid-feedback mb-3" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exist_phone" class="form-label">Gsm-nr <span
-                                                class="text-danger">*</span></label>
-                                        <input type="exist_phone"
-                                            class="form-control @error('exist_phone') is-invalid @enderror" id="exist_phone"
-                                            autocomplete="off" placeholder="N° de GSM " name="exist_phone"
-                                            value="{{ old('exist_phone') }}" required>
-                                        @error('exist_phone')
-                                            <span class="invalid-feedback mb-3" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exist_mail" class="form-label">E Mail<span
-                                                class="text-danger">*</span></label>
-                                        <input type="exist_mail" class="form-control @error('title') is-invalid @enderror"
-                                            id="exist_mail" autocomplete="off" placeholder="E Mail" name="exist_mail"
-                                            value="{{ old('exist_mail') }}" required>
-                                        @error('exist_mail')
-                                            <span class="invalid-feedback mb-3" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                    <div class="container">
+                                        <div class="row">
+                                            {{-- changed --}}
+                                            <div class="mb-2 col-md-4">
+                                                <label for="client_num" class="form-label">N° de client<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="client_num"
+                                                    class="form-control @error('client_num') is-invalid @enderror"
+                                                    id="client_num" autocomplete="off" placeholder="N° de client"
+                                                    name="client_num" value="{{ old('client_num') }}" required>
+                                                @error('client_num')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+
+                                            <div class="mb-2 col-md-4">
+                                                <label for="exist_phone" class="form-label">N° de GSM <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="exist_phone"
+                                                    class="form-control @error('exist_phone') is-invalid @enderror"
+                                                    id="exist_phone" autocomplete="off" placeholder="N° de GSM "
+                                                    name="exist_phone" value="{{ old('exist_phone') }}" required>
+                                                @error('exist_phone')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-2 col-md-4">
+                                                <label for="exist_mail" class="form-label">E Mail<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="exist_mail"
+                                                    class="form-control @error('title') is-invalid @enderror"
+                                                    id="exist_mail" autocomplete="off" placeholder="E Mail"
+                                                    name="exist_mail" value="{{ old('exist_mail') }}" required>
+                                                @error('exist_mail')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
                                     {{-- Contract Number 1 --}}
-                                    <div class="mb-3">
+                                    {{-- <div class="mb-3">
                                         <label for="contract_number_1" class="form-label">N° de contrat<span
                                                 class="text-danger">*</span></label>
                                         <input type="contract_number_1"
@@ -114,7 +171,7 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>
+                                    </div> --}}
                                     {{-- Contract Number 1 End --}}
                                     <div class="mb-3">
                                         <input type="radio" name="new_client" value="0">
@@ -214,8 +271,9 @@
                                             <div class="mb-2">
                                                 <label for="town" class="form-label">Plaats: .:<span
                                                         class="text-danger">*</span></label>
-                                                <input type="town" class="form-control @error('town') is-invalid @enderror"
-                                                    id="town" autocomplete="off" placeholder="Plaats" name="town"
+                                                <input type="town"
+                                                    class="form-control @error('town') is-invalid @enderror" id="town"
+                                                    autocomplete="off" placeholder="Plaats" name="town"
                                                     value="{{ old('town') }}" required>
                                             </div>
                                         </div>
@@ -679,18 +737,20 @@
                                         </p> --}}
                                         <div class="col-12">
                                             <div class="mb-3">
-                                                <h5>Handtekening van de klant: ..X...............</h5>
-                                                {{-- <p>. Deze abonnementsaanvraag heeft slechts waarde en verbindt Orange
-                                                    Belgium nv
-                                                    voor zover de hierin voorkomende vermeldingen juist en
-                                                    volledig z ĳn. De klant verbindt er zich toe elke w ĳziging onmiddell ĳk
-                                                    schriftel
-                                                    ĳk te melden aan Orange Belgium nv.</p>
-                                                <p>. Orange Belgium nv behoudt zich het recht voor om na onderzoek van het
-                                                    dossier de door de klant gevraagde dienst(en) te beperken,
-                                                    overeenkomstig de algemene abonnementsvoorwaarden van Orange Belgium nv.
-                                                    Orange Belgium nv verbindt zich ertoe de klant schriftel ĳ k
-                                                    op de hoogte te brengen van het resultaat van deze contractaanvraag.</p> --}}
+
+                                                {{-- paste here the sign --}}
+                                                <label for="consultant_signature_1" class="form-label">Handtekening van
+                                                    de klant<span class="text-danger">*</span></label>
+                                                <textarea type="customer_sig" class="form-control @error('customer_sig') is-invalid @enderror" id="customer_sig"
+                                                    autocomplete="off" placeholder="Handtekening van
+                                                    de klant" name="customer_sig" rows="2"
+                                                    value="{{ old('customer_sig') }}" required></textarea>
+
+                                                @error('customer_sig')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -731,7 +791,20 @@
                                                     name="code_generate" value="{{ old('code_generate') }}" required>
 
                                             </div>
-                                            <h5>Handtekening van de klant: ...X...............</h5>
+                                            {{-- <h5>: ...X...............</h5> --}}
+                                            {{-- paste here the sign code --}}
+                                            <label for="sign_3" class="form-label">Handtekening van de klant<span
+                                                    class="text-danger">*</span></label>
+                                            <textarea type="sign_3" class="form-control @error('sign_3') is-invalid @enderror" id="sign_3" autocomplete="off"
+                                                placeholder="Signature Du
+                                                Consultant" name="sign_3" rows="2" value="{{ old('sign_3') }}"
+                                                required></textarea>
+
+                                            @error('sign_3')
+                                                <span class="invalid-feedback mb-2" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
