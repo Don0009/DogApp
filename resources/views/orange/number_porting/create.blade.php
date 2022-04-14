@@ -35,15 +35,25 @@
                                  </div>
                              </div>
                          </div>
+
                          <h3 style="color:orangered; text-align:center">Demande de portage de numéro(s) mobile(s)
                          </h3>
                          <h5 style="color: balck; text-align:left">Identification du
                              client Orange</h5>
                          <div class="mb-2">
-                             <input type="radio" name="subscription" value="0">
+                             <input type="checkbox" name="subscription" value="0">
                              <label for="subscription" class="mt-3 form-label">La demande d’abonnement est ci-jointe
                                  <span class="text-danger">*</span></label>
                              @error('subscription')
+                             <span class="invalid-feedback mb-3" role="alert">
+                                 <strong>{{ $message }}</strong>
+                             </span>
+                             @enderror
+                         </div>
+                         <div class="mb-3">
+                             <label for="point_of_sale" class="form-label">Coordonnées du point de vente<span class="text-danger">*</span></label>
+                             <textarea type="text" class="form-control @error('point_of_sale') is-invalid @enderror" id="name" autocomplete="off" placeholder="Naam" name="point_of_sale" value="{{ old('point_of_sale') }}" required></textarea>
+                             @error('point_of_sale')
                              <span class="invalid-feedback mb-3" role="alert">
                                  <strong>{{ $message }}</strong>
                              </span>
@@ -157,7 +167,7 @@
                                  </div>
                              </div>
                              <div class="mb-2">
-                                 <input type="radio" name="busines" value="0">
+                                 <input type="checkbox" name="busines" value="0">
                                  <label for="busines" class="form-label">Entreprise<span class="text-danger">*</span></label>
                                  @error('busines')
                                  <span class="invalid-feedback mb-3" role="alert">
