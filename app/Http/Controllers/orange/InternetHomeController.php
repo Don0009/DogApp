@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\InternetHome;
 use Illuminate\Support\Facades\Validator;
+use mikehaertl\pdftk\Pdf;
+
 
 
 class InternetHomeController extends Controller
@@ -111,10 +113,31 @@ class InternetHomeController extends Controller
         }
 
 
+        $pdf = new Pdf(public_path('unfilled_forms/orange/notfill.pdf'), [
+            //            'command' => '/some/other/path/to/pdftk',
+                        // or on most Windows systems:
+                        // 'command' => '/usr/bin/pdftk',
+                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            //            'useExec' => true,  // May help on Windows systems if execution fails
+
+        ]);
+
+        dd($pdf);
+
+        // data copied from Orange
 
         $data = $request->all();
-        InternetHome::create($data);
-        return redirect()->route('internet_home.index');
+        $data = $orange =  InternetHome::create($data);
+
+        $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+//        dd($pdf_name);
+        $data = $data->toArray();
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs($pdf_name);
+//        chmod(public_path($pdf_name), 0777);
+
+
+
     }
 
     /**

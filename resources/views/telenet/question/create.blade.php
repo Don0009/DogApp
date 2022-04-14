@@ -35,10 +35,14 @@
             <div class="col-md-12">
                 <div class="card">
 
-                    <div class="card-header">
+                    <img class="mt-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+                        src="{{ asset('images/brands/telenet_brand.jpeg') }}" height="75px" width="330" alt="">
+
+                    <h3 class="card-header mb-2" style="text-align: center; color:#F8C200">
+
                         Klantgegevens: residentiele Kiant
 
-                    </div>
+                    </h3>
 
                     <div class="card-body">
 
@@ -143,7 +147,8 @@
                 <div class="mt-3 card">
 
                     <div class="card-header">
-                        Klantgegevens: Business Klant
+                        <h3 class="mt-3" style="color: #F8C200; text-align:center;">Klantgegevens: Business Klant
+                        </h3>
 
                     </div>
 
@@ -270,7 +275,10 @@
                 <div class="mt-3 card">
 
                     <div class="card-header">
-                        Gewenste Telenet Diensten
+
+                        <h3 class="mt-3 migratiemandaat" style="color: #F8C200; text-align:center;">Gewenste Telenet
+                            Diensten
+                        </h3>
 
                     </div>
 
@@ -310,7 +318,7 @@
 
                     </div>
                 </div>
-                <button class="mt-3 btn btn-info" type="submit">Submit</button>
+                <button class="mt-3 btn btn-primary" type="submit">Submit</button>
                 <button class="mt-3 btn btn-secondary" type="submit">Cancel</button>
 
                 {{-- end of card three --}}

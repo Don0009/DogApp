@@ -37,10 +37,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <img class="mt-3" style="text-align: center; margin:0 auto;" class="img-responsive"
-                        src="{{ asset('images/brands/telenet_brand.jpeg') }}" height="75px" width="220px" alt="">
+                        src="{{ asset('images/brands/telenet_brand.jpeg') }}" height="75px" width="330" alt="">
 
                     <div class="card-header">
-                        Données Cliënt: Cliënt Résidentiel
+                        <h3 style="text-align:center; color:#F8C200;">Données Cliënt: Cliënt Résidentiel</h3>
 
 
                     </div>
@@ -143,7 +143,7 @@
                 <div class="mt-3 card">
 
                     <div class="card-header">
-                        Données Cliënt: Cliënt Professionel
+                        <h3 style="text-align:center; color:#F8C200;"> Données Cliënt: Cliënt Professionel</h3>
 
 
                     </div>
@@ -240,7 +240,9 @@
                 <div class="mt-3 card">
 
                     <div class="card-header">
-                        Services Telenet souhaités
+
+                        <h3 class="migratiemandaat" style="text-align:center; color:#F8C200;"> Services Telenet souhaités
+                        </h3>
 
                     </div>
 
@@ -278,7 +280,7 @@
 
                     </div>
                 </div>
-                <button class="mt-3 btn btn-info" type="submit">Submit</button>
+                <button class="mt-3 btn btn-primary" type="submit">Submit</button>
                 <a href="{{ route('contractapp.index') }}"><button href class="mt-3 btn btn-secondary"
                         type="submit">Cancel</button></a>
 

@@ -4,13 +4,17 @@
     <div>
 
         <img style="text-align: center;" class="img-responsive rounded mx-auto d-block mb-5"
-            src="{{ asset('images/telenet_new_sub/telenet_img.jpeg') }}" alt="">
+            src="{{ asset('images/brands/telenet_brand.jpeg') }}" alt="" height="75px" width="330">
     </div>
 
 
 
-    <p class="fw-bolder mb-5" style="text-align: center;  font-weight: bold;">OVERDRACHT NUMMERS EN DIENSTEN NAAR
-        TELENET</p>
+    <div class="container">
+        <h3 class="fw-bolder mb-5" style="text-align: center;  font-weight: bold; color:#F8C200;">
+            OVERDRACHT NUMMERS EN DIENSTEN
+            NAAR
+            TELENET</h3>
+    </div>
 
     <form action="{{ route('telenet_new_subs.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -410,8 +414,9 @@
                 <div class="container">
                     <div class="col-md-10">
 
-                        <p class="fw-bolder mb-1" style="text-align: center;  font-weight: bold;">Overdracht vaste nummers
-                        </p>
+                        <h2 class="fw-bolder mb-1" style="text-align: center;  font-weight: bold; color:#F8C200;">Overdracht
+                            vaste nummers
+                        </h2>
 
 
                         <table class="table table-bordered">
@@ -569,7 +574,7 @@
                                 <span class="text-danger"> {{ $message }}</span>
                             @enderror
                         </div>
-                        <button class="btn btn-info" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">Submit</button>
                         <button class="btn btn-secondary" type="submit">Cancel</button>
 
 
