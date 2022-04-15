@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\NumberPortaingDu;
 use Illuminate\Support\Facades\Validator;
 use Mail;
+use App\Http\Controllers\AmoCRMController;
 
 
 use mikehaertl\pdftk\Pdf;
@@ -153,11 +154,37 @@ $data = $data->toArray();
 $result = $pdf->fillForm($data)->flatten()->needAppearances()
 ->saveAs($pdf_name);
 
+            //Mail
+$mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+    $message->to('degis9000@gmail.com')
+        ->subject("You have got new Number Porting Lead...!")
+        ->cc(['lasha@studiodlvx.be'])
+//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+        ->attach(public_path($pdf_name), [
+            'as' => 'Number Porting.pdf',
+            'mime' => 'application/pdf',
+        ]);
+    $message->from('no-reply@ecosafety.nyc');
+});
+// Mail Code Ends
+
+
+$amo = new AmoCRMController();
+$lead_data = [];
+$lead_data['NAME'] =  $orange->name ;
+$lead_data['PHONE'] =  $orange->telephone;
+$lead_data['EMAIL'] = $orange->email_address;
+$lead_data['LEAD_NAME'] = 'Number Porting Lead!';
+$amo->add_lead($lead_data);
+unlink(public_path($pdf_name));
+
+ return redirect()->route('number_porting_du.index')->with('success', 'Number Porting created successfully!');
+        // return redirect()->route('number_porting.index')
 
 
 
 
-        return redirect()->route('number_porting_du.index');
+
     }
 
     /**

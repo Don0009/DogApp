@@ -9,7 +9,7 @@
         <div class="col-md-12">
             <form class="forms-sample" action="{{ route('mobile_phone.store') }}" method="POST">
                 @csrf()
-
+                <input type="hidden" name="lang" value="{{ $lang }}">
 
 
                 <div class="row">

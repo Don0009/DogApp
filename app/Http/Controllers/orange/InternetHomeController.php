@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\InternetHome;
 use Illuminate\Support\Facades\Validator;
 use mikehaertl\pdftk\Pdf;
+use Mail;
+use App\Http\Controllers\AmoCRMController;
 
 
 
@@ -115,12 +117,24 @@ class InternetHomeController extends Controller
         // Validation Ends
 
 
+        if ($request->lang =='fr')
+
+        {
         $pdf = new Pdf(public_path('unfilled_forms/orange/IHFR.pdf'), [
 
-            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
-]);
+        ]);}
+
+        else
+        {
+            $pdf = new Pdf(public_path('unfilled_forms/orange/IHDU.pdf'), [
+
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe', ]);
+
+
+        }
 
 
 
@@ -135,7 +149,38 @@ class InternetHomeController extends Controller
    $result = $pdf->fillForm($data)->flatten()->needAppearances()
     ->saveAs($pdf_name);
 
-dd($pdf);
+//dd($pdf);
+$mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+    $message->to('degis9000@gmail.com')
+        ->subject("You have got new Internet HOME Lead...!")
+        ->cc(['lasha@studiodlvx.be'])
+//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+        ->attach(public_path($pdf_name), [
+            'as' => 'Internet HOME Lead!.pdf',
+            'mime' => 'application/pdf',
+        ]);
+    $message->from('no-reply@ecosafety.nyc');
+});
+// Mail Code Ends
+
+
+
+//Mail
+
+
+
+
+
+        $amo = new AmoCRMController();
+        $lead_data = [];
+        $lead_data['NAME'] =  $orange->name ;
+        $lead_data['PHONE'] =  $orange->telephone;
+        $lead_data['EMAIL'] = $orange->email_address;
+        $lead_data['LEAD_NAME'] = 'Orange Internet HOME Lead';
+        $amo->add_lead($lead_data);
+        unlink(public_path($pdf_name));
+
+        return redirect()->route('internet_home.index')->with('success', 'Internet Home lead created successfully!');
 
 
     }

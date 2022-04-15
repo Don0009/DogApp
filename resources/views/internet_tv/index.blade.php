@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-body">
                     <h6 class="card-title">Internet Tv</h6>
-                    <p class="card-description">All the internet tv are listed here.</p>
+                    <p class="card-description">All the Internet tv leads are listed here.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>

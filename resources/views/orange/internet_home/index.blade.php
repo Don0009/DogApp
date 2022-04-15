@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-body">
                     <h6 class="card-title">Internet Home</h6>
-                    <p class="card-description">All InterNet Home here.</p>
+                    <p class="card-description">All the internet home leads are listed here.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>

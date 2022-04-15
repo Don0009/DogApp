@@ -5,18 +5,17 @@
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Users</li>
                 <li class="breadcrumb-item active" aria-current="page">Mobile Phone</li>
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-            {{-- <a href="{{ url('mobile_phone/create?lang=du') }}" class="btn btn-primary btn-icon-text mr-2">
-                <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Mobile Phone Dutch
-            </a> --}}
-            <a href="{{ url('mobile_phone/create?lang=fr') }}" class="btn btn-primary btn-icon-text mr-2">
+            <a href="{{ url('mobile_phone/create?lang=fr') }}" class="btn btn-primary btn-icon-text  mr-2">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
                 Create Mobile Phone French
+            </a>
+            <a href="{{ url('mobile_phone/create?lang=du') }}" class="btn btn-primary btn-icon-text mr-2">
+                <i class="btn-icon-prepend" data-feather="plus"></i>
+                Create Mobile Phone Dutch
             </a>
         </div>
     </div>
@@ -26,7 +25,7 @@
             <div class="card">
                 <div class="card-body">
                     <h6 class="card-title">Mobile Phone</h6>
-                    <p class="card-description">Listing of All the Mobile Phones.</p>
+                    <p class="card-description">All the mobile phone leads are listed here.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>
@@ -75,15 +74,13 @@
                                                     <i class="btn-icon-prepend" data-feather="trash"></i> Delete
                                                 </button>
                                             </form>
-                                            {{-- <a href="{{ route('mobile_phone.edit', $phone->id) }}"
-                                                class="btn btn-warning btn-icon-text">
-                                                <i class="btn-icon-prepend" data-feather="edit"></i> Edit
-                                            </a> --}}
+
                                         </td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>

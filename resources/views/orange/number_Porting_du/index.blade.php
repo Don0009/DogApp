@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-body">
                     <h6 class="card-title">Number Porting</h6>
-                    <p class="card-description">All Number Porting here.</p>
+                    <p class="card-description">All the number porting leads are listed here.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>

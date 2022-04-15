@@ -113,12 +113,14 @@
                         <li class="nav-item">
                             <a href="{{ route('mobile_phone.index') }}" class="nav-link">Mobile Phone</a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="{{ route('number_porting.index') }}" class="nav-link">Number Porting</a>
+                            <a href="{{ route('number_porting.index') }}" class="nav-link">Number Porting
+                                (FR)</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('number_porting_du.index') }}" class="nav-link">Number Porting
-                                Dutch</a>
+                                DU)</a>
                         </li>
 
                     </ul>

@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Validator;
 
 use Mail;
 use mikehaertl\pdftk\Pdf;
+use Carbon\Carbon;
+use App\Http\Controllers\AmoCRMController;
+
 
 class MobilePhoneController extends Controller
 {
@@ -121,12 +124,21 @@ $validator = Validator::make($request->all(), [
 
             // // Validation
 
+           if($request->lang == 'du')
+           { $pdf = new Pdf(public_path('unfilled_forms/orange/MPDU.pdf'), [
+
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+
+
+]);}
+
+else
+        {
             $pdf = new Pdf(public_path('unfilled_forms/orange/MPFR.pdf'), [
 
                 'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
-
-
- ]);
+            ]);
+            }
 
 
 
@@ -142,7 +154,33 @@ $validator = Validator::make($request->all(), [
      ->saveAs($pdf_name);
 
 
-        return redirect()->route('mobile_phone.index');
+        //Mail
+$mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+    $message->to('degis9000@gmail.com')
+        ->subject("You have got new Mobile Phone  Lead...!")
+        ->cc(['lasha@studiodlvx.be'])
+//
+        ->attach(public_path($pdf_name), [
+            'as' => 'Mobile Phone.pdf',
+            'mime' => 'application/pdf',
+        ]);
+    $message->from('no-reply@ecosafety.nyc');
+});
+// Mail Code Ends
+
+
+$amo = new AmoCRMController();
+$lead_data = [];
+$lead_data['NAME'] =  $orange->name ;
+$lead_data['PHONE'] =  $orange->telephone;
+$lead_data['EMAIL'] = $orange->email_address;
+$lead_data['LEAD_NAME'] = 'Number Porting Lead!';
+$amo->add_lead($lead_data);
+unlink(public_path($pdf_name));
+
+ return redirect()->route('mobile_phone.index')->with('success', 'Mobile Phone Lead created successfully!');
+        // return redirect()->route('number_porting.index');
+
     }
 
     /**
