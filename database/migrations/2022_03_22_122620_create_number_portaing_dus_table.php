@@ -73,6 +73,12 @@ class CreateNumberPortaingDusTable extends Migration
             $table->string('copies');
             $table->date('date');
             $table->string('customer_sig');
+            $table->string('name_1');
+            $table->string('telephone_number');
+            $table->string('faxnr');
+            $table->string('dealer_code');
+
+
 
 
 

@@ -158,21 +158,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- Contract Number 1 --}}
-                                    {{-- <div class="mb-3">
-                                        <label for="contract_number_1" class="form-label">N° de contrat<span
-                                                class="text-danger">*</span></label>
-                                        <input type="contract_number_1"
-                                            class="form-control @error('title') is-invalid @enderror" id="contract_number_1"
-                                            autocomplete="off" placeholder="N° de contrat" name="contract_number_1"
-                                            value="{{ old('contract_number_1') }}" required>
-                                        @error('contract_number_1')
-                                            <span class="invalid-feedback mb-3" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div> --}}
-                                    {{-- Contract Number 1 End --}}
+
                                     <div class="mb-3">
                                         <input type="radio" name="new_client" value="0">
                                         <label for="new_client" class="form-label">Nieuwe klant<span
@@ -190,7 +176,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <h5 class="mb-3">Title<span class="text-danger">*</span></h5>
-                                            <input type="radio" name="title" value="0">
+                                            <input type="radio" name="title" value="0" required>
                                             <label for="title" class="form-label">Mevr</label>
                                             <input type="radio" name="title" value="1">
                                             <label for="title" class="form-label">Juffr</label>
@@ -200,7 +186,7 @@
                                         <div class="col">
                                             <h6 class="mb-3">Taal:<span class="text-danger">*</span>
                                                 <h6>
-                                                    <input type="radio" name="language" value="0">
+                                                    <input type="radio" name="language" value="0" required>
                                                     <label for="language" class="form-label">NL</label>
                                                     <input type="radio" name="language" value="1">
                                                     <label for="language" class="form-label">FR</label>
@@ -308,7 +294,7 @@
                                                     data-inputmask="'alias': 'datetime'"
                                                     data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
                                                     id="date_of_birth" name="date_of_birth"
-                                                    value="{{ old('date_of_birth') }}" type="date">
+                                                    value="{{ old('date_of_birth') }}" type="date" required>
 
                                             </div>
                                         </div>
@@ -376,7 +362,7 @@
                                         </div>
                                         <div class="col-9">
                                             <div class="row-12">
-                                                <input type="radio" name="profession" value="0">
+                                                <input type="radio" name="profession" value="0" required>
                                                 <label for="profession" class="form-label">werknemer</label>
                                                 <input type="radio" name="profession" value="1">
                                                 <label for="profession" class="form-label">vrĳ beroep</label>
@@ -546,33 +532,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    {{-- <div class="row">
-                                        <p>
-                                            Als de klant een consument is en het contract is op afstand gesloten of buiten
-                                            de
-                                            verkoopruimten van Orange Belgium nv of van haar erkende handelsagenten,
-                                            heeft de klant het recht om dit contract zonder opgave van redenen te herroepen.
-                                            De herroepingsterm
-                                            ĳn verstr
-                                            ĳkt 14 dagen na de dag van de contractsluiting (b
-                                            ĳ
-                                            een dienstencontract) of van de levering van het product (b
-                                            ĳ de verkoop van
-                                            goederen). Om te herroepen kan de klant contact opnemen met de klantendienst
-                                            op 5000 (gratis nummer via een Orange-gsm) of 02 745 95 00 met een ander
-                                            toestel, (lokaal tarief) of z
-                                            ĳn beslissing per e-mail verzenden naar
-                                            mobile_shop@orange.be of per post naar Orange Belgium nv, Klantendienst,
-                                            Postbus 950, B-1140 Brussel. De klant kan hiervoor, zonder verplichting,
-                                            gebruikmaken van het modelformulier voor herroeping, beschikbaar op
-                                            www.orange.be. Als de klant heeft gevraagd om de verrichting van diensten tĳdens
-                                            de
-                                            herroepingstermĳn te laten beginnen, moet hĳ een bedrag betalen dat
-                                            evenredig is aan hetgeen reeds geleverd is op het moment dat h
-                                            ĳ Orange Belgium
-                                            nv over de uitoefening van het herroepingsrecht informeert.
-                                        </p>
-                                    </div> --}}
+
                                 </div>
                             </div>
                         </div>
@@ -716,25 +676,11 @@
                                                     class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
                                                     data-inputmask="'alias': 'datetime'"
                                                     data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date"
-                                                    name="date" value="{{ old('date') }}" type="date">
+                                                    name="date" value="{{ old('date') }}" type="date" required>
                                             </div>
                                         </div>
 
-                                        {{-- <p>
-                                            DE KLANT VERKLAART VÓÓR DE ONDERTEKENING VAN DEZE CONTRACTAANVRAAG KENNIS TE
-                                            HEBBEN GENOMEN VAN DE ALGEMENE EN B
-                                            ĲZONDERE VOORWAARDEN, DE BESCHR
-                                            ĲVING EN DE
-                                            TARIEVEN VAN DE DIENSTEN WAAROP H
-                                            Ĳ INTEKENT EN DE VOORWAARDEN VAN HET
-                                            HERROEPINGSRECHT, EN DEZE TE HEBBEN AANVAARD. DE KLANT KAN EEN KOPIE VAN DE
-                                            ALGEMENE VOORWAARDEN VERKR
-                                            ĲGEN IN EEN ORANGE-SHOP OF RAADPLEGEN OP
-                                            WWW.ORANGE.BE/ALGEMENEVOORWAARDEN. DE KLANT VERZOEKT OM DE UITVOERING VAN DE
-                                            DIENSTEN T
-                                            ĲDENS DE HERROEPINGSTERM
-                                            ĲN TE STARTEN.
-                                        </p> --}}
+
                                         <div class="col-12">
                                             <div class="mb-3">
 
@@ -894,8 +840,8 @@
                                                         class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0"
                                                         data-inputmask="'alias': 'datetime'"
                                                         data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
-                                                        id="a_date" name="a_date" value="{{ old('a_date') }}"
-                                                        type="date">
+                                                        id="a_date" name="a_date" value="{{ old('a_date') }}" type="date"
+                                                        required>
                                                     <label for="location" class="mt-3 form-label">Plaats<span
                                                             class="text-danger">*</span></label>
                                                     <input type="location"
@@ -905,9 +851,7 @@
                                                         value="{{ old('location') }}" required>
                                                 </div>
                                                 <div class="col-6">
-                                                    {{-- <p>Als je al Orange-klant bent, gelieve dan je klantnummer toe
-                                                        te voegen. Indien je nog geen klant bent, dan zal onze agent
-                                                        de juiste referentie invoeren.</p> --}}
+
                                                 </div>
                                             </div>
                                         </div>

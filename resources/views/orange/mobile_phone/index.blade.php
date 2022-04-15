@@ -10,9 +10,13 @@
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <a href="{{ route('mobile_phone.create') }}" class="btn btn-primary btn-icon-text">
+            {{-- <a href="{{ url('mobile_phone/create?lang=du') }}" class="btn btn-primary btn-icon-text mr-2">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Mobile Phone
+                Create Mobile Phone Dutch
+            </a> --}}
+            <a href="{{ url('mobile_phone/create?lang=fr') }}" class="btn btn-primary btn-icon-text mr-2">
+                <i class="btn-icon-prepend" data-feather="plus"></i>
+                Create Mobile Phone French
             </a>
         </div>
     </div>

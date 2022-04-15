@@ -3,13 +3,18 @@
 namespace App\Http\Controllers\orange;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Controllers\OKSign\OKSignController;
+use Illuminate\Support\Facades\Auth;
 use App\NumberPorting;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Mail;
-
 
 use mikehaertl\pdftk\Pdf;
+use \Mail;
+
+use App\Http\Controllers\AmoCRMController;
+
 
 class NumberPortingController extends Controller
 {
@@ -125,8 +130,13 @@ class NumberPortingController extends Controller
 
             'duplicate' => 'required',
             'date' => 'required',
+            'point_of_sale' => 'required',
+
 
         ]);
+
+        $data = $request->all();
+        $data['user_id'] = Auth::user()->id;
 
 
         if ($validator->fails()) {
@@ -136,7 +146,7 @@ class NumberPortingController extends Controller
         // Validation Ends
 
 
-        $pdf = new Pdf(public_path('unfilled_forms/orange/.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/orange/NPF.pdf'), [
 
             'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
@@ -157,7 +167,32 @@ $result = $pdf->fillForm($data)->flatten()->needAppearances()
  ->saveAs($pdf_name);
 
 
-        return redirect()->route('number_porting.index');
+ //Mail
+$mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+    $message->to('degis9000@gmail.com')
+        ->subject("You have got new Number Porting Lead...!")
+        ->cc(['lasha@studiodlvx.be'])
+//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+        ->attach(public_path($pdf_name), [
+            'as' => 'Number Porting.pdf',
+            'mime' => 'application/pdf',
+        ]);
+    $message->from('no-reply@ecosafety.nyc');
+});
+// Mail Code Ends
+
+
+$amo = new AmoCRMController();
+$lead_data = [];
+$lead_data['NAME'] =  $orange->name ;
+$lead_data['PHONE'] =  $orange->telephone;
+$lead_data['EMAIL'] = $orange->email_address;
+$lead_data['LEAD_NAME'] = 'Number Porting Lead!';
+$amo->add_lead($lead_data);
+unlink(public_path($pdf_name));
+
+ return redirect()->route('number_porting.index')->with('success', 'Number Porting created successfully!');
+        // return redirect()->route('number_porting.index');
 
     }
 

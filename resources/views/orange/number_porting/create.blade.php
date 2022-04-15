@@ -39,7 +39,21 @@
                                  client Orange</h3>
                              <div class="container">
 
+
+
+                                 <div class="mb-3 float-right">
+                                     <label for="point_of_sale" class="form-label">Pos<span
+                                             class="text-danger">*</span></label>
+                                     <textarea name="point_of_sale" id="" cols="15" rows="2" required></textarea>
+                                     @error('point_of_sale')
+                                         <span class="invalid-feedback mb-3" role="alert">
+                                             <strong>{{ $message }}</strong>
+                                         </span>
+                                     @enderror
+                                 </div>
+
                                  <div class="mb-3">
+
                                      <input type="radio" name="subscription" value="0">
                                      <label for="subscription" class="mt-3 form-label">La demande d’abonnement est ci-jointe
                                          <span class="text-danger">*</span></label>
@@ -79,6 +93,7 @@
                                  </div>
                                  <div class="row">
                                      <div class="col-6">
+                                         {{-- pos --}}
                                          <div class="mb-3">
                                              <label for="name" class="form-label">Nom<span
                                                      class="text-danger">*</span></label>
@@ -91,6 +106,8 @@
                                                  </span>
                                              @enderror
                                          </div>
+                                         {{-- pos --}}
+
                                      </div>
                                      <div class="col-6">
                                          <div class="mb-3">

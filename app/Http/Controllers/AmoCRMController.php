@@ -83,7 +83,8 @@ class AmoCRMController extends Controller
     public function getToken()
     {
         if (!file_exists(TOKEN_FILE)) {
-            exit('Access token file not found');
+            //exit('Access token file not found');
+            return false;
         }
 
         $accessToken = json_decode(file_get_contents(TOKEN_FILE), true);
@@ -179,6 +180,14 @@ class AmoCRMController extends Controller
         $leadName = $lead_data['LEAD_NAME'];
 
         $accessToken = $this->getToken();
+
+        if($accessToken == false)
+
+        {
+            return false;
+        }
+
+      
 
         $apiClient->setAccessToken($accessToken)
             ->setAccountBaseDomain($accessToken->getValues()['baseDomain'])

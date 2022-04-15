@@ -153,7 +153,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <h5 class="mb-3">Title<span class="text-danger">*</span></h5>
-                                            <input type="radio" name="title" value="0">
+                                            <input type="radio" name="title" value="0" required>
                                             <label for="title" class="form-label">Mme</label>
                                             <input type="radio" name="title" value="1">
                                             <label for="title" class="form-label">Mlle</label>
@@ -163,7 +163,7 @@
                                         <div class="col">
                                             <h6 class="mb-3">Language:<span class="text-danger">*</span>
                                             </h6>
-                                            <input type="radio" name="language" value="0">
+                                            <input type="radio" name="language" value="0" required>
                                             <label for="language" class="form-label">NL</label>
                                             <input type="radio" name="language" value="1">
                                             <label for="language" class="form-label">FR</label>
@@ -273,7 +273,7 @@
                                                     data-inputmask="'alias': 'datetime'"
                                                     data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
                                                     id="date_of_birth" name="date_of_birth"
-                                                    value="{{ old('date_of_birth') }}" type="date">
+                                                    value="{{ old('date_of_birth') }}" type="date" required>
 
                                             </div>
                                         </div>
@@ -342,7 +342,7 @@
                                         </div>
                                         <div class="col-9">
                                             <div class="row-12">
-                                                <input type="radio" name="profession" value="0">
+                                                <input type="radio" name="profession" value="0" required>
                                                 <label for="profession" class="form-label">salarié</label>
                                                 <input type="radio" name="profession" value="1">
                                                 <label for="profession" class="form-label">prof. libérale</label>
@@ -350,7 +350,7 @@
                                                 <label for="profession" class="form-label">indépendant</label>
                                             </div>
                                             <div class="row-12">
-                                                <input type="radio" name="profession" value="3">
+                                                <input type="radio" name="profession" value="3" required>
                                                 <label for="profession" class="form-label">retraité</label>
                                                 <input type="radio" name="profession" value="4">
                                                 <label for="profession" class="form-label">retraité</label>
@@ -643,7 +643,8 @@
                                                         class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
                                                         data-inputmask="'alias': 'datetime'"
                                                         data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
-                                                        id="date" name="date" value="{{ old('date') }}" type="date">
+                                                        id="date" name="date" value="{{ old('date') }}" type="date"
+                                                        required>
                                                 </div>
                                             </div>
                                             {{-- <div class="col-12">
@@ -832,7 +833,7 @@
                                                                     data-inputmask="'alias': 'datetime'"
                                                                     data-inputmask-inputformat="dd/mm/yyyy"
                                                                     inputmode="numeric" id="a_date" name="a_date"
-                                                                    value="{{ old('a_date') }}" type="date">
+                                                                    value="{{ old('a_date') }}" type="date" required>
                                                                 <label for="location" class="mt-3 form-label">Lieu<span
                                                                         class="text-danger">*</span></label>
                                                                 <input type="location"

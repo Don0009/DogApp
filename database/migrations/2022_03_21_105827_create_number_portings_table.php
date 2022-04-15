@@ -53,6 +53,8 @@ class CreateNumberPortingsTable extends Migration
             $table->string('customer_number_3');
             $table->string('duplicate');
             $table->date('date');
+            $table->string('point_of_sale');
+
             $table->timestamps();
         });
     }

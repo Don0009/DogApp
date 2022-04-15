@@ -66,5 +66,10 @@ class NumberPortaingDu extends Model
                                                          'copies',
                                                           'date',
                                                           'customer_sig',
+                                                          'name_1',
+                                                          'telephone_number',
+                                                          'faxnr',
+                                                          'dealer_code',
+
                                                         ];
 }

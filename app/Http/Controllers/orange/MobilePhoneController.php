@@ -30,10 +30,19 @@ class MobilePhoneController extends Controller
      */
     public function create(Request $request)
     {
-        if ($request->lang == 'du') {
-            return view('orange.mobile_phone.create_dutch');
+        // if ($request->lang == 'du') {
+        //     return view('orange.mobile_phone.create_dutch');
+        // }elseif
+        // return view('orange.mobile_phone.create');
+
+        $lang = $request->lang;
+
+        if ($lang == "du") {
+            return view('orange.mobile_phone.create_dutch', compact('lang'));
+        } elseif ($lang == "fr"){
+            return view('orange.mobile_phone.create', compact('lang'));
         }
-        return view('orange.mobile_phone.create');
+
     }
 
     /**
@@ -100,6 +109,9 @@ $validator = Validator::make($request->all(), [
                 'bic_code' => 'required',
                 'underlying_contract_number' => 'required',
 
+
+                'point_of_sale'  => 'required',
+
             ]);
 
 
@@ -109,7 +121,7 @@ $validator = Validator::make($request->all(), [
 
             // // Validation
 
-            $pdf = new Pdf(public_path('unfilled_forms/orange/.pdf'), [
+            $pdf = new Pdf(public_path('unfilled_forms/orange/MPFR.pdf'), [
 
                 'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 

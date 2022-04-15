@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class NumberPorting extends Model
 {
     protected $fillable = [
+        'point_of_sale',
         'sign_of_customer',
     'subscription',
      'language',

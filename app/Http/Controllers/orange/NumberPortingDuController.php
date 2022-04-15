@@ -109,6 +109,13 @@ class NumberPortingDuController extends Controller
                 'date' => 'required',
 
                 'customer_sig' => 'required',
+                'name_1' => 'required',
+                'telephone_number' => 'required',
+                'faxnr' => 'required',
+                'dealer_code' => 'required',
+
+
+
                 // 'sign_3'=> 'required',
 
 
@@ -126,7 +133,7 @@ class NumberPortingDuController extends Controller
 
 
 
-$pdf = new Pdf(public_path('unfilled_forms/orange/.pdf'), [
+$pdf = new Pdf(public_path('unfilled_forms/orange/NPDU.pdf'), [
 
     'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 

@@ -77,6 +77,72 @@
                                             @enderror
                                         </div>
                                     </div>
+                                    {{-- box added --}}
+                                    <div class="row">
+
+                                        <div class="col-3">
+                                            <div class="mb-3">
+                                                <label for="f_name" class="form-label">Naam<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="name_1"
+                                                    class="form-control @error('name_1') is-invalid @enderror" id="name_1"
+                                                    autocomplete="off" placeholder="Naam" name="name_1"
+                                                    value="{{ old('name_1') }}" required>
+                                                @error('name_1')
+                                                    <span class="invalid-feedback mb-3" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="mb-3">
+                                                <label for="f_name" class="form-label">Tel.-nr<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="telephone_number"
+                                                    class="form-control @error('telephone_number') is-invalid @enderror"
+                                                    id="telephone_number" autocomplete="off" placeholder="Tel nr"
+                                                    name="telephone_number" value="{{ old('telephone_number') }}"
+                                                    required>
+                                                @error('f_name')
+                                                    <span class="invalid-feedback mb-3" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="mb-3">
+                                                <label for="f_name" class="form-label">Fax-nr<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="faxnr"
+                                                    class="form-control @error('faxnr') is-invalid @enderror" id="faxnr"
+                                                    autocomplete="off" placeholder="Fax nr" name="faxnr"
+                                                    value="{{ old('faxnr') }}" required>
+                                                @error('faxnr')
+                                                    <span class="invalid-feedback mb-3" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="mb-3">
+                                                <label for="f_name" class="form-label">Dealercode<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="dealer_code"
+                                                    class="form-control @error('f_name') is-invalid @enderror"
+                                                    id="dealer_code" autocomplete="off" placeholder="Dealer code"
+                                                    name="dealer_code" value="{{ old('dealer_code') }}" required>
+                                                @error('dealer_code')
+                                                    <span class="invalid-feedback mb-3" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- box added --}}
                                     <div class="row">
                                         <div class="col-9">
                                             <div class="mb-3">
@@ -108,6 +174,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="col-8">
                                             <div class="mb-2">
@@ -163,8 +230,8 @@
                                                 <label for="country" class="form-label">Land:<span
                                                         class="text-danger">*</span></label>
                                                 <input type="country"
-                                                    class="form-control @error('country') is-invalid @enderror" id="country"
-                                                    autocomplete="off" placeholder="Pays" name="country"
+                                                    class="form-control @error('country') is-invalid @enderror"
+                                                    id="country" autocomplete="off" placeholder="Pays" name="country"
                                                     value="{{ old('country') }}" required>
                                             </div>
                                         </div>

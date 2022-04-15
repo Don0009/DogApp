@@ -47,6 +47,18 @@
                                 <div class="container">
                                     <h6 style="color: orangered;" class="card-title">Identification du client Orange
                                     </h6>
+                                    {{-- box --}}
+                                    <div class="mb-3 float-right">
+                                        <label for="point_of_sale" class="form-label">POS<span
+                                                class="text-danger">*</span></label>
+                                        <textarea name="point_of_sale" id="" cols="15" rows="2" required></textarea>
+                                        @error('point_of_sale')
+                                            <span class="invalid-feedback mb-3" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    {{-- box --}}
                                     <div class="mb-3">
                                         <input type="radio" name="client_exist" value="0">
                                         <label for="client_exist" class="form-label">Client existant<span
@@ -95,7 +107,7 @@
                                     </div>
                                     <p>Source du numéro:<span class="mb-3 text-danger">*</span></p>
                                     <div class="col">
-                                        <input type="radio" name="s_number" value="0">
+                                        <input type="radio" name="s_number" value="0" required>
                                         <label for="s_number" class="form-label">N° porté</label>
                                         <input type="radio" name="s_number" value="1">
                                         <label for="s_number" class="form-label">Migration carte prépayée</label>
@@ -105,7 +117,7 @@
                                     <div class="">
                                         {{-- row removed --}}
                                         <h6>Langue:<span class="mr-2 text-danger">*</span></h6>
-                                        <input type="radio" name="language" value="0">
+                                        <input type="radio" name="language" value="0" required>
                                         <label for="language" class="ml-2 form-label">NL</label>
                                         <input type="radio" name="language" value="1">
                                         <label for="language" class="ml-2 form-label">FR</label>
@@ -213,8 +225,8 @@
                                                 <label for="country" class="form-label">Pays<span
                                                         class="text-danger">*</span></label>
                                                 <input type="country"
-                                                    class="form-control @error('country') is-invalid @enderror" id="country"
-                                                    autocomplete="off" placeholder="Country" name="country"
+                                                    class="form-control @error('country') is-invalid @enderror"
+                                                    id="country" autocomplete="off" placeholder="Country" name="country"
                                                     value="{{ old('country') }}" required>
                                             </div>
                                         </div>
@@ -432,26 +444,17 @@
                                             <input type="copy" class="form-control @error('copy') is-invalid @enderror"
                                                 id="copy" autocomplete="off" placeholder="Done Copy" name="copy"
                                                 value="{{ old('copy') }}" required>
+
                                             <label for="date" class="form-label mt-2">Le:<span
                                                     class="text-danger">*</span></label>
                                             <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
                                                 data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
                                                 inputmode="numeric" id="date" name="date" value="{{ old('date') }}"
-                                                type="date">
+                                                type="date" required>
                                         </div>
                                     </div>
 
-                                    {{-- <p>LE CLIENT DÉCLARE AVOIR PRIS CONNAISSANCE, AVANT LA SIGNATURE DE LA PRÉSENTE DEMANDE
-                                        DE CONTRAT, DES CONDITIONS GÉNÉRALES ET SPÉCIFIQUES, DE LA DESCRIPTION ET DES TARIFS
-                                        DES SERVICES AUXQUELS IL SOUSCRIT ET DES CONDITIONS DU DROIT DE RÉTRACTATION, ET LES
-                                        AVOIR ACCEPTÉS. LE CLIENT PEUT OBTENIR UNE COPIE DES CONDITIONS GÉNÉRALES DANS UN
-                                        SHOP ORANGE OU LES CONSULTER SUR WWW.ORANGE.BE/CONDITIONSGENERALES. LE CLIENT
-                                        DEMANDE D’ENTAMER L’EXÉCUTION DES SERVICES PENDANT LE DÉLAI DE RÉTRACTATION. </p>
-                                    <p>
-                                        <bold>N’oubliez pas de toujours joindre une copie recto verso de votre carte d’identité
-                                            et des
-                                            statuts en cas de société</bold>
-                                    </p> --}}
+
 
                                     {{-- paste signx --}}
                                     <label for="sign_2" class="form-label">Signature du client<span
@@ -601,11 +604,7 @@
                                                             placeholder="Nom du titulaire de compte" name="location"
                                                             value="{{ old('location') }}" required>
                                                     </div>
-                                                    {{-- <div class="col-6">
-                                            <p>Si vous êtes déjà client Orange, veuillez ajouter votre numéro de
-                                                client. Si vous n’êtes pas encore client, notre agent introduira la
-                                                référence adéquate</p>
-                                        </div> --}}
+
                                                 </div>
                                             </div>
                                             <div class="ml-3 mt-3 col-3">

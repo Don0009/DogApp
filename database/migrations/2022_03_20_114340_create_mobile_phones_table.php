@@ -15,6 +15,7 @@ class CreateMobilePhonesTable extends Migration
     {
         Schema::create('mobile_phones', function (Blueprint $table) {
             $table->id();
+            $table->string('point_of_sale');
             $table->string('client_exist')->nullable();
             $table->string('client_num');
             $table->string('exist_phone');
