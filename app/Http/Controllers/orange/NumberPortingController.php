@@ -135,52 +135,26 @@ class NumberPortingController extends Controller
 
         // Validation Ends
 
-        // Pdf Starts
 
-        $pdf = new Pdf(public_path('unfilled_forms/orange/writefilename.pdf'), [
-            //            'command' => '/some/other/path/to/pdftk',
-                        // or on most Windows systems:
-                        // 'command' => '/usr/bin/pdftk',
-                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
-            //            'useExec' => true,  // May help on Windows systems if execution fails
+        $pdf = new Pdf(public_path('unfilled_forms/orange/.pdf'), [
 
-        ]);
-        // Pdf Ends
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
-        $data = $request->all();
-        // dd($data);
-        NumberPorting::create($data);
+]);
 
 
 
-        // $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
-        // //        dd($pdf_name);
-        //         $data = $data->toArray();
-        //         $result = $pdf->fillForm($data)->flatten()->needAppearances()
-        //             ->saveAs($pdf_name);
-        // //        chmod(public_path($pdf_name), 0777);
-
-        // // Mail
-
-        //   $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-        //     $message->to('degis9000@gmail.com')
-        //         ->subject("You have got new Number Porting Lead...!")
-        //         ->cc(['lasha@studiodlvx.be'])
-        // //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-        //         ->attach(public_path($pdf_name), [
-        //             'as' => 'MNP overdrachtsformulier Telenet (nieuwe abonnementen).pdf',
-        //             'mime' => 'application/pdf',
-        //         ]);
-        //     $message->from('no-reply@ecosafety.nyc');
-        // });
-        // // Mail Code Ends
 
 
+$data = $request->all();
+$data = $orange =  NumberPorting::create($data);
 
-        //         dd($mail);
-        // //        dd($result);
+$pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
 
+$data = $data->toArray();
+$result = $pdf->fillForm($data)->flatten()->needAppearances()
+ ->saveAs($pdf_name);
 
 
         return redirect()->route('number_porting.index');

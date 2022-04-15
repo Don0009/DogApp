@@ -71,7 +71,7 @@ class CreateOrangeInternetTvsTable extends Migration
             $table->string('immediately')->nullable();
             $table->string('call_number_5');
             $table->string('transfer_to_orange')->nullable();
-            $table->string('stop')->nullable();
+           // $table->string('stop')->nullable();
             $table->string('sim_number_2');
             $table->string('original_operator_1');
             $table->string('desired_transfer_date_1');
@@ -83,7 +83,7 @@ class CreateOrangeInternetTvsTable extends Migration
             $table->boolean('immediately_3')->nullable();
             $table->boolean('transfer_to_orange_2')->nullable();
             $table->string('call_number_7');
-            $table->string('stop_3')->nullable();
+           // $table->string('stop_3')->nullable();
             $table->string('sim_number_4');
             $table->string('original_operator_3');
             $table->string('transfer_date_3')->nullable();
