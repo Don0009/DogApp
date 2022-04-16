@@ -43,10 +43,9 @@ class OrangeInternetTvController extends Controller
 
         if ($lang == "du") {
             return view('internet_tv.create', compact('lang'));
-        } elseif ($lang == "fr"){
+        } elseif ($lang == "fr") {
             return view('internet_tv.create_fr', compact('lang'));
         }
-
 
 
     }
@@ -54,7 +53,7 @@ class OrangeInternetTvController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -105,7 +104,7 @@ class OrangeInternetTvController extends Controller
             'place' => 'required',
             'vat_number' => 'required',
             'care_of_the_automatic_migration' => 'required',
-           // 'i_do_not_wish_to_use_easy_switch' => 'required',
+            // 'i_do_not_wish_to_use_easy_switch' => 'required',
             'operator_name' => 'required',
             'client_number' => 'required',
             'easy_switch_id' => 'required',
@@ -120,14 +119,14 @@ class OrangeInternetTvController extends Controller
             'original_operator' => 'required',
             'desired_transfer_date' => 'required',
             'immediately' => 'required',
-           // 'on_the_installation_date' => 'required',
+            // 'on_the_installation_date' => 'required',
             'call_number_5' => 'required',
             'transfer_to_orange' => 'required',
             //'stop' => 'required',
             'sim_number_2' => 'required',
             'original_operator_1' => 'required',
             'desired_transfer_date_1' => 'required',
-           // 'immediately_2' => 'required',
+            // 'immediately_2' => 'required',
             //'on_the_installation_date_2' => 'required',
             'call_number_6' => 'required',
             'transfer_to_orange_4' => 'required',
@@ -136,7 +135,7 @@ class OrangeInternetTvController extends Controller
             'original_operator_2' => 'required',
             'desired_transfer_date_2' => 'required',
             'immediately_3' => 'required',
-           // 'on_the_installation_date_3' => 'required',
+            // 'on_the_installation_date_3' => 'required',
             'call_number_7' => 'required',
             'transfer_to_orange_2' => 'required',
             //'stop_3' => 'required',
@@ -147,7 +146,7 @@ class OrangeInternetTvController extends Controller
             //'on_the_installation_date_4' => 'required',
             'call_number_8' => 'required',
             'transfer_to_orange_3' => 'required',
-         //   'stop_4' => 'required',
+            //   'stop_4' => 'required',
             'sim_number_5' => 'required',
             'original_operator_4' => 'required',
             'desired_transfer_date_4' => 'required',
@@ -163,69 +162,57 @@ class OrangeInternetTvController extends Controller
         $data['user_id'] = Auth::user()->id;
 
 
-
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator);
         }
 
-        if ($request->lang=='fr')
+        if ($request->lang == 'fr') {
+            $pdf = new Pdf(public_path('unfilled_forms/orange/ITV.pdf'), [
 
-        {
-        $pdf = new Pdf(public_path('unfilled_forms/orange/ITV.pdf'), [
-
-                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+                'command' => env('PDFTK_PATH'),
 
 
-        ]);}
-
-        else
-        {
+            ]);
+        } else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/ITVDU.pdf'), [
 
-                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe', ]);
+                'command' =>env('PDFTK_PATH'),]);
 
 
         }
 
 
-
-
-
         $data = $request->all();
-        $data = $orange =  OrangeInternetTv::create($data);
+        $data = $orange = OrangeInternetTv::create($data);
 
-        $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs($pdf_name);
 
 //Mail
-$mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-    $message->to('degis9000@gmail.com')
-        ->subject("You have got new Internet TV Lead...!")
-        ->cc(['lasha@studiodlvx.be'])
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('degis9000@gmail.com')
+                ->subject("You have got new Internet TV Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-        ->attach(public_path($pdf_name), [
-            'as' => 'Internet TV Lead!.pdf',
-            'mime' => 'application/pdf',
-        ]);
-    $message->from('no-reply@ecosafety.nyc');
-});
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Internet TV Lead!.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
 // Mail Code Ends
-
 
 
 //Mail
 
 
-
-
-
         $amo = new AmoCRMController();
         $lead_data = [];
-        $lead_data['NAME'] =  $orange->name ;
-        $lead_data['PHONE'] =  $orange->telephone;
+        $lead_data['NAME'] = $orange->name;
+        $lead_data['PHONE'] = $orange->telephone;
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Orange Internet TV Lead';
         $amo->add_lead($lead_data);
@@ -237,7 +224,7 @@ $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf
     /**
      * Display the specified resource.
      *
-     * @param  \App\OrangeInternetTv  $orangeInternetTv
+     * @param  \App\OrangeInternetTv $orangeInternetTv
      * @return \Illuminate\Http\Response
      */
     public function show(OrangeInternetTv $orangeInternetTv, $id)
@@ -249,7 +236,7 @@ $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\OrangeInternetTv  $orangeInternetTv
+     * @param  \App\OrangeInternetTv $orangeInternetTv
      * @return \Illuminate\Http\Response
      */
     public function edit(OrangeInternetTv $orangeInternetTv)
@@ -260,8 +247,8 @@ $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\OrangeInternetTv  $orangeInternetTv
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\OrangeInternetTv $orangeInternetTv
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, OrangeInternetTv $orangeInternetTv)
@@ -272,7 +259,7 @@ $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\OrangeInternetTv  $orangeInternetTv
+     * @param  \App\OrangeInternetTv $orangeInternetTv
      * @return \Illuminate\Http\Response
      */
     public function destroy(OrangeInternetTv $orangeInternetTv)

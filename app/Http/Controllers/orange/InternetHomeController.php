@@ -11,7 +11,6 @@ use Mail;
 use App\Http\Controllers\AmoCRMController;
 
 
-
 class InternetHomeController extends Controller
 {
     /**
@@ -42,7 +41,7 @@ class InternetHomeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -117,64 +116,55 @@ class InternetHomeController extends Controller
         // Validation Ends
 
 
-        if ($request->lang =='fr')
+        if ($request->lang == 'fr') {
+            $pdf = new Pdf(public_path('unfilled_forms/orange/IHFR.pdf'), [
 
-        {
-        $pdf = new Pdf(public_path('unfilled_forms/orange/IHFR.pdf'), [
-
-                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+                'command' => env('PDFTK_PATH'),
 
 
-        ]);}
-
-        else
-        {
+            ]);
+        } else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/IHDU.pdf'), [
 
-                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe', ]);
+                    'command' => env('PDFTK_PATH'),
+                ]
+            );
 
 
         }
 
 
+        $data = $request->all();
+        $data = $orange = InternetHome::create($data);
 
+        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 
-
-  $data = $request->all();
-   $data = $orange =  InternetHome::create($data);
-
-   $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
-
-   $data = $data->toArray();
-   $result = $pdf->fillForm($data)->flatten()->needAppearances()
-    ->saveAs($pdf_name);
+        $data = $data->toArray();
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs($pdf_name);
 
 //dd($pdf);
-$mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-    $message->to('degis9000@gmail.com')
-        ->subject("You have got new Internet HOME Lead...!")
-        ->cc(['lasha@studiodlvx.be'])
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('degis9000@gmail.com')
+                ->subject("You have got new Internet HOME Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-        ->attach(public_path($pdf_name), [
-            'as' => 'Internet HOME Lead!.pdf',
-            'mime' => 'application/pdf',
-        ]);
-    $message->from('no-reply@ecosafety.nyc');
-});
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Internet HOME Lead!.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
 // Mail Code Ends
-
 
 
 //Mail
 
 
-
-
-
         $amo = new AmoCRMController();
         $lead_data = [];
-        $lead_data['NAME'] =  $orange->name ;
-        $lead_data['PHONE'] =  $orange->telephone;
+        $lead_data['NAME'] = $orange->name;
+        $lead_data['PHONE'] = $orange->telephone;
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Orange Internet HOME Lead';
         $amo->add_lead($lead_data);
@@ -188,7 +178,7 @@ $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -199,7 +189,7 @@ $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -210,8 +200,8 @@ $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -222,7 +212,7 @@ $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

@@ -47,7 +47,7 @@ class NumberPortingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -148,50 +148,47 @@ class NumberPortingController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/orange/NPF.pdf'), [
 
-            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            'command' => env('PDFTK_PATH'),
 
 
-]);
-
-
-
-
-
-$data = $request->all();
-$data = $orange =  NumberPorting::create($data);
-
-$pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
-
-$data = $data->toArray();
-$result = $pdf->fillForm($data)->flatten()->needAppearances()
- ->saveAs($pdf_name);
-
-
- //Mail
-$mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-    $message->to('degis9000@gmail.com')
-        ->subject("You have got new Number Porting Lead...!")
-        ->cc(['lasha@studiodlvx.be'])
-//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-        ->attach(public_path($pdf_name), [
-            'as' => 'Number Porting.pdf',
-            'mime' => 'application/pdf',
         ]);
-    $message->from('no-reply@ecosafety.nyc');
-});
+
+
+        $data = $request->all();
+        $data = $orange = NumberPorting::create($data);
+
+        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
+
+        $data = $data->toArray();
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs($pdf_name);
+
+
+        //Mail
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('degis9000@gmail.com')
+                ->subject("You have got new Number Porting Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
+//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Number Porting.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
 // Mail Code Ends
 
 
-$amo = new AmoCRMController();
-$lead_data = [];
-$lead_data['NAME'] =  $orange->name ;
-$lead_data['PHONE'] =  $orange->telephone;
-$lead_data['EMAIL'] = $orange->email_address;
-$lead_data['LEAD_NAME'] = 'Number Porting Lead!';
-$amo->add_lead($lead_data);
-unlink(public_path($pdf_name));
+        $amo = new AmoCRMController();
+        $lead_data = [];
+        $lead_data['NAME'] = $orange->name;
+        $lead_data['PHONE'] = $orange->telephone;
+        $lead_data['EMAIL'] = $orange->email_address;
+        $lead_data['LEAD_NAME'] = 'Number Porting Lead!';
+        $amo->add_lead($lead_data);
+        unlink(public_path($pdf_name));
 
- return redirect()->route('number_porting.index')->with('success', 'Number Porting created successfully!');
+        return redirect()->route('number_porting.index')->with('success', 'Number Porting created successfully!');
         // return redirect()->route('number_porting.index');
 
     }
@@ -199,7 +196,7 @@ unlink(public_path($pdf_name));
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -210,7 +207,7 @@ unlink(public_path($pdf_name));
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -221,8 +218,8 @@ unlink(public_path($pdf_name));
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -233,7 +230,7 @@ unlink(public_path($pdf_name));
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

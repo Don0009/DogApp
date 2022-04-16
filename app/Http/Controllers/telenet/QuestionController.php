@@ -39,20 +39,13 @@ class QuestionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
 
         $validator = Validator::make($request->all(), [
-
-
-
-
-
-
-
 
 
             'date_of_request' => 'required',
@@ -72,7 +65,6 @@ class QuestionController extends Controller
             'company_form' => 'required',
             'company_number' => 'required',
             'customer_address' => 'required',
-            'birth_place' => 'required',
             'postcode_2' => 'required',
             'city_2' => 'required',
             'first_name_contact_person' => 'required',
@@ -96,9 +88,9 @@ class QuestionController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/telenet_question_nofill.pdf'), [
             //            'command' => '/some/other/path/to/pdftk',
-                        // or on most Windows systems:
-                        // 'command' => '/usr/bin/pdftk',
-                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            // or on most Windows systems:
+            // 'command' => '/usr/bin/pdftk',
+            'command' => env('PDFTK_PATH'),
             //            'useExec' => true,  // May help on Windows systems if execution fails
 
         ]);
@@ -108,9 +100,9 @@ class QuestionController extends Controller
         // data copied from Orange
 
         $data = $request->all();
-        $data = $orange =  TelenetQuestion::create($data);
+        $data = $orange = TelenetQuestion::create($data);
 
-        $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 //        dd($pdf_name);
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
@@ -119,26 +111,22 @@ class QuestionController extends Controller
 
 // Mail
 
-  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-    $message->to('degis9000@gmail.com')
-        ->subject("You have got new Telenet Lead...!")
-        ->cc(['lasha@studiodlvx.be'])
+        Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('degis9000@gmail.com')
+                ->subject("You have got new Telenet Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-        ->attach(public_path($pdf_name), [
-            'as' => 'Telenet contract (nieuwe abonnementen).pdf',
-            'mime' => 'application/pdf',
-        ]);
-    $message->from('no-reply@ecosafety.nyc');
-});
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Telenet contract (nieuwe abonnementen).pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
 // Mail Code Ends
-
 
 
         // dd($mail);
 //        dd($result);
-
-
-
 
 
         // dd($request->all());
@@ -152,7 +140,7 @@ class QuestionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -163,7 +151,7 @@ class QuestionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -174,8 +162,8 @@ class QuestionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -186,7 +174,7 @@ class QuestionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

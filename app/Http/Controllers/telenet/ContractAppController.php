@@ -38,7 +38,7 @@ class ContractAppController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -76,7 +76,6 @@ class ContractAppController extends Controller
             'remarks' => 'required',
 
 
-
         ]);
 
         if ($validator->fails()) {
@@ -87,9 +86,9 @@ class ContractAppController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
             //            'command' => '/some/other/path/to/pdftk',
-                        // or on most Windows systems:
-                        // 'command' => '/usr/bin/pdftk',
-                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            // or on most Windows systems:
+            // 'command' => '/usr/bin/pdftk',
+            'command' => env('PDFTK_PATH'),
             //            'useExec' => true,  // May help on Windows systems if execution fails
 
         ]);
@@ -99,9 +98,9 @@ class ContractAppController extends Controller
         // data copied from Orange
 
         $data = $request->all();
-        $data = $orange =  ContractApp::create($data);
+        $data = $orange = ContractApp::create($data);
 
-        $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 //        dd($pdf_name);
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
@@ -110,26 +109,22 @@ class ContractAppController extends Controller
 
 // Mail
 
-  $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-    $message->to('degis9000@gmail.com')
-        ->subject("You have got new Telenet Lead...!")
-        ->cc(['lasha@studiodlvx.be'])
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('degis9000@gmail.com')
+                ->subject("You have got new Telenet Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-        ->attach(public_path($pdf_name), [
-            'as' => 'Telenet Contract Aanvraag (FRANS).pdf',
-            'mime' => 'application/pdf',
-        ]);
-    $message->from('no-reply@ecosafety.nyc');
-});
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Telenet Contract Aanvraag (FRANS).pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
 // Mail Code Ends
-
 
 
         dd($mail);
 //        dd($result);
-
-
-
 
 
         // dd($request->all());
@@ -143,7 +138,7 @@ class ContractAppController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -155,7 +150,7 @@ class ContractAppController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -166,8 +161,8 @@ class ContractAppController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -178,7 +173,7 @@ class ContractAppController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
