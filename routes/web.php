@@ -40,8 +40,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('mobile_phone', 'orange\MobilePhoneController');
     Route::resource('number_porting', 'orange\NumberPortingController');
     Route::resource('number_porting_du', 'orange\NumberPortingDuController');
+    Route::resource('internet_home_du', 'orange\OrangeInternetHomeDuController');
 
-    // Telnet Forms
+    // Telenet Forms
     Route::resource('telenet_new_subs', 'telenet\NewsubController');
     Route::resource('telenet_question', 'telenet\QuestionController');
     Route::resource('contractapp', 'telenet\ContractAppController');
@@ -52,4 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('contract_professionele', 'ContractResidentileController');
     Route::resource('pad_services', 'PadServicesController');
     Route::get('/generate-pdf', 'PdfController@generatePDF');
+
+    // scarlet
+    Route::resource('application_form', 'scarlet\ApplicationFormController');
 });

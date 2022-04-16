@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\MobilePhone;
 use Illuminate\Support\Facades\Validator;
 
+use Mail;
+use mikehaertl\pdftk\Pdf;
+
 class MobilePhoneController extends Controller
 {
     /**
@@ -48,7 +51,11 @@ $validator = Validator::make($request->all(), [
 
 
                 'client_exist' => 'required',
+                'sign_1' => 'required',
+                'sign_2' => 'required',
+
                 'client_num' => 'required',
+
 
                 'exist_phone' => 'required',
                 'new_client' => 'required',
@@ -101,9 +108,55 @@ $validator = Validator::make($request->all(), [
             }
 
             // // Validation
+              // Pdf Starts
+
+        // $pdf = new Pdf(public_path('unfilled_forms/orange/writefilename.pdf'), [
+        //     //            'command' => '/some/other/path/to/pdftk',
+        //                 // or on most Windows systems:
+        //                 // 'command' => '/usr/bin/pdftk',
+        //                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+        //     //            'useExec' => true,  // May help on Windows systems if execution fails
+
+        // ]);
+        // Pdf Ends
+
 
         $data = $request->all();
         MobilePhone::create($data);
+
+
+
+
+
+        // $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+        // //        dd($pdf_name);
+        //         $data = $data->toArray();
+        //         $result = $pdf->fillForm($data)->flatten()->needAppearances()
+        //             ->saveAs($pdf_name);
+        // //        chmod(public_path($pdf_name), 0777);
+
+        // // Mail
+
+        //   $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+        //     $message->to('degis9000@gmail.com')
+        //         ->subject("You have got new Number Porting Lead...!")
+        //         ->cc(['lasha@studiodlvx.be'])
+        // //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+        //         ->attach(public_path($pdf_name), [
+        //             'as' => 'MNP overdrachtsformulier Telenet (nieuwe abonnementen).pdf',
+        //             'mime' => 'application/pdf',
+        //         ]);
+        //     $message->from('no-reply@ecosafety.nyc');
+        // });
+        // // Mail Code Ends
+
+
+
+        //         dd($mail);
+        // //        dd($result);
+
+
+
         return redirect()->route('mobile_phone.index');
     }
 

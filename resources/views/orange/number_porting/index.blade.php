@@ -55,9 +55,9 @@
                                         <td>
                                             {{ \Carbon\Carbon::parse($num->created_at)->diffForhumans() }}
                                         </td>
-                                        <td>
+                                        {{-- <td>
                                             {{ \Carbon\Carbon::parse($num->updated_at)->diffForhumans() }}
-                                        </td>
+                                        </td> --}}
                                         <td>
                                             <form class="d-inline-block"
                                                 action="{{ route('number_porting.destroy', $num->id) }}" method="POST">

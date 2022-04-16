@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInternetHomesTable extends Migration
+class CreateOrangeInternetHomeDusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateInternetHomesTable extends Migration
      */
     public function up()
     {
-        Schema::create('internet_homes', function (Blueprint $table) {
+        Schema::create('orange_internet_home_dus', function (Blueprint $table) {
             $table->id();
             $table->string('contract_number_1');
-            // $table->string('contract_num');
-            // $table->string('sign_of_customer');
             $table->string('consultant_signature_1');
-            $table->string('client_exist')->nullable();
+            $table->string('client_exist');
             $table->string('client_num');
             $table->string('exist_phone');
             $table->string('exist_mail');
-            $table->string('new_client')->nullable();
+            $table->string('new_client');
             $table->string('title');
             $table->string('language');
             $table->string('name');
@@ -54,7 +52,7 @@ class CreateInternetHomesTable extends Migration
             $table->string('comp_country');
             $table->string('card_number');
             $table->string('internet_home');
-            $table->string('boot_option')->nullable();
+            $table->string('boot_option');
             $table->string('copy');
             $table->date('date');
             $table->string('credit_card_holder');
@@ -82,6 +80,6 @@ class CreateInternetHomesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('internet_homes');
+        Schema::dropIfExists('orange_internet_home_dus');
     }
 }

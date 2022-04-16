@@ -21,9 +21,9 @@
             <li class="nav-item nav-category">Manage</li>
             {{-- <!-- <li class="nav-item">
                 <a href="{{ url('/admin/roles') }}" class="nav-link">
-                    <i class="link-icon" data-feather="shield"></i>
-                    <span class="link-title">Roles</span>
-                </a>
+            <i class="link-icon" data-feather="shield"></i>
+            <span class="link-title">Roles</span>
+            </a>
             </li>
             <li class="nav-item">
                 <a href="{{ url('/admin/permissions') }}" class="nav-link">
@@ -92,8 +92,7 @@
                 </a>
             </li> --> --}}
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#orange" role="button" aria-expanded="false"
-                    aria-controls="orange">
+                <a class="nav-link" data-toggle="collapse" href="#orange" role="button" aria-expanded="false" aria-controls="orange">
                     <i class="link-icon" data-feather="inbox"></i>
                     <span class="link-title">Orange</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -104,51 +103,71 @@
                             <a href="{{ route('internet_tv.index') }}" class="nav-link">Internet + TV</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('internet_home.index') }}" class="nav-link">Internet Home</a>
+                            <a href="{{ route('internet_home.index') }}" class="nav-link">Internet Home (FR)</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ route('mobile_phone.index') }}" class="nav-link">Mobile Phone</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('number_porting.index') }}" class="nav-link">Number Porting</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('number_porting_du.index') }}" class="nav-link">Number Porting
-                                Dutch</a>
-                        </li>
-
-                    </ul>
-                </div>
+                        {{-- <li class="nav-item">
+                            <a href="{{ route('internet_home_du.index') }}" class="nav-link">Internet Home
+                        (DU)</a>
+            </li> --}}
+            <li class="nav-item">
+                <a href="{{ route('mobile_phone.index') }}" class="nav-link">Mobile Phone</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false"
-                    aria-controls="telnet">
-                    <i class="link-icon" data-feather="inbox"></i>
-                    <span class="link-title">Telenet</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                </a>
-                <div class="collapse" id="telnet">
-                    <ul class="nav sub-menu">
-                        <li class="nav-item">
-                            <a href="{{ route('telenet_new_subs.index') }}" class="nav-link">MNP
-                                overdrachtsformulier Telenet (nieuwe abonnementen)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('telenet_question.index') }}" class="nav-link">Telenet contract
-                                (nieuwe abonnementen)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('contractapp.index') }}" class="nav-link">Telenet Contract
-                                Aanvraag</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="{{ route('number_porting.index') }}" class="nav-link">Number Porting</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('number_porting_du.index') }}" class="nav-link">Number Porting
+                    Dutch</a>
             </li>
 
+        </ul>
+    </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
+            <i class="link-icon" data-feather="inbox"></i>
+            <span class="link-title">Telenet</span>
+            <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse" id="telnet">
+            <ul class="nav sub-menu">
+                <li class="nav-item">
+                    <a href="{{ route('telenet_new_subs.index') }}" class="nav-link">MNP
+                        overdrachtsformulier Telenet (nieuwe abonnementen)</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('telenet_question.index') }}" class="nav-link">Telenet contract
+                        (nieuwe abonnementen)</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('contractapp.index') }}" class="nav-link">Telenet Contract
+                        Aanvraag</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <!--  Scarlet  -->
+
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
+            <i class="link-icon" data-feather="inbox"></i>
+            <span class="link-title">Scarlet</span>
+            <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse" id="telnet">
+            <ul class="nav sub-menu">
+                <li class="nav-item">
+                    <a href="{{ route('application_form.index') }}" class="nav-link">Formulaire de demande</a>
+                </li>
+            </ul>
+        </div>
+
+    </li>
 
 
+    <!-- End Scarlet -->
 
-            <!-- <li class="nav-item">
+    <!-- <li class="nav-item">
                 <a href="{{ route('engie.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Contract Professionele Klanten</span>
@@ -163,6 +182,6 @@
             </li> -->
 
 
-        </ul>
+    </ul>
     </div>
 </nav>

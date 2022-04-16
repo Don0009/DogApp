@@ -65,5 +65,6 @@ class NumberPortaingDu extends Model
                                                         'text_3',
                                                          'copies',
                                                           'date',
-                                                          'customer_sig'];
+                                                          'customer_sig',
+                                                        ];
 }

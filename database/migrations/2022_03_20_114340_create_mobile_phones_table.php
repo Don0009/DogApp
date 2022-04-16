@@ -61,6 +61,8 @@ class CreateMobilePhonesTable extends Migration
             $table->string('signature');
             $table->string('a_date');
             $table->string('location');
+            $table->string('sign_1');
+            $table->string('sign_2');
 
             $table->timestamps();
         });
