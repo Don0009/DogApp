@@ -54,4 +54,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('pad_services', 'PadServicesController');
     Route::get('/generate-pdf', 'PdfController@generatePDF');
 
+   //Overnamedocument Forms
+   Route::resource('energy_transfer_document', 'EnergyTransferDocumentController');
 });

@@ -152,6 +152,8 @@
 
 
 
+
+
             <!-- <li class="nav-item">
                 <a href="{{ route('engie.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
@@ -166,7 +168,22 @@
                 </a>
             </li> -->
 
-
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#Overnamedocument" role="button" aria-expanded="false"
+                    aria-controls="Overnamedocument">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Overnamedocument</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="Overnamedocument">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('energy_transfer_document.index') }}" class="nav-link">MNP
+                                overdrachtsformulier Telenet (nieuwe abonnementen)</a>
+                            </li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
