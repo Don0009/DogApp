@@ -45,393 +45,406 @@
                                     client</h6>
 
                                 {{-- New Box Starts --}}
-                                <div class="container">
-                                    <div class="row">
-                                        {{-- changed --}}
+                                <div class="border border-dark pt-3">
 
-                                        <div class="mb-2 container">
-                                            <input type="radio" name="client_exist" value="0" required>
-                                            <label for="client_exist" class="mb-3 form-label">Client existant<span
-                                                    class="text-danger">*</span></label>
-                                            @error('client_exist')
-                                                <span class="invalid-feedback mb-2" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            {{-- changed --}}
+
+                                            <div class="mb-2 container">
+                                                <input type="radio" name="client_exist" value="0" required>
+                                                <label for="client_exist" class="mb-3 form-label">Client existant<span
+                                                        class="text-danger">*</span></label>
+                                                @error('client_exist')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
 
 
-                                        <div class="mb-2 col-md-6">
-                                            <label for="contract_number_1" class="form-label">N° De Contrat:<span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text"
-                                                class="form-control @error('contract_number_1') is-invalid @enderror"
-                                                id="contract_number_1" autocomplete="off" placeholder=" N° De Contrat"
-                                                name="contract_number_1" value="{{ old('contract_number_1') }}" required>
-                                            @error('contract_number_1')
-                                                <span class="invalid-feedback mb-2" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-2 col-md-6">
-                                            <label for="consultant_signature_1" class="form-label">Signature Du
-                                                Consultant<span class="text-danger">*</span></label>
-                                            <textarea type="consultant_signature_1" class="form-control @error('consultant_signature_1') is-invalid @enderror"
-                                                id="consultant_signature_1" autocomplete="off" placeholder="Signature Du
+                                            <div class="mb-2 col-md-6">
+                                                <label for="contract_number_1" class="form-label">N° De Contrat:<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text"
+                                                    class="form-control @error('contract_number_1') is-invalid @enderror"
+                                                    id="contract_number_1" autocomplete="off" placeholder=" N° De Contrat"
+                                                    name="contract_number_1" value="{{ old('contract_number_1') }}"
+                                                    required>
+                                                @error('contract_number_1')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-2 col-md-6">
+                                                <label for="consultant_signature_1" class="form-label">Signature Du
+                                                    Consultant<span class="text-danger">*</span></label>
+                                                <textarea type="consultant_signature_1" class="form-control @error('consultant_signature_1') is-invalid @enderror"
+                                                    id="consultant_signature_1" autocomplete="off" placeholder="Signature Du
                                                 Consultant" name="consultant_signature_1" rows="2"
-                                                value="{{ old('consultant_signature_1') }}" required></textarea>
+                                                    value="{{ old('consultant_signature_1') }}" required></textarea>
 
-                                            @error('consultant_signature_1')
-                                                <span class="invalid-feedback mb-2" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
+                                                @error('consultant_signature_1')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                {{-- New Box Ends --}}
-                                <div class="container">
-                                    <div class="row">
+                                    {{-- New Box Ends --}}
+                                    <div class="container">
+                                        <div class="row">
+                                            {{-- changed --}}
+                                            <div class="mb-2 col-md-4">
+                                                <label for="client_num" class="form-label">N° de client<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="client_num"
+                                                    class="form-control @error('client_num') is-invalid @enderror"
+                                                    id="client_num" autocomplete="off" placeholder="N° de client"
+                                                    name="client_num" value="{{ old('client_num') }}" required>
+                                                @error('client_num')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+
+                                            <div class="mb-2 col-md-4">
+                                                <label for="exist_phone" class="form-label">N° de GSM <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="exist_phone"
+                                                    class="form-control @error('exist_phone') is-invalid @enderror"
+                                                    id="exist_phone" autocomplete="off" placeholder="N° de GSM "
+                                                    name="exist_phone" value="{{ old('exist_phone') }}" required>
+                                                @error('exist_phone')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-2 col-md-4">
+                                                <label for="exist_mail" class="form-label">E Mail<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="exist_mail"
+                                                    class="form-control @error('title') is-invalid @enderror"
+                                                    id="exist_mail" autocomplete="off" placeholder="E Mail"
+                                                    name="exist_mail" value="{{ old('exist_mail') }}" required>
+                                                @error('exist_mail')
+                                                    <span class="invalid-feedback mb-2" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- pasted the check box --}}
+
+                                    <div class="mb-2 container">
+                                        <input type="radio" name="new_client" value="0" required>
+                                        <label for="new_client" class="mb-3 form-label">Nouveau clien<span
+                                                class="text-danger">*</span></label>
+                                        @error('new_client')
+                                            <span class="invalid-feedback mb-2" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="container mb-2">
                                         {{-- changed --}}
-                                        <div class="mb-2 col-md-4">
-                                            <label for="client_num" class="form-label">N° de client<span
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="mb-3">Title<span class="text-danger">*</span></h5>
+                                                <input type="radio" name="title" value="0" required>
+                                                <label for="title" class="form-label">Mme</label>
+                                                <input type="radio" name="title" value="1">
+                                                <label for="title" class="form-label">Mlle</label>
+                                                <input type="radio" name="title" value="2">
+                                                <label for="title" class="form-label">M</label>
+                                            </div>
+                                            <div class="col">
+                                                <h6 class="mb-3">Language:<span class="text-danger">*</span>
+                                                </h6>
+                                                <input type="radio" name="language" value="0" required>
+                                                <label for="language" class="form-label">NL</label>
+                                                <input type="radio" name="language" value="1">
+                                                <label for="language" class="form-label">FR</label>
+                                                <input type="radio" name="language" value="2">
+                                                <label for="language" class="form-label">UK</label>
+                                                <input type="radio" name="language" value="3">
+                                                <label for="language" class="form-label">DE</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2 container">
+                                        <label for="name" class="form-label">Nom<span
+                                                class="text-danger">*</span></label>
+                                        <input type="name" class="form-control @error('name') is-invalid @enderror"
+                                            id="name" autocomplete="off" placeholder="Nom" name="name"
+                                            value="{{ old('name') }}" required>
+                                        @error('name')
+                                            <span class="invalid-feedback mb-2" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-2 container">
+                                        <label for="f_name" class="form-label">Prénom<span
+                                                class="text-danger">*</span></label>
+                                        <input type="f_name" class="form-control @error('f_name') is-invalid @enderror"
+                                            id="f_name" autocomplete="off" placeholder="Prénom" name="f_name"
+                                            value="{{ old('f_name') }}" required>
+                                        @error('f_name')
+                                            <span class="invalid-feedback mb-2" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    {{-- container added --}} <div class="container">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="mb-2">
+                                                    <label for="street" class="form-label">Rue:<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="street"
+                                                        class="form-control @error('street') is-invalid @enderror"
+                                                        id="street" autocomplete="off" placeholder="Street" name="street"
+                                                        value="{{ old('street') }}" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="mb-2 container">
+                                                    <label for="no" class="form-label">N°<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="no" class="form-control @error('no') is-invalid @enderror"
+                                                        id="no" autocomplete="off" placeholder="N°" name="no"
+                                                        value="{{ old('no') }}" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="mb-2 container">
+                                                    <label for="box" class="form-label">Bte:<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="box"
+                                                        class="form-control @error('box') is-invalid @enderror" id="box"
+                                                        autocomplete="off" placeholder="Bte" name="box"
+                                                        value="{{ old('box') }}" required>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-2">
+                                                    <label for="town" class="form-label">Ville:<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="town"
+                                                        class="form-control @error('town') is-invalid @enderror" id="town"
+                                                        autocomplete="off" placeholder="Town" name="town"
+                                                        value="{{ old('town') }}" required>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-2">
+                                                    <label for="postal_code" class="form-label">Code postal<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="postal_code"
+                                                        class="form-control @error('postal_code') is-invalid @enderror"
+                                                        id="postal_code" autocomplete="off" placeholder="Code postal"
+                                                        name="postal_code" value="{{ old('postal_code') }}" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="mb-2 container">
+                                                    <label for="country" class="form-label">Pays:<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="country"
+                                                        class="form-control @error('country') is-invalid @enderror"
+                                                        id="country" autocomplete="off" placeholder="Pays" name="country"
+                                                        value="{{ old('country') }}" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-2">
+                                                    <label for="date_of_birth" class="mt-1 form-label">Date de
+                                                        naissance<span class="text-danger">*</span></label>
+                                                    <input
+                                                        class="form-control @error('date_of_birth') is-invalid @enderror mb-4 mb-md-0"
+                                                        data-inputmask="'alias': 'datetime'"
+                                                        data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
+                                                        id="date_of_birth" name="date_of_birth"
+                                                        value="{{ old('date_of_birth') }}" type="date" required>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- container added --}}
+                                    <div class="mb-2 container">
+                                        <label for="telephone" class="form-label">N° tél. privé fixe :<span
+                                                class="text-danger">*</span></label>
+                                        <input type="telephone"
+                                            class="form-control @error('telephone') is-invalid @enderror" id="telephone"
+                                            autocomplete="off" placeholder="Telephone" name="telephone"
+                                            value="{{ old('telephone') }}" required>
+                                        @error('telephone')
+                                            <span class="invalid-feedback mb-2" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    {{-- container added --}}
+                                    <div class="container">
+                                        <div class="mb-2">
+                                            <label for="mob_num" class="form-label">N° de GSM :<span
                                                     class="text-danger">*</span></label>
-                                            <input type="client_num"
-                                                class="form-control @error('client_num') is-invalid @enderror"
-                                                id="client_num" autocomplete="off" placeholder="N° de client"
-                                                name="client_num" value="{{ old('client_num') }}" required>
-                                            @error('client_num')
+                                            <input type="mob_num"
+                                                class="form-control @error('mob_num') is-invalid @enderror" id="mob_num"
+                                                autocomplete="off" placeholder="Mobile Number" name="mob_num"
+                                                value="{{ old('mob_num') }}" required>
+                                            @error('mob_num')
                                                 <span class="invalid-feedback mb-2" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
                                         </div>
-
-                                        <div class="mb-2 col-md-4">
-                                            <label for="exist_phone" class="form-label">N° de GSM <span
+                                        <div class="mb-2">
+                                            <label for="account_number" class="mt-3 form-label">N° de compte<span
                                                     class="text-danger">*</span></label>
-                                            <input type="exist_phone"
-                                                class="form-control @error('exist_phone') is-invalid @enderror"
-                                                id="exist_phone" autocomplete="off" placeholder="N° de GSM "
-                                                name="exist_phone" value="{{ old('exist_phone') }}" required>
-                                            @error('exist_phone')
+                                            <input type="account_number"
+                                                class="form-control @error('account_number') is-invalid @enderror"
+                                                id="account_number" autocomplete="off" placeholder="Account Number"
+                                                name="account_number" value="{{ old('account_number') }}" required>
+                                            @error('account_number')
                                                 <span class="invalid-feedback mb-2" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
                                         </div>
-                                        <div class="mb-2 col-md-4">
-                                            <label for="exist_mail" class="form-label">E Mail<span
+                                        <div class="mb-2">
+                                            <label for="mail" class="form-label">E Mail<span
                                                     class="text-danger">*</span></label>
-                                            <input type="exist_mail"
-                                                class="form-control @error('title') is-invalid @enderror" id="exist_mail"
-                                                autocomplete="off" placeholder="E Mail" name="exist_mail"
-                                                value="{{ old('exist_mail') }}" required>
-                                            @error('exist_mail')
+                                            <input type="mail" class="form-control @error('mail') is-invalid @enderror"
+                                                id="mail" autocomplete="off" placeholder="Mail" name="mail"
+                                                value="{{ old('mail') }}" required>
+                                            @error('mail')
                                                 <span class="invalid-feedback mb-2" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
                                         </div>
                                     </div>
-                                </div>
-                                {{-- pasted the check box --}}
-
-                                <div class="mb-2 container">
-                                    <input type="radio" name="new_client" value="0" required>
-                                    <label for="new_client" class="mb-3 form-label">Nouveau clien<span
-                                            class="text-danger">*</span></label>
-                                    @error('new_client')
-                                        <span class="invalid-feedback mb-2" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                <div class="container mb-2">
-                                    {{-- changed --}}
-                                    <div class="row">
-                                        <div class="col">
-                                            <h5 class="mb-3">Title<span class="text-danger">*</span></h5>
-                                            <input type="radio" name="title" value="0" required>
-                                            <label for="title" class="form-label">Mme</label>
-                                            <input type="radio" name="title" value="1">
-                                            <label for="title" class="form-label">Mlle</label>
-                                            <input type="radio" name="title" value="2">
-                                            <label for="title" class="form-label">M</label>
-                                        </div>
-                                        <div class="col">
-                                            <h6 class="mb-3">Language:<span class="text-danger">*</span>
-                                            </h6>
-                                            <input type="radio" name="language" value="0" required>
-                                            <label for="language" class="form-label">NL</label>
-                                            <input type="radio" name="language" value="1">
-                                            <label for="language" class="form-label">FR</label>
-                                            <input type="radio" name="language" value="2">
-                                            <label for="language" class="form-label">UK</label>
-                                            <input type="radio" name="language" value="3">
-                                            <label for="language" class="form-label">DE</label>
+                                    {{-- container ends --}}
+                                    {{-- start of container --}}
+                                    <div class="container mt-3">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <h6 style="color: orangered;">Profession:<span
+                                                        class="text-danger">*</span>
+                                                </h6>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row-12">
+                                                    <input type="radio" name="profession" value="0" required>
+                                                    <label for="profession" class="form-label">salarié</label>
+                                                    <input type="radio" name="profession" value="1">
+                                                    <label for="profession" class="form-label">prof. libérale</label>
+                                                    <input type="radio" name="profession" value="2">
+                                                    <label for="profession" class="form-label">indépendant</label>
+                                                </div>
+                                                <div class="row-12">
+                                                    <input type="radio" name="profession" value="3" required>
+                                                    <label for="profession" class="form-label">retraité</label>
+                                                    <input type="radio" name="profession" value="4">
+                                                    <label for="profession" class="form-label">retraité</label>
+                                                    <input type="radio" name="profession" value="5">
+                                                    <label for="profession" class="form-label">sans prof</label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    {{-- end of containerxxxx --}}
                                 </div>
 
-                                <div class="mb-2 container">
-                                    <label for="name" class="form-label">Nom<span
-                                            class="text-danger">*</span></label>
-                                    <input type="name" class="form-control @error('name') is-invalid @enderror" id="name"
-                                        autocomplete="off" placeholder="Nom" name="name" value="{{ old('name') }}"
-                                        required>
-                                    @error('name')
-                                        <span class="invalid-feedback mb-2" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                <div class="mb-2 container">
-                                    <label for="f_name" class="form-label">Prénom<span
-                                            class="text-danger">*</span></label>
-                                    <input type="f_name" class="form-control @error('f_name') is-invalid @enderror"
-                                        id="f_name" autocomplete="off" placeholder="Prénom" name="f_name"
-                                        value="{{ old('f_name') }}" required>
-                                    @error('f_name')
-                                        <span class="invalid-feedback mb-2" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                {{-- container added --}} <div class="container">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="mb-2">
-                                                <label for="street" class="form-label">Rue:<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="street"
-                                                    class="form-control @error('street') is-invalid @enderror" id="street"
-                                                    autocomplete="off" placeholder="Street" name="street"
-                                                    value="{{ old('street') }}" required>
-                                            </div>
+                                <div class="border border-dark pt-3 mt-3">
+                                    <h5 class="mt-3 mb-3" style="color: orangered; text-align:center;">Société
+                                        (personne
+                                        morale, indépendant)<span class="text-danger">*</span></h5>
+                                    <div class="container">
+                                        <div class="mb-2">
+                                            <label for="company_name" class="form-label">Nom de la société<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="company_name"
+                                                class="form-control @error('company_name') is-invalid @enderror"
+                                                id="company_name" autocomplete="off" placeholder="Nom de la société"
+                                                name="company_name" value="{{ old('company_name') }}" required>
+                                            @error('company_name')
+                                                <span class="invalid-feedback mb-2" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
-                                        <div class="col-3">
-                                            <div class="mb-2 container">
-                                                <label for="no" class="form-label">N°<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="no" class="form-control @error('no') is-invalid @enderror"
-                                                    id="no" autocomplete="off" placeholder="N°" name="no"
-                                                    value="{{ old('no') }}" required>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="mb-2">
+                                                    <label for="legal_status" class="form-label">Forme juridique<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="legal_status"
+                                                        class="form-control @error('legal_status') is-invalid @enderror"
+                                                        id="legal_status" autocomplete="off" placeholder="Forme juridique"
+                                                        name="legal_status" value="{{ old('legal_status') }}" required>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="mb-2 container">
-                                                <label for="box" class="form-label">Bte:<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="box" class="form-control @error('box') is-invalid @enderror"
-                                                    id="box" autocomplete="off" placeholder="Bte" name="box"
-                                                    value="{{ old('box') }}" required>
-                                            </div>
-                                        </div>
+                                            <div class="col-6">
+                                                <div class="mb-2">
+                                                    <label for="company_number" class="form-label">N° d’entreprise<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="company_number"
+                                                        class="form-control @error('company_number') is-invalid @enderror"
+                                                        id="company_number" autocomplete="off" placeholder="N° d’entreprise"
+                                                        name="company_number" value="{{ old('company_number') }}"
+                                                        required>
 
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="mb-2">
-                                                <label for="town" class="form-label">Ville:<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="town"
-                                                    class="form-control @error('town') is-invalid @enderror" id="town"
-                                                    autocomplete="off" placeholder="Town" name="town"
-                                                    value="{{ old('town') }}" required>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="mb-2">
-                                                <label for="postal_code" class="form-label">Code postal<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="postal_code"
-                                                    class="form-control @error('postal_code') is-invalid @enderror"
-                                                    id="postal_code" autocomplete="off" placeholder="Code postal"
-                                                    name="postal_code" value="{{ old('postal_code') }}" required>
-                                            </div>
+                                        <div class="mb-2">
+                                            <label for="contact_person" class="form-label">Personne de contact<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="contact_person"
+                                                class="form-control @error('contact_person') is-invalid @enderror"
+                                                id="contact_person" autocomplete="off" placeholder="Personne de contact"
+                                                name="contact_person" value="{{ old('contact_person') }}" required>
+                                            @error('contact_person')
+                                                <span class="invalid-feedback mb-2" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="mb-2 container">
-                                                <label for="country" class="form-label">Pays:<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="country"
-                                                    class="form-control @error('country') is-invalid @enderror"
-                                                    id="country" autocomplete="off" placeholder="Pays" name="country"
-                                                    value="{{ old('country') }}" required>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="mb-2">
+                                                    <label for="phone_number" class="form-label">N° tél<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="phone_number"
+                                                        class="form-control @error('phone_number') is-invalid @enderror"
+                                                        id="phone_number" autocomplete="off" placeholder="N° tél"
+                                                        name="phone_number" value="{{ old('phone_number') }}" required>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="mb-2">
-                                                <label for="date_of_birth" class="mt-1 form-label">Date de naissance<span
-                                                        class="text-danger">*</span></label>
-                                                <input
-                                                    class="form-control @error('date_of_birth') is-invalid @enderror mb-4 mb-md-0"
-                                                    data-inputmask="'alias': 'datetime'"
-                                                    data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
-                                                    id="date_of_birth" name="date_of_birth"
-                                                    value="{{ old('date_of_birth') }}" type="date" required>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- container added --}}
-                                <div class="mb-2 container">
-                                    <label for="telephone" class="form-label">N° tél. privé fixe :<span
-                                            class="text-danger">*</span></label>
-                                    <input type="telephone" class="form-control @error('telephone') is-invalid @enderror"
-                                        id="telephone" autocomplete="off" placeholder="Telephone" name="telephone"
-                                        value="{{ old('telephone') }}" required>
-                                    @error('telephone')
-                                        <span class="invalid-feedback mb-2" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                {{-- container added --}}
-                                <div class="container">
-                                    <div class="mb-2">
-                                        <label for="mob_num" class="form-label">N° de GSM :<span
-                                                class="text-danger">*</span></label>
-                                        <input type="mob_num" class="form-control @error('mob_num') is-invalid @enderror"
-                                            id="mob_num" autocomplete="off" placeholder="Mobile Number" name="mob_num"
-                                            value="{{ old('mob_num') }}" required>
-                                        @error('mob_num')
-                                            <span class="invalid-feedback mb-2" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="account_number" class="mt-3 form-label">N° de compte<span
-                                                class="text-danger">*</span></label>
-                                        <input type="account_number"
-                                            class="form-control @error('account_number') is-invalid @enderror"
-                                            id="account_number" autocomplete="off" placeholder="Account Number"
-                                            name="account_number" value="{{ old('account_number') }}" required>
-                                        @error('account_number')
-                                            <span class="invalid-feedback mb-2" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="mail" class="form-label">E Mail<span
-                                                class="text-danger">*</span></label>
-                                        <input type="mail" class="form-control @error('mail') is-invalid @enderror"
-                                            id="mail" autocomplete="off" placeholder="Mail" name="mail"
-                                            value="{{ old('mail') }}" required>
-                                        @error('mail')
-                                            <span class="invalid-feedback mb-2" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                {{-- container ends --}}
-                                {{-- start of container --}}
-                                <div class="container mt-3">
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <h6 style="color: orangered;">Profession:<span class="text-danger">*</span>
-                                            </h6>
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="row-12">
-                                                <input type="radio" name="profession" value="0" required>
-                                                <label for="profession" class="form-label">salarié</label>
-                                                <input type="radio" name="profession" value="1">
-                                                <label for="profession" class="form-label">prof. libérale</label>
-                                                <input type="radio" name="profession" value="2">
-                                                <label for="profession" class="form-label">indépendant</label>
-                                            </div>
-                                            <div class="row-12">
-                                                <input type="radio" name="profession" value="3" required>
-                                                <label for="profession" class="form-label">retraité</label>
-                                                <input type="radio" name="profession" value="4">
-                                                <label for="profession" class="form-label">retraité</label>
-                                                <input type="radio" name="profession" value="5">
-                                                <label for="profession" class="form-label">sans prof</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- end of container --}}
-
-                                <h5 class="mt-3 mb-3" style="color: orangered; text-align:center;">Société (personne
-                                    morale, indépendant)<span class="text-danger">*</span></h5>
-                                <div class="container">
-                                    <div class="mb-2">
-                                        <label for="company_name" class="form-label">Nom de la société<span
-                                                class="text-danger">*</span></label>
-                                        <input type="company_name"
-                                            class="form-control @error('company_name') is-invalid @enderror"
-                                            id="company_name" autocomplete="off" placeholder="Nom de la société"
-                                            name="company_name" value="{{ old('company_name') }}" required>
-                                        @error('company_name')
-                                            <span class="invalid-feedback mb-2" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="mb-2">
-                                                <label for="legal_status" class="form-label">Forme juridique<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="legal_status"
-                                                    class="form-control @error('legal_status') is-invalid @enderror"
-                                                    id="legal_status" autocomplete="off" placeholder="Forme juridique"
-                                                    name="legal_status" value="{{ old('legal_status') }}" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="mb-2">
-                                                <label for="company_number" class="form-label">N° d’entreprise<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="company_number"
-                                                    class="form-control @error('company_number') is-invalid @enderror"
-                                                    id="company_number" autocomplete="off" placeholder="N° d’entreprise"
-                                                    name="company_number" value="{{ old('company_number') }}" required>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="contact_person" class="form-label">Personne de contact<span
-                                                class="text-danger">*</span></label>
-                                        <input type="contact_person"
-                                            class="form-control @error('contact_person') is-invalid @enderror"
-                                            id="contact_person" autocomplete="off" placeholder="Personne de contact"
-                                            name="contact_person" value="{{ old('contact_person') }}" required>
-                                        @error('contact_person')
-                                            <span class="invalid-feedback mb-2" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="mb-2">
-                                                <label for="phone_number" class="form-label">N° tél<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="phone_number"
-                                                    class="form-control @error('phone_number') is-invalid @enderror"
-                                                    id="phone_number" autocomplete="off" placeholder="N° tél"
-                                                    name="phone_number" value="{{ old('phone_number') }}" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="mb-2">
-                                                <label for="fax" class="form-label">N° fax<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="fax" class="form-control @error('fax') is-invalid @enderror"
-                                                    id="fax" autocomplete="off" placeholder="N° fax" name="fax"
-                                                    value="{{ old('fax') }}" required>
+                                            <div class="col-6">
+                                                <div class="mb-2">
+                                                    <label for="fax" class="form-label">N° fax<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="fax"
+                                                        class="form-control @error('fax') is-invalid @enderror" id="fax"
+                                                        autocomplete="off" placeholder="N° fax" name="fax"
+                                                        value="{{ old('fax') }}" required>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

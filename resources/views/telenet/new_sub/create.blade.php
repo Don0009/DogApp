@@ -566,7 +566,13 @@
 
 
                     <div class="col-md-6">
-                        <p class="fw-bolder mb-2">Datum en handtekening klant,</p>
+
+                        {{-- date_edit --}}
+                        <input class="mb-3form-control @error('date_edit') is-invalid @enderror mb-4 mb-md-0"
+                            data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
+                            id="date_edit" name="date_edit" value="{{ old('date_edit') }}" type="date" required>
+                        {{-- date_edit --}}
+                        <p class="fw-bolder mb-2 mt-4">Datum en handtekening klant,</p>
                         <div class="form-group">
                             <textarea name="date_signature_customer" class="form-control" id="exampleFormControlTextarea3" rows="6"
                                 required></textarea>

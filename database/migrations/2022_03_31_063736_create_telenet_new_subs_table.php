@@ -57,7 +57,7 @@ class CreateTelenetNewSubsTable extends Migration
             $table->string('customer_num_other_operator_10');
 
 
-
+            $table->date('date_edit');
             $table->longtext('date_signature_customer');
 
             $table->timestamps();

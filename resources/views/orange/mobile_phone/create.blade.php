@@ -45,6 +45,9 @@
                                 {{-- end b --}}
 
                                 <div class="container">
+                                    <h3 class="mb-3" style="color: orangered; text-align:center;">Demande
+                                        d’abonnement de téléphonie
+                                        mobile</h3>
                                     <h6 style="color: orangered;" class="card-title">Identification du client Orange
                                     </h6>
                                     {{-- box --}}
@@ -106,42 +109,70 @@
                                         @enderror
                                     </div>
                                     <p>Source du numéro:<span class="mb-3 text-danger">*</span></p>
-                                    <div class="col">
-                                        <input type="radio" name="s_number" value="0" required>
-                                        <label for="s_number" class="form-label">N° porté</label>
-                                        <input type="radio" name="s_number" value="1">
-                                        <label for="s_number" class="form-label">Migration carte prépayée</label>
-                                        <input type="radio" name="s_number" value="2">
-                                        <label for="s_number" class="form-label">Nouveau N°</label>
+                                    <div class="col mt-2">
+                                        <div class="mr-2">
+                                            <input type="radio" name="s_number" value="0" required>
+                                            <label for="s_number" class="form-label">N° porté</label>
+                                        </div>
+                                        <div class="mr-2">
+                                            <input type="radio" name="s_number" value="1">
+                                            <label for="s_number" class="form-label">Migration carte prépayée</label>
+
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="s_number" value="2">
+                                            <label for="s_number" class="form-label">Nouveau N°</label>
+                                        </div>
                                     </div>
                                     <div class="">
                                         {{-- row removed --}}
-                                        <h6>Langue:<span class="mr-2 text-danger">*</span></h6>
-                                        <input type="radio" name="language" value="0" required>
-                                        <label for="language" class="ml-2 form-label">NL</label>
-                                        <input type="radio" name="language" value="1">
-                                        <label for="language" class="ml-2 form-label">FR</label>
+                                        <h6 class="mb-2">Langue:<span class="mr-2 text-danger">*</span></h6>
+                                        <div class="mr-2"><input type="radio" name="language" value="0" required>
+                                            <label for="language" class="ml-1form-label">NL</label>
+                                        </div>
+                                        <div class="mr-2"> <input type="radio" name="language" value="1">
+                                            <label for="language" class="ml-1 form-label">FR</label>
+                                        </div>
+
+
                                     </div>
                                     <div class="">
                                         {{-- row removed --}}
 
-                                        <h5>Titre:<span class="mr-2 text-danger">*</span></h5>
-                                        <input type="radio" name="title" value="0">
-                                        <label for="title" class="ml-2 form-label">Mme</label>
-                                        <input type="radio" name="title" value="1">
-                                        <label for="title" class="ml-2 form-label">Mlle</label>
-                                        <input type="radio" name="title" value="2">
-                                        <label for="title" class="ml-2 form-label">M</label>
+                                        <h5 class="mt-2 mb-1">Titre:<span class="mr-2 text-danger">*</span></h5>
+                                        <div class="mr-2">
+                                            <input type="radio" name="title" value="0">
+                                            <label for="title" class="ml-2 form-label">Mme</label>
+                                        </div>
+
+                                        <div class="mr-2"> <input type="radio" name="title" value="1">
+                                            <label for="title" class="ml-2 form-label">Mlle</label>
+                                        </div>
+
+                                        <div class="mr-2"><input type="radio" name="title" value="2">
+                                            <label for="title" class="ml-2 form-label">M</label>
+                                        </div>
+
+
+
+
                                     </div>
                                     <div class="">
                                         {{-- row removed --}}
-                                        <h5 style="color: orangered;">Type de client:<span class="text-danger">*</span>
+                                        <h5 class="mb-2" style="color: orangered;">Type de client:<span
+                                                class="text-danger">*</span>
                                         </h5>
-                                        <input type="radio" name="customer_type" value="0">
-                                        <label for="customer_type" class="ml-2 form-label">Personne physique</label>
-                                        <input type="radio" name="customer_type" class="ml-2" value="1">
-                                        <label for="customer_type" class="ml-2 form-label">Indépendant/profession
-                                            libérale</label>
+                                        <div class="mr-2">
+                                            <input type="radio" name="customer_type" value="0">
+                                            <label for="customer_type" class="ml-2 form-label">Personne physique</label>
+                                        </div>
+                                        <div class="mr-2">
+                                            <input type="radio" name="customer_type" value="1">
+                                            <label for="customer_type" class="ml-2 form-label">Indépendant/profession
+                                                libérale</label>
+                                        </div>
+
+
                                     </div>
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Nom<span

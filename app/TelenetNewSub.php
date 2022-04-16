@@ -51,6 +51,7 @@ class TelenetNewSub extends Model
         'customer_num_other_operator_9',
         'customer_num_other_operator_10',
 
+        'date_edit',
        'date_signature_customer',
 
      ];

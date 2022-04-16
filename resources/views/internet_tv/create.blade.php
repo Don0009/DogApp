@@ -12,16 +12,6 @@
     <link rel="stylesheet" type="text/css" href="css/internet_tv.css">
 @endsection
 @section('content')
-    {{-- <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-        <nav class="page-breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-<li class="breadcrumb-item"><a href="{{ route('internet_tv.index') }}">internet tv</a></li>
-<li class="breadcrumb-item active" aria-current="page">Create User</li>
-</ol>
-</nav>
-</div> --}}
-
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
@@ -52,7 +42,7 @@
                     </div>
                     <div class="container mb-3 text-center migratiemandaat">
                         <h2 style="text-align: center">Aanvraagformulier voor de installatie van Orange Internet + TV</h2>
-                        <h4>Gegevens van de aanvrager en installatie-adres</h4>
+
                     </div>
                     <form class="forms-sample" method="POST" action="{{ route('internet_tv.store') }}">
                         @csrf
@@ -62,8 +52,9 @@
                         <div class="section">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-12">
 
+                                    <div class="col-12">
+                                        <h4 style="color: orangered;">Gegevens van de aanvrager en installatie-adres</h4>
                                         <div class="form-check form-check-inline">
                                             <input required class="form-check-input"
                                                 style="margin-left: 10px; margin-top: -6px" type="radio" name="mile"
@@ -81,8 +72,7 @@
                                         <div class="form-check form-check-inline">
                                             <input required class="form-check-input" type="radio" name="mile" value="2">
                                             <label for="extra_decoder" class="form-label mt-2"
-                                                style="margin-left: 10px; padding-top: -4px">Dhr. (Omcircelen wat
-                                                past)</label>
+                                                style="margin-left: 10px; padding-top: -4px">Dhr</label>
                                         </div>
                                     </div>
 
@@ -1194,7 +1184,7 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="call_number_9">n tweevoud opgemaakt te:</label>
+                                                <label for="call_number_9">In tweevoud opgemaakt te:</label>
                                                 <input type="text" class="form-control" id="call_number_9"
                                                     autocomplete="off" placeholder="In tweevoud opgemaakt te"
                                                     name="call_number_9">
