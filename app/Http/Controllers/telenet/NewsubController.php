@@ -141,7 +141,7 @@ class NewsubController extends Controller
 // Mail Code Ends
 
 
-        dd($mail);
+
 //        dd($result);
 
 

@@ -129,10 +129,7 @@ class NumberPortingDuController extends Controller
 
 
         $pdf = new Pdf(public_path('unfilled_forms/orange/NPDU.pdf'), [
-
             'command' => env('PDFTK_PATH'),
-
-
         ]);
 
 
