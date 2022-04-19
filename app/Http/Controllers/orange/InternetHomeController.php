@@ -105,6 +105,9 @@ class InternetHomeController extends Controller
             'signature' => 'required',
             'a_date' => 'required',
             'location' => 'required',
+            //'date_signature_customer' =>
+            'date_signature_customer_00' => 'required',
+            'date_signature_customer_11' => 'required',
 
         ]);
 
@@ -119,11 +122,19 @@ class InternetHomeController extends Controller
         if ($request->lang == 'fr') {
             $pdf = new Pdf(public_path('unfilled_forms/orange/IHFR.pdf'), [
 
+
                 'command' => env('PDFTK_PATH'),
 
 
             ]);
-        } else {
+
+
+            // dd($pdf);
+        }
+
+
+
+        else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/IHDU.pdf'), [
 
                     'command' => env('PDFTK_PATH'),

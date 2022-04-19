@@ -9,7 +9,7 @@
             <form class="forms-sample" action="{{ route('internet_home.store') }}" method="POST">
                 @csrf()
 
-
+                <input type="hidden" name="lang" value="du">
 
                 <div class="row">
                     <div class="col-12">
@@ -702,13 +702,7 @@
                                         <div class="col-12">
                                             <div class="mb-3">
                                                 <h5 class="mb-2">Betaling met kredietkaart</h5>
-                                                {{-- <p> Hierb
-                                                    ĳ geef ik Orange Belgium nv de toestemming om tot uitdrukkel ĳke
-                                                    herroeping,
-                                                    alle facturen met betrekking tot dit contract te debiteren van de
-                                                    rekening
-                                                    van
-                                                    volgende kredietkaart:</p> --}}
+
 
                                                 <label for="credit_card_holder" class="form-label">Kaarthouder:<span
                                                         class="text-danger">*</span></label>

@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <form class="forms-sample" action="{{ route('internet_home.store') }}" method="POST">
                 @csrf()
-
+                <input type="hidden" name="lang" value="fr">
 
                 <div class="row">
                     <div class="col-12">
@@ -527,10 +527,14 @@
                                 {{-- second card starts --}}
                                 <div class="mt-3 col-12">
 
-                                    <h6 style="color: orangered; text-align:center;" class="card-title">Choix
-                                        d’activation
-                                    </h6>
+
                                     <div class="container">
+
+
+                                        <h6 style="color: orangered; text-align:center;" class="card-title">Choix
+                                            d’activation
+                                        </h6>
+
                                         <div class="row">
                                             <div class="col-12 mb-2">
                                                 <label for="card_number" class="form-label">N° carte SIM<span
@@ -637,263 +641,246 @@
                                                         name="postal_code" value="{{ old('postal_code') }}" required>
                                                 </div>
                                             </div>
+                                        </div>
+                                        {{-- container border border-dark pt-3 x --}}
 
-                                            <div class="col-12">
+                                        <div class="col-12 border border-dark pt-3 mt-3">
+                                            <div class="mb-2">
+                                                <h5 class="mt-3 mb-2" style="color: orangered; text-align:center;">
+                                                    Signature du client (titulaire
+                                                    de la carte principale)</h5>
+                                                <label for="copy" class="form-label">Fait en 3 exemplaires à:<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="copy"
+                                                    class="form-control @error('copy') is-invalid @enderror" id="copy"
+                                                    autocomplete="off" placeholder="Fait en 3 exemplaires à" name="copy"
+                                                    value="{{ old('copy') }}" required>
+                                                <label for="date" class="mt-3 form-label">Le:<span
+                                                        class="text-danger">*</span></label>
+                                                <input
+                                                    class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
+                                                    data-inputmask="'alias': 'datetime'"
+                                                    data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date"
+                                                    name="date" value="{{ old('date') }}" type="date" required>
+
+                                                {{-- pasted the sign --}}
                                                 <div class="mb-2">
-                                                    <h5 class="mt-3 mb-2"
-                                                        style="color: orangered; text-align:center;">
-                                                        Signature du client (titulaire
-                                                        de la carte principale)</h5>
-                                                    <label for="copy" class="form-label">Fait en 3 exemplaires à:<span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="copy"
-                                                        class="form-control @error('copy') is-invalid @enderror" id="copy"
-                                                        autocomplete="off" placeholder="Fait en 3 exemplaires à" name="copy"
-                                                        value="{{ old('copy') }}" required>
-                                                    <label for="date" class="mt-3 form-label">Le:<span
-                                                            class="text-danger">*</span></label>
-                                                    <input
-                                                        class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
-                                                        data-inputmask="'alias': 'datetime'"
-                                                        data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
-                                                        id="date" name="date" value="{{ old('date') }}" type="date"
-                                                        required>
-                                                </div>
-                                            </div>
-                                            {{-- <div class="col-12">
-                    <p class="text-justify">
-                        LE CLIENT DÉCLARE AVOIR PRIS CONNAISSANCE, AVANT LA SIGNATURE DE LA PRÉSENTE
-                        DEMANDE
-                        DE CONTRAT, DES CONDITIONS GÉNÉRALES ET SPÉCIFIQUES, DE LA DESCRIPTION ET DES
-                        TARIFS
-                        DES SERVICES AUXQUELS IL SOUSCRIT ET DES CONDITIONS DU DROIT DE RÉTRACTATION, ET
-                        LES
-                        AVOIR ACCEPTÉS. LE CLIENT PEUT OBTENIR UNE COPIE DES CONDITIONS GÉNÉRALES DANS
-                        UN
-                        SHOP ORANGE OU LES CONSULTER SUR WWW.ORANGE.BE/CONDITIONSGENERALES. LE CLIENT
-                        DEMANDE D’ENTAMER L’EXÉCUTION DES SERVICES PENDANT LE DÉLAI DE RÉTRACTATION.
-                    </p>
-                </div> --}}
-                                            <div class="col-12">
-                                                <div class="mb-2">
-                                                    {{-- <h5 class="mt-2 mb-2">Signature du client : ..X...............</h5> --}}
+
                                                     <label for="date_signature_customer" class="mt-2">Signature
                                                         du
                                                         client
                                                         :</label>
                                                     <div class="form-group">
-                                                        <textarea name="date_signature_customer" class="form-control" id="exampleFormControlTextarea3" rows="6"
+                                                        <textarea name="date_signature_customer_11" class="form-control" id="exampleFormControlTextarea3" rows="6"
                                                             required></textarea>
 
                                                     </div>
-                                                    {{-- <p style="text-align: justify;"> Cette demande de contrat est valable et lie
-                            Orange Belgium s.a. sous
-                            condition que toutes les informations mentionnées soient correctes et
-                            complètes. Le client s’engage à informer immédiatement Orange Belgium s.a.
-                            de tout changement par écrit</p>
-                        <p>. Cette demande de contrat est valable et lie Orange Belgium s.a. sous
-                            condition que toutes les informations mentionnées soient correctes et
-                            complètes. Le client s’engage à informer immédiatement Orange Belgium s.a.
-                            de tout changement par écrit</p> --}}
+
                                                 </div>
+                                                {{-- pasted the end  of sign --}}
                                             </div>
-                                            <div class="col-12">
-                                                <div class="mb-2">
-                                                    <h5 style="color: orangered" class="mb-3">Paiement par carte
-                                                        de
-                                                        crédit</h5>
-                                                    {{-- <p> Par la présente, j’autorise Orange Belgium s.a. jusqu’à révocation expresse
+                                        </div>
+
+                                        <div class="col-12">
+                                            {{-- signature moved up --}}
+                                        </div>
+                                        <div class="col-12 pt-3 border border-dark mt-3">
+                                            <div class="mb-2 mt-3 mr-3">
+                                                <h5 style="color: orangered; text-align:center;" class="mb-3">
+                                                    Paiement par carte
+                                                    de
+                                                    crédit</h5>
+                                                {{-- <p> Par la présente, j’autorise Orange Belgium s.a. jusqu’à révocation expresse
                             à
                             débiter toutes les factures liées au présent contrat de la carte de crédit
                             suivante :</p> --}}
 
-                                                    <label for="credit_card_holder" class="form-label">Titulaire de la
-                                                        carte de
-                                                        crédit:<span class="text-danger">*</span></label>
-                                                    <input type="credit_card_holder"
-                                                        class="form-control @error('credit_card_holder') is-invalid @enderror"
-                                                        id="credit_card_holder" autocomplete="off"
-                                                        placeholder="Titulaire de la carte de crédit"
-                                                        name="credit_card_holder" value="{{ old('credit_card_holder') }}"
-                                                        required>
+                                                <label for="credit_card_holder" class="form-label">Titulaire de la
+                                                    carte de
+                                                    crédit:<span class="text-danger">*</span></label>
+                                                <input type="credit_card_holder"
+                                                    class="form-control @error('credit_card_holder') is-invalid @enderror"
+                                                    id="credit_card_holder" autocomplete="off"
+                                                    placeholder="Titulaire de la carte de crédit" name="credit_card_holder"
+                                                    value="{{ old('credit_card_holder') }}" required>
 
-                                                    <label for="card_expiration_date" class="mt-3 form-label">Date
-                                                        d’expiration
-                                                        de
-                                                        la carte de crédit :<span class="text-danger">*</span></label>
-                                                    <input
-                                                        class="form-control @error('card_expiration_date') is-invalid @enderror mb-4 mb-md-0"
-                                                        data-inputmask="'alias': 'datetime'"
-                                                        data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
-                                                        id="card_expiration_date" name="card_expiration_date"
-                                                        value="{{ old('card_expiration_date') }}" type="date" required>
-                                                    <label for="code_generate" class="mt-3 form-label">Code / alias généré
-                                                        par
-                                                        Ogone
-                                                        / Inginéco :<span class="text-danger">*</span></label>
-                                                    <input type="code_generate"
-                                                        class="form-control @error('code_generate') is-invalid @enderror"
-                                                        id="credit_card_holder" autocomplete="off"
-                                                        placeholder="Code / alias généré par Ogone / Inginéco"
-                                                        name="code_generate" value="{{ old('code_generate') }}" required>
+                                                <label for="card_expiration_date" class="mt-3 form-label">Date
+                                                    d’expiration
+                                                    de
+                                                    la carte de crédit :<span class="text-danger">*</span></label>
+                                                <input
+                                                    class="form-control @error('card_expiration_date') is-invalid @enderror mb-4 mb-md-0"
+                                                    data-inputmask="'alias': 'datetime'"
+                                                    data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
+                                                    id="card_expiration_date" name="card_expiration_date"
+                                                    value="{{ old('card_expiration_date') }}" type="date" required>
+                                                <label for="code_generate" class="mt-3 form-label">Code / alias généré
+                                                    par
+                                                    Ogone
+                                                    / Inginéco :<span class="text-danger">*</span></label>
+                                                <input type="code_generate"
+                                                    class="form-control @error('code_generate') is-invalid @enderror"
+                                                    id="credit_card_holder" autocomplete="off"
+                                                    placeholder="Code / alias généré par Ogone / Inginéco"
+                                                    name="code_generate" value="{{ old('code_generate') }}" required>
 
-                                                </div>
-                                                <label for="date_signature_customer" class="mt-2">Signature du
-                                                    client
-                                                    :</label>
-                                                <div class="form-group">
-                                                    <textarea name="date_signature_customer_2" class="form-control" id="exampleFormControlTextarea3" rows="6"
-                                                        required></textarea>
-                                                </div>
+                                            </div>
+                                            <label for="date_signature_customer_2" class="mt-2">Signature du
+                                                client
+                                                :</label>
+                                            <div class="form-group">
+                                                <textarea name="date_signature_customer_00" .. class="form-control" id="exampleFormControlTextarea3" rows="6"
+                                                    required></textarea>
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-                                {{-- second card ends --}}
-                                {{-- third card starts --}}
-                                <div class="col-12">
-                                    <div class="mt-3 mr-3">
 
-
-                                        <h4 style="color: orangered; text-align:center;" class="mt-4 mb-2">Je
-                                            soussigné,
-                                        </h4>
-                                        {{-- container added --}}
-                                        <div class="container">
-                                            <div class="mb-2">
-                                                <label for="account_holder_name" class="form-label">Nom du titulaire de
-                                                    compte<span class="text-danger">*</span></label>
-                                                <input type="account_holder_name"
-                                                    class="form-control @error('account_holder_name') is-invalid @enderror"
-                                                    id="account_holder_name" autocomplete="off"
-                                                    placeholder="Nom du titulaire de compte" name="account_holder_name"
-                                                    value="{{ old('account_holder_name') }}" required>
-                                            </div>
-                                            <div class="mb-2">
-                                                <label for="street_and_number" class="form-label">Rue et numéro<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="street_and_number"
-                                                    class="form-control @error('street_and_number') is-invalid @enderror"
-                                                    id="street_and_number" autocomplete="off"
-                                                    placeholder="Nom du titulaire de compte" name="street_and_number"
-                                                    value="{{ old('street_and_number') }}" required>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-10">
-                                                    <label for="postal_code_and_city" class="form-label">Code postal et
-                                                        ville<span class="text-danger">*</span></label>
-                                                    <input type="postal_code_and_city"
-                                                        class="form-control @error('postal_code_and_city') is-invalid @enderror"
-                                                        id="postal_code_and_city" autocomplete="off"
-                                                        placeholder="Nom du titulaire de compte" name="postal_code_and_city"
-                                                        value="{{ old('postal_code_and_city') }}" required>
-                                                </div>
-                                                <div class="col-2">
-                                                    <label for="hold_country" class="form-label">Pays<span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="hold_country"
-                                                        class="form-control @error('hold_country') is-invalid @enderror"
-                                                        id="hold_country" autocomplete="off"
-                                                        placeholder="Nom du titulaire de compte" name="hold_country"
-                                                        value="{{ old('hold_country') }}" required>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <label for="iban_account_number" class="mt-3 form-label">N° de compte
-                                                        IBAN<span class="text-danger">*</span></label>
-                                                    <input type="iban_account_number"
-                                                        class="form-control @error('iban_account_number') is-invalid @enderror"
-                                                        id="iban_account_number" autocomplete="off"
-                                                        placeholder="Nom du titulaire de compte" name="iban_account_number"
-                                                        value="{{ old('iban_account_number') }}" required>
-                                                </div>
-                                                <div class="col-3">
-                                                    <div class="mb-2">
-                                                        <label for="bic_code" class="mt-3 form-label">Code BIC<span
-                                                                class="text-danger">*</span></label>
-                                                        <input type="bic_code"
-                                                            class="form-control @error('bic_code') is-invalid @enderror"
-                                                            id="bic_code" autocomplete="off"
-                                                            placeholder="Nom du titulaire de compte" name="bic_code"
-                                                            value="{{ old('bic_code') }}" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <div class="mb-2">
-                                                        <label for="underlying_contract_number" class="form-label">N°
-                                                            de
-                                                            contrat
-                                                            sous-jacent<span class="text-danger">*</span></label>
-                                                        <input type="underlying_contract_number"
-                                                            class="form-control @error('underlying_contract_number') is-invalid @enderror"
-                                                            id="underlying_contract_number" autocomplete="off"
-                                                            placeholder="Nom du titulaire de compte"
-                                                            name="underlying_contract_number"
-                                                            value="{{ old('underlying_contract_number') }}" required>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <div class="mb-2">
-                                                                <label for="a_date" class="form-label"> Date:<span
-                                                                        class="text-danger">*</span></label>
-                                                                <input
-                                                                    class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0"
-                                                                    data-inputmask="'alias': 'datetime'"
-                                                                    data-inputmask-inputformat="dd/mm/yyyy"
-                                                                    inputmode="numeric" id="a_date" name="a_date"
-                                                                    value="{{ old('a_date') }}" type="date" required>
-                                                                <label for="location" class="mt-3 form-label">Lieu<span
-                                                                        class="text-danger">*</span></label>
-                                                                <input type="location"
-                                                                    class="form-control @error('location') is-invalid @enderror"
-                                                                    id="location" autocomplete="off"
-                                                                    placeholder="Nom du titulaire de compte" name="location"
-                                                                    value="{{ old('location') }}" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p>Si vous êtes déjà client Orange, veuillez ajouter votre
-                                                                numéro de
-                                                                client. Si vous n’êtes pas encore client, notre agent
-                                                                introduira
-                                                                la
-                                                                référence adéquate</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-3">
-                                                    <label for="signature" class="form-label">Signature du titulaire de
-                                                        compte<span class="text-danger">*</span></label>
-                                                    <textarea type="signature" class="form-control @error('signature') is-invalid @enderror" id="signature"
-                                                        autocomplete="off"
-                                                        placeholder="Signature du titulaire de compte" name="signature"
-                                                        rows="8" value="{{ old('signature') }}" required></textarea>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
-                                {{-- third card ends --}}
 
                             </div>
-                            {{-- slot up --}}
+                            {{-- second card ends --}}
+                            {{-- third card starts --}}
+                            <div class="col-12 border border-dark pt-3 mt-3">
+                                <div class="mt-3 mr-3">
+
+
+                                    <h4 style="color: orangered; text-align:center;" class="mt-4 mb-2">Je
+                                        soussigné,
+                                    </h4>
+                                    {{-- container added --}}
+                                    <div class="container">
+                                        <div class="mb-2">
+                                            <label for="account_holder_name" class="form-label">Nom du titulaire de
+                                                compte<span class="text-danger">*</span></label>
+                                            <input type="account_holder_name"
+                                                class="form-control @error('account_holder_name') is-invalid @enderror"
+                                                id="account_holder_name" autocomplete="off"
+                                                placeholder="Nom du titulaire de compte" name="account_holder_name"
+                                                value="{{ old('account_holder_name') }}" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="street_and_number" class="form-label">Rue et numéro<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="street_and_number"
+                                                class="form-control @error('street_and_number') is-invalid @enderror"
+                                                id="street_and_number" autocomplete="off"
+                                                placeholder="Nom du titulaire de compte" name="street_and_number"
+                                                value="{{ old('street_and_number') }}" required>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <label for="postal_code_and_city" class="form-label">Code postal et
+                                                    ville<span class="text-danger">*</span></label>
+                                                <input type="postal_code_and_city"
+                                                    class="form-control @error('postal_code_and_city') is-invalid @enderror"
+                                                    id="postal_code_and_city" autocomplete="off"
+                                                    placeholder="Nom du titulaire de compte" name="postal_code_and_city"
+                                                    value="{{ old('postal_code_and_city') }}" required>
+                                            </div>
+                                            <div class="col-2">
+                                                <label for="hold_country" class="form-label">Pays<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="hold_country"
+                                                    class="form-control @error('hold_country') is-invalid @enderror"
+                                                    id="hold_country" autocomplete="off"
+                                                    placeholder="Nom du titulaire de compte" name="hold_country"
+                                                    value="{{ old('hold_country') }}" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <label for="iban_account_number" class="mt-3 form-label">N° de compte
+                                                    IBAN<span class="text-danger">*</span></label>
+                                                <input type="iban_account_number"
+                                                    class="form-control @error('iban_account_number') is-invalid @enderror"
+                                                    id="iban_account_number" autocomplete="off"
+                                                    placeholder="Nom du titulaire de compte" name="iban_account_number"
+                                                    value="{{ old('iban_account_number') }}" required>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="mb-2">
+                                                    <label for="bic_code" class="mt-3 form-label">Code BIC<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="bic_code"
+                                                        class="form-control @error('bic_code') is-invalid @enderror"
+                                                        id="bic_code" autocomplete="off"
+                                                        placeholder="Nom du titulaire de compte" name="bic_code"
+                                                        value="{{ old('bic_code') }}" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <div class="mb-2">
+                                                    <label for="underlying_contract_number" class="form-label">N°
+                                                        de
+                                                        contrat
+                                                        sous-jacent<span class="text-danger">*</span></label>
+                                                    <input type="underlying_contract_number"
+                                                        class="form-control @error('underlying_contract_number') is-invalid @enderror"
+                                                        id="underlying_contract_number" autocomplete="off"
+                                                        placeholder="Nom du titulaire de compte"
+                                                        name="underlying_contract_number"
+                                                        value="{{ old('underlying_contract_number') }}" required>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="mb-2">
+                                                            <label for="a_date" class="form-label"> Date:<span
+                                                                    class="text-danger">*</span></label>
+                                                            <input
+                                                                class="form-control @error('a_date') is-invalid @enderror mb-4 mb-md-0"
+                                                                data-inputmask="'alias': 'datetime'"
+                                                                data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric"
+                                                                id="a_date" name="a_date" value="{{ old('a_date') }}"
+                                                                type="date" required>
+                                                            <label for="location" class="mt-3 form-label">Lieu<span
+                                                                    class="text-danger">*</span></label>
+                                                            <input type="location"
+                                                                class="form-control @error('location') is-invalid @enderror"
+                                                                id="location" autocomplete="off"
+                                                                placeholder="Nom du titulaire de compte" name="location"
+                                                                value="{{ old('location') }}" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <p>Si vous êtes déjà client Orange, veuillez ajouter votre
+                                                            numéro de
+                                                            client. Si vous n’êtes pas encore client, notre agent
+                                                            introduira
+                                                            la
+                                                            référence adéquate</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <label for="signature" class="form-label">Signature du titulaire de
+                                                    compte<span class="text-danger">*</span></label>
+                                                <textarea type="signature" class="form-control @error('signature') is-invalid @enderror" id="signature"
+                                                    autocomplete="off" placeholder="Signature du titulaire de compte"
+                                                    name="signature" rows="8" value="{{ old('signature') }}"
+                                                    required></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            {{-- third card ends --}}
 
                         </div>
-                        <div class="mt-2 mb-2">
-                            <button type="submit" class="btn btn-primary me-2">Submit</button>
-                            <button class="btn btn-secondary">Cancel</button>
-                        </div>
+                        {{-- slot up --}}
+
                     </div>
+                    <div class="mt-2 mb-2">
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <button class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
 
 
 

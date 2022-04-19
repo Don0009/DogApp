@@ -46,6 +46,7 @@ class CreateOrangeInternetTvsTable extends Migration
             $table->string('customer_type');
             $table->string('title');
             $table->text('language');
+            $table->string('lan');
             $table->string('first_name_1');
             $table->string('name_1');
             $table->date('date_of_birth');

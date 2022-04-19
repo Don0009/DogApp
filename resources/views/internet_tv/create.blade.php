@@ -190,8 +190,18 @@
                                     <div class="col-6">
 
                                         <div class="form-group">
-                                            <label for="">Taal (omcircelen): NL / FR</label>
+                                            <label for=""></label>
 
+                                            <div class="col-6">
+                                                <h6 class="mb-3">Taal : NL / FR<span
+                                                        class="text-danger">*</span>
+                                                </h6>
+                                                <input type="radio" name="lan" value="0" required>
+                                                <label for="language" class="form-label">NL</label>
+                                                <input type="radio" name="lan" value="1">
+                                                <label for="language" class="form-label">FR</label>
+
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -327,10 +337,15 @@
                         <div class="section">
                             <div class="container">
                                 <div class="migratiemandaat">
-                                    <h4>Datums en tijdstip voor de installatie</h4>
 
-                                    <h2 class="card-title">Vermeld hier jouw 3 favoriete datums en tijdstippen voor de
+
+                                    <h4 style="">Datums en tijdstip voor de installatie</h4>
+
+                                    <h2 class="card-title">Vermeld hier jouw 3 favoriete datums en tijdstippen voor
+                                        de
                                         installatie.</h2>
+
+
                                     <div class="row">
                                         <div class="col-3">
                                             <h2 class="card-title">Datum 1:</h2>

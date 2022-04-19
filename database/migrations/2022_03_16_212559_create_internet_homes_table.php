@@ -54,7 +54,7 @@ class CreateInternetHomesTable extends Migration
             $table->string('comp_country');
             $table->string('card_number');
             $table->string('internet_home');
-            $table->string('boot_option')->nullable();
+            $table->string('boot_option');
             $table->string('copy');
             $table->date('date');
             $table->string('credit_card_holder');
@@ -70,6 +70,10 @@ class CreateInternetHomesTable extends Migration
             $table->string('signature');
             $table->date('a_date');
             $table->string('location');
+           // $table->string('date_signature_customer');
+           $table->string('date_signature_customer_00');
+           $table->string('date_signature_customer_11');
+
 
             $table->timestamps();
         });

@@ -155,6 +155,7 @@ class OrangeInternetTvController extends Controller
             'call_number_9' => 'required',
             'op' => 'required',
             'file_1' => 'required',
+            'lan' => 'required',
 
         ]);
 

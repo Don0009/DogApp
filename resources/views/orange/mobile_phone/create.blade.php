@@ -63,7 +63,7 @@
                                     </div>
                                     {{-- box --}}
                                     <div class="mb-3">
-                                        <input type="radio" name="client_exist" value="0">
+                                        <input type="radio" name="client_exist" value="0" required>
                                         <label for="client_exist" class="form-label">Client existant<span
                                                 class="text-danger">*</span></label>
                                         @error('client_exist')
