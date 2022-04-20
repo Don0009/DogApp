@@ -12,31 +12,6 @@
     <link rel="stylesheet" type="text/css" href="css/internet_tv.css">
 @endsection
 @section('content')
-    {{-- <div class="section mb-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 mt-3">
-                    <div class="orange">
-                        <p>Orange</p>
-                    </div>
-                </div>
-                <div class="col-6 mt-5">
-                    <div class="text_orange">
-                        <span>Orange Belgium nv.</span>
-                    </div>
-                    <div class="text_orange"> Bourgetlaan 3 | Brussel 1140</div>
-                    <div class="text_orange">TEL. <span>+32 (0) 2 745 71 11 |</span> FAX +32 (0) 2 745 70
-                        00]</div>
-                    <div class="text_orange">BNP Paribas Fortis 210-0233334-04 <span>| IBAN</span>BE10
-                        2100 2333 3404 <span>| BIC:</span> GEBABEBB </div>
-                    <div class="text_orange">BTW <span>BE 0456.810.810 |</span> RPR Brussel
-                        <span>www.orange.be</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
 
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">
@@ -215,8 +190,12 @@
                                             <div class="col-6">
 
                                                 <div class="form-group">
-                                                    <label for="">Langue (entourez) : NL / FR</label>
+                                                    <label for="">Langue: NL / FR</label>
 
+                                                    <input type="radio" name="lan" value="0" required>
+                                                    <label for="language" class="form-label">NL</label>
+                                                    <input type="radio" name="lan" value="1">
+                                                    <label for="language" class="form-label">FR</label>
                                                 </div>
                                             </div>
                                             <div class="col-6">
@@ -361,6 +340,7 @@
                                             <h4>Dates et heures de préférence pour l’installation</h4>
                                         </div>Transfert de services internet et/ou TV
                                         <h2 class="card-title">Dates et heures de préférence pour l’installation.</h2>
+
                                         <div class="row">
                                             <div class="col-3">
                                                 <h2 class="card-title">DATE 1:</h2>

@@ -690,10 +690,7 @@
                                                     Paiement par carte
                                                     de
                                                     crédit</h5>
-                                                {{-- <p> Par la présente, j’autorise Orange Belgium s.a. jusqu’à révocation expresse
-                            à
-                            débiter toutes les factures liées au présent contrat de la carte de crédit
-                            suivante :</p> --}}
+
 
                                                 <label for="credit_card_holder" class="form-label">Titulaire de la
                                                     carte de

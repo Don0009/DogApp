@@ -56,19 +56,6 @@
                                     {{-- zaq --}}
                                     <div class="container">
                                         <div class="row">
-                                            {{-- changed --}}
-
-                                            {{-- <div class="mb-2 container">
-                                                <input type="radio" name="client_exist" value="0" required>
-                                                <label for="client_exist" class="mb-3 form-label">Client existant<span
-                                                        class="text-danger">*</span></label>
-                                                @error('client_exist')
-                                                    <span class="invalid-feedback mb-2" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div> --}}
-
 
                                             <div class="mb-2 col-md-6">
                                                 <label for="contract_number_1" class="form-label">Contractnummer:<span
