@@ -346,24 +346,32 @@
                                         installatie.</h2>
 
 
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <h2 class="card-title">Datum 1:</h2>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="form-group">
 
-                                                <input type="date" class="form-control" id="id_card_number_d1"
-                                                    autocomplete="off" placeholder="Datum 1" name="id_card_number_d1">
-                                            </div>
-
-                                        </div>
-                                        <div class="col-5">
-                                            <p>voormiddag (8u-13u) / namiddag (12u-18u) / avond (17u-20u**)</p>
-                                        </div>
-                                    </div>
+                                  {{-- end of section of datum one --}}
                                 </div>
                             </div>
+                            {{-- datum 1 start --}}
+                            <div class="section">
+                                <div class="container">
+                                  <div class="row">
+                                      <div class="col-3">
+                                          <h2 class="card-title">Datum 1:</h2>
+                                      </div>
+                                      <div class="col-4">
+                                          <div class="form-group">
+
+                                              <input type="date" class="form-control" id="id_card_number_d1"
+                                                  autocomplete="off" placeholder="Datum 1" name="id_card_number_d1">
+                                          </div>
+
+                                      </div>
+                                      <div class="col-5">
+                                          <p>voormiddag (8u-13u) / namiddag (12u-18u) / avond (17u-20u**)</p>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            {{-- datum 1 ends --}}
                             <div class="section">
                                 <div class="container">
                                     <div class="row">

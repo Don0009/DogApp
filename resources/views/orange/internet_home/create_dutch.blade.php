@@ -668,23 +668,23 @@
                                         </div>
 
 
-                                        <div class="col-12">
-                                            <div class="mb-3">
+<div class="col-12">
+    <div class="mb-3">
 
-                                                {{-- paste here the sign --}}
-                                                <label for="consultant_signature_1" class="form-label">Handtekening van
-                                                    de klant<span class="text-danger">*</span></label>
-                                                <textarea type="customer_sig" class="form-control @error('customer_sig') is-invalid @enderror" id="customer_sig"
-                                                    autocomplete="off" placeholder="Handtekening van
-                                                    de klant" name="customer_sig" rows="2"
-                                                    value="{{ old('customer_sig') }}" required></textarea>
+        {{-- paste here the sign --}}
+        <label for="date_signature_customer_11" class="form-label">Handtekening van
+            de klant<span class="text-danger">*</span></label>
+        <textarea type="date_signature_customer_11" class="form-control @error('date_signature_customer_11') is-invalid @enderror" id="date_signature_customer_11"
+            autocomplete="off" placeholder="Handtekening van
+            de klant" name="date_signature_customer_11" rows="2"
+            value="{{ old('date_signature_customer_11') }}" required></textarea>
 
-                                                @error('customer_sig')
-                                                    <span class="invalid-feedback mb-2" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
+        @error('customer_sig')
+            <span class="invalid-feedback mb-2" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="mb-3">
@@ -722,12 +722,12 @@
                                             {{-- paste here the sign code --}}
                                             <label for="sign_3" class="form-label">Handtekening van de klant<span
                                                     class="text-danger">*</span></label>
-                                            <textarea type="sign_3" class="form-control @error('sign_3') is-invalid @enderror" id="sign_3" autocomplete="off"
+                                            <textarea type="date_signature_customer_00" class="form-control @error('date_signature_customer_00') is-invalid @enderror" id="date_signature_customer_00" autocomplete="off"
                                                 placeholder="Signature Du
-                                                Consultant" name="sign_3" rows="2" value="{{ old('sign_3') }}"
+                                                Consultant" name="date_signature_customer_00" rows="2" value="{{ old('date_signature_customer_00') }}"
                                                 required></textarea>
 
-                                            @error('sign_3')
+                                            @error('date_signature_customer_00')
                                                 <span class="invalid-feedback mb-2" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>

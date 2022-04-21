@@ -57,14 +57,14 @@
                                         </div>
                                         <div class=" row col-4">
                                             <h6>Taal:<span class="text-danger">*</span></h6>
-                                            <input type="radio" name="language" value="0">
+                                            <input type="radio" class="ml-1" name="language" value="0">
                                             <label for="language" class="ml-1 form-label">NL</label>
                                             <input type="radio" class="ml-1" name="language" value="1">
-                                            <label for="language" class="form-label">FR</label>
-                                            <input type="radio" name="language" value="2">
-                                            <label for="language" class="form-label">UK</label>
-                                            <input type="radio" name="language" value="3">
-                                            <label for="language" class="form-label">DE</label>
+                                            <label for="language" class="ml-1 form-label">FR</label>
+                                            <input type="radio" class="ml-1" name="language" value="2">
+                                            <label for="language" class="ml-1 form-label">UK</label>
+                                            <input type="radio" name="language" class="ml-1" value="3">
+                                            <label for="language" class="form-label ml-1">DE</label>
                                         </div>
                                         <div class="col-4">
                                             <input type="radio" name="subscription" value="0">

@@ -449,6 +449,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                {{-- zxzx --}}
+                                <div class="border border-dark mt-3">
+
                                 <h5 class="mt-4 mb-3" style="color: orangered; text-align:center;">Adresse de
                                     facturation (si différente de
                                     l’adresse du client)</h5>
@@ -524,60 +527,68 @@
                                     @enderror
                                 </div>
 
+                                </div>
+                                {{-- zxzx --}}
                                 {{-- second card starts --}}
                                 <div class="mt-3 col-12">
 
 
                                     <div class="container">
 
+                                        {{-- boder xyz --}}
+<div class="border border-dark pl-3 pt-3 pr-3">
 
-                                        <h6 style="color: orangered; text-align:center;" class="card-title">Choix
-                                            d’activation
-                                        </h6>
 
-                                        <div class="row">
-                                            <div class="col-12 mb-2">
-                                                <label for="card_number" class="form-label">N° carte SIM<span
-                                                        class="text-danger">*</span></label>
-                                                <input type="card_number"
-                                                    class="form-control @error('card_number') is-invalid @enderror"
-                                                    id="card_number" autocomplete="off" placeholder="N° carte SIM"
-                                                    name="card_number" value="{{ old('card_number') }}" required>
-                                                @error('card_number')
-                                                    <span class="invalid-feedback mb-2" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
+    <h6 style="color: orangered; text-align:center;" class="card-title">Choix
+        d’activation
+    </h6>
 
-                                            <div class="col-12 mb-2">
-                                                <input type="radio" name="internet_home" value="0" required>
-                                                <label for="internet_home" class="form-label">Easy Internet @Home<span
-                                                        class="text-danger">*</span></label>
+    <div class="row">
+        <div class="col-12 mb-2">
+            <label for="card_number" class="form-label">N° carte SIM<span
+                    class="text-danger">*</span></label>
+            <input type="card_number"
+                class="form-control @error('card_number') is-invalid @enderror"
+                id="card_number" autocomplete="off" placeholder="N° carte SIM"
+                name="card_number" value="{{ old('card_number') }}" required>
+            @error('card_number')
+                <span class="invalid-feedback mb-2" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
 
-                                                <h5> + </h5>
-                                                <p>j’achète le modem 4G au prix promotionnel</p>
-                                                <h5> + </h5>
-                                                <p>pour une durée de 12 mois</p>
-                                                @error('internet_home')
-                                                    <span class="invalid-feedback mb-2" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
+        <div class="col-12 mb-2">
+            <input type="radio" name="internet_home" value="0" required>
+            <label for="internet_home" class="form-label">Easy Internet @Home<span
+                    class="text-danger">*</span></label>
 
-                                            <div class="col-12">
-                                                <div class="mb-2">
-                                                    <input type="radio" name="boot_option" value="0" required>
-                                                    <label for="boot_option" class="form-label">Option Data Boost<span
-                                                            class="text-danger">*</span></label>
-                                                    @error('boot_option')
-                                                        <span class="invalid-feedback mb-2" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
+            <h5> + </h5>
+            <p>j’achète le modem 4G au prix promotionnel</p>
+            <h5> + </h5>
+            <p>pour une durée de 12 mois</p>
+            @error('internet_home')
+                <span class="invalid-feedback mb-2" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        <div class="col-12">
+            <div class="mb-2">
+                <input type="radio" name="boot_option" value="0" required>
+                <label for="boot_option" class="form-label">Option Data Boost<span
+                        class="text-danger">*</span></label>
+                @error('boot_option')
+                    <span class="invalid-feedback mb-2" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
+</div>
+                                            {{-- border xyz --}}
                                             <div class="col-12">
                                                 <div class="mb-2">
                                                     <h5 style="color: orangered; text-align:center;">Adresse principale
@@ -741,7 +752,7 @@
                                 <div class="mt-3 mr-3">
 
 
-                                    <h4 style="color: orangered; text-align:center;" class="mt-4 mb-2">Je
+                                    <h4 style="color: orangered; text-align:center;" class=" mb-2">Je
                                         soussigné,
                                     </h4>
                                     {{-- container added --}}
