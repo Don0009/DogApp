@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use \Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\proximus\ProximusConnectionRequestDUController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,5 +54,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('contract_professionele', 'ContractResidentileController');
     Route::resource('pad_services', 'PadServicesController');
     Route::get('/generate-pdf', 'PdfController@generatePDF');
+
+    // Proximus Forms 6 in number
+
+    Route::resource('proximus_connection_request_du', 'proximus\ProximusConnectionRequestDUController');
 
 });

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class ProximusConnectionRequestDU extends Model
 {
     //
+    protected $guarded = [];
 
 }
