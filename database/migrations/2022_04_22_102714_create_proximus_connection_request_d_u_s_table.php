@@ -45,10 +45,12 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->longText('contact_person_telephone');
             $table->longText('is_title_2');
             $table->longText('is_install_address_same');
-            $table->longText('is_install_address_not_same');
+            $table->longText('install_address');
             $table->longText('invoice_receive_method');
+            $table->longText('email_2');
             $table->longText('gsm_3');
             $table->string('bank_account_number');
+            $table->longText('adres');
             $table->string('is_billing_address_same_or_not');
             $table->string('name_or_number_of_previous_owner');
             $table->string('wish_to_receive_info_means');
@@ -56,29 +58,23 @@ class CreateProximusConnectionRequestDUSTable extends Migration
 
             // Choose your Package
 
-            $table->string('flex_internet_tv_options');
+            $table->string('tv_packs_options');
 
 
             //Mobile Phone
 
-            $table->text('mobile_flex');
-            $table->text('mobile_flex_plus');
-            $table->text('unlimited_light');
-            $table->text('unlimited');
-            $table->text('unlimited_p');
-            $table->text('mobile_flex_full_control');
-            $table->text('mobile_flex_plus_full_control');
-            $table->text('PECLTEIPTAPM');
-            $table->text('PECFTEITMG');
+            $table->text('mobile_packs_options');
+            $table->text('epic_packs_options');
+
+
 
 
             //Other packages
 
             $table->string('other_packages_starter');
-            $table->string('mobilus_size');
-            $table->string('mobilus_limit_size');
-            $table->string('met_mobilus_full_size');
-            $table->string('flex_s_int+tv_ss');
+            $table->string('met_mobilus_options');
+            $table->string('mobilus_full_control_options');
+
 
 
             //for professional customers
@@ -91,15 +87,18 @@ class CreateProximusConnectionRequestDUSTable extends Migration
                 //Other Options
 
             $table->string('other_options_packages');
-            $table->string('other_options_sizes');
+
 
 
             //Internet
 
-            $table->string('landline_r');
             $table->string('internet_customer_phase');
+            $table->string('landline_r');
+
             $table->string('cell_number_w/o_landline');
             $table->string('internet_types');
+            $table->string('internet_types_security');
+
 
 
                 //TV
@@ -108,8 +107,13 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->text('line_number');
             $table->text('tv_packages');
             $table->text('tv_package_options');
+
+
+            // EE
+
             $table->text('fixed_line_customer_phase');
             $table->text('current_line_number');
+            $table->text('current_line_number_text');
             $table->text('add_cps_document');
             $table->text('phone_line_package_types');
             $table->text('other_tariff_plan_radio');
@@ -119,7 +123,7 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->string('smart_services_radio');
             $table->string('smart_services_text');
 
-                // Optical Fiber F
+                // Optical Fiber F F. GLASVEZEL
 
 
             $table->string('optical_fibre_radio');
