@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers\scarlet;
 
-use App\Http\Controllers\AmoCRMController;
-use App\ApplicationForm;
+use App\MobileApplication;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use mikehaertl\pdftk\Pdf;
 use Mail;
-use function Ramsey\Uuid\v1;
+use App\Http\Controllers\AmoCRMController;
 
-class ApplicationFormController extends Controller
+class MobileApplicationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,8 +19,8 @@ class ApplicationFormController extends Controller
      */
     public function index()
     {
-        $apps = ApplicationForm::all();
-        return view('scarlet.application_form.index', compact('apps'));
+        $mobiles = MobileApplication::all();
+        return view('scarlet.mobile_application.index', compact('mobiles'));
     }
 
     /**
@@ -32,12 +31,11 @@ class ApplicationFormController extends Controller
     public function create(Request $request)
     {
         $lang = $request->lang;
-
-
         if ($request->lang == 'fr') {
-            return view('scarlet.application_form.create_fr', compact('lang'));
+            return view('scarlet.mobile_application.create_fr', compact('lang'));
         }
-        return view('scarlet.application_form.create_du', compact('lang'));
+
+        return view('scarlet.mobile_application.create_du', compact('lang'));
     }
 
     /**
@@ -50,8 +48,6 @@ class ApplicationFormController extends Controller
     {
         $validator = Validator::make($request->all(), [
 
-
-
             'f_name' => 'required',
             'name' => 'required',
             'id_card_number' => 'required',
@@ -60,80 +56,99 @@ class ApplicationFormController extends Controller
             'box' => 'required',
             'postal_code' => 'required',
             'commune' => 'required',
-            'type_of_habitat' => 'required',
-            'stage' => 'required',
             'phone' => 'required',
             'gsm' => 'required',
             'mail' => 'required',
             'date_of_birth' => 'required',
             'gender' => 'required',
             'language' => 'required',
-            'society' => 'nullable',
             'vat' => 'nullable',
-            'internet_connection' => 'required',
-            'operator' => 'required',
-            'your_subscription' => 'required',
-            'telephony_day_1' => 'nullable',
-            'telephony_day_2' => 'nullable',
-            'telephony_hour_1' => 'nullable',
-            'telephony_hour_2' => 'nullable',
-            'mobile_tele_day_1' => 'nullable',
-            'mobile_tele_day_2' => 'nullable',
-            'fixe_telephony_hour_1' => 'nullable',
-            'fixe_telephony_hour_2' => 'nullable',
-            'decoder_1' => 'nullable',
-            'decoder_2' => 'nullable',
-            'allsport_1' => 'nullable',
-            'allsport_2' => 'nullable',
-            'movies_series_1' => 'required',
-            'movies_series_2' => 'nullable',
-            'total_one_time_costs_vat' => 'required',
-            'total_monthly_costs_vat' => 'required',
-            'digital_tv' => 'required',
-            'type_number' => 'required',
-            'current_phone_number' => 'required',
-            'obt' => 'required',
-            'other' => 'required',
-            'client_number' => 'required',
-            'install_adress' => 'required',
-            'install_no' => 'required',
-            'install_box' => 'required',
-            'install_postal_code' => 'required',
-            'install_commune' => 'required',
+            'new_sim_number' => 'required',
+            'mobile_subscription' => 'nullable',
+            'subscription1' => 'nullable',
+            'subscription2' => 'nullable',
+            'subscription3' => 'nullable',
+            'subscription4' => 'nullable',
+            'subscription5' => 'nullable',
+            'subscription6' => 'nullable',
+            'sub_name1' => 'nullable',
+            'sub_name2' => 'nullable',
+            'sub_name3' => 'nullable',
+            'sub_name4' => 'nullable',
+            'sub_name5' => 'nullable',
+            'new_num1' => 'nullable',
+            'new_num2' => 'nullable',
+            'new_num3' => 'nullable',
+            'new_num4' => 'nullable',
+            'new_num5' => 'nullable',
+            'num_transfer1' => 'nullable',
+            'num_transfer2' => 'nullable',
+            'num_transfer3' => 'nullable',
+            'num_transfer4' => 'nullable',
+            'num_transfer5' => 'nullable',
             'payment_method' => 'required',
             'iban_number' => 'required',
             'name_account_holder' => 'required',
             'submitted_contact' => 'nullable',
             'made_in' => 'nullable',
             'the' => 'nullable',
-            'contact_date' => 'required',
             'signature' => 'required',
-            'sign_customer_holder' => 'required',
             'dealer_reference' => 'required',
             'agent' => 'required',
-            'undersigned' => 'required',
-            'main_line' => 'required',
-            '2nd_line' => 'required',
-            'holder_no' => 'required',
-            'street' => 'required',
-            'number' => 'required',
-            'add_box' => 'required',
-            'add_postal_code' => 'required',
-            'add_commune' => 'required',
-            'vat_number' => 'nullable',
-            'current_operator' => 'nullable',
-            'cus_number' => 'required',
-            'signature_1' => 'required',
-            'signature_owner' => 'required',
-            'contact_date_1' => 'required',
+            'mob_num1' => 'required',
+            'current_payment_method1' => 'required',
+            'current_sim_number1' => 'required',
+            'name1' => 'required',
+            'f_name1' => 'required',
+            'customer_number1' => 'required',
+            'current_operator1' => 'required',
+            'date1' => 'required',
+            'signature1' => 'required',
 
+            'mob_num2' => 'required',
+            'current_payment_method2' => 'required',
+            'current_sim_number2' => 'required',
+            'name2' => 'required',
+            'f_name2' => 'required',
+            'customer_number2' => 'required',
+            'current_operator2' => 'required',
+            'date2' => 'required',
+            'signature2' => 'required',
+
+            'mob_num3' => 'required',
+            'current_payment_method3' => 'required',
+            'current_sim_number3' => 'required',
+            'name3' => 'required',
+            'f_name3' => 'required',
+            'customer_number3' => 'required',
+            'current_operator3' => 'required',
+            'date3' => 'required',
+            'signature3' => 'required',
+
+            'mob_num4' => 'required',
+            'current_payment_method4' => 'required',
+            'current_sim_number4' => 'required',
+            'name4' => 'required',
+            'f_name4' => 'required',
+            'customer_number4' => 'required',
+            'current_operator4' => 'required',
+            'date4' => 'required',
+            'signature4' => 'required',
+
+            'mob_num5' => 'required',
+            'current_payment_method5' => 'required',
+            'current_sim_number5' => 'required',
+            'name5' => 'required',
+            'f_name5' => 'required',
+            'customer_number5' => 'required',
+            'current_operator5' => 'required',
+            'date5' => 'required',
+            'signature5' => 'required',
         ]);
-
-
 
         if ($request->form_lang == 'fr') {
 
-            $pdf = new Pdf(public_path('unfilled_forms/scarlet/AF.pdf'), [
+            $pdf = new Pdf(public_path('unfilled_forms/scarlet/MAF.pdf'), [
 
                 'command' => env('PDFTK_PATH'),
             ]);
@@ -146,14 +161,14 @@ class ApplicationFormController extends Controller
 
         $data = $request->all();
 
-        $scarlet = ApplicationForm::create($data);
+        $scarlet = MobileApplication::create($data);
 
         $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 
         // $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs($pdf_name);
-dd($result);
+
 
         //Mail
         // $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
@@ -181,10 +196,8 @@ dd($result);
         $amo->add_lead($lead_data);
         unlink(public_path($pdf_name));
 
-        return redirect()->route('application_form.index')->with('success', 'Appliction Form created successfully!');
+        return redirect()->route('mobile_application_form.index')->with('success', 'Appliction Form created successfully!');
     }
-
-
 
     /**
      * Display the specified resource.
@@ -217,7 +230,6 @@ dd($result);
      */
     public function update(Request $request, $id)
     {
-        //
     }
 
     /**

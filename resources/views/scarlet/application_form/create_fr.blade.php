@@ -10,6 +10,15 @@
             <p style="text-align:left"><b>A. Vos coordonnées client </b>(veuillez compléter ce formulaire en majuscules svp)</p>
             <form class="forms-sample" method="POST" action="{{ route('application_form.store') }}">
                 @csrf()
+                <div class="mt-2">
+                    <label for="user_id" class="form-label">User ID<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control @error('user_id') is-invalid @enderror" id="f_name" autocomplete="off" placeholder="User ID" name="user_id" value="{{ old('user_id') }}" required>
+                    @error('user_id')
+                    <span class="invalid-feedback mb-2" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
                 <div class="form-group">
                     <input required type="hidden" name="form_lang" value="{{ $lang }}">
                 </div>
@@ -160,19 +169,19 @@
                             <label for="date_of_birth">Date de naissance<span class="text-danger">*</span></label>
                             <input class="form-control @error('date_of_birth') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date_of_birth" name="date_of_birth" value="{{ old('date_of_birth') }}" type="date">
                         </div>
-                        <div class="col-1">
+                        <div class="col-1 mt-4">
                             <p>Sexe</p>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2 mt-4">
                             <input type="radio" name="gender" value="0">
                             <label for="gender" class="form-label">M</label>
                             <input type="radio" name="gender" value="1">
                             <label for="gender" class="form-label">F</label>
                         </div>
-                        <div class="col-1">
+                        <div class="col-1 mt-4">
                             <p>Langue:</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 mt-4">
                             <input type="radio" name="language" value="0">
                             <label for="language" class="form-label">NL</label>
                             <input type="radio" name="language" value="1">
@@ -655,7 +664,7 @@
                     <div class="row">
                         <div class="col-6">
                             <label for="main_line" class="form-label">Ligne principale:<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control @error('main_line') is-invalid @enderror" id="main_line" autocomplete="off" placeholder="Ligne principale" name="main_line" value="{{ old('main_line') }}" required>
+                            <input type="text" class="form-control @error('main_line') is-invalid @enderror" id="main_line" autocomplete="off" maxlength="9" placeholder="Ligne principale" name="main_line" value="{{ old('main_line') }}" required>
                             @error('main_line')
                             <span class="invalid-feedback mb-2" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -664,7 +673,7 @@
                         </div>
                         <div class="col-6">
                             <label for="2nd_line" class="form-label">2e ligne:<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control @error('2nd_line') is-invalid @enderror" id="2nd_line" autocomplete="off" placeholder="2e ligne" name="2nd_line" value="{{ old('2nd_line') }}" required>
+                            <input type="text" class="form-control @error('2nd_line') is-invalid @enderror" id="2nd_line" autocomplete="off" maxlength="9" placeholder="2e ligne" name="2nd_line" value="{{ old('2nd_line') }}" required>
                             @error('2nd_line')
                             <span class="invalid-feedback mb-2" role="alert">
                                 <strong>{{ $message }}</strong>

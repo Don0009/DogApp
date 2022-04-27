@@ -44,7 +44,7 @@
                 </div>
                 <div class="mt-2">
                     <label for="id_card_number" class="form-label">Identiteitskaart nr:<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('Id_card_number') is-invalid @enderror" id="name" autocomplete="off" placeholder="Nom" name="id_card_number" value="{{ old('id_card_number') }}" required>
+                    <input type="text" class="form-control @error('id_card_number') is-invalid @enderror" id="name" autocomplete="off" placeholder="Identiteitskaart nr" name="id_card_number" value="{{ old('id_card_number') }}" required>
                     @error('id_card_number')
                     <span class="invalid-feedback mb-2" role="alert">
                         <strong>{{ $message }}</strong>
@@ -115,10 +115,10 @@
                             <input type="radio" name="type_of_habitat" value="1">
                             <label for="type_of_habitat" class="form-label">Appartement</label>
                         </div>
-                        <div class="col-1">
+                        <div class="col-2">
                             <p>Verdieping:<span class="text-danger">*</span></p>
                         </div>
-                        <div class="col-5">
+                        <div class="col-4">
                             <input type="text" class="form-control @error('stage') is-invalid @enderror" id="stage" autocomplete="off" placeholder="étage" name="stage" value="{{ old('stage') }}" required>
                             @error('stage')
                             <span class="invalid-feedback mb-2" role="alert">
@@ -165,19 +165,19 @@
                             <label for="date_of_birth">Geboortedatum<span class="text-danger">*</span></label>
                             <input class="form-control @error('date_of_birth') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date_of_birth" name="date_of_birth" value="{{ old('date_of_birth') }}" type="date">
                         </div>
-                        <div class="col-1">
-                            <p>Sexe</p>
+                        <div class="col-1 mt-4">
+                            <p>Geslacht</p>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2 mt-4">
                             <input type="radio" name="gender" value="0">
                             <label for="gender" class="form-label">M</label>
                             <input type="radio" name="gender" value="1">
                             <label for="gender" class="form-label">V</label>
                         </div>
-                        <div class="col-1">
-                            <p>Langue:</p>
+                        <div class="col-1 mt-4">
+                            <p>Taal:</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 mt-4">
                             <input type="radio" name="language" value="0">
                             <label for="language" class="form-label">NL</label>
                             <input type="radio" name="language" value="1">
@@ -564,7 +564,7 @@
                 <div class="mt-3">
                     <p>De klant erkent de voorwaarden voor de dienst Scarlet Trio te hebben ontvangen en deze te aanvaarden.</p>
                 </div>
-                <!-- <div class="mt-2">
+                <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
                             <label for="made_in" class="form-label">Fait à:<span class="text-danger">*</span></label>
@@ -584,259 +584,259 @@
                             </span>
                             @enderror
                         </div> -->
-                <div class="col-3">
-                    <label for="contact_date" class="form-label">Datum:<span class="text-danger">*</span></label>
-                    <input class="form-control @error('contact_date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="contact_date" name="contact_date" value="{{ old('contact_date') }}" type="date">
-                    @error('contact_date')
+                        <div class="col-3">
+                            <label for="contact_date" class="form-label">Datum:<span class="text-danger">*</span></label>
+                            <input class="form-control @error('contact_date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="contact_date" name="contact_date" value="{{ old('contact_date') }}" type="date">
+                            @error('contact_date')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="signature" class="form-label">Opgemaakt te:<span class="text-danger">*</span></label>
+                            <textarea type="text" rows="5" class="form-control @error('signature') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature" value="{{ old('signature') }}" required></textarea>
+                            @error('signature')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-3">
+                            <label for="sign_customer_holder" class="form-label">Handtekening van de klant:<span class="text-danger">*</span></label>
+                            <textarea type="text" rows="5" class="form-control @error('sign_customer_holder') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="sign_customer_holder" value="{{ old('sign_customer_holder') }}" required></textarea>
+                            @error('sign_customer_holder')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="dealer_reference" class="form-label">Scarlet dealer reference:<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @error('dealer_reference') is-invalid @enderror" id="dealer_reference" autocomplete="off" placeholder="Référence du dealer Scarlet" name="dealer_reference" value="{{ old('dealer_reference') }}" required>
+                            @error('the')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-6">
+                            <label for="agent" class="form-label">Naam Agent:
+                                <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @error('agent') is-invalid @enderror" id="the" autocomplete="off" placeholder="Agent" name="agent" value="{{ old('agent') }}" required>
+                            @error('agent')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <h4 style="text-align:center"><b>Toelating voor Nummeroverdracht Vaste Telefonie
+                        </b></h4>
+                </div>
+                <p class="text-justify">Gelieve dit document in hoofdletters in te vullen, te ondertekenen en ons zo snel mogelijk terug te bezorgen.
+                    Zonder dit document kan u uw huidig nummer niet behouden.</p>
+                <div class="mt-4">
+                    <p>Uw nummer
+                    </p>
+                </div>
+                <div class="mt-2">
+                    <label for="undersigned" class="form-label">De ondergetekende titularis<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('undersigned') is-invalid @enderror" id="undersigned" autocomplete="off" placeholder="Le soussigné" name="undersigned" value="{{ old('undersigned') }}" required>
+                    @error('undersigned')
                     <span class="invalid-feedback mb-2" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
                 </div>
+                <div class="mt-3">
+                    <p> van de hier vermelde
+                        nummers machtigt de ontvangende operator, Scarlet Belgium NV, om dit nummer te porteren.
+                        Deze machtiging impliceert dat de titularis het contract met de donoroperator voor de telefoondiensten die op dit nummer betrekking heeft, annuleert:</p>
+                </div>
+                <div class="mt-2">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="main_line" class="form-label">Hoofdlijn<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @error('main_line') is-invalid @enderror" id="main_line" maxlength="9" autocomplete="off" placeholder="Ligne principale" name="main_line" value="{{ old('main_line') }}" required>
+                            @error('main_line')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-6">
+                            <label for="2nd_line" class="form-label">2e lijn<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @error('2nd_line') is-invalid @enderror" id="2nd_line" maxlength="9" autocomplete="off" placeholder="2e ligne" name="2nd_line" value="{{ old('2nd_line') }}" required>
+                            @error('2nd_line')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <p class="text-justify">Door de ondertekening van dit document bevestigt de ondertekenaar volledig aansprakelijk te zijn voor de juistheid van
+                        de verstrekte informatie en gaat hij ermee akkoord alle schade die de abonnee zou kunnen lijden ten gevolge van deze
+                        aanvraag tot overdracht te vergoeden. De ondertekenaar zal eveneens de dienstleverancier vergoeden voor elke eis tot
+                        schadevergoeding vanwege de abonnee met betrekking tot de uitvoering van deze aanvraag tot overdracht.
+                        Ondergetekende bevestigt tevens gemachtigd te zijn om deze toelating voor nummeroverdracht te ondertekenen.
+                    </p>
+                </div>
+                <div class="mt-3">
+                    <p><b>Uw gegevens</b></p>
+                </div>
+                <div class="mt-2">
+                    <label for="holder_no" class="form-label">Naam titularis:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('holder_no') is-invalid @enderror" id="holder_no" autocomplete="off" placeholder="No du titulaire" name="holder_no" value="{{ old('holder_no') }}" required>
+                    @error('holder_no')
+                    <span class="invalid-feedback mb-2" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+                <div class="mt-3">
+                    <p>Installatieadres titularis:</p>
+                </div>
+                <div class="mt-2">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="street" class="form-label">Straat:<span class="text-danger">*</span></label>
+                            <input type="name" class="form-control @error('street') is-invalid @enderror" id="street" autocomplete="off" placeholder="Rue" name="street" value="{{ old('street') }}" required>
+                            @error('street')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-4">
+                            <label for="number" class="form-label">Nummer:<span class="text-danger">*</span></label>
+                            <input type="name" class="form-control @error('number') is-invalid @enderror" id="number" autocomplete="off" placeholder="Numéro" name="number" value="{{ old('number') }}" required>
+                            @error('number')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-4">
+                            <label for="add_box" class="form-label">Bus:<span class="text-danger">*</span></label>
+                            <input type="install_box" class="form-control @error('add_box') is-invalid @enderror" id="add_box" autocomplete="off" placeholder="Boite" name="add_box" value="{{ old('add_box') }}" required>
+                            @error('add_box')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="add_postal_code" class="form-label">Postcode:<span class="text-danger">*</span></label>
+                            <input type="postal_code" class="form-control @error('add_postal_code') is-invalid @enderror" id="add_postal_code" autocomplete="off" placeholder="Postal Code" name="add_postal_code" value="{{ old('add_postal_code') }}" required>
+                            @error('add_postal_code')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-6">
+                            <label for="add_commune" class="form-label">Gemeente:<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @error('add_commune') is-invalid @enderror" id="add_commune" autocomplete="off" placeholder="commune" name="add_commune" value="{{ old('add_commune') }}" required>
+                            @error('add_commune')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="vat_number" class="form-label">BTW nummer (indien van toepassing): :<span class="text-danger">*</span></label>
+                            <input type="name" class="form-control @error('vat_number') is-invalid @enderror" id="vat_number" autocomplete="off" placeholder="Numéro de TVA (si d’application)" name="vat_number" value="{{ old('vat_number') }}" required>
+                            @error('vat_number')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-4">
+                            <label for="current_operator" class="form-label">Huidige operator:<span class="text-danger">*</span></label>
+                            <input type="name" class="form-control @error('current_operator') is-invalid @enderror" id="current_operator" autocomplete="off" placeholder="Numéro" name="current_operator" value="{{ old('current_operator') }}" required>
+                            @error('current_operator')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-4">
+                            <label for="cus_number" class="form-label">Klantnummer bij huidige operator:<span class="text-danger">*</span></label>
+                            <input type="install_box" class="form-control @error('cus_number') is-invalid @enderror" id="cus_number" autocomplete="off" placeholder="Numéro de client chez l’opérateur actuel" name="cus_number" value="{{ old('cus_number') }}" required>
+                            @error('cus_number')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <p>(Voor uw Proximus-klantnummer kan u bellen naar 078 15 05 65. Als u niet van bij u thuis belt zal de Proximusmedewerk(st)er uw geboortedatum vragen.)
+                    </p>
+                </div>
+                <div class="mt-2">
+                    <p><b>Dit formulier blijft 3 maanden geldig na de datum van de handtekening.</b></p>
+                </div>
+                <div class="mt-2">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="signature_1" class="form-label">Handtekening:<span class="text-danger">*</span></label>
+                            <textarea type="text" rows="5" class="form-control @error('signature_1') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature_1" value="{{ old('signature_1') }}" required></textarea>
+                            @error('signature_1')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-4">
+                            <label for="signature_owner" class="form-label">Handtekening titularis:<span class="text-danger">*</span></label>
+                            <textarea type="text" rows="5" class="form-control @error('signature_owner') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature_owner" value="{{ old('signature_owner') }}" required></textarea>
+                            @error('signature_owner')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="col-4">
+                            <label for="contact_date_1" class="form-label">Datum::<span class="text-danger">*</span></label>
+                            <input class="form-control @error('contact_date_1') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="contact_date_1" name="contact_date_1" value="{{ old('contact_date_1') }}" type="date">
+                            @error('contact_date_1')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="mt-2">
-        <div class="row">
-            <div class="col-3">
-                <label for="signature" class="form-label">Opgemaakt te:<span class="text-danger">*</span></label>
-                <textarea type="text" rows="5" class="form-control @error('signature') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature" value="{{ old('signature') }}" required></textarea>
-                @error('signature')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-3">
-                <label for="sign_customer_holder" class="form-label">Handtekening van de klant:<span class="text-danger">*</span></label>
-                <textarea type="text" rows="5" class="form-control @error('sign_customer_holder') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="sign_customer_holder" value="{{ old('sign_customer_holder') }}" required></textarea>
-                @error('sign_customer_holder')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-    </div>
-    <div class="mt-2">
-        <div class="row">
-            <div class="col-6">
-                <label for="dealer_reference" class="form-label">Scarlet dealer reference:<span class="text-danger">*</span></label>
-                <input type="text" class="form-control @error('dealer_reference') is-invalid @enderror" id="dealer_reference" autocomplete="off" placeholder="Référence du dealer Scarlet" name="dealer_reference" value="{{ old('dealer_reference') }}" required>
-                @error('the')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-6">
-                <label for="agent" class="form-label">Naam Agent:
-                    <span class="text-danger">*</span></label>
-                <input type="text" class="form-control @error('agent') is-invalid @enderror" id="the" autocomplete="off" placeholder="Agent" name="agent" value="{{ old('agent') }}" required>
-                @error('agent')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-    </div>
-    <div class="mt-2">
-        <h4 style="text-align:center"><b>Toelating voor Nummeroverdracht Vaste Telefonie
-            </b></h4>
-    </div>
-    <p class="text-justify">Gelieve dit document in hoofdletters in te vullen, te ondertekenen en ons zo snel mogelijk terug te bezorgen.
-        Zonder dit document kan u uw huidig nummer niet behouden.</p>
-    <div class="mt-4">
-        <p>Uw nummer
-        </p>
-    </div>
-    <div class="mt-2">
-        <label for="undersigned" class="form-label">De ondergetekende titularis<span class="text-danger">*</span></label>
-        <input type="text" class="form-control @error('undersigned') is-invalid @enderror" id="undersigned" autocomplete="off" placeholder="Le soussigné" name="undersigned" value="{{ old('undersigned') }}" required>
-        @error('undersigned')
-        <span class="invalid-feedback mb-2" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-        @enderror
-    </div>
-    <div class="mt-3">
-        <p> van de hier vermelde
-            nummers machtigt de ontvangende operator, Scarlet Belgium NV, om dit nummer te porteren.
-            Deze machtiging impliceert dat de titularis het contract met de donoroperator voor de telefoondiensten die op dit nummer betrekking heeft, annuleert:</p>
-    </div>
-    <div class="mt-2">
-        <div class="row">
-            <div class="col-6">
-                <label for="main_line" class="form-label">Hoofdlijn<span class="text-danger">*</span></label>
-                <input type="text" class="form-control @error('main_line') is-invalid @enderror" id="main_line" autocomplete="off" placeholder="Ligne principale" name="main_line" value="{{ old('main_line') }}" required>
-                @error('main_line')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-6">
-                <label for="2nd_line" class="form-label">2e lijn<span class="text-danger">*</span></label>
-                <input type="text" class="form-control @error('2nd_line') is-invalid @enderror" id="2nd_line" autocomplete="off" placeholder="2e ligne" name="2nd_line" value="{{ old('2nd_line') }}" required>
-                @error('2nd_line')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-    </div>
-    <div class="mt-2">
-        <p class="text-justify">Door de ondertekening van dit document bevestigt de ondertekenaar volledig aansprakelijk te zijn voor de juistheid van
-            de verstrekte informatie en gaat hij ermee akkoord alle schade die de abonnee zou kunnen lijden ten gevolge van deze
-            aanvraag tot overdracht te vergoeden. De ondertekenaar zal eveneens de dienstleverancier vergoeden voor elke eis tot
-            schadevergoeding vanwege de abonnee met betrekking tot de uitvoering van deze aanvraag tot overdracht.
-            Ondergetekende bevestigt tevens gemachtigd te zijn om deze toelating voor nummeroverdracht te ondertekenen.
-        </p>
-    </div>
-    <div class="mt-3">
-        <p><b>Uw gegevens</b></p>
-    </div>
-    <div class="mt-2">
-        <label for="holder_no" class="form-label">Naam titularis:<span class="text-danger">*</span></label>
-        <input type="text" class="form-control @error('holder_no') is-invalid @enderror" id="holder_no" autocomplete="off" placeholder="No du titulaire" name="holder_no" value="{{ old('holder_no') }}" required>
-        @error('holder_no')
-        <span class="invalid-feedback mb-2" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-        @enderror
-    </div>
-    <div class="mt-3">
-        <p>Installatieadres titularis:</p>
-    </div>
-    <div class="mt-2">
-        <div class="row">
-            <div class="col-4">
-                <label for="street" class="form-label">Straat:<span class="text-danger">*</span></label>
-                <input type="name" class="form-control @error('street') is-invalid @enderror" id="street" autocomplete="off" placeholder="Rue" name="street" value="{{ old('street') }}" required>
-                @error('street')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-4">
-                <label for="number" class="form-label">Nummer:<span class="text-danger">*</span></label>
-                <input type="name" class="form-control @error('number') is-invalid @enderror" id="number" autocomplete="off" placeholder="Numéro" name="number" value="{{ old('number') }}" required>
-                @error('number')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-4">
-                <label for="add_box" class="form-label">Bus:<span class="text-danger">*</span></label>
-                <input type="install_box" class="form-control @error('add_box') is-invalid @enderror" id="add_box" autocomplete="off" placeholder="Boite" name="add_box" value="{{ old('add_box') }}" required>
-                @error('add_box')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-    </div>
-    <div class="mt-2">
-        <div class="row">
-            <div class="col-6">
-                <label for="add_postal_code" class="form-label">Postcode:<span class="text-danger">*</span></label>
-                <input type="postal_code" class="form-control @error('add_postal_code') is-invalid @enderror" id="add_postal_code" autocomplete="off" placeholder="Postal Code" name="add_postal_code" value="{{ old('add_postal_code') }}" required>
-                @error('add_postal_code')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-6">
-                <label for="add_commune" class="form-label">Gemeente:<span class="text-danger">*</span></label>
-                <input type="text" class="form-control @error('add_commune') is-invalid @enderror" id="add_commune" autocomplete="off" placeholder="commune" name="add_commune" value="{{ old('add_commune') }}" required>
-                @error('add_commune')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-    </div>
-    <div class="mt-2">
-        <div class="row">
-            <div class="col-4">
-                <label for="vat_number" class="form-label">BTW nummer (indien van toepassing): :<span class="text-danger">*</span></label>
-                <input type="name" class="form-control @error('vat_number') is-invalid @enderror" id="vat_number" autocomplete="off" placeholder="Numéro de TVA (si d’application)" name="vat_number" value="{{ old('vat_number') }}" required>
-                @error('vat_number')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-4">
-                <label for="current_operator" class="form-label">Huidige operator:<span class="text-danger">*</span></label>
-                <input type="name" class="form-control @error('current_operator') is-invalid @enderror" id="current_operator" autocomplete="off" placeholder="Numéro" name="current_operator" value="{{ old('current_operator') }}" required>
-                @error('current_operator')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-4">
-                <label for="cus_number" class="form-label">Klantnummer bij huidige operator:<span class="text-danger">*</span></label>
-                <input type="install_box" class="form-control @error('cus_number') is-invalid @enderror" id="cus_number" autocomplete="off" placeholder="Numéro de client chez l’opérateur actuel" name="cus_number" value="{{ old('cus_number') }}" required>
-                @error('cus_number')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-    </div>
-    <div class="mt-2">
-        <p>(Voor uw Proximus-klantnummer kan u bellen naar 078 15 05 65. Als u niet van bij u thuis belt zal de Proximusmedewerk(st)er uw geboortedatum vragen.)
-        </p>
-    </div>
-    <div class="mt-2">
-        <p><b>Dit formulier blijft 3 maanden geldig na de datum van de handtekening.</b></p>
-    </div>
-    <div class="mt-2">
-        <div class="row">
-            <div class="col-4">
-                <label for="signature_1" class="form-label">Handtekening:<span class="text-danger">*</span></label>
-                <textarea type="text" rows="5" class="form-control @error('signature_1') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature_1" value="{{ old('signature_1') }}" required></textarea>
-                @error('signature_1')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-4">
-                <label for="signature_owner" class="form-label">Handtekening titularis:<span class="text-danger">*</span></label>
-                <textarea type="text" rows="5" class="form-control @error('signature_owner') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature_owner" value="{{ old('signature_owner') }}" required></textarea>
-                @error('signature_owner')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="col-4">
-                <label for="contact_date_1" class="form-label">Datum::<span class="text-danger">*</span></label>
-                <input class="form-control @error('contact_date_1') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="contact_date_1" name="contact_date_1" value="{{ old('contact_date_1') }}" type="date">
-                @error('contact_date_1')
-                <span class="invalid-feedback mb-2" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-        </div>
-    </div>
-    <div class="mt-2">
-        <button type="submit" class="btn btn-primary me-2">Submit</button>
-        <button class="btn btn-secondary">Cancel</button>
-    </div>
-    </form>
-</div>
-</div>
 </div>
 @endsection

@@ -39,8 +39,8 @@ class CreateApplicationFormsTable extends Migration
             $table->string('operator');
             // b
             $table->string('your_subscription');
-            $table->string('telephony_day_1')->nullable();
-            $table->string('telephony_day_2')->nullable();
+            $table->integer('telephony_day_1')->nullable();
+            $table->integer('telephony_day_2')->nullable();
             $table->string('telephony_hour_1')->nullable();
             $table->string('telephony_hour_2')->nullable();
             $table->string('mobile_tele_day_1')->nullable();
