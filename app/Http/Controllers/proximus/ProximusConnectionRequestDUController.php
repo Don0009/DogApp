@@ -5,6 +5,8 @@ namespace App\Http\Controllers\proximus;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Proximus\ProximusConnectionRequestDU;
+use Illuminate\Support\Facades\Validator;
+
 
 class ProximusConnectionRequestDUController extends Controller
 {
@@ -40,7 +42,19 @@ class ProximusConnectionRequestDUController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        // dd($request->all());
+
+        $validator = Validator::make($request->all(), []);
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        }
+
+
+        $data = $request->all();
+        $data = $orange = ProximusConnectionRequestDU::create($data);
     }
 
     /**

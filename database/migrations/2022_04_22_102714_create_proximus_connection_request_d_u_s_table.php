@@ -21,7 +21,7 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->text('gsm');
             $table->text('person_type');
             $table->date('validity_of_id');
-            $table->text('copy_of_id_card');
+           // $table->text('copy_of_id_card');
             $table->text('be');
 
             $table->text('VAT_is_exempted');
@@ -128,6 +128,7 @@ class CreateProximusConnectionRequestDUSTable extends Migration
 
             $table->string('optical_fibre_radio');
             $table->string('optical_fibre_package_type');
+            $table->string('optical_fibre_package_type_3');
 
 
                     // Multi-line -G
@@ -137,7 +138,6 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->string('ip_box_radio');
 
                 // Bizz Call Connect H
-
 
             $table->string('bizz_call_connect_radio');
 
@@ -149,6 +149,8 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->longText('payngo_radio');
             $table->longText('payngo_text');
             $table->longText('cell_number_g');
+            $table->longText('cell_number_g_radio');
+
             $table->longText('existing_proximus_customer')->nullable();
             $table->longText('lang');
             $table->longText('sim_card_number');
@@ -157,9 +159,9 @@ class CreateProximusConnectionRequestDUSTable extends Migration
 
             //RESIDENTIELE MOBIELE TELEFONIE (buiten het pack) I
 
-            $table->text('residential_met_mobilus_size');
-            $table->text('residential_met_mobilus_limit');
-            $table->text('residential_met_mobilus_limit_full_size');
+            $table->text('residential_met_mobilus');
+
+            $table->text('residential_met_mobilus_limit_full');
             $table->text('mobile_social_app');
             $table->text('epic_offer');
             $table->text('joint_data_offer');
@@ -172,9 +174,8 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->string('bizz_mobile_size_p_i');
             $table->string('joint_data_offer_p_i');
             $table->string('mobile_social_apps_p_i');
-            $table->string('bizz_international');
-            $table->string('Mobile_Coverage_Extender');
-            $table->string('smartphone_omnium');
+            $table->string('bizz_international_options');
+
 
 //                      Business Options
 
@@ -203,6 +204,7 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->string('kit_to_install_k');
             $table->date('date_to_install_k');
             $table->string('time_of_day_k');
+            $table->string('free_resources');
             $table->date('desired_employment_date');
             $table->string('refer_number_k')->nullable();
 
@@ -219,11 +221,11 @@ class CreateProximusConnectionRequestDUSTable extends Migration
 
 
             $table->string('comment_n');
-            $table->string('applicants_sign_o');
+
             $table->string('at_o');
             $table->string('on_o');
-            $table->string('consent_o');
-            $table->string('consent_o_2');
+            // $table->string('consent_o');
+            // $table->string('consent_o_2');
             $table->timestamps();
         });
     }
