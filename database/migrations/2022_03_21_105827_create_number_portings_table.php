@@ -15,7 +15,7 @@ class CreateNumberPortingsTable extends Migration
     {
         Schema::create('number_portings', function (Blueprint $table) {
             $table->id();
-            $table->string('sign_of_customer');
+            $table->string('point_of_sale');
             $table->string('subscription')->nullable();
             $table->string('language');
             $table->string('title');

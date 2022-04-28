@@ -193,7 +193,7 @@ class OrangeInternetTvController extends Controller
             ->saveAs($pdf_name);
 //Mail
         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-            $message->to('degis9000@gmail.com')
+            $message->to('musmangeee@gmail.com')
                 ->subject("You have got new Internet TV Lead...!")
                 ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])

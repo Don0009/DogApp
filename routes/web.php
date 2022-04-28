@@ -61,4 +61,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('proximus_connection_request_fr', 'proximus\ProximusConnectionRequestFRController');
 
 
+    // scarlet
+    Route::resource('application_form', 'scarlet\ApplicationFormController');
+    Route::resource('mobile_application_form', 'scarlet\MobileApplicationController');
+
+    // Octa
+    Route::resource('regi_form', 'octa\OctaController');
+
+    //base
+    Route::resource('number_request', 'base\NumberRequestController');
+    Route::resource('subscription_request', 'base\SubscriptionRequestController');
+
 });
