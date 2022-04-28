@@ -58,5 +58,7 @@ Route::group(['middleware' => 'auth'], function () {
     // Proximus Forms 6 in number
 
     Route::resource('proximus_connection_request_du', 'proximus\ProximusConnectionRequestDUController');
+    Route::resource('proximus_connection_request_fr', 'proximus\ProximusConnectionRequestFRController');
+
 
 });

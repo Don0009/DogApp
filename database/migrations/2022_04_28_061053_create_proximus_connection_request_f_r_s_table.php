@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProximusConnectionRequestDUSTable extends Migration
+class CreateProximusConnectionRequestFRSTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProximusConnectionRequestDUSTable extends Migration
      */
     public function up()
     {
-        Schema::create('proximus_connection_request_d_u_s', function (Blueprint $table) {
+        Schema::create('proximus_connection_request_f_r_s', function (Blueprint $table) {
             $table->id();
 
             $table->string('partner');
@@ -66,6 +66,9 @@ class CreateProximusConnectionRequestDUSTable extends Migration
 
             $table->text('mobile_packs_options');
             $table->text('epic_packs_options');
+            $table->text('extra_gb_packs');
+
+
 
 
 
@@ -83,6 +86,8 @@ class CreateProximusConnectionRequestDUSTable extends Migration
 
             $table->string('business_package_types');
             $table->string('mobile_business_types');
+            $table->text('extra_gb_packs_2');
+
 
 
                 //Other Options
@@ -218,6 +223,9 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->string('wish_tbi_tele_directory_m');
             $table->string('name_or_company_name_m');
             $table->string('address_choose_m');
+            $table->string('address_choose_m_text');
+
+
             $table->string('consent_m')->nullable();
 
 
@@ -227,11 +235,10 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             $table->string('on_o');
             // $table->string('consent_o');
             // $table->string('consent_o_2');
+
             $table->string('doc_id')->nullable();
             $table->string('doc_sign_url')->nullable();
             $table->string('user_id');
-
-
 
             $table->timestamps();
         });
@@ -244,6 +251,6 @@ class CreateProximusConnectionRequestDUSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proximus_connection_request_d_u_s');
+        Schema::dropIfExists('proximus_connection_request_f_r_s');
     }
 }

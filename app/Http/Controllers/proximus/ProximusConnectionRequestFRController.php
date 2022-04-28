@@ -4,9 +4,10 @@ namespace App\Http\Controllers\proximus;
 
 use App\Http\Controllers\OKSign\OKSignController;
 use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Proximus\ProximusConnectionRequestDU;
+use App\Models\Proximus\ProximusConnectionRequestFR;
 use Illuminate\Support\Facades\Validator;
 
 use Carbon\Carbon;
@@ -14,7 +15,8 @@ use mikehaertl\pdftk\Pdf;
 use \Mail;
 
 
-class ProximusConnectionRequestDUController extends Controller
+
+class ProximusConnectionRequestFRController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,9 +26,8 @@ class ProximusConnectionRequestDUController extends Controller
     public function index()
     {
         //
-
-        $proximus = ProximusConnectionRequestDU::all();
-        return view('proximus.connection_request_du.index', compact('proximus'));
+        $proximus = ProximusConnectionRequestFR::all();
+        return view('proximus.connection_request_fr.index', compact('proximus'));
     }
 
     /**
@@ -37,7 +38,7 @@ class ProximusConnectionRequestDUController extends Controller
     public function create()
     {
         //
-        return view('proximus.connection_request_du.create');
+        return view('proximus.connection_request_fr.create');
     }
 
     /**
@@ -48,8 +49,8 @@ class ProximusConnectionRequestDUController extends Controller
      */
     public function store(Request $request)
     {
-
-        // dd($request->all());
+        //
+        //dd($request->all());
 
         $validator = Validator::make($request->all(), [
 
@@ -172,6 +173,13 @@ class ProximusConnectionRequestDUController extends Controller
             'at_o'=> 'required',
             'on_o'=> 'required',
 
+            'address_choose_m_text'=> 'required',
+
+            'extra_gb_packs_2'=> 'required',
+            'extra_gb_packs'=> 'required',
+
+
+
         ]);
 
 
@@ -179,15 +187,11 @@ class ProximusConnectionRequestDUController extends Controller
         $data['user_id'] = Auth::user()->id;
 
 
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator);
-        }
 
-        //dd(env('PDFTK_PATH'));
 
 
         $data = $request->all();
-        $data = $orange = ProximusConnectionRequestDU::create($data);
+        $data = $orange = ProximusConnectionRequestFR::create($data);
 
         $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 
@@ -198,11 +202,11 @@ class ProximusConnectionRequestDUController extends Controller
 //Mail
         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
             $message->to('degis9000@gmail.com')
-                ->subject("You have got new Proximus Connection Request (Dutch) Lead...!")
+                ->subject("You have got new Proximus Connection Request (French) Lead...!")
                 ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
                 ->attach(public_path($pdf_name), [
-                    'as' => 'Proximus Connection Request (Dutch) Lead.pdf',
+                    'as' => 'Proximus Connection Request (French) Lead.pdf',
                     'mime' => 'application/pdf',
                 ]);
             $message->from('no-reply@ecosafety.nyc');
@@ -218,12 +222,15 @@ class ProximusConnectionRequestDUController extends Controller
         $lead_data['NAME'] = $orange->name;
         $lead_data['PHONE'] = $orange->telephone;
         $lead_data['EMAIL'] = $orange->email_address;
-        $lead_data['LEAD_NAME'] = 'Proximus Connection Request (Dutch) Lead';
+        $lead_data['LEAD_NAME'] = 'Proximus Connection Request (French) Lead';
         $amo->add_lead($lead_data);
         unlink(public_path($pdf_name));
 
-        return redirect()->route('proximus_connection_request_du.index')->with('success', 'Proximus Connection Lead (Dutch) created successfully!');
 
+
+
+
+        return redirect()->route('proximus_connection_request_fr.index')->with('success', 'Proximus Connection Lead (French) created successfully!');
     }
 
     /**

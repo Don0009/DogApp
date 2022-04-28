@@ -25,27 +25,27 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Proximus</h5>
-                <form action="{{ route('proximus_connection_request_du.store') }}" method="post">@csrf
+                <form action="{{ route('proximus_connection_request_fr.store') }}" method="post">@csrf
                     <div class="row">
                         {{-- changed --}}
 
 
 
                         <div class="mb-3 col-md-6">
-                            GELIEVE ALLES IN
+                            VEUILLEZ SVP REMPLIR
                         </div>
                         <div class="mb-3 col-md-6">
-                            HOOFDLETTERS IN TE VULLEN
+                            EN CAPITALES
                         </div>
 
                         <div class="mb-3 col-md-4">
-                            Wit: agent
+                            Blanc : agent
                         </div>
                         <div class="mb-3 col-md-4">
-                            Roze: klant
+                            Rose: client
                         </div>
                         <div class="mb-3 col-md-4">
-                            Geel: Proximus
+                            Jaune: Proximus
                         </div>
 
 
@@ -55,7 +55,7 @@
 
 
                         <div class="mb-3 col-md-6">
-                            <label for="client_num" class="form-label">Partner<span
+                            <label for="client_num" class="form-label">Partenaire<span
                                     class="text-danger">*</span></label>
                             <input type="client_num" class="form-control @error('partner') is-invalid @enderror"
                                 id="partner" autocomplete="off" placeholder="partner" name="partner"
@@ -79,7 +79,7 @@
                             @enderror
                         </div>
                         <div class="mb-3 col-md-6">
-                            <label for="seller" class="form-label">Verkoper<span class="text-danger">*</span></label>
+                            <label for="seller" class="form-label">Vendeur<span class="text-danger">*</span></label>
                             <input type="seller" class="form-control @error('seller') is-invalid @enderror" id="seller"
                                 autocomplete="off" placeholder="Verkoper " name="seller" value="{{ old('seller') }}"
                                 required>
@@ -100,18 +100,18 @@
                             @enderror
                         </div>
 
-                        <div class="mb-3 col-md-6">
-                            Voor residentiële klanten
+                        <div class="mb-5 mt-3 col-md-6">
+                            Pour les clients résidentiels
                         </div>
 
-                        <div class="mb-3 col-md-6">
+                        <div class="mb-5 mt-3 col-md-6">
                             0800 22 800
                         </div>
-                        <div class="mb-3 col-md-6">
-                            Voor residentiële klanten
+                        <div class="mb-5 col-md-6">
+                            Pour les clients professionnels
                         </div>
-                        <div class="mb-3 col-md-6">
-                            0800 22 500
+                        <div class="mb-5 col-md-6">
+                            0800 33 800
                         </div>
                         {{-- title to be added --}}
 
@@ -119,20 +119,20 @@
 
                         <div class="mb-2 col-md-12">
                             <input type="radio" name="person_type" value="0" required>
-                            <label for="person_type" class="form-label">Natuurlijke persoon (min. 18 j. - recto-kopie
-                                identiteitskaart)</label>
+                            <label for="person_type" class="form-label">Personne physique (min. 18 ans - copie recto de
+                                la carte d’identité)</label>
                         </div>
 
                         <div class="mb-2 col-md-12">
                             <input type="radio" name="person_type" value="1" required>
-                            <label for="person_type" class="form-label">Rechtspersoon (kopie statuten Staatsblad +
-                                identiteitskaart) </label>
+                            <label for="person_type" class="form-label">Société (copie statuts du Moniteur + carte
+                                d’identité) </label>
                         </div>
 
                         {{-- date --}}
-                        <div class="mb-2 col-md-6">
-                            <label for="validity_of_id" class="form-label mt-2">Geldigheidsdatum van de
-                                identiteitskaart<span class="text-danger">*</span></label>
+                        <div class="mb-2 mt-3 col-md-6">
+                            <label for="validity_of_id" class="form-label mt-2">Date de validité de la carte d’identité<span
+                                    class="text-danger">*</span></label>
                             <input class="form-control @error('validity_of_id') is-invalid @enderror mb-4 mb-md-0"
                                 data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
                                 inputmode="numeric" id="validity_of_id" name="validity_of_id"
@@ -140,7 +140,7 @@
 
                         </div>
 
-                        <div class="mb-2 col-md-6">
+                        <div class="mb-2 mt-4 col-md-6">
                             <label for="be" class="form-label">BE<span class="text-danger">*</span></label>
                             <input type="be" class="form-control @error('be') is-invalid @enderror" id="be"
                                 autocomplete="off" placeholder="BE" name="be" value="{{ old('be') }}" required>
@@ -150,28 +150,29 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="mb-2 mt-3 col-md-6">
+                        <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="VAT_is_exempted" value="1" required>
-                            <label for="VAT_is_exempted" class="form-label">Btw-vrijstelling g (gelieve attest bij te
-                                voegen)</label>
+                            <label for="VAT_is_exempted" class="form-label">Exemption de TVA (veuillez joindre
+                                l’attestation)</label>
                         </div>
 
-                        <div class="mb-2 mt-3 col-md-3">
+                        <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="is_source_of_income" value="0" required>
-                            <label for="is_source_of_income" class="form-label">Zelfstandige/Vrij beroep</label>
+                            <label for="is_source_of_income" class="form-label"> Indépendant/Profession
+                                libérale</label>
                         </div>
-                        <div class="mb-2 mt-3 col-md-3">
+                        <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="is_source_of_income" value="1" required>
-                            <label for="is_source_of_income" class="form-label">Bedrijf</label>
+                            <label for="is_source_of_income" class="form-label">Société </label>
                         </div>
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="is_title" value="0" required>
-                            <label for="is_title" class="form-label">Mr.</label>
+                            <label for="is_title" class="form-label">M.</label>
                             <input type="radio" name="is_title" class="ml-5" value="1" required>
-                            <label for="is_title" class="form-label">Mvr.</label>
+                            <label for="is_title" class="form-label">Mme.</label>
                         </div>
                         <div class="mb-2 mt-5 col-md-3">
-                            <label for="number_of_customer" class="form-label">Nr. van de klant<span
+                            <label for="number_of_customer" class="form-label">Nº de client<span
                                     class="text-danger">*</span></label>
                             <input type="number_of_customer"
                                 class="form-control @error('number_of_customer') is-invalid @enderror"
@@ -185,7 +186,7 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
-                            <label for="name" class="form-label">Naam<span class="text-danger">*</span></label>
+                            <label for="name" class="form-label">Nom<span class="text-danger">*</span></label>
                             <input type="name" class="form-control @error('name') is-invalid @enderror" id="name"
                                 autocomplete="off" placeholder="Naam" name="name" value="{{ old('name') }}" required>
                             @error('name')
@@ -195,7 +196,7 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-5 col-md-3">
-                            <label for="first_name" class="form-label">Voornaam<span
+                            <label for="first_name" class="form-label">Prénom<span
                                     class="text-danger">*</span></label>
                             <input type="first_name" class="form-control @error('first_name') is-invalid @enderror"
                                 id="first_name" autocomplete="off" placeholder="Voornaam" name="first_name"
@@ -208,7 +209,7 @@
                         </div>
 
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="name_of_company" class="form-label"> Naam van bedrijf<span
+                            <label for="name_of_company" class="form-label"> Nom de société<span
                                     class="text-danger">*</span></label>
                             <input type="name_of_company"
                                 class="form-control @error('name_of_company') is-invalid @enderror" id="name_of_company"
@@ -222,7 +223,7 @@
                         </div>
 
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="street" class="form-label">Straat<span class="text-danger">*</span></label>
+                            <label for="street" class="form-label">Rue<span class="text-danger">*</span></label>
                             <input type="street" class="form-control @error('street') is-invalid @enderror" id="street"
                                 autocomplete="off" placeholder="Straat" name="street" value="{{ old('street') }}"
                                 required>
@@ -234,7 +235,7 @@
                         </div>
 
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="street" class="form-label">Nr.<span class="text-danger">*</span></label>
+                            <label for="street" class="form-label">N<span class="text-danger">*</span></label>
                             <input type="no" class="form-control @error('no') is-invalid @enderror" id="no"
                                 autocomplete="off" placeholder="Nr." name="no" value="{{ old('no') }}" required>
                             @error('no')
@@ -244,7 +245,7 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="bus" class="form-label">Bus<span class="text-danger">*</span></label>
+                            <label for="bus" class="form-label">Bte<span class="text-danger">*</span></label>
                             <input type="bus" class="form-control @error('bus') is-invalid @enderror" id="bus"
                                 autocomplete="off" placeholder="Bus" name="bus" value="{{ old('bus') }}" required>
                             @error('bus')
@@ -266,7 +267,7 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="place" class="form-label">Plaats<span class="text-danger">*</span></label>
+                            <label for="place" class="form-label">Localité<span class="text-danger">*</span></label>
                             <input type="place" class="form-control @error('place') is-invalid @enderror" id="place"
                                 autocomplete="off" placeholder="Plaats" name="place" value="{{ old('place') }}" required>
                             @error('postcode')
@@ -276,7 +277,7 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="country" class="form-label">Land<span class="text-danger">*</span></label>
+                            <label for="country" class="form-label">Pays<span class="text-danger">*</span></label>
                             <input type="country" class="form-control @error('place') is-invalid @enderror" id="country"
                                 autocomplete="off" placeholder="Plaats" name="country" value="{{ old('country') }}"
                                 required>
@@ -287,7 +288,7 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="email" class="form-label">Email-Address<span
+                            <label for="email" class="form-label">Adresse e-mail:<span
                                     class="text-danger">*</span></label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
                                 autocomplete="off" placeholder="Email-Address" name="email" value="{{ old('email') }}"
@@ -299,7 +300,7 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-4 col-md-4">
-                            <label for="telephone" class="form-label">Telefoon<span
+                            <label for="telephone" class="form-label">Téléphone<span
                                     class="text-danger">*</span></label>
                             <input type="telephone" class="form-control @error('place') is-invalid @enderror"
                                 id="telephone" autocomplete="off" placeholder="Telefoon" name="telephone"
@@ -311,7 +312,7 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-4 col-md-4">
-                            <label for="gsm_2" class="form-label">Gsm<span class="text-danger">*</span></label>
+                            <label for="gsm_2" class="form-label">GSM<span class="text-danger">*</span></label>
                             <input type="gsm_2" class="form-control @error('gsm_2') is-invalid @enderror" id="gsm_2"
                                 autocomplete="off" placeholder="Gsm" name="gsm_2" value="{{ old('gsm_2') }}" required>
                             @error('gsm_2')
@@ -321,7 +322,7 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-3 col-md-4">
-                            <label for="date_of_birth" class="form-label mt-2">Geboortedatum<span
+                            <label for="date_of_birth" class="form-label mt-2"> Date de naissance<span
                                     class="text-danger">*</span></label>
                             <input class="form-control @error('date_of_birth') is-invalid @enderror mb-4 mb-md-0"
                                 data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
@@ -330,7 +331,7 @@
                         </div>
 
                         <div class="mb-2 mt-3 col-md-4">
-                            <label for="contact_person_name" class="form-label">Naam/voornaam (Contactpers.)<span
+                            <label for="contact_person_name" class="form-label">Nom/prénom (pers. contact)<span
                                     class="text-danger">*</span></label>
                             <input type="contact_person_name" class="form-control @error('place') is-invalid @enderror"
                                 id="contact_person_name" autocomplete="off" placeholder="Naam/voornaam"
@@ -342,8 +343,8 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-3 col-md-4">
-                            <label for="contact_person_telephone" class="form-label">Tel. nr. Contactpersoon<span
-                                    class="text-danger">*</span></label>
+                            <label for="contact_person_telephone" class="form-label">Tél. de la personne de
+                                contact<span class="text-danger">*</span></label>
                             <input type="contact_person_telephone"
                                 class="form-control @error('contact_person_telephone') is-invalid @enderror"
                                 id="contact_person_telephone" autocomplete="off" placeholder="Tel. nr. Contactpersoon"
@@ -356,22 +357,22 @@
                         </div>
                         <div class="mb-2 mt-5 col-md-2">
                             <input type="radio" name="is_title_2" value="0" required>
-                            <label for="is_title" class="form-label">Mr.</label>
+                            <label for="is_title" class="form-label">M.</label>
                         </div>
                         <div class="mb-2 mt-5 col-md-2">
                             <input type="radio" name="is_title_2" value="1" required>
-                            <label for="is_title" class="form-label">Mvr.</label>
+                            <label for="is_title" class="form-label">Mme.</label>
                         </div>
                         <div class="mb-2 mt-5 col-md-6">
-                            <b style="font-size: 24px;">Installatieadres idem?</b>
+                            <b style="font-size: 24px;">Adresse d’installation idem?</b>
 
                             <input type="radio" name="is_install_address_same" class="ml-2" value="0" required>
-                            <label for="is_title" class="form-label">Ja</label>
+                            <label for="is_title" class="form-label">Oui</label>
                             <input type="radio" name="is_install_address_same" class="ml-2" value="1" required>
-                            <label for="is_title" class="form-label">Neen</label>
+                            <label for="is_title" class="form-label">Non, adresse</label>
                         </div>
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="install_address" class="form-label">Adres<span
+                            <label for="install_address" class="form-label">Adresse<span
                                     class="text-danger">*</span></label>
                             <input type="install_address"
                                 class="form-control @error('install_address') is-invalid @enderror" id="install_address"
@@ -386,17 +387,17 @@
 
 
                         <div class="mb-2 mt-5 col-md-4">
-                            <b style="font-size: 24px;">Facturatie</b>
-                            <span class="ml-2">Digitaal:</span>
+                            <b style="font-size: 24px;">Facturation</b>
+                            <span class="ml-2"> Digitale:</span>
 
                             <input type="radio" name="invoice_receive_method" class="ml-2" value="0" required>
-                            <label for="invoice_receive_method" class="form-label">Ja</label>
+                            <label for="invoice_receive_method" class="form-label"> Ou</label>
                             <input type="radio" name="invoice_receive_method" class="ml-2" value="1" required>
-                            <label for="invoice_receive_method" class="form-label">Neen</label>
+                            <label for="invoice_receive_method" class="form-label"> Non</label>
                         </div>
 
                         <div class="mb-2 mt-3 col-md-4">
-                            <label for="email_2" class="form-label">Email-Address<span
+                            <label for="email_2" class="form-label">adresse e-mail<span
                                     class="text-danger">*</span></label>
                             <input type="email_2" class="form-control @error('email_2') is-invalid @enderror" id="email_2"
                                 autocomplete="off" placeholder="Email-Address" name="email_2"
@@ -418,7 +419,8 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="bank_account_number" class="form-label">Domiciliëring: Bankrekeningnummer:
+                            <label for="bank_account_number" class="form-label">Domiciliation: Nº de compte en banque:
+
                                 BE<span class="text-danger">*</span></label>
                             <input type="bank_account_number"
                                 class="form-control @error('bank_account_number') is-invalid @enderror"
@@ -432,21 +434,21 @@
                         </div>
 
                         <div class="mb-2 mt-3 col-md-3">
-                            <b style="font-size: 20px;">Facturatieadres idem?</b>
+                            <b style="font-size: 20px;">Adresse de facturation idem?</b>
 
 
                             <div class="mt-2">
                                 <input type="radio" name="is_billing_address_same_or_not" class="ml-2" value="0"
                                     required>
-                                <label for="is_billing_address_same_or_not" class="form-label">Ja</label>
+                                <label for="is_billing_address_same_or_not" class="form-label">Ou</label>
                                 <input type="radio" name="is_billing_address_same_or_not" class="ml-2" value="1"
                                     required>
-                                <label for="is_billing_address_same_or_not" class="form-label">Neen</label>
+                                <label for="is_billing_address_same_or_not" class="form-label">Non</label>
                             </div>
                         </div>
 
                         <div class="mb-2 mt-3 col-md-3">
-                            <label for="adres" class="form-label">Adres<span class="text-danger">*</span></label>
+                            <label for="adres" class="form-label">adresse<span class="text-danger">*</span></label>
                             <input type="adres" class="form-control @error('adres') is-invalid @enderror" id="adres"
                                 autocomplete="off" placeholder="Adres" name="adres" value="{{ old('adres') }}" required>
                             @error('adres')
@@ -457,8 +459,8 @@
                         </div>
 
                         <div class="mb-2 mt-3  col-md-6">
-                            <label for="name_or_number_of_previous_owner" class="form-label">Naam of nummer vorige
-                                eigenaar<span class="text-danger">*</span></label>
+                            <label for="name_or_number_of_previous_owner" class="form-label">Nom ou numéro de l’ancien
+                                propriétaire<span class="text-danger">*</span></label>
                             <input type="name_or_number_of_previous_owner"
                                 class="form-control @error('name_or_number_of_previous_owner') is-invalid @enderror"
                                 id="name_or_number_of_previous_owner" autocomplete="off"
@@ -473,15 +475,14 @@
 
                         <div class="mb-2 mt-3 col-md-6">
 
-                            <label for="name_or_number_of_previous_owner" class="form-label">Ik wens geen commerciële
-                                informatie
-                                te ontvangen over de producten, diensten en promoties van Proximus via<span
+                            <label for="name_or_number_of_previous_owner" class="form-label">Je ne souhaite pas
+                                recevoir d’information commerciale, services et promotions de Proximus par<span
                                     class="text-danger">*</span></label>
 
                             <div class="mt-2">
                                 <input type="radio" name="wish_to_receive_info_means" class="ml-2" value="0"
                                     required>
-                                <label for="wish_to_receive_info_means" class="form-label">Telefoon of gsm</label>
+                                <label for="wish_to_receive_info_means" class="form-label">Téléphone ou GSM</label>
                                 <input type="radio" name="wish_to_receive_info_means" class="ml-2" value="1"
                                     required>
                                 <label for="wish_to_receive_info_means" class="form-label">E-mail</label>
@@ -490,20 +491,25 @@
                                 <label for="wish_to_receive_info_means" class="form-label">Sms</label>
                                 <input type="radio" name="wish_to_receive_info_means" class="ml-2" value="3"
                                     required>
-                                <label for="wish_to_receive_info_means" class="form-label">Post</label>
+                                <label for="wish_to_receive_info_means" class="form-label">Courrier</label>
                             </div>
+                        </div>
+
+                        <div class="mb-4  mt-3 col-md-12">
+
+                            <h4 style="text-align: center;"><b>B. PACKS</b></h4>
                         </div>
 
 
                         <div class="mb-2   col-md-3">
-                            <h4 class="mb-4"><b class="">B. PACKS</b></h4>
+
                             <input type="radio" name="tv_packs_options" class="ml-2" value="0" required>
                             <label for="tv_packs_options" class="form-label">Flex S (INT + TV)</label>
 
-
                         </div>
 
-                        <div class="mb-2 mt-5 col-md-9">
+                        <div class="mb-2 mt-5 col-md-12">
+
                             <input type="radio" name="tv_packs_options" class="ml-2" value="1" required>
                             <label for="tv_packs_options" class="form-label">Flex (INT + TV + TEL) + (Wifi Booster +
                                 Family
@@ -576,26 +582,44 @@
 
                             <input type="radio" name="epic_packs_options" class="ml-2" value="0" required>
                             <label for="epic_packs_options" class="form-label">Pack Epic combo 'Light TV experience'
-                                Internet +
-                                TV app + Mobile</label>
+                                Internet + TV app + Mobile</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="epic_packs_options" class="ml-2" value="1" required>
                             <label for="epic_packs_options" class="form-label">Pack Epic combo 'Full TV experience'
-                                Internet
-                                +
-                                TV + Mobile + Gaming</label>
+                                Internet + TV + Mobile + Gaming</label>
                         </div>
 
                         <div class=" col-md-12">
-                            <h5 style="text-align: center;"><b>Andere Packs</b></h5>
+                            <h5 style="text-align: center;">Offre conjointe Flex avec mobile ou Epic combo full TV
+                                experience</h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
+                            <input type="radio" name="extra_gb_packs" class="ml-2" value="1" required>
+                            <label for="extra_gb_packs" class="form-label">Samsung Smart TV 50"</label>
+                        </div>
+                        <div class="mb-2 mt-5   col-md-4">
+
+                            <input type="radio" name="extra_gb_packs" class="ml-2" value="1" required>
+                            <label for="extra_gb_packs" class="form-label">Microsoft Surface Go 2</label>
+                        </div>
+                        <div class="mb-2 mt-5   col-md-4">
+
+                            <input type="radio" name="extra_gb_packs" class="ml-2" value="1" required>
+                            <label for="extra_gb_packs" class="form-label"> iPad 32GB WiFi</label>
+                        </div>
 
 
+
+
+                        <div class=" col-md-12">
+                            <h5 style="text-align: center;"><b>Autres Packs</b></h5>
+                        </div>
+
+                        <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="other_packages_starter" class="ml-2" value="0" required>
                             <label for="other_packages_starter" class="form-label">Pack (Start) Internet + TV +
@@ -616,7 +640,7 @@
 
 
                         <div class=" col-md-12">
-                            <h5 style="text-align: center;"><b>met Mobilus</b></h5>
+                            <h5 style="text-align: center;"><b>avec Mobilus</b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
@@ -627,12 +651,12 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="met_mobilus_options" class="ml-2" value="1" required>
-                            <label for="met_mobilus_options" class="form-label">Unlimited</label>
+                            <label for="met_mobilus_options" class="form-label">XL Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="met_mobilus_options" class="ml-2" value="2" required>
-                            <label for="met_mobilus_options" class="form-label">Unlimited Premium</label>
+                            <label for="met_mobilus_options" class="form-label">5G Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
@@ -652,7 +676,7 @@
                         </div>
 
                         <div class=" col-md-12">
-                            <h5 style="text-align: center;"><b>Met Mobilus Full Control</b></h5>
+                            <h5 style="text-align: center;"><b>avec Mobilus FullControl</b></h5>
                         </div>
 
 
@@ -660,7 +684,7 @@
 
                             <input type="radio" name="mobilus_full_control_options" class="ml-2" value="0"
                                 required>
-                            <label for="mobilus_full_control_options" class="form-label">Met Mobilus
+                            <label for="mobilus_full_control_options" class="form-label">avec Mobilus
                                 FullControl</label>
                         </div>
 
@@ -687,13 +711,13 @@
 
                             <input type="radio" name="mobilus_full_control_options" class="ml-2" value="4"
                                 required>
-                            <label for="mobilus_full_control_options" class="form-label">Flex S (INT + TV) - Tweede
-                                verblijf</label>
+                            <label for="mobilus_full_control_options" class="form-label">Flex S (INT + TV) - Seconde
+                                résidence</label>
                         </div>
 
 
                         <div class=" col-md-12">
-                            <h5 style="text-align: center;"><b>2. Voor professionele klanten</b></h5>
+                            <h5 style="text-align: center;"><b>2. Pour les clients professionnels</b></h5>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
@@ -748,9 +772,30 @@
                                 Premium</label>
                         </div>
 
+                        <div class=" col-md-12">
+                            <h5 style="text-align: center;"><b>Offre conjointe Business Flex (INT+MOB+TV/TEL)</b></h5>
+                        </div>
+
+                        <div class="mb-2 mt-5   col-md-4">
+
+                            <input type="radio" name="extra_gb_packs_2" class="ml-2" value="1" required>
+                            <label for="extra_gb_packs_2" class="form-label">Samsung Smart TV 50"</label>
+                        </div>
+                        <div class="mb-2 mt-5   col-md-4">
+
+                            <input type="radio" name="extra_gb_packs_2" class="ml-2" value="1" required>
+                            <label for="extra_gb_packs_2" class="form-label">Microsoft Surface Go 2</label>
+                        </div>
+                        <div class="mb-2 mt-5   col-md-4">
+
+                            <input type="radio" name="extra_gb_packs_2" class="ml-2" value="1" required>
+                            <label for="extra_gb_packs_2" class="form-label"> iPad 32GB WiFi</label>
+                        </div>
+
+
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>Andere Opties:</b></h5>
+                            <h5 style="text-align: center;"><b>Autres options</b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-3">
@@ -804,12 +849,12 @@
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="radio" name="internet_customer_phase" class="ml-2" value="0" required>
-                            <label for="other_options_packages" class="form-label">Nieuw</label>
+                            <label for="other_options_packages" class="form-label">Nouveau</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="radio" name="internet_customer_phase" class="ml-2" value="1" required>
-                            <label for="other_options_packages" class="form-label">Conversie</label>
+                            <label for="other_options_packages" class="form-label">Conversion</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
@@ -817,17 +862,16 @@
                             <label for="other_options_packages" class="form-label">Port in (LOA)</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
-                            Vaste lijn:
+                            Ligne fixe
                             <input type="radio" name="landline_r" class="ml-2" value="0" required>
-                            <label for="landline_r" class="form-label">Ja</label>
+                            <label for="landline_r" class="form-label">Oui</label>
                             <input type="radio" name="landline_r" class="ml-2" value="1" required>
-                            <label for="landline_r" class="form-label">Neen</label>
+                            <label for="landline_r" class="form-label">non</label>
                         </div>
 
                         <div class="mb-2 mt-3 col-md-12">
-                            <label for="cell_number_w/o_landline" class="mb-4 form-label">Oproepnr. of internetnr. zonder
-                                vaste
-                                lijn<span class="text-danger">*</span></label>
+                            <label for="cell_number_w/o_landline" class="mb-4 form-label">N° d’appel ou n° Internet sans
+                                ligne fixe<span class="text-danger">*</span></label>
                             <input type="cell_number_w/o_landline"
                                 class="form-control @error('cell_number_w/o_landline') is-invalid @enderror" id="adres"
                                 autocomplete="off" placeholder="Oproepnr. of internetnr. zonder vaste lijn"
@@ -902,16 +946,16 @@
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="tv_customer_phase" class="ml-2" value="0" required>
-                            <label for="tv_customer_phase" class="form-label">Bestaande TV-klant</label>
+                            <label for="tv_customer_phase" class="form-label">Client TV existant</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="tv_customer_phase" class="ml-2" value="1" required>
-                            <label for="tv_customer_phase" class="form-label">Nieuwe klant</label>
+                            <label for="tv_customer_phase" class="form-label">Nouveau client</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-12">
 
-                            <label for="line_number" class="mb-4 form-label">Lijnnummer (voor de installatie)<span
+                            <label for="line_number" class="mb-4 form-label">Numéro de ligne<span
                                     class="text-danger">*</span></label>
                             <input type="line_number" class="form-control @error('line_number') is-invalid @enderror"
                                 id="line_number" autocomplete="off" placeholder="Lijnnummer (voor de installatie)"
@@ -926,12 +970,12 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="tv_packages" class="ml-2" value="0" required>
-                            <label for="tv_packages" class="form-label">TV met Internet</label>
+                            <label for="tv_packages" class="form-label">TV avec Internet</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="tv_packages" class="ml-2" value="1" required>
-                            <label for="tv_packages" class="form-label">TV zonder Internet</label>
+                            <label for="tv_packages" class="form-label">TV sans Internet</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
@@ -940,7 +984,7 @@
                         </div>
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>Opt</b><b style="color: grey;">ies</b></h5>
+                            <h5 style="text-align: center;"><b>Les </b><b style="color: grey;">options</b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-3">
@@ -988,21 +1032,17 @@
                             <input type="radio" name="tv_package_options" class="ml-2" value="8" required>
                             <label for="tv_package_options" class="form-label">Netflix</label>
                         </div>
-                        <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="tv_package_options" class="ml-2" value="9" required>
-                            <label for="tv_package_options" class="form-label">Net Gemist</label>
-                        </div>
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>E. VASTE LIJN</b></h5>
+                            <h5 style="text-align: center;"><b>E. LIGNE FIXE </b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="fixed_line_customer_phase" class="ml-2" value="0" required>
-                            <label for="fixed_line_customer_phase" class="form-label">Nieuw</label>
+                            <label for="fixed_line_customer_phase" class="form-label">Nouveau</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
@@ -1018,11 +1058,11 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="current_line_number" class="ml-2" value="0" required>
-                            <label for="current_line_number" class="form-label">Bestaande vaste lijn</label>
+                            <label for="current_line_number" class="form-label">Ligne fixe existante</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <label for="current_line_number_text" class="form-label">Huidig lijnnummer (verplicht)<span
+                            <label for="current_line_number_text" class="form-label">Numéro de ligne actuelle<span
                                     class="text-danger">*</span></label>
                             <input type="current_line_number_text"
                                 class="form-control @error('current_line_number_text') is-invalid @enderror"
@@ -1037,8 +1077,8 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="add_cps_document" class="ml-2" value="0" required>
-                            <label for="add_cps_document" class="form-label"> CPS removal (CPS removal document
-                                toevoegen)</label>
+                            <label for="add_cps_document" class="form-label"> CPS removal (joindre document CPS
+                                removal)</label>
                         </div>
 
                         {{-- Phone EE --}}
@@ -1062,22 +1102,20 @@
 
                             <input type="radio" name="phone_line_package_types" class="ml-2" value="3" required>
                             <label for="phone_line_package_types" class="form-label">Unlimited Calls National
-                                (inbegrepen in
-                                Flex + Business Flex)</label>
+                                (inclus dans Flex+ Business Flex)</label>
                         </div>
                         <div class="mb-2 mt-3   col-md-12">
 
                             <input type="radio" name="phone_line_package_types" class="ml-2" value="4" required>
-                            <label for="phone_line_package_types" class="form-label">Unlimited Calls
-                                National/International
-                                (Inbegrepen in Flex Premium
-                                en Business Flex Premium)</label>
+                            <label for="phone_line_package_types" class="form-label"> Unlimited Calls
+                                National/International (inclus dans Flex Premium et
+                                Business Flex Premium)</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="other_tariff_plan_radio" class="ml-2" value="0" required>
-                            <label for="other_tariff_plan_text" class="form-label">Ander tariefplan</label>
+                            <label for="other_tariff_plan_text" class="form-label">Autre plan tarifaire</label>
                             <input type="other_tariff_plan_text"
                                 class="form-control @error('other_tariff_plan_text') is-invalid @enderror"
                                 id="other_tariff_plan_text" autocomplete="off" placeholder="Ander tariefplan"
@@ -1093,7 +1131,7 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="seceret_number_radio" class="ml-2" value="0" required>
-                            <label for="seceret_number_text" class="form-label">Geheim nummer</label>
+                            <label for="seceret_number_text" class="form-label">Numéro secret</label>
                             <input type="seceret_number_text"
                                 class="form-control @error('seceret_number_text') is-invalid @enderror"
                                 id="seceret_number_text" autocomplete="off" placeholder="Geheim nummer"
@@ -1109,7 +1147,8 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="smart_services_radio" class="ml-2" value="0" required>
-                            <label for="smart_services_text" class="form-label"> Voordeelpack - Slimme Diensten</label>
+                            <label for="smart_services_text" class="form-label"> Pack avantages - Services
+                                Malins</label>
                             <input type="smart_services_text"
                                 class="form-control @error('smart_services_text') is-invalid @enderror"
                                 id="smart_services_text" autocomplete="off" placeholder=" Voordeelpack - Slimme Diensten"
@@ -1124,61 +1163,61 @@
 
                         {{--  --}}
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>F. GLASVEZEL</b></h5>
+                            <h5 style="text-align: center;"><b>F. FIBRE OPTIQUE</b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-12">
-                            <label for="">Glasvezel</label>
+                            <label for="">Fibre optique</label>
                             <input type="radio" name="optical_fibre_radio" class="ml-2" value="0" required>
-                            <label for="optical_fibre_radio" class="form-label">Ja</label>
+                            <label for="optical_fibre_radio" class="form-label">Oui</label>
                             <input type="radio" name="optical_fibre_radio" class="ml-2" value="1" required>
-                            <label for="optical_fibre_radio" class="form-label">Neen</label>
+                            <label for="optical_fibre_radio" class="form-label">Non</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
                             <label for="">Fiber Boost 1 GIGA (1 Gbps/100 Mbps) - RES packs</label>
                             <input type="radio" name="optical_fibre_package_type" class="ml-2" value="0"
                                 required>
-                            <label for="optical_fibre_package_type" class="form-label">Ja</label>
+                            <label for="optical_fibre_package_type" class="form-label">Oui</label>
                             <input type="radio" name="phone_line_package_types" class="ml-2" value="1" required>
-                            <label for="optical_fibre_package_type" class="form-label">Neen</label>
+                            <label for="optical_fibre_package_type" class="form-label">Non</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
                             <label for="">Fiber Boost 500 Mbps (500 Mbps/50 Mbps) - SE packs</label>
                             <input type="radio" name="optical_fibre_package_type_3" class="ml-2" value="0"
                                 required>
-                            <label for="optical_fibre_package_type_3" class="form-label">Ja</label>
+                            <label for="optical_fibre_package_type_3" class="form-label">Oui</label>
                             <input type="radio" name="optical_fibre_package_type_3" class="ml-2" value="1"
                                 required>
-                            <label for="optical_fibre_package_type_3" class="form-label">Neen</label>
+                            <label for="optical_fibre_package_type_3" class="form-label">Non</label>
                         </div>
 
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>G. MULTI LINE (bijlage invullen)</b></h5>
+                            <h5 style="text-align: center;"><b>G. MULTI LINE (annexe à compléter)</b></h5>
                         </div>
 
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="multi_line_license" class="ml-2" value="0" required>
-                            <label for="multi_line_license" class="form-label">2 licenties inbegrepen in een Pack
+                            <label for="multi_line_license" class="form-label"> 2 licences incluses dans le Pack
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="ip_box_radio" class="ml-2" value="1" required>
-                            <label for="ip_box_radio" class="form-label">Bizz IP box (voor PABX niet-Proximus)</label>
+                            <label for="ip_box_radio" class="form-label">Bizz IP box (pour PABX non-Proximus)</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="ip_box_radio" class="ml-2" value="2" required>
-                            <label for="ip_box_radio" class="form-label">Bizz IP box (voor PABX ISDN)</label>
+                            <label for="ip_box_radio" class="form-label">Bizz IP box (pour PABX ISDN)</label>
                         </div>
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>H. BIZZ CALL CONNECT (bijlage invullen)
+                            <h5 style="text-align: center;"><b>H. . BIZZ CALL CONNECT (annexe à compléter)
                                 </b></h5>
                         </div>
 
@@ -1186,60 +1225,59 @@
                         <div class="mb-2 mt-5   col-md-8">
 
                             <input type="radio" name="bizz_call_connect_radio" class="ml-2" value="0" required>
-                            <label for="bizz_call_connect_radio" class="form-label">2 licenties inbegrepen in een Pack
-                                …… bijkomende licentie(s) in een Pack / …… licentie(s) buiten Pack</label>
+                            <label for="bizz_call_connect_radio" class="form-label">2 licences incluses dans le Pack
+                                …… licence(s) supplémentaires dans le Pack / …… licence(s) hors Pack</label>
                         </div>
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> I. MOBIELE TELEFONIE
+                            <h5 style="text-align: center;"><b> I. TÉLÉPHONIE MOBILE
                                 </b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mob_tele_pack_type" class="ml-2" value="0" required>
-                            <label for="mob_tele_pack_type" class="form-label">In een Pack Flex (Flex S, Flex of Flex
-                                Premium
+                            <label for="mob_tele_pack_type" class="form-label">Dans un Pack Flex (Flex S, Flex of Flex
+                                Premium)
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mob_tele_pack_type" class="ml-2" value="1" required>
-                            <label for="mob_tele_pack_type" class="form-label">In een anderPack</label>
+                            <label for="mob_tele_pack_type" class="form-label">Dans un autre Pack</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mob_tele_pack_type" class="ml-2" value="2" required>
-                            <label for="mob_tele_pack_type" class="form-label">Buiten een Pack </label>
+                            <label for="mob_tele_pack_type" class="form-label">Dans un Pack Business Flex </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mob_tele_pack_type" class="ml-2" value="3" required>
-                            <label for="mob_tele_pack_type" class="form-label"> In een Pack Business Flex</label>
+                            <label for="mob_tele_pack_type" class="form-label"> Nouveau client</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mob_tele_pack_type" class="ml-2" value="4" required>
-                            <label for="mob_tele_pack_type" class="form-label">Buiten een Pack Business Flex</label>
+                            <label for="mob_tele_pack_type" class="form-label">Hors Pack</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mob_tele_pack_type" class="ml-2" value="5" required>
-                            <label for="mob_tele_pack_type" class="form-label"> Nieuwe klant</label>
+                            <label for="mob_tele_pack_type" class="form-label"> Hors Pack Business Flex</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="mob_tele_pack_type" class="ml-2" value="6" required>
-                            <label for="mob_tele_pack_type" class="form-label">Overdracht van
-                                Base/Orange/Telenet*</label>
+                            <label for="mob_tele_pack_type" class="form-label">Transfert de Base/Orange/Telenet</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="payngo_radio" class="ml-2" value="0" required>
-                            <label for="payngo_text" class="form-label">Omschakeling Pay&Go gsm-n</label>
+                            <label for="payngo_text" class="form-label">Conversion Pay&Go N° de GSM</label>
                             <input type="payngo_text" class="form-control @error('payngo_text') is-invalid @enderror"
                                 id="payngo_text" autocomplete="off" placeholder="Omschakeling Pay&Go gsm-n"
                                 name="payngo_text" value="{{ old('payngo_text') }}" required>
@@ -1253,7 +1291,7 @@
                         <div class="mb-2 mt-5   col-md-8">
 
                             <input type="radio" name="cell_number_g_radio" class="ml-2" value="0" required>
-                            <label for="cell_number_g" class="form-label">Gsm-nr</label>
+                            <label for="cell_number_g" class="form-label"> N° de GSM</label>
                             <input type="cell_number_g" class="form-control @error('cell_number_g') is-invalid @enderror"
                                 id="cell_number_g" autocomplete="off" placeholder="Gsm-nr" name="cell_number_g"
                                 value="{{ old('cell_number_g') }}" required>
@@ -1269,13 +1307,13 @@
 
                             <input type="radio" name="existing_proximus_customer" class="ml-2" value="0"
                                 required>
-                            <label for="existing_proximus_customer" class="form-label">Bestaande Proximus-klant</label>
+                            <label for="existing_proximus_customer" class="form-label">Client Proximus existant</label>
                         </div>
 
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <span class="mr-2"><b>Taal</b></span> <input type="radio" name="lang"
+                            <span class="mr-2"><b>Langue</b></span> <input type="radio" name="lang"
                                 class="ml-2" value="0" required>
                             <label for="lang" class="form-label">NL
                             </label>
@@ -1298,7 +1336,7 @@
 
 
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="sim_card_number" class="form-label">Simkaartnummer<span
+                            <label for="sim_card_number" class="form-label">Numéro de carte SIM<span
                                     class="text-danger">*</span></label>
                             <input type="sim_card_number"
                                 class="form-control @error('sim_card_number') is-invalid @enderror" id="sim_card_number"
@@ -1320,7 +1358,7 @@
                         </div>
 
                         <div class="mb-2 mt-3 col-md-12">
-                            <label for="make_model_of_device" class="form-label">Merk en type van het toestel<span
+                            <label for="make_model_of_device" class="form-label">Marque et type de l’appareil<span
                                     class="text-danger">*</span></label>
                             <input type="make_model_of_device"
                                 class="form-control @error('make_model_of_device') is-invalid @enderror"
@@ -1336,14 +1374,14 @@
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> RESIDENTIELE MOBIELE TELEFONIE (buiten het pack)
+                            <h5 style="text-align: center;"><b> RESIDENTIAL MOBILE VOICE (hors Pack)
                                 </b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="residential_met_mobilus" class="ml-2" value="0" required>
-                            <label for="residential_met_mobilus" class="form-label">met Mobilus</label>
+                            <label for="residential_met_mobilus" class="form-label">avec Mobilus</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
@@ -1363,18 +1401,18 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="residential_met_mobilus" class="ml-2" value="0" required>
-                            <label for="residential_met_mobilus" class="form-label">Unlimited</label>
+                            <label for="residential_met_mobilus" class="form-label">XL Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="residential_met_mobilus" class="ml-2" value="0" required>
-                            <label for="residential_met_mobilus" class="form-label"> Unlimited Premium</label>
+                            <label for="residential_met_mobilus" class="form-label"> 5G Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="radio" name="residential_met_mobilus_limit_full" class="ml-2" value="0"
                                 required>
-                            <label for="residential_met_mobilus_limit_full" class="form-label"> met Mobilus
+                            <label for="residential_met_mobilus_limit_full" class="form-label"> avec Mobilus
                                 FullControl</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
@@ -1398,7 +1436,7 @@
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>App (1 naar keuze met Mobilus)
+                            <h5 style="text-align: center;"><b>App (1 au choix avec Mobilus)
                                 </b></h5>
                         </div>
 
@@ -1460,46 +1498,46 @@
 
                         {{-- Joint Offier --}}
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>Joint offer
+                            <h5 style="text-align: center;"><b>Offre conjointe
                                 </b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer" class="ml-2" value="0" required>
-                            <label for="joint_data_offer" class="form-label">Special Deal (0 MB) €0/maand
+                            <label for="joint_data_offer" class="form-label">Special Deal (0 MB) €0/mois
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer" class="ml-2" value="1" required>
-                            <label for="joint_data_offer" class="form-label">DataPhone (500 MB) €5/maand</label>
+                            <label for="joint_data_offer" class="form-label">DataPhone (500 MB) €5/mois</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer" class="ml-2" value="2" required>
                             <label for="joint_data_offer" class="form-label">
-                                DataPhone (1GB) €10/maand </label>
+                                DataPhone (1 GB) €10/mois </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer" class="ml-2" value="3" required>
-                            <label for="joint_data_offer" class="form-label">DataPhone (1,5 GB) €15/maand</label>
+                            <label for="joint_data_offer" class="form-label">DataPhone (1,5 GB) €15/mois</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer" class="ml-2" value="4" required>
-                            <label for="joint_data_offer" class="form-label"> DataPhone (2 GB): €20/maand</label>
+                            <label for="joint_data_offer" class="form-label"> DataPhone (2 GB) €20/mois</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer" class="ml-2" value="5" required>
-                            <label for="joint_data_offer" class="form-label">DataPhone (2,5 GB): €25/maand</label>
+                            <label for="joint_data_offer" class="form-label">DataPhone (2,5 GB) €25/mois</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
@@ -1518,7 +1556,7 @@
                             </label>
                         </div>
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> PROFESSIONELE MOBIELE TELEFONIE
+                            <h5 style="text-align: center;"><b> BUSINESS MOBILE VOICE
                                 </b></h5>
                         </div>
                         <div>{{-- bizz_mobile_size_p_i --}}</div>
@@ -1558,7 +1596,7 @@
                         </div>
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>Joint offer
+                            <h5 style="text-align: center;"><b>Offre conjointe
                                 </b></h5>
                         </div>
 
@@ -1566,47 +1604,39 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="0" required>
-                            <label for="joint_data_offer_p_i" class="form-label">Special Deal (0 MB) € 0/maand
+                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (0 MB) €0/mois HTVA
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="1" required>
-                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (500 MB) €4,13/maand excl.
-                                btw
+                            <label for="joint_data_offer_p_i" class="form-label"> DataPhone (500 MB) €4,13/mois HTVA
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="2" required>
-                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (1 GB) €8,26/maand excl. btw
+                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (1 GB) €8,26/mois HTVA
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="3" required>
-                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (1,5GB) €12,40/maand excl.
-                                btw
+                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (2 GB) €16,53/mois HTVA
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="4" required>
-                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (2 GB) € 16,53/maand excl.
+                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (2,5 GB) €20,66/mois HTVA
                                 btw
                             </label>
                         </div>
-                        <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="5" required>
-                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (2,5 GB) € 20,66/maand excl.
-                                btw
-                            </label>
-                        </div>
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>App (1 naar keuze met Bizz Mobile)
+                            <h5 style="text-align: center;"><b>App (1 au choix avec Bizz Mobile)
                                 </b></h5>
                         </div>
 
@@ -1657,10 +1687,8 @@
 
                             <input type="radio" name="bizz_international_options" class="ml-2" value="0"
                                 required>
-                            <label for="bizz_international_options" class="form-label">Optie Bizz International met
-                                Bizz
-                                Mobile
-                                L, Unlimited & International
+                            <label for="bizz_international_options" class="form-label">Option Bizz International (avec
+                                Bizz Mobile L, Unlimited & International)
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
@@ -1682,7 +1710,7 @@
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>Business opties
+                            <h5 style="text-align: center;"><b>Options Business
                                 </b></h5>
                         </div>
 
@@ -1701,8 +1729,8 @@
                             </label>
                         </div>
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="second_number_text" class="form-label">2nr<span
-                                    class="text-danger">*</span></label>
+                            <label for="second_number_text" class="form-label">2e
+                                n°<span class="text-danger">*</span></label>
                             <input type="second_number_text"
                                 class="form-control @error('second_number_text') is-invalid @enderror" id="be"
                                 autocomplete="off" placeholder="BE" name="second_number_text"
@@ -1717,14 +1745,14 @@
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="radio" name="second_number_radio" class="ml-2" value="0" required>
-                            <label for="second_number_radio" class="form-label"> Privé of
+                            <label for="second_number_radio" class="form-label"> Privé ou
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="radio" name="second_number_radio" class="ml-2" value="1" required>
-                            <label for="second_number_radio" class="form-label">Professioneel
+                            <label for="second_number_radio" class="form-label">Professionnel
 
                             </label>
                         </div>
@@ -1732,13 +1760,13 @@
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> MOBILE INTERNET VOOR PC/TABLET
+                            <h5 style="text-align: center;"><b> MOBILE INTERNET POUR PC/TABLETTE
                                 </b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            Mobile Interne
+                            Mobile Internet
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
@@ -1911,20 +1939,20 @@
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> J. MODEM EN CONFIGURATIE
+                            <h5 style="text-align: center;"><b>J. MODEM ET CONFIGURATION
                                 </b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            Aansluitpunt aanwezig in de woning
+                            Connexion disponible dans l’habitation
                         </div>
 
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="radio" name="is_connection_present_in_house" class="ml-2" value="0"
                                 required>
-                            <label for="is_connection_present_in_house" class="form-label"> Ja
+                            <label for="is_connection_present_in_house" class="form-label"> oui
 
                             </label>
                         </div>
@@ -1933,7 +1961,7 @@
 
                             <input type="radio" name="is_connection_present_in_house" class="ml-2" value="1"
                                 required>
-                            <label for="is_connection_present_in_house" class="form-label"> Neen
+                            <label for="is_connection_present_in_house" class="form-label"> non
 
                             </label>
                         </div>
@@ -1944,9 +1972,8 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_modem_config_type" class="ml-2" value="0" required>
-                            <label for="mobile_modem_config_type" class="form-label"> Pack Take Away b-box3 +
-                                hd-decoder
-
+                            <label for="mobile_modem_config_type" class="form-label"> Pack Take Away b-box3 + décodeur
+                                HD
                             </label>
                         </div>
 
@@ -1959,16 +1986,15 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_modem_config_type" class="ml-2" value="2" required>
-                            <label for="mobile_modem_config_type" class="form-label"> Huur Hd-decoder - zonder harde
-                                schijf
+                            <label for="mobile_modem_config_type" class="form-label">Location Décodeur HD - sans disque
+                                dur
 
                             </label>
                         </div>
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> Draadloze oplossing Proximus TV via het
-                                    electriciteitsnetwerk:
+                            <h5 style="text-align: center;"><b> Solution sans fil Proximus TV via le réseau électrique
                                 </b></h5>
                         </div>
 
@@ -1982,9 +2008,9 @@
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="device_delivery_type" class="ml-2" value="1" required>
-                            <label for="device_delivery_type" class="form-label">Mobile Connect USB-modem voor Mobile
+                            <label for="device_delivery_type" class="form-label">Modem USB Mobile Connect pour Mobile
                                 Internet
-                                op de laptop
+                                sur ordinateur portable
                             </label>
                         </div>
 
@@ -1997,20 +2023,20 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="device_delivery_type" class="ml-2" value="1" required>
-                            <label for="device_delivery_type" class="form-label">Meegenomen
+                            <label for="device_delivery_type" class="form-label">Emporté
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="device_delivery_type" class="ml-2" value="2" required>
-                            <label for="device_delivery_type" class="form-label">Thuislevering
+                            <label for="device_delivery_type" class="form-label"> Livraison à domicile
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-8">
 
                             <input type="radio" name="other_delivery_type_radio" class="ml-2" value="0" required>
-                            <label for="other_delivery_type" class="form-label">Ander afhaalpunt
+                            <label for="other_delivery_type" class="form-label">Autre point de retrait
                             </label>
                             <input type="other_delivery_type"
                                 class="form-control @error('other_delivery_type') is-invalid @enderror"
@@ -2033,15 +2059,14 @@
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="kit_to_install_k" class="ml-2" value="1" required>
-                            <label for="kit_to_install_k" class="form-label">Kit om te installeren: €59
-                                (activeringskosten
-                                inbegrepen)
+                            <label for="kit_to_install_k" class="form-label">Kit à installer: €59 (frais d’activation
+                                inclus/TVAC)
                             </label>
                         </div>
 
                         <div class="mb-2 col-md-6">
-                            <label for="date_to_install_k" class="form-label mt-2">levering via Taxipost, gewenste
-                                datum<span class="text-danger">*</span></label>
+                            <label for="date_to_install_k" class="form-label mt-2">livraison via Taxipost, date
+                                désirée<span class="text-danger">*</span></label>
                             <input class="form-control @error('date_to_install_k') is-invalid @enderror mb-4 mb-md-0"
                                 data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
                                 inputmode="numeric" id="date_to_install_k" name="date_to_install_k"
@@ -2053,7 +2078,7 @@
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="time_of_day_k" class="ml-2" value="0" required>
-                            <label for="time_of_day_k" class="form-label">voormiddag
+                            <label for="time_of_day_k" class="form-label">matin
                             </label>
                         </div>
 
@@ -2061,28 +2086,27 @@
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="time_of_day_k" class="ml-2" value="1" required>
-                            <label for="time_of_day_k" class="form-label">namiddag
+                            <label for="time_of_day_k" class="form-label">après-midi
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5 mb-2   col-md-6">
-                            Installatie door een technieker (activeringskosten inbegrepen:
+                            Installation par un technicien(frais d’activation inclus)
 
                         </div>
 
                         <div class="mb-2 mt-5   col-md-6">
 
                             <input type="radio" name="free_resources" class="ml-2" value="0" required>
-                            <label for="free_resources" class="form-label">gratis in de Packs Flex, Epic Combo en
-                                tweede
-                                verblijf /Business Flex
+                            <label for="free_resources" class="form-label">gratuit avec les Packs Flex, Epic Combo et
+                                seconde résidence/Business Flex
                             </label>
                         </div>
 
 
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="desired_employment_date" class="form-label mt-2">Gewenste datum
-                                indiensttreding<span class="text-danger">*</span></label>
+                            <label for="desired_employment_date" class="form-label mt-2">Date de mise en service
+                                souhaitée<span class="text-danger">*</span></label>
                             <input
                                 class="form-control @error('desired_employment_date') is-invalid @enderror mb-4 mb-md-0"
                                 data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
@@ -2094,7 +2118,7 @@
                         <div class="mb-2 mt-4   col-md-6">
 
                             <input type="radio" name="refer_number_k" class="ml-2" value="0" required>
-                            <label for="refer_number_k" class="form-label">Referentienummer (optioneel)
+                            <label for="refer_number_k" class="form-label">N° de référence (optionnel)
                             </label>
                             <input type="refer_number_k"
                                 class="form-control @error('refer_number_k') is-invalid @enderror" id="refer_number_k"
@@ -2109,19 +2133,20 @@
 
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> L. PROMOTIE
+                            <h5 style="text-align: center;"><b> L. PROMOTION
                                 </b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
-                            Slechts één promotie kiezen aub
+                            Une seule promotion à choisir parmi :
+
 
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="promotion_l" class="ml-2" value="0" required>
-                            <label for="promotion_l" class="form-label">Promotie van de maand
+                            <label for="promotion_l" class="form-label">Promotion du mois
                             </label>
                         </div>
 
@@ -2131,13 +2156,12 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="promotion_l" class="ml-2" value="1" required>
-                            <label for="promotion_l" class="form-label"> Specifieke tactische promotie
+                            <label for="promotion_l" class="form-label"> Promotion tactique spécifique
                             </label>
                         </div>
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> M. VERMELDING IN DE TELEFOONGIDS en bij de
-                                    inlichtingendienst
+                            <h5 style="text-align: center;"><b> M. MENTION DANS L’ANNUAIRE et au service de renseignements
                                 </b></h5>
                         </div>
 
@@ -2145,14 +2169,14 @@
 
 
                         <div class="mb-2 mt-5   col-md-4">
-                            Ik wens te worden vermeld in de telefoongids
+                            Je souhaite apparaître dans l’annuaire
 
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="wish_tbi_tele_directory_m" class="ml-2" value="0" required>
-                            <label for="wish_tbi_tele_directory_m" class="form-label">Ja
+                            <label for="wish_tbi_tele_directory_m" class="form-label">Oui
                             </label>
                         </div>
 
@@ -2162,14 +2186,14 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="wish_tbi_tele_directory_m" class="ml-2" value="1" required>
-                            <label for="wish_tbi_tele_directory_m" class="form-label"> Neen
+                            <label for="wish_tbi_tele_directory_m" class="form-label"> Non
                             </label>
                         </div>
 
 
 
                         <div class="mb-2 mt-3 col-md-12">
-                            <label for="name_or_company_name_m" class="form-label">Naam en voornaam of firmanaam<span
+                            <label for="name_or_company_name_m" class="form-label">Nom/prénom ou raison sociale<span
                                     class="text-danger">*</span></label>
                             <input type="name_or_company_name_m"
                                 class="form-control @error('name_or_company_name_m') is-invalid @enderror"
@@ -2187,36 +2211,43 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="address_choose_m" class="ml-2" value="1" required>
-                            <label for="address_choose_m" class="form-label"> onder mijn klantenadres of
+                            <label for="address_choose_m" class="form-label"> sous mon adresse de client ou
                             </label>
                         </div>
 
-                        <div class="mb-2 mt-5   col-md-4">
+                        <div class="mb-2 mt-4   col-md-12">
 
                             <input type="radio" name="address_choose_m" class="ml-2" value="0" required>
-                            <label for="address_choose_m" class="form-label"> onder mijn factureringsadres
+                            <label for="address_choose_m" class="form-label">sous mon adresse de facturation
+                                dans la catégorie professionnelle (facultatif)
                             </label>
+                            <input type="address_choose_m_text"
+                                class="form-control @error('address_choose_m_text') is-invalid @enderror"
+                                id="address_choose_m" autocomplete="off"
+                                placeholder="sous mon adresse de facturation
+                                                                                                dans la catégorie professionnelle (facultatif)"
+                                name="address_choose_m_text" value="{{ old('address_choose_m_text') }}" required>
+                            @error('address_choose_m_text')
+                                <span class="invalid-feedback mb-2" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
-                        <div class="mb-2 mt-5   col-md-4">
 
-                            in de beroepscategorie (facultatief):
-                        </div>
 
 
                         <div class="mb-2 mt-5   col-md-12">
 
                             <input type="radio" name="consent_m" class="ml-2" value="0" required>
-                            <label for="consent_m" class="form-label"> Ik geef Proximus van publiek recht niet de
-                                toelating
-                                mijn gegevens
-                                te commercialiseren voor andere doeleinden dan de publicatie in
-                                de telefoongidsen.
+                            <label for="consent_m" class="form-label"> Je n’autorise pas Proximus à commercialiser mes
+                                coordonnées à
+                                des fins autres que la publication dans les annuaires
                             </label>
                         </div>
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> N. OPMERKINGEN
+                            <h5 style="text-align: center;"><b> N. REMARQUES
                                 </b></h5>
                         </div>
 
@@ -2235,18 +2266,18 @@
                         </div>
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b> O. HANDTEKENING VAN DE AANVRAGER
+                            <h5 style="text-align: center;"><b> O. SIGNATURE DU DEMANDEUR
                                 </b></h5>
                         </div>
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 class="lead" style="text-align: center;"> Opgemaakt in drie exemplaren
+                            <h5 class="lead" style="text-align: center;"> Établi en trois exemplaires
                             </h5>
                         </div>
 
 
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="at_o" class="form-label">Te<span class="text-danger">*</span></label>
+                            <label for="at_o" class="form-label">Fait à<span class="text-danger">*</span></label>
                             <input type="at_o" class="form-control @error('at_o') is-invalid @enderror" id="at_o"
                                 autocomplete="off" placeholder="Te" name="at_o" value="{{ old('at_o') }}" required>
                             @error('at_o')
@@ -2257,7 +2288,7 @@
                         </div>
 
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="on_o" class="form-label">Op<span class="text-danger">*</span></label>
+                            <label for="on_o" class="form-label">le<span class="text-danger">*</span></label>
                             <input type="on_o" class="form-control @error('on_o') is-invalid @enderror" id="on_o"
                                 autocomplete="off" placeholder="Op" name="on_o" value="{{ old('on_o') }}" required>
                             @error('on_o')

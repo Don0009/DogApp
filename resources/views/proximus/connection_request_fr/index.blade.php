@@ -9,9 +9,9 @@
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <a href="{{ route('proximus_connection_request_du.create') }}" class="btn btn-primary btn-icon-text">
+            <a href="{{ route('proximus_connection_request_fr.create') }}" class="btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Connection Request Dutch
+                Create Connection Request French
             </a>
             {{-- <a href="{{ url('internet_home/create?lang=du') }}" class="ml-2 btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-body">
                     <h6 class="card-title">Proximus Connection Request</h6>
-                    <p class="card-description">All the Proximus Connection leads are listed here.</p>
+                    <p class="card-description">All the Proximus Connection (French) leads are listed here.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>

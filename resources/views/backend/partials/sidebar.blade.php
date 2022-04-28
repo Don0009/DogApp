@@ -151,6 +151,33 @@
                 </div>
             </li>
 
+            {{-- Proximus --}}
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#proximus" role="button" aria-expanded="false"
+                    aria-controls="proximus">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Proximus</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="proximus">
+                    <ul class="nav sub-menu">
+
+                        <li class="nav-item">
+                            <a href="{{ route('proximus_connection_request_du.index') }}"
+                                class="nav-link">Connection Request
+                                DU</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('proximus_connection_request_fr.index') }}"
+                                class="nav-link">Connection Request
+                                FR</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
 
 
 
