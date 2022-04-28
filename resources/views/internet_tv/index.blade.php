@@ -39,6 +39,8 @@
                                     <th>Orange Customer Number</th>
                                     <th>First Name</th>
                                     <th>Number</th>
+                                    <th>Download</th>
+                                    <th>Sign</th>
 
                                     <th>
                                         Created At
@@ -58,6 +60,7 @@
                                         <td>{{ $internet_tv->orange_customer_number }}</td>
                                         <td>{{ $internet_tv->first_name }}</td>
                                         <td>{{ $internet_tv->number }}</td>
+                                        <td><a href="{{ $internet_tv->document_sign_url }}" target="_blank" class="btn btn-primary">Sign Now</a></td>
 
                                         <td>
                                             {{ \Carbon\Carbon::parse($internet_tv->created_at)->diffForhumans() }}

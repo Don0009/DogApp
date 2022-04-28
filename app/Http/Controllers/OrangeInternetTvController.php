@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 use mikehaertl\pdftk\Pdf;
-use \Mail;
+    use \Mail;
 
 class OrangeInternetTvController extends Controller
 {
@@ -22,9 +22,9 @@ class OrangeInternetTvController extends Controller
     public function index()
     {
         if (Auth::user()->hasRole('admin')) {
-            $internet_tvs = OrangeInternetTv::all();
+            $internet_tvs = OrangeInternetTv::latest()->get();
         } else {
-            $internet_tvs = OrangeInternetTv::where('user_id', Auth::user()->id)->get();
+            $internet_tvs = OrangeInternetTv::where('user_id', Auth::user()->id)->latest()->get();
         }
 
         return view('internet_tv.index', compact('internet_tvs'));
@@ -183,7 +183,7 @@ class OrangeInternetTvController extends Controller
         }
 
 
-        $data = $request->all();
+
         $data = $orange = OrangeInternetTv::create($data);
 
         $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
@@ -191,7 +191,6 @@ class OrangeInternetTvController extends Controller
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs($pdf_name);
-
 //Mail
         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
             $message->to('degis9000@gmail.com')
@@ -217,6 +216,14 @@ class OrangeInternetTvController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Orange Internet TV Lead';
         $amo->add_lead($lead_data);
+
+
+        $osc = new OKSignController();
+
+        $osc =  $osc->orange_internet_tv(public_path($pdf_name), 'Internet HOME Lead');
+        $orange->document_id = $osc['document_id'];
+        $orange->document_sign_url = $osc['document_sign_url'];
+        $orange->save();
         unlink(public_path($pdf_name));
 
         return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');

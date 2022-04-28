@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\orange;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\OKSign\OKSignController;
 use Illuminate\Http\Request;
 use App\InternetHome;
 use Illuminate\Support\Facades\Validator;
@@ -132,8 +133,6 @@ class InternetHomeController extends Controller
             // dd($pdf);
         }
 
-
-
         else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/IHDU.pdf'), [
 
@@ -179,7 +178,15 @@ class InternetHomeController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Orange Internet HOME Lead';
         $amo->add_lead($lead_data);
+
+
+
+
+
+
         unlink(public_path($pdf_name));
+
+
 
         return redirect()->route('internet_home.index')->with('success', 'Internet Home lead created successfully!');
 
