@@ -6,6 +6,8 @@ use Carbon\Carbon;
 use App\EnergyTransferDocument;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use mikehaertl\pdftk\Pdf;
+use \Mail;
 
 class EnergyTransferDocumentController extends Controller
 {
@@ -149,8 +151,45 @@ class EnergyTransferDocumentController extends Controller
             }
         }
 
+        $pdf = new Pdf(public_path('unfilled_forms/Overnamedocument/Energieovername(updated).pdf'), [
+            //            'command' => '/some/other/path/to/pdftk',
+                        // or on most Windows systems:
+                        // 'command' => '/usr/bin/pdftk',
+                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            //            'useExec' => true,  // May help on Windows systems if execution fails
 
-        EnergyTransferDocument::create($data);
+        ]);
+
+        // dd($pdf);
+
+        // data copied from Orange
+
+        $data=EnergyTransferDocument::create($data);
+
+        $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+//        dd($pdf_name);
+        $data = $data->toArray();
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs($pdf_name);
+
+
+            $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+                $message->to('bazighminhas1@gmail.com')
+                    ->subject("You have got a Orange Internet TV lead...!")
+                    ->cc(['lasha@studiodlvx.be'])
+            //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                    ->attach(public_path($pdf_name), [
+                        'as' => 'name.pdf',
+                        'mime' => 'application/pdf',
+                    ]);
+                $message->from('no-reply@ecosafety.nyc');
+            });
+            // Mail Code Ends
+                    dd($mail);
+
+
+
+
         return redirect()->route('energy_transfer_document.index')->with('success','Energy Transfer Document created successfully!');
     }
 

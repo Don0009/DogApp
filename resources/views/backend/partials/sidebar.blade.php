@@ -183,6 +183,23 @@
                             </li>
                     </ul>
                 </div>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#Overnamedocument" role="button" aria-expanded="false"
+                    aria-controls="Overnamedocument">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Mega</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="Overnamedocument">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('mega.index') }}" class="nav-link">contract NL Mega februari 2022</a>
+                            </li>
+                    </ul>
+                </div>
+
             </li>
         </ul>
     </div>

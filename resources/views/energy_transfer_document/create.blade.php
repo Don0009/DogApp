@@ -50,19 +50,36 @@
             <div class="">Te gebruiken in geval van een verhuis verkoop of verhuur van een </div>
             <div class="">woning, een enchtschesiding, overliding enz.</div>
             <b>opgelet:dit document is geen contract bij een energieleverancier</b>
-            <div class="">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</div>
 
-            <div class="">
+
+
+        </div>
+
+        <div class="col-6">
+            <div class="">Gebruik dit document alleen als u een decentrale productie-installatie
+            </div>
+            <div class="">voor hernieuwbare energie heeft(zonnepanelen bijvoorbeeld). In</div>
+            <div class="">alle andree gevallen kan u het 'klassieke' energieovernamedocument</div>
+            <b>gebruiken</b>
+
+
+        </div>
+    </div>
+    <div class="">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="" style="margin-left: 150px">
                 <li>Vul dit document met beide partijen in, <b>in twee exemplaren.</b>(elke partij krijgt een exemplaar)</li>
                 <li>Beide exemplaren worden <b>ondertekend door de twee partijen.</b></li>
                 <li><b>Bewaar allebei een origineel exemplaar</b>en <b>stuur zo snel mogelijk een kopie naar uw energieleverancier(s).</b></li>
+
             </div>
         </div>
     </div>
 </div>
 </section>
 <section>
-  <div class="container-fluid ">
+  <div class="container-fluid mt-5">
       <div class="row grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
@@ -170,7 +187,7 @@
     <div class="row">
         <div class="col-2">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="single_meter" required>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="single_meter" value="yes" required>
                 <label class="form-check-label" for="inlineCheckbox2">Enkelvoudige meter</label>
               </div>
         </div>
@@ -197,7 +214,7 @@
     <div class="row">
         <div class="col-2">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="nachtmeter" required>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="nachtmeter" value="yes" required>
                 <label class="form-check-label" for="inlineCheckbox2">Tweevoudige of Dag/Nachtmeter</label>
               </div>
         </div>
@@ -227,7 +244,7 @@
     <div class="row">
         <div class="col-2">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="exclusief_nachtmeter" required>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="exclusief_nachtmeter" value="yes" required>
                 <label class="form-check-label" for="inlineCheckbox2">Exclusief nachtmeter</label>
               </div>
         </div>
@@ -253,7 +270,7 @@
     <div class="row">
         <div class="col-2">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="digital_meter" required>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="digital_meter" value="yes" required>
                 <label class="form-check-label" for="inlineCheckbox2">Digitale meter of bidirectionele meter</label>
               </div>
         </div>
@@ -385,7 +402,10 @@
 
 
 <section>
+    <div class="container-fluid mt-5">
     <div class="row">
+        <div class="card">
+            <div class="card-body">
         <div class=""><b>GEGEVENS VERTREKKENDE KLANT</b></div>
         <div class="col-6">
             <div class="row">
@@ -418,6 +438,8 @@
                 </div>
             </div>
         </div>
+
+
 
 
             <div class="col-6">
@@ -591,10 +613,14 @@
     </div>
         </div>
     </div>
+</div>
 </section>
 
 <section>
-    <div class="row">
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
         <div class=""><b>GEGEVENS OVERNEMER</b></div>
         <div class="col-6">
             <div class="row">
@@ -806,19 +832,26 @@
             <label for="">Leverancier aardgas:</label>
         </div>
         <div class="col-3">
-            <div class="form-check form-check-inline">
+            {{-- <div class="form-check form-check-inline">
             <label class="form-check-label" for="inlineCheckbox2" style="margin-top: 0px; margin-left:0px">Huurder</label>
-            <input class="form-check-input" type="checkbox" style="margin-left: 70px;margin-top:-17px" id="inlineCheckbox2" name="huurder" required>
-                </div>
+            <input class="form-check-input" type="checkbox" style="margin-left: 70px;margin-top:-17px" id="inlineCheckbox2" name="huurder" value="yes" required>
+                </div> --}}
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="0" name="huurder" id="huurder" >
+                    <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
+                      Ja:
+                    </label>
+                  </div>
         </div>
         <div class="col-7">
             <div class="form-check form-check-inline">
                 <label class="form-check-label" for="inlineCheckbox2" style="margin-top: 0px; margin-left:10px">Eigenaar(woning wordt momenteel gebruikt als hoofdverblijplaats of 2de verblijf)</label>
-                <input class="form-check-input" type="checkbox" style="float:right;margin-right: -32px;;margin-top:-17px" id="inlineCheckbox2" name="home_is_currently_used" required>
+                <input class="form-check-input" type="checkbox" style="float:right;margin-right: -32px;;margin-top:-17px" id="inlineCheckbox2" name="home_is_currently_used" value="yes" required>
                     </div>
                     <div class="form-check form-check-inline">
                         <label class="form-check-label" for="inlineCheckbox2" style="margin-top: 0px; margin-left:10px">Eigenaar(woning staat leeg in afwachting van verhuur of verkoop)</label>
-                        <input class="form-check-input" type="checkbox" style="float:right;margin-right: -32px;;margin-top:-17px" id="inlineCheckbox2" name="home_is_currently_used_1" required>
+                        <input class="form-check-input" type="checkbox" style="float:right;margin-right: -32px;;margin-top:-17px" id="inlineCheckbox2" name="home_is_currently_used_1" value="yes" required>
                             </div>
         </div>
     </div>
@@ -842,8 +875,12 @@
                    placeholder="Datum Overname" name="handtekening_1" required>
         </div>
     </div>
-    <div class="">Vul dit formulier ook in als u een degitale meter heeft. Een eventuele automatische uitlezing van meterstanden krijgt wel voorrang</div>
+            <div class="card">
+                <div class="card-body">
+    <div class="">Vul dit formulier ook in als u een degitale meter heeft. Een eventuele automatische uitlezing van meterstanden krijgt wel voorrang</div></div></div>
 </div>
+            </div>
+        </div></div>
 </section>
 <section>
     <div class="">(*) Door de ondertekening van dit document gaat u akkoord dat uw persoonlijke gegevens worden gebruikt en doorgegeven aan de betrokken energieleverancier(s) en distributienetbeheerder(s) in het kader van deze energleovername.</div>

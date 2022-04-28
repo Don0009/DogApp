@@ -56,4 +56,6 @@ Route::group(['middleware' => 'auth'], function () {
 
    //Overnamedocument Forms
    Route::resource('energy_transfer_document', 'EnergyTransferDocumentController');
+
+   Route::resource('mega', 'MegaController');
 });
