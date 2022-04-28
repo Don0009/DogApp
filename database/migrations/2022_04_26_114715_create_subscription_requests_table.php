@@ -55,7 +55,33 @@ class CreateSubscriptionRequestsTable extends Migration
             $table->text('distributer');
             $table->string('client_number');
             $table->string('distributor_number');
-
+            // 2nd form
+            $table->text('easier_company_name');
+            $table->string('easier_name');
+            $table->string('easier_f_name');
+            $table->text('easier_street');
+            $table->string('easier_box');
+            $table->string('easier_postal_code');
+            $table->longtext('easier_locality');
+            $table->string('easier_cus_number');
+            $table->string('american_express');
+            $table->string('visa_card');
+            $table->date('due_date');
+            $table->date('agre_date');
+            $table->text('agre_locality');
+            // 3rd form
+            $table->string('mandate_number');
+            $table->string('debtor_name');
+            $table->string('signed_f_name');
+            $table->longtext('signed_street');
+            $table->text('signed_box');
+            $table->text('signed_locality');
+            $table->string('signed_postal_code');
+            $table->text('signed_country');
+            $table->string('signed_iban');
+            $table->string('signed_bic');
+            $table->string('concluded');
+            $table->date('signed_date');
             $table->timestamps();
         });
     }

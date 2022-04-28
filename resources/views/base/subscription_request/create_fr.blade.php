@@ -3,11 +3,11 @@
 @section('content')
 
 <div class="container">
-    <div class="card">
-        <div class="card-body">
-            <h4>Demande d’inscription</h4>
-            <form class="forms-sample" method="POST" action="{{ route('subscription_request.store') }}">
-                @csrf()
+    <form class="forms-sample" method="POST" action="{{ route('subscription_request.store') }}">
+        @csrf()
+        <div class="card">
+            <div class="card-body">
+                <h4>Demande d’inscription</h4>
                 <h5 class="mt-4">Données d’identification</h5>
                 <div class="row mt-3">
                     <div class="col-1">
@@ -421,12 +421,279 @@
                         @enderror
                     </div>
                 </div>
-                <div class="mt-2">
-                    <button type="submit" class="btn btn-primary me-2">Submit</button>
-                    <button class="btn btn-secondary">Cancel</button>
-                </div>
-            </form>
+
+            </div>
         </div>
-    </div>
+        <div class="card">
+            <div class="card-body">
+                <h5>Facilitez-vous la vie</h5>
+                <h5 class="mt-5">Carte de crédit</h5>
+                <div class="mt-2">
+                    <label for="easier_company_name" class="form-label">Société(nom et forme juridique)<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('easier_company_name') is-invalid @enderror" id="easier_company_name" autocomplete="off" placeholder="Société" name="easier_company_name" value="{{ old('easier_company_name') }}" required>
+                    @error('easier_company_name')
+                    <span class="invalid-feedback mb-2" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6">
+                        <label for="easier_name" class="form-label">Nom<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('easier_name') is-invalid @enderror" id="easier_name" autocomplete="off" placeholder="Nom" name="easier_name" value="{{ old('easier_name') }}" required>
+                        @error('easier_name')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-6">
+                        <label for="easier_f_name" class="form-label">Prénom<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('easier_f_name') is-invalid @enderror" id="easier_f_name" autocomplete="off" placeholder="Prénom" name="easier_f_name" value="{{ old('easier_f_name') }}" required>
+                        @error('easier_f_name')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-4">
+                        <label for="easier_street" class="form-label">Rue<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('easier_street') is-invalid @enderror" id="street" autocomplete="off" placeholder="Rue" name="easier_street" value="{{ old('easier_street') }}" required>
+                        @error('easier_street')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="easier_box" class="form-label">Numéro/Bte<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('easier_box') is-invalid @enderror" id="easier_box" autocomplete="off" placeholder="Numéro/Bte" name="easier_box" value="{{ old('easier_box') }}" required>
+                        @error('easier_box')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="easier_postal_code" class="form-label">Code postal<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('easier_postal_code') is-invalid @enderror" id="easier_postal_code" autocomplete="off" placeholder="Code postal" name="easier_postal_code" value="{{ old('easier_postal_code') }}" required>
+                        @error('easier_postal_code')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6">
+                        <label for="easier_locality" class="form-label">Localité<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('easier_locality') is-invalid @enderror" id="easier_locality" autocomplete="off" placeholder="Localité" name="easier_locality" value="{{ old('easier_locality') }}" required>
+                        @error('easier_locality')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-6">
+                        <label for="easier_cus_number" class="form-label">Numéro de client Telenet Group spr<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('easier_cus_number') is-invalid @enderror" id="easier_cus_number" autocomplete="off" placeholder="Numéro de client Telenet Group spr" name="easier_cus_number" value="{{ old('easier_cus_number') }}" required>
+                        @error('easier_cus_number')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+                <p class="mt-4">par la présente autorise Telenet Group sprl - rue Neerveld 105 à 1200 Bruxelles - à effectuer le paiement des factures Telenet Group sprl dont la référence est reprise ci-dessus, avec ma
+                    carte de crédit</p>
+                <div class="row mt-4">
+                    <div class="col-5">
+                        <label for="american_express" class="form-label">American Express<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('american_express') is-invalid @enderror" id="american_express" autocomplete="off" placeholder="American Express" name="american_express" value="{{ old('american_express') }}" required>
+                        @error('american_express')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-5">
+                        <label for="visa_card" class="form-label">VISA/MasterCard<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('visa_card') is-invalid @enderror" id="easier_cus_number" autocomplete="off" placeholder="VISA/MasterCard" name="visa_card" value="{{ old('visa_card') }}" required>
+                        @error('visa_card')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-2">
+                        <label for="due_date" class="form-label">Date d’échéance<span class="text-danger">*</span></label>
+                        <input class="form-control @error('due_date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="due_date" name="due_date" value="{{ old('due_date') }}" type="date">
+                        @error('due_date')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+                <p class="mt-3">Si vous avez un nouveau numéro de carte, merci de nous en informer au plus vite. Nos coordonnées se trouvent ci-dessus.</p>
+                <p class="mt-2">En cas de non paiement par la société émettrice de la carte de crédit, je reste seul responsable pour le paiement de mes factures.</p>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="agre_date" class="form-label">Date <span class="text-danger">*</span></label>
+                        <input class="form-control @error('agre_date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="agre_date" name="agre_date" value="{{ old('agre_date') }}" type="date">
+                        @error('agre_date')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="agre_locality" class="form-label">Localité<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('agre_locality') is-invalid @enderror" id="locality1" autocomplete="off" placeholder="Localité" name="agre_locality" value="{{ old('agre_locality') }}" required>
+                        @error('agre_locality')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4>Mandat de domiciliation européenne</h4>
+                <h5>SEPA - CORE</h5>
+
+                <p class="mt-5">Dans le cas où vous choisissez de payer vos factures par domiciliation, veuillez remplir ce formulaire et nous le renvoyer</p>
+                <p>Nous insistons sur le fait que vous êtes tenus de payer vos factures par virement aussi longtemps qu’un formulaire de virement sera joint à votre facture</p>
+                <h5 class="mt-4">Référence du mandat (à compléter par Telenet Group)</h5>
+                <div class="mt-3">
+                    <label for="mandate_number" class="form-label">Numéro du mandat<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control @error('mandate_number') is-invalid @enderror" id="mandate_number" autocomplete="off" placeholder="Numéro du mandat" name="mandate_number" value="{{ old('mandate_number') }}" required>
+                    @error('mandate_number')
+                    <span class="invalid-feedback mb-2" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+                <h5 class="mt-4">Le soussigné(e)</h5>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="debtor_name" class="form-label">Nom du débiteur<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('debtor_name') is-invalid @enderror" id="debtor_name" autocomplete="off" placeholder="Nom du débiteur" name="debtor_name" value="{{ old('debtor_name') }}" required>
+                        @error('debtor_name')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="signed_f_name" class="form-label">Prénom<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('signed_f_name') is-invalid @enderror" id="signed_f_name" autocomplete="off" placeholder="Prénom" name="signed_f_name" value="{{ old('signed_f_name') }}" required>
+                        @error('signed_f_name')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="signed_street" class="form-label">Rue<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('signed_street') is-invalid @enderror" id="signed_street" autocomplete="off" placeholder="Rue" name="signed_street" value="{{ old('signed_street') }}" required>
+                        @error('signed_street')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="signed_box" class="form-label">N°/Bte<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('signed_box') is-invalid @enderror" id="locality1" autocomplete="off" placeholder="N°/Bte" name="signed_box" value="{{ old('signed_box') }}" required>
+                        @error('signed_box')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="signed_locality" class="form-label">Localité<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('signed_locality') is-invalid @enderror" id="signed_locality" autocomplete="off" placeholder="Localité" name="signed_locality" value="{{ old('signed_locality') }}" required>
+                        @error('signed_locality')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="signed_postal_code" class="form-label">Code postal<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('signed_postal_code') is-invalid @enderror" id="signed_postal_code" autocomplete="off" placeholder="Code postal" name="signed_postal_code" value="{{ old('signed_postal_code') }}" required>
+                        @error('signed_postal_code')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="signed_country" class="form-label">Pays<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('signed_country') is-invalid @enderror" id="signed_country" autocomplete="off" placeholder="Pays" name="signed_country" value="{{ old('signed_country') }}" required>
+                        @error('signed_country')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="signed_iban" class="form-label">N° de compte IBAN<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('signed_iban') is-invalid @enderror" id="signed_iban" autocomplete="off" placeholder="N° de compte IBAN" name="signed_iban" value="{{ old('signed_iban') }}" required>
+                        @error('signed_iban')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="col-4">
+                        <label for="signed_bic" class="form-label">Code BIC<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('signed_bic') is-invalid @enderror" id="signed_bic" autocomplete="off" placeholder="Code BIC" name="signed_bic" value="{{ old('signed_bic') }}" required>
+                        @error('signed_bic')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-8">
+                        <p>Numéro du contrat sous-jacent (numéro de compte client) conclu entre Telenet Group et le débiteur</p>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control @error('concluded') is-invalid @enderror" id="concluded" autocomplete="off" placeholder="numéro de compte client" name="concluded" value="{{ old('concluded') }}" required>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-4">
+                        <label for="signed_date" class="form-label">Date<span class="text-danger">*</span></label>
+                        <input class="form-control @error('signed_date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="signed_date" name="signed_date" value="{{ old('signed_date') }}" type="date">
+                        @error('signed_date')
+                        <span class="invalid-feedback mb-2" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <button type="submit" class="btn btn-primary me-2">Submit</button>
+            <button class="btn btn-secondary">Cancel</button>
+        </div>
+    </form>
 </div>
 @endsection
