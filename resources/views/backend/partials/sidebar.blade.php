@@ -173,6 +173,10 @@
                                 class="nav-link">Connection Request
                                 FR</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('proximus_number_porting_du.index') }}" class="nav-link">Number
+                                Porting Request (DU</a>
+                        </li>
                     </ul>
                 </div>
 
