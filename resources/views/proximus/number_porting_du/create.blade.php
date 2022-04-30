@@ -87,7 +87,7 @@
                                 class="form-control @error('customer_other_network_number') is-invalid @enderror"
                                 id="customer_other_network_number" autocomplete="off"
                                 placeholder="Klantennummer
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    bij de andere operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                bij de andere operator"
                                 name="customer_other_network_number" value="{{ old('customer_other_network_number') }}"
                                 required>
                             @error('customer_other_network_number')
@@ -209,20 +209,17 @@
                             @enderror
                         </div>
 
-                        {{-- <table class="table table-bordered">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th scope="col">Gsm-nummers</th>
                                     <th scope="col">Simkaartnummer bij andere operator</th>
-                                    <th scope="col-md-12">Bij andere operator
-                                    <th colspan="2">first</th>
-                                    <th colspan="2">second</th>
-
-
+                                    <th colspan="2">Bij andere operator
                                     </th>
-                                    <th scope="col">Bij Proximus</th>
+                                    <th colspan="2">Bij Proximus</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <tr>
                                     <td scope="row">
@@ -233,335 +230,505 @@
                                                 id="exampleInputEmail1" aria-describedby="emailHelp" required>
                                             @error('call_number_1')
                                                 <span class="text-danger"> {{ $message }}</span>
-                    @enderror
-                </div>
-
-
-                </td>
-
-                <td>
-
-                    <div class="form-group mb-0">
-
-                        <input type="text" name="sim_card_other_operator_1" class="form-control border-0"
-                            id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                        @error('sim_card_other_operator_1')
-                        <span class="text-danger"> {{ $message }}</span>
-                        @enderror
-                    </div>
-
-                </td>
-                <td>
-                    <div class="form-group mb-0">
-
-                        <input name="customer_num_other_operator_1" class="form-control border-0"
-                            id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                        @error('customer_num_other_operator_1')
-                        <span class="text-danger"> {{ $message }}</span>
-                        @enderror
-                    </div>
-                </td>
-                <td>
-                    893207000
-                </td>
-                </tr>
-
-                <tr>
-                    <td scope="row">
-
-                        <div class="form-group mb-0">
-
-                            <input name="call_number_2" type="text" name="" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('call_number_2')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                    </td>
-
-                    <td>
-
-                        <div class="form-group mb-0">
-
-                            <input name="sim_card_other_operator_2" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('sim_card_other_operator_2')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="form-group mb-0">
-
-                            <input name="customer_num_other_operator_2" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('customer_num_other_operator_2')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-                    </td>
-                    <td>
-                        893207000
-                    </td>
-                </tr>
-                <tr>
-                    <td scope="row">
-
-                        <div class="form-group mb-0">
-
-                            <input name="call_number_3" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('call_number_3')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                    </td>
-
-                    <td>
-
-                        <div class="form-group mb-0">
-
-                            <input name="sim_card_other_operator_3" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('sim_card_other_operator_3')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="form-group mb-0">
-
-                            <input name="customer_num_other_operator_3" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('customer_num_other_operator_3')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-                    </td>
-                    <td>
-                        893207000
-                    </td>
-                </tr>
-                <tr>
-                    <td scope="row">
-
-                        <div class="form-group mb-0">
-
-                            <input name="call_number_4" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('call_number_4')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                    </td>
-
-                    <td>
-
-                        <div class="form-group mb-0">
-
-                            <input name="sim_card_other_operator_4" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('sim_card_other_operator_4')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="form-group mb-0">
-
-                            <input name="customer_num_other_operator_4" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('customer_num_other_operator_4')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-                    </td>
-                    <td>
-                        893207000
-                    </td>
-                </tr>
-                <tr>
-                    <td scope="row">
-
-                        <div class="form-group mb-0">
-
-                            <input name="call_number_5" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('call_number_5')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                    </td>
-
-                    <td>
-
-                        <div class="form-group mb-0">
-
-                            <input name="sim_card_other_operator_5" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('sim_card_other_operator_5')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="form-group mb-0">
-
-                            <input name="customer_num_other_operator_5" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('customer_num_other_operator_5')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-                    </td>
-                    <td>
-                        893207000
-                    </td>
-                </tr>
-                <tr>
-                    <td scope="row">
-
-                        <div class="form-group mb-0">
-
-                            <input name="call_number_6" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('call_number_6')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                    </td>
-
-                    <td>
-
-                        <div class="form-group mb-0">
-
-                            <input name="sim_card_other_operator_6" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('sim_card_other_operator_6')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="form-group mb-0">
-
-                            <input name="customer_num_other_operator_6" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('sim_card_other_operator_6')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-                    </td>
-                    <td>
-                        893207000
-                    </td>
-                </tr>
-                <tr>
-                    <td scope="row">
-
-                        <div class="form-group mb-0">
-
-                            <input name="call_number_7" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('call_number_7')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                    </td>
-
-                    <td>
-
-                        <div class="form-group mb-0">
-
-                            <input name="sim_card_other_operator_7" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('sim_card_other_operator_7')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="form-group mb-0">
-
-                            <input name="customer_num_other_operator_7" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('customer_num_other_operator_7')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-                    </td>
-                    <td>
-                        893207000
-                    </td>
-                </tr>
-
-                <tr>
-                    <td scope="row">
-
-                        <div class="form-group mb-0">
-
-                            <input name="call_number_8" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('call_number_8')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                    </td>
-
-                    <td>
-
-                        <div class="form-group mb-0">
-
-                            <input name="sim_card_other_operator_8" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('sim_card_other_operator_8')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="form-group mb-0">
-
-                            <input name="customer_num_other_operator_8" type="text" class="form-control border-0"
-                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            @error('customer_num_other_operator_8')
-                            <span class="text-danger"> {{ $message }}</span>
-                            @enderror
-                        </div>
-                    </td>
-                    <td>
-                        893207000
-                    </td>
-                </tr>
-
-                </tbody>
-                </table> --}}
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+                                        Herlaad Kaart
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            Abonnment
+                                            <div class="form-group mb-0">
+                                                <input type="radio" name="is_source_of_income" value="0" required>
+                                                <label for="is_source_of_income" class="form-label"> </label>
+
+                                            </div>
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+                                        HerlaadKaart
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td colspan="2" scope="row">
+                                        Abonnment
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+                                        {{-- test --}}
+
+
+                                    </td>
+
+
+
+
+
+
+
+
+                                </tr>
+                                {{-- One Row --}}
+                                <tr>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            x1
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+                                    <td scope="row">
+                                        x2
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+
+
+
+
+
+
+
+                                </tr>
+                                {{-- ROW TWO --}}
+
+                                <tr>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+                                        dfasd
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+
+
+
+
+
+
+
+                                </tr>
+                                {{-- THREE ROW --}}
+                                <tr>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+
+
+
+
+
+
+
+                                </tr>
+                                {{-- FOUR ROW --}}
+                                <tr>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+
+
+
+
+
+
+
+                                </tr>
+                                <tr>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="is_source_of_income" value="0" required>
+                                            <label for="is_source_of_income" class="form-label"> </label>
+
+                                        </div>
+
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="call_number_1" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('call_number_1')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+
+
+
+
+
+
+
+                                </tr>
+                            </tbody>
+                        </table>
 
                         {{-- Table to be added --}}
 
 
-                        <div class="mb-3 col-md-12">
+                        <div class="mb-3 mt-4 col-md-12">
                             <label for="land_line_to_be_ported" class="form-label"><span
                                     class="text-danger">*</span>Over te
                                 dragen vaste telefoonnummers van operator</label>
@@ -569,7 +736,7 @@
                                 class="form-control @error('land_line_to_be_ported') is-invalid @enderror"
                                 id="land_line_to_be_ported" autocomplete="off"
                                 placeholder="Over te
-                                                                                                                                                                                                                                                                                                                                                            dragen vaste telefoonnummers van operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dragen vaste telefoonnummers van operator"
                                 name="land_line_to_be_ported" value="{{ old('land_line_to_be_ported') }}" required>
                             @error('land_line_to_be_ported')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -685,7 +852,7 @@
 
                                             <input name="Of_nummerreeks_van" type="text" class="form-control border-0"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('current_operator_1')
+                                            @error('Of_nummerreeks_van')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
@@ -725,9 +892,9 @@
 
                                         <div class="form-group mb-0">
 
-                                            <input name="tot_2" type="text" class="form-control border-0"
+                                            <input name="Of_nummerreeks_van_1" type="text" class="form-control border-0"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('tot_2')
+                                            @error('Of_nummerreeks_van_1')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
@@ -736,10 +903,9 @@
                                     <td>
                                         <div class="form-group mb-0">
 
-                                            <input name="customer_num_other_operator_9" type="text"
-                                                class="form-control border-0" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" required>
-                                            @error('customer_num_other_operator_9')
+                                            <input name="tot_2" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('tot_2')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
@@ -808,9 +974,9 @@
 
                                         <div class="form-group mb-0">
 
-                                            <input name="Of_nummerreeks_van_4" type="text" class="form-control border-0"
+                                            <input name="Of_nummerreeks_van_3" type="text" class="form-control border-0"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('Of_nummerreeks_van_4')
+                                            @error('Of_nummerreeks_van_3')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
@@ -852,9 +1018,9 @@
 
                                         <div class="form-group mb-0">
 
-                                            <input name="Of_nummerreeks_van_5" type="text" class="form-control border-0"
+                                            <input name="Of_nummerreeks_van_4" type="text" class="form-control border-0"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('Of_nummerreeks_van_5')
+                                            @error('Of_nummerreeks_van_4')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
@@ -977,7 +1143,7 @@
 
                                 <tr>
                                     <td scope="row">
-                                        x
+
                                         <div class="form-group mb-0">
 
                                             <input name="service_id_num_2" type="text" class="form-control border-0"
@@ -993,10 +1159,10 @@
                                     <td>
 
                                         <div class="form-group mb-0">
-                                            x1
-                                            <input name="Dienst_1" type="text" class="form-control border-0"
+
+                                            <input name="Dienst_2" type="text" class="form-control border-0"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('Dienst_1')
+                                            @error('Dienst_2')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
@@ -1047,7 +1213,8 @@
 
 
 
-
+                        <button class="btn btn-primary mb-2 mt-3">Submit</button>
+                        <button class="btn btn-secondary mb-2 mt-3 ml-3">Cancel</button>
 
 
 
@@ -1055,6 +1222,8 @@
 
                     </div>
                     {{-- ,aster row --}}
+
+
 
             </div>
             </form>

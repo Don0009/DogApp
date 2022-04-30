@@ -9,14 +9,11 @@
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <a href="{{ route('proximus_connection_request_fr.create') }}" class="btn btn-primary btn-icon-text">
+            <a href="{{ route('proximus_number_porting_du.create') }}" class="btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Connection Request French
+                Create Number Porting (Dutch)
             </a>
-            {{-- <a href="{{ url('internet_home/create?lang=du') }}" class="ml-2 btn btn-primary btn-icon-text">
-                <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Internet Home Dutch
-            </a> --}}
+
         </div>
     </div>
 

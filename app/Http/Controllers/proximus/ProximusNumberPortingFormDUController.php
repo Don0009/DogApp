@@ -2,8 +2,20 @@
 
 namespace App\Http\Controllers\Proximus;
 
+use App\Http\Controllers\OKSign\OKSignController;
+use Illuminate\Support\Facades\Auth;
+use App\Models\NumberPortingFormDU;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
+
+use Carbon\Carbon;
+use mikehaertl\pdftk\Pdf;
+use \Mail;
+
+
 
 class ProximusNumberPortingFormDUController extends Controller
 {
@@ -15,7 +27,9 @@ class ProximusNumberPortingFormDUController extends Controller
     public function index()
     {
         //
-        return view('proximus.number_porting_du.index');
+        $proximus = NumberPortingFormDU::all();
+
+        return view('proximus.number_porting_du.index', compact('proximus'));
     }
 
     /**
@@ -38,6 +52,104 @@ class ProximusNumberPortingFormDUController extends Controller
     public function store(Request $request)
     {
         //
+        $validator = Validator::make($request->all(), [
+
+
+
+            'seller_id'=> 'required',
+            'name'=> 'required',
+            'full_name'=> 'required',
+            'customer_other_network_number'=> 'required',
+            'email_address'=> 'required',
+            'company_name'=> 'required',
+            'company_number'=> 'required',
+            'customer_other_network_number_p'=> 'required',
+            'email_address_p'=> 'required',
+            'mobile_pack_radio'=> 'required',
+            'qua_of_num_port'=> 'required',
+            'land_line_to_be_ported'=> 'required',
+            'street'=> 'required',
+            'no'=> 'required',
+            'floor'=> 'required',
+            'box'=> 'required',
+            'postcode'=> 'required',
+            'township'=> 'required',
+            'TELEFOONNUMMERS'=> 'required',
+            'TELEFOONNUMMERS_2'=> 'required',
+            'TELEFOONNUMMERS_3'=> 'required',
+            'TELEFOONNUMMERS_4'=> 'required',
+            'TELEFOONNUMMERS_5'=> 'required',
+            'Of_nummerreeks_van'=> 'required',
+            'Of_nummerreeks_van_2'=> 'required',
+            'Of_nummerreeks_van_3'=> 'required',
+            'Of_nummerreeks_van_4'=> 'required',
+            'Of_nummerreeks_van_5'=> 'required',
+            'tot_1'=> 'required',
+            'tot_2'=> 'required',
+            'tot_3'=> 'required',
+            'tot_4'=> 'required',
+            'tot_5'=> 'required',
+
+
+
+
+        ]);
+
+
+
+        $data = $request->all();
+        $data['user_id'] = Auth::user()->id;
+
+
+
+
+
+        $data = $request->all();
+        $data = $orange = NumberPortingFormDU::create($data);
+
+        return redirect()->route('proximus_number_porting_du.index')->with('success', 'Proximus Connection Lead (French) created successfully!');
+
+
+//         $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
+
+//         $data = $data->toArray();
+//         $result = $pdf->fillForm($data)->flatten()->needAppearances()
+
+//             ->saveAs($pdf_name);
+
+
+
+// //Mail
+//         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+//             $message->to('degis9000@gmail.com')
+//                 ->subject("You have got new Proximus Number Porting (Dutch) Lead...!")
+//                 ->cc(['lasha@studiodlvx.be'])
+// //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+//                 ->attach(public_path($pdf_name), [
+//                     'as' => 'Proximus Number Porting (Dutch) Lead.pdf',
+//                     'mime' => 'application/pdf',
+//                 ]);
+//             $message->from('no-reply@ecosafety.nyc');
+//         });
+// // Mail Code Ends
+
+
+// //Mail
+
+
+//         $amo = new AmoCRMController();
+//         $lead_data = [];
+//         $lead_data['NAME'] = $orange->name;
+//         $lead_data['PHONE'] = $orange->telephone;
+//         $lead_data['EMAIL'] = $orange->email_address;
+//         $lead_data['LEAD_NAME'] = 'Proximus Number Porting (Dutch) Lead';
+//         $amo->add_lead($lead_data);
+//         unlink(public_path($pdf_name));
+
+
+
+
+
     }
 
     /**

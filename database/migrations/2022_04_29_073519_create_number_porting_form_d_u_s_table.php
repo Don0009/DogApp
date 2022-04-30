@@ -33,6 +33,58 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->string('box');
             $table->string('postcode');
             $table->string('township');
+            $table->string('gsm_num_1');
+            $table->string('gsm_num_2');
+            $table->string('gsm_num_3');
+            $table->string('gsm_num_4');
+            $table->string('gsm_num_5');
+            $table->string('gsm_num_6');
+
+            $table->text('sim_num_of_other_operator_1');
+            $table->text('sim_num_of_other_operator_2');
+            $table->text('sim_num_of_other_operator_3');
+            $table->text('sim_num_of_other_operator_4');
+            $table->text('sim_num_of_other_operator_5');
+            $table->text('sim_num_of_other_operator_6');
+            $table->text('reload_card_1');
+            $table->text('reload_card_2');
+            $table->text('reload_card_3');
+            $table->text('reload_card_4');
+            $table->text('reload_card_5');
+            $table->text('reload_card_6');
+            $table->text('reload_card_7');
+
+            $table->text('subscription_1');
+            $table->text('subscription_2');
+            $table->text('subscription_3');
+            $table->text('subscription_4');
+            $table->text('subscription_5');
+            $table->text('subscription_6');
+            $table->text('subscription_7');
+
+            $table->text('simkaartnum_of_proximus_1');
+            $table->text('simkaartnum_of_proximus_2');
+            $table->text('simkaartnum_of_proximus_3');
+            $table->text('simkaartnum_of_proximus_4');
+            $table->text('simkaartnum_of_proximus_5');
+            $table->text('simkaartnum_of_proximus_6');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             $table->string('TELEFOONNUMMERS');
             $table->string('TELEFOONNUMMERS_2');
@@ -57,6 +109,10 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->string('service_id_num_2');
 
             $table->date('date');
+
+            $table->string('ref_id');
+
+
 
 
 

@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class NumberPortingFormDU extends Model
 {
     //
+    protected $guarded = [];
 }
