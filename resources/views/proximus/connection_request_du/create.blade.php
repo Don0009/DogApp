@@ -24,11 +24,19 @@
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Proximus</h5>
+                {{-- <h5 class="card-title">Proximus</h5> --}}
                 <form action="{{ route('proximus_connection_request_du.store') }}" method="post">@csrf
                     <div class="row">
                         {{-- changed --}}
 
+
+                        {{-- Branding --}}
+                        <div style="text-align: centre;" class="mb-5 col-md-12">
+
+                            <img class="mt-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+                                src="{{ asset('images/brands/Proximus_logo.jpeg') }}" height="75px" width="330" alt="">
+                        </div>
+                        {{-- Branding ENd --}}
 
 
                         <div class="mb-3 col-md-6">

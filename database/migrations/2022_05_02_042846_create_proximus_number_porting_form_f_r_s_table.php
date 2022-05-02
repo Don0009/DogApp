@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNumberPortingFormDUSTable extends Migration
+class CreateProximusNumberPortingFormFRSTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateNumberPortingFormDUSTable extends Migration
      */
     public function up()
     {
-        Schema::create('number_porting_form_d_u_s', function (Blueprint $table) {
+        Schema::create('proximus_number_porting_form_f_r_s', function (Blueprint $table) {
             $table->id();
+
 
             $table->string('seller_id');
             $table->string('name');
@@ -68,11 +69,11 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->text('subscription_7');
 
             $table->text('simkaartnum_of_proximus_1');
-            $table->text('simkaartnum_of_proximus_2')->nullable();
-            $table->text('simkaartnum_of_proximus_3')->nullable();
-            $table->text('simkaartnum_of_proximus_4')->nullable();
-            $table->text('simkaartnum_of_proximus_5')->nullable();
-            $table->text('simkaartnum_of_proximus_6')->nullable();
+            $table->text('simkaartnum_of_proximus_2');
+            $table->text('simkaartnum_of_proximus_3');
+            $table->text('simkaartnum_of_proximus_4');
+            $table->text('simkaartnum_of_proximus_5');
+            $table->text('simkaartnum_of_proximus_6');
 
             $table->string('TELEFOONNUMMERS');
             $table->string('TELEFOONNUMMERS_2')->nullable();
@@ -81,16 +82,16 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->string('TELEFOONNUMMERS_5')->nullable();
 
             $table->string('Of_nummerreeks_van');
-            $table->string('Of_nummerreeks_van_1');
-            $table->string('Of_nummerreeks_van_2');
-            $table->string('Of_nummerreeks_van_3');
-            $table->string('Of_nummerreeks_van_4');
+            $table->string('Of_nummerreeks_van_1')->nullable();
+            $table->string('Of_nummerreeks_van_2')->nullable();
+            $table->string('Of_nummerreeks_van_3')->nullable();
+            $table->string('Of_nummerreeks_van_4')->nullable();
 
             $table->string('tot_1');
-            $table->string('tot_2')->nullable();
-            $table->string('tot_3')->nullable();
-            $table->string('tot_4')->nullable();
-            $table->string('tot_5')->nullable();
+            $table->string('tot_2');
+            $table->string('tot_3');
+            $table->string('tot_4');
+            $table->string('tot_5');
             $table->string('Dienst_1');
             $table->string('Dienst_2')->nullable();
             $table->string('service_id_num_1');
@@ -100,11 +101,14 @@ class CreateNumberPortingFormDUSTable extends Migration
 
             $table->string('ref_id');
 
-            // universal fields
+            // universal Fields
+
 
             $table->string('doc_id')->nullable();
             $table->string('doc_sign_url')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
+
+
 
 
             $table->timestamps();
@@ -118,6 +122,6 @@ class CreateNumberPortingFormDUSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('number_porting_form_d_u_s');
+        Schema::dropIfExists('proximus_number_porting_form_f_r_s');
     }
 }

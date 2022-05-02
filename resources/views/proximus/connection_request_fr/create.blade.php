@@ -24,11 +24,18 @@
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Proximus</h5>
+                {{-- <h5 class="card-title">Proximus</h5> --}}
                 <form action="{{ route('proximus_connection_request_fr.store') }}" method="post">@csrf
                     <div class="row">
                         {{-- changed --}}
 
+                        {{-- Branding --}}
+                        <div style="text-align: centre;" class="mb-5 col-md-12">
+
+                            <img class="mt-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+                                src="{{ asset('images/brands/Proximus_logo.jpeg') }}" height="75px" width="330" alt="">
+                        </div>
+                        {{-- Branding ENd --}}
 
 
                         <div class="mb-3 col-md-6">
@@ -267,7 +274,8 @@
                             @enderror
                         </div>
                         <div class="mb-2 mt-3 col-md-6">
-                            <label for="place" class="form-label">Localité<span class="text-danger">*</span></label>
+                            <label for="place" class="form-label">Localité<span
+                                    class="text-danger">*</span></label>
                             <input type="place" class="form-control @error('place') is-invalid @enderror" id="place"
                                 autocomplete="off" placeholder="Plaats" name="place" value="{{ old('place') }}" required>
                             @error('postcode')
@@ -2225,7 +2233,7 @@
                                 class="form-control @error('address_choose_m_text') is-invalid @enderror"
                                 id="address_choose_m" autocomplete="off"
                                 placeholder="sous mon adresse de facturation
-                                                                                                dans la catégorie professionnelle (facultatif)"
+                                                                                                            dans la catégorie professionnelle (facultatif)"
                                 name="address_choose_m_text" value="{{ old('address_choose_m_text') }}" required>
                             @error('address_choose_m_text')
                                 <span class="invalid-feedback mb-2" role="alert">

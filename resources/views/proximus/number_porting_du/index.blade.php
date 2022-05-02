@@ -18,6 +18,13 @@
     </div>
 
     <div class="row">
+
+        {{-- Branding --}}
+        <img class="mt-3 mb-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+            src="{{ asset('images/brands/Proximus_logo.jpeg') }}" height="75px" width="330" alt="">
+        {{-- Branding ENd --}}
+
+
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
@@ -62,7 +69,8 @@
                                         </td> --}}
                                         <td>
                                             <form class="d-inline-block"
-                                                action="{{ route('internet_home.destroy', $home->id) }}" method="POST">
+                                                action="{{ route('proximus_number_porting_fr.destroy', $home->id) }}"
+                                                method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger btn-icon-text">
