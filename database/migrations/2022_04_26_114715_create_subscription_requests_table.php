@@ -15,6 +15,7 @@ class CreateSubscriptionRequestsTable extends Migration
     {
         Schema::create('subscription_requests', function (Blueprint $table) {
             $table->id();
+            $table->string('form_lang');
             $table->string('title');
             $table->string('language');
             $table->string('name');
@@ -51,6 +52,21 @@ class CreateSubscriptionRequestsTable extends Migration
             $table->string('number_sim');
             $table->string('sim_card');
             $table->string('contract_length');
+            $table->string('fix_amount')->nullable();
+            $table->string('percentage')->nullable();
+            $table->text('products')->nullable();
+            $table->text('destination')->nullable();
+
+            $table->string('fix_amount1')->nullable();
+            $table->string('percentage1')->nullable();
+            $table->text('products1')->nullable();
+            $table->text('destination1')->nullable();
+
+            $table->string('fix_amount2')->nullable();
+            $table->string('percentage2')->nullable();
+            $table->text('products2')->nullable();
+            $table->text('destination2')->nullable();
+            $table->string('split_billing')->nullable();
             $table->date('date_renewal');
             $table->text('distributer');
             $table->string('client_number');

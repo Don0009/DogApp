@@ -64,4 +64,6 @@ Route::group(['middleware' => 'auth'], function () {
     //base
     Route::resource('number_request', 'base\NumberRequestController');
     Route::resource('subscription_request', 'base\SubscriptionRequestController');
+    //lampiris
+    Route::resource('lampiris', 'lampiris\LampirisController');
 });

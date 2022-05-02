@@ -205,6 +205,20 @@
             </ul>
         </div>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
+            <i class="link-icon" data-feather="inbox"></i>
+            <span class="link-title">Lampiris</span>
+            <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse" id="telnet">
+            <ul class="nav sub-menu">
+                <li class="nav-item">
+                    <a href="{{ route('lampiris.index') }}" class="nav-link">Lampiris Form</a>
+                </li>
+            </ul>
+        </div>
+    </li>
 
     <!-- End Scarlet -->
 
