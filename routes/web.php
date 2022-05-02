@@ -58,4 +58,6 @@ Route::group(['middleware' => 'auth'], function () {
    Route::resource('energy_transfer_document', 'EnergyTransferDocumentController');
 
    Route::resource('mega', 'MegaController');
+
+   Route::resource('comfy_pro_contract', 'ComfyProContractController');
 });

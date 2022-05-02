@@ -151,6 +151,22 @@
 
 
 
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#luminus" role="button" aria-expanded="false"
+                    aria-controls="luminus">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Luminus</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="luminus">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('comfy_pro_contract.index') }}" class="nav-link">comfy_pro_contract</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
 
 
 
