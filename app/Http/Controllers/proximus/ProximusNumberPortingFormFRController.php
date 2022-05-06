@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ProximusNumberPortingFormFR;
+use App\Http\Controllers\AmoCRMController;
+
 
 
 
@@ -58,79 +60,84 @@ class ProximusNumberPortingFormFRController extends Controller
                 $validator = Validator::make($request->all(), [
 
 
-            'seller_id'=> 'required',
-            'name'=> 'required',
-            'full_name'=> 'required',
-            'customer_other_network_number'=> 'required',
-            'email_address'=> 'required',
-            'company_name'=> 'required',
-            'company_number'=> 'required',
-            'customer_other_network_number_p'=> 'required',
-            'email_address_p'=> 'required',
-            'mobile_pack_radio'=> 'required',
-            'qua_of_num_port'=> 'required',
-            'land_line_to_be_ported'=> 'required',
-            'street'=> 'required',
-            'no'=> 'required',
-            'floor'=> 'required',
-            'box'=> 'required',
-            'postcode'=> 'required',
-            'township'=> 'required',
-            'TELEFOONNUMMERS'=> 'required',
-            'TELEFOONNUMMERS_2'=> 'required',
-            'TELEFOONNUMMERS_3'=> 'required',
-            'TELEFOONNUMMERS_4'=> 'required',
-            'TELEFOONNUMMERS_5'=> 'required',
-            'Of_nummerreeks_van'=> 'required',
-            'Of_nummerreeks_van_2'=> 'required',
-            'Of_nummerreeks_van_3'=> 'required',
-            'Of_nummerreeks_van_4'=> 'required',
-            'Of_nummerreeks_van_5'=> 'required',
-            'tot_1'=> 'required',
-            'tot_2'=> 'required',
-            'tot_3'=> 'required',
-            'tot_4'=> 'required',
-            'tot_5'=> 'required',
 
-            'gsm_num_1'=> 'required',
-            'gsm_num_2'=> 'required',
-            'gsm_num_3'=> 'required',
-            'gsm_num_4'=> 'required',
-            'gsm_num_5'=> 'required',
+                    'seller_id'=> 'required',
+                    'name'=> 'required',
+                    'full_name'=> 'required',
+                    'customer_other_network_number'=> 'required',
+                    'email_address'=> 'required',
+                    'company_name'=> 'required',
+                    'company_number'=> 'required',
+                    'customer_other_network_number_p'=> 'required',
+                    'email_address_p'=> 'required',
+                    'mobile_pack_radio'=> 'required',
+                    'qua_of_num_port'=> 'required',
+                    'land_line_to_be_ported'=> 'required',
+                    'street'=> 'required',
+                    'no'=> 'required',
+                    'floor'=> 'required',
+                    'box'=> 'required',
+                    'postcode'=> 'required',
+                    'township'=> 'required',
 
-            'sim_num_of_other_operator_1'=> 'required',
-            'sim_num_of_other_operator_2'=> 'required',
-            'sim_num_of_other_operator_3'=> 'required',
-            'sim_num_of_other_operator_4'=> 'required',
-            'sim_num_of_other_operator_5'=> 'required',
-            'sim_num_of_other_operator_6'=> 'required',
+                    'TELEFOONNUMMERS'=> 'required',
+                    'TELEFOONNUMMERS_2'=> 'required',
+                    'TELEFOONNUMMERS_3'=> 'required',
+                    'TELEFOONNUMMERS_4'=> 'required',
+                    'TELEFOONNUMMERS_5'=> 'required',
+                    'Of_nummerreeks_van'=> 'required',
+                    'Of_nummerreeks_van_2'=> 'required',
+                    'Of_nummerreeks_van_3'=> 'required',
+                    'Of_nummerreeks_van_4'=> 'required',
+                    'Of_nummerreeks_van_5'=> 'required',
 
-            'reload_card_1'=> 'required',
-            'reload_card_2'=> 'required',
-            'reload_card_3'=> 'required',
-            'reload_card_4'=> 'required',
-            'reload_card_5'=> 'required',
-            'reload_card_6'=> 'required',
-            'reload_card_7'=> 'required',
+                    'tot_1'=> 'required',
+                    'tot_2'=> 'required',
+                    'tot_3'=> 'required',
+                    'tot_4'=> 'required',
+                    'tot_5'=> 'required',
 
-            'subscription_1'=> 'required',
-            'subscription_2'=> 'required',
-            'subscription_3'=> 'required',
-            'subscription_4'=> 'required',
-            'subscription_5'=> 'required',
-            'subscription_6'=> 'required',
-            'subscription_7'=> 'required',
+                    //'gsm_num_1'=> 'required',
+                    'gsm_num_2'=> 'required',
+                    'gsm_num_3'=> 'required',
+                    'gsm_num_4'=> 'required',
+                    'gsm_num_5'=> 'required',
+                    'gsm_num_6'=> 'required',
 
 
-            'simkaartnum_of_proximus_1'=> 'required',
-            'simkaartnum_of_proximus_2'=> 'required',
-            'simkaartnum_of_proximus_3'=> 'required',
-            'simkaartnum_of_proximus_4'=> 'required',
-            'simkaartnum_of_proximus_5'=> 'required',
-            'simkaartnum_of_proximus_6'=> 'required',
+                   // 'sim_num_of_other_operator_1'=> 'required',
+                    'sim_num_of_other_operator_2'=> 'required',
+                    'sim_num_of_other_operator_3'=> 'required',
+                    'sim_num_of_other_operator_4'=> 'required',
+                    'sim_num_of_other_operator_5'=> 'required',
+                    'sim_num_of_other_operator_6'=> 'required',
 
-            'date'=> 'required',
-            'ref_id'=> 'required',
+                    //'reload_card_1'=> 'required',
+                    'reload_card_2'=> 'required',
+                    'reload_card_3'=> 'required',
+                    'reload_card_4'=> 'required',
+                    'reload_card_5'=> 'required',
+                    'reload_card_6'=> 'required',
+                    'reload_card_7'=> 'required',
+
+                  //  'subscription_1'=> 'required',
+                    'subscription_2'=> 'required',
+                    'subscription_3'=> 'required',
+                    'subscription_4'=> 'required',
+                    'subscription_5'=> 'required',
+                    'subscription_6'=> 'required',
+                    'subscription_7'=> 'required',
+
+
+                   // 'simkaartnum_of_proximus_1'=> 'required',
+                    'simkaartnum_of_proximus_2'=> 'required',
+                    'simkaartnum_of_proximus_3'=> 'required',
+                    'simkaartnum_of_proximus_4'=> 'required',
+                    'simkaartnum_of_proximus_5'=> 'required',
+                    'simkaartnum_of_proximus_6'=> 'required',
+
+                    'date'=> 'required',
+                    'ref_id'=> 'required',
 
 
                 ]);
@@ -142,7 +149,11 @@ class ProximusNumberPortingFormFRController extends Controller
 
 
 
+                $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
 
+                    'command' => env('PDFTK_PATH'),
+
+                ]);
 
                 $data = $request->all();
                 $data = $orange = ProximusNumberPortingFormFR::create($data);
@@ -155,6 +166,7 @@ class ProximusNumberPortingFormFRController extends Controller
                 $result = $pdf->fillForm($data)->flatten()->needAppearances()
 
                     ->saveAs($pdf_name);
+
 
 
 

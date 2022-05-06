@@ -61,6 +61,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('proximus_connection_request_fr', 'proximus\ProximusConnectionRequestFRController');
     Route::resource('proximus_number_porting_du', 'proximus\ProximusNumberPortingFormDUController');
     Route::resource('proximus_number_porting_fr', 'proximus\ProximusNumberPortingFormFRController');
+    Route::resource('proximus_multi_contact_du', 'proximus\ProximusMultiContactDUController');
+
+
 
 
 

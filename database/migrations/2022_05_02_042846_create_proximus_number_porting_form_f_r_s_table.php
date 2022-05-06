@@ -38,21 +38,21 @@ class CreateProximusNumberPortingFormFRSTable extends Migration
 
 
 
-            $table->string('gsm_num_1');
+            //$table->string('gsm_num_1');
             $table->string('gsm_num_2');
             $table->string('gsm_num_3');
             $table->string('gsm_num_4');
             $table->string('gsm_num_5');
             $table->string('gsm_num_6');
 
-            $table->text('sim_num_of_other_operator_1');
+            //$table->text('sim_num_of_other_operator_1');
             $table->text('sim_num_of_other_operator_2');
             $table->text('sim_num_of_other_operator_3');
             $table->text('sim_num_of_other_operator_4');
             $table->text('sim_num_of_other_operator_5');
             $table->text('sim_num_of_other_operator_6');
 
-            $table->text('reload_card_1');
+           // $table->text('reload_card_1');
             $table->text('reload_card_2');
             $table->text('reload_card_3');
             $table->text('reload_card_4');
@@ -60,7 +60,7 @@ class CreateProximusNumberPortingFormFRSTable extends Migration
             $table->text('reload_card_6');
             $table->text('reload_card_7');
 
-            $table->text('subscription_1');
+          //  $table->text('subscription_1');
             $table->text('subscription_2');
             $table->text('subscription_3');
             $table->text('subscription_4');
@@ -68,12 +68,12 @@ class CreateProximusNumberPortingFormFRSTable extends Migration
             $table->text('subscription_6');
             $table->text('subscription_7');
 
-            $table->text('simkaartnum_of_proximus_1');
+            //$table->text('simkaartnum_of_proximus_1');
             $table->text('simkaartnum_of_proximus_2');
-            $table->text('simkaartnum_of_proximus_3');
-            $table->text('simkaartnum_of_proximus_4');
-            $table->text('simkaartnum_of_proximus_5');
-            $table->text('simkaartnum_of_proximus_6');
+            $table->text('simkaartnum_of_proximus_3')->nullable();
+            $table->text('simkaartnum_of_proximus_4')->nullable();
+            $table->text('simkaartnum_of_proximus_5')->nullable();
+            $table->text('simkaartnum_of_proximus_6')->nullable();
 
             $table->string('TELEFOONNUMMERS');
             $table->string('TELEFOONNUMMERS_2')->nullable();
@@ -82,16 +82,16 @@ class CreateProximusNumberPortingFormFRSTable extends Migration
             $table->string('TELEFOONNUMMERS_5')->nullable();
 
             $table->string('Of_nummerreeks_van');
-            $table->string('Of_nummerreeks_van_1')->nullable();
-            $table->string('Of_nummerreeks_van_2')->nullable();
-            $table->string('Of_nummerreeks_van_3')->nullable();
-            $table->string('Of_nummerreeks_van_4')->nullable();
+            $table->string('Of_nummerreeks_van_1');
+            $table->string('Of_nummerreeks_van_2');
+            $table->string('Of_nummerreeks_van_3');
+            $table->string('Of_nummerreeks_van_4');
 
             $table->string('tot_1');
-            $table->string('tot_2');
-            $table->string('tot_3');
-            $table->string('tot_4');
-            $table->string('tot_5');
+            $table->string('tot_2')->nullable();
+            $table->string('tot_3')->nullable();
+            $table->string('tot_4')->nullable();
+            $table->string('tot_5')->nullable();
             $table->string('Dienst_1');
             $table->string('Dienst_2')->nullable();
             $table->string('service_id_num_1');
@@ -101,14 +101,11 @@ class CreateProximusNumberPortingFormFRSTable extends Migration
 
             $table->string('ref_id');
 
-            // universal Fields
-
+            // universal fields
 
             $table->string('doc_id')->nullable();
             $table->string('doc_sign_url')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
-
-
 
 
             $table->timestamps();

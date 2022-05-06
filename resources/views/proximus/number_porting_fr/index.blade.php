@@ -59,7 +59,7 @@
                                     <tr>
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $home->name }}</td>
-                                        <td>{{ $home->first_name }}</td>
+                                        <td>{{ $home->full_name }}</td>
 
                                         <td>
                                             {{ \Carbon\Carbon::parse($home->created_at)->diffForhumans() }}

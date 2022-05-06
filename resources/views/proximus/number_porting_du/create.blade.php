@@ -95,7 +95,7 @@
                                 class="form-control @error('customer_other_network_number') is-invalid @enderror"
                                 id="customer_other_network_number" autocomplete="off"
                                 placeholder="Klantennummer
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    bij de andere operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            bij de andere operator"
                                 name="customer_other_network_number" value="{{ old('customer_other_network_number') }}"
                                 required>
                             @error('customer_other_network_number')
@@ -232,21 +232,20 @@
                                 <tr>
                                     <td scope="row">
 
-                                        <div class="form-group mb-0">
+                                        {{-- <div class="form-group mb-0">
 
                                             <input name="gsm_num_1" type="text" class="form-control border-0"
                                                 id="exampleInputEmail1" aria-describedby="emailHelp" required>
                                             @error('gsm_num_1')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
-                                        </div>
+                                        </div> --}}
 
 
                                     </td>
 
                                     <td scope="row">
-
-                                        <div class="form-group mb-0">
+                                        {{-- <div class="form-group mb-0">
 
                                             <input name="sim_num_of_other_operator_1" type="text"
                                                 class="form-control border-0" id="exampleInputEmail1"
@@ -254,29 +253,20 @@
                                             @error('sim_num_of_other_operator_1')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
-                                        </div>
+                                        </div> --}}
 
 
                                     </td>
                                     <td scope="row">
-                                        Herlaad Kaart
-                                        <div class="form-group mb-0">
-                                            <input type="radio" name="reload_card_1" value="0" required>
-                                            <label for="reload_card_1" class="form-label"> </label>
 
-                                        </div>
 
 
                                     </td>
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            Abonnment
-                                            <div class="form-group mb-0">
-                                                <input type="radio" name="subscription_1" value="0" required>
-                                                <label for="subscription_1" class="form-label"> </label>
 
-                                            </div>
+
                                         </div>
 
 
@@ -303,12 +293,6 @@
 
 
                                     </td>
-
-
-
-
-
-
 
 
                                 </tr>
@@ -343,6 +327,7 @@
 
                                     </td>
                                     <td scope="row">
+                                        Herlaad Kaart
 
                                         <div class="form-group mb-0">
                                             <input type="radio" name="reload_card_2" value="0" required>
@@ -353,6 +338,7 @@
 
                                     </td>
                                     <td scope="row">
+                                        Abonnment
                                         <div class="form-group mb-0">
                                             <input type="radio" name="subscription_2" value="0" required>
                                             <label for="subscription_2" class="form-label"> </label>
@@ -361,26 +347,14 @@
 
 
                                     </td>
-                                    <td scope="row">
-
+                                    <td scope="row" colspan="2">
+                                        <p style="text-align: center;">Simkaartnummer bij Proximus</p>
                                         <div class="form-group mb-0">
 
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div>
-
-
-                                    </td>
-                                    <td scope="row">
-
-                                        <div class="form-group mb-0">
-
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
+                                            <input name="simkaartnum_of_proximus_2" type="text"
+                                                class="form-control border-0" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" required>
+                                            @error('simkaartnum_of_proximus_2')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
@@ -447,26 +421,14 @@
 
 
                                     </td>
-                                    <td scope="row">
+                                    <td scope="row" colspan="2">
 
                                         <div class="form-group mb-0">
 
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div>
-
-
-                                    </td>
-                                    <td scope="row">
-
-                                        <div class="form-group mb-0">
-
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
+                                            <input name="simkaartnum_of_proximus_3" type="text"
+                                                class="form-control border-0" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" required>
+                                            @error('simkaartnum_of_proximus_3')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
@@ -532,32 +494,21 @@
 
 
                                     </td>
-                                    <td scope="row">
+                                    <td scope="row" colspan="2">
 
                                         <div class="form-group mb-0">
 
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
+                                            <input name="simkaartnum_of_proximus_4" type="text"
+                                                class="form-control border-0" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" required>
+                                            @error('simkaartnum_of_proximus_4')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
 
 
                                     </td>
-                                    <td scope="row">
 
-                                        <div class="form-group mb-0">
-
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div>
-
-
-                                    </td>
 
 
 
@@ -610,37 +561,27 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_6" value="0" required>
-                                            <label for="subscription_6" class="form-label"> </label>
+                                            <input type="radio" name="subscription_5" value="0" required>
+                                            <label for="subscription_5" class="form-label"> </label>
 
                                         </div>
 
 
                                     </td>
-                                    <td scope="row">
+                                    <td scope="row" colspan="2">
 
                                         <div class="form-group mb-0">
 
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
+                                            <input name="simkaartnum_of_proximus_5" type="text"
+                                                class="form-control border-0" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" required>
+                                            @error('simkaartnum_of_proximus_5')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
 
 
                                     </td>
-                                    <td scope="row">
-
-                                        <div class="form-group mb-0">
-
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div>
-
 
                                     </td>
 
@@ -692,6 +633,7 @@
 
                                     </td>
                                     <td scope="row">
+
                                         <div class="form-group mb-0">
                                             <input type="radio" name="subscription_6" value="0" required>
                                             <label for="subscription_6" class="form-label"> </label>
@@ -701,32 +643,21 @@
 
 
                                     </td>
-                                    <td scope="row">
+                                    <td scope="row" colspan="2">
 
                                         <div class="form-group mb-0">
 
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
+                                            <input name="simkaartnum_of_proximus_6" type="text"
+                                                class="form-control border-0" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" required>
+                                            @error('simkaartnum_of_proximus_6')
                                                 <span class="text-danger"> {{ $message }}</span>
                                             @enderror
                                         </div>
 
 
                                     </td>
-                                    <td scope="row">
 
-                                        <div class="form-group mb-0">
-
-                                            <input name="call_number_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('call_number_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div>
-
-
-                                    </td>
 
 
 
@@ -750,7 +681,7 @@
                                 class="form-control @error('land_line_to_be_ported') is-invalid @enderror"
                                 id="land_line_to_be_ported" autocomplete="off"
                                 placeholder="Over te
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            dragen vaste telefoonnummers van operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    dragen vaste telefoonnummers van operator"
                                 name="land_line_to_be_ported" value="{{ old('land_line_to_be_ported') }}" required>
                             @error('land_line_to_be_ported')
                                 <span class="invalid-feedback mb-2" role="alert">

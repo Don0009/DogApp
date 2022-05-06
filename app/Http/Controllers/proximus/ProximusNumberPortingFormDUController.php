@@ -9,6 +9,7 @@ use App\Models\NumberPortingFormDU;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\AmoCRMController;
 
 
 use Carbon\Carbon;
@@ -92,7 +93,7 @@ class ProximusNumberPortingFormDUController extends Controller
             'tot_4'=> 'required',
             'tot_5'=> 'required',
 
-            'gsm_num_1'=> 'required',
+            //'gsm_num_1'=> 'required',
             'gsm_num_2'=> 'required',
             'gsm_num_3'=> 'required',
             'gsm_num_4'=> 'required',
@@ -100,14 +101,14 @@ class ProximusNumberPortingFormDUController extends Controller
             'gsm_num_6'=> 'required',
 
 
-            'sim_num_of_other_operator_1'=> 'required',
+           // 'sim_num_of_other_operator_1'=> 'required',
             'sim_num_of_other_operator_2'=> 'required',
             'sim_num_of_other_operator_3'=> 'required',
             'sim_num_of_other_operator_4'=> 'required',
             'sim_num_of_other_operator_5'=> 'required',
             'sim_num_of_other_operator_6'=> 'required',
 
-            'reload_card_1'=> 'required',
+            //'reload_card_1'=> 'required',
             'reload_card_2'=> 'required',
             'reload_card_3'=> 'required',
             'reload_card_4'=> 'required',
@@ -115,7 +116,7 @@ class ProximusNumberPortingFormDUController extends Controller
             'reload_card_6'=> 'required',
             'reload_card_7'=> 'required',
 
-            'subscription_1'=> 'required',
+          //  'subscription_1'=> 'required',
             'subscription_2'=> 'required',
             'subscription_3'=> 'required',
             'subscription_4'=> 'required',
@@ -124,7 +125,7 @@ class ProximusNumberPortingFormDUController extends Controller
             'subscription_7'=> 'required',
 
 
-            'simkaartnum_of_proximus_1'=> 'required',
+           // 'simkaartnum_of_proximus_1'=> 'required',
             'simkaartnum_of_proximus_2'=> 'required',
             'simkaartnum_of_proximus_3'=> 'required',
             'simkaartnum_of_proximus_4'=> 'required',
@@ -133,14 +134,6 @@ class ProximusNumberPortingFormDUController extends Controller
 
             'date'=> 'required',
             'ref_id'=> 'required',
-
-
-
-
-
-
-
-
 
 
         ]);
@@ -152,7 +145,11 @@ class ProximusNumberPortingFormDUController extends Controller
 
 
 
+        $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
 
+            'command' => env('PDFTK_PATH'),
+
+        ]);
 
         $data = $request->all();
         $data = $orange = NumberPortingFormDU::create($data);
