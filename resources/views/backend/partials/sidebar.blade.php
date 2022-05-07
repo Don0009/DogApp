@@ -183,7 +183,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('proximus_multi_contact_du.index') }}"
-                                class="nav-link">Multi-Contact DU</a>
+                                class="nav-link">Multi-Contact FR</a>
                         </li>
                     </ul>
                 </div>

@@ -27,6 +27,51 @@ class CreateProximusMultiContactFormDUSTable extends Migration
             $table->string('app_social');
             $table->string('mob_epic_flex');
             $table->string('gb_package');
+            $table->string('package_type_1');
+
+
+            // SECOND PHASE
+            $table->string('sim_phase_r_2');
+            $table->string('sim_type_r_2');
+            $table->string('sim_num_2');
+            $table->string('gsm_num_2');
+            $table->string('proximus_subs_r_2');
+            $table->string('mobilus_r_2');
+            $table->string('mobilus_full_r_2');
+            $table->string('app_social_2');
+            $table->string('mob_epic_flex_2');
+            $table->string('gb_package_2');
+            $table->string('package_type_r_2');
+
+            //THIRD PHASE
+
+            $table->string('sim_phase_r_3');
+            $table->string('sim_type_r_3');
+            $table->string('sim_num_3');
+            $table->string('gsm_num_3');
+            $table->string('proximus_subs_r_3');
+            $table->string('mobilus_r_3');
+            $table->string('mobilus_full_r_3');
+            $table->string('app_social_3');
+            $table->string('mob_epic_flex_3');
+            $table->string('gb_package_3');
+            $table->string('package_type_r_3');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
