@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Proximus;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProximusMultiContactFormDU extends Model
+class ProximusMultiContactFormFR extends Model
 {
     //
     protected $guarded = [];

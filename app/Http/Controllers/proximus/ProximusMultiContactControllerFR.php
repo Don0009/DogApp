@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\proximus;
 
-use App\Http\Controllers\OKSign\OKSignController;
-use Illuminate\Support\Facades\Auth;
-use App\Models\ProximusMultiContactFormDU;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Proximus\ProximusMultiContactFormFR;
+
+use App\Http\Controllers\OKSign\OKSignController;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\AmoCRMController;
 
@@ -16,7 +17,7 @@ use Carbon\Carbon;
 use mikehaertl\pdftk\Pdf;
 use \Mail;
 
-class ProximusMultiContactDUController extends Controller
+class ProximusMultiContactControllerFR extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,10 +26,11 @@ class ProximusMultiContactDUController extends Controller
      */
     public function index()
     {
-         //
-         $proximus = ProximusMultiContactFormDU::all();
+        //
+        //
+        $proximus = ProximusMultiContactFormFR::all();
 
-         return view('proximus.multi_contact_du.index', compact('proximus'));
+        return view('proximus.multi_contact_fr.index', compact('proximus'));
     }
 
     /**
@@ -39,8 +41,7 @@ class ProximusMultiContactDUController extends Controller
     public function create()
     {
         //
-        return view('proximus.multi_contact_du.create');
-
+        return view('proximus.multi_contact_fr.create');
     }
 
     /**
@@ -88,12 +89,13 @@ class ProximusMultiContactDUController extends Controller
             'sim_type_r_3'=> 'required',
             'sim_num_3'=> 'required',
             'gsm_num_3'=> 'required',
+
             'proximus_subs_r_3'=> 'required',
             'mobilus_r_3'=> 'required',
             'app_social_3'=> 'required',
             'mobilus_full_r_3'=> 'required',
             'mob_epic_flex_3'=> 'required',
-            'gb_package_3'=> 'required',
+           // 'gb_package_3'=> 'required',
             'package_type_r_3'=> 'required',
 
 
@@ -107,7 +109,7 @@ class ProximusMultiContactDUController extends Controller
             'mobilus_full_r_4'=> 'required',
             'app_social_4'=> 'required',
             'mob_epic_flex_4'=> 'required',
-            'gb_package_4'=> 'required',
+           // 'gb_package_4'=> 'required',
             'package_type_r_4'=> 'required',
 
 
@@ -120,7 +122,7 @@ class ProximusMultiContactDUController extends Controller
             'mobilus_full_r_5'=> 'required',
             'app_social_5'=> 'required',
             'mob_epic_flex_5'=> 'required',
-            'gb_package_5'=> 'required',
+           // 'gb_package_5'=> 'required',
             'package_type_r_5'=> 'required',
 
             'sim_phase_r_pro_1'=> 'required',
@@ -155,7 +157,7 @@ class ProximusMultiContactDUController extends Controller
             'mobilus_r_pro_3'=> 'required',
             'mob_epic_flex_pro_3'=> 'required',
             'app_social_r_pro_3'=> 'required',
-            'gb_package_pro_3'=> 'required',
+           // 'gb_package_pro_3'=> 'required',
             'package_type_r_pro_3'=> 'required',
 
             'sim_phase_r_pro_4'=> 'required',
@@ -166,7 +168,7 @@ class ProximusMultiContactDUController extends Controller
             'mobilus_r_pro_4'=> 'required',
             'mob_epic_flex_pro_4'=> 'required',
             'app_social_r_pro_4'=> 'required',
-            'gb_package_pro_4'=> 'required',
+            //'gb_package_pro_4'=> 'required',
             'package_type_r_pro_4'=> 'required',
 
 
@@ -178,7 +180,7 @@ class ProximusMultiContactDUController extends Controller
             'mobilus_r_pro_5'=> 'required',
             'mob_epic_flex_pro_5'=> 'required',
             'app_social_r_pro_5'=> 'required',
-            'gb_package_pro_5'=> 'required',
+            //'gb_package_pro_5'=> 'required',
             'package_type_r_pro_5'=> 'required',
 
 
@@ -189,10 +191,12 @@ class ProximusMultiContactDUController extends Controller
 
 
 
+
         $data = $request->all();
         $data['user_id'] = Auth::user()->id;
 
-       // dd($data);
+
+     //  dd($data);
 
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
@@ -204,7 +208,7 @@ class ProximusMultiContactDUController extends Controller
 
 
         $data = $request->all();
-        $data = $orange = ProximusMultiContactFormDU::create($data);
+        $data = $orange = ProximusMultiContactFormFR::create($data);
 
         $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 
@@ -215,11 +219,11 @@ class ProximusMultiContactDUController extends Controller
 //Mail
         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
             $message->to('degis9000@gmail.com')
-                ->subject("You have got new Proximus Multi Contact (French) Lead...!")
+                ->subject("You have got new Proximus Multi Contact (Dutch) Lead...!")
                 ->cc(['lasha@studiodlvx.be'])
 //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
                 ->attach(public_path($pdf_name), [
-                    'as' => 'Proximus Multi Contact (French) Lead.pdf',
+                    'as' => 'Proximus Multi Contact (Dutch) Lead.pdf',
                     'mime' => 'application/pdf',
                 ]);
             $message->from('no-reply@ecosafety.nyc');
@@ -235,7 +239,7 @@ class ProximusMultiContactDUController extends Controller
         $lead_data['NAME'] = $orange->name;
         $lead_data['PHONE'] = $orange->telephone;
         $lead_data['EMAIL'] = $orange->email_address;
-        $lead_data['LEAD_NAME'] = 'Proximus Multi Contact (French) Lead';
+        $lead_data['LEAD_NAME'] = 'Proximus Multi Contact (Dutch) Lead';
         $amo->add_lead($lead_data);
         unlink(public_path($pdf_name));
 
@@ -243,7 +247,7 @@ class ProximusMultiContactDUController extends Controller
 
 
 
-        return redirect()->route('proximus_multi_contact_fr.index')->with('success', 'Proximus Multi Contact (French) Lead created successfully!');
+        return redirect()->route('proximus_multi_contact_fr.index')->with('success', 'Proximus Multi Contact (Dutch) Lead created successfully!');
 
 
 

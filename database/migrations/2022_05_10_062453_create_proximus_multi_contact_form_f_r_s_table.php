@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProximusMultiContactFormDUSTable extends Migration
+class CreateProximusMultiContactFormFRSTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateProximusMultiContactFormDUSTable extends Migration
      */
     public function up()
     {
-        Schema::create('proximus_multi_contact_form_d_u_s', function (Blueprint $table) {
+        Schema::create('proximus_multi_contact_form_f_r_s', function (Blueprint $table) {
             $table->id();
+
 
             $table->text('client_name');
             $table->text('phone');
@@ -55,7 +56,7 @@ class CreateProximusMultiContactFormDUSTable extends Migration
             $table->string('mobilus_full_r_3');
             $table->string('app_social_3');
             $table->string('mob_epic_flex_3');
-            $table->string('gb_package_3');
+           // $table->string('gb_package_3');
             $table->string('package_type_r_3');
 
 
@@ -71,7 +72,7 @@ class CreateProximusMultiContactFormDUSTable extends Migration
             $table->longText('mobilus_full_r_4');
             $table->longText('app_social_4');
             $table->longText('mob_epic_flex_4');
-            $table->longText('gb_package_4');
+           // $table->longText('gb_package_4');
             $table->longText('package_type_r_4');
 
 
@@ -88,7 +89,7 @@ class CreateProximusMultiContactFormDUSTable extends Migration
              $table->longText('mobilus_full_r_5');
              $table->longText('app_social_5');
              $table->longText('mob_epic_flex_5');
-             $table->longText('gb_package_5');
+            // $table->longText('gb_package_5');
              $table->longText('package_type_r_5');
 
 
@@ -134,7 +135,7 @@ class CreateProximusMultiContactFormDUSTable extends Migration
                 $table->string('mobilus_r_pro_3');
                 $table->string('mob_epic_flex_pro_3');
                 $table->string('app_social_r_pro_3');
-                $table->string('gb_package_pro_3');
+                //$table->string('gb_package_pro_3');
                 $table->string('package_type_r_pro_3');
 
 
@@ -150,7 +151,7 @@ class CreateProximusMultiContactFormDUSTable extends Migration
                 $table->longText('mobilus_r_pro_4');
                 $table->longText('mob_epic_flex_pro_4');
                 $table->longText('app_social_r_pro_4');
-                $table->longText('gb_package_pro_4');
+               // $table->longText('gb_package_pro_4');
                 $table->longText('package_type_r_pro_4');
 
 
@@ -166,7 +167,7 @@ class CreateProximusMultiContactFormDUSTable extends Migration
                 $table->longText('mobilus_r_pro_5');
                 $table->longText('mob_epic_flex_pro_5');
                 $table->longText('app_social_r_pro_5');
-                $table->longText('gb_package_pro_5');
+               // $table->longText('gb_package_pro_5');
                 $table->longText('package_type_r_pro_5');
 
 
@@ -215,62 +216,6 @@ class CreateProximusMultiContactFormDUSTable extends Migration
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             $table->timestamps();
         });
     }
@@ -282,6 +227,6 @@ class CreateProximusMultiContactFormDUSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proximus_multi_contact_form_d_u_s');
+        Schema::dropIfExists('proximus_multi_contact_form_f_r_s');
     }
 }

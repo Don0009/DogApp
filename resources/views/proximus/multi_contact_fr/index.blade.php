@@ -9,9 +9,9 @@
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <a href="{{ route('proximus_multi_contact_du.create') }}" class="btn btn-primary btn-icon-text">
+            <a href="{{ route('proximus_multi_contact_fr.create') }}" class="btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Multi Contact (French)
+                Create Multi Contact (Dutch)
             </a>
 
         </div>
@@ -28,7 +28,7 @@
             <div class="card">
                 <div class="card-body">
                     <h6 class="card-title">Proximus Multi Contact</h6>
-                    <p class="card-description">All the Proximus Multi Contact(French) leads are listed here.</p>
+                    <p class="card-description">All the Proximus Multi Contact(Dutch) leads are listed here.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>

@@ -25,7 +25,7 @@
         <div class="card">
             <div class="card-body">
                 {{-- <h5 class="card-title">Proximus</h5> --}}
-                <form action="{{ route('proximus_multi_contact_du.store') }}" method="post">@csrf
+                <form action="{{ route('proximus_multi_contact_fr.store') }}" method="post">@csrf
                     <div class="row">
 
                         {{-- Branding --}}
@@ -33,29 +33,26 @@
                             src="{{ asset('images/brands/Proximus_logo.jpeg') }}" height="75px" width="330" alt="">
                         {{-- Branding ENd --}}
 
-                        <div class="mb-3 mt-4 col-md-12">
-                            <p class="lead">02/11/2020 au 31/01/2021
-                            </p>
 
-                        </div>
 
-                        <div class="mb-3 col-md-12">
-                            <h5 class=""><b>Annexe 1: des cartes SIM supplémentaires (max 10)</b>
+                        <div class="mb-3 mt-5 col-md-12">
+                            <h5 class=""><b>Bijlage 1: Bijkomende simkaarten (max. 10)</b>
                             </h5>
 
                         </div>
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead">VEUILLEZ REMPLIR EN CAPITALES
+                            <p class="lead">GELIEVE ALLES IN HOOFDLETTERS IN TE VULLEN
+
                             </p>
 
                         </div>
 
                         <div class="mb-3 mt-3 col-md-6">
-                            <label for="client_name" class="form-label"><span class="text-danger">*</span>Client
-                                Name</label>
+                            <label for="client_name" class="form-label"><span
+                                    class="text-danger">*</span>Klantennaam</label>
                             <input type="client_name" class="form-control @error('client_name') is-invalid @enderror"
-                                id="client_name" autocomplete="off" placeholder="Nom du client" name="client_name"
+                                id="client_name" autocomplete="off" placeholder="Klantennaam" name="client_name"
                                 value="{{ old('client_name') }}" required>
                             @error('client_name')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -67,10 +64,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-6">
-                            <label for="phone" class="form-label"><span class="text-danger">*</span>N°
-                                de téléphone</label>
+                            <label for="phone" class="form-label"><span
+                                    class="text-danger">*</span>Oproepnummer</label>
                             <input type="phone" class="form-control @error('phone') is-invalid @enderror" id="phone"
-                                autocomplete="off" placeholder="N° de téléphone" name="phone" value="{{ old('phone') }}"
+                                autocomplete="off" placeholder="Oproepnummer" name="phone" value="{{ old('phone') }}"
                                 required>
                             @error('phone')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -79,26 +76,26 @@
                             @enderror
                         </div>
                         <div class="mb-3 col-md-12">
-                            <h5 class=""><b>Pour clients privés </b>
+                            <h5 class=""><b>Voor residentiële klanten </b>
                             </h5>
 
                         </div>
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Carte SIM Supplémentaire – 1
+                            <p class="lead" style="text-align: center;">Bijkomende simkaart – 1
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r" value="0" required>
-                            <label for="sim_phase" class="form-label">Nouveau</label>
+                            <label for="sim_phase" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r" value="1" required>
-                            <label for="sim_phase" class="form-label">Conversion</label>
+                            <label for="sim_phase" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -109,9 +106,8 @@
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype
                             </p>
-
                         </div>
 
 
@@ -123,15 +119,15 @@
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="sim_type_r" value="0" required>
-                            <label for="sim_type_r" class="form-label">Normal</label>
+                            <label for="sim_type_r" class="form-label">Normaal</label>
                         </div>
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num" class="form-label"><span class="text-danger">*</span>N° SIM</label>
+                            <label for="sim_num" class="form-label"><span class="text-danger">*</span>Sim nr</label>
                             <input type="sim_num" class="form-control @error('sim_num') is-invalid @enderror" id="sim_num"
-                                autocomplete="off" placeholder="N° de téléphone" name="sim_num"
-                                value="{{ old('sim_num') }}" required>
+                                autocomplete="off" placeholder="Sim nr" name="sim_num" value="{{ old('sim_num') }}"
+                                required>
                             @error('sim_num')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -142,11 +138,11 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num" class="form-label"><span class="text-danger">*</span> .Gsm
+                                nr</label>
                             <input type="gsm_num" class="form-control @error('gsm_num') is-invalid @enderror" id="gsm_num"
-                                autocomplete="off" placeholder="N° de téléphone" name="gsm_num"
-                                value="{{ old('gsm_num') }}" required>
+                                autocomplete="off" placeholder=".Gsm nr" nr" name="gsm_num" value="{{ old('gsm_num') }}"
+                                required>
                             @error('gsm_num')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -156,7 +152,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_r" value="0" required>
-                            <label for="proximus_subs_r" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_r" class="form-label"> Proximus-abonnement in Pack </label>
                         </div>
 
 
@@ -181,11 +177,11 @@
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r" value="3" required>
-                            <label for="mobilus_r" class="form-label">XL Unlimited</label>
+                            <label for="mobilus_r" class="form-label"> Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r" value="4" required>
-                            <label for="mobilus_r" class="form-label">5G Unlimited</label>
+                            <label for="mobilus_r" class="form-label">Unlimited Premium</label>
                         </div>
 
                         <div class="mb-3 mt-5 col-md-12">
@@ -215,7 +211,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>App (1 au choix)</b>
+                            <p style="text-align: center;"><b>App (1 naar keuze)</b>
                             </p>
 
                         </div>
@@ -231,19 +227,14 @@
                                     class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
                                     width="25px" alt="">
 
-
                             </label>
                         </div>
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="app_social" value="1" required>
                             <label for="app_social" class="form-label">
-
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
-
-
                             </label>
                         </div>
 
@@ -251,9 +242,8 @@
                             <input type="radio" name="app_social" value="2" required>
                             <label for="app_social" class="form-label">
 
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}" height="25px"
+                                    class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
                                     width="25px" alt="">
                             </label>
                         </div>
@@ -262,12 +252,10 @@
                             <input type="radio" name="app_social" value="3" required>
                             <label for="app_social" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
-                                    width="25px" alt="">
-
-
-                            </label>
+                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
+                                    width="25px" alt=""> </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -275,8 +263,9 @@
                             <label for="app_social" class="form-label">
 
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
+                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}" height="25px"
                                     width="25px" alt="">
+
 
 
                             </label>
@@ -286,9 +275,13 @@
                             <input type="radio" name="app_social" value="5" required>
                             <label for="app_social" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}" height="25px"
                                     width="25px" alt="">
+
+
+
                             </label>
                         </div>
 
@@ -344,7 +337,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
+                            <p style="text-align: center;"><b>Joint offer: DataPhone Option</b>
                             </p>
 
                         </div>
@@ -352,27 +345,27 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="gb_package" value="0" required>
-                            <label for="gb_package" class="form-label"> (500 MB): €5/mois </label>
+                            <label for="gb_package" class="form-label"> (500 MB): €5/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="gb_package" value="1" required>
-                            <label for="gb_package" class="form-label"> (1 GB): €10/mois </label>
+                            <label for="gb_package" class="form-label"> (1 GB): €10/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="gb_package" value="2" required>
-                            <label for="gb_package" class="form-label"> (1,5 GB): €15/mois </label>
+                            <label for="gb_package" class="form-label"> (1,5 GB): €15/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="gb_package" value="3" required>
-                            <label for="gb_package" class="form-label"> (2 GB): €20/mois </label>
+                            <label for="gb_package" class="form-label"> (2 GB): €20/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="gb_package" value="4" required>
-                            <label for="gb_package" class="form-label"> (2,5 GB): €25/mois </label>
+                            <label for="gb_package" class="form-label"> (2,5 GB): €25/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
@@ -462,20 +455,20 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 2
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 2
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_2" value="0" required>
-                            <label for="sim_phase_r_3" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_3" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_2" value="1" required>
-                            <label for="sim_phase_r_3" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_3" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -486,7 +479,7 @@
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype:
                             </p>
 
                         </div>
@@ -505,11 +498,13 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_2" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_2" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_2" class="form-control @error('sim_num_2') is-invalid @enderror"
-                                id="sim_num_2" autocomplete="off" placeholder="N° de téléphone" name="sim_num_2"
-                                value="{{ old('sim_num_2') }}" required>
+                                id="sim_num_2" autocomplete="off"
+                                placeholder="Sim
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                nr"
+                                name="sim_num_2" value="{{ old('sim_num_2') }}" required>
                             @error('sim_num_2')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -520,10 +515,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num_2" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num_2" class="form-label"><span class="text-danger">*</span> Gsm
+                                nr</label>
                             <input type="gsm_num_2" class="form-control @error('gsm_num_2') is-invalid @enderror"
-                                id="gsm_num_2" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_2"
+                                id="gsm_num_2" autocomplete="off" placeholder=" Gsm nr" name="gsm_num_2"
                                 value="{{ old('gsm_num_2') }}" required>
                             @error('gsm_num_2')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -534,7 +529,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_r_2" value="0" required>
-                            <label for="proximus_subs_r_2" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_r_2" class="form-label">Proximus-abonnement in Pack </label>
                         </div>
 
 
@@ -559,11 +554,11 @@
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r_2" value="3" required>
-                            <label for="mobilus_r_2" class="form-label">XL Unlimited</label>
+                            <label for="mobilus_r_2" class="form-label"> Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r_2" value="4" required>
-                            <label for="mobilus_r_2" class="form-label">5G Unlimited</label>
+                            <label for="mobilus_r_2" class="form-label">Unlimited Premium</label>
                         </div>
 
                         <div class="mb-3 mt-5 col-md-12">
@@ -576,7 +571,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="mobilus_full_r_2" value="0" required>
-                            <label for="mobilus_full_r_3" class="form-label"> S</label>
+                            <label for="mobilus_full_r_2" class="form-label"> S</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -593,7 +588,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>App (1 au choix)</b>
+                            <p style="text-align: center;"><b>App ((1 naar keuze)</b>
                             </p>
 
                         </div>
@@ -605,9 +600,12 @@
                             <input type="radio" name="app_social_2" value="0" required>
                             <label for="app_social_3" class="form-label">
 
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
                                     width="25px" alt="">
+
 
                             </label>
                         </div>
@@ -615,10 +613,12 @@
                             <input type="radio" name="app_social_2" value="1" required>
                             <label for="app_social_3" class="form-label">
 
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
+
+
+
 
                             </label>
                         </div>
@@ -627,9 +627,11 @@
                             <input type="radio" name="app_social_2" value="2" required>
                             <label for="app_social_3" class="form-label">
 
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
-                                    height="25px" width="25px" alt="">
+                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
+                                    width="25px" alt="">
 
 
                             </label>
@@ -640,8 +642,11 @@
                             <label for="app_social_2" class="form-label">
 
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
-                                    width="25px" alt="">
+                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
+                                    height="25px" width="25px" alt="">
+
+
+
 
                             </label>
                         </div>
@@ -650,9 +655,12 @@
                             <input type="radio" name="app_social_2" value="4" required>
                             <label for="app_social_2" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
                                     width="25px" alt="">
+
+
 
                             </label>
                         </div>
@@ -664,6 +672,8 @@
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
                                     height="25px" width="25px" alt="">
+
+
 
                             </label>
                         </div>
@@ -721,7 +731,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
+                            <p style="text-align: center;"><b>Joint offer: DataPhone Option</b>
                             </p>
 
                         </div>
@@ -729,27 +739,27 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="gb_package_2" value="0" required>
-                            <label for="gb_package_2" class="form-label"> (500 MB): €5/mois </label>
+                            <label for="gb_package_2" class="form-label"> (500 MB): €5/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="gb_package_2" value="1" required>
-                            <label for="gb_package_2" class="form-label"> (1 GB): €10/mois </label>
+                            <label for="gb_package_2" class="form-label"> (1 GB): €10/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="gb_package_2" value="2" required>
-                            <label for="gb_package_2" class="form-label"> (1,5 GB): €15/mois </label>
+                            <label for="gb_package_2" class="form-label"> (1,5 GB): €15/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="gb_package_2" value="3" required>
-                            <label for="gb_package_2" class="form-label"> (2 GB): €20/mois </label>
+                            <label for="gb_package_2" class="form-label"> (2 GB): €20/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="gb_package_2" value="4" required>
-                            <label for="gb_package_2" class="form-label"> (2,5 GB): €25/mois </label>
+                            <label for="gb_package_2" class="form-label"> (2,5 GB): €25/maand </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
@@ -763,7 +773,7 @@
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="package_type_r_2" value="2" required>
-                            <label for="package_type_r_2" class="form-label"> Daily Travel Surf </label>
+                            <label for="package_type_r_2" class="form-label"> Daily Trael Surf </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
@@ -842,20 +852,20 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 3
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 3
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_3" value="0" required>
-                            <label for="sim_phase_r_3" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_3" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_3" value="1" required>
-                            <label for="sim_phase_r_3" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_3" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -866,7 +876,7 @@
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype
                             </p>
 
                         </div>
@@ -885,10 +895,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_3" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_3" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_3" class="form-control @error('sim_num_3') is-invalid @enderror"
-                                id="sim_num_3" autocomplete="off" placeholder="N° de téléphone" name="sim_num_3"
+                                id="sim_num_3" autocomplete="off" placeholder="Sim nr" name="sim_num_3"
                                 value="{{ old('sim_num_3') }}" required>
                             @error('sim_num_3')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -900,10 +910,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num_3" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num_3" class="form-label"><span class="text-danger">*</span> Gsm
+                                nr</label>
                             <input type="gsm_num_3" class="form-control @error('gsm_num_3') is-invalid @enderror"
-                                id="gsm_num_3" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_3"
+                                id="gsm_num_3" autocomplete="off" placeholder="Gsm nr" name="gsm_num_3"
                                 value="{{ old('gsm_num_3') }}" required>
                             @error('gsm_num_3')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -914,7 +924,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_r_3" value="0" required>
-                            <label for="proximus_subs_r_3" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_r_3" class="form-label">Proximus-abonnement in Pack</label>
                         </div>
 
 
@@ -939,11 +949,11 @@
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r_3" value="3" required>
-                            <label for="mobilus_r_3" class="form-label">XL Unlimited</label>
+                            <label for="mobilus_r_3" class="form-label"> Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r_3" value="4" required>
-                            <label for="mobilus_r_3" class="form-label">5G Unlimited</label>
+                            <label for="mobilus_r_3" class="form-label"> Unlimited Premium</label>
                         </div>
 
                         <div class="mb-3 mt-5 col-md-12">
@@ -990,15 +1000,18 @@
                                     width="25px" alt="">
 
 
+
                             </label>
                         </div>
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="app_social_3" value="1" required>
                             <label for="app_social_3" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
+
 
 
                             </label>
@@ -1008,9 +1021,13 @@
                             <input type="radio" name="app_social_3" value="2" required>
                             <label for="app_social_3" class="form-label">
 
+
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
                                     height="25px" width="25px" alt="">
+
 
                             </label>
                         </div>
@@ -1019,9 +1036,13 @@
                             <input type="radio" name="app_social_3" value="3" required>
                             <label for="app_social_3" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
                                     width="25px" alt="">
+
+
+
                             </label>
                         </div>
 
@@ -1029,9 +1050,13 @@
                             <input type="radio" name="app_social_3" value="4" required>
                             <label for="app_social_3" class="form-label">
 
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
                                     width="25px" alt="">
+
+
                             </label>
                         </div>
 
@@ -1039,9 +1064,14 @@
                             <input type="radio" name="app_social_3" value="5" required>
                             <label for="app_social_3" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
-                                    height="25px" width="25px" alt="" </label>
+                                    height="25px" width="25px" alt="">
+
+
+
+                            </label>
                         </div>
 
 
@@ -1094,9 +1124,7 @@
                             <input type="radio" name="mob_epic_flex_3" value="9" required>
                             <label for="mob_epic_flex_3" class="form-label"> Epic videos </label>
                         </div>
-
-
-                        <div class="mb-3 mt-5 col-md-12">
+                        {{-- <div class="mb-3 mt-5 col-md-12">
                             <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
                             </p>
 
@@ -1126,7 +1154,9 @@
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="gb_package_3" value="4" required>
                             <label for="gb_package_3" class="form-label"> (2,5 GB): €25/mois </label>
-                        </div>
+                        </div> --}}
+
+
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="package_type_r_3" value="0" required>
@@ -1222,31 +1252,31 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 4
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 4
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_4" value="0" required>
-                            <label for="sim_phase_r_4" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_4" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_4" value="1" required>
-                            <label for="sim_phase_r_4" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_4" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_4" value="2" required>
-                            <label for="sim_phase_r_4" class="form-label">PORT IN (LOA) </label>
+                            <label for="sim_phase_r_4" class="form-label"> PORT IN (LOA) </label>
                         </div>
 
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype:
                             </p>
 
                         </div>
@@ -1265,10 +1295,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_4" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_4" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_4" class="form-control @error('sim_num_4') is-invalid @enderror"
-                                id="sim_num_4" autocomplete="off" placeholder="N° de téléphone" name="sim_num_4"
+                                id="sim_num_4" autocomplete="off" placeholder="Sim nr" name="sim_num_4"
                                 value="{{ old('sim_num_4') }}" required>
                             @error('sim_num_4')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -1280,10 +1310,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num_4" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num_4" class="form-label"><span class="text-danger">*</span> Gsm
+                                nr</label>
                             <input type="gsm_num_4" class="form-control @error('gsm_num_4') is-invalid @enderror"
-                                id="gsm_num_4" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_4"
+                                id="gsm_num_4" autocomplete="off" placeholder="Gsm nr" name="gsm_num_4"
                                 value="{{ old('gsm_num_4') }}" required>
                             @error('gsm_num_4')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -1294,7 +1324,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_r_4" value="0" required>
-                            <label for="proximus_subs_r_4" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_r_4" class="form-label"> Proximus-abonnement in Pack </label>
                         </div>
 
 
@@ -1319,11 +1349,11 @@
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r_4" value="3" required>
-                            <label for="mobilus_r_4" class="form-label">XL Unlimited</label>
+                            <label for="mobilus_r_4" class="form-label"> Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r_4" value="4" required>
-                            <label for="mobilus_r_4" class="form-label">5G Unlimited</label>
+                            <label for="mobilus_r_4" class="form-label"> Unlimited Premium</label>
                         </div>
 
                         <div class="mb-3 mt-5 col-md-12">
@@ -1353,7 +1383,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>App (1 au choix)</b>
+                            <p style="text-align: center;"><b>App (1 naar keuze)</b>
                             </p>
 
                         </div>
@@ -1365,10 +1395,10 @@
                             <input type="radio" name="app_social_4" value="0" required>
                             <label for="app_social_4" class="form-label">
 
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
                                     width="25px" alt="">
+
 
                             </label>
                         </div>
@@ -1376,9 +1406,12 @@
                             <input type="radio" name="app_social_4" value="1" required>
                             <label for="app_social_4" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
+
+
                             </label>
                         </div>
 
@@ -1386,9 +1419,11 @@
                             <input type="radio" name="app_social_4" value="2" required>
                             <label for="app_social_4" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
                                     height="25px" width="25px" alt="">
+
 
 
                             </label>
@@ -1399,11 +1434,11 @@
                             <label for="app_social_4" class="form-label">
 
 
-
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
                                     width="25px" alt="">
+
+
 
                             </label>
                         </div>
@@ -1417,6 +1452,11 @@
                                     class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
                                     width="25px" alt="">
 
+
+
+
+
+
                             </label>
                         </div>
 
@@ -1428,8 +1468,6 @@
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
                                     height="25px" width="25px" alt="">
-
-
 
 
                             </label>
@@ -1485,40 +1523,6 @@
                             <input type="radio" name="mob_epic_flex_4" value="9" required>
                             <label for="mob_epic_flex_4" class="form-label"> Epic videos </label>
                         </div>
-
-
-                        <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
-                            </p>
-
-                        </div>
-
-
-                        <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="gb_package_4" value="0" required>
-                            <label for="gb_package_4" class="form-label"> (500 MB): €5/mois </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="gb_package_4" value="1" required>
-                            <label for="gb_package_4" class="form-label"> (1 GB): €10/mois </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="gb_package_4" value="2" required>
-                            <label for="gb_package_4" class="form-label"> (1,5 GB): €15/mois </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="gb_package_4" value="3" required>
-                            <label for="gb_package_4" class="form-label"> (2 GB): €20/mois </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="gb_package_4" value="4" required>
-                            <label for="gb_package_4" class="form-label"> (2,5 GB): €25/mois </label>
-                        </div>
-
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="package_type_r_4" value="0" required>
                             <label for="package_type_r_4" class="form-label"> Mobile 10 </label>
@@ -1613,20 +1617,20 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 5
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 5
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_5" value="0" required>
-                            <label for="sim_phase_r_5" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_5" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_5" value="1" required>
-                            <label for="sim_phase_r_5" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_5" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -1637,7 +1641,7 @@
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype:
                             </p>
 
                         </div>
@@ -1656,10 +1660,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_5" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_5" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_5" class="form-control @error('sim_num_5') is-invalid @enderror"
-                                id="sim_num_5" autocomplete="off" placeholder="N° de téléphone" name="sim_num_5"
+                                id="sim_num_5" autocomplete="off" placeholder="Sim nr" name="sim_num_5"
                                 value="{{ old('sim_num_5') }}" required>
                             @error('sim_num_5')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -1671,10 +1675,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num_5" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num_5" class="form-label"><span class="text-danger">*</span>Gsm
+                                nr</label>
                             <input type="gsm_num_5" class="form-control @error('gsm_num_5') is-invalid @enderror"
-                                id="gsm_num_5" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_5"
+                                id="gsm_num_5" autocomplete="off" placeholder="Gsm nr" name="gsm_num_5"
                                 value="{{ old('gsm_num_5') }}" required>
                             @error('gsm_num_5')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -1685,7 +1689,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_r_5" value="0" required>
-                            <label for="proximus_subs_r_4" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_r_4" class="form-label">Proximus-abonnement in Pack </label>
                         </div>
 
 
@@ -1710,11 +1714,11 @@
 
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r_5" value="3" required>
-                            <label for="mobilus_r_5" class="form-label">XL Unlimited</label>
+                            <label for="mobilus_r_5" class="form-label">Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="mobilus_r_5" value="4" required>
-                            <label for="mobilus_r_5" class="form-label">5G Unlimited</label>
+                            <label for="mobilus_r_5" class="form-label"> Unlimited Premium</label>
                         </div>
 
                         <div class="mb-3 mt-5 col-md-12">
@@ -1744,7 +1748,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>App (1 au choix)</b>
+                            <p style="text-align: center;"><b>App (1 naar keuze)</b>
                             </p>
 
                         </div>
@@ -1767,9 +1771,12 @@
                             <input type="radio" name="app_social_5" value="1" required>
                             <label for="app_social_5" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
+
+
 
                             </label>
                         </div>
@@ -1794,12 +1801,14 @@
                                     class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
                                     width="25px" alt="">
 
+
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="app_social_5" value="4" required>
                             <label for="app_social_5" class="form-label">
+
 
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
@@ -1813,10 +1822,10 @@
                             <input type="radio" name="app_social_5" value="5" required>
                             <label for="app_social_5" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
                                     height="25px" width="25px" alt="">
-
 
                             </label>
                         </div>
@@ -1871,9 +1880,7 @@
                             <input type="radio" name="mob_epic_flex_5" value="9" required>
                             <label for="mob_epic_flex_5" class="form-label"> Epic videos </label>
                         </div>
-
-
-                        <div class="mb-3 mt-5 col-md-12">
+                        {{-- <div class="mb-3 mt-5 col-md-12">
                             <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
                             </p>
 
@@ -1903,7 +1910,9 @@
                         <div class="mb-2 mt-5 col-md-6">
                             <input type="radio" name="gb_package_5" value="4" required>
                             <label for="gb_package_5" class="form-label"> (2,5 GB): €25/mois </label>
-                        </div>
+                        </div> --}}
+
+
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="package_type_r_5" value="0" required>
@@ -1998,7 +2007,7 @@
                         {{-- PHASE ONE PRO --}}
 
                         <div class="mb-3 col-md-12">
-                            <h4 class="mt-5" style="text-align: center;"> Pour clients professionnels
+                            <h4 class="mt-5" style="text-align: center;"> Voor professionele klanten
                             </h4>
 
                         </div>
@@ -2008,20 +2017,20 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 1
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 1
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_1" value="0" required>
-                            <label for="sim_phase_r_pro_1" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_pro_1" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_1" value="1" required>
-                            <label for="sim_phase_r_pro_1" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_pro_1" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -2032,7 +2041,7 @@
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype
                             </p>
 
                         </div>
@@ -2051,10 +2060,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_pro_1" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_pro_1" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_pro_1" class="form-control @error('sim_num_pro_1') is-invalid @enderror"
-                                id="sim_num_pro_1" autocomplete="off" placeholder="N° de téléphone" name="sim_num_pro_1"
+                                id="sim_num_pro_1" autocomplete="off" placeholder="Sim nr" name="sim_num_pro_1"
                                 value="{{ old('sim_num_pro_1') }}" required>
                             @error('sim_num_pro_1')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -2066,10 +2075,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num_pro_1" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num_pro_1" class="form-label"><span class="text-danger">*</span> Gsm
+                                nr</label>
                             <input type="gsm_num_pro_1" class="form-control @error('gsm_num_pro_1') is-invalid @enderror"
-                                id="gsm_num_pro_1" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_pro_1"
+                                id="gsm_num_pro_1" autocomplete="off" placeholder="Gsm nr" name="gsm_num_pro_1"
                                 value="{{ old('gsm_num_pro_1') }}" required>
                             @error('gsm_num_pro_1')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -2080,7 +2089,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_pro_1" value="0" required>
-                            <label for="proximus_subs_pro_1" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_pro_1" class="form-label"> Proximus-abonnement in Pack </label>
                         </div>
 
 
@@ -2169,6 +2178,8 @@
                             <input type="radio" name="app_social_r_pro_1" value="0" required>
                             <label for="app_social_r_pro_1" class="form-label">
 
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
                                     width="25px" alt="">
@@ -2180,9 +2191,13 @@
                             <input type="radio" name="app_social_r_pro_1" value="1" required>
                             <label for="app_social_r_pro_1" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
+
+
+
                             </label>
                         </div>
 
@@ -2190,9 +2205,13 @@
                             <input type="radio" name="app_social_r_pro_1" value="2" required>
                             <label for="app_social_5" class="form-label">
 
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
                                     height="25px" width="25px" alt="">
+
+
                             </label>
                         </div>
 
@@ -2200,10 +2219,13 @@
                             <input type="radio" name="app_social_r_pro_1" value="3" required>
                             <label for="app_social_r_pro_1" class="form-label">
 
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
                                     width="25px" alt="">
+
+
+
+
                             </label>
                         </div>
 
@@ -2211,9 +2233,11 @@
                             <input type="radio" name="app_social_r_pro_1" value="4" required>
                             <label for="app_social_r_pro_1" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
                                     width="25px" alt="">
+
 
                             </label>
                         </div>
@@ -2223,9 +2247,12 @@
                             <label for="app_social_r_pro_1" class="form-label">
 
 
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
                                     height="25px" width="25px" alt="">
+
 
 
                             </label>
@@ -2233,7 +2260,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
+                            <p style="text-align: center;"><b>Joint offer: DataPhone Option</b>
                             </p>
 
                         </div>
@@ -2241,26 +2268,32 @@
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_1" value="0" required>
-                            <label for="gb_package_pro_1" class="form-label"> (500 MB): €4,13/mois HTVA </label>
+                            <label for="gb_package_pro_1" class="form-label"> (500 MB): €4,13/maand excl. btw </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_1" value="1" required>
-                            <label for="gb_package_pro_1" class="form-label"> (1 GB): €8,26/mois HTVA </label>
+                            <label for="gb_package_pro_1" class="form-label"> (1 GB): €8,26/maand excl. btw </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_1" value="2" required>
-                            <label for="gb_package_pro_1" class="form-label"> (2 GB): €16,53/mois HTVA </label>
+                            <label for="gb_package_pro_1" class="form-label"> (1,5 GB): €12,40/maand excl. btw </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_1" value="3" required>
-                            <label for="gb_package_pro_1" class="form-label"> (2,5 GB): €20,66/mois HTVA </label>
+                            <label for="gb_package_pro_1" class="form-label"> (2 GB): €16,53/maand excl. btw </label>
                         </div>
 
+                        <div class="mb-2 mt-5 col-md-3">
+                            <input type="radio" name="gb_package_pro_1" value="4" required>
+                            <label for="gb_package_pro_1" class="form-label"> (2,5 GB): €20,66/maand excl. btw </label>
+                        </div>
+
+
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Options</b>
+                            <p style="text-align: center;"><b>Opties</b>
                             </p>
 
                         </div>
@@ -2274,7 +2307,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="package_type_r_pro_1" value="1" required>
-                            <label for="package_type_r_pro_1" class="form-label"> TravelPassportTopIntense </label>
+                            <label for="package_type_r_pro_1" class="form-label"> Travel Passport Top Intense </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -2324,7 +2357,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="package_type_r_pro_1" value="10" required>
-                            <label for="package_type_r_pro_1" class="form-label"> Bizz No LimitInternational
+                            <label for="package_type_r_pro_1" class="form-label"> Bizz No Limit International
                             </label>
                         </div>
 
@@ -2335,7 +2368,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="package_type_r_pro_1" value="12" required>
-                            <label for="package_type_r_pro_1" class="form-label"> TravelPassport Top</label>
+                            <label for="package_type_r_pro_1" class="form-label"> Travel Passport Top</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -2356,7 +2389,7 @@
                         {{-- SECOND PRO START --}}
 
                         <div class="mb-3 col-md-12">
-                            <h4 class="mt-5" style="text-align: center;"> Pour clients professionnels
+                            <h4 class="mt-5" style="text-align: center;"> Voor professionele klanten
                             </h4>
 
                         </div>
@@ -2366,20 +2399,20 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 2
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 2
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_2" value="0" required>
-                            <label for="sim_phase_r_pro_2" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_pro_2" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_2" value="1" required>
-                            <label for="sim_phase_r_pro_2" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_pro_2" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -2390,7 +2423,7 @@
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype
                             </p>
 
                         </div>
@@ -2409,10 +2442,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_pro_2" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_pro_2" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_pro_2" class="form-control @error('sim_num_pro_2') is-invalid @enderror"
-                                id="sim_num_pro_2" autocomplete="off" placeholder="N° de téléphone" name="sim_num_pro_2"
+                                id="sim_num_pro_2" autocomplete="off" placeholder="Sim nr" name="sim_num_pro_2"
                                 value="{{ old('sim_num_pro_2') }}" required>
                             @error('sim_num_pro_2')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -2424,10 +2457,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num_pro_2" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num_pro_2" class="form-label"><span class="text-danger">*</span> .Gm
+                                nr</label>
                             <input type="gsm_num_pro_2" class="form-control @error('gsm_num_pro_2') is-invalid @enderror"
-                                id="gsm_num_pro_2" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_pro_2"
+                                id="gsm_num_pro_2" autocomplete="off" placeholder=".Gm nr" name="gsm_num_pro_2"
                                 value="{{ old('gsm_num_pro_2') }}" required>
                             @error('gsm_num_pro_2')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -2438,7 +2471,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_pro_2" value="0" required>
-                            <label for="proximus_subs_pro_2" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_pro_2" class="form-label"> Proximus-abonnement in Pack</label>
                         </div>
 
 
@@ -2528,9 +2561,12 @@
                             <label for="app_social_r_pro_2" class="form-label">
 
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
                                     width="25px" alt="">
+
+
                             </label>
                         </div>
                         <div class="mb-2 mt-5 col-md-4">
@@ -2541,6 +2577,9 @@
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
 
+
+
+
                             </label>
                         </div>
 
@@ -2548,9 +2587,12 @@
                             <input type="radio" name="app_social_r_pro_2" value="2" required>
                             <label for="app_social_r_pro_2" class="form-label">
 
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
-                                    height="25px" width="25px" alt="">
+                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
+                                    width="25px" alt="">
+
                             </label>
                         </div>
 
@@ -2558,9 +2600,10 @@
                             <input type="radio" name="app_social_r_pro_2" value="3" required>
                             <label for="app_social_r_pro_2" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
-                                    width="25px" alt="">
+                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
+                                    height="25px" width="25px" alt="">
 
 
                             </label>
@@ -2570,9 +2613,11 @@
                             <input type="radio" name="app_social_r_pro_2" value="4" required>
                             <label for="app_social_r_pro_2" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
                                     width="25px" alt="">
+
 
                             </label>
                         </div>
@@ -2581,10 +2626,10 @@
                             <input type="radio" name="app_social_r_pro_2" value="5" required>
                             <label for="app_social_r_pro_2" class="form-label">
 
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
                                     height="25px" width="25px" alt="">
+
 
 
 
@@ -2593,7 +2638,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
+                            <p style="text-align: center;"><b>Joint offer: DataPhone Option</b>
                             </p>
 
                         </div>
@@ -2601,26 +2646,35 @@
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_2" value="0" required>
-                            <label for="gb_package_pro_2" class="form-label"> (500 MB): €4,13/mois HTVA </label>
+                            <label for="gb_package_pro_2" class="form-label"> (500 MB): €4,13/maand excl. btw </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_2" value="1" required>
-                            <label for="gb_package_pro_2" class="form-label"> (1 GB): €8,26/mois HTVA </label>
+                            <label for="gb_package_pro_2" class="form-label"> (1 GB): €8,26/maand excl. btw
+                            </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_2" value="2" required>
-                            <label for="gb_package_pro_2" class="form-label"> (2 GB): €16,53/mois HTVA </label>
+                            <label for="gb_package_pro_2" class="form-label"> (1,5 GB): €12,40/maand excl. btw
+                            </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_2" value="3" required>
-                            <label for="gb_package_pro_2" class="form-label"> (2,5 GB): €20,66/mois HTVA </label>
+                            <label for="gb_package_pro_2" class="form-label"> (2 GB): €16,53/maand excl. btw </label>
                         </div>
 
+                        <div class="mb-2 mt-5 col-md-3">
+                            <input type="radio" name="gb_package_pro_2" value="3" required>
+                            <label for="gb_package_pro_2" class="form-label"> (2,5 GB): €20,66/maand excl. btw </label>
+                        </div>
+
+
+
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Options</b>
+                            <p style="text-align: center;"><b>Opties:</b>
                             </p>
 
                         </div>
@@ -2634,7 +2688,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="package_type_r_pro_2" value="1" required>
-                            <label for="package_type_r_pro_2" class="form-label"> TravelPassportTopIntense </label>
+                            <label for="package_type_r_pro_2" class="form-label"> Travel Passport Top Intense </label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -2651,7 +2705,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="package_type_r_pro_2" value="4" required>
-                            <label for="package_type_r_pro_2" class="form-label"> TravelPassport Outside EU&Top
+                            <label for="package_type_r_pro_2" class="form-label"> Travel Passport Outside EU&Top
                             </label>
                         </div>
 
@@ -2722,7 +2776,7 @@
                         {{-- THIRD PRO START --}}
 
                         <div class="mb-3 col-md-12">
-                            <h4 class="mt-5" style="text-align: center;"> Pour clients professionnels
+                            <h4 class="mt-5" style="text-align: center;"> Voor professionele klanten
                             </h4>
 
                         </div>
@@ -2732,31 +2786,31 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 3
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 3
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_3" value="0" required>
-                            <label for="sim_phase_r_pro_3" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_pro_3" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_3" value="1" required>
-                            <label for="sim_phase_r_pro_3" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_pro_3" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_3" value="2" required>
-                            <label for="sim_phase_r_pro_3" class="form-label">PORT IN (LOA) </label>
+                            <label for="sim_phase_r_pro_3" class="form-label">PORT IN (LOA </label>
                         </div>
 
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;"> Simkaarttype
                             </p>
 
                         </div>
@@ -2775,10 +2829,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_pro_3" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_pro_3" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_pro_3" class="form-control @error('sim_num_pro_3') is-invalid @enderror"
-                                id="sim_num_pro_3" autocomplete="off" placeholder="N° de téléphone" name="sim_num_pro_3"
+                                id="sim_num_pro_3" autocomplete="off" placeholder="Sim nr" name="sim_num_pro_3"
                                 value="{{ old('sim_num_pro_3') }}" required>
                             @error('sim_num_pro_3')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -2793,7 +2847,7 @@
                             <label for="gsm_num_pro_3" class="form-label"><span class="text-danger">*</span> .N°
                                 GSM</label>
                             <input type="gsm_num_pro_3" class="form-control @error('gsm_num_pro_3') is-invalid @enderror"
-                                id="gsm_num_pro_3" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_pro_3"
+                                id="gsm_num_pro_3" autocomplete="off" placeholder=".N° GSM" name="gsm_num_pro_3"
                                 value="{{ old('gsm_num_pro_3') }}" required>
                             @error('gsm_num_pro_3')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -2804,7 +2858,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_pro_3" value="0" required>
-                            <label for="proximus_subs_pro_3" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_pro_3" class="form-label"> Proximus-abonnement in Pack </label>
                         </div>
 
 
@@ -2881,20 +2935,22 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>App (1 au choix)</b>
+                            <p style="text-align: center;"><b>App (1 naar keuze)</b>
                             </p>
 
                         </div>
 
 
 
-
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="app_social_r_pro_3" value="0" required>
                             <label for="app_social_r_pro_3" class="form-label">
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
                                     width="25px" alt="">
+
+
                             </label>
                         </div>
                         <div class="mb-2 mt-5 col-md-4">
@@ -2905,6 +2961,7 @@
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
 
+
                             </label>
                         </div>
 
@@ -2912,17 +2969,6 @@
                             <input type="radio" name="app_social_r_pro_3" value="2" required>
                             <label for="app_social_r_pro_3" class="form-label">
 
-
-                                <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
-                                    width="25px" alt="">
-
-                            </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="app_social_r_pro_3" value="3" required>
-                            <label for="app_social_r_pro_3" class="form-label">
 
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
@@ -2933,12 +2979,29 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="app_social_r_pro_3" value="4" required>
+                            <input type="radio" name="app_social_r_pro_3" value="3" required>
                             <label for="app_social_r_pro_3" class="form-label">
 
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
                                     width="25px" alt="">
+
+
+                            </label>
+                        </div>
+
+                        <div class="mb-2 mt-5 col-md-4">
+                            <input type="radio" name="app_social_r_pro_3" value="4" required>
+                            <label for="app_social_r_pro_3" class="form-label">
+
+
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
+                                    width="25px" alt="">
+
+
+
                             </label>
                         </div>
 
@@ -2946,42 +3009,17 @@
                             <input type="radio" name="app_social_r_pro_3" value="5" required>
                             <label for="app_social_r_pro_3" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
                                     height="25px" width="25px" alt="">
+
+
                             </label>
                         </div>
 
-
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
-                            </p>
-
-                        </div>
-
-
-                        <div class="mb-2 mt-5 col-md-3">
-                            <input type="radio" name="gb_package_pro_3" value="0" required>
-                            <label for="gb_package_pro_3" class="form-label"> (500 MB): €4,13/mois HTVA </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-3">
-                            <input type="radio" name="gb_package_pro_3" value="1" required>
-                            <label for="gb_package_pro_3" class="form-label"> (1 GB): €8,26/mois HTVA </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-3">
-                            <input type="radio" name="gb_package_pro_3" value="2" required>
-                            <label for="gb_package_pro_3" class="form-label"> (2 GB): €16,53/mois HTVA </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-3">
-                            <input type="radio" name="gb_package_pro_3" value="3" required>
-                            <label for="gb_package_pro_3" class="form-label"> (2,5 GB): €20,66/mois HTVA </label>
-                        </div>
-
-                        <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Options</b>
+                            <p style="text-align: center;"><b>Opties</b>
                             </p>
 
                         </div>
@@ -3081,7 +3119,7 @@
                         {{-- FOURTH PRO START --}}
 
                         <div class="mb-3 col-md-12">
-                            <h4 class="mt-5" style="text-align: center;"> Pour clients professionnels
+                            <h4 class="mt-5" style="text-align: center;"> Voor professionele klanten
                             </h4>
 
                         </div>
@@ -3091,20 +3129,20 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 4
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 4
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_4" value="0" required>
-                            <label for="sim_phase_r_pro_4" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_pro_4" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_4" value="1" required>
-                            <label for="sim_phase_r_pro_4" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_pro_4" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -3115,7 +3153,7 @@
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype
                             </p>
 
                         </div>
@@ -3134,10 +3172,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_pro_4" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_pro_4" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_pro_4" class="form-control @error('sim_num_pro_4') is-invalid @enderror"
-                                id="sim_num_pro_4" autocomplete="off" placeholder="N° de téléphone" name="sim_num_pro_4"
+                                id="sim_num_pro_4" autocomplete="off" placeholder="Sim nr" name="sim_num_pro_4"
                                 value="{{ old('sim_num_pro_4') }}" required>
                             @error('sim_num_pro_4')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -3149,10 +3187,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num_pro_4" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num_pro_4" class="form-label"><span class="text-danger">*</span> Gsm
+                                nr</label>
                             <input type="gsm_num_pro_4" class="form-control @error('gsm_num_pro_4') is-invalid @enderror"
-                                id="gsm_num_pro_4" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_pro_4"
+                                id="gsm_num_pro_4" autocomplete="off" placeholder="Gsm nr" name="gsm_num_pro_4"
                                 value="{{ old('gsm_num_pro_4') }}" required>
                             @error('gsm_num_pro_4')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -3163,7 +3201,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_pro_4" value="0" required>
-                            <label for="proximus_subs_pro_4" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_pro_4" class="form-label">Proximus-abonnement in Pack</label>
                         </div>
 
 
@@ -3240,7 +3278,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>App (1 au choix)</b>
+                            <p style="text-align: center;"><b>App (1 naar keuze)</b>
                             </p>
 
                         </div>
@@ -3257,6 +3295,8 @@
                                     class="img-responsive" src="{{ asset('images/brands/facebook.png') }}"
                                     height="25px" width="25px" alt="">
 
+
+
                             </label>
                         </div>
                         <div class="mb-2 mt-5 col-md-4">
@@ -3266,6 +3306,8 @@
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
                                     width="25px" alt="">
+
+
 
                             </label>
                         </div>
@@ -3278,6 +3320,7 @@
                                     class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
                                     height="25px" width="25px" alt="">
 
+
                             </label>
                         </div>
 
@@ -3285,11 +3328,10 @@
                             <input type="radio" name="app_social_r_pro_4" value="3" required>
                             <label for="app_social_r_pro_4" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}"
                                     height="25px" width="25px" alt="">
-
-
 
 
                             </label>
@@ -3298,13 +3340,18 @@
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="app_social_r_pro_4" value="4" required>
                             <label for="app_social_r_pro_4" class="form-label">
+
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}"
                                     height="25px" width="25px" alt="">
+
+
+
                             </label>
                         </div>
 
-                        <div class="mb-2 mt-5 col-m-4">
+                        <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="app_social_r_pro_4" value="5" required>
                             <label for="app_social_r_pro_4" class="form-label">
 
@@ -3312,11 +3359,16 @@
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
                                     height="25px" width="25px" alt="">
+
+
+
+
+
+
                             </label>
                         </div>
 
-
-                        <div class="mb-3 mt-5 col-md-12">
+                        {{-- <div class="mb-3 mt-5 col-md-12">
                             <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
                             </p>
 
@@ -3341,10 +3393,13 @@
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_4" value="3" required>
                             <label for="gb_package_pro_4" class="form-label"> (2,5 GB): €20,66/mois HTVA </label>
-                        </div>
+                        </div> --}}
+
+
+
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Options</b>
+                            <p style="text-align: center;"><b>Opties</b>
                             </p>
 
                         </div>
@@ -3445,8 +3500,8 @@
 
                         {{-- FIFTH PRO START --}}
 
-                        <div class="mb-3 col-md-12">
-                            <h4 class="mt-5" style="text-align: center;"> Pour clients professionnels
+                        <div class="mb-3 col-md-12">Voor professionele klanten
+                            <h4 class="mt-5" style="text-align: center;">
                             </h4>
 
                         </div>
@@ -3456,20 +3511,20 @@
 
 
                         <div class="mb-3 col-md-12">
-                            <p class="lead mt-5" style="text-align: center;">Carte SIM Supplémentaire – 5
+                            <p class="lead mt-5" style="text-align: center;">Bijkomende simkaart – 5
                             </p>
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_5" value="0" required>
-                            <label for="sim_phase_r_pro_5" class="form-label">Nouveau</label>
+                            <label for="sim_phase_r_pro_5" class="form-label">Nieuw</label>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="sim_phase_r_pro_5" value="1" required>
-                            <label for="sim_phase_r_pro_5" class="form-label">Conversion</label>
+                            <label for="sim_phase_r_pro_5" class="form-label">Conversie</label>
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
@@ -3480,7 +3535,7 @@
 
 
                         <div class="mb-3 mt-3 col-md-12">
-                            <p class="lead" style="text-align: center;">Type de carte SIM
+                            <p class="lead" style="text-align: center;">Simkaarttype:
                             </p>
 
                         </div>
@@ -3499,10 +3554,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="sim_num_pro_5" class="form-label"><span class="text-danger">*</span>N°
-                                SIM</label>
+                            <label for="sim_num_pro_5" class="form-label"><span class="text-danger">*</span>Sim
+                                nr</label>
                             <input type="sim_num_pro_5" class="form-control @error('sim_num_pro_5') is-invalid @enderror"
-                                id="sim_num_pro_5" autocomplete="off" placeholder="N° de téléphone" name="sim_num_pro_5"
+                                id="sim_num_pro_5" autocomplete="off" placeholder="Sim nr" name="sim_num_pro_5"
                                 value="{{ old('sim_num_pro_5') }}" required>
                             @error('sim_num_pro_5')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -3514,10 +3569,10 @@
 
 
                         <div class="mb-3 mt-3 col-md-4">
-                            <label for="gsm_num_pro_5" class="form-label"><span class="text-danger">*</span> .N°
-                                GSM</label>
+                            <label for="gsm_num_pro_5" class="form-label"><span class="text-danger">*</span> .Gsm
+                                nr</label>
                             <input type="gsm_num_pro_5" class="form-control @error('gsm_num_pro_5') is-invalid @enderror"
-                                id="gsm_num_pro_5" autocomplete="off" placeholder="N° de téléphone" name="gsm_num_pro_5"
+                                id="gsm_num_pro_5" autocomplete="off" placeholder=".Gsm nr" name="gsm_num_pro_5"
                                 value="{{ old('gsm_num_pro_5') }}" required>
                             @error('gsm_num_pro_5')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -3528,7 +3583,7 @@
 
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="proximus_subs_pro_5" value="0" required>
-                            <label for="proximus_subs_pro_5" class="form-label">Abonnement Proximus en Pack </label>
+                            <label for="proximus_subs_pro_5" class="form-label">Proximus-abonnement in Pack </label>
                         </div>
 
 
@@ -3605,7 +3660,7 @@
 
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>App (1 au choix)</b>
+                            <p style="text-align: center;"><b>App ((1 naar keuze)</b>
                             </p>
 
                         </div>
@@ -3616,7 +3671,6 @@
                         <div class="mb-2 mt-5 col-md-4">
                             <input type="radio" name="app_social_r_pro_5" value="0" required>
                             <label for="app_social_r_pro_5" class="form-label">
-
 
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/facebook.png') }}"
@@ -3629,9 +3683,15 @@
                             <input type="radio" name="app_social_r_pro_5" value="1" required>
                             <label for="app_social_r_pro_5" class="form-label">
 
+
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/twitter.png') }}"
                                     height="25px" width="25px" alt="">
+
+
+
+
+
                             </label>
                         </div>
 
@@ -3643,6 +3703,8 @@
                                     class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
                                     height="25px" width="25px" alt="">
 
+
+
                             </label>
                         </div>
 
@@ -3650,11 +3712,11 @@
                             <input type="radio" name="app_social_r_pro_5" value="3" required>
                             <label for="app_social_r_pro_5" class="form-label">
 
-
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}"
                                     height="25px" width="25px" alt="">
+
+
 
                             </label>
                         </div>
@@ -3666,6 +3728,9 @@
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}"
                                     height="25px" width="25px" alt="">
+
+
+
                             </label>
                         </div>
 
@@ -3673,17 +3738,18 @@
                             <input type="radio" name="app_social_r_pro_5" value="5" required>
                             <label for="app_social_r_pro_5" class="form-label">
 
-
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
                                     class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
                                     height="25px" width="25px" alt="">
 
 
+
+
+
                             </label>
                         </div>
 
-
-                        <div class="mb-3 mt-5 col-md-12">
+                        {{-- <div class="mb-3 mt-5 col-md-12">
                             <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
                             </p>
 
@@ -3708,10 +3774,16 @@
                         <div class="mb-2 mt-5 col-md-3">
                             <input type="radio" name="gb_package_pro_5" value="3" required>
                             <label for="gb_package_pro_5" class="form-label"> (2,5 GB): €20,66/mois HTVA </label>
-                        </div>
+                        </div> --}}
+
+
+
+
+
+
 
                         <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Options</b>
+                            <p style="text-align: center;"><b>Opties</b>
                             </p>
 
                         </div>
@@ -3805,25 +3877,26 @@
 
 
                         <div class="mb-2 mt-5 col-md-12">
-                            <h4 style="text-align: center;">Annexe 2: Multi line/Bizz Call Connect dans un Pack pour les
-                                clients professionnels</h4>
+                            <h4 style="text-align: center;">Bijlage 2: Multi line/Bizz Call Connect in een Pack voor
+                                businessklantens</h4>
                         </div>
 
 
                         <div class="mb-2 mt-5 col-md-12">
-                            <p class="lead mt-2" style="text-align: center;">(2 licences incluses dans Business Flex
+                            <p class="lead mt-2" style="text-align: center;">(2 licenties inbegrepen in Business Flex
                                 Call Connect) </p>
                         </div>
 
 
                         <div class="mb-3 mt-3 col-md-12">
                             <label for="additional_license" class="form-label"><span
-                                    class="text-danger">*</span>Licences supplémentaires dans un Pack ou avec Bizz Call
-                                Connect (hors Pack)</label>
+                                    class="text-danger">*</span>Extra licenties in een Pack of met Bizz Call Connect
+                                (buiten pack)</label>
                             <input type="additional_license"
                                 class="form-control @error('additional_license') is-invalid @enderror"
                                 id="additional_license" autocomplete="off"
-                                placeholder="Licences supplémentaires dans un Pack ou avec Bizz Call Connect (hors Pack)"
+                                placeholder="Extra licenties in een Pack of met Bizz Call Connect
+                                                                                                                                                                                                                    (buiten pack)"
                                 name="additional_license" value="{{ old('additional_license') }}" required>
                             @error('additional_license')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -3835,10 +3908,10 @@
 
                         <div class="mb-3 mt-3 col-md-6">
                             <label for="client_name_anex_2" class="form-label"><span
-                                    class="text-danger">*</span>Nom du client</label>
+                                    class="text-danger">*</span>Klantennaam</label>
                             <input type="client_name_anex_2"
                                 class="form-control @error('client_name_anex_2') is-invalid @enderror"
-                                id="client_name_anex_2" autocomplete="off" placeholder="Nom du client"
+                                id="client_name_anex_2" autocomplete="off" placeholder="Klantennaam"
                                 name="client_name_anex_2" value="{{ old('client_name_anex_2') }}" required>
                             @error('client_name_anex_2')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -3849,10 +3922,10 @@
 
                         <div class="mb-3 mt-3 col-md-6">
                             <label for="current_phone_anex_2" class="form-label"><span
-                                    class="text-danger">*</span>Nom du client</label>
+                                    class="text-danger">*</span>Huidig telefoonnummer</label>
                             <input type="current_phone_anex_2"
                                 class="form-control @error('current_phone_anex_2') is-invalid @enderror"
-                                id="current_phone_anex_2" autocomplete="off" placeholder="Numéro de téléphone actuel"
+                                id="current_phone_anex_2" autocomplete="off" placeholder="Huidig telefoonnummer"
                                 name="current_phone_anex_2" value="{{ old('current_phone_anex_2') }}" required>
                             @error('current_phone_anex_2 ')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -3864,15 +3937,15 @@
 
 
                         <div class="mb-2 mt-5 col-md-6">
-                            <h6 style="text-align: center;"><b>Numéros de téléphone ou séries de numéros actuels</b> </h6>
+                            <h6 style="text-align: center;"><b>Huidige telefoonnummers of series: Hoofdnummer</b> </h6>
                         </div>
 
 
 
 
                         <div class="mb-3 mt-3 col-md-6">
-                            <label for="main_num_anex_2" class="form-label"><span
-                                    class="text-danger">*</span>Numéro principal (GDN)</label>
+                            <label for="main_num_anex_2" class="form-label"><span class="text-danger">*</span>
+                                (GDN)</label>
                             <input type="main_num_anex_2"
                                 class="form-control @error('main_num_anex_2') is-invalid @enderror" id="main_num_anex_2"
                                 autocomplete="off" name="main_num_anex_2" value="{{ old('main_num_anex_2') }}" required>
@@ -3884,8 +3957,8 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-12">
-                            <p class="lead mt-2" style="text-align: center;">Liste des numéros de téléphone ou séries
-                                de numéros à migrer </p>
+                            <p class="lead mt-2" style="text-align: center;">Lijst van over te zetten telefoonnummers
+                                of series telefoonnummers </p>
                         </div>
 
 
@@ -4080,8 +4153,8 @@
 
 
                         <div class="mb-2 mt-5 col-md-12">
-                            <p class="lead mt-2" style="text-align: center;">Liste des numéros de téléphone ou séries
-                                de numéros à supprimer </p>
+                            <p class="lead mt-2" style="text-align: center;">Lijst van af te sluiten telefoonnummers
+                                of series telefoonnummers </p>
                         </div>
 
 
