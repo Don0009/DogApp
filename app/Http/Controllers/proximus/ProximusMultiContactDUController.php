@@ -197,7 +197,7 @@ class ProximusMultiContactDUController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
 
-            'command' => env('PDFTK_PATH'),
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
 
         ]);
 
@@ -243,7 +243,7 @@ class ProximusMultiContactDUController extends Controller
 
 
 
-        return redirect()->route('proximus_multi_contact_fr.index')->with('success', 'Proximus Multi Contact (French) Lead created successfully!');
+        return redirect()->route('proximus_multi_contact_du.index')->with('success', 'Proximus Multi Contact (French) Lead created successfully!');
 
 
 

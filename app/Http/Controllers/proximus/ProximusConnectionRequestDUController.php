@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\proximus;
 
+use App\Http\Controllers\AmoCRMController;
+
 use App\Http\Controllers\OKSign\OKSignController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -188,6 +190,14 @@ class ProximusConnectionRequestDUController extends Controller
 
         $data = $request->all();
         $data = $orange = ProximusConnectionRequestDU::create($data);
+
+        $pdf = new Pdf(public_path('unfilled_forms/proximus/connection_request_du/DCR4.pdf'), [
+
+            'command' => "C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe",
+
+        ]);
+
+       // dd($pdf);
 
         $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 

@@ -309,7 +309,7 @@
                         <div class="mb-2 mt-4 col-md-4">
                             <label for="telephone" class="form-label">Telefoon<span
                                     class="text-danger">*</span></label>
-                            <input type="telephone" class="form-control @error('place') is-invalid @enderror"
+                            <input type="telephone" class="form-control @error('telephone') is-invalid @enderror"
                                 id="telephone" autocomplete="off" placeholder="Telefoon" name="telephone"
                                 value="{{ old('telephone') }}" required>
                             @error('telephone')
@@ -425,7 +425,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="mb-2 mt-3 col-md-6">
+                        <div class="mb-2 mt-5 col-md-6">
                             <label for="bank_account_number" class="form-label">Domiciliëring: Bankrekeningnummer:
                                 BE<span class="text-danger">*</span></label>
                             <input type="bank_account_number"
@@ -439,7 +439,7 @@
                             @enderror
                         </div>
 
-                        <div class="mb-2 mt-3 col-md-3">
+                        <div class="mb-2 mt-5 col-md-3">
                             <b style="font-size: 20px;">Facturatieadres idem?</b>
 
 
@@ -453,7 +453,7 @@
                             </div>
                         </div>
 
-                        <div class="mb-2 mt-3 col-md-3">
+                        <div class="mb-2 mt-5 col-md-3">
                             <label for="adres" class="form-label">Adres<span class="text-danger">*</span></label>
                             <input type="adres" class="form-control @error('adres') is-invalid @enderror" id="adres"
                                 autocomplete="off" placeholder="Adres" name="adres" value="{{ old('adres') }}" required>
@@ -464,7 +464,7 @@
                             @enderror
                         </div>
 
-                        <div class="mb-2 mt-3  col-md-6">
+                        <div class="mb-2 mt-5  col-md-6">
                             <label for="name_or_number_of_previous_owner" class="form-label">Naam of nummer vorige
                                 eigenaar<span class="text-danger">*</span></label>
                             <input type="name_or_number_of_previous_owner"
@@ -479,7 +479,7 @@
                             @enderror
                         </div>
 
-                        <div class="mb-2 mt-3 col-md-6">
+                        <div class="mb-2 mt-5 col-md-6">
 
                             <label for="name_or_number_of_previous_owner" class="form-label">Ik wens geen commerciële
                                 informatie
@@ -948,7 +948,7 @@
                         </div>
 
                         <div class=" col-md-12 mb-3 mt-3">
-                            <h5 style="text-align: center;"><b>Opt</b><b style="color: grey;">ies</b></h5>
+                            <h5 style="text-align: center;"><b>Opties</b></h5>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-3">
@@ -1414,7 +1414,15 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="0" required>
-                            <label for="mobile_social_app" class="form-label"> <i data-feather="facebook"></i></label>
+                            <label for="mobile_social_app" class="form-label">
+
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
+                                    width="25px" alt="">
+
+
+                            </label>
                         </div>
 
                         {{-- mobile_social_app --}}
@@ -1422,31 +1430,60 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="1" required>
-                            <label for="mobile_social_app" class="form-label"> <i data-feather="twitter"></i></label>
+                            <label for="mobile_social_app" class="form-label">
+
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
+                                    width="25px" alt="">
+
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="2" required>
-                            <label for="mobile_social_app" class="form-label"> <i data-feather="instagram"></i></label>
+                            <label for="mobile_social_app" class="form-label">
+
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
+                                    width="25px" alt="">
+
+
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="3" required>
-                            <label for="mobile_social_app" class="form-label"><i class="fa fa-snapchat-ghost"
-                                    aria-hidden="true"></i></label>
+                            <label for="mobile_social_app" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
+                                    height="25px" width="25px" alt="">
+
+
+
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="4" required>
-                            <label for="mobile_social_app" class="form-label"> <i class="fa fa-whatsapp"
-                                    aria-hidden="true"></i>
+                            <label for="mobile_social_app" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
+                                    width="25px" alt="">
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="5" required>
-                            <label for="mobile_social_app" class="form-label"><i class="fa fa-facebook"
-                                    aria-hidden="true"></i>
+                            <label for="mobile_social_app" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
+                                    height="25px" width="25px" alt="">
+
                             </label>
                         </div>
 
@@ -1622,8 +1659,13 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="0" required>
-                            <label for="mobile_social_apps_p_i" class="form-label"> <i
-                                    data-feather="facebook"></i></label>
+                            <label for="mobile_social_apps_p_i" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
+                                    width="25px" alt="">
+
+                            </label>
                         </div>
 
                         {{-- mobile_social_app --}}
@@ -1631,33 +1673,59 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="1" required>
-                            <label for="mobile_social_apps_p_i" class="form-label"> <i
-                                    data-feather="twitter"></i></label>
+                            <label for="mobile_social_apps_p_i" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
+                                    width="25px" alt="">
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="2" required>
-                            <label for="mobile_social_apps_p_i" class="form-label"> <i
-                                    data-feather="instagram"></i></label>
+                            <label for="mobile_social_apps_p_i" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
+                                    height="25px" width="25px" alt="">
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="3" required>
-                            <label for="mobile_social_apps_p_i" class="form-label"><i class="fa fa-snapchat-ghost"
-                                    aria-hidden="true"></i></label>
+                            <label for="mobile_social_apps_p_i" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
+                                    width="25px" alt="">
+
+
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="4" required>
-                            <label for="mobile_social_apps_p_i" class="form-label"> <i class="fa fa-whatsapp"
-                                    aria-hidden="true"></i>
+                            <label for="mobile_social_apps_p_i" class="form-label">
+
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
+                                    width="25px" alt="">
+
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="5" required>
-                            <label for="mobile_social_apps_p_i" class="form-label"><i class="fa fa-facebook"
-                                    aria-hidden="true"></i>
+                            <label for="mobile_social_apps_p_i" class="form-label">
+
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
+                                    height="25px" width="25px" alt="">
+
+
+
                             </label>
                         </div>
 

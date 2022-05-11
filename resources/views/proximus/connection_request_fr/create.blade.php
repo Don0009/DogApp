@@ -1452,7 +1452,14 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="0" required>
-                            <label for="mobile_social_app" class="form-label"> <i data-feather="facebook"></i></label>
+                            <label for="mobile_social_app" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/facebook.png') }}" height="25px"
+                                    width="25px" alt="">
+
+
+                            </label>
                         </div>
 
                         {{-- mobile_social_app --}}
@@ -1460,31 +1467,66 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="1" required>
-                            <label for="mobile_social_app" class="form-label"> <i data-feather="twitter"></i></label>
+                            <label for="mobile_social_app" class="form-label">
+
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/twitter.png') }}" height="25px"
+                                    width="25px" alt="">
+
+
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="2" required>
-                            <label for="mobile_social_app" class="form-label"> <i data-feather="instagram"></i></label>
+                            <label for="mobile_social_app" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/snapchat.png') }}" height="25px"
+                                    width="25px" alt="">
+
+
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="3" required>
-                            <label for="mobile_social_app" class="form-label"><i class="fa fa-snapchat-ghost"
-                                    aria-hidden="true"></i></label>
+                            <label for="mobile_social_app" class="form-label">
+
+
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
+                                    height="25px" width="25px" alt="">
+
+
+                            </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="4" required>
-                            <label for="mobile_social_app" class="form-label"> <i class="fa fa-whatsapp"
-                                    aria-hidden="true"></i>
+                            <label for="mobile_social_app" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/whatsapp.png') }}" height="25px"
+                                    width="25px" alt="">
+
+
+                                </i>
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="mobile_social_app" class="ml-2" value="5" required>
-                            <label for="mobile_social_app" class="form-label"><i class="fa fa-facebook"
-                                    aria-hidden="true"></i>
+                            <label for="mobile_social_app" class="form-label">
+
+                                <img class="mt-3" style="text-align: center; margin:0 auto;"
+                                    class="img-responsive" src="{{ asset('images/brands/pinterest.png') }}"
+                                    height="25px" width="25px" alt="">
+
+
+                                </i>
                             </label>
                         </div>
 
@@ -2233,7 +2275,7 @@
                                 class="form-control @error('address_choose_m_text') is-invalid @enderror"
                                 id="address_choose_m" autocomplete="off"
                                 placeholder="sous mon adresse de facturation
-                                                                                                            dans la catégorie professionnelle (facultatif)"
+                                                                                                                        dans la catégorie professionnelle (facultatif)"
                                 name="address_choose_m_text" value="{{ old('address_choose_m_text') }}" required>
                             @error('address_choose_m_text')
                                 <span class="invalid-feedback mb-2" role="alert">

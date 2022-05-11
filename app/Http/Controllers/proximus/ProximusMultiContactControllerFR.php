@@ -196,7 +196,7 @@ class ProximusMultiContactControllerFR extends Controller
         $data['user_id'] = Auth::user()->id;
 
 
-     //  dd($data);
+      //dd($data);
 
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [

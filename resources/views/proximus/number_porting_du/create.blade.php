@@ -60,7 +60,7 @@
 
                         </div>
 
-                        <div class="col-md-12 mt-3">
+                        <div class="col-md-12 mb-3 mt-3">
                             <b>Residentiële klant </b>
                         </div>
 
@@ -95,7 +95,7 @@
                                 class="form-control @error('customer_other_network_number') is-invalid @enderror"
                                 id="customer_other_network_number" autocomplete="off"
                                 placeholder="Klantennummer
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            bij de andere operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        bij de andere operator"
                                 name="customer_other_network_number" value="{{ old('customer_other_network_number') }}"
                                 required>
                             @error('customer_other_network_number')
@@ -681,7 +681,7 @@
                                 class="form-control @error('land_line_to_be_ported') is-invalid @enderror"
                                 id="land_line_to_be_ported" autocomplete="off"
                                 placeholder="Over te
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    dragen vaste telefoonnummers van operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                dragen vaste telefoonnummers van operator"
                                 name="land_line_to_be_ported" value="{{ old('land_line_to_be_ported') }}" required>
                             @error('land_line_to_be_ported')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -1132,7 +1132,7 @@
 
 
 
-                        <div class="mb-2 col-md-6">
+                        <div class=" col-md-6">
                             <label for="date" class="form-label mt-2">Datum<span class="text-danger">*</span></label>
                             <input class="form-control @error('date') is-invalid @enderror mb-4 mb-md-0"
                                 data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"
@@ -1141,7 +1141,7 @@
 
                         </div>
 
-                        <div class="mb-3 col-md-6">
+                        <div class=" col-md-6">
                             <label for="ref_id" class="form-label"><span
                                     class="text-danger">*</span>ORDERREFERENTIE</label>
                             <input type="ref_id" class="form-control @error('ref_id') is-invalid @enderror" id="ref_id"
