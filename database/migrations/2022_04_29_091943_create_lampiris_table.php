@@ -15,7 +15,9 @@ class CreateLampirisTable extends Migration
     {
         Schema::create('lampiris', function (Blueprint $table) {
             $table->id();
+            $table->string('form_lang');
             $table->string('title');
+            $table->string('language')->nullable();
             $table->string('name');
             $table->string('f_name');
             $table->date('date_of_birth');
@@ -23,27 +25,35 @@ class CreateLampirisTable extends Migration
             $table->string('gsm');
             $table->string('mail');
             $table->string('bank_account');
-            $table->string('people');
-            $table->string('adress');
+            $table->text('people');
+            $table->text('adress');
             $table->string('box');
             $table->string('no');
             $table->string('postal_code');
-            $table->string('locality');
+            $table->text('locality');
             $table->string('adress1');
-            $table->string('box1');
+            $table->text('box1');
             $table->string('no1');
             $table->string('postal_code1');
-            $table->string('locality1');
+            $table->text('locality1');
             $table->string('tip');
             $table->string('year');
             $table->string('counter_type');
             $table->string('ean_code');
-            $table->string('');
-            $table->string('');
-            $table->string('');
-            //
-            $table->string('annual_consu');
-            $table->string('annual_injection');
+            $table->string('meter_number1');
+            $table->string('counter_index1');
+            $table->string('meter_number2');
+            $table->string('counter_index2');
+            $table->string('meter_number3');
+            $table->string('counter_index3');
+            $table->string('meter_number4');
+            $table->string('counter_index4');
+            $table->string('meter_number5')->nullable();
+            $table->string('counter_index5')->nullable();
+            $table->string('meter_number6')->nullable();
+            $table->string('counter_index6')->nullable();
+            $table->text('annual_consu');
+            $table->string('annual_injection')->nullable();
             $table->string('moving');
             $table->string('meter_open');
             $table->string('current_provid');
@@ -57,7 +67,7 @@ class CreateLampirisTable extends Migration
             $table->string('moving1');
             $table->string('meter_open1');
             $table->string('current_provid1');
-            $table->string('start_date1');
+            $table->date('start_date1');
             $table->string('promotional');
             $table->string('electricity_gas');
             $table->string('insulation');
@@ -67,6 +77,7 @@ class CreateLampirisTable extends Migration
             $table->string('insurance');
             $table->string('partners');
             $table->string('authorize');
+            $table->string('subscribe');
             $table->string('activated')->nullable();
             $table->string('invoices');
             $table->string('invoices1');
@@ -75,11 +86,13 @@ class CreateLampirisTable extends Migration
             $table->string('iban');
             $table->string('bic');
             $table->date('date');
-            $table->string('the');
-            $table->string('');
-            $table->string('');
-
-
+            $table->text('the');
+            $table->string('name1');
+            $table->text('city');
+            $table->date('date1');
+            $table->string('agent');
+            $table->string('pricing_code');
+            $table->text('text');
             $table->timestamps();
         });
     }

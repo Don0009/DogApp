@@ -61,7 +61,6 @@ class CreateMobileApplicationsTable extends Migration
             $table->string('submitted_contact')->nullable();
             $table->string('made_in')->nullable();
             $table->string('the')->nullable();
-            $table->string('signature');
             $table->string('dealer_reference');
             $table->string('agent');
             $table->string('mob_num1');
@@ -72,8 +71,6 @@ class CreateMobileApplicationsTable extends Migration
             $table->string('customer_number1');
             $table->string('current_operator1');
             $table->date('date1');
-            $table->string('signature1');
-
             $table->string('mob_num2');
             $table->boolean('current_payment_method2');
             $table->string('current_sim_number2');
@@ -82,7 +79,6 @@ class CreateMobileApplicationsTable extends Migration
             $table->string('customer_number2');
             $table->string('current_operator2');
             $table->date('date2');
-            $table->string('signature2');
             $table->string('mob_num3');
             $table->boolean('current_payment_method3');
             $table->string('current_sim_number3');
@@ -91,7 +87,6 @@ class CreateMobileApplicationsTable extends Migration
             $table->string('customer_number3');
             $table->string('current_operator3');
             $table->date('date3');
-            $table->string('signature3');
             $table->string('mob_num4');
             $table->boolean('current_payment_method4');
             $table->string('current_sim_number4');
@@ -100,7 +95,6 @@ class CreateMobileApplicationsTable extends Migration
             $table->string('customer_number4');
             $table->string('current_operator4');
             $table->date('date4');
-            $table->string('signature4');
             $table->string('mob_num5');
             $table->boolean('current_payment_method5');
             $table->string('current_sim_number5');
@@ -109,7 +103,7 @@ class CreateMobileApplicationsTable extends Migration
             $table->string('customer_number5');
             $table->string('current_operator5');
             $table->date('date5');
-            $table->string('signature5');
+
 
             $table->timestamps();
         });
