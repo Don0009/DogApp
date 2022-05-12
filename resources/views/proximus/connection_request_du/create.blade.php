@@ -542,8 +542,8 @@
                             <input type="radio" name="mobile_packs_options" class="ml-2" value="0" required>
                             <label for="mobile_packs_options" class="form-label">Mobiel</label>
                         </div>
-                        <div class="mb-2 mt-5   col-md-3">
 
+                        <div class="mb-2 mt-5   col-md-3">
                             <input type="radio" name="mobile_packs_options" class="ml-2" value="1" required>
                             <label for="mobile_packs_options" class="form-label">Mobile Flex</label>
                         </div>
@@ -1576,28 +1576,28 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="7" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">M
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="6" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">L
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="5" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">Unlimited
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="4" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">5G International
                             </label>
                         </div>
@@ -1954,21 +1954,21 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="data_i" class="ml-2" value="0" required>
+                            <input type="radio" name="data_i" class="ml-2" value="1" required>
                             <label for="data_i" class="form-label"> Travel Surf Top
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="data_i" class="ml-2" value="0" required>
+                            <input type="radio" name="data_i" class="ml-2" value="2" required>
                             <label for="data_i" class="form-label"> Travel Surf Top Intense
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="data_i" class="ml-2" value="0" required>
+                            <input type="radio" name="data_i" class="ml-2" value="3" required>
                             <label for="data_i" class="form-label"> Travel Surf World
 
                             </label>
@@ -1978,7 +1978,7 @@
 
                         <div class="mb-2 mt-5   col-md-12">
 
-                            <input type="radio" name="data_i" class="ml-2" value="0" required>
+                            <input type="radio" name="data_i" class="ml-2" value="4" required>
                             <label for="data_i" class="form-label">Travel Surf World Intense
                                 nb: Standaardoptie: Mobile Internet Travel Access - Volume
 
@@ -2066,19 +2066,19 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="device_delivery_type" class="ml-2" value="0" required>
+                            <input type="radio" name="device_delivery_type" class="ml-2" value="2" required>
                             <label for="device_delivery_type" class="form-label">Wifi Booster (Business Flex)
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="device_delivery_type" class="ml-2" value="1" required>
+                            <input type="radio" name="device_delivery_type" class="ml-2" value="3" required>
                             <label for="device_delivery_type" class="form-label">Meegenomen
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="device_delivery_type" class="ml-2" value="2" required>
+                            <input type="radio" name="device_delivery_type" class="ml-2" value="4" required>
                             <label for="device_delivery_type" class="form-label">Thuislevering
                             </label>
                         </div>

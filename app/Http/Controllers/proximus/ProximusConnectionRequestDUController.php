@@ -191,7 +191,7 @@ class ProximusConnectionRequestDUController extends Controller
         $data = $request->all();
         $data = $orange = ProximusConnectionRequestDU::create($data);
 
-        $pdf = new Pdf(public_path('unfilled_forms/proximus/connection_request_du/DCR4.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/proximus/connection_request_du/DCR20.pdf'), [
 
             'command' => "C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe",
 
@@ -206,17 +206,20 @@ class ProximusConnectionRequestDUController extends Controller
             ->saveAs($pdf_name);
 
 //Mail
-        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-            $message->to('degis9000@gmail.com')
-                ->subject("You have got new Proximus Connection Request (Dutch) Lead...!")
-                ->cc(['lasha@studiodlvx.be'])
-//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-                ->attach(public_path($pdf_name), [
-                    'as' => 'Proximus Connection Request (Dutch) Lead.pdf',
-                    'mime' => 'application/pdf',
-                ]);
-            $message->from('no-reply@ecosafety.nyc');
-        });
+//         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name)
+
+//         {
+//             $message->to('degis9000@gmail.com')
+//                 ->subject("You have got new Proximus Connection Request (Dutch) Lead...!")
+//                 ->cc(['lasha@studiodlvx.be'])
+// //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+//                 ->attach(public_path($pdf_name), [
+//                     'as' => 'Proximus Connection Request (Dutch) Lead.pdf',
+//                     'mime' => 'application/pdf',
+//                 ]);
+//             $message->from('no-reply@ecosafety.nyc');
+//         }
+//     );
 // Mail Code Ends
 
 
@@ -230,7 +233,7 @@ class ProximusConnectionRequestDUController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Proximus Connection Request (Dutch) Lead';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
+        //unlink(public_path($pdf_name));
 
         return redirect()->route('proximus_connection_request_du.index')->with('success', 'Proximus Connection Lead (Dutch) created successfully!');
 
