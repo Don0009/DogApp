@@ -556,27 +556,9 @@
                     <label for="information" class="form-label">Ik wens informatie over bijkomende producten en diensten van OCTA+ te ontvangen</label>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-4">
-                        <label for="signature" class="form-label">Handtekening klant:<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening klant" name="signature" value="{{ old('signature') }}" required></textarea>
-                        @error('signature')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="col-4 mt-4">
-                        <textarea type="text" rows="5" class="form-control @error('octa') is-invalid @enderror" id="the" autocomplete="off" placeholder="Voor OCTA+ Energie n.v." name="octa" value="{{ old('octa') }}" required></textarea>
-                        @error('signature')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="col-4">
-                        <label for="date">Datum<span class="text-danger">*</span></label>
-                        <input class="form-control @error('date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
-                    </div>
+                    <label for="date">Datum<span class="text-danger">*</span></label>
+                    <input class="form-control @error('date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
+
                 </div>
                 <p class="text-justify mt-2">De consument heeft het recht om af te zien van deze leveringsovereenkomst zonder kosten en zonder opgave van een motief door een aangetekende brief te richten aan OCTA+ Energie binnen de
                     14 kalenderdagen vanaf de ontvangst van de contractbevestiging door de klant, of door het formulier voor herroeping dat te vinden is op https://www.octaplus.be/nl/elektriciteit-aardgas/tarieven/ in te vullen.
@@ -649,15 +631,6 @@
                 </div>
                 <p class="mt-2">Nr onderliggend contract : uw klantennummer (dit wordt later meegedeeld)</p>
                 <div class="row mt-2">
-                    <div class="col-4">
-                        <label for="signature1" class="form-label">Handtekening (van schuldenaar):<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature1') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening (van schuldenaar)" name="signature1" value="{{ old('signature1') }}" required></textarea>
-                        @error('signature1')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
                     <div class="col-4">
                         <label for="place" class="form-label">Plaats:<span class="text-danger">*</span></label>
                         <input type="text" class="form-control @error('place') is-invalid @enderror" id="bic_code" autocomplete="off" placeholder="Lieu" name="place" value="{{ old('place') }}" required>

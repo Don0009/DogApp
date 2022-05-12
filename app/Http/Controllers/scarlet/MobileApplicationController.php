@@ -146,7 +146,7 @@ class MobileApplicationController extends Controller
                 'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
             ]);
         } else {
-            $pdf = new Pdf(public_path('unfilled_forms/scarlet/SM_D.pdf'), [
+            $pdf = new Pdf(public_path('unfilled_forms/scarlet/SM_DU.pdf'), [
 
                 'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
             ]);

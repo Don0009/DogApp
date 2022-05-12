@@ -52,9 +52,8 @@ class CreateNumberRequestsTable extends Migration
             $table->string('distributor_name');
             $table->string('distribtuor_num');
             $table->date('date1');
-            $table->string('signature1');
             $table->date('date2');
-            $table->string('signature2');
+
             $table->timestamps();
         });
     }

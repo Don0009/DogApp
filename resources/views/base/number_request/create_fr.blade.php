@@ -205,7 +205,7 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-4 mt-2">
-                        <input type="checkbox" name="evidence" class="mr-4" value="0">
+                        <input type="checkbox" name="evidence" class="mr-4" value="1">
                         <label for="evidence" class="form-label">Documents ajoutés à titre de preuve</label>
                     </div>
                     <div class="col-8">
@@ -246,26 +246,19 @@
                         <label for="phone" class="form-label">Date:<span class="text-danger">*</span></label>
                         <input class="form-control @error('date1') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date1" name="date1" value="{{ old('date1') }}" type="date">
                     </div>
-                    <div class="col-3">
-                        <label for="signature1" class="form-label">Signature du distributeur:<span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="signature1" rows="5" name="signature1"></textarea>
-                    </div>
-                    <div class="col-3">
+                    < <div class="col-3">
                         <label for="phone" class="form-label">Date:<span class="text-danger">*</span></label>
                         <input class="form-control @error('date2') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date2" name="date2" value="{{ old('date2') }}" type="date">
-                    </div>
-                    <div class="col-3">
-                        <label for="phone" class="form-label">Signature du client:<span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="signature2" rows="5" name="signature2"></textarea>
-                    </div>
                 </div>
-                <div class="mt-2">
-                    <button type="submit" class="btn btn-primary me-2">Submit</button>
-                    <button class="btn btn-secondary">Cancel</button>
-                </div>
-            </form>
+
         </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-primary me-2">Submit</button>
+            <button class="btn btn-secondary">Cancel</button>
+        </div>
+        </form>
     </div>
+</div>
 </div>
 
 @endsection

@@ -68,18 +68,14 @@ class CreateOctasTable extends Migration
             $table->string('account_number');
             $table->string('bic_code');
             $table->string('information')->nullable();
-            $table->string('signature');
-            $table->string('octa');
             $table->date('date');
             $table->text('company_name');
             $table->string('street_number');
             $table->string('zip_code');
             $table->string('iban_account');
             $table->string('bic_code1');
-            $table->string('signature1');
             $table->date('date1');
             $table->text('place');
-
 
             $table->timestamps();
         });
