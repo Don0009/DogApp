@@ -229,7 +229,8 @@ class CreateProximusConnectionRequestDUSTable extends Migration
             // $table->string('consent_o_2');
             $table->string('doc_id')->nullable();
             $table->string('doc_sign_url')->nullable();
-            $table->string('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+
 
 
 

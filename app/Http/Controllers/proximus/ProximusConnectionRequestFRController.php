@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\proximus;
 
+use App\Http\Controllers\AmoCRMController;
+
 use App\Http\Controllers\OKSign\OKSignController;
 use Illuminate\Support\Facades\Auth;
 
@@ -192,6 +194,12 @@ class ProximusConnectionRequestFRController extends Controller
 
         $data = $request->all();
         $data = $orange = ProximusConnectionRequestFR::create($data);
+
+        $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
+
+            'command' => env('PDFTK_PATH'),
+
+        ]);
 
         $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 

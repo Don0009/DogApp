@@ -9,14 +9,11 @@
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <a href="{{ route('proximus_connection_request_fr.create') }}" class="btn btn-primary btn-icon-text">
+            <a href="{{ route('proximus_multi_contact_fr.create') }}" class="btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Connection Request French
+                Create Multi Contact (Dutch)
             </a>
-            {{-- <a href="{{ url('internet_home/create?lang=du') }}" class="ml-2 btn btn-primary btn-icon-text">
-                <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Internet Home Dutch
-            </a> --}}
+
         </div>
     </div>
 
@@ -30,8 +27,8 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h6 class="card-title">Proximus Connection Request</h6>
-                    <p class="card-description">All the Proximus Connection (French) leads are listed here.</p>
+                    <h6 class="card-title">Proximus Multi Contact</h6>
+                    <p class="card-description">All the Proximus Multi Contact(Dutch) leads are listed here.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>
@@ -40,10 +37,10 @@
                                         #
                                     </th>
                                     <th>
-                                        Name
+                                        Client Name
                                     </th>
                                     <th>
-                                        Full Name
+                                        Phone Number
                                     </th>
                                     <th>
                                         Created At
@@ -60,8 +57,8 @@
                                 @foreach ($proximus as $key => $home)
                                     <tr>
                                         <td>{{ ++$key }}</td>
-                                        <td>{{ $home->name }}</td>
-                                        <td>{{ $home->first_name }}</td>
+                                        <td>{{ $home->client_name }}</td>
+                                        <td>{{ $home->phone }}</td>
 
                                         <td>
                                             {{ \Carbon\Carbon::parse($home->created_at)->diffForhumans() }}

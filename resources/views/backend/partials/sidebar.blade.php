@@ -171,6 +171,23 @@
                                class="nav-link">Connection Request
                                 FR</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('proximus_number_porting_du.index') }}" class="nav-link">Number
+                                Porting Request (DU)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('proximus_number_porting_fr.index') }}" class="nav-link">Number
+                                Porting Request (FR)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('proximus_multi_contact_du.index') }}"
+                                class="nav-link">Multi-Contact (FR)</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('proximus_multi_contact_fr.index') }}"
+                                class="nav-link">Multi-Contact (DU)</a>
+                        </li>
                     </ul>
                 </div>
 

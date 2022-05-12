@@ -9,14 +9,11 @@
             </ol>
         </nav>
         <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <a href="{{ route('proximus_connection_request_fr.create') }}" class="btn btn-primary btn-icon-text">
+            <a href="{{ route('proximus_number_porting_du.create') }}" class="btn btn-primary btn-icon-text">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Connection Request French
+                Create Number Porting (Dutch)
             </a>
-            {{-- <a href="{{ url('internet_home/create?lang=du') }}" class="ml-2 btn btn-primary btn-icon-text">
-                <i class="btn-icon-prepend" data-feather="plus"></i>
-                Create Internet Home Dutch
-            </a> --}}
+
         </div>
     </div>
 
@@ -27,11 +24,12 @@
             src="{{ asset('images/brands/Proximus_logo.jpeg') }}" height="75px" width="330" alt="">
         {{-- Branding ENd --}}
 
+
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h6 class="card-title">Proximus Connection Request</h6>
-                    <p class="card-description">All the Proximus Connection (French) leads are listed here.</p>
+                    <h6 class="card-title">Proximus Number Porting Request</h6>
+                    <p class="card-description">All the Proximus Number Porting (Dutch) leads are listed here.</p>
                     <div class="table-responsive">
                         <table id="dataTableExample" class="table">
                             <thead>
@@ -61,7 +59,7 @@
                                     <tr>
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $home->name }}</td>
-                                        <td>{{ $home->first_name }}</td>
+                                        <td>{{ $home->full_name }}</td>
 
                                         <td>
                                             {{ \Carbon\Carbon::parse($home->created_at)->diffForhumans() }}
@@ -71,7 +69,8 @@
                                         </td> --}}
                                         <td>
                                             <form class="d-inline-block"
-                                                action="{{ route('internet_home.destroy', $home->id) }}" method="POST">
+                                                action="{{ route('proximus_number_porting_fr.destroy', $home->id) }}"
+                                                method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger btn-icon-text">
