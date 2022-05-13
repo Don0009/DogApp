@@ -233,6 +233,9 @@ class CreateProximusConnectionRequestFRSTable extends Migration
 
             $table->string('at_o');
             $table->string('on_o');
+
+            $table->string('existing_proximus_customer_text');
+
             // $table->string('consent_o');
             // $table->string('consent_o_2');
 
