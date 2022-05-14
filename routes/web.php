@@ -60,4 +60,7 @@ Route::group(['middleware' => 'auth'], function () {
    Route::resource('mega', 'MegaController');
 
    Route::resource('comfy_pro_contract', 'ComfyProContractController');
+   Route::resource('comfy_en_comfyflex', 'ComfyEnComfyflexController');
+   Route::resource('comfypro_en_comfyflex_pro', 'ComfyproEnComfyflexProController');
+   Route::resource('lum_res_comfy', 'LumResComfyController');
 });

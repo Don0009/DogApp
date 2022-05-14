@@ -82,16 +82,13 @@ class CreateMegasTable extends Migration
             $table->string('bic');
             $table->string('datum');
             $table->string('place');
-            $table->string('file_1');
+
             $table->string('read_mega')->nullable();
             $table->string('datum_1');
             $table->string('place_1');
-            $table->string('file_2');
-            $table->string('file_3');
             $table->string('aan_mega');
             $table->string('agent');
             $table->string('reference_1');
-            $table->string('fill_4');
             $table->timestamps();
 
         });

@@ -86,16 +86,18 @@
                                     <th>Emails Or Text Messages</th>
                                     <th>Klantenrelaties</th>
                                     <th> voor akkoord</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
-                                    <th>Gemeente</th>
+                                    <th>identification</th>
+                                    <th>earnings</th>
+                                    <th>Name</th>
+                                    <th>address</th>
+                                    <th>Postcode</th>
+                                    <th>City</th>
+                                    <th>Land</th>
+                                    <th>IBAN</th>
+                                    <th>BIC code</th>
+                                    <th>Datum</th>
+                                    <th>Plaats</th>
+
 
                                     <th>
                                         Created At
@@ -115,7 +117,7 @@
                                         <td>{{ $comfy_pro_contract->dealer_id }}</td>
                                         <td>{{ $comfy_pro_contract->seller_id }}</td>
                                         <td>{{ $comfy_pro_contract->present_to_luminus }}</td>
-                                        <td>{{ $comfy_pro_contract->client_number }}</td>
+                                        <td>{{ $comfy_pro_contract->client_number_1 }}</td>
                                         <td>{{ $comfy_pro_contract->company_form }}</td>
                                         <td>{{ $comfy_pro_contract->company_number }}</td>
                                         <td>{{ $comfy_pro_contract->dhr }}</td>
@@ -167,10 +169,18 @@
                                         <td>{{ $comfy_pro_contract->emails_or_text_messages }}</td>
                                         <td>{{ $comfy_pro_contract->klantenrelaties }}</td>
                                         <td>{{ $comfy_pro_contract->akkoord }}</td>
-                                        <td>{{ $comfy_pro_contract->domiciliering }}</td>
-                                        <td>{{ $comfy_pro_contract->domiciliering }}</td>
-                                        <td>{{ $comfy_pro_contract->domiciliering }}</td>
-                                        <td>{{ $comfy_pro_contract->domiciliering }}</td>
+                                        <td>{{ $comfy_pro_contract->door }}</td>
+                                        <td>{{ $comfy_pro_contract->referte }}</td>
+                                        <td>{{ $comfy_pro_contract->name }}</td>
+                                        <td>{{ $comfy_pro_contract->adres }}</td>
+                                        <td>{{ $comfy_pro_contract->post_code }}</td>
+                                        <td>{{ $comfy_pro_contract->stad }}</td>
+                                        <td>{{ $comfy_pro_contract->land }}</td>
+                                        <td>{{ $comfy_pro_contract->iban }}</td>
+                                        <td>{{ $comfy_pro_contract->code }}</td>
+                                        <td>{{ $comfy_pro_contract->datum }}</td>
+                                        <td>{{ $comfy_pro_contract->plaats }}</td>
+
                                         <td>
                                             {{ \Carbon\Carbon::parse($comfy_pro_contract->created_at)->diffForhumans() }}
                                         </td>
@@ -179,7 +189,7 @@
                                         </td> --}}
                                         <td>
                                             <form class="d-inline-block"
-                                                action="{{ route('luminus/comfy_pro_contract.destroy', $comfy_pro_contract->id) }}"
+                                                action="{{ route('comfy_pro_contract.destroy', $comfy_pro_contract->id) }}"
                                                 method="POST">
                                                 @csrf
                                                 @method('DELETE')
@@ -191,7 +201,7 @@
                                                 class="btn btn-warning btn-icon-text">
                                                 <i class="btn-icon-prepend" data-feather="edit"></i> Edit
                                             </a> --}}
-                                            <a href="{{ route('luminus/comfy_pro_contract.show', $comfy_pro_contract->id) }}"
+                                            <a href="{{ route('comfy_pro_contract.show', $comfy_pro_contract->id) }}"
                                                 class="btn btn-success btn-icon-text">
                                                 <i class="btn-icon-prepend" data-feather="show"></i> Show
                                             </a>

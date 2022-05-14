@@ -161,8 +161,22 @@
                 <div class="collapse" id="luminus">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="{{ route('comfy_pro_contract.index') }}" class="nav-link">comfy_pro_contract</a>
+                            <a href="{{ route('comfy_pro_contract.index') }}" class="nav-link">Comfy Pro Contract</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('comfy_en_comfyflex.index') }}" class="nav-link">Comfy En Comfyflex</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('comfypro_en_comfyflex_pro.index') }}" class="nav-link">ComfyPro En ComfyFlex Pro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('lum_res_comfy.index') }}" class="nav-link">Lum Res Comfy</a>
+                        </li>
+
+                        {{-- <li class="nav-item">
+                            <a href="{{ route('lum_res_comfy.index') }}" class="nav-link">Lum Res Comfy</a>
+                        </li> --}}
                     </ul>
                 </div>
             </li>

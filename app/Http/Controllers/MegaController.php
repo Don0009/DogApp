@@ -6,6 +6,8 @@ use Carbon\Carbon;
 use App\Mega;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use mikehaertl\pdftk\Pdf;
+use \Mail;
 
 class MegaController extends Controller
 {
@@ -86,15 +88,12 @@ public function index()
             'bic' => 'required',
             'datum' => 'required',
             'place' => 'required',
-            'file_1' => 'required',
+
             'datum_1' => 'required',
             'place_1' => 'required',
-            'file_2' => 'required',
-            'file_3' => 'required',
             'aan_mega' => 'required',
             'agent' => 'required',
             'reference_1' => 'required',
-            'fill_4' => 'required',
         ]);
 
         // dd($request->all());
@@ -117,6 +116,41 @@ public function index()
         if(isset($data['start_date_1'])){
             $data['start_date_1'] = Carbon::parse($data['start_date_1']);
         }
+        $pdf = new Pdf(public_path('unfilled_forms/mega/CNLMF.pdf'), [
+            //            'command' => '/some/other/path/to/pdftk',
+                        // or on most Windows systems:
+                        // 'command' => '/usr/bin/pdftk',
+                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+            //            'useExec' => true,  // May help on Windows systems if execution fails
+
+        ]);
+
+        // dd($pdf);
+
+        // data copied from Orange
+
+        $data=Mega::create($data);
+
+        $pdf_name = 'pdfs_generated/'. now()->timestamp . '.pdf';
+//        dd($pdf_name);
+        $data = $data->toArray();
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs($pdf_name);
+
+
+            $mail =  Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+                $message->to('bazighminhas1@gmail.com')
+                    ->subject("You have got a Orange Internet TV lead...!")
+                    ->cc(['lasha@studiodlvx.be'])
+            //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                    ->attach(public_path($pdf_name), [
+                        'as' => 'name.pdf',
+                        'mime' => 'application/pdf',
+                    ]);
+                $message->from('no-reply@ecosafety.nyc');
+            });
+            // Mail Code Ends
+                    dd($mail);
 
 
 

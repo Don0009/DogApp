@@ -113,21 +113,14 @@ class EnergyTransferDocumentController extends Controller
             }
         }
 
-        if(isset($data['handtekening'])){
-            if($data['handtekening'] == "on"){
-            $data['handtekening'] = true;
-            }  else{
-            $data['handtekening'] = false;
-            }
-        }
 
-        if(isset($data['handtekening_1'])){
-            if($data['handtekening_1'] == "on"){
-            $data['handtekening_1'] = true;
-            }  else{
-            $data['handtekening_1'] = false;
-            }
-        }
+        // if(isset($data['handtekening_1'])){
+        //     if($data['handtekening_1'] == "on"){
+        //     $data['handtekening_1'] = true;
+        //     }  else{
+        //     $data['handtekening_1'] = false;
+        //     }
+        // }
         if(isset($data['home_is_currently_used_1'])){
             if($data['home_is_currently_used_1'] == "on"){
             $data['home_is_currently_used_1'] = true;

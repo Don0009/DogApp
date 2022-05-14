@@ -36,7 +36,7 @@
 
                 <div class="row">
                     <div class="col-5">
-                        <label for="mob_num" class="form-label"><b>Klantnummer</b><span
+                        <label for="client_number" class="form-label"><b>Klantnummer</b><span
                             class="text-danger">*</span></label>
                     </div>
                     <div class="col-7">
@@ -105,24 +105,29 @@
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
 <section>
-    <h4>Identificatie- en factureingsadres</h4>
+
 <div class="container-fluid">
+    <div class="row grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
     <div class="row">
         <div class="col-12">
+            <h4>Identificatie- en factureingsadres</h4>
             <div class="row">
                 <div class="col-2">
-                    <label for="mob_num" class="form-label"><b>Bedrijfs-name</b><span
+                    <label for="client_number_1" class="form-label"><b>Bedrijfs-name</b><span
                         class="text-danger">*</span></label>
                 </div>
                 <div class="col-10">
                     <div class="mb-2">
 
-                        <input type="number" class="form-control @error('client_number') is-invalid @enderror"
-                            id="client_number" autocomplete="off" placeholder="Bedrijfs-name" name="client_number"
+                        <input type="number" class="form-control @error('client_number_1') is-invalid @enderror"
+                            id="client_number" autocomplete="off" placeholder="Bedrijfs-name" name="client_number_1"
                             value="{{ old('client_number') }}" required>
                         @error('client_number')
                             <span class="invalid-feedback mb-2" role="alert">
@@ -192,7 +197,7 @@
                         </div>
                         <div class="col-4">
                             <div class="mb-2 container">
-                                <input type="radio" name="dhr" value="0" required>
+                                <input type="radio" name="dhr" value="1" required>
                                 <label for="dhr" class="mb-3 form-label mt-2">Dhr.<span
                                         class="text-danger">*</span></label>
                                 @error('dhr')
@@ -204,7 +209,7 @@
                         </div>
                         <div class="col-4">
                             <div class="mb-2 container">
-                                <input type="radio" name="dhr" value="1" required>
+                                <input type="radio" name="dhr" value="2" required>
                                 <label for="dhr" class="mb-3 form-label mt-2">Mevr.<span
                                         class="text-danger">*</span></label>
                                 @error('dhr')
@@ -223,7 +228,7 @@
                     </div>
                     <div class="col-4">
                         <div class="mb-2 container">
-                            <input type="radio" name="nl" value="0" required>
+                            <input type="radio" name="nl" value="1" required>
                             <label for="nl" class="mb-3 form-label mt-2">NL<span
                                     class="text-danger">*</span></label>
                             @error('nl')
@@ -235,7 +240,7 @@
                     </div>
                     <div class="col-4">
                         <div class="mb-2 container">
-                            <input type="radio" name="nl" value="1" required>
+                            <input type="radio" name="nl" value="2" required>
                             <label for="nl" class="mb-3 form-label mt-2">FR<span
                                     class="text-danger">*</span></label>
                             @error('nl')
@@ -425,7 +430,7 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-2">
-                    <label for="mob_num" class="form-label"><b>E-mail</b><span
+                    <label for="e_mail" class="form-label"><b>E-mail</b><span
                         class="text-danger">*</span></label>
                 </div>
                 <div class="col-10">
@@ -450,7 +455,7 @@
         <div class="col-4">
             <div class="row">
                 <div class="col-2">
-                    <label for="mob_num" class="form-label"><b>Tel.nr.</b><span
+                    <label for="tel_nr" class="form-label"><b>Tel.nr.</b><span
                         class="text-danger">*</span></label>
                 </div>
                 <div class="col-10">
@@ -474,7 +479,7 @@
         <div class="col-4">
             <div class="row">
                 <div class="col-2">
-                    <label for="mob_num" class="form-label"><b>Faxnr.</b><span
+                    <label for="faxnr" class="form-label"><b>Faxnr.</b><span
                         class="text-danger">*</span></label>
                 </div>
                 <div class="col-10">
@@ -498,7 +503,7 @@
         <div class="col-4">
             <div class="row">
                 <div class="col-2">
-                    <label for="mob_num" class="form-label"><b>Gsm-nr.</b><span
+                    <label for="gsm_nr" class="form-label"><b>Gsm-nr.</b><span
                         class="text-danger">*</span></label>
                 </div>
                 <div class="col-10">
@@ -520,26 +525,34 @@
         </div>
     </div>
 </div>
+</div>
+</div>
+</div>
 </section>
 
 <section>
-    <h4>Aansluitingsadres (in te vullen indien andres dan identificatie- en factureringsadres)</h4>
+
     <div class="container-fluid">
+        <div class="row grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
         <div class="row">
+            <h4>Aansluitingsadres (in te vullen indien andres dan identificatie- en factureringsadres)</h4>
             <div class="col-5">
+
                 <div class="row">
                     <div class="col-2">
-                        <label for="mob_num" class="form-label"><b>Adres</b><span
+                        <label for="address_1" class="form-label"><b>Adres</b><span
                             class="text-danger">*</span></label>
                     </div>
                     <div class="col-10">
 
                         <div class="mb-2">
 
-                            <input type="name" class="form-control @error('address') is-invalid @enderror"
-                                id="address" autocomplete="off" placeholder="Adres" name="address"
-                                value="{{ old('address') }}" required>
-                            @error('address')
+                            <input type="name" class="form-control @error('address_1') is-invalid @enderror"
+                                id="address_1" autocomplete="off" placeholder="Adres" name="address_1"
+                                value="{{ old('address_1') }}" required>
+                            @error('address_1')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -554,17 +567,17 @@
                     <div class="col-4">
                         <div class="row">
                             <div class="col-2">
-                                <label for="mob_num" class="form-label"><b>Nr</b><span
+                                <label for="nr_1" class="form-label"><b>Nr</b><span
                                     class="text-danger">*</span></label>
                             </div>
                             <div class="col-10">
 
                                 <div class="mb-2">
 
-                                    <input type="name" class="form-control @error('nr') is-invalid @enderror"
-                                        id="nr" autocomplete="off" placeholder="Nr" name="nr"
-                                        value="{{ old('nr') }}" required>
-                                    @error('nr')
+                                    <input type="name" class="form-control @error('nr_1') is-invalid @enderror"
+                                        id="nr_1" autocomplete="off" placeholder="Nr" name="nr_1"
+                                        value="{{ old('nr_1') }}" required>
+                                    @error('nr_1')
                                         <span class="invalid-feedback mb-2" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -578,17 +591,17 @@
                     <div class="col-4">
                         <div class="row">
                             <div class="col-2">
-                                <label for="mob_num" class="form-label"><b>Bus</b><span
+                                <label for="bus_1" class="form-label"><b>Bus</b><span
                                     class="text-danger">*</span></label>
                             </div>
                             <div class="col-10">
 
                                 <div class="mb-2">
 
-                                    <input type="name" class="form-control @error('bus') is-invalid @enderror"
-                                        id="bus" autocomplete="off" placeholder="Bus" name="bus"
-                                        value="{{ old('bus') }}" required>
-                                    @error('bus')
+                                    <input type="name" class="form-control @error('bus_1') is-invalid @enderror"
+                                        id="bus_1" autocomplete="off" placeholder="Bus" name="bus_1"
+                                        value="{{ old('bus_1') }}" required>
+                                    @error('bus_1')
                                         <span class="invalid-feedback mb-2" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -676,17 +689,22 @@
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
 </section>
 
 <section>
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
-                <h4>Electriciteit</h4>
+                <div class="card">
+                    <div class="card-body">
                 <div class="row">
+                    <h4>Electriciteit</h4>
                     <div class="col-12">
                         <div class="mb-2 container">
-                            <input type="radio" name="want_luminus" value="0" required>
+                            <input type="radio" name="want_luminus" value="1" required>
                             <label for="want_luminus" class="mb-3 form-label mt-2">Ik wil Luminus Comfy Pro+<span
                                     class="text-danger">*</span></label>
                             @error('want_luminus')
@@ -701,7 +719,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-2 container">
-                            <input type="radio" name="existing_connection" value="0" required>
+                            <input type="radio" name="existing_connection" value="1" required>
                             <label for="existing_connection" class="mb-3 form-label mt-2">bestaande aansluiting<span
                                     class="text-danger">*</span></label>
                             @error('existing_connection')
@@ -713,7 +731,7 @@
                     </div>
                     <div class="col-6">
                         <div class="mb-2 container">
-                            <input type="radio" name="existing_connection" value="1" required>
+                            <input type="radio" name="existing_connection" value="2" required>
                             <label for="existing_connection" class="mb-3 form-label mt-2">nieuwe aansluiting<span
                                     class="text-danger">*</span></label>
                             @error('existing_connection')
@@ -818,14 +836,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
 
             <div class="col-6">
-                <h4>Electriciteit</h4>
+                <div class="card">
+                    <div class="card-body">
+                <h4>Gas</h4>
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-2 container">
-                            <input type="radio" name="want_luminus_1" value="0" required>
+                            <input type="radio" name="want_luminus_1" value="1" required>
                             <label for="want_luminus_1" class="mb-3 form-label mt-2">Ik wil Luminus Comfy Pro+<span
                                     class="text-danger">*</span></label>
                             @error('want_luminus_1')
@@ -840,7 +862,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-2 container">
-                            <input type="radio" name="existing_connection_1" value="0" required>
+                            <input type="radio" name="existing_connection_1" value="1" required>
                             <label for="existing_connection_1" class="mb-3 form-label mt-2">bestaande aansluiting<span
                                     class="text-danger">*</span></label>
                             @error('existing_connection_1')
@@ -852,7 +874,7 @@
                     </div>
                     <div class="col-6">
                         <div class="mb-2 container">
-                            <input type="radio" name="existing_connection_1" value="1" required>
+                            <input type="radio" name="existing_connection_1" value="2" required>
                             <label for="existing_connection_1" class="mb-3 form-label mt-2">nieuwe aansluiting<span
                                     class="text-danger">*</span></label>
                             @error('existing_connection_1')
@@ -959,20 +981,24 @@
             </div>
         </div>
     </div>
+        </div>
+    </div>
 </section>
 
 
 <section>
   <div class="container-fluid">
     <div class="row">
-        <div class="col-6">
+        <div class="col-6 ">
+            <div class="card">
+                <div class="card-body">
             <h4>Verzend-en betalingswijze van de facturen voor elecktriciteit en/of gas</h4>
             <div class="">(Alle informatie hierover vindt u op de bijzondere voorwaarden van toepassing op het door u gekozen tarief. Indien u niets</div>
             <div class="">aankruits of indien u uw domicilieringsbericht foutief invult, zult u automatisch via overschrijving gefactureerd worden.</div>
             <div class="row">
                 <div class="col-12">
                     <div class="mb-2 container">
-                        <input type="radio" name="digitale" value="0" required>
+                        <input type="radio" name="digitale" value="1" required>
                         <label for="digitale" class="mb-3 form-label mt-2"><b>Digitale versie.</b> Ik ontvang mijn facturen via e-mail<span
                                 class="text-danger">*</span></label>
                         @error('digitale')
@@ -986,7 +1012,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="mb-2 container">
-                        <input type="radio" name="domiciliering" value="0" required>
+                        <input type="radio" name="domiciliering" value="1" required>
                         <label for="domiciliering" class="mb-3 form-label mt-2"><b>Domiciliering.</b> Tijdens de duur van mijn contract worden mjn facturen maan =delijks via mijn bankrekening veerrekend. De duurtijd van het domicilleringsmandaat beperkt zich tot de duurtijd
                             van het contract met inbegrip van de termijn nodig voor de verwerking en vereffening van mijn afrek <b>Het onderstaande domicilleringsmandaat geldt</b>
                             <span class="text-danger">*</span></label>
@@ -1001,7 +1027,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="mb-2 container">
-                        <input type="radio" name="advance_invoices" value="0" required>
+                        <input type="radio" name="advance_invoices" value="1" required>
                         <label for="advance_invoices" class="mb-3 form-label mt-2">voor mijn voorschotfacturen en mijn afrekening=ingen<span
                                 class="text-danger">*</span></label>
                         @error('advance_invoices')
@@ -1016,7 +1042,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="mb-2 container">
-                        <input type="radio" name="my_advance_invoices" value="0" required>
+                        <input type="radio" name="my_advance_invoices" value="2" required>
                         <label for="my_advance_invoices" class="mb-3 form-label mt-2">alleen voor mijn voorschotfacturen en niet voor mijn afrekeningen<span
                                 class="text-danger">*</span></label>
                         @error('my_advance_invoices')
@@ -1030,7 +1056,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="mb-2 container">
-                        <input type="radio" name="transfer" value="0" required>
+                        <input type="radio" name="transfer" value="1" required>
                         <label for="transfer" class="mb-3 form-label mt-2">Overschrijving<span
                                 class="text-danger">*</span></label>
                         @error('transfer')
@@ -1041,22 +1067,35 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+    </div>
             <div class="row">
                 <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
                     <div class="mt-3">De ondergetekende erkent uitdrukkelijk voor de ondertekening van dit contract kennis te hebben genomen van de Algemene Voor-waarden evenals van de Bijzondere voorwaarden (in bijalage), en ze te hebben begrepen en aar=nvard. De ondergetekende machtigt Luminus in zijn naam rekening alle handeling te stellen met oog op leverancierswissel, voor het doorvoeren van de netaansulting en voor het opvragen vaan alle (verbruiks) gegevens, inclusief, bij de netbeheerder</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
                     <div class="mt-3">Indien wij u niet binnen de 20 werkdagen schriftelijk te kennen geven dat u op basis van objectieve gegevens niet kredietwaardig bent, wordt de leveringsovereenkomst definitief. </div>
                 </div>
             </div>
         </div>
+            </div>
+        </div>
 
         <div class="col-6">
-            <h4>Voorschotbedrag energie (incl. btw) </h4>
+
             <div class="row">
                 <div class="col-6">
+
                     <div class="row">
+                        <h4>Voorschotbedrag energie (incl. btw) </h4>
                         <div class="">
+
                             <b>Maandelijks voorschotbedrag elektriciteit </b>
+
                         </div>
                         <div class="col-12">
                             <div class="mb-2">
@@ -1228,7 +1267,7 @@
                             <div class="col-11">
                                 <div class="mb-2">
 
-                                    <input type="date" class="form-control @error('place_1') is-invalid @enderror"
+                                    <input type="name" class="form-control @error('place_1') is-invalid @enderror"
                                         id="place_1" autocomplete="off" placeholder="Place" name="place_1"
                                         value="{{ old('place_1') }}" required>
                                     @error('place_1')
@@ -1252,7 +1291,7 @@
                     </div>
                     <div class="col-4">
                         <div class="mb-2 container">
-                            <input type="radio" name="personen" value="0" required>
+                            <input type="radio" name="personen" value="1" required>
                             <label for="personen" class="mb-3 form-label mt-2">5 of meer personen <span
                                     class="text-danger">*</span></label>
                             @error('personen')
@@ -1264,7 +1303,7 @@
                     </div>
                     <div class="col-4">
                         <div class="mb-2 container">
-                            <input type="radio" name="personen" value="1" required>
+                            <input type="radio" name="personen" value="2" required>
                             <label for="personen" class=" form-label "> minder dan 5 personen<span
                                     class="text-danger">*</span></label>
                             @error('personen')
@@ -1288,7 +1327,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-2 container">
-                            <input type="radio" name="emails_or_text_messages" value="0" required>
+                            <input type="radio" name="emails_or_text_messages" value="1" required>
                             <label for="emails_or_text_messages" class="mb-3 form-label mt-2">Indien u niet wenst dat wij u e-mails of sms'en sturen over producten en diensten die gelijkaardig zijn aan het gekochte product of dienst, gelieve dit vakje aan tevinken. Voor meer informatie verwijzen wij naar onze website privacy pokcy. <span
                                     class="text-danger">*</span></label>
                             @error('emails_or_text_messages')
@@ -1303,10 +1342,10 @@
                     <div class="col-6">
                         <div class="row">
                             <div class="col-4">
-                                <label for="mob_num" class="form-label"><b>Voor Luminus NV Henri Boenen, Directeur Klantenrelaties </b><span
+                                <label for="klantenrelaties" class="form-label"><b>Voor Luminus NV Henri Boenen, Directeur Klantenrelaties </b><span
                                     class="text-danger">*</span></label>
                             </div>
-                            <div class="col-8">
+                            {{-- <div class="col-8">
                                 <div class="mb-2">
 
                                     <input type="file" class="form-control @error('klantenrelaties') is-invalid @enderror"
@@ -1318,17 +1357,17 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
 
                     <div class="col-6">
                         <div class="row">
                             <div class="col-4">
-                                <label for="mob_num" class="form-label"><b>Handtekening van de geldige vertegemodiger van de klant, voor akkoord </b><span
+                                <label for="akkoord" class="form-label"><b>Handtekening van de geldige vertegemodiger van de klant, voor akkoord </b><span
                                     class="text-danger">*</span></label>
                             </div>
-                            <div class="col-8">
+                            {{-- <div class="col-8">
                                 <div class="mb-2">
 
                                     <input type="file" class="form-control @error('akkoord') is-invalid @enderror"
@@ -1340,6 +1379,206 @@
                                         </span>
                                     @enderror
                                 </div>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  </div>
+</section>
+
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <h6>Mandaat SEPA Europese domiciliering (gelieve deze strook niet af te knippen)</h6>
+            <div class="col-5">
+                <div class="card">
+                    <div class="card-body">
+                <h6>Mandaat identificatie (in te vullen door Luminus NV)</h6>
+               <div class="row">
+                   <div class="col-1">
+                    <div class="mb-2 ">
+                        <input type="radio" name="door" value="1" required>
+
+                        @error('door')
+                            <span class="invalid-feedback mb-2" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                   </div>
+                   <div class="col-3">
+                    <label for="gsm">Mandaat referte</label>
+                   </div>
+                   <div class="col-8">
+                    <div class="form-group">
+
+                        <input type="number" class="form-control" id="referte" autocomplete="off"
+                               placeholder="Mandaat referte" name="referte">
+                    </div>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-12">
+                       <div class="mt-5">Door ondertekening van dit mandaatformulier geeft u toestemming aan (A) Luminus NV om een opdracht te sturen naar uw bank teneinde een bedrag van uw rekening te debiteren en (B) uw bank om een bedrag van uw rekening te debiteren in overeenstemming met de opdracht van Luminus NV.</div>
+                       <div class="mt-2">U kunt een Europese domiciliering laten terugbetalen. Vraag uw eigen bank naar de voonvaarden. Een verzoek tot terugbetaling moet binnen 8 weken na de datum van debitering van het bedrag van uw rekening worden ingediend</div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+            <div class="col-7">
+                <div class="card">
+                    <div class="card-body">
+                <h6>Identificatie van de schuldenaar (in te vullen door de schuldenaar)</h6>
+                <div class="row">
+                    <div class="col-1">
+                        <label for="name">Naam</label>
+                    </div>
+                    <div class="col-11">
+                        <div class="form-group">
+
+                            <input required type="name" class="form-control" id="name_1"
+                                autocomplete="off" placeholder="Naam"
+                                name="name_1">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1">
+                        <label for="adres">Adres</label>
+                    </div>
+                    <div class="col-11">
+                        <div class="form-group">
+
+                            <input required type="name" class="form-control" id="adres"
+                                autocomplete="off" placeholder="Adres"
+                                name="adres">
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                <div class="col-5">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="post_code_2">Postcode:</label>
+                        </div>
+                        <div class="col-9">
+                            <div class="form-group">
+
+                                <input required type="name" class="form-control" id="post_code_2"
+                                    autocomplete="off" placeholder="Postcode"
+                                    name="post_code_2">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row">
+                        <div class="col-1">
+                            <label for="adres">Stad:</label>
+                        </div>
+                        <div class="col-11">
+                            <div class="form-group">
+
+                                <input required type="name" class="form-control" id="stad"
+                                    autocomplete="off" placeholder="Stad"
+                                    name="stad">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="adres">Land:</label>
+                            </div>
+                            <div class="col-10">
+                                <div class="form-group">
+
+                                    <input required type="name" class="form-control" id="land"
+                                        autocomplete="off" placeholder="Land"
+                                        name="land">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="">verzoekt de firma Luminus NV, Koning Albert || laan 7, 1210 Brussel, Belgie, met identificatienummer Be50ZZZ0471811661 om,</div>
+                        <div class="">vanaf heden en tot uitdrukkelijke herroeping van deze opdracht, alle facturen te incasseren van het rekeningnummer</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1">
+                        <label for="adres"><b>IBAN*.</b></label>
+                    </div>
+                    <div class="col-11">
+                        <div class="form-group">
+
+                            <input required type="name" class="form-control" id="iban"
+                                autocomplete="off" placeholder="Land"
+                                name="iban">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <label for="adres"><b>Uw bank BIC code*.</b></label>
+                    </div>
+                    <div class="col-8">
+                        <div class="form-group">
+
+                            <input required type="number" class="form-control" id="code"
+                                autocomplete="off" placeholder="Uw bank BIC code"
+                                name="code">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="datum">Datum</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="form-group">
+
+                                    <input required type="date" class="form-control" id="datum"
+                                        autocomplete="off" placeholder="Datum"
+                                        name="datum">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="plaats">Plaats</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="form-group">
+
+                                    <input required type="name" class="form-control" id="plaats"
+                                        autocomplete="off" placeholder="Plaats"
+                                        name="plaats">
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -1347,12 +1586,8 @@
             </div>
         </div>
     </div>
-  </div>
-</section>
-
-
-<section>
-
+        </div>
+    </div>
 </section>
 
 

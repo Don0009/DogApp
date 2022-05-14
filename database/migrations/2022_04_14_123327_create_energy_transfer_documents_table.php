@@ -74,8 +74,8 @@ class CreateEnergyTransferDocumentsTable extends Migration
             $table->string('huurder')->nullable();
             $table->string('home_is_currently_used')->nullable();
             $table->string('home_is_currently_used_1')->nullable();
-            $table->string('handtekening');
-            $table->string('handtekening_1');
+            // $table->string('handtekening');
+            // $table->string('handtekening_1');
             $table->timestamps();
         });
     }

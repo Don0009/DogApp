@@ -309,7 +309,7 @@
         </div>
         <div class="col-1">
             <div class="form-check">
-                <input class="form-check-input" type="radio" value="0" name="nee" id="nee" >
+                <input class="form-check-input" type="radio" value="1" name="nee" id="nee" >
                 <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                   Ja:
                 </label>
@@ -317,7 +317,7 @@
         </div>
         <div class="col-1">
             <div class="form-check">
-                <input class="form-check-input" type="radio" value="1" name="nee" id="nee" >
+                <input class="form-check-input" type="radio" value="2" name="nee" id="nee" >
                 <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                   Nee:
                 </label>
@@ -381,7 +381,7 @@
         </div>
         <div class="col-1">
             <div class="form-check">
-                <input class="form-check-input" type="radio" value="0" name="nee_1" id="nee_1" >
+                <input class="form-check-input" type="radio" value="1" name="nee_1" id="nee_1" >
                 <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                   Ja:
                 </label>
@@ -389,7 +389,7 @@
         </div>
         <div class="col-1">
             <div class="form-check">
-                <input class="form-check-input" type="radio" value="1" name="nee_1" id="nee_1" >
+                <input class="form-check-input" type="radio" value="2" name="nee_1" id="nee_1" >
                 <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                   Nee:
                 </label>
@@ -414,7 +414,7 @@
                 </div>
                 <div class="col-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="0" name="nee_2" id="nee_2" >
+                        <input class="form-check-input" type="radio" value="1" name="nee_2" id="nee_2" >
                         <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                           Dhr.:
                         </label>
@@ -422,7 +422,7 @@
                 </div>
                 <div class="col-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1" name="nee_2" id="nee_2" >
+                        <input class="form-check-input" type="radio" value="2" name="nee_2" id="nee_2" >
                         <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                           Mevr.
                         </label>
@@ -430,7 +430,7 @@
                 </div>
                 <div class="col-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2" name="nee_2" id="nee_2" >
+                        <input class="form-check-input" type="radio" value="3" name="nee_2" id="nee_2" >
                         <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                           Bedrijf
                         </label>
@@ -629,7 +629,7 @@
                 </div>
                 <div class="col-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="0" name="nee_3" id="nee_3" >
+                        <input class="form-check-input" type="radio" value="1" name="nee_3" id="nee_3" >
                         <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                           Dhr.:
                         </label>
@@ -637,7 +637,7 @@
                 </div>
                 <div class="col-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="1" name="nee_3" id="nee_3" >
+                        <input class="form-check-input" type="radio" value="2" name="nee_3" id="nee_3" >
                         <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                           Mevr.
                         </label>
@@ -645,7 +645,7 @@
                 </div>
                 <div class="col-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="2" name="nee_3" id="nee_3" >
+                        <input class="form-check-input" type="radio" value="3" name="nee_3" id="nee_3" >
                         <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                           Bedrijf
                         </label>
@@ -838,7 +838,7 @@
                 </div> --}}
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" value="0" name="huurder" id="huurder" >
+                    <input class="form-check-input" type="radio" value="1" name="huurder" id="huurder" >
                     <label class="form-check-label" for="flexRadioDefault1" style="margin-left: -3px">
                       Ja:
                     </label>
@@ -860,20 +860,20 @@
     <div class="col-6">
         <div class="" style="text-align: center">HANDTEKENING van de <b>vertrejjende klant*</b></div>
         <div class="">(handtekening voorafgegaan door de vermelding 'Gelezen en goedgekeurd')</div>
-        <div class="form-group">
+        {{-- <div class="form-group">
 
             <input type="file" class="form-control" id="handtekening" autocomplete="off"
                    placeholder="Datum Overname" name="handtekening" required>
-        </div>
+        </div> --}}
     </div>
     <div class="col-6">
         <div class="" style="text-align: center">HANDTEKENING van de <b>overnemer*</b></div>
         <div class="">(handtekening voorafgegaan door de vermelding 'Gelezen en goedgekeurd')</div>
-        <div class="form-group">
+        {{-- <div class="form-group">
 
             <input type="file" class="form-control" id="handtekening_1" autocomplete="off"
                    placeholder="Datum Overname" name="handtekening_1" required>
-        </div>
+        </div> --}}
     </div>
             <div class="card">
                 <div class="card-body">

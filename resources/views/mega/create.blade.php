@@ -41,9 +41,12 @@
 <form class="forms-sample" method="POST" action="{{ route('mega.store') }}">
 @csrf
 <section>
-<h6 >Persoonlijke gegevens van de klant</h6>
+
 <div class="container-fluid">
     <div class="row">
+        <div class="card">
+            <div class="card-body">
+        <h4 >Persoonlijke gegevens van de klant</h4>
         <div class="col-6">
             <div class="row">
                 <div class="col-2">
@@ -270,8 +273,12 @@
             </div>
         </div>
     </div>
+        </div>
+    </div>
     <div class="row">
-        <div class="col-12">Verplichte vermeldingen voor een professioneel contract</div>
+        <div class="card">
+            <div class="card-body">
+        <div class="col-12"><b><h4>Verplichte vermeldingen voor een professioneel contract</h4></b></div>
     </div>
     <div class="row">
         <div class="col-8">
@@ -341,7 +348,7 @@
 
         <div class="col-4">
             <div class="mb-2 container">
-                <input type="radio" name="non_taxable" value="0" required>
+                <input type="radio" name="non_taxable" value="1" required>
                 <label for="non_taxable" class="mb-3 form-label mt-2">Niet-belastingplichtig<span
                         class="text-danger">*</span></label>
                 @error('non_taxable')
@@ -355,7 +362,7 @@
 
         <div class="col-4">
             <div class="mb-2 container">
-                <input type="radio" name="non_taxable" value="1" required>
+                <input type="radio" name="non_taxable" value="2" required>
                 <label for="non_taxable" class="mb-3 form-label mt-2">In afwachting van een BTWn<span
                         class="text-danger">*</span></label>
                 @error('non_taxable')
@@ -367,11 +374,15 @@
         </div>
     </div>
 </div>
+</div>
+</div>
 </section>
 
 <section>
     <div class="container-fluid">
         <div class="row">
+            <div class="card">
+                <div class="card-body">
             <div class="col-12">
                 <h4>Leveringsadres</h4>
             </div>
@@ -503,7 +514,7 @@
             </div>
             <div class="col-4">
                 <div class="mb-2 container">
-                    <input type="radio" name="empty_house" value="0" required>
+                    <input type="radio" name="empty_house" value="1" required>
                     <label for="empty_house" class="mb-3 form-label mt-2">Leegstaande woning/in werken<span
                             class="text-danger">*</span></label>
                     @error('empty_house')
@@ -515,7 +526,7 @@
             </div>
             <div class="col-4">
                 <div class="mb-2 container">
-                    <input type="radio" name="empty_house" value="1" required>
+                    <input type="radio" name="empty_house" value="2" required>
                     <label for="empty_house" class="mb-3 form-label mt-2">Tijdelijk contract<span
                             class="text-danger">*</span></label>
                     @error('empty_house')
@@ -527,11 +538,15 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </section>
 
 <section>
     <div class="container-fluid">
         <div class="row">
+            <div class="card">
+                <div class="card-body">
             <div class="col-12">
                 <h4>Leveringsadres</h4>
             </div>
@@ -642,12 +657,16 @@
         </div>
 
     </div>
+</div>
+</div>
 </section>
 
 <section>
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
                 <h4>Elektriciteit</h4>
                 <div class="row">
                     <div class="col-6">
@@ -657,7 +676,7 @@
 
                         <div class="mb-2 container">
                             <label for=""><b>Duur</b></label>
-                            <input type="radio" name="jaar" value="0" required>
+                            <input type="radio" name="jaar" value="1" required>
                             <label for="jaar" class="mb-3 form-label mt-2">1 jaar<span
                                     class="text-danger">*</span></label>
                             @error('jaar')
@@ -677,7 +696,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="variable" value="0" required>
+                                    <input type="radio" name="variable" value="1" required>
                                     <label for="variable" class="mb-3 form-label mt-2">vast<span
                                             class="text-danger">*</span></label>
                                     @error('variable')
@@ -689,7 +708,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="variable" value="1" required>
+                                    <input type="radio" name="variable" value="2" required>
                                     <label for="variable" class="mb-3 form-label mt-2">variabel<span
                                             class="text-danger">*</span></label>
                                     @error('variable')
@@ -711,7 +730,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="day_night" value="0" required>
+                                    <input type="radio" name="day_night" value="1" required>
                                     <label for="single" class="mb-3 form-label mt-2">Enkelvoudig<span
                                             class="text-danger">*</span></label>
                                     @error('single')
@@ -723,7 +742,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="day_night" value="1" required>
+                                    <input type="radio" name="day_night" value="2" required>
                                     <label for="day_night" class="mb-3 form-label mt-2">dag/nacht<span
                                             class="text-danger">*</span></label>
                                     @error('day_night')
@@ -736,7 +755,7 @@
 
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="day_night" value="2" required>
+                                    <input type="radio" name="day_night" value="3" required>
                                     <label for="day_night" class="mb-3 form-label mt-2">exclusief nacht<span
                                             class="text-danger">*</span></label>
                                     @error('day_night')
@@ -779,7 +798,7 @@
 
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="meter" value="0" required>
+                                    <input type="radio" name="meter" value="1" required>
                                     <label for="meter" class="mb-3 form-label mt-2"> Meter open<span
                                             class="text-danger">*</span></label>
                                     @error('meter')
@@ -791,7 +810,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="meter" value="1" required>
+                                    <input type="radio" name="meter" value="2" required>
                                     <label for="meter" class="mb-3 form-label mt-2">Meter gesloten<span
                                             class="text-danger">*</span></label>
                                     @error('meter')
@@ -804,7 +823,7 @@
 
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="meter" value="2" required>
+                                    <input type="radio" name="meter" value="3" required>
                                     <label for="meter" class="mb-3 form-label mt-2">Nieuwe Meter<span
                                             class="text-danger">*</span></label>
                                     @error('meter')
@@ -997,7 +1016,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-2 container">
-                            <input type="radio" name="meter_1" value="2" required>
+                            <input type="radio" name="meter_1" value="1" required>
                             <label for="meter_1" class="mb-3 form-label mt-2">Ik wens zo snel mogelijk beleverd te worden<span
                                     class="text-danger">*</span></label>
                             @error('meter_1')
@@ -1009,8 +1028,11 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+    </div>
             <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
                 <h4>Gas</h4>
                 <div class="row">
                     <div class="col-6">
@@ -1020,7 +1042,7 @@
 
                         <div class="mb-2 container">
                             <label for=""><b>Duur</b></label>
-                            <input type="radio" name="jaar_1" value="0" required>
+                            <input type="radio" name="jaar_1" value="1" required>
                             <label for="jaar_1" class="mb-3 form-label mt-2">1 jaar<span
                                     class="text-danger">*</span></label>
                             @error('jaar_1')
@@ -1040,7 +1062,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="variable_1" value="0" required>
+                                    <input type="radio" name="variable_1" value="1" required>
                                     <label for="variable_1" class="mb-3 form-label mt-2">vast<span
                                             class="text-danger">*</span></label>
                                     @error('variable_1')
@@ -1052,7 +1074,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="variable_1" value="1" required>
+                                    <input type="radio" name="variable_1" value="2" required>
                                     <label for="variable_1" class="mb-3 form-label mt-2">variabel<span
                                             class="text-danger">*</span></label>
                                     @error('variable_1')
@@ -1095,7 +1117,7 @@
 
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="meter_2" value="0" required>
+                                    <input type="radio" name="meter_2" value="1" required>
                                     <label for="meter_2" class="mb-3 form-label mt-2"> Meter open<span
                                             class="text-danger">*</span></label>
                                     @error('meter_2')
@@ -1107,7 +1129,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="meter_2" value="1" required>
+                                    <input type="radio" name="meter_2" value="2" required>
                                     <label for="meter_2" class="mb-3 form-label mt-2">Meter gesloten<span
                                             class="text-danger">*</span></label>
                                     @error('meter_2')
@@ -1120,7 +1142,7 @@
 
                             <div class="col-3">
                                 <div class="mb-2 container">
-                                    <input type="radio" name="meter_2" value="2" required>
+                                    <input type="radio" name="meter_2" value="3" required>
                                     <label for="meter_2" class="mb-3 form-label mt-2">Nieuwe Meter<span
                                             class="text-danger">*</span></label>
                                     @error('meter_2')
@@ -1253,7 +1275,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-2 container">
-                            <input type="radio" name="meter_3" value="0" required>
+                            <input type="radio" name="meter_3" value="1" required>
                             <label for="meter_3" class="mb-3 form-label mt-2">Ik wens zo snel mogelijk beleverd te worden<span
                                     class="text-danger">*</span></label>
                             @error('meter_3')
@@ -1297,12 +1319,16 @@
             </div>
         </div>
     </div>
+</div>
+    </div>
 </section>
 
 
 <section>
     <div class="container-fluid">
         <div class="row">
+            <div class="card">
+                <div class="card-body">
             <div class="col-12">
                 <h4>Betalingswijze</h4>
             </div>
@@ -1315,7 +1341,7 @@
                     </div>
                     <div class="col-3">
                         <div class="mb-2 container">
-                            <input type="radio" name="transfer" value="0" required>
+                            <input type="radio" name="transfer" value="1" required>
                             <label for="transfer" class="mb-3 form-label mt-2">Domiciliëring<span
                                     class="text-danger">*</span></label>
                             @error('transfer')
@@ -1327,7 +1353,7 @@
                     </div>
                     <div class="col-3">
                         <div class="mb-2 container">
-                            <input type="radio" name="transfer" value="1" required>
+                            <input type="radio" name="transfer" value="2" required>
                             <label for="transfer" class="mb-3 form-label mt-2">Overschrijving<span
                                     class="text-danger">*</span></label>
                             @error('transfer')
@@ -1342,8 +1368,8 @@
 
                         <div class="col-12">
                             <div class="mb-2 container">
-                                <input type="radio" name="settlement_invoices" value="0" required>
-                                <label for="settlement_invoices" class="mb-3 form-label mt-2">Ik betaal de afrekeningsfacturen via overschrijving<span
+                                <input type="radio" name="settlement_invoices" value="1" required>
+                                <label for="settlement_invoices" class="mb-3 form-label mt-2">Ik wens alle voorschotfacturen te ontvangen<span
                                         class="text-danger">*</span></label>
                                 @error('settlement_invoices')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -1382,7 +1408,7 @@
                     </div>
                     <div class="col-3">
                         <div class="mb-2 container">
-                            <input type="radio" name="monthly" value="0" required>
+                            <input type="radio" name="monthly" value="1" required>
                             <label for="monthly" class="mb-3 form-label mt-2">Maandelijks<span
                                     class="text-danger">*</span></label>
                             @error('monthly')
@@ -1394,7 +1420,7 @@
                     </div>
                     <div class="col-3">
                         <div class="mb-2 container">
-                            <input type="radio" name="monthly" value="1" required>
+                            <input type="radio" name="monthly" value="2" required>
                             <label for="monthly" class="mb-3 form-label mt-2">Driemaandelijks<span
                                     class="text-danger">*</span></label>
                             @error('monthly')
@@ -1411,7 +1437,7 @@
                     </div>
                     <div class="col-3">
                         <div class="mb-2 container">
-                            <input type="radio" name="per_post" value="0" required>
+                            <input type="radio" name="per_post" value="1" required>
                             <label for="per_post" class="mb-3 form-label mt-2">via e-mail<span
                                     class="text-danger">*</span></label>
                             @error('per_post')
@@ -1423,7 +1449,7 @@
                     </div>
                     <div class="col-3">
                         <div class="mb-2 container">
-                            <input type="radio" name="per_post" value="1" required>
+                            <input type="radio" name="per_post" value="2" required>
                             <label for="per_post" class="mb-3 form-label mt-2">per post<span
                                     class="text-danger">*</span></label>
                             @error('per_post')
@@ -1438,7 +1464,7 @@
 
                     <div class="col-12">
                         <div class="mb-2 container">
-                            <input type="radio" name="wish_to_receive" value="0" required>
+                            <input type="radio" name="wish_to_receive" value="1" required>
                             <label for="wish_to_receive" class="mb-3 form-label mt-2">Ik betaal de afrekeningsfacturen via overschrijving<span
                                     class="text-danger">*</span></label>
                             @error('wish_to_receive')
@@ -1455,6 +1481,8 @@
 
 
     </div>
+</div>
+</div>
 </section>
 
 
@@ -1462,6 +1490,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
+
                 <h4>Mandaat SEPA Europese Domiciliëring</h4>
                 <div class="row">
                     <div class="">Power Online SA - BE 0535 615 192 - Rue Natalis, 2 - 4020 Luik</div>
@@ -1603,7 +1632,7 @@
                     <div class="col-2">
                         <b>Handtekening</b>
                     </div>
-                    <div class="col-10">
+                    {{-- <div class="col-10">
                         <div class="mb-2">
 
                             <input type="file" class="form-control @error('file_1') is-invalid @enderror"
@@ -1615,7 +1644,7 @@
                                 </span>
                             @enderror
                         </div>
-                    </div>
+                    </div> --}}
             </div>
             </div>
         </div>
@@ -1625,8 +1654,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-12">
+                        <h4>Overeenstemming</h4>
                         <div class="mb-2 container">
-                            <input type="radio" name="read_mega" value="0" required>
+                            <input type="radio" name="read_mega" value="" required>
                             <label for="read_mega" class="mb-3 form-label mt-2">Ik heb de algemene verkoopsvoorwaarden, het privacybeleid en de tariefvoorwaarden van Mega gelezen en ik
                                 accepteer ze.<span
                                     class="text-danger">*</span></label>
@@ -1683,7 +1713,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-6">
                     <label for="">Handtekening Klant</label>
                     <input type="file" class="form-control @error('file_2') is-invalid @enderror"
@@ -1707,7 +1737,7 @@
                     </span>
                 @enderror
                 </div>
-            </div>
+            </div> --}}
             <div class="row">
                 <div class="mt-3">De verbruiker heeft het recht om het huidig leveringscontract op te zeggen - zonder enige betaling van
                     een geldboete en motivering - door MEGA schriftelijk op de hoogte te brengen binnen de 14 dagen na
@@ -1785,7 +1815,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="mb-2">
+                    {{-- <div class="mb-2">
 
                         <input type="file" class="form-control @error('fill_4') is-invalid @enderror"
                             id="fill_4" autocomplete="off" placeholder="" name="fill_4"
@@ -1795,7 +1825,7 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 
