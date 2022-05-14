@@ -27,20 +27,20 @@
                         <p>Title:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="title" class="ml-2" value="Madame">
+                        <input type="radio" name="title" class="ml-2" value="1">
                         <label for="title" class="form-label">Madame</label>
-                        <input type="radio" name="title" class="ml-2" value="Monsieur">
+                        <input type="radio" name="title" class="ml-2" value="2">
                         <label for="title" class="form-label">Monsieur</label>
                     </div>
                     <div class="col-1">
                         <p>Langue:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="language" class="ml-2" value="Français">
+                        <input type="radio" name="language" class="ml-2" value="1">
                         <label for="language" class="form-label">Français</label>
-                        <input type="radio" name="language" class="ml-2" value="Néerlandais">
+                        <input type="radio" name="language" class="ml-2" value="2">
                         <label for="language" class="form-label">Néerlandais</label>
-                        <input type="radio" name="language" class="ml-2" value="Anglais">
+                        <input type="radio" name="language" class="ml-2" value="3">
                         <label for="language" class="form-label">Anglais</label>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
                         <p>Mode de paiement chez l'opérateur actuel (cocher une seule possibilité):<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="payment" value="0">
-                        <label for="payment" class="form-label">Carte prépayée</label>
                         <input type="radio" name="payment" value="1">
+                        <label for="payment" class="form-label">Carte prépayée</label>
+                        <input type="radio" name="payment" value="2">
                         <label for="payment" class="form-label">Abonnement</label>
                     </div>
                 </div>
@@ -246,19 +246,19 @@
                         <label for="phone" class="form-label">Date:<span class="text-danger">*</span></label>
                         <input class="form-control @error('date1') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date1" name="date1" value="{{ old('date1') }}" type="date">
                     </div>
-                    < <div class="col-3">
+                    <div class="col-3">
                         <label for="phone" class="form-label">Date:<span class="text-danger">*</span></label>
                         <input class="form-control @error('date2') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date2" name="date2" value="{{ old('date2') }}" type="date">
-                </div>
+                    </div>
 
+                </div>
+                <div class="mt-2">
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
         </div>
-        <div class="mt-2">
-            <button type="submit" class="btn btn-primary me-2">Submit</button>
-            <button class="btn btn-secondary">Cancel</button>
-        </div>
-        </form>
     </div>
-</div>
 </div>
 
 @endsection

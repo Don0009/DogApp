@@ -17,20 +17,20 @@
                         <p>Title:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="title" class="ml-2" value="Madame">
+                        <input type="radio" name="title" class="ml-2" value="1">
                         <label for="title" class="form-label">Madame</label>
-                        <input type="radio" name="title" class="ml-2" value="Monsieur">
+                        <input type="radio" name="title" class="ml-2" value="2">
                         <label for="title" class="form-label">Monsieur</label>
                     </div>
                     <div class="col-1">
                         <p>Langue:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="language" class="ml-2" value="Français">
+                        <input type="radio" name="language" class="ml-2" value="1">
                         <label for="language" class="form-label">Français</label>
-                        <input type="radio" name="language" class="ml-2" value="Néerlandais">
+                        <input type="radio" name="language" class="ml-2" value="2">
                         <label for="language" class="form-label">Néerlandais</label>
-                        <input type="radio" name="language" class="ml-2" value="Anglais">
+                        <input type="radio" name="language" class="ml-2" value="3">
                         <label for="language" class="form-label">Anglais</label>
                     </div>
                 </div>
@@ -80,13 +80,13 @@
                         <p>Type de carte:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-10">
-                        <input type="radio" name="card_type" class="ml-2" value="carte d’identité">
+                        <input type="radio" name="card_type" class="ml-2" value="1">
                         <label for="card_type" class="form-label">carte d’identité</label>
-                        <input type="radio" name="card_type" class="ml-2" value="passeport">
+                        <input type="radio" name="card_type" class="ml-2" value="2">
                         <label for="card_type" class="form-label">passeport</label>
-                        <input type="radio" name="card_type" class="ml-2" value="carte de séjour membre de l’UE">
+                        <input type="radio" name="card_type" class="ml-2" value="3">
                         <label for="card_type" class="form-label">carte de séjour membre de l’UE</label>
-                        <input type="radio" name="card_type" class="ml-2" value="carte d’identité d’étranger">
+                        <input type="radio" name="card_type" class="ml-2" value="4">
                         <label for="card_type" class="form-label">carte d’identité d’étranger</label>
                     </div>
                 </div>
@@ -129,9 +129,9 @@
                         <p>Exempté de TVA:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3 mt-1">
-                        <input type="radio" name="vat" class="ml-2" value="oui">
+                        <input type="radio" name="vat" class="ml-2" value="1">
                         <label for="vat" class="form-label">oui</label>
-                        <input type="radio" name="vat" class="ml-2" value="non">
+                        <input type="radio" name="vat" class="ml-2" value="2">
                         <label for="vat" class="form-label">non</label>
                     </div>
                 </div>
@@ -207,9 +207,9 @@
                         <p>Je souhaite que mes coordonnées figurent dans l’annuaire universel et dans le service de renseignements universel:</p>
                     </div>
                     <div class="col-2">
-                        <input type="radio" name="contact_details" class="ml-2" value="oui">
+                        <input type="radio" name="contact_details" class="ml-2" value="1">
                         <label for="contact_details" class="form-label">oui</label>
-                        <input type="radio" name="contact_details" class="ml-2" value="non">
+                        <input type="radio" name="contact_details" class="ml-2" value="2">
                         <label for="contact_details" class="form-label">non</label>
                     </div>
                 </div>
@@ -218,7 +218,7 @@
                         <p>Je n’autorise pas l’usage de mes données électroniques, de trafic ou de localisation, à des fins commerciales:</p>
                     </div>
                     <div class="col-2">
-                        <input type="checkbox" name="authorize" class="mr-1" value="">
+                        <input type="checkbox" name="authorize" class="mr-1" value="1">
                     </div>
                 </div>
                 <p class="mt-0">Si vous ne souhaitez plus recevoir d’appel commercial, vous pouvez vous inscrire sur la page web www.ne-m-appelez-plus.be</p>
@@ -227,7 +227,7 @@
                         <p>J’accepte que mes données soient également utilisées à des fins de marketing direct par des partenaires directs de Telenet Group sprl</p>
                     </div>
                     <div class="col-1">
-                        <input type="checkbox" name="agree" class="mr-1" value="">
+                        <input type="checkbox" name="agree" class="mr-1" value="1">
                     </div>
                 </div>
                 <h5 class="mt-2">Information relative au paiement:</h5>
@@ -297,11 +297,11 @@
                         <p>Je choisis le moyen de paiement suivant:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-8">
-                        <input type="radio" name="payment_method" class="ml-2" value="domiciliation">
+                        <input type="radio" name="payment_method" class="ml-2" value="1">
                         <label for="payment_method" class="form-label">domiciliation</label>
-                        <input type="radio" name="payment_method" class="ml-2" value="carte de crédit">
+                        <input type="radio" name="payment_method" class="ml-2" value="2">
                         <label for="payment_method" class="form-label">carte de crédit</label>
-                        <input type="radio" name="payment_method" class="ml-2" value="bulletin de versement">
+                        <input type="radio" name="payment_method" class="ml-2" value="3">
                         <label for="payment_method" class="form-label">bulletin de versement</label>
                     </div>
                 </div>
@@ -310,9 +310,9 @@
                         <p>Je souhaite recevoir mes factures avec le détail des communications:</p>
                     </div>
                     <div class="col-2">
-                        <input type="radio" name="receive" class="ml-2" value="oui">
+                        <input type="radio" name="receive" class="ml-2" value="1">
                         <label for="receive" class="form-label">oui</label>
-                        <input type="radio" name="receive" class="ml-2" value="non">
+                        <input type="radio" name="receive" class="ml-2" value="2">
                         <label for="receive" class="form-label">non</label>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
                         <p>J’accepte de recevoir mes factures au format électronique :</p>
                     </div>
                     <div class="col-1">
-                        <input type="checkbox" name="receive_electronic" class="mr-1" value="">
+                        <input type="checkbox" name="receive_electronic" class="mr-1" value="1">
                     </div>
                 </div>
                 <p>Si, en tant que consommateur, vous concluez le présent contrat hors de l’entreprise du vendeur, à savoir dans une foire, un salon ou une exposition, la clause suivante est d’application:</p>
@@ -365,7 +365,7 @@
                     </div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-4">
+                    <div class="col-3">
                         <label for="sim_card" class="form-label">Nombre de cartes SIM<span class="text-danger">*</span></label>
                         <input type="phone" class="form-control @error('sim_card') is-invalid @enderror" id="sim_card" autocomplete="off" placeholder="Nombre de cartes SIM" name="sim_card" value="{{ old('sim_card') }}" required>
                         @error('phone_num')
@@ -377,10 +377,10 @@
                     <div class="col-2 mt-4">
                         <p>Durée du contrat:</p>
                     </div>
-                    <div class="col-5 mt-4">
-                        <input type="radio" name="contract_length" class="ml-2" value="mois">
+                    <div class="col-7 mt-4">
+                        <input type="text" name="contract_length1">
                         <label for="contract_length" class="form-label">mois</label>
-                        <input type="radio" name="contract_length" class="ml-2" value="durée indéterminée">
+                        <input type="text" name="contract_length2">
                         <label for="contract_length" class="form-label">durée indéterminée</label>
                     </div>
                 </div>

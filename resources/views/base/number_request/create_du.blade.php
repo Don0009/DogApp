@@ -14,7 +14,7 @@
                             start met het proces van zijn aanvraag tot nummerbehoud)</p>
                     </div>
                     <div class="col-4">
-                        <input class="form-control @error('memo_date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="memo_date" name="memo_date" value="{{ old('memo_date') }}" type="date">
+                        <input class="form-control @error('memo_date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="d/m/yy" inputmode="numeric" id="memo_date" name="memo_date" value="{{ old('memo_date') }}" type="date">
                     </div>
                 </div>
                 <h5 class="mt-2">Identificatiegegevens</h5>
@@ -27,20 +27,20 @@
                         <p>Title:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="title" class="ml-2" value="Mevrouw">
+                        <input type="radio" name="title" class="ml-2" value="1">
                         <label for="title" class="form-label">Mevrouw</label>
-                        <input type="radio" name="title" class="ml-2" value="De heer">
+                        <input type="radio" name="title" class="ml-2" value="2">
                         <label for="title" class="form-label">De heer</label>
                     </div>
                     <div class="col-1">
                         <p>Taal:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="language" class="ml-2" value="Frans">
+                        <input type="radio" name="language" class="ml-2" value="1">
                         <label for="language" class="form-label">Frans</label>
-                        <input type="radio" name="language" class="ml-2" value="Nederlands">
+                        <input type="radio" name="language" class="ml-2" value="2">
                         <label for="language" class="form-label">Nederlands</label>
-                        <input type="radio" name="language" class="ml-2" value="Engels">
+                        <input type="radio" name="language" class="ml-2" value="3">
                         <label for="language" class="form-label">Engels</label>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
                         <p>Betaalwijze bij uw huidige operator (slechts één mogelijkheid aankruisen):<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="payment" value="0">
-                        <label for="payment" class="form-label">Herlaadkaart</label>
                         <input type="radio" name="payment" value="1">
+                        <label for="payment" class="form-label">Herlaadkaart</label>
+                        <input type="radio" name="payment" value="2">
                         <label for="payment" class="form-label">Abonnement</label>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-4 mt-2">
-                        <input type="checkbox" name="evidence" class="mr-4" value="0">
+                        <input type="checkbox" name="evidence" class="mr-4" value="1">
                         <label for="evidence" class="form-label">Ondersteunende documenten</label>
                     </div>
                     <div class="col-8">
@@ -247,16 +247,8 @@
                         <input class="form-control @error('date1') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date1" name="date1" value="{{ old('date1') }}" type="date">
                     </div>
                     <div class="col-3">
-                        <label for="signature1" class="form-label">Handtekening van de verdeler:<span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="signature1" rows="5" name="signature1"></textarea>
-                    </div>
-                    <div class="col-3">
                         <label for="phone" class="form-label">Datum:<span class="text-danger">*</span></label>
                         <input class="form-control @error('date2') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date2" name="date2" value="{{ old('date2') }}" type="date">
-                    </div>
-                    <div class="col-3">
-                        <label for="phone" class="form-label">Handtekening van de klant:<span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="signature2" rows="5" name="signature2"></textarea>
                     </div>
                 </div>
                 <div class="mt-2">

@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\base;
 
+use App\Http\Controllers\AmoCRMController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\SubscriptionRequest;
 use Illuminate\Support\Facades\Validator;
-
+use mikehaertl\pdftk\Pdf;
+use Mail;
+use Carbon\Carbon;
 
 class SubscriptionRequestController extends Controller
 {
@@ -70,7 +73,8 @@ class SubscriptionRequestController extends Controller
             'postal_code1' => 'required',
             'number_sim' => 'required',
             'sim_card' => 'required',
-            'contract_length' => 'required',
+            'contract_length1' => 'nullable',
+            'contract_length2' => 'nullable',
             'date_renewal' => 'required',
             'distributer' => 'required',
             'client_number' => 'required',
@@ -104,10 +108,67 @@ class SubscriptionRequestController extends Controller
             'signed_date' => 'required',
 
         ]);
+        if ($request->form_lang == 'fr') {
+
+            $pdf = new Pdf(public_path('unfilled_forms/base/SUBSCRIPTION_FR.pdf'), [
+
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
+            ]);
+        } else {
+            $pdf = new Pdf(public_path('unfilled_forms/base/SUBSCRIPTION_DU.pdf'), [
+
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
+
+            ]);
+        }
 
         $data = $request->all();
-        SubscriptionRequest::create($data);
-        return redirect()->route('subscription_request.index');
+        $subscription = SubscriptionRequest::create($data);
+        $data['month'] = Carbon::parse($data['date_renewal'])->format('m');
+        $data['day'] = Carbon::parse($data['date_renewal'])->format('d');
+        $data['year'] = Carbon::parse($data['date_renewal'])->format('Y');
+
+        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
+
+        // $data = $data->toArray();
+        $data['date_of_birth'] = Carbon::parse($request->date_of_birth)->isoFormat('YY-MM-DD');
+
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs($pdf_name);
+
+
+        //Mail
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('raokhanwala149@gmail.com')
+                ->subject("You have got new Octa Form Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
+                //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Base Form.pdf',
+                    'mime' => 'Number Request/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
+        //Mail Code Ends
+
+
+        $amo = new AmoCRMController();
+        $lead_data = [];
+
+
+        $lead_data['NAME'] = $subscription->name;
+        $lead_data['PHONE'] = $subscription->phone;
+        $lead_data['EMAIL'] = $subscription->mail;
+        $lead_data['LEAD_NAME'] = 'Base Form Lead!';
+        $amo->add_lead($lead_data);
+        unlink(public_path($pdf_name));
+
+
+
+
+
+
+        return redirect()->route('subscription_request.index')->with('success', 'Base Form Form created successfully!');
     }
 
     /**
