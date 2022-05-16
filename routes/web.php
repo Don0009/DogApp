@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/amocrm/get_token', [\App\Http\Controllers\AmoCRMController::class, 'get_token'])
-    ->middleware('auth') // Add this to integrate with Fortify and get your key safer and only in control panel
+    ->middleware('auth')// Add this to integrate with Fortify and get your key safer and only in control panel
     ->name('amocrm.integrate');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
@@ -66,4 +66,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('subscription_request', 'base\SubscriptionRequestController');
     //lampiris
     Route::resource('lampiris', 'lampiris\LampirisController');
+
+    //Overnamedocument Forms
+    Route::resource('energy_transfer_document', 'EnergyTransferDocumentController');
+
+    Route::resource('mega', 'MegaController');
+
+    Route::resource('comfy_pro_contract', 'ComfyProContractController');
+    Route::resource('comfy_en_comfyflex', 'ComfyEnComfyflexController');
+    Route::resource('comfypro_en_comfyflex_pro', 'ComfyproEnComfyflexProController');
+    Route::resource('lum_res_comfy', 'LumResComfyController');
+
 });

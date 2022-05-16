@@ -2,264 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d05c62b9-e5cb-4b41-83e6-06a8a10ad743" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/lampiris/LampirisController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Lampiris.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2022_04_29_091943_create_lampiris_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/brands/Octa1.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/brands/Octa2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652176062.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652183737.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652266661.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652267104.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652267302.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652269827.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652270298.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652270453.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652270830.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652271098.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652271222.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652272577.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652336846.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652337491.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652337925.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652338085.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652343701.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652345843.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652346223.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652346572.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652349026.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652349284.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652353814.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652354880.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652355477.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652362553.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652362625.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/octa/OCTA_DU.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/octa/OCTA_FR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/octa/OCTA_FR1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/scarlet/SA_FR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/scarlet/SM_DU.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/scarlet/SM_FR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lampiris/create_du.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lampiris/create_fr.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ApplicationForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ApplicationForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ElectricityNatural.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/base/NumberRequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/base/NumberRequestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/lampiris/ElectricityNaturalControllers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/octa/OctaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/octa/OctaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/scarlet/ApplicationFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/scarlet/ApplicationFormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/scarlet/MobileApplicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/scarlet/MobileApplicationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MobileApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MobileApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_03_28_095153_create_electricity_naturals_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_04_14_114400_create_application_forms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_04_14_114400_create_application_forms_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_04_18_051845_create_mobile_applications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_04_18_051845_create_mobile_applications_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_04_22_083328_create_octas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_04_22_083328_create_octas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_04_26_070716_create_number_requests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_04_26_070716_create_number_requests_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_04_26_114715_create_subscription_requests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_04_26_114715_create_subscription_requests_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/1649186679.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/unfilled_forms/scarlet/AF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdfs_generated/1652176456.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/unfilled_forms/scarlet/AFDU.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/unfilled_forms/scarlet/SA_DU.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/unfilled_forms/scarlet/MAF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdfs_generated/1652246026.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ComfyEnComfyflex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ComfyProContract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ComfyproEnComfyflexPro.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/EnergyTransferDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ComfyEnComfyflexController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ComfyProContractController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ComfyproEnComfyflexProController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/EnergyTransferDocumentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LampirisContractController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LumResComfyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MegaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/LumResComfy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Mega.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_04_14_123327_create_energy_transfer_documents_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_04_28_064956_create_megas_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_04_29_101222_create_comfy_pro_contracts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_05_06_130607_create_comfy_en_comfyflexes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_05_10_102837_create_comfypro_en_comfyflex_pros_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_05_10_122325_create_lum_res_comfies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1651146779.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652376546.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652376903.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652377115.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652377284.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652377381.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652378333.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652378676.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652378696.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652379517.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652379630.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652380164.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652444196.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652451593.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652456559.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652456650.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652457037.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652457273.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652457362.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652457612.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652458769.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652458833.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652460189.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652464257.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652464657.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652464807.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652464974.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652465317.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652465416.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652532524.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652532569.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652533035.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652533302.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652537963.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652542649.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652542995.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652545620.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652547785.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652547908.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652548017.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdfs_generated/1652548127.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/Overnamedocument/Energieovername(updated).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/luminus/CECFP_D.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/luminus/CECFP_F.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/luminus/CECF_D.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/luminus/CECF_F.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/luminus/CPC.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/luminus/LRC.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/unfilled_forms/mega/CNLMF.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/energy_transfer_document/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/energy_transfer_document/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/energy_transfer_document/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfy_en_comfyflex/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfy_en_comfyflex/create_fr.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfy_en_comfyflex/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfy_pro_contract/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfy_pro_contract/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfy_pro_contract/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfypro_en_comfyflex_pro/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfypro_en_comfyflex_pro/create_fr.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/comfypro_en_comfyflex_pro/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/lum_res_comfy/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/luminus/lum_res_comfy/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mega/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mega/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pdfs_generated/1652457868.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdfs_generated/1652457868.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/unfilled_forms/orange/ITVDU.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/unfilled_forms/orange/ITVDU.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/unfilled_forms/orange/ITVDUOO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/unfilled_forms/orange/ITVDUOO.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/base/number_request/create_fr.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/number_request/create_fr.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/base/subscription_request/create_du.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/subscription_request/create_du.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/base/subscription_request/create_fr.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/subscription_request/create_fr.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/electricity_natural_gas/create.blade.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/electricity_natural_gas/create_dutch.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/electricity_natural_gas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lampiris/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/312 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/312 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/312 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/313 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/313 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/313 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/314 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/314 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/314 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/315 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/315 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/315 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/316 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/316 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/316 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/318 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/318 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/318 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/342 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/342 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/342 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/343 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/343 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/343 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/344 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/344 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/344 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/345 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/345 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/345 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/346 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/346 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/346 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/347 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/347 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/347 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/348 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/348 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/348 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/349 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/349 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/349 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/350 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/350 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/350 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/351 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/351 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/351 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/352 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/352 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/352 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/353 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/353 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/353 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/354 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/354 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/354 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/370 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/370 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/370 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/371 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/371 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/371 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/372 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/372 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/372 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/373 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/373 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/373 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/382 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/382 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/382 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/383 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/383 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/383 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/384 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/384 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/384 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/385 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/385 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/385 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/391 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/391 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/391 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/392 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/392 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/392 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/393 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/393 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/393 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/394 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/394 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/394 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/395 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/395 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/395 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/396 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/396 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/396 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/397 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/397 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/397 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/398 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/398 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/398 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/399 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/399 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/399 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/400 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/400 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/400 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/401 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/401 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/401 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/402 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/402 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/402 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/403 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/403 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/403 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/404 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/404 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/404 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/405 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/405 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/405 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/406 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/406 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/406 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/407 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/407 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/407 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/408 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/408 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/408 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/409 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/409 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/409 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/410 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/410 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/410 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/412 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/412 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/412 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/413 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/413 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/413 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/414 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/414 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/414 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/415 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/415 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/415 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/416 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/416 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/416 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/417 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/417 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/417 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/418 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/418 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/418 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/439 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/439 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/439 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/440 0 RDownOff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/440 0 ROff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/1/form/440 0 ROn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/2/2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/3/3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/assets/formviewer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/assets/formviewer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/assets/formvuapi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/fonts/NeoSansStd-Regular_85.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/fonts/NettoOT-Black_87.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/fonts/OpenSans-Bold_8a.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/fonts/OpenSans-Bold_k.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/fonts/OpenSans-Semibold_l.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/fonts/OpenSansLight-Italic_f.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/fonts/OpenSans_82.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/fonts/OpenSans_83.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/form.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lampiris/electricity_natural_gas/js/formvuacroform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/octa/create_du.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/octa/create_du.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/octa/create_fr.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/octa/create_fr.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/scarlet/application_form/create_du.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scarlet/application_form/create_du.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/scarlet/application_form/create_fr.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scarlet/application_form/create_fr.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/scarlet/mobile_application/create_du.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scarlet/mobile_application/create_du.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/scarlet/mobile_application/create_fr.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scarlet/mobile_application/create_fr.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -323,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="1088">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
         </entry>
@@ -332,8 +162,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="238">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -683,12 +513,12 @@
       <workItem from="1649439432029" duration="27198000" />
       <workItem from="1650131488562" duration="2608000" />
       <workItem from="1652517373371" duration="23000" />
-      <workItem from="1652675064285" duration="249000" />
+      <workItem from="1652675064285" duration="585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110787000" />
+    <option name="totallyTimeSpent" value="111123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1029,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="1088">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>
@@ -1071,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="238">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
