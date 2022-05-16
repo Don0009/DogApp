@@ -92,7 +92,8 @@
                 </a>
             </li> --> --}}
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#orange" role="button" aria-expanded="false" aria-controls="orange">
+                <a class="nav-link" data-toggle="collapse" href="#orange" role="button" aria-expanded="false"
+                   aria-controls="orange">
                     <i class="link-icon" data-feather="inbox"></i>
                     <span class="link-title">Orange</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -109,123 +110,128 @@
                             <a href="{{ route('internet_home_du.index') }}" class="nav-link">Internet Home
                         (DU)</a>
             </li> --}}
-            <li class="nav-item">
-                <a href="{{ route('mobile_phone.index') }}" class="nav-link">Mobile Phone</a>
+                        <li class="nav-item">
+                            <a href="{{ route('mobile_phone.index') }}" class="nav-link">Mobile Phone</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('number_porting.index') }}" class="nav-link">Number Porting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('number_porting_du.index') }}" class="nav-link">Number Porting
+                                Dutch</a>
+                        </li>
+
+                    </ul>
+                </div>
             </li>
             <li class="nav-item">
-                <a href="{{ route('number_porting.index') }}" class="nav-link">Number Porting</a>
+                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false"
+                   aria-controls="telnet">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Telenet</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="telnet">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('telenet_new_subs.index') }}" class="nav-link">MNP
+                                overdrachtsformulier Telenet (nieuwe abonnementen)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('telenet_question.index') }}" class="nav-link">Telenet contract
+                                (nieuwe abonnementen)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('contractapp.index') }}" class="nav-link">Telenet Contract
+                                Aanvraag</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!--  Scarlet  -->
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false"
+                   aria-controls="telnet">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Scarlet</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="telnet">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('application_form.index') }}" class="nav-link">Formulaire de demande</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse" id="telnet">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('mobile_application_form.index') }}" class="nav-link">Mobile Formulaire de
+                                demande</a>
+                        </li>
+                    </ul>
+                </div>
+
             </li>
             <li class="nav-item">
-                <a href="{{ route('number_porting_du.index') }}" class="nav-link">Number Porting
-                    Dutch</a>
+                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false"
+                   aria-controls="telnet">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Octa +</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="telnet">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('regi_form.index') }}" class="nav-link">Registration Form</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false"
+                   aria-controls="telnet">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Base</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="telnet">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('number_request.index') }}" class="nav-link">Number Retention Form</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse" id="telnet">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('subscription_request.index') }}" class="nav-link">Subscription Request
+                                Form</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false"
+                   aria-controls="telnet">
+                    <i class="link-icon" data-feather="inbox"></i>
+                    <span class="link-title">Lampiris</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="telnet">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('lampiris.index') }}" class="nav-link">Lampiris Form</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
-        </ul>
-    </div>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
-            <i class="link-icon" data-feather="inbox"></i>
-            <span class="link-title">Telenet</span>
-            <i class="link-arrow" data-feather="chevron-down"></i>
-        </a>
-        <div class="collapse" id="telnet">
-            <ul class="nav sub-menu">
-                <li class="nav-item">
-                    <a href="{{ route('telenet_new_subs.index') }}" class="nav-link">MNP
-                        overdrachtsformulier Telenet (nieuwe abonnementen)</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('telenet_question.index') }}" class="nav-link">Telenet contract
-                        (nieuwe abonnementen)</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('contractapp.index') }}" class="nav-link">Telenet Contract
-                        Aanvraag</a>
-                </li>
-            </ul>
-        </div>
-    </li>
-    <!--  Scarlet  -->
 
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
-            <i class="link-icon" data-feather="inbox"></i>
-            <span class="link-title">Scarlet</span>
-            <i class="link-arrow" data-feather="chevron-down"></i>
-        </a>
-        <div class="collapse" id="telnet">
-            <ul class="nav sub-menu">
-                <li class="nav-item">
-                    <a href="{{ route('application_form.index') }}" class="nav-link">Formulaire de demande</a>
-                </li>
-            </ul>
-        </div>
-        <div class="collapse" id="telnet">
-            <ul class="nav sub-menu">
-                <li class="nav-item">
-                    <a href="{{ route('mobile_application_form.index') }}" class="nav-link">Mobile Formulaire de demande</a>
-                </li>
-            </ul>
-        </div>
-
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
-            <i class="link-icon" data-feather="inbox"></i>
-            <span class="link-title">Octa +</span>
-            <i class="link-arrow" data-feather="chevron-down"></i>
-        </a>
-        <div class="collapse" id="telnet">
-            <ul class="nav sub-menu">
-                <li class="nav-item">
-                    <a href="{{ route('regi_form.index') }}" class="nav-link">Registration Form</a>
-                </li>
-            </ul>
-        </div>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
-            <i class="link-icon" data-feather="inbox"></i>
-            <span class="link-title">Base</span>
-            <i class="link-arrow" data-feather="chevron-down"></i>
-        </a>
-        <div class="collapse" id="telnet">
-            <ul class="nav sub-menu">
-                <li class="nav-item">
-                    <a href="{{ route('number_request.index') }}" class="nav-link">Number Retention Form</a>
-                </li>
-            </ul>
-        </div>
-        <div class="collapse" id="telnet">
-            <ul class="nav sub-menu">
-                <li class="nav-item">
-                    <a href="{{ route('subscription_request.index') }}" class="nav-link">Subscription Request Form</a>
-                </li>
-            </ul>
-        </div>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#telnet" role="button" aria-expanded="false" aria-controls="telnet">
-            <i class="link-icon" data-feather="inbox"></i>
-            <span class="link-title">Lampiris</span>
-            <i class="link-arrow" data-feather="chevron-down"></i>
-        </a>
-        <div class="collapse" id="telnet">
-            <ul class="nav sub-menu">
-                <li class="nav-item">
-                    <a href="{{ route('lampiris.index') }}" class="nav-link">Lampiris Form</a>
-                </li>
-            </ul>
-        </div>
-    </li>
-
-<<<<<<< HEAD
-    <!-- End Scarlet -->
-=======
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#luminus" role="button" aria-expanded="false"
-                    aria-controls="luminus">
+                   aria-controls="luminus">
                     <i class="link-icon" data-feather="inbox"></i>
                     <span class="link-title">Luminus</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -240,7 +246,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('comfypro_en_comfyflex_pro.index') }}" class="nav-link">ComfyPro En ComfyFlex Pro</a>
+                            <a href="{{ route('comfypro_en_comfyflex_pro.index') }}" class="nav-link">ComfyPro En
+                                ComfyFlex Pro</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('lum_res_comfy.index') }}" class="nav-link">Lum Res Comfy</a>
@@ -254,10 +261,7 @@
             </li>
 
 
-
->>>>>>> 1f72d235ea049804cad131ba5d156e205bbfca92
-
-    <!-- <li class="nav-item">
+        <!-- <li class="nav-item">
                 <a href="{{ route('engie.index') }}" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Contract Professionele Klanten</span>
@@ -273,7 +277,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#Overnamedocument" role="button" aria-expanded="false"
-                    aria-controls="Overnamedocument">
+                   aria-controls="Overnamedocument">
                     <i class="link-icon" data-feather="inbox"></i>
                     <span class="link-title">Overnamedocument</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -283,17 +287,15 @@
                         <li class="nav-item">
                             <a href="{{ route('energy_transfer_document.index') }}" class="nav-link">MNP
                                 overdrachtsformulier Telenet (nieuwe abonnementen)</a>
-                            </li>
+                        </li>
                     </ul>
                 </div>
 
-<<<<<<< HEAD
-    </ul>
-=======
+
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#Overnamedocument" role="button" aria-expanded="false"
-                    aria-controls="Overnamedocument">
+                   aria-controls="Overnamedocument">
                     <i class="link-icon" data-feather="inbox"></i>
                     <span class="link-title">Mega</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -302,12 +304,12 @@
                     <ul class="nav sub-menu">
                         <li class="nav-item">
                             <a href="{{ route('mega.index') }}" class="nav-link">contract NL Mega februari 2022</a>
-                            </li>
+                        </li>
                     </ul>
                 </div>
 
             </li>
         </ul>
->>>>>>> 1f72d235ea049804cad131ba5d156e205bbfca92
+
     </div>
 </nav>
