@@ -51,7 +51,8 @@ class CreateSubscriptionRequestsTable extends Migration
             $table->string('phone_num');
             $table->string('number_sim');
             $table->string('sim_card');
-            $table->string('contract_length');
+            $table->string('contract_length1')->nullable();
+            $table->string('contract_length2')->nullable();
             $table->string('fix_amount')->nullable();
             $table->string('percentage')->nullable();
             $table->text('products')->nullable();

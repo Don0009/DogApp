@@ -22,9 +22,9 @@
                         <p>Title:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="title" value="Mme">
+                        <input type="radio" name="title" value="1">
                         <label for="title" class="form-label">Mme</label>
-                        <input type="radio" name="title" value="M">
+                        <input type="radio" name="title" value="2">
                         <label for="title" class="form-label">M</label>
                     </div>
                 </div>
@@ -203,28 +203,28 @@
                 </div>
                 <h5 class="mt-2">Ma fourniture d’électricité verte par Lampiris</h5>
                 <div class="mt-2">
-                    <input type="radio" name="tip" class="ml-4" value="tip">
+                    <input type="radio" name="tip" class="ml-4" value="1">
                     <label for="tip" class="form-label">tip</label>
-                    <input type="radio" name="tip" class="ml-4" value="TOP">
+                    <input type="radio" name="tip" class="ml-4" value="2">
                     <label for="tip" class="form-label">TOP</label>
-                    <input type="radio" name="tip" class="ml-4" value="Solar">
+                    <input type="radio" name="tip" class="ml-4" value="3">
                     <label for="tip" class="form-label">Solar</label>
                 </div>
                 <div class="mt-1">
-                    <input type="radio" name="year" class="ml-4" value="1 an">
+                    <input type="radio" name="year" class="ml-4" value="1">
                     <label for="year" class="form-label">1 an</label>
-                    <input type="radio" name="year" class="ml-4" value="2 ans">
+                    <input type="radio" name="year" class="ml-4" value="2">
                     <label for="year" class="form-label">2 ans</label>
-                    <input type="radio" name="year" class="ml-4" value="3 ans">
+                    <input type="radio" name="year" class="ml-4" value="3">
                     <label for="year" class="form-label">3 ans</label>
                 </div>
                 <div class="row mt-2">
                     <p class="ml-2">Type de compteur:</p>
-                    <input type="radio" name="counter_type" class="ml-4" value="jour">
+                    <input type="radio" name="counter_type" class="ml-4" value="1">
                     <label for="counter_type" class="form-label ml-2">jour</label>
-                    <input type="radio" name="counter_type" class="ml-4" value="jour/nuit">
+                    <input type="radio" name="counter_type" class="ml-4" value="2">
                     <label for="counter_type" class="form-label ml-2">jour/nuit</label>
-                    <input type="radio" name="counter_type" class="ml-4" value="exclusif nuit">
+                    <input type="radio" name="counter_type" class="ml-4" value="3">
                     <label for="counter_type" class="form-label ml-2">exclusif nuit</label>
                 </div>
                 <div class="row mt-2">
@@ -315,16 +315,16 @@
                 <div class="row mt-3">
                     <div class="row col-6">
                         <p class="ml-2">Déménagez-vous?</p>
-                        <input type="radio" name="moving" class="ml-2" value="Oui">
+                        <input type="radio" name="moving" class="ml-2" value="1">
                         <label for="moving" class="form-label ml-2">Oui</label>
-                        <input type="radio" name="moving" class="ml-2" value="Non">
+                        <input type="radio" name="moving" class="ml-2" value="2">
                         <label for="moving" class="form-label ml-2">Non</label>
                     </div>
                     <div class="row col-6">
                         <p class="ml-5">Le compteur est-il ouvert ?</p>
-                        <input type="radio" name="meter_open" class="ml-2" value="Oui">
+                        <input type="radio" name="meter_open" class="ml-2" value="1">
                         <label for="meter_open" class="form-label ml-2">Oui</label>
-                        <input type="radio" name="meter_open" class="ml-2" value="Non">
+                        <input type="radio" name="meter_open" class="ml-2" value="2">
                         <label for="meter_open" class="form-label ml-2">Non</label>
                     </div>
                 </div>
@@ -350,17 +350,17 @@
                 </div>
                 <h5 class="mt-2">Ma fourniture de gaz naturel par Lampiris</h5>
                 <div class="mt-2">
-                    <input type="radio" name="tip1" class="ml-4" value="tip">
+                    <input type="radio" name="tip1" class="ml-4" value="1">
                     <label for="tip1" class="form-label">tip</label>
-                    <input type="radio" name="tip1" class="ml-4" value="TOP">
+                    <input type="radio" name="tip1" class="ml-4" value="2">
                     <label for="tip1" class="form-label">TOP</label>
                 </div>
                 <div class="mt-1">
-                    <input type="radio" name="year1" class="ml-4" value="1 an">
+                    <input type="radio" name="year1" class="ml-4" value="1">
                     <label for="year1" class="form-label">1 an</label>
-                    <input type="radio" name="year1" class="ml-4" value="2 ans">
+                    <input type="radio" name="year1" class="ml-4" value="2">
                     <label for="year1" class="form-label">2 ans</label>
-                    <input type="radio" name="year1" class="ml-4" value="3 ans">
+                    <input type="radio" name="year1" class="ml-4" value="3">
                     <label for="year1" class="form-label">3 ans</label>
                 </div>
                 <div class="row mt-2">
@@ -415,18 +415,18 @@
                                 <span class="ml-2">Déménagez-vous ?</span>
                             </div>
                             <div class="col-6">
-                                <input type="radio" name="moving1" class="ml-2" value="Oui">
+                                <input type="radio" name="moving1" class="ml-2" value="1">
                                 <label for="moving1" class="form-label ml-2">Oui</label>
-                                <input type="radio" name="moving1" class="ml-2" value="Non">
+                                <input type="radio" name="moving1" class="ml-2" value="2">
                                 <label for="moving1" class="form-label ml-2">Non</label>
                             </div>
                         </div>
                     </div>
                     <div class="row col-6">
                         <span class="mr-5">Le compteur est-il ouvert ?</span>
-                        <input type="radio" name="meter_open1" class="ml-2" value="Oui">
+                        <input type="radio" name="meter_open1" class="ml-2" value="1">
                         <label for="meter_open1" class="form-label ml-2">Oui</label>
-                        <input type="radio" name="meter_open1" class="ml-2" value="Non">
+                        <input type="radio" name="meter_open1" class="ml-2" value="2">
                         <label for="meter_open1" class="form-label ml-2">Non</label>
                     </div>
                 </div>
@@ -455,9 +455,9 @@
                         <span>Je souhaite recevoir des offres promotionnelles de la part du Groupe Lampiris :</span>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="promotional" class="ml-2" value="Oui">
+                        <input type="radio" name="promotional" class="ml-2" value="1">
                         <label for="promotional" class="form-label ml-2">Oui</label>
-                        <input type="radio" name="promotional" class="ml-2" value="Non">
+                        <input type="radio" name="promotional" class="ml-2" value="2">
                         <label for="promotional" class="form-label ml-2">Non</label>
                     </div>
                 </div>

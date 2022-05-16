@@ -17,20 +17,20 @@
                         <p>Title:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="title" class="ml-2" value="Mevrouw">
+                        <input type="radio" name="title" class="ml-2" value="1">
                         <label for="title" class="form-label">Mevrouw</label>
-                        <input type="radio" name="title" class="ml-2" value="De heer">
+                        <input type="radio" name="title" class="ml-2" value="2">
                         <label for="title" class="form-label">De heer</label>
                     </div>
                     <div class="col-1">
                         <p>Taal:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="language" class="ml-2" value="Frans">
+                        <input type="radio" name="language" class="ml-2" value="1">
                         <label for="language" class="form-label">Frans</label>
-                        <input type="radio" name="language" class="ml-2" value="Nederlands">
+                        <input type="radio" name="language" class="ml-2" value="2">
                         <label for="language" class="form-label">Nederlands</label>
-                        <input type="radio" name="language" class="ml-2" value="Engels">
+                        <input type="radio" name="language" class="ml-2" value="3">
                         <label for="language" class="form-label">Engels</label>
                     </div>
                 </div>
@@ -80,13 +80,13 @@
                         <p>Kaarttype:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-10">
-                        <input type="radio" name="card_type" class="ml-2" value="identiteitskaart">
+                        <input type="radio" name="card_type" class="ml-2" value="1">
                         <label for="card_type" class="form-label">identiteitskaart</label>
-                        <input type="radio" name="card_type" class="ml-2" value="paspoort">
+                        <input type="radio" name="card_type" class="ml-2" value="2">
                         <label for="card_type" class="form-label">paspoort</label>
-                        <input type="radio" name="card_type" class="ml-2" value="verblijfskaart voor onderdaan EU">
+                        <input type="radio" name="card_type" class="ml-2" value="3">
                         <label for="card_type" class="form-label">verblijfskaart voor onderdaan EU</label>
-                        <input type="radio" name="card_type" class="ml-2" value="identiteitskaart voor vreemdeling">
+                        <input type="radio" name="card_type" class="ml-2" value="4">
                         <label for="card_type" class="form-label">identiteitskaart voor vreemdeling</label>
                     </div>
                 </div>
@@ -129,9 +129,9 @@
                         <p>Vrijgesteld van BTW:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3 mt-1">
-                        <input type="radio" name="vat" class="ml-2" value="oui">
+                        <input type="radio" name="vat" class="ml-2" value="1">
                         <label for="vat" class="form-label">oui</label>
-                        <input type="radio" name="vat" class="ml-2" value="non">
+                        <input type="radio" name="vat" class="ml-2" value="2">
                         <label for="vat" class="form-label">non</label>
                     </div>
                 </div>
@@ -207,9 +207,9 @@
                         <p>Ik wens dat mijn adresgegevens vermeld worden in een telefoongids en/of in een inlichtingendienst:</p>
                     </div>
                     <div class="col-2">
-                        <input type="radio" name="contact_details" class="ml-2" value="oui">
+                        <input type="radio" name="contact_details" class="ml-2" value="1">
                         <label for="contact_details" class="form-label">oui</label>
-                        <input type="radio" name="contact_details" class="ml-2" value="non">
+                        <input type="radio" name="contact_details" class="ml-2" value="2">
                         <label for="contact_details" class="form-label">non</label>
                     </div>
                 </div>
@@ -218,7 +218,7 @@
                         <p>Ik sta het gebruik van mijn elektronishe gegevens voor commerciële doeleinden niet toe</p>
                     </div>
                     <div class="col-2">
-                        <input type="checkbox" name="authorize" class="mr-1" value="authorize">
+                        <input type="checkbox" name="authorize" class="mr-1" value="1">
                     </div>
                 </div>
                 <p class="mt-0">Indien u geen commerciële oproepen meer wenst te ontvangen, kan u zich inschrijven op volgende web pagina: www.bel-me-niet-meer.be</p>
@@ -227,7 +227,7 @@
                         <p>Ik aanvaard dat mijn gegevens ook gebruikt worden voor direct marketing doeleinden door de rechtstreekse partners van Telenet Group bvba:</p>
                     </div>
                     <div class="col-1">
-                        <input type="checkbox" name="agree" class="mr-1" value="agree">
+                        <input type="checkbox" name="agree" class="mr-1" value="1">
                     </div>
                 </div>
                 <h5 class="mt-2">Betalingsinformatie:</h5>
@@ -297,11 +297,11 @@
                         <p>Ik verkies op volgende wijze te betalen:<span class="text-danger">*</span></p>
                     </div>
                     <div class="col-8">
-                        <input type="radio" name="payment_method" class="ml-2" value="via domiciliëringsopdracht">
+                        <input type="radio" name="payment_method" class="ml-2" value="1">
                         <label for="payment_method" class="form-label">via domiciliëringsopdracht</label>
-                        <input type="radio" name="payment_method" class="ml-2" value="via overschrijvingsformulier">
+                        <input type="radio" name="payment_method" class="ml-2" value="2">
                         <label for="payment_method" class="form-label">via overschrijvingsformulier</label>
-                        <input type="radio" name="payment_method" class="ml-2" value="met kredietkaart">
+                        <input type="radio" name="payment_method" class="ml-2" value="3">
                         <label for="payment_method" class="form-label">met kredietkaart</label>
                     </div>
                 </div>
@@ -310,9 +310,9 @@
                         <p>Ik wens een gedetailleerd overzicht van mijn gesprekken te ontvangen:</p>
                     </div>
                     <div class="col-2">
-                        <input type="radio" name="receive" class="ml-2" value="ja">
+                        <input type="radio" name="receive" class="ml-2" value="1">
                         <label for="receive" class="form-label">ja</label>
-                        <input type="radio" name="receive" class="ml-2" value="neen">
+                        <input type="radio" name="receive" class="ml-2" value="2">
                         <label for="receive" class="form-label">neen</label>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
                         <p>Ik stem in met de electronische verzending van mijn factuur:</p>
                     </div>
                     <div class="col-1">
-                        <input type="checkbox" name="receive_electronic" class="mr-1" value="receive_electronic">
+                        <input type="checkbox" name="receive_electronic" class="mr-1" value="1">
                     </div>
                 </div>
                 <p>Indien U, in uw hoedanigheid van consument, deze overeenkomst heeft afgesloten buiten de onderneming van de verkoper, te weten op een salon, beurs of tentoonstelling, is de volgende clausule van toepassing:</p>
@@ -365,8 +365,8 @@
                     </div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-4">
-                        <label for="sim_card" class="form-label">Nombre de cartes SIM<span class="text-danger">*</span></label>
+                    <div class="col-3">
+                        <label for="sim_card" class="form-label">Aantal SIMkaarten<span class="text-danger">*</span></label>
                         <input type="phone" class="form-control @error('sim_card') is-invalid @enderror" id="sim_card" autocomplete="off" placeholder="Nombre de cartes SIM" name="sim_card" value="{{ old('sim_card') }}" required>
                         @error('phone_num')
                         <span class="invalid-feedback mb-2" role="alert">
@@ -377,10 +377,10 @@
                     <div class="col-2 mt-4">
                         <p>Duur van het contract:</p>
                     </div>
-                    <div class="col-5 mt-4">
-                        <input type="radio" name="contract_length" class="ml-2" value="maanden">
+                    <div class="col-7 mt-4">
+                        <input type="text" name="contract_length1">
                         <label for="contract_length" class="form-label">maanden</label>
-                        <input type="radio" name="contract_length" class="ml-2" value="onbepaald">
+                        <input type="text" name="contract_length2">
                         <label for="contract_length" class="form-label">onbepaald</label>
                     </div>
                 </div>
@@ -420,7 +420,7 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-2">
-                        <input type="radio" name="receive" class="ml-2" value="ja">
+                        <input type="radio" name="receive" class="ml-2" value="1">
                         <label for="receive" class="form-label">ja</label>
                     </div>
                     <div class="col-2">
@@ -438,7 +438,7 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-2">
-                        <input type="radio" name="receive" class="ml-2" value="neen">
+                        <input type="radio" name="receive" class="ml-2" value="2">
                         <label for="receive" class="form-label">neen</label>
                     </div>
                     <div class="col-2">
