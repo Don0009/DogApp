@@ -76,18 +76,19 @@ class ProximusNumberPortingFormDUController extends Controller
             'postcode'=> 'required',
             'township'=> 'required',
 
-            'TELEFOONNUMMERS'=> 'required',
+            //'TELEFOONNUMMERS'=> 'required',
             'TELEFOONNUMMERS_2'=> 'required',
             'TELEFOONNUMMERS_3'=> 'required',
             'TELEFOONNUMMERS_4'=> 'required',
             'TELEFOONNUMMERS_5'=> 'required',
+
             'Of_nummerreeks_van'=> 'required',
             'Of_nummerreeks_van_2'=> 'required',
             'Of_nummerreeks_van_3'=> 'required',
             'Of_nummerreeks_van_4'=> 'required',
             'Of_nummerreeks_van_5'=> 'required',
 
-            'tot_1'=> 'required',
+            //'tot_1'=> 'required',
             'tot_2'=> 'required',
             'tot_3'=> 'required',
             'tot_4'=> 'required',
@@ -99,6 +100,9 @@ class ProximusNumberPortingFormDUController extends Controller
             'gsm_num_4'=> 'required',
             'gsm_num_5'=> 'required',
             'gsm_num_6'=> 'required',
+            'gsm_num_7'=> 'required',
+
+
 
 
            // 'sim_num_of_other_operator_1'=> 'required',
@@ -107,6 +111,8 @@ class ProximusNumberPortingFormDUController extends Controller
             'sim_num_of_other_operator_4'=> 'required',
             'sim_num_of_other_operator_5'=> 'required',
             'sim_num_of_other_operator_6'=> 'required',
+            'sim_num_of_other_operator_7'=> 'required',
+
 
             //'reload_card_1'=> 'required',
             'reload_card_2'=> 'required',
@@ -115,6 +121,8 @@ class ProximusNumberPortingFormDUController extends Controller
             'reload_card_5'=> 'required',
             'reload_card_6'=> 'required',
             'reload_card_7'=> 'required',
+            'reload_card_8'=> 'required',
+
 
           //  'subscription_1'=> 'required',
             'subscription_2'=> 'required',
@@ -123,6 +131,8 @@ class ProximusNumberPortingFormDUController extends Controller
             'subscription_5'=> 'required',
             'subscription_6'=> 'required',
             'subscription_7'=> 'required',
+            'subscription_8'=> 'required',
+
 
 
            // 'simkaartnum_of_proximus_1'=> 'required',
@@ -131,6 +141,8 @@ class ProximusNumberPortingFormDUController extends Controller
             'simkaartnum_of_proximus_4'=> 'required',
             'simkaartnum_of_proximus_5'=> 'required',
             'simkaartnum_of_proximus_6'=> 'required',
+            'simkaartnum_of_proximus_7'=> 'required',
+
 
             'date'=> 'required',
             'ref_id'=> 'required',
@@ -145,9 +157,9 @@ class ProximusNumberPortingFormDUController extends Controller
 
 
 
-        $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/proximus/number_porting_du/NPDU10.pdf'), [
 
-            'command' => env('PDFTK_PATH'),
+            'command' => "C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe",
 
         ]);
 
@@ -165,19 +177,19 @@ class ProximusNumberPortingFormDUController extends Controller
 
 
 
-//Mail
-        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-            $message->to('degis9000@gmail.com')
-                ->subject("You have got new Proximus Number Porting (Dutch) Lead...!")
-                ->cc(['lasha@studiodlvx.be'])
-//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-                ->attach(public_path($pdf_name), [
-                    'as' => 'Proximus Number Porting (Dutch) Lead.pdf',
-                    'mime' => 'application/pdf',
-                ]);
-            $message->from('no-reply@ecosafety.nyc');
-        });
-// Mail Code Ends
+// //Mail
+//         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+//             $message->to('degis9000@gmail.com')
+//                 ->subject("You have got new Proximus Number Porting (Dutch) Lead...!")
+//                 ->cc(['lasha@studiodlvx.be'])
+// //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+//                 ->attach(public_path($pdf_name), [
+//                     'as' => 'Proximus Number Porting (Dutch) Lead.pdf',
+//                     'mime' => 'application/pdf',
+//                 ]);
+//             $message->from('no-reply@ecosafety.nyc');
+//         });
+// // Mail Code Ends
 
 
 //Mail
@@ -190,7 +202,7 @@ class ProximusNumberPortingFormDUController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Proximus Number Porting (Dutch) Lead';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
+        //unlink(public_path($pdf_name));
 
 
         return redirect()->route('proximus_number_porting_du.index')->with('success', 'Proximus Number Porting (Dutch) created successfully!');

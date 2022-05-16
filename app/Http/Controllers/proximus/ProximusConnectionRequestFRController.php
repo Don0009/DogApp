@@ -180,6 +180,9 @@ class ProximusConnectionRequestFRController extends Controller
             'extra_gb_packs_2'=> 'required',
             'extra_gb_packs'=> 'required',
 
+            'existing_proximus_customer_text'=> 'required',
+
+
 
 
         ]);
@@ -195,11 +198,12 @@ class ProximusConnectionRequestFRController extends Controller
         $data = $request->all();
         $data = $orange = ProximusConnectionRequestFR::create($data);
 
-        $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/proximus/connection_request_fr/FCR17.pdf'), [
 
-            'command' => env('PDFTK_PATH'),
+            'command' => "C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe",
 
         ]);
+
 
         $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
 
@@ -207,19 +211,19 @@ class ProximusConnectionRequestFRController extends Controller
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs($pdf_name);
 
-//Mail
-        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-            $message->to('degis9000@gmail.com')
-                ->subject("You have got new Proximus Connection Request (French) Lead...!")
-                ->cc(['lasha@studiodlvx.be'])
-//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-                ->attach(public_path($pdf_name), [
-                    'as' => 'Proximus Connection Request (French) Lead.pdf',
-                    'mime' => 'application/pdf',
-                ]);
-            $message->from('no-reply@ecosafety.nyc');
-        });
-// Mail Code Ends
+
+//         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+//             $message->to('degis9000@gmail.com')
+//                 ->subject("You have got new Proximus Connection Request (French) Lead...!")
+//                 ->cc(['lasha@studiodlvx.be'])
+// //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+//                 ->attach(public_path($pdf_name), [
+//                     'as' => 'Proximus Connection Request (French) Lead.pdf',
+//                     'mime' => 'application/pdf',
+//                 ]);
+//             $message->from('no-reply@ecosafety.nyc');
+//         });
+
 
 
 //Mail
@@ -232,7 +236,7 @@ class ProximusConnectionRequestFRController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Proximus Connection Request (French) Lead';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
+        //unlink(public_path($pdf_name));
 
 
 

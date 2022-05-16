@@ -43,6 +43,8 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->string('gsm_num_4');
             $table->string('gsm_num_5');
             $table->string('gsm_num_6');
+            $table->string('gsm_num_7');
+
 
             //$table->text('sim_num_of_other_operator_1');
             $table->text('sim_num_of_other_operator_2');
@@ -50,6 +52,8 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->text('sim_num_of_other_operator_4');
             $table->text('sim_num_of_other_operator_5');
             $table->text('sim_num_of_other_operator_6');
+            $table->text('sim_num_of_other_operator_7');
+
 
            // $table->text('reload_card_1');
             $table->text('reload_card_2');
@@ -58,6 +62,8 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->text('reload_card_5');
             $table->text('reload_card_6');
             $table->text('reload_card_7');
+            $table->text('reload_card_8');
+
 
           //  $table->text('subscription_1');
             $table->text('subscription_2');
@@ -66,6 +72,8 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->text('subscription_5');
             $table->text('subscription_6');
             $table->text('subscription_7');
+            $table->text('subscription_8');
+
 
             //$table->text('simkaartnum_of_proximus_1');
             $table->text('simkaartnum_of_proximus_2');
@@ -73,20 +81,22 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->text('simkaartnum_of_proximus_4')->nullable();
             $table->text('simkaartnum_of_proximus_5')->nullable();
             $table->text('simkaartnum_of_proximus_6')->nullable();
+            $table->text('simkaartnum_of_proximus_7')->nullable();
 
-            $table->string('TELEFOONNUMMERS');
+
+            //$table->string('TELEFOONNUMMERS');
             $table->string('TELEFOONNUMMERS_2')->nullable();
             $table->string('TELEFOONNUMMERS_3')->nullable();
             $table->string('TELEFOONNUMMERS_4')->nullable();
             $table->string('TELEFOONNUMMERS_5')->nullable();
 
-            $table->string('Of_nummerreeks_van');
+            //$table->string('Of_nummerreeks_van');
             $table->string('Of_nummerreeks_van_1');
             $table->string('Of_nummerreeks_van_2');
             $table->string('Of_nummerreeks_van_3');
             $table->string('Of_nummerreeks_van_4');
 
-            $table->string('tot_1');
+           // $table->string('tot_1');
             $table->string('tot_2')->nullable();
             $table->string('tot_3')->nullable();
             $table->string('tot_4')->nullable();

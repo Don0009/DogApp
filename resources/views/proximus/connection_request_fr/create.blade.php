@@ -310,7 +310,7 @@
                         <div class="mb-2 mt-4 col-md-4">
                             <label for="telephone" class="form-label">Téléphone<span
                                     class="text-danger">*</span></label>
-                            <input type="telephone" class="form-control @error('place') is-invalid @enderror"
+                            <input type="telephone" class="form-control @error('telephone') is-invalid @enderror"
                                 id="telephone" autocomplete="off" placeholder="Telefoon" name="telephone"
                                 value="{{ old('telephone') }}" required>
                             @error('telephone')
@@ -1316,6 +1316,16 @@
                             <input type="radio" name="existing_proximus_customer" class="ml-2" value="0"
                                 required>
                             <label for="existing_proximus_customer" class="form-label">Client Proximus existant</label>
+                            <input type="existing_proximus_customer_text"
+                                class="form-control @error('existing_proximus_customer_text') is-invalid @enderror"
+                                id="existing_proximus_customer_text" autocomplete="off" placeholder="Gsm-nr"
+                                name="existing_proximus_customer_text"
+                                value="{{ old('existing_proximus_customer_text') }}" required>
+                            @error('existing_proximus_customer_text')
+                                <span class="invalid-feedback mb-2" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
 
@@ -1393,27 +1403,27 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="0" required>
+                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="1" required>
                             <label for="residential_met_mobilus" class="form-label">S</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="0" required>
+                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="2" required>
                             <label for="residential_met_mobilus" class="form-label">M</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="0" required>
+                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="3" required>
                             <label for="residential_met_mobilus" class="form-label">L</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="0" required>
+                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="4" required>
                             <label for="residential_met_mobilus" class="form-label">XL Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="0" required>
+                            <input type="radio" name="residential_met_mobilus" class="ml-2" value="5" required>
                             <label for="residential_met_mobilus" class="form-label"> 5G Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
@@ -1613,34 +1623,34 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="1" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">S
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="2" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">M
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="3" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">L
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="4" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">Unlimited
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="8" required>
+                            <input type="radio" name="bizz_mobile_size_p_i" class="ml-2" value="5" required>
                             <label for="bizz_mobile_size_p_i" class="form-label">5G International
                             </label>
                         </div>
@@ -1820,7 +1830,7 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="mobile_internet_i_size" class="ml-2" value="1" required>
+                            <input type="radio" name="mobile_internet_i_size" class="ml-2" value="0" required>
                             <label for="mobile_internet_i_size" class="form-label">S
 
                             </label>
@@ -2275,7 +2285,7 @@
                                 class="form-control @error('address_choose_m_text') is-invalid @enderror"
                                 id="address_choose_m" autocomplete="off"
                                 placeholder="sous mon adresse de facturation
-                                                                                                                        dans la catégorie professionnelle (facultatif)"
+                                                                                                                                        dans la catégorie professionnelle (facultatif)"
                                 name="address_choose_m_text" value="{{ old('address_choose_m_text') }}" required>
                             @error('address_choose_m_text')
                                 <span class="invalid-feedback mb-2" role="alert">
