@@ -107,8 +107,6 @@ class ApplicationFormController extends Controller
             'made_in' => 'nullable',
             'the' => 'nullable',
             'contact_date' => 'required',
-            'signature' => 'required',
-            'sign_customer_holder' => 'required',
             'dealer_reference' => 'required',
             'agent' => 'required',
             'undersigned' => 'required',
@@ -123,8 +121,6 @@ class ApplicationFormController extends Controller
             'vat_number' => 'nullable',
             'current_operator' => 'nullable',
             'cus_number' => 'required',
-            'signature_1' => 'required',
-            'signature_owner' => 'required',
             'contact_date_1' => 'required',
 
         ]);
@@ -133,16 +129,18 @@ class ApplicationFormController extends Controller
 
         if ($request->form_lang == 'fr') {
 
-            $pdf = new Pdf(public_path('unfilled_forms/scarlet/AF.pdf'), [
+            $pdf = new Pdf(public_path('unfilled_forms/scarlet/SA_FR.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
             ]);
         } else {
-            $pdf = new Pdf(public_path('unfilled_forms/scarlet/AFDU.pdf'), [
+            $pdf = new Pdf(public_path('unfilled_forms/scarlet/SA_DU.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
+
             ]);
         }
+
 
         $data = $request->all();
 
@@ -153,21 +151,21 @@ class ApplicationFormController extends Controller
         // $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
             ->saveAs($pdf_name);
-dd($result);
+
 
         //Mail
-        // $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-        //     $message->to('raokhanwala149@gmail.com')
-        //         ->subject("You have got new Application Form Lead...!")
-        //         ->cc(['lasha@studiodlvx.be'])
-        //         //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-        //         ->attach(public_path($pdf_name), [
-        //             'as' => 'Application Form.pdf',
-        //             'mime' => 'application/pdf',
-        //         ]);
-        //     $message->from('no-reply@ecosafety.nyc');
-        // });
-        // Mail Code Ends
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('raokhanwala149@gmail.com')
+                ->subject("You have got new Application Form Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
+                //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Application Form.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
+        //Mail Code Ends
 
 
         $amo = new AmoCRMController();

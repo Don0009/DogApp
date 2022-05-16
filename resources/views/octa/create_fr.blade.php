@@ -4,12 +4,18 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
-            <h5>Contrat pour la livraison d'ELECTRICITE et/ou de GAZ NATUREL conclu entre le client et OCTA+
-            </h5>
+            <div class="mb-5">
+                <img style="float:left;" class="img-responsive rounded mx-auto d-block m3-5" src="{{ asset('images/brands/Octa1.PNG') }}" alt="">
+                <img style="float:right;" class="img-responsive rounded mx-auto d-block m3-5" src="{{ asset('images/brands/Octa2.PNG') }}" alt="">
+            </div>
+            <div>
+                <h5 style="margin-top: 80px; text-align: center;">Contrat pour la livraison d'ELECTRICITE et/ou de GAZ NATUREL conclu entre le client et OCTA+
+                </h5>
+            </div>
             <form class="forms-sample" method="POST" action="{{ route('regi_form.store') }}">
                 @csrf()
                 <div class="form-group">
-                    <input required type="hidden" name="form_lang" value="{{ $lang }}">
+                    <input required type="hidden" style="text-align: center;" name="form_lang" value="{{ $lang }}">
                 </div>
                 <h5 class="mt-3">Coordonnées du client</h5>
                 <div class="mt-2">
@@ -18,27 +24,27 @@
                             <p>Client:<span class="text-danger">*</span> </p>
                         </div>
                         <div class="col-3">
-                            <input type="radio" name="client" value="0">
-                            <label for="client" class="form-label">Résidentiel</label>
                             <input type="radio" name="client" value="1">
+                            <label for="client" class="form-label">Résidentiel</label>
+                            <input type="radio" name="client" value="2">
                             <label for="client" class="form-label">Professionnel</label>
                         </div>
                         <div class="col-1">
                             <p>Langue:<span class="text-danger">*</span></p>
                         </div>
                         <div class="col-3">
-                            <input type="radio" name="language" value="0">
-                            <label for="language" class="form-label">Fr</label>
                             <input type="radio" name="language" value="1">
+                            <label for="language" class="form-label">Fr</label>
+                            <input type="radio" name="language" value="2">
                             <label for="language" class="form-label">Nl</label>
                         </div>
                         <div class="col-1">
                             <p>Titre:<span class="text-danger">*</span></p>
                         </div>
                         <div class="col-3">
-                            <input type="radio" name="title" value="0">
-                            <label for="title" class="form-label">Monsieur</label>
                             <input type="radio" name="title" value="1">
+                            <label for="title" class="form-label">Monsieur</label>
+                            <input type="radio" name="title" value="2">
                             <label for="title" class="form-label">Madame</label>
                         </div>
                     </div>
@@ -88,9 +94,9 @@
                         </div>
                     </div>
                     <div class="col-6 mt-2">
-                        <input type="radio" name="subject_vat" value="0">
-                        <label for="subject_vat" class="form-label">Non assujetti à la TVA</label>
                         <input type="radio" name="subject_vat" value="1">
+                        <label for="subject_vat" class="form-label">Non assujetti à la TVA</label>
+                        <input type="radio" name="subject_vat" value="2">
                         <label for="subject_vat" class="form-label">En attente du n° TVA</label>
                     </div>
                 </div>
@@ -277,11 +283,11 @@
                         <p>Tarif et durée du contrat:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-5">
-                        <input type="radio" name="price_duration" value="0">
-                        <label for="price_duration" class="form-label">Smart Fixe 1 an</label>
                         <input type="radio" name="price_duration" value="1">
-                        <label for="price_duration" class="form-label">Smart Variable 1 an</label>
+                        <label for="price_duration" class="form-label">Smart Fixe 1 an</label>
                         <input type="radio" name="price_duration" value="2">
+                        <label for="price_duration" class="form-label">Smart Variable 1 an</label>
+                        <input type="radio" name="price_duration" value="3">
                         <label for="price_duration" class="form-label">Safe Fixe 3 ans</label>
                     </div>
                 </div>
@@ -289,15 +295,15 @@
                 <div class="row mt-2">
                     <div class="col-5">
                         <label for="belgian_electricity" class="form-label">Electricité 100% verte et belge</label>
-                        <input type="checkbox" name="belgian_electricity" value="0">
+                        <input type="checkbox" name="belgian_electricity" value="1">
                     </div>
                     <div class="col-3">
                         <p>J'ai un compteur digital<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="digital_meter" value="0">
-                        <label for="digital_meter" class="form-label"> Oui </label>
                         <input type="radio" name="digital_meter" value="1">
+                        <label for="digital_meter" class="form-label"> Oui </label>
+                        <input type="radio" name="digital_meter" value="2">
                         <label for="digital_meter" class="form-label"> Non</label>
                     </div>
                 </div>
@@ -306,22 +312,22 @@
                         <p>Compteur:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-5">
-                        <input type="radio" name="counter" value="0">
-                        <label for="counter" class="form-label">Existant ouvert</label>
                         <input type="radio" name="counter" value="1">
-                        <label for="counter" class="form-label">Existant fermé/scellé</label>
+                        <label for="counter" class="form-label">Existant ouvert</label>
                         <input type="radio" name="counter" value="2">
+                        <label for="counter" class="form-label">Existant fermé/scellé</label>
+                        <input type="radio" name="counter" value="3">
                         <label for="counter" class="form-label">Nouveau</label>
                     </div>
                     <div class="col-2">
                         <p>Type de compteur:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="counter_type" value="0">
-                        <label for="counter_type'" class="form-label">Simple</label>
                         <input type="radio" name="counter_type" value="1">
-                        <label for="counter_type'" class="form-label">Bi-horaire</label>
+                        <label for="counter_type'" class="form-label">Simple</label>
                         <input type="radio" name="counter_type" value="2">
+                        <label for="counter_type'" class="form-label">Bi-horaire</label>
+                        <input type="radio" name="counter_type" value="3">
                         <label for="counter_type" class="form-label">Exclusif nuit</label>
                     </div>
                 </div>
@@ -380,9 +386,9 @@
                         <p>Panneaux solaires ou autre installation de production<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-2">
-                        <input type="radio" name="solar_other_facility" value="0">
-                        <label for="solar_other_facility" class="form-label"> Oui </label>
                         <input type="radio" name="solar_other_facility" value="1">
+                        <label for="solar_other_facility" class="form-label"> Oui </label>
+                        <input type="radio" name="solar_other_facility" value="2">
                         <label for="solar_other_facility" class="form-label"> Non</label>
                     </div>
                     <div class="col-3">
@@ -397,11 +403,11 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-2">
-                        <input type="radio" name="house_move" value="0">
+                        <input type="radio" name="house_move" value="1">
                         <label for="house_move" class="form-label">Maison vide</label>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="house_move" value="0">
+                        <input type="radio" name="house_move" value="2">
                         <label for="house_move" class="form-label">Je déménage/j'ai déménagé vers cette adresse</label>
                     </div>
                     <div class="col-6">
@@ -415,9 +421,9 @@
                         <p>Tarif et durée du contrat<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="price_duration_contract" value="0">
-                        <label for="price_duration_contract" class="form-label">Smart Fixe 1 an</label>
                         <input type="radio" name="price_duration_contract" value="1">
+                        <label for="price_duration_contract" class="form-label">Smart Fixe 1 an</label>
+                        <input type="radio" name="price_duration_contract" value="2">
                         <label for="price_duration_contract" class="form-label">Smart Variable 1 an</label>
                     </div>
                 </div>
@@ -429,11 +435,11 @@
                         <p>Compteur:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-5">
-                        <input type="radio" name="counter1" value="0">
-                        <label for="counter1" class="form-label">Existant ouvert</label>
                         <input type="radio" name="counter1" value="1">
-                        <label for="counter1" class="form-label">Existant fermé/scellé</label>
+                        <label for="counter1" class="form-label">Existant ouvert</label>
                         <input type="radio" name="counter1" value="2">
+                        <label for="counter1" class="form-label">Existant fermé/scellé</label>
+                        <input type="radio" name="counter1" value="3">
                         <label for="counter1" class="form-label">Nouveau</label>
                     </div>
                 </div>
@@ -464,11 +470,11 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-2">
-                        <input type="radio" name="house_move1" value="0">
+                        <input type="radio" name="house_move1" value="1">
                         <label for="house_move1" class="form-label">Maison vide</label>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="house_move1" value="0">
+                        <input type="radio" name="house_move1" value="2">
                         <label for="house_move1" class="form-label">Je déménage/j'ai déménagé vers cette adresse</label>
                     </div>
                     <div class="col-6">
@@ -485,11 +491,11 @@
                         <p>Fréquence des acomptes:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-5">
-                        <input type="radio" name="installment_frequency" value="0">
-                        <label for="installment_frequency" class="form-label">mensuellement</label>
                         <input type="radio" name="installment_frequency" value="1">
-                        <label for="installment_frequency" class="form-label">bimestriellement</label>
+                        <label for="installment_frequency" class="form-label">mensuellement</label>
                         <input type="radio" name="installment_frequency" value="2">
+                        <label for="installment_frequency" class="form-label">bimestriellement</label>
+                        <input type="radio" name="installment_frequency" value="3">
                         <label for="installment_frequency" class="form-label">trimestriellement</label>
                     </div>
                 </div>
@@ -498,13 +504,13 @@
                         <p>Mode de paiement:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="payment_method" value="0">
-                        <label for="payment_method" class="form-label">domiciliation</label>
                         <input type="radio" name="payment_method" value="1">
+                        <label for="payment_method" class="form-label">domiciliation</label>
+                        <input type="radio" name="payment_method" value="2">
                         <label for="payment_method" class="form-label">virement</label>
                     </div>
                     <div class="col-6">
-                        <input type="checkbox" name="invoices" value="0">
+                        <input type="checkbox" name="invoices" value="1">
                         <label for="payment_method" class="form-label">Je désire quand même recevoir toutes mes factures d'acompte</label>
                     </div>
                 </div>
@@ -513,9 +519,9 @@
                         <p>Envoi des factures:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="send_invoices" value="0">
-                        <label for="send_invoices" class="form-label">par e-mail</label>
                         <input type="radio" name="send_invoices" value="1">
+                        <label for="send_invoices" class="form-label">par e-mail</label>
+                        <input type="radio" name="send_invoices" value="2">
                         <label for="send_invoices" class="form-label">par la poste</label>
                     </div>
                 </div>
@@ -547,31 +553,13 @@
                     J’accepte la politique générale relative aux données personnelles d’OCTA+ (se trouvant sur https://www.yourprivacy.be/fr/octaplus).
                 </p>
                 <div class="mt-2">
-                    <input type="checkbox" name="information" value="0">
+                    <input type="checkbox" name="information" value="1">
                     <label for="information" class="form-label">Je souhaite recevoir d’informations concernant des produits ou services recommandés par OCTA+</label>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-4">
-                        <label for="signature" class="form-label">Signature du client:<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature" value="{{ old('signature') }}" required></textarea>
-                        @error('signature')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="col-4 mt-4">
-                        <textarea type="text" rows="5" class="form-control @error('octa') is-invalid @enderror" id="the" autocomplete="off" placeholder="Pour OCTA+ Energie s.a" name="octa" value="{{ old('octa') }}" required></textarea>
-                        @error('signature')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="col-4">
-                        <label for="date">Date<span class="text-danger">*</span></label>
-                        <input class="form-control @error('date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
-                    </div>
+                    <label for="date">Date<span class="text-danger">*</span></label>
+                    <input class="form-control @error('date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
+
                 </div>
                 <p class="text-justify mt-2">Le consommateur a le droit de renoncer au présent contrat de fourniture, sans paiement d’amende et sans motif en envoyant une lettre recommandée à OCTA+ Energie endéans les 14 jours calendrier à
                     partir de la réception de la confirmation du contrat par le client ou en renvoyant le formulaire de rétractation qui se trouve à l’adresse https://www.octaplus.be/fr/electricite-gaz-naturel/tarifs/.</p>
@@ -645,15 +633,6 @@
                 </div>
                 <p class="mt-2">No contrat sous-jacent : votre n° de client (communiqué ultérieurement)</p>
                 <div class="row mt-2">
-                    <div class="col-4">
-                        <label for="signature1" class="form-label">Signature (du débiteur):<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature1') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature1" value="{{ old('signature1') }}" required></textarea>
-                        @error('signature1')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
                     <div class="col-4">
                         <label for="place" class="form-label">Lieu:<span class="text-danger">*</span></label>
                         <input type="text" class="form-control @error('place') is-invalid @enderror" id="bic_code" autocomplete="off" placeholder="Lieu" name="place" value="{{ old('place') }}" required>

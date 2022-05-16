@@ -73,8 +73,6 @@ class CreateApplicationFormsTable extends Migration
             $table->string('made_in')->nullable();
             $table->string('the')->nullable();
             $table->string('contact_date');
-            $table->string('signature');
-            $table->string('sign_customer_holder');
             $table->string('dealer_reference');
             $table->string('agent');
             $table->string('undersigned');
@@ -89,8 +87,6 @@ class CreateApplicationFormsTable extends Migration
             $table->string('vat_number')->nullable();
             $table->string('current_operator')->nullable();
             $table->string('cus_number');
-            $table->string('signature_1');
-            $table->string('signature_owner');
             $table->date('contact_date_1');
 
 

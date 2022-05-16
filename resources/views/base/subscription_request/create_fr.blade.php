@@ -9,6 +9,9 @@
             <div class="card-body">
                 <h4>Demande d’inscription</h4>
                 <h5 class="mt-4">Données d’identification</h5>
+                <div class="form-group">
+                    <input required type="hidden" name="form_lang" value="{{ $lang }}">
+                </div>
                 <div class="row mt-3">
                     <div class="col-1">
                         <p>Title:<span class="text-danger">*</span> </p>
@@ -689,7 +692,6 @@
                 </div>
             </div>
         </div>
-
         <div class="mt-2">
             <button type="submit" class="btn btn-primary me-2">Submit</button>
             <button class="btn btn-secondary">Cancel</button>

@@ -92,7 +92,6 @@ class MobileApplicationController extends Controller
             'submitted_contact' => 'nullable',
             'made_in' => 'nullable',
             'the' => 'nullable',
-            'signature' => 'required',
             'dealer_reference' => 'required',
             'agent' => 'required',
             'mob_num1' => 'required',
@@ -103,7 +102,6 @@ class MobileApplicationController extends Controller
             'customer_number1' => 'required',
             'current_operator1' => 'required',
             'date1' => 'required',
-            'signature1' => 'required',
 
             'mob_num2' => 'required',
             'current_payment_method2' => 'required',
@@ -113,8 +111,6 @@ class MobileApplicationController extends Controller
             'customer_number2' => 'required',
             'current_operator2' => 'required',
             'date2' => 'required',
-            'signature2' => 'required',
-
             'mob_num3' => 'required',
             'current_payment_method3' => 'required',
             'current_sim_number3' => 'required',
@@ -123,7 +119,6 @@ class MobileApplicationController extends Controller
             'customer_number3' => 'required',
             'current_operator3' => 'required',
             'date3' => 'required',
-            'signature3' => 'required',
 
             'mob_num4' => 'required',
             'current_payment_method4' => 'required',
@@ -133,7 +128,6 @@ class MobileApplicationController extends Controller
             'customer_number4' => 'required',
             'current_operator4' => 'required',
             'date4' => 'required',
-            'signature4' => 'required',
 
             'mob_num5' => 'required',
             'current_payment_method5' => 'required',
@@ -143,22 +137,20 @@ class MobileApplicationController extends Controller
             'customer_number5' => 'required',
             'current_operator5' => 'required',
             'date5' => 'required',
-            'signature5' => 'required',
         ]);
 
         if ($request->form_lang == 'fr') {
 
-            $pdf = new Pdf(public_path('unfilled_forms/scarlet/MAF.pdf'), [
+            $pdf = new Pdf(public_path('unfilled_forms/scarlet/SM_FR.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
             ]);
         } else {
-            $pdf = new Pdf(public_path('unfilled_forms/scarlet/AFDU.pdf'), [
+            $pdf = new Pdf(public_path('unfilled_forms/scarlet/SM_DU.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
             ]);
         }
-
         $data = $request->all();
 
         $scarlet = MobileApplication::create($data);
@@ -171,17 +163,17 @@ class MobileApplicationController extends Controller
 
 
         //Mail
-        // $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-        //     $message->to('raokhanwala149@gmail.com')
-        //         ->subject("You have got new Application Form Lead...!")
-        //         ->cc(['lasha@studiodlvx.be'])
-        //         //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-        //         ->attach(public_path($pdf_name), [
-        //             'as' => 'Application Form.pdf',
-        //             'mime' => 'application/pdf',
-        //         ]);
-        //     $message->from('no-reply@ecosafety.nyc');
-        // });
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('raokhanwala149@gmail.com')
+                ->subject("You have got new Application Form Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
+                //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Application Form.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
         // Mail Code Ends
 
 

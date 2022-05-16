@@ -85,9 +85,8 @@ class NumberRequestController extends Controller
             'distributor_name' => 'required',
             'distribtuor_num' => 'required',
             'date1' => 'required',
-            'signature1' => 'required',
             'date2' => 'required',
-            'signature2' => 'required',
+
 
         ]);
 

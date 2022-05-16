@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use \Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PDFController;
-use App\Http\Controllers\proximus\ProximusConnectionRequestDUController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,20 +54,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('pad_services', 'PadServicesController');
     Route::get('/generate-pdf', 'PdfController@generatePDF');
 
-    // Proximus Forms 6 in number
-
-    Route::resource('proximus_connection_request_du', 'proximus\ProximusConnectionRequestDUController');
-    Route::resource('proximus_connection_request_fr', 'proximus\ProximusConnectionRequestFRController');
-    Route::resource('proximus_number_porting_du', 'proximus\ProximusNumberPortingFormDUController');
-    Route::resource('proximus_number_porting_fr', 'proximus\ProximusNumberPortingFormFRController');
-    Route::resource('proximus_multi_contact_du', 'proximus\ProximusMultiContactDUController');
-    Route::resource('proximus_multi_contact_fr', 'proximus\ProximusMultiContactControllerFR');
-
-
-
-
-
-
     // scarlet
     Route::resource('application_form', 'scarlet\ApplicationFormController');
     Route::resource('mobile_application_form', 'scarlet\MobileApplicationController');
@@ -79,5 +64,6 @@ Route::group(['middleware' => 'auth'], function () {
     //base
     Route::resource('number_request', 'base\NumberRequestController');
     Route::resource('subscription_request', 'base\SubscriptionRequestController');
-
+    //lampiris
+    Route::resource('lampiris', 'lampiris\LampirisController');
 });

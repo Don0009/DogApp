@@ -4,6 +4,7 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
+            <img style="text-align:left;" class="img-responsive rounded mx-auto d-block m3-5" src="{{ asset('images/brands/scarlet.PNG') }}" alt="">
             <h3 style="color: blacked; text-align:center"> Scarlet Mobile</h3>
             <h3 style="color: blacked; text-align:center">
                 Bestelformulier</h3>
@@ -48,7 +49,7 @@
                 </div>
                 <div class="mt-2">
                     <label for="id_card_number" class="form-label">Identiteitskaart nr:<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('Id_card_number') is-invalid @enderror" id="name" autocomplete="off" placeholder="Identiteitskaart nr" name="id_card_number" value="{{ old('id_card_number') }}" required>
+                    <input type="text" class="form-control @error('id_card_number') is-invalid @enderror" id="name" autocomplete="off" placeholder="Identiteitskaart nr" name="id_card_number" value="{{ old('id_card_number') }}" required>
                     @error('id_card_number')
                     <span class="invalid-feedback mb-2" role="alert">
                         <strong>{{ $message }}</strong>
@@ -98,9 +99,9 @@
                             @enderror
                         </div>
                         <div class="col-6">
-                            <label for="commune" class="form-label">Gemeente<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control @error('commune') is-invalid @enderror" id="commune" autocomplete="off" placeholder="Gemeente" name="commune" value="{{ old('commune') }}" required>
-                            @error('commune')
+                            <label for="city" class="form-label">Gemeente<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @error('city') is-invalid @enderror" id="city" autocomplete="off" placeholder="Gemeente" name="city" value="{{ old('city') }}" required>
+                            @error('city')
                             <span class="invalid-feedback mb-2" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -149,18 +150,18 @@
                             <p>Geslacht</p>
                         </div>
                         <div class="col-2 mt-4">
-                            <input type="radio" name="gender" value="0">
-                            <label for="gender" class="form-label">M</label>
                             <input type="radio" name="gender" value="1">
+                            <label for="gender" class="form-label">M</label>
+                            <input type="radio" name="gender" value="2">
                             <label for="gender" class="form-label">V</label>
                         </div>
                         <div class="col-1 mt-4">
                             <p>Taal:</p>
                         </div>
                         <div class="col-3 mt-4">
-                            <input type="radio" name="language" value="0">
-                            <label for="language" class="form-label">NL</label>
                             <input type="radio" name="language" value="1">
+                            <label for="language" class="form-label">NL</label>
+                            <input type="radio" name="language" value="2">
                             <label for="language" class="form-label">FR</label>
                         </div>
                     </div>
@@ -186,7 +187,7 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-5">
-                            <p class="text-justify "><input type="checkbox" name="mobile_subscription" class="mr-2" value="0"> Ja, ik neem een <b>Scarlet Mobile</b>abonnement:</p>
+                            <p class="text-justify "><input type="checkbox" name="mobile_subscription" class="mr-2" value="1"> Ja, ik neem een <b>Scarlet Mobile</b>abonnement:</p>
                         </div>
                         <div class="col-2">
                             <p><b>Aantal </b></p>
@@ -202,86 +203,86 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-5">
-                            <p class="text-justify "><input type="checkbox" name="subscription1" class="mr-2" value="0">€ 8 RED (300 min 24/7* + onbeperkt sms’sen*, 500MB data) </p>
+                            <p class="text-justify "><input type="checkbox" name="subscription1" class="mr-2" value="1">€ 8 RED (300 min 24/7* + onbeperkt sms’sen*, 500MB data) </p>
                         </div>
                         <div class="col-2">
                             <input type="text" class="form-control @error('sub_name1') is-invalid @enderror" id="sub_name1" autocomplete="off" placeholder="Nombre" name="sub_name1" value="{{ old('sub_name1') }}" required>
                         </div>
                         <div class="col-2 mt-1">
-                            <input type="checkbox" name="new_num1" value="0">
+                            <input type="checkbox" name="new_num1" value="1">
                         </div>
                         <div class="col-3 mt-1">
-                            <input type="checkbox" name="num_transfer1" value="0">
+                            <input type="checkbox" name="num_transfer1" value="1">
                         </div>
                     </div>
                 </div>
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-5">
-                            <p class="text-justify "><input type="checkbox" name="subscription2" class="mr-2" value="0">€ 18 HOT (min 24/7* + onbeperkt sms’en*, 6GB data)</p>
+                            <p class="text-justify "><input type="checkbox" name="subscription2" class="mr-2" value="1">€ 18 HOT (min 24/7* + onbeperkt sms’en*, 6GB data)</p>
                         </div>
                         <div class="col-2">
                             <input type="text" class="form-control @error('sub_name2') is-invalid @enderror" id="sub_name2" autocomplete="off" placeholder="Nombre" name="sub_name2" value="{{ old('sub_name2') }}" required>
                         </div>
                         <div class="col-2 mt-1">
-                            <input type="checkbox" name="new_num2" value="0">
+                            <input type="checkbox" name="new_num2" value="1">
                         </div>
                         <div class="col-3 mt-1">
-                            <input type="checkbox" name="num_transfer2" value="0">
+                            <input type="checkbox" name="num_transfer2" value="1">
                         </div>
                     </div>
                 </div>
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-5">
-                            <p class="text-justify "><input type="checkbox" name="subscription3" class="mr-2" value="0"> € 5 Extra Internet Mobile 1,5 GB (prijs per maand)</p>
+                            <p class="text-justify "><input type="checkbox" name="subscription3" class="mr-2" value="1"> € 5 Extra Internet Mobile 1,5 GB (prijs per maand)</p>
                         </div>
                         <div class="col-2">
                             <input type="text" class="form-control @error('sub_name3') is-invalid @enderror" id="sub_name3" autocomplete="off" placeholder="Nombre" name="sub_name3" value="{{ old('sub_name3') }}" required>
                         </div>
                         <div class="col-2 mt-1">
-                            <input type="checkbox" name="new_num3" value="0">
+                            <input type="checkbox" name="new_num3" value="1">
                         </div>
                         <div class="col-3 mt-1">
-                            <input type="checkbox" name="num_transfer3" value="0">
+                            <input type="checkbox" name="num_transfer3" value="1">
                         </div>
                     </div>
                 </div>
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-5">
-                            <p class="text-justify "><input type="checkbox" name="subscription4" class="mr-2" value="0">€ 10 Extra Internet Mobile 5 GB (prijs per maand)</p>
+                            <p class="text-justify "><input type="checkbox" name="subscription4" class="mr-2" value="1">€ 10 Extra Internet Mobile 5 GB (prijs per maand)</p>
                         </div>
                         <div class="col-2">
                             <input type="text" class="form-control @error('sub_name4') is-invalid @enderror" id="sub_name4" autocomplete="off" placeholder="Nombre" name="sub_name4" value="{{ old('sub_name4') }}" required>
                         </div>
                         <div class="col-2 mt-1">
-                            <input type="checkbox" name="new_num4" value="0">
+                            <input type="checkbox" name="new_num4" value="1">
                         </div>
                         <div class="col-3 mt-1">
-                            <input type="checkbox" name="num_transfer4" value="0">
+                            <input type="checkbox" name="num_transfer4" value="1">
                         </div>
                     </div>
                 </div>
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-5">
-                            <p class="text-justify "><input type="checkbox" name="subscription5" class="mr-2" value="0">€ 15 Extra Internet Mobile 10 GB (prjs per maand)
+                            <p class="text-justify "><input type="checkbox" name="subscription5" class="mr-2" value="1">€ 15 Extra Internet Mobile 10 GB (prjs per maand)
                             </p>
                         </div>
                         <div class="col-2">
                             <input type="text" class="form-control @error('sub_name5') is-invalid @enderror" id="sub_name5" autocomplete="off" placeholder="Nombre" name="sub_name5" value="{{ old('sub_name5') }}" required>
                         </div>
                         <div class="col-2 mt-1">
-                            <input type="checkbox" name="new_num5" value="0">
+                            <input type="checkbox" name="new_num5" value="1">
                         </div>
                         <div class="col-3 mt-1">
-                            <input type="checkbox" name="num_transfer5" value="0">
+                            <input type="checkbox" name="num_transfer5" value="1">
                         </div>
                     </div>
                 </div>
                 <div class="mt-2">
-                    <p class="text-justify "><input type="checkbox" name="subscription6" class="mr-2" value="0">€ 2 optie “Ongelimiteerd bellen naar Scarlet Mobile” (prijs per maand)
+                    <p class="text-justify "><input type="checkbox" name="subscription6" class="mr-2" value="1">€ 2 optie “Ongelimiteerd bellen naar Scarlet Mobile” (prijs per maand)
                     </p>
                 </div>
                 <div class="mt-2">
@@ -290,7 +291,7 @@
                         </b></h4>
                 </div>
                 <div class="mt-2">
-                    <input type="radio" name="payment_method" value="0">
+                    <input type="radio" name="payment_method" value="1">
                     <label for="payment_method" class="form-label">Ik maak zelf een domiciliëring met behulp van de volgende bankgegevens :
                     </label>
                 </div>
@@ -317,7 +318,7 @@
                     </div>
                 </div>
                 <div class="mt-2">
-                    <input type="radio" name="payment_method" value="1">
+                    <input type="radio" name="payment_method" value="2">
                     <label for="payment_method" class="form-label">Ik wens via bankoverschrijving te betalen.
                     </label>
                 </div>
@@ -350,15 +351,6 @@
                             <label for="the" class="form-label">Op:<span class="text-danger">*</span></label>
                             <input type="text" class="form-control @error('the') is-invalid @enderror" id="the" autocomplete="off" placeholder="Op" name="the" value="{{ old('the') }}" required>
                             @error('the')
-                            <span class="invalid-feedback mb-2" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="col-3">
-                            <label for="signature" class="form-label">Handtekening:<span class="text-danger">*</span></label>
-                            <textarea type="text" rows="5" class="form-control @error('signature') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening" name="signature" value="{{ old('signature') }}" required></textarea>
-                            @error('signature')
                             <span class="invalid-feedback mb-2" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -417,10 +409,10 @@
                             <p>Betaalwijze vorige operator:</p>
                         </div>
                         <div class="col-4">
-                            <input type="radio" name="current_payment_method1" value="0">
-                            <label for="current_payment_method" class="form-label">herlaadkaart</label>
                             <input type="radio" name="current_payment_method1" value="1">
-                            <label for="current_payment_method" class="form-label">abonnement</label>
+                            <label for="current_payment_method1" class="form-label">herlaadkaart</label>
+                            <input type="radio" name="current_payment_method1" value="2">
+                            <label for="current_payment_method1" class="form-label">abonnement</label>
                         </div>
                     </div>
                 </div>
@@ -478,15 +470,6 @@
                         <label for="date1">Datum<span class="text-danger">*</span></label>
                         <input class="form-control @error('date1') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date1" name="date1" value="{{ old('date1') }}" type="date">
                     </div>
-                    <div class="col-4">
-                        <label for="signature1" class="form-label">Handtekening:<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature1') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening" name="signature1" value="{{ old('signature1') }}" required></textarea>
-                        @error('signature1')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
                 </div>
                 <div class="mt-4">
                     <label for="mob_num2" class="form-label">GSM-nummer<span class="text-danger">*</span></label>
@@ -503,9 +486,9 @@
                             <p>Betaalwijze vorige operator:</p>
                         </div>
                         <div class="col-4">
-                            <input type="radio" name="current_payment_method2" value="0">
-                            <label for="current_payment_method2" class="form-label">herlaadkaart</label>
                             <input type="radio" name="current_payment_method2" value="1">
+                            <label for="current_payment_method2" class="form-label">herlaadkaart</label>
+                            <input type="radio" name="current_payment_method2" value="2">
                             <label for="current_payment_method2" class="form-label">abonnement</label>
                         </div>
                     </div>
@@ -564,15 +547,6 @@
                         <label for="date2">Datum<span class="text-danger">*</span></label>
                         <input class="form-control @error('date2') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date2" name="date2" value="{{ old('date2') }}" type="date">
                     </div>
-                    <div class="col-4">
-                        <label for="signature2" class="form-label">Handtekening:<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature2') is-invalid @enderror" id="signature2" autocomplete="off" placeholder="Handtekening" name="signature2" value="{{ old('signature2') }}" required></textarea>
-                        @error('signature2')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
                 </div>
 
                 <div class="mt-4">
@@ -590,9 +564,9 @@
                             <p>Betaalwijze vorige operator:</p>
                         </div>
                         <div class="col-4">
-                            <input type="radio" name="current_payment_method3" value="0">
-                            <label for="current_payment_method3" class="form-label">herlaadkaart</label>
                             <input type="radio" name="current_payment_method3" value="1">
+                            <label for="current_payment_method3" class="form-label">herlaadkaart</label>
+                            <input type="radio" name="current_payment_method3" value="2">
                             <label for="current_payment_method3" class="form-label">abonnement</label>
                         </div>
                     </div>
@@ -651,15 +625,6 @@
                         <label for="date3">Datum<span class="text-danger">*</span></label>
                         <input class="form-control @error('date3') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date3" name="date3" value="{{ old('date3') }}" type="date">
                     </div>
-                    <div class="col-4">
-                        <label for="signature3" class="form-label">Handtekening:<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature3') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening" name="signature3" value="{{ old('signature3') }}" required></textarea>
-                        @error('signature3')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
                 </div>
 
                 <div class="mt-4">
@@ -677,9 +642,9 @@
                             <p>Betaalwijze vorige operator:</p>
                         </div>
                         <div class="col-4">
-                            <input type="radio" name="current_payment_method4" value="0">
-                            <label for="current_payment_method4" class="form-label">herlaadkaart</label>
                             <input type="radio" name="current_payment_method4" value="1">
+                            <label for="current_payment_method4" class="form-label">herlaadkaart</label>
+                            <input type="radio" name="current_payment_method4" value="2">
                             <label for="current_payment_method4" class="form-label">abonnement</label>
                         </div>
                     </div>
@@ -738,15 +703,6 @@
                         <label for="date4">Datum<span class="text-danger">*</span></label>
                         <input class="form-control @error('date4') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date4" name="date4" value="{{ old('date4') }}" type="date">
                     </div>
-                    <div class="col-4">
-                        <label for="signature4" class="form-label">Handtekening :<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature4') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening" name="signature4" value="{{ old('signature4') }}" required></textarea>
-                        @error('signature4')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
                 </div>
                 <div class="mt-4">
                     <label for="mob_num5" class="form-label">GSM-nummer<span class="text-danger">*</span></label>
@@ -763,9 +719,9 @@
                             <p>Betaalwijze vorige operator:</p>
                         </div>
                         <div class="col-4">
-                            <input type="radio" name="current_payment_method5" value="0">
-                            <label for="current_payment_method5" class="form-label">herlaadkaart</label>
                             <input type="radio" name="current_payment_method5" value="1">
+                            <label for="current_payment_method5" class="form-label">herlaadkaart</label>
+                            <input type="radio" name="current_payment_method5" value="2">
                             <label for="current_payment_method5" class="form-label">abonnement</label>
                         </div>
                     </div>
@@ -823,15 +779,6 @@
                     <div class="col-5">
                         <label for="date5">Datum<span class="text-danger">*</span></label>
                         <input class="form-control @error('date5') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date5" name="date5" value="{{ old('date5') }}" type="date">
-                    </div>
-                    <div class="col-4">
-                        <label for="signature5" class="form-label">Handtekening:<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature5') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening" name="signature5" value="{{ old('signature5') }}" required></textarea>
-                        @error('signature5')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
                     </div>
                 </div>
                 <div class="mt-2">

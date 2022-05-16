@@ -4,6 +4,9 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
+
+            <img style="text-align:left;" class="img-responsive rounded mx-auto d-block m3-5" src="{{ asset('images/brands/scarlet.PNG') }}" alt="">
+
             <h3 style="color: blacked; text-align:center"> Scarlet</h3>
             <h3 style="color: blacked; text-align:center">
                 Formulaire de demande</h3>
@@ -114,9 +117,9 @@
                             <p>Type d’habitat:<span class="text-danger">*</span> </p>
                         </div>
                         <div class="col-4">
-                            <input type="radio" name="type_of_habitat" value="0">
-                            <label for="type_of_habitat" class="form-label">Maison</label>
                             <input type="radio" name="type_of_habitat" value="1">
+                            <label for="type_of_habitat" class="form-label">Maison</label>
+                            <input type="radio" name="type_of_habitat" value="2">
                             <label for="type_of_habitat" class="form-label">Appartement</label>
                         </div>
                         <div class="col-1">
@@ -173,18 +176,18 @@
                             <p>Sexe</p>
                         </div>
                         <div class="col-2 mt-4">
-                            <input type="radio" name="gender" value="0">
-                            <label for="gender" class="form-label">M</label>
                             <input type="radio" name="gender" value="1">
+                            <label for="gender" class="form-label">M</label>
+                            <input type="radio" name="gender" value="2">
                             <label for="gender" class="form-label">F</label>
                         </div>
                         <div class="col-1 mt-4">
                             <p>Langue:</p>
                         </div>
                         <div class="col-3 mt-4">
-                            <input type="radio" name="language" value="0">
-                            <label for="language" class="form-label">NL</label>
                             <input type="radio" name="language" value="1">
+                            <label for="language" class="form-label">NL</label>
+                            <input type="radio" name="language" value="2">
                             <label for="language" class="form-label">FR</label>
                         </div>
                     </div>
@@ -214,7 +217,7 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
-                            <input type="checkbox" name="internet_connection" value="0">
+                            <input type="checkbox" name="internet_connection" value="1">
                             <label for="internet_connection" class="form-label">Je possède déjà une connexion internet</label>
                         </div>
                         <div class="col-2">
@@ -230,40 +233,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-2">
+                <div class="mt-4">
                     <p><b>Attention!</b> Scarlet Trio n’est pas approprié pour raccorder des lignes téléphoniques du type ISDN, des centrales d’alarmes, des modems
                         dial-up, des terminaux de paiement, des centrales téléphoniques et des fax, alors uniquement l’option ‘nouvelle paire de cuivre’ est possible
                         – (Téléphonez le 0800-84-112).
                     </p>
                 </div>
 
-                <div class="mt-2">
+                <div class="mt-3">
                     <h4 style="text-align:center"><b>B. Votre abonnement </b></h4>
                 </div>
                 <div class="mt-2">
-                    <p class="text-justify "><input type="radio" name="your_subscription" class="mr-2" value="0">Oui, je prends <b>Scarlet Loco</b> (Internet³) avec ou sans ligne téléphonique existante à € 32 TVA incl. par mois. (Frais uniques
+                    <p class="text-justify "><input type="radio" name="your_subscription" class="mr-2" value="1">Oui, je prends <b>Scarlet Loco</b> (Internet³) avec ou sans ligne téléphonique existante à € 32 TVA incl. par mois. (Frais uniques
                         de 50€ pour l’activation de la ligne)</p>
                 </div>
                 <div class="mt-2">
-                    <p class="text-justify"><input type="radio" name="your_subscription" class="mr-2" value="1">Oui, je prends <b>Scarlet Internet&Téléphonie²</b> avec ou sans ligne téléphonique existante à € 39 TVA incl. par mois.(Frais
+                    <p class="text-justify"><input type="radio" name="your_subscription" class="mr-2" value="2">Oui, je prends <b>Scarlet Internet&Téléphonie²</b> avec ou sans ligne téléphonique existante à € 39 TVA incl. par mois.(Frais
                         unique de 50€ pour l’activation de la ligne)</p>
                 </div>
                 <div class="mt-2">
-                    <p class="text-justify"><input type="radio" name="your_subscription" class="mr-2" value="2">Oui, je prends <b>Scarlet Trio</b> (Internet + Téléphony + TVD²³) avec ou sans ligne téléphonique existante à € 40 TVA incl.
+                    <p class="text-justify"><input type="radio" name="your_subscription" class="mr-2" value="3">Oui, je prends <b>Scarlet Trio</b> (Internet + Téléphony + TVD²³) avec ou sans ligne téléphonique existante à € 40 TVA incl.
                         par mois</p>
                 </div>
 
-                <div class="mt-2">
+                <div class="mt-4">
                     <h5 style="text-align:center"><b>Options mensuelles (Trio et Internet&Téléphonie) </b></h5>
                 </div>
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
-                            <input type="checkbox" name="telephony_day_1" value="0">
+                            <input type="checkbox" name="telephony_day_1" value="1">
                             <label for="telephony_day_1" class="form-label">Téléphonie nationale gratuite 24h/24h</label>
                         </div>
                         <div class="col-6">
-                            <input type="checkbox" name="telephony_day_2" value="0">
+                            <input type="checkbox" name="telephony_day_2" value="1">
                             <label for="telephony_day_2" class="form-label">€5</label>
                         </div>
                     </div>
@@ -272,11 +275,11 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
-                            <input type="checkbox" name="telephony_hour_1" value="0">
+                            <input type="checkbox" name="telephony_hour_1" value="1">
                             <label for="telephony_hour_1" class="form-label">Téléphonie nationale mobile gratuite (heures creuses)</label>
                         </div>
                         <div class="col-6">
-                            <input type="checkbox" name="telephony_hour_2" value="0">
+                            <input type="checkbox" name="telephony_hour_2" value="1">
                             <label for="telephony_hour_2" class="form-label">€5</label>
                         </div>
                     </div>
@@ -284,11 +287,11 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
-                            <input type="checkbox" name="mobile_tele_day_1" value="0">
+                            <input type="checkbox" name="mobile_tele_day_1" value="1">
                             <label for="mobile_tele_day_1" class="form-label">Téléphonie nationale mobile gratuite (24h/24h) </label>
                         </div>
                         <div class="col-6">
-                            <input type="checkbox" name="mobile_tele_day_2" value="0">
+                            <input type="checkbox" name="mobile_tele_day_2" value="1">
                             <label for="mobile_tele_day_2" class="form-label">€10</label>
                         </div>
                     </div>
@@ -296,11 +299,11 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
-                            <input type="checkbox" name="fixe_telephony_hour_1" value="0">
+                            <input type="checkbox" name="fixe_telephony_hour_1" value="1">
                             <label for="fixe_telephony_hour_1" class="form-label">Téléphonie internationale fixe gratuite (heures creuses²)</label>
                         </div>
                         <div class="col-6">
-                            <input type="checkbox" name="fixe_telephony_hour_2" value="0">
+                            <input type="checkbox" name="fixe_telephony_hour_2" value="1">
                             <label for="fixe_telephony_hour_2" class="form-label">€ 5</label>
                         </div>
                     </div>
@@ -309,12 +312,12 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
-                            <input type="checkbox" name="decoder_1" value="0">
+                            <input type="checkbox" name="decoder_1" value="1">
                             <label for="decoder_1" class="form-label">2
                                 eme décodeur</label>
                         </div>
                         <div class="col-6">
-                            <input type="checkbox" name="decoder_2" value="0">
+                            <input type="checkbox" name="decoder_2" value="1">
                             <label for="decoder_2" class="form-label">€ 4</label>
                         </div>
                     </div>
@@ -323,11 +326,11 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
-                            <input type="checkbox" name="allsport_1" value="0">
+                            <input type="checkbox" name="allsport_1" value="1">
                             <label for="allsport_1" class="form-label">All sports</label>
                         </div>
                         <div class="col-6">
-                            <input type="checkbox" name="allsport_2" value="0">
+                            <input type="checkbox" name="allsport_2" value="1">
                             <label for="allsport_2" class="form-label"> € 16,99</label>
                         </div>
                     </div>
@@ -336,13 +339,13 @@
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
-                            <input type="radio" name="movies_series_1" value="0">
-                            <label for="movies_series_1" class="form-label">Movies & Series Pass FR</label>
                             <input type="radio" name="movies_series_1" value="1">
+                            <label for="movies_series_1" class="form-label">Movies & Series Pass FR</label>
+                            <input type="radio" name="movies_series_1" value="2">
                             <label for="movies_series_1" class="form-label">Movies & Series Pass FR</label>
                         </div>
                         <div class="col-6">
-                            <input type="checkbox" name="movies_series_2" value="0">
+                            <input type="checkbox" name="movies_series_2" value="1">
                             <label for="movies_series_2" class="form-label">€ 10,99
                             </label>
                         </div>
@@ -383,9 +386,9 @@
                 <div class="mt-2">
                     <div class="row">
                         <p><b>TV Digitale</b> : Je désire bénéficier de la liste des chaînes
-                            <input type="radio" name="digital_tv" value="0">
-                            <label for="language" class="form-label">NL</label>
                             <input type="radio" name="digital_tv" value="1">
+                            <label for="language" class="form-label">NL</label>
+                            <input type="radio" name="digital_tv" value="2">
                             <label for="language" class="form-label">FR</label>
                         </p>
                     </div>
@@ -395,11 +398,11 @@
                     <h4 style="text-align:center"><b>C. Votre numéro de téléphonie fixe</b></h4>
                 </div>
                 <div class="mt-2">
-                    <input type="radio" name="type_number" value="0">
+                    <input type="radio" name="type_number" value="1">
                     <label for="type_number" class="form-label">Je souhaite un nouveau numéro de téléphone.
                     </label>
                     <br>
-                    <input type="radio" name="type_number" value="1">
+                    <input type="radio" name="type_number" value="2">
                     <label for="type_number" class="form-label">Je souhaite garder mon numéro de téléphone actuel</label>
                 </div>
                 <div class="mt-1">
@@ -417,12 +420,12 @@
                 </div>
                 <div class="mt-2">
                     <div class="col-6">
-                        <label for="language" class="form-label ml-5">Opérateur:</label>
-                        <input type="radio" name="obt" class="ml-2" value="0">
-                        <label for="language" class="form-label ml-2">Belgacom </label>
+                        <label for="obt" class="form-label ml-5">Opérateur:</label>
                         <input type="radio" name="obt" class="ml-2" value="1">
-                        <label for="language" class="form-label ml-2">Telenet</label>
+                        <label for="obt" class="form-label ml-2">Belgacom </label>
                         <input type="radio" name="obt" class="ml-2" value="2">
+                        <label for="obt" class="form-label ml-2">Telenet</label>
+                        <input type="radio" name="obt" class="ml-2" value="3">
                     </div>
                 </div>
                 <div class="mt-2">
@@ -450,7 +453,7 @@
                 <div class="mt-2">
                     <p><input type="radio" name="type_number" class="mr-2" value="2">Je souhaite que mon numéro de Téléphone ne soit pas mentionné dans les pages blanches</p>
                 </div>
-                <div class="mt-2">
+                <div class="mt-4">
                     <h4 style="text-align:center"><b>D. Installation</b></h4>
                 </div>
                 <div class="mt-2">
@@ -510,12 +513,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-2">
+                <div class="mt-4">
                     <h4 style="text-align:center"><b>E. Mode de paiement
                         </b></h4>
                 </div>
                 <div class="mt-2">
-                    <input type="radio" name="payment_method" value="0">
+                    <input type="radio" name="payment_method" value="1">
                     <label for="payment_method" class="form-label">Je crée un mandat pour domiciliation en utilisant les données bancaires suivantes :
                     </label>
                 </div>
@@ -542,15 +545,15 @@
                     </div>
                 </div>
                 <div class="mt-2">
-                    <input type="radio" name="payment_method" value="1">
+                    <input type="radio" name="payment_method" value="2">
                     <label for="payment_method" class="form-label">Je souhaite payer via virement bancaire:
                     </label>
                 </div>
-                <div class="mt-2">
+                <div class="mt-4">
                     <h4 style="text-align:center"><b>F. Conditions
                         </b></h4>
                 </div>
-                <p class="test-justify">Les coordonnées communiquées dans ce contexte sont enregistrées dans la base de données de Scarlet Rue Carli 2, 1140 Evere.
+                <p class="test-justify mt-3">Les coordonnées communiquées dans ce contexte sont enregistrées dans la base de données de Scarlet Rue Carli 2, 1140 Evere.
                     Ces données sont traitées par Scarlet dans le cadre de l’administration de la clientèle, des études de marché et dans l’optique de
                     l’organisation de campagnes publicitaires et d’information personnalisées relatives aux produits et services de Scarlet et/ou de
                     tiers. Vous avez le droit de demander à tout moment une copie de vos données à caractère personnel pour vérifier l’exactitude des
@@ -558,7 +561,7 @@
                 </p>
                 <div class="mt-2">
                     <p>Si vous accordez le droit à Scarlet d’utiliser vos coordonnées communiquées pour les raisons mentionnées ci-dessus, veuillez
-                        cocher cette case<input type="checkbox" name="submitted_contact" class="ml-2"></p>
+                        cocher cette case<input type="checkbox" name="submitted_contact" class="ml-2" value="1"></p>
                 </div>
                 <div class="mt-3">
                     <p>Le Client reconnait avoir recu et accepté les conditions pour le service Scarlet Trio. </p>
@@ -594,28 +597,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-2">
-                    <div class="row">
-                        <div class="col-3">
-                            <label for="signature" class="form-label">Signature:<span class="text-danger">*</span></label>
-                            <textarea type="text" rows="5" class="form-control @error('signature') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature" value="{{ old('signature') }}" required></textarea>
-                            @error('signature')
-                            <span class="invalid-feedback mb-2" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="col-3">
-                            <label for="sign_customer_holder" class="form-label">Signature du titulaire du Client:<span class="text-danger">*</span></label>
-                            <textarea type="text" rows="5" class="form-control @error('sign_customer_holder') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="sign_customer_holder" value="{{ old('sign_customer_holder') }}" required></textarea>
-                            @error('sign_customer_holder')
-                            <span class="invalid-feedback mb-2" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
+
                 <div class="mt-2">
                     <div class="row">
                         <div class="col-6">
@@ -638,7 +620,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-2">
+                <div class="mt-4">
                     <h4 style="text-align:center"><b>Autorisation pour la portabilité de numéro(s) fixe(s)
                         </b></h4>
                 </div>
@@ -789,7 +771,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-2">
+                <div class="mt-4">
                     <p>(Pour connaître votre numéro de client Belgacom, formez le 078 15 05 65. Si vous n’appelez pas de chez vous,
                         l’opérateur/opératrice Belgacom vous demandera votre date de naissance.)
                     </p>
@@ -799,24 +781,6 @@
                 </div>
                 <div class="mt-2">
                     <div class="row">
-                        <div class="col-4">
-                            <label for="signature_1" class="form-label">Signature:<span class="text-danger">*</span></label>
-                            <textarea type="text" rows="5" class="form-control @error('signature_1') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature_1" value="{{ old('signature_1') }}" required></textarea>
-                            @error('signature_1')
-                            <span class="invalid-feedback mb-2" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="col-4">
-                            <label for="signature_owner" class="form-label">Signature du titulaire:<span class="text-danger">*</span></label>
-                            <textarea type="text" rows="5" class="form-control @error('signature_owner') is-invalid @enderror" id="the" autocomplete="off" placeholder="Signature" name="signature_owner" value="{{ old('signature_owner') }}" required></textarea>
-                            @error('signature_owner')
-                            <span class="invalid-feedback mb-2" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
                         <div class="col-4">
                             <label for="contact_date_1" class="form-label">Date:<span class="text-danger">*</span></label>
                             <input class="form-control @error('contact_date_1') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="contact_date_1" name="contact_date_1" value="{{ old('contact_date_1') }}" type="date">

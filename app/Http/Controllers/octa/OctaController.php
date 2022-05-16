@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\octa;
 
 use App\Octa;
+use App\Http\Controllers\AmoCRMController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use mikehaertl\pdftk\Pdf;
+use Mail;
 
 class OctaController extends Controller
 {
@@ -113,9 +116,57 @@ class OctaController extends Controller
             'place' => 'required',
         ]);
 
+        if ($request->form_lang == 'fr') {
+
+            $pdf = new Pdf(public_path('unfilled_forms/octa/OCTA_FR1.pdf'), [
+
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
+            ]);
+        } else {
+            $pdf = new Pdf(public_path('unfilled_forms/octa/OCTA_DU.pdf'), [
+
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
+
+            ]);
+        }
+
         $data = $request->all();
-        Octa::create($data);
-        return redirect()->route('regi_form.index');
+        $octa =  Octa::create($data);
+
+        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
+
+        // $data = $data->toArray();
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs($pdf_name);
+
+
+        //Mail
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('raokhanwala149@gmail.com')
+                ->subject("You have got new Octa Form Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
+                //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Octa Form.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
+        //Mail Code Ends
+
+
+        $amo = new AmoCRMController();
+        $lead_data = [];
+
+
+        $lead_data['NAME'] = $octa->name;
+        $lead_data['PHONE'] = $octa->phone;
+        $lead_data['EMAIL'] = $octa->mail;
+        $lead_data['LEAD_NAME'] = 'Octa Form Lead!';
+        $amo->add_lead($lead_data);
+        unlink(public_path($pdf_name));
+
+        return redirect()->route('regi_form.index')->with('success', 'Appliction Form created successfully!');
     }
 
     /**

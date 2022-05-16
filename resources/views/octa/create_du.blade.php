@@ -4,7 +4,11 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
-            <h5>Contract voor de levering van ELEKTRICITEIT en/of AARDGAS gesloten tussen de klant en OCTA+
+            <div class="mb-5">
+                <img style="float:left;" class="img-responsive rounded mx-auto d-block m3-5" src="{{ asset('images/brands/Octa1.PNG') }}" alt="">
+                <img style="float:right;" class="img-responsive rounded mx-auto d-block m3-5" src="{{ asset('images/brands/Octa2.PNG') }}" alt="">
+            </div>
+            <h5 style="margin-top: 80px; text-align: center;">Contract voor de levering van ELEKTRICITEIT en/of AARDGAS gesloten tussen de klant en OCTA+
             </h5>
             <form class="forms-sample" method="POST" action="{{ route('regi_form.store') }}">
                 @csrf()
@@ -18,27 +22,27 @@
                             <p>Klant:<span class="text-danger">*</span> </p>
                         </div>
                         <div class="col-3">
-                            <input type="radio" name="client" value="0">
-                            <label for="client" class="form-label">Residentieel</label>
                             <input type="radio" name="client" value="1">
+                            <label for="client" class="form-label">Residentieel</label>
+                            <input type="radio" name="client" value="2">
                             <label for="client" class="form-label">Professioneel</label>
                         </div>
                         <div class="col-1">
                             <p>Taal:<span class="text-danger">*</span></p>
                         </div>
                         <div class="col-3">
-                            <input type="radio" name="language" value="0">
-                            <label for="language" class="form-label">Fr</label>
                             <input type="radio" name="language" value="1">
+                            <label for="language" class="form-label">Fr</label>
+                            <input type="radio" name="language" value="2">
                             <label for="language" class="form-label">Nl</label>
                         </div>
                         <div class="col-1">
                             <p>Aanspreektitel:<span class="text-danger">*</span></p>
                         </div>
                         <div class="col-3">
-                            <input type="radio" name="title" value="0">
-                            <label for="title" class="form-label">Mijnheer</label>
                             <input type="radio" name="title" value="1">
+                            <label for="title" class="form-label">Mijnheer</label>
+                            <input type="radio" name="title" value="2">
                             <label for="title" class="form-label">Mevrouw</label>
                         </div>
                     </div>
@@ -88,9 +92,9 @@
                         </div>
                     </div>
                     <div class="col-6 mt-2">
-                        <input type="radio" name="subject_vat" value="0">
-                        <label for="subject_vat" class="form-label">Niet BTW-plichtig</label>
                         <input type="radio" name="subject_vat" value="1">
+                        <label for="subject_vat" class="form-label">Niet BTW-plichtig</label>
+                        <input type="radio" name="subject_vat" value="2">
                         <label for="subject_vat" class="form-label">BTW-nummer in aanvraag</label>
                     </div>
                 </div>
@@ -215,7 +219,7 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-6">
-                        <label for="billing_street" class="form-label">Straat <span class="text-danger">*</span></label>
+                        <label for="billing_street" class="form-label">Straat<span class="text-danger">*</span></label>
                         <input type="text" class="form-control @error('billing_street') is-invalid @enderror" id="name" autocomplete="off" placeholder="Straat" name="billing_street" value="{{ old('billing_street') }}" required>
                         @error('billing_street')
                         <span class="invalid-feedback mb-2" role="alert">
@@ -277,11 +281,11 @@
                         <p>Tarief en duur van het contract:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-5">
-                        <input type="radio" name="price_duration" value="0">
-                        <label for="price_duration" class="form-label">Smart Vast 1 jaar</label>
                         <input type="radio" name="price_duration" value="1">
-                        <label for="price_duration" class="form-label">Smart Variabel 1 jaar</label>
+                        <label for="price_duration" class="form-label">Smart Vast 1 jaar</label>
                         <input type="radio" name="price_duration" value="2">
+                        <label for="price_duration" class="form-label">Smart Variabel 1 jaar</label>
+                        <input type="radio" name="price_duration" value="3">
                         <label for="price_duration" class="form-label">Safe Vast 3 jaar</label>
                     </div>
                 </div>
@@ -289,15 +293,15 @@
                 <div class="row mt-2">
                     <div class="col-5">
                         <label for="belgian_electricity" class="form-label">100% groene en Belgische elektriciteit</label>
-                        <input type="checkbox" name="belgian_electricity" value="0">
+                        <input type="checkbox" name="belgian_electricity" value="1">
                     </div>
                     <div class="col-3">
                         <p>Ik heb een digitale meter<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-3">
-                        <input type="radio" name="digital_meter" value="0">
-                        <label for="digital_meter" class="form-label">Ja</label>
                         <input type="radio" name="digital_meter" value="1">
+                        <label for="digital_meter" class="form-label">Ja</label>
+                        <input type="radio" name="digital_meter" value="2">
                         <label for="digital_meter" class="form-label">Nee</label>
                     </div>
                 </div>
@@ -306,22 +310,22 @@
                         <p>Meter:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-5">
-                        <input type="radio" name="counter" value="0">
-                        <label for="counter" class="form-label">Bestaand en open</label>
                         <input type="radio" name="counter" value="1">
-                        <label for="counter" class="form-label">Bestaand en gesloten/verzegeld</label>
+                        <label for="counter" class="form-label">Bestaand en open</label>
                         <input type="radio" name="counter" value="2">
+                        <label for="counter" class="form-label">Bestaand en gesloten/verzegeld</label>
+                        <input type="radio" name="counter" value="3">
                         <label for="counter" class="form-label">Nieuw</label>
                     </div>
                     <div class="col-2">
                         <p>Metertype:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="counter_type" value="0">
-                        <label for="counter_type'" class="form-label">Enkelvoudig</label>
                         <input type="radio" name="counter_type" value="1">
-                        <label for="counter_type'" class="form-label">Tweevoudig</label>
+                        <label for="counter_type'" class="form-label">Enkelvoudig</label>
                         <input type="radio" name="counter_type" value="2">
+                        <label for="counter_type'" class="form-label">Tweevoudig</label>
+                        <input type="radio" name="counter_type" value="3">
                         <label for="counter_type" class="form-label">Exclusief nacht</label>
                     </div>
                 </div>
@@ -380,9 +384,9 @@
                         <p>Zonnepanelen of andere productie-eenheid<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-2">
-                        <input type="radio" name="solar_other_facility" value="0">
-                        <label for="solar_other_facility" class="form-label">Ja</label>
                         <input type="radio" name="solar_other_facility" value="1">
+                        <label for="solar_other_facility" class="form-label">Ja</label>
+                        <input type="radio" name="solar_other_facility" value="2">
                         <label for="solar_other_facility" class="form-label">Nee</label>
                     </div>
                     <div class="col-3">
@@ -397,11 +401,11 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-2">
-                        <input type="radio" name="house_move" value="0">
+                        <input type="radio" name="house_move" value="1">
                         <label for="house_move" class="form-label">Leegstand</label>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="house_move" value="0">
+                        <input type="radio" name="house_move" value="2">
                         <label for="house_move" class="form-label"> Ik verhuis/ik ben verhuisd naar dit adres</label>
                     </div>
                     <div class="col-6">
@@ -415,9 +419,9 @@
                         <p>Tarief en duur van het contract<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="price_duration_contract" value="0">
-                        <label for="price_duration_contract" class="form-label">Smart Vast 1 jaar</label>
                         <input type="radio" name="price_duration_contract" value="1">
+                        <label for="price_duration_contract" class="form-label">Smart Vast 1 jaar</label>
+                        <input type="radio" name="price_duration_contract" value="2">
                         <label for="price_duration_contract" class="form-label">Smart Variabel 1 jaar</label>
                     </div>
                 </div>
@@ -429,11 +433,11 @@
                         <p>Meter:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-5">
-                        <input type="radio" name="counter1" value="0">
-                        <label for="counter1" class="form-label">Bestaand en open</label>
                         <input type="radio" name="counter1" value="1">
-                        <label for="counter1" class="form-label">Bestaand en gesloten/verzegeld</label>
+                        <label for="counter1" class="form-label">Bestaand en open</label>
                         <input type="radio" name="counter1" value="2">
+                        <label for="counter1" class="form-label">Bestaand en gesloten/verzegeld</label>
+                        <input type="radio" name="counter1" value="3">
                         <label for="counter1" class="form-label">Nieuw</label>
                     </div>
                 </div>
@@ -464,11 +468,11 @@
                 </div>
                 <div class="row mt-2">
                     <div class="col-2">
-                        <input type="radio" name="house_move1" value="0">
+                        <input type="radio" name="house_move1" value="1">
                         <label for="house_move1" class="form-label">Leegstand</label>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="house_move1" value="0">
+                        <input type="radio" name="house_move1" value="2">
                         <label for="house_move1" class="form-label">Ik verhuis/ik ben verhuisd naar dit adres</label>
                     </div>
                     <div class="col-6">
@@ -485,11 +489,11 @@
                         <p>Facturatie voorschotbedrag:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-5">
-                        <input type="radio" name="installment_frequency" value="0">
-                        <label for="installment_frequency" class="form-label">maandelijks</label>
                         <input type="radio" name="installment_frequency" value="1">
-                        <label for="installment_frequency" class="form-label">tweemaandelijks</label>
+                        <label for="installment_frequency" class="form-label">maandelijks</label>
                         <input type="radio" name="installment_frequency" value="2">
+                        <label for="installment_frequency" class="form-label">tweemaandelijks</label>
+                        <input type="radio" name="installment_frequency" value="3">
                         <label for="installment_frequency" class="form-label">driemaandelijks</label>
                     </div>
                 </div>
@@ -498,14 +502,14 @@
                         <p>Betalingswijze:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="payment_method" value="0">
-                        <label for="payment_method" class="form-label">per domiciliëring</label>
                         <input type="radio" name="payment_method" value="1">
+                        <label for="payment_method" class="form-label">per domiciliëring</label>
+                        <input type="radio" name="payment_method" value="2">
                         <label for="payment_method" class="form-label">per overschrijving
                         </label>
                     </div>
                     <div class="col-6">
-                        <input type="checkbox" name="invoices" value="0">
+                        <input type="checkbox" name="invoices" value="1">
                         <label for="payment_method" class="form-label">Ik wens toch alle voorschotfacturen te ontvangen</label>
                     </div>
                 </div>
@@ -514,9 +518,9 @@
                         <p>Verzending facturen:<span class="text-danger">*</span> </p>
                     </div>
                     <div class="col-4">
-                        <input type="radio" name="send_invoices" value="0">
-                        <label for="send_invoices" class="form-label">per e-mail</label>
                         <input type="radio" name="send_invoices" value="1">
+                        <label for="send_invoices" class="form-label">per e-mail</label>
+                        <input type="radio" name="send_invoices" value="2">
                         <label for="send_invoices" class="form-label">per post</label>
                     </div>
                 </div>
@@ -548,31 +552,13 @@
                     Ik ga akkoord met het algemeen privacy beleid van OCTA+ (terug te vinden op https://www.yourprivacy.be/nl/octaplus).
                 </p>
                 <div class="mt-2">
-                    <input type="checkbox" name="information" value="0">
+                    <input type="checkbox" name="information" value="1">
                     <label for="information" class="form-label">Ik wens informatie over bijkomende producten en diensten van OCTA+ te ontvangen</label>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-4">
-                        <label for="signature" class="form-label">Handtekening klant:<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening klant" name="signature" value="{{ old('signature') }}" required></textarea>
-                        @error('signature')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="col-4 mt-4">
-                        <textarea type="text" rows="5" class="form-control @error('octa') is-invalid @enderror" id="the" autocomplete="off" placeholder="Voor OCTA+ Energie n.v." name="octa" value="{{ old('octa') }}" required></textarea>
-                        @error('signature')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="col-4">
-                        <label for="date">Datum<span class="text-danger">*</span></label>
-                        <input class="form-control @error('date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
-                    </div>
+                    <label for="date">Datum<span class="text-danger">*</span></label>
+                    <input class="form-control @error('date') is-invalid @enderror" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy" inputmode="numeric" id="date" name="date" value="{{ old('date') }}" type="date">
+
                 </div>
                 <p class="text-justify mt-2">De consument heeft het recht om af te zien van deze leveringsovereenkomst zonder kosten en zonder opgave van een motief door een aangetekende brief te richten aan OCTA+ Energie binnen de
                     14 kalenderdagen vanaf de ontvangst van de contractbevestiging door de klant, of door het formulier voor herroeping dat te vinden is op https://www.octaplus.be/nl/elektriciteit-aardgas/tarieven/ in te vullen.
@@ -645,15 +631,6 @@
                 </div>
                 <p class="mt-2">Nr onderliggend contract : uw klantennummer (dit wordt later meegedeeld)</p>
                 <div class="row mt-2">
-                    <div class="col-4">
-                        <label for="signature1" class="form-label">Handtekening (van schuldenaar):<span class="text-danger">*</span></label>
-                        <textarea type="text" rows="5" class="form-control @error('signature1') is-invalid @enderror" id="the" autocomplete="off" placeholder="Handtekening (van schuldenaar)" name="signature1" value="{{ old('signature1') }}" required></textarea>
-                        @error('signature1')
-                        <span class="invalid-feedback mb-2" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
                     <div class="col-4">
                         <label for="place" class="form-label">Plaats:<span class="text-danger">*</span></label>
                         <input type="text" class="form-control @error('place') is-invalid @enderror" id="bic_code" autocomplete="off" placeholder="Lieu" name="place" value="{{ old('place') }}" required>
