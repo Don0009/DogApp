@@ -127,14 +127,14 @@ class MobilePhoneController extends Controller
         if ($request->lang == 'du') {
             $pdf = new Pdf(public_path('unfilled_forms/orange/MPDU.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' =>'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
             ]);
         } else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/MPFR.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
             ]);
         }
 

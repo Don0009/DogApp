@@ -15,19 +15,27 @@
         </form>
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="flag-icon flag-icon-us mt-1" title="us"></i> <span class="font-weight-medium ml-1 mr-1">English</span>
+                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="flag-icon flag-icon-us mt-1" title="us"></i> <span
+                        class="font-weight-medium ml-1 mr-1">English</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> <span class="ml-1"> English </span></a>
-                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i> <span class="ml-1"> French </span></a>
-                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-de" title="de" id="de"></i> <span class="ml-1"> German </span></a>
-                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-pt" title="pt" id="pt"></i> <span class="ml-1"> Portuguese </span></a>
-                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-es" title="es" id="es"></i> <span class="ml-1"> Spanish </span></a>
+                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-us" title="us"
+                            id="us"></i> <span class="ml-1"> English </span></a>
+                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-fr" title="fr"
+                            id="fr"></i> <span class="ml-1"> French </span></a>
+                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-de" title="de"
+                            id="de"></i> <span class="ml-1"> German </span></a>
+                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-pt" title="pt"
+                            id="pt"></i> <span class="ml-1"> Portuguese </span></a>
+                    <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-es" title="es"
+                            id="es"></i> <span class="ml-1"> Spanish </span></a>
                 </div>
             </li>
             <li class="nav-item dropdown nav-apps">
-                <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     <i data-feather="grid"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="appsDropdown">
@@ -57,7 +65,8 @@
                 </div>
             </li>
             <li class="nav-item dropdown nav-messages">
-                <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     <i data-feather="mail"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="messageDropdown">
@@ -133,7 +142,8 @@
                 </div>
             </li>
             <li class="nav-item dropdown nav-notifications">
-                <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i data-feather="bell"></i>
                     <div class="indicator">
                         <div class="circle"></div>
@@ -197,8 +207,11 @@
                 </div>
             </li>
             <li class="nav-item dropdown nav-profile">
-                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="https://via.placeholder.com/30x30" alt="profile">
+                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    {{-- inserrt image here --}}
+                    <img class="" style="text-align: center; margin:0 auto;" class="img-responsive"
+                        src="{{ asset('images/icons/logo.jpg') }}" height="25px" width="25px" alt="">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="profileDropdown">
                     <div class="dropdown-header d-flex flex-column align-items-center">
@@ -206,8 +219,8 @@
                             <img src="https://via.placeholder.com/80x80" alt="">
                         </div>
                         <div class="info text-center">
-                            <p class="name font-weight-bold mb-0">{{Auth::user()->name}}</p>
-                            <p class="email text-muted mb-3">{{Auth::user()->email}}</p>
+                            <p class="name font-weight-bold mb-0">{{ Auth::user()->name }}</p>
+                            <p class="email text-muted mb-3">{{ Auth::user()->email }}</p>
                         </div>
                     </div>
                     <div class="dropdown-body">
@@ -231,7 +244,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('logout')}}"><i data-feather="log-out"></i> <span>Log Out</span></a>
+                                <a class="nav-link" href="{{ url('logout') }}"><i data-feather="log-out"></i>
+                                    <span>Log Out</span></a>
                             </li>
                         </ul>
                     </div>

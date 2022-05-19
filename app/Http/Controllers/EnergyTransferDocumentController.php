@@ -178,7 +178,7 @@ class EnergyTransferDocumentController extends Controller
                 $message->from('no-reply@ecosafety.nyc');
             });
             // Mail Code Ends
-                    dd($mail);
+
 
 
 
