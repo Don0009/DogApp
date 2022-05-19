@@ -17,6 +17,10 @@
     </div>
 
     <div class="row">
+        {{-- Branding --}}
+        <img class="mt-3 mb-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+            src="{{ asset('images/brands/luminus_logo.jpeg') }}" height="75px" width="150px" alt="">
+        {{-- Branding ENd --}}
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">

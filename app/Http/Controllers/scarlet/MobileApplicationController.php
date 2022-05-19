@@ -143,12 +143,14 @@ class MobileApplicationController extends Controller
 
             $pdf = new Pdf(public_path('unfilled_forms/scarlet/SM_FR.pdf'), [
 
-                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
+                'command' => env('PDFTK_PATH'),
+
             ]);
         } else {
             $pdf = new Pdf(public_path('unfilled_forms/scarlet/SM_DU.pdf'), [
 
-                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
+                'command' => env('PDFTK_PATH'),
+
             ]);
         }
         $data = $request->all();

@@ -131,7 +131,9 @@ class LumResComfyController extends Controller
             //            'command' => '/some/other/path/to/pdftk',
                         // or on most Windows systems:
                         // 'command' => '/usr/bin/pdftk',
-                       'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+
+                'command' => env('PDFTK_PATH'),
+
             //            'useExec' => true,  // May help on Windows systems if execution fails
 
         ]);

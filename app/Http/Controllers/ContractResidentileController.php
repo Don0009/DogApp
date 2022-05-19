@@ -175,7 +175,9 @@ class ContractResidentileController extends Controller
         $pdf = new Pdf(public_path('notfill.pdf'), [
 //            'command' => '/some/other/path/to/pdftk',
             // or on most Windows systems:
-            'command' => '\snap\bin\pdftk',
+
+            'command' => env('PDFTK_PATH'),
+
 //            'useExec' => true,  // May help on Windows systems if execution fails
         ]);
 

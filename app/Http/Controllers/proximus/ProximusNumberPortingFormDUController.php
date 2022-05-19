@@ -159,7 +159,8 @@ class ProximusNumberPortingFormDUController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/proximus/number_porting_du/NPDU10.pdf'), [
 
-            'command' => "C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe",
+            'command' => env('PDFTK_PATH'),
+
 
         ]);
 

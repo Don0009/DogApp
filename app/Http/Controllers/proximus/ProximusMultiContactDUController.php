@@ -197,7 +197,8 @@ class ProximusMultiContactDUController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
 
-            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe'
+            'command' => env('PDFTK_PATH'),
+
 
         ]);
 

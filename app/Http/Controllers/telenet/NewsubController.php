@@ -103,9 +103,7 @@ class NewsubController extends Controller
         // Validation Ends
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/new_sub_notfill.pdf'), [
-            //            'command' => '/some/other/path/to/pdftk',
-            // or on most Windows systems:
-            // 'command' => '/usr/bin/pdftk',
+
             'command' => env('PDFTK_PATH'),
             //            'useExec' => true,  // May help on Windows systems if execution fails
 

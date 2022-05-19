@@ -17,6 +17,10 @@
     </div>
 
     <div class="row">
+        {{-- Branding --}}
+        <img class="mt-3 mb-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+            src="{{ asset('images/brands/mega_logo.jpeg') }}" height="75px" width="190px" alt="">
+        {{-- Branding ENd --}}
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
@@ -79,33 +83,33 @@
                                     <th>meter_2</th>
                                     <th>meter_nummer_2</th>
                                     <th>meter_stand_2</th>
-                                      <th>annual_consumption_1</th>
+                                    <th>annual_consumption_1</th>
                                     <th>current_supplier_1</th>
                                     <th>start_date_1</th>
                                     <th>meter_3</th>
                                     <th>current_supplier_2</th>
                                     <th>transfer</th>
                                     <th>settlement_invoices</th>
-                                  <th>account_number</th>
-                                  <th>monthly</th>
-                                  <th>per_post</th>
-                                  <th>wish_to_receive</th>
-                                  <th>name_and_first</th>
-                                  <th>name_and_first_1</th>
-                                  <th>account_number_1</th>
-                                  <th>bic</th>
-                                  <th>datum</th>
-                                  <th>place</th>
-                                  <th>file_1</th>
-                                  <th>read_mega</th>
-                                  <th>datum_1</th>
-                                  <th>place_1</th>
-                                  <th>file_2</th>
-                                  <th>file_3</th>
-                                  <th>aan_mega</th>
-                                  <th>agent</th>
-                                  <th>reference_1</th>
-                                  <th>fill_4</th>
+                                    <th>account_number</th>
+                                    <th>monthly</th>
+                                    <th>per_post</th>
+                                    <th>wish_to_receive</th>
+                                    <th>name_and_first</th>
+                                    <th>name_and_first_1</th>
+                                    <th>account_number_1</th>
+                                    <th>bic</th>
+                                    <th>datum</th>
+                                    <th>place</th>
+                                    <th>file_1</th>
+                                    <th>read_mega</th>
+                                    <th>datum_1</th>
+                                    <th>place_1</th>
+                                    <th>file_2</th>
+                                    <th>file_3</th>
+                                    <th>aan_mega</th>
+                                    <th>agent</th>
+                                    <th>reference_1</th>
+                                    <th>fill_4</th>
                                     <th>
                                         Created At
                                     </th>
@@ -203,8 +207,7 @@
                                             {{ \Carbon\Carbon::parse($internet_tv->updated_at)->diffForhumans() }}
                                         </td> --}}
                                         <td>
-                                            <form class="d-inline-block"
-                                                action="{{ route('mega.destroy', $mega->id) }}"
+                                            <form class="d-inline-block" action="{{ route('mega.destroy', $mega->id) }}"
                                                 method="POST">
                                                 @csrf
                                                 @method('DELETE')
