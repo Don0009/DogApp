@@ -170,15 +170,15 @@ class OrangeInternetTvController extends Controller
         if ($request->lang == 'fr') {
             $pdf = new Pdf(public_path('unfilled_forms/orange/ITV.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => "C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe",
 
 
             ]);
         } else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/ITVDU.pdf'), [
 
-                'command' =>env('PDFTK_PATH'),]);
-
+                'command' =>"C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe",
+            ]);
 
         }
 
@@ -193,17 +193,17 @@ class OrangeInternetTvController extends Controller
             ->saveAs($pdf_name);
 
 //Mail
-        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
-            $message->to('degis9000@gmail.com')
-                ->subject("You have got new Internet TV Lead...!")
-                ->cc(['lasha@studiodlvx.be'])
-//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
-                ->attach(public_path($pdf_name), [
-                    'as' => 'Internet TV Lead!.pdf',
-                    'mime' => 'application/pdf',
-                ]);
-            $message->from('no-reply@ecosafety.nyc');
-        });
+//         $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+//             $message->to('degis9000@gmail.com')
+//                 ->subject("You have got new Internet TV Lead...!")
+//                 ->cc(['lasha@studiodlvx.be'])
+// //                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+//                 ->attach(public_path($pdf_name), [
+//                     'as' => 'Internet TV Lead!.pdf',
+//                     'mime' => 'application/pdf',
+//                 ]);
+//             $message->from('no-reply@ecosafety.nyc');
+//         });
 // Mail Code Ends
 
 
@@ -217,7 +217,7 @@ class OrangeInternetTvController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Orange Internet TV Lead';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
+        //unlink(public_path($pdf_name));
 
         return redirect()->route('internet_tv.index')->with('success', 'Internet Tv created successfully!');
     }
