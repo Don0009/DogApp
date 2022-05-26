@@ -95,7 +95,7 @@
                                 class="form-control @error('customer_other_network_number') is-invalid @enderror"
                                 id="customer_other_network_number" autocomplete="off"
                                 placeholder="Klantennummer
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                bij de andere operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                bij de andere operator"
                                 name="customer_other_network_number" value="{{ old('customer_other_network_number') }}"
                                 required>
                             @error('customer_other_network_number')
@@ -232,14 +232,7 @@
                                 <tr>
                                     <td scope="row">
 
-                                        {{-- <div class="form-group mb-0">
 
-                                            <input name="gsm_num_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('gsm_num_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div> --}}
 
 
                                     </td>
@@ -285,8 +278,8 @@
                                         Abonnment
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_7" value="1" required>
-                                            <label for="subscription_7" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_7" value="1" required>
+                                            <label for="reload_card_7" class="form-label"> </label>
 
                                         </div>
                                         {{-- test --}}
@@ -340,8 +333,8 @@
                                     <td scope="row">
                                         Abonnment
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_2" value="1" required>
-                                            <label for="subscription_2" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_2" value="1" required>
+                                            <label for="reload_card_2" class="form-label"> </label>
 
                                         </div>
 
@@ -409,8 +402,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_3" value="1" required>
-                                            <label for="subscription_3" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_3" value="1" required>
+                                            <label for="reload_card_3" class="form-label"> </label>
 
                                         </div>
 
@@ -476,8 +469,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_4" value="1" required>
-                                            <label for="subscription_4" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_4" value="1" required>
+                                            <label for="reload_card_4" class="form-label"> </label>
 
                                         </div>
 
@@ -550,8 +543,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_5" value="1" required>
-                                            <label for="subscription_5" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_5" value="1" required>
+                                            <label for="reload_card_5" class="form-label"> </label>
 
                                         </div>
 
@@ -624,8 +617,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_6" value="1" required>
-                                            <label for="subscription_6" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_6" value="1" required>
+                                            <label for="reload_card_6" class="form-label"> </label>
 
                                         </div>
 
@@ -692,8 +685,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_8" value="1" required>
-                                            <label for="subscription_8" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_8" value="1" required>
+                                            <label for="reload_card_8" class="form-label"> </label>
 
                                         </div>
 
@@ -733,7 +726,7 @@
                                 class="form-control @error('land_line_to_be_ported') is-invalid @enderror"
                                 id="land_line_to_be_ported" autocomplete="off"
                                 placeholder="Over te
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dragen vaste telefoonnummers van operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dragen vaste telefoonnummers van operator"
                                 name="land_line_to_be_ported" value="{{ old('land_line_to_be_ported') }}" required>
                             @error('land_line_to_be_ported')
                                 <span class="invalid-feedback mb-2" role="alert">

@@ -3,8 +3,11 @@
 @section('content')
     <div>
 
-        <img style="text-align: center;" class="img-responsive rounded mx-auto d-block mb-5"
-            src="{{ asset('images/brands/telenet_brand.jpeg') }}" alt="" height="75px" width="330">
+        {{-- Branding --}}
+        <img class="mt-3 mb-3 d-block" style="text-align: center; margin:0 auto;" class="img-responsive"
+            src="{{ asset('images/brands/telenet_logo.jpeg') }}" height="75px" width="auto" alt="">
+        {{-- Branding ENd --}}
+
     </div>
 
 

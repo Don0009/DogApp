@@ -127,7 +127,7 @@ class MobilePhoneController extends Controller
         if ($request->lang == 'du') {
             $pdf = new Pdf(public_path('unfilled_forms/orange/MPDU.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
 
@@ -135,7 +135,7 @@ class MobilePhoneController extends Controller
         } else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/MPFR.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
             ]);
         }
@@ -174,7 +174,7 @@ class MobilePhoneController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Number Porting Lead!';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
+       // unlink(public_path($pdf_name));
 
         return redirect()->route('mobile_phone.index')->with('success', 'Mobile Phone Lead created successfully!');
         // return redirect()->route('number_porting.index');

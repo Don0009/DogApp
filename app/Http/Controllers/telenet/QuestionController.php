@@ -20,8 +20,8 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
-        return view('telenet.question.index');
+        $question =  TelenetQuestion::all();
+        return view('telenet.question.index', compact('question'));
     }
 
     /**
@@ -87,11 +87,9 @@ class QuestionController extends Controller
         // Validation Ends
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/telenet_question_nofill.pdf'), [
-            //            'command' => '/some/other/path/to/pdftk',
-            // or on most Windows systems:
-            // 'command' => '/usr/bin/pdftk',
-            'command' => env('PDFTK_PATH'),
-            //            'useExec' => true,  // May help on Windows systems if execution fails
+
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+
 
         ]);
 
@@ -133,6 +131,8 @@ class QuestionController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator);
         }
+
+        return redirect()->route('telenet_question.index')->with('success', 'Telenet Questions Lead created successfully!');
 
 
     }

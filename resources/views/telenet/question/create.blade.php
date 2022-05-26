@@ -35,8 +35,10 @@
             <div class="col-md-12">
                 <div class="card">
 
-                    <img class="mt-3" style="text-align: center; margin:0 auto;" class="img-responsive"
-                        src="{{ asset('images/brands/telenet_brand.jpeg') }}" height="75px" width="330" alt="">
+                    {{-- Branding --}}
+                    <img class="mt-3 mb-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+                        src="{{ asset('images/brands/telenet_logo.jpeg') }}" height="75px" width="330" alt="">
+                    {{-- Branding ENd --}}
 
                     <h3 class="card-header mb-2" style="text-align: center; color:#F8C200">
 

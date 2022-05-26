@@ -188,7 +188,7 @@ class MobileApplicationController extends Controller
         $lead_data['EMAIL'] = $scarlet->mail;
         $lead_data['LEAD_NAME'] = 'Application Form Lead!';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
+       // unlink(public_path($pdf_name));
 
         return redirect()->route('mobile_application_form.index')->with('success', 'Appliction Form created successfully!');
     }

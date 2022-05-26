@@ -21,7 +21,8 @@ class ContractAppController extends Controller
     public function index()
     {
         //app\Http\Controllers\telenet\ContractAppController.php
-        return view('telenet.contract_app.index');
+        $contract = ContractApp::all();
+        return view('telenet.contract_app.index', compact('contract'));
     }
 
     /**
@@ -85,11 +86,9 @@ class ContractAppController extends Controller
         // Validation Ends
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
-            //            'command' => '/some/other/path/to/pdftk',
-            // or on most Windows systems:
-            // 'command' => '/usr/bin/pdftk',
-            'command' => env('PDFTK_PATH'),
-            //            'useExec' => true,  // May help on Windows systems if execution fails
+
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+
 
         ]);
 
@@ -123,7 +122,7 @@ class ContractAppController extends Controller
 // Mail Code Ends
 
 
-        dd($mail);
+       // dd($mail);
 //        dd($result);
 
 
@@ -131,6 +130,8 @@ class ContractAppController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator);
         }
+
+        return redirect()->route('contractapp.index')->with('success', ' Telenet Contract lead created successfully!');
 
 
     }

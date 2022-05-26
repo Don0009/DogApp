@@ -200,7 +200,7 @@ class ProximusConnectionRequestFRController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/proximus/connection_request_fr/FCR17.pdf'), [
 
-            'command' => env('PDFTK_PATH'),
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
         ]);

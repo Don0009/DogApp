@@ -195,13 +195,14 @@ class ProximusMultiContactDUController extends Controller
        // dd($data);
 
 
-        $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/proximus/multi_contact/MCFR8.pdf'), [
 
-            'command' => env('PDFTK_PATH'),
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
         ]);
 
+       // dd($pdf);
 
 
         $data = $request->all();
@@ -238,7 +239,7 @@ class ProximusMultiContactDUController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Proximus Multi Contact (French) Lead';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
+        //unlink(public_path($pdf_name));
 
 
 

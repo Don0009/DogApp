@@ -170,7 +170,7 @@ class OrangeInternetTvController extends Controller
         if ($request->lang == 'fr') {
             $pdf = new Pdf(public_path('unfilled_forms/orange/ITV.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
 
@@ -178,7 +178,7 @@ class OrangeInternetTvController extends Controller
         } else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/ITVDU.pdf'), [
 
-                'command' => env('PDFTK_PATH'),
+                'command' =>'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
             ]);
 

@@ -118,7 +118,7 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="sim_type_r" value="0" required>
+                            <input type="radio" name="sim_type_r" value="1" required>
                             <label for="sim_type_r" class="form-label">Normaal</label>
                         </div>
 
@@ -492,7 +492,7 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="sim_type_r_2" value="0" required>
+                            <input type="radio" name="sim_type_r_2" value="1" required>
                             <label for="sim_type_r_3" class="form-label">Normal</label>
                         </div>
 
@@ -503,7 +503,7 @@
                             <input type="sim_num_2" class="form-control @error('sim_num_2') is-invalid @enderror"
                                 id="sim_num_2" autocomplete="off"
                                 placeholder="Sim
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                nr"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    nr"
                                 name="sim_num_2" value="{{ old('sim_num_2') }}" required>
                             @error('sim_num_2')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -889,7 +889,7 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="sim_type_r_3" value="0" required>
+                            <input type="radio" name="sim_type_r_3" value="1" required>
                             <label for="sim_type_r_3" class="form-label">Normal</label>
                         </div>
 
@@ -1289,7 +1289,7 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="sim_type_r_4" value="0" required>
+                            <input type="radio" name="sim_type_r_4" value="1" required>
                             <label for="sim_type_r_4" class="form-label">Normal</label>
                         </div>
 
@@ -1654,7 +1654,7 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="sim_type_r_5" value="0" required>
+                            <input type="radio" name="sim_type_r_5" value="1" required>
                             <label for="sim_type_r_5" class="form-label">Normal</label>
                         </div>
 
@@ -3896,7 +3896,7 @@
                                 class="form-control @error('additional_license') is-invalid @enderror"
                                 id="additional_license" autocomplete="off"
                                 placeholder="Extra licenties in een Pack of met Bizz Call Connect
-                                                                                                                                                                                                                    (buiten pack)"
+                                                                                                                                                                                                                        (buiten pack)"
                                 name="additional_license" value="{{ old('additional_license') }}" required>
                             @error('additional_license')
                                 <span class="invalid-feedback mb-2" role="alert">

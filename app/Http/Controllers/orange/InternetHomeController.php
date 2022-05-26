@@ -124,7 +124,7 @@ class InternetHomeController extends Controller
             $pdf = new Pdf(public_path('unfilled_forms/orange/IHFR.pdf'), [
 
 
-                'command' => env('PDFTK_PATH'),
+                'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
             ]);
@@ -136,7 +136,7 @@ class InternetHomeController extends Controller
         else {
             $pdf = new Pdf(public_path('unfilled_forms/orange/IHDU.pdf'), [
 
-                    'command' => env('PDFTK_PATH'),
+                    'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
                 ]
             );
 
@@ -184,7 +184,7 @@ class InternetHomeController extends Controller
 
 
 
-        unlink(public_path($pdf_name));
+       // unlink(public_path($pdf_name));
 
 
 

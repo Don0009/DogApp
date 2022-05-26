@@ -43,9 +43,7 @@
                                     <th>
                                         SIM CARD OTHER OPERATOR
                                     </th>
-                                    <th>
-                                        Date and signature of the Customer
-                                    </th>
+
 
 
                                     <th>
@@ -65,9 +63,25 @@
 
                                         <td>{{ $item->call_number_1 }}</td>
                                         <td>{{ $item->sim_card_other_operator_1 }}</td>
-                                        <td>{{ $item->date_signature_customer }}</td>
-                                        <td>{{ $item->created_at }}</td>
 
+
+
+                                        <td>
+                                            {{ \Carbon\Carbon::parse($item->created_at)->diffForhumans() }}
+                                        </td>
+
+                                        <td>
+                                            <form class="d-inline-block"
+                                                action="{{ route('telenet_new_subs.destroy', $item->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-icon-text">
+                                                    <i class="btn-icon-prepend" data-feather="trash"></i> Delete
+                                                </button>
+                                            </form>
+
+
+                                        </td>
                                     </tr>
                                 @endforeach
 

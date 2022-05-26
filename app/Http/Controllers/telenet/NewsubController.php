@@ -104,7 +104,7 @@ class NewsubController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/telenet/new_sub_notfill.pdf'), [
 
-            'command' => env('PDFTK_PATH'),
+            'command' =>  'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
             //            'useExec' => true,  // May help on Windows systems if execution fails
 
         ]);
@@ -147,6 +147,8 @@ class NewsubController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator);
         }
+
+        return redirect()->route('telenet_new_subs.index')->with('success', ' Telenet New Subscription lead created successfully!');
 
 
     } // end

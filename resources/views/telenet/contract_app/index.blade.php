@@ -5,7 +5,7 @@
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Internet Tv</li>
+                <li class="breadcrumb-item active" aria-current="page">Telenet</li>
                 <li class="breadcrumb-item active" aria-current="page">Contract Application</li>
             </ol>
         </nav>
@@ -36,43 +36,59 @@
                                     <th>
                                         #
                                     </th>
+                                    <th>
+                                        NAME
+                                    </th>
 
                                     <th>
                                         FIRST NAME
                                     </th>
+
                                     <th>
                                         CONTACT NUMBER
                                     </th>
-                                    <th>
-                                        EMAIL ADDRESS
-                                    </th>
+
 
                                     <th>
                                         CREATED AT
                                     </th>
-                                    <th>
-                                        UPDATED AT
-                                    </th>
+
                                     <th>
                                         ACTIONS
                                     </th>
                                 </tr>
 
-                                <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>
-                                        <a href="" class="btn btn-sm btn-dark">Delete</a>
-                                    </td>
-
-                                </tr>
                             </thead>
                             <tbody>
+                                @foreach ($contract as $key => $contract)
+                                    <tr>
+                                        <td>{{ ++$key }}</td>
+                                        <td>{{ $contract->name }}</td>
+                                        <td>{{ $contract->first_name }}</td>
+                                        <td>{{ $contract->contact_number }}</td>
 
+
+
+
+
+                                        <td>
+                                            {{ \Carbon\Carbon::parse($contract->created_at)->diffForhumans() }}
+                                        </td>
+
+                                        <td>
+                                            <form class="d-inline-block"
+                                                action="{{ route('contractapp.destroy', $contract->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-icon-text">
+                                                    <i class="btn-icon-prepend" data-feather="trash"></i> Delete
+                                                </button>
+                                            </form>
+
+
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

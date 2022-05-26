@@ -148,7 +148,7 @@ class NumberPortingController extends Controller
 
         $pdf = new Pdf(public_path('unfilled_forms/orange/NPF.pdf'), [
 
-            'command' => env('PDFTK_PATH'),
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
         ]);

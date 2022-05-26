@@ -77,7 +77,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="client_num"
                                             class="form-control @error('client_num') is-invalid @enderror" id="client_num"
-                                            autocomplete="off" placeholder="Client Number" name="client_num"
+                                            autocomplete="off" placeholder="N° de client: 1 -" name="client_num"
                                             value="{{ old('client_num') }}" required>
                                         @error('client_num')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -90,7 +90,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="exist_phone"
                                             class="form-control @error('exist_phone') is-invalid @enderror" id="exist_phone"
-                                            autocomplete="off" placeholder="phone" name="exist_phone"
+                                            autocomplete="off" placeholder="N° de GSM" name="exist_phone"
                                             value="{{ old('exist_phone') }}" required>
                                         @error('exist_phone')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -178,7 +178,7 @@
                                         <label for="name" class="form-label">Nom<span
                                                 class="text-danger">*</span></label>
                                         <input type="name" class="form-control @error('name') is-invalid @enderror"
-                                            id="name" autocomplete="off" placeholder="Name" name="name"
+                                            id="name" autocomplete="off" placeholder="Nom" name="name"
                                             value="{{ old('name') }}" required>
                                         @error('name')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -190,7 +190,7 @@
                                         <label for="f_name" class="form-label">Prénom<span
                                                 class="text-danger">*</span></label>
                                         <input type="f_name" class="form-control @error('f_name') is-invalid @enderror"
-                                            id="f_name" autocomplete="off" placeholder="First Name" name="f_name"
+                                            id="f_name" autocomplete="off" placeholder="Prénom" name="f_name"
                                             value="{{ old('f_name') }}" required>
                                         @error('f_name')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -214,7 +214,7 @@
                                                 <label for="no" class="form-label">N°<span
                                                         class="text-danger">*</span></label>
                                                 <input type="no" class="form-control @error('no') is-invalid @enderror"
-                                                    id="no" autocomplete="off" placeholder="No" name="no"
+                                                    id="no" autocomplete="off" placeholder="N°" name="no"
                                                     value="{{ old('no') }}" required>
                                             </div>
                                         </div>
@@ -223,7 +223,7 @@
                                                 <label for="box" class="form-label">Bte<span
                                                         class="text-danger">*</span></label>
                                                 <input type="box" class="form-control @error('box') is-invalid @enderror"
-                                                    id="box" autocomplete="off" placeholder="Box" name="box"
+                                                    id="box" autocomplete="off" placeholder="Bte" name="box"
                                                     value="{{ old('box') }}" required>
                                             </div>
                                         </div>
@@ -235,7 +235,7 @@
                                                 <label for="town" class="form-label">Ville<span
                                                         class="text-danger">*</span></label>
                                                 <input type="town" class="form-control @error('town') is-invalid @enderror"
-                                                    id="town" autocomplete="off" placeholder="Town" name="town"
+                                                    id="town" autocomplete="off" placeholder="Ville" name="town"
                                                     value="{{ old('town') }}" required>
                                             </div>
                                         </div>
@@ -245,7 +245,7 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="postal_code"
                                                     class="form-control @error('postal_code') is-invalid @enderror"
-                                                    id="postal_code" autocomplete="off" placeholder="Postal Code"
+                                                    id="postal_code" autocomplete="off" placeholder="Code Postale"
                                                     name="postal_code" value="{{ old('postal_code') }}" required>
                                             </div>
                                         </div>
@@ -257,7 +257,7 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="country"
                                                     class="form-control @error('country') is-invalid @enderror"
-                                                    id="country" autocomplete="off" placeholder="Country" name="country"
+                                                    id="country" autocomplete="off" placeholder="Pays" name="country"
                                                     value="{{ old('country') }}" required>
                                             </div>
                                         </div>
@@ -294,7 +294,7 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="company_number"
                                                     class="form-control @error('company_number') is-invalid @enderror"
-                                                    id="company_number" autocomplete="off" placeholder="Company Number"
+                                                    id="company_number" autocomplete="off" placeholder="N° d’entreprise"
                                                     name="company_number" value="{{ old('company_number') }}" required>
 
                                             </div>
@@ -305,7 +305,7 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="legal_status"
                                                     class="form-control @error('legal_status') is-invalid @enderror"
-                                                    id="legal_status" autocomplete="off" placeholder="Legal Status"
+                                                    id="legal_status" autocomplete="off" placeholder="Forme juridique"
                                                     name="legal_status" value="{{ old('legal_status') }}" required>
                                             </div>
                                         </div>
@@ -315,7 +315,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="company_name"
                                             class="form-control @error('company_name') is-invalid @enderror"
-                                            id="company_name" autocomplete="off" placeholder="Company Name"
+                                            id="company_name" autocomplete="off" placeholder="Nom de société"
                                             name="company_name" value="{{ old('company_name') }}" required>
                                         @error('company_name')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -347,8 +347,8 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="comp_street"
                                                     class="form-control @error('comp_street') is-invalid @enderror"
-                                                    id="comp_street" autocomplete="off" placeholder="Comp Street"
-                                                    name="comp_street" value="{{ old('comp_street') }}" required>
+                                                    id="comp_street" autocomplete="off" placeholder="Rue" name="comp_street"
+                                                    value="{{ old('comp_street') }}" required>
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -357,7 +357,7 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="comp_no"
                                                     class="form-control @error('comp_no') is-invalid @enderror"
-                                                    id="comp_no" autocomplete="off" placeholder="Comp_No" name="comp_no"
+                                                    id="comp_no" autocomplete="off" placeholder="N°" name="comp_no"
                                                     value="{{ old('comp_no') }}" required>
                                             </div>
                                         </div>
@@ -367,7 +367,7 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="comp_box"
                                                     class="form-control @error('comp_box') is-invalid @enderror"
-                                                    id="comp_box" autocomplete="off" placeholder="Comp Box" name="comp_box"
+                                                    id="comp_box" autocomplete="off" placeholder="Bte" name="comp_box"
                                                     value="{{ old('comp_box') }}" required>
                                             </div>
                                         </div>
@@ -381,7 +381,7 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="comp_postal_code"
                                                     class="form-control @error('comp_postal_code') is-invalid @enderror"
-                                                    id="comp_postal_code" autocomplete="off" placeholder="Comp Postal Code"
+                                                    id="comp_postal_code" autocomplete="off" placeholder="Postal Code"
                                                     name="comp_postal_code" value="{{ old('comp_postal_code') }}"
                                                     required>
                                             </div>
@@ -392,7 +392,7 @@
                                                         class="text-danger">*</span></label>
                                                 <input type="comp_town"
                                                     class="form-control @error('comp_town') is-invalid @enderror"
-                                                    id="comp_town" autocomplete="off" placeholder="Comp Town"
+                                                    id="comp_town" autocomplete="off" placeholder="Ville"
                                                     name="comp_town" value="{{ old('comp_town') }}" required>
                                             </div>
                                         </div>
@@ -402,8 +402,8 @@
                                                 class="text-danger">*</span></label>
                                         <input type="comp_country"
                                             class="form-control @error('comp_country') is-invalid @enderror"
-                                            id="comp_country" autocomplete="off" placeholder="Comp Country"
-                                            name="comp_country" value="{{ old('comp_country') }}" required>
+                                            id="comp_country" autocomplete="off" placeholder="Pays" name="comp_country"
+                                            value="{{ old('comp_country') }}" required>
                                         @error('comp_country')
                                             <span class="invalid-feedback mb-3" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -430,7 +430,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="res_number"
                                             class="form-control @error('res_number') is-invalid @enderror" id="res_number"
-                                            autocomplete="off" placeholder="Comp Country" name="res_number"
+                                            autocomplete="off" placeholder="Numéro Réservé" name="res_number"
                                             value="{{ old('res_number') }}" required>
                                         @error('res_number')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -443,7 +443,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="pricing_plan"
                                             class="form-control @error('pricing_plan') is-invalid @enderror"
-                                            id="pricing_plan" autocomplete="off" placeholder="Comp Country"
+                                            id="pricing_plan" autocomplete="off" placeholder="Plan Tarifaire"
                                             name="pricing_plan" value="{{ old('pricing_plan') }}" required>
                                         @error('pricing_plan')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -455,8 +455,8 @@
                                         <label for="options_services" class="form-label">Option et Services<span
                                                 class="text-danger">*</span></label>
                                         <textarea type="options_services" class="form-control @error('options_services') is-invalid @enderror"
-                                            id="options_services" autocomplete="off" placeholder="Comp Country" row="5"
-                                            name="options_services" value="{{ old('options_services') }}"
+                                            id="options_services" autocomplete="off" placeholder="Option et Services"
+                                            row="5" name="options_services" value="{{ old('options_services') }}"
                                             required></textarea>
                                         @error('options_services')
                                             <span class="invalid-feedback mb-3" role="alert">

@@ -157,25 +157,29 @@ class ProximusNumberPortingFormDUController extends Controller
 
 
 
-        $pdf = new Pdf(public_path('unfilled_forms/proximus/number_porting_du/NPDU10.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/proximus/number_porting_du/NPDU7.pdf'), [
 
-            'command' => env('PDFTK_PATH'),
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
 
         ]);
+
+       //dd($pdf);
 
         $data = $request->all();
         $data = $orange = NumberPortingFormDU::create($data);
 
 
 
-        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
+        $pdf_name = 'pdfs_generated' . now()->timestamp . '.pdf';
+
+        //dd($pdf_name);
 
         $data = $data->toArray();
         $result = $pdf->fillForm($data)->flatten()->needAppearances()
-
             ->saveAs($pdf_name);
 
+dd($result);
 
 
 // //Mail

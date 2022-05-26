@@ -17,44 +17,44 @@ class CreateTelenetNewSubsTable extends Migration
             $table->id();
 
             $table->string('call_number_1');
-            $table->string('call_number_2');
-            $table->string('call_number_3');
-            $table->string('call_number_4');
-            $table->string('call_number_5');
-            $table->string('call_number_6');
-            $table->string('call_number_7');
-            $table->string('call_number_8');
+            $table->string('call_number_2')->nullable();
+            $table->string('call_number_3')->nullable();
+            $table->string('call_number_4')->nullable();
+            $table->string('call_number_5')->nullable();
+            $table->string('call_number_6')->nullable();
+            $table->string('call_number_7')->nullable();
+            $table->string('call_number_8')->nullable();
 
             $table->string('sim_card_other_operator_1');
-            $table->string('sim_card_other_operator_2');
-            $table->string('sim_card_other_operator_3');
-            $table->string('sim_card_other_operator_4');
-            $table->string('sim_card_other_operator_5');
-            $table->string('sim_card_other_operator_6');
-            $table->string('sim_card_other_operator_7');
-            $table->string('sim_card_other_operator_8');
+            $table->string('sim_card_other_operator_2')->nullable();
+            $table->string('sim_card_other_operator_3')->nullable();
+            $table->string('sim_card_other_operator_4')->nullable();
+            $table->string('sim_card_other_operator_5')->nullable();
+            $table->string('sim_card_other_operator_6')->nullable();
+            $table->string('sim_card_other_operator_7')->nullable();
+            $table->string('sim_card_other_operator_8')->nullable();
 
             $table->string('customer_num_other_operator_1');
-            $table->string('customer_num_other_operator_2');
-            $table->string('customer_num_other_operator_3');
-            $table->string('customer_num_other_operator_4');
-            $table->string('customer_num_other_operator_5');
-            $table->string('customer_num_other_operator_6');
-            $table->string('customer_num_other_operator_7');
-            $table->string('customer_num_other_operator_8');
+            $table->string('customer_num_other_operator_2')->nullable();
+            $table->string('customer_num_other_operator_3')->nullable();
+            $table->string('customer_num_other_operator_4')->nullable();
+            $table->string('customer_num_other_operator_5')->nullable();
+            $table->string('customer_num_other_operator_6')->nullable();
+            $table->string('customer_num_other_operator_7')->nullable();
+            $table->string('customer_num_other_operator_8')->nullable();
 
 
 
             $table->string('call_number_9');
-            $table->string('call_number_10');
+            $table->string('call_number_10')->nullable();
 
 
             $table->string('current_operator_1');
-            $table->string('current_operator_2');
+            $table->string('current_operator_2')->nullable();
 
 
             $table->string('customer_num_other_operator_9');
-            $table->string('customer_num_other_operator_10');
+            $table->string('customer_num_other_operator_10')->nullable();
 
 
             $table->date('date_edit');

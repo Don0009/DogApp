@@ -371,8 +371,8 @@
                                                 class="text-danger">*</span></label>
                                         <input type="comp_country"
                                             class="form-control @error('comp_country') is-invalid @enderror"
-                                            id="comp_country" autocomplete="off" placeholder="Comp Country"
-                                            name="comp_country" value="{{ old('comp_country') }}" required>
+                                            id="comp_country" autocomplete="off" placeholder="Land" name="comp_country"
+                                            value="{{ old('comp_country') }}" required>
                                         @error('comp_country')
                                             <span class="invalid-feedback mb-3" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -399,7 +399,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="res_number"
                                             class="form-control @error('res_number') is-invalid @enderror" id="res_number"
-                                            autocomplete="off" placeholder="Comp Country" name="res_number"
+                                            autocomplete="off" placeholder="Gereserveerd nr" name="res_number"
                                             value="{{ old('res_number') }}" required>
                                         @error('res_number')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -412,7 +412,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="pricing_plan"
                                             class="form-control @error('pricing_plan') is-invalid @enderror"
-                                            id="pricing_plan" autocomplete="off" placeholder="Comp Country"
+                                            id="pricing_plan" autocomplete="off" placeholder="Tariefplan"
                                             name="pricing_plan" value="{{ old('pricing_plan') }}" required>
                                         @error('pricing_plan')
                                             <span class="invalid-feedback mb-3" role="alert">
@@ -424,8 +424,8 @@
                                         <label for="options_services" class="form-label">Optie en diensten:
                                             <span class="text-danger">*</span></label>
                                         <textarea type="options_services" class="form-control @error('options_services') is-invalid @enderror"
-                                            id="options_services" autocomplete="off" placeholder="Comp Country" row="5"
-                                            name="options_services" value="{{ old('options_services') }}"
+                                            id="options_services" autocomplete="off" placeholder="Optie en diensten:"
+                                            row="5" name="options_services" value="{{ old('options_services') }}"
                                             required></textarea>
                                         @error('options_services')
                                             <span class="invalid-feedback mb-3" role="alert">

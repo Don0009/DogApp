@@ -34,29 +34,51 @@
                                     <th>
                                         #
                                     </th>
-
                                     <th>
-                                        FIRST NAME
+                                        Name
                                     </th>
                                     <th>
-                                        EMAIL ADDRESS
+                                        Full Name
                                     </th>
                                     <th>
-                                        CELL NUMBER
+                                        Created At
                                     </th>
+                                    {{-- <th>
+                                        Updated At
+                                    </th> --}}
                                     <th>
-                                        CREATED AT
-                                    </th>
-                                    <th>
-                                        UPDATED AT
-                                    </th>
-                                    <th>
-                                        ACTIONS
+                                        Actions
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($question as $key => $home)
+                                    <tr>
+                                        <td>{{ ++$key }}</td>
+                                        <td>{{ $home->name }}</td>
+                                        <td>{{ $home->first_name }}</td>
 
+                                        <td>
+                                            {{ \Carbon\Carbon::parse($home->created_at)->diffForhumans() }}
+                                        </td>
+                                        {{-- <td>
+                                            {{ \Carbon\Carbon::parse($home->updated_at)->diffForhumans() }}
+                                        </td> --}}
+                                        <td>
+                                            <form class="d-inline-block" action="" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-icon-text">
+                                                    <i class="btn-icon-prepend" data-feather="trash"></i> Delete
+                                                </button>
+                                            </form>
+                                            {{-- <a href="{{ route('internet_home.edit', $home->id) }}"
+                                                class="btn btn-warning btn-icon-text">
+                                                <i class="btn-icon-prepend" data-feather="edit"></i> Edit
+                                            </a> --}}
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
