@@ -38,7 +38,7 @@
                 <div class="card">
                     {{-- Branding --}}
                     <img class="mt-3 mb-3" style="text-align: center; margin:0 auto;" class="img-responsive"
-                        src="{{ asset('images/brands/telenet_logo.jpeg') }}" height="75px" width="330" alt="">
+                        src="{{ asset('images/brands/2969px-Telenet_Logo_svg.png') }}" height="75px" width="330" alt="">
                     {{-- Branding ENd --}}
 
                     <div class="card-header">
