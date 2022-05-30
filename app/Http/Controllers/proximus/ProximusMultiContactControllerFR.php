@@ -199,7 +199,7 @@ class ProximusMultiContactControllerFR extends Controller
       //dd($data);
 
 
-        $pdf = new Pdf(public_path('unfilled_forms/proximus/multi_contact_du/MCDU.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/proximus/multi_contact_du/MCDU21.pdf'), [
 
             'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 

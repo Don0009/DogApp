@@ -286,7 +286,7 @@
                         </div>
 
                         <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="app_social" value="0" required>
+                            <input type="radio" name="mob_epic_flex" value="0" required>
                             <label for="app_social" class="form-label"> Mobile Flex </label>
                         </div>
 
@@ -503,7 +503,7 @@
                             <input type="sim_num_2" class="form-control @error('sim_num_2') is-invalid @enderror"
                                 id="sim_num_2" autocomplete="off"
                                 placeholder="Sim
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    nr"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            nr"
                                 name="sim_num_2" value="{{ old('sim_num_2') }}" required>
                             @error('sim_num_2')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -1880,38 +1880,6 @@
                             <input type="radio" name="mob_epic_flex_5" value="9" required>
                             <label for="mob_epic_flex_5" class="form-label"> Epic videos </label>
                         </div>
-                        {{-- <div class="mb-3 mt-5 col-md-12">
-                            <p style="text-align: center;"><b>Offre conjointe: DataPhone Option</b>
-                            </p>
-
-                        </div>
-
-
-                        <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="gb_package_5" value="0" required>
-                            <label for="gb_package_5" class="form-label"> (500 MB): €5/mois </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="gb_package_5" value="1" required>
-                            <label for="gb_package_5" class="form-label"> (1 GB): €10/mois </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-4">
-                            <input type="radio" name="gb_package_5" value="2" required>
-                            <label for="gb_package_5" class="form-label"> (1,5 GB): €15/mois </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="gb_package_5" value="3" required>
-                            <label for="gb_package_5" class="form-label"> (2 GB): €20/mois </label>
-                        </div>
-
-                        <div class="mb-2 mt-5 col-md-6">
-                            <input type="radio" name="gb_package_5" value="4" required>
-                            <label for="gb_package_5" class="form-label"> (2,5 GB): €25/mois </label>
-                        </div> --}}
-
 
 
                         <div class="mb-2 mt-5 col-md-3">
@@ -3896,7 +3864,7 @@
                                 class="form-control @error('additional_license') is-invalid @enderror"
                                 id="additional_license" autocomplete="off"
                                 placeholder="Extra licenties in een Pack of met Bizz Call Connect
-                                                                                                                                                                                                                        (buiten pack)"
+                                                                                                                                                                                                                                (buiten pack)"
                                 name="additional_license" value="{{ old('additional_license') }}" required>
                             @error('additional_license')
                                 <span class="invalid-feedback mb-2" role="alert">
