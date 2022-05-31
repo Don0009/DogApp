@@ -106,7 +106,7 @@
                             <a href="{{ route('internet_tv.index') }}" class="nav-link">Internet + TV</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('internet_home.index') }}" class="nav-link">Internet Home (FR)</a>
+                            <a href="{{ route('internet_home.index') }}" class="nav-link">Internet Home</a>
                         </li>
                         {{-- <li class="nav-item">
                             <a href="{{ route('internet_home_du.index') }}" class="nav-link">Internet Home

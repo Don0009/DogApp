@@ -19,7 +19,7 @@
     <div class="row">
         {{-- Branding --}}
         <img class="mt-3 mb-3" style="text-align: center; margin:0 auto;" class="img-responsive"
-            src="{{ asset('images/brands/mega_logo.jpeg') }}" height="75px" width="190px" alt="">
+            src="{{ asset('images/brands/mega_logo.png') }}" height="75px" width="190px" alt="">
         {{-- Branding ENd --}}
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">

@@ -85,7 +85,7 @@ class CreateNumberPortingFormDUSTable extends Migration
 
 
             //$table->string('TELEFOONNUMMERS');
-            $table->string('TELEFOONNUMMERS_2')->nullable();
+            $table->string('TELEFOONNUMMERS_2');
             $table->string('TELEFOONNUMMERS_3')->nullable();
             $table->string('TELEFOONNUMMERS_4')->nullable();
             $table->string('TELEFOONNUMMERS_5')->nullable();
@@ -101,6 +101,8 @@ class CreateNumberPortingFormDUSTable extends Migration
             $table->string('tot_3')->nullable();
             $table->string('tot_4')->nullable();
             $table->string('tot_5')->nullable();
+
+
             $table->string('Dienst_1');
             $table->string('Dienst_2')->nullable();
             $table->string('service_id_num_1');

@@ -24,7 +24,7 @@
                         <div class="col-6">
                             <label for="f_name" class="form-label">Voornaam<span class="text-danger">*</span></label>
                             <input type="text" class="form-control @error('f_name') is-invalid @enderror" id="f_name"
-                                autocomplete="off" placeholder="Prénom" name="f_name" value="{{ old('f_name') }}"
+                                autocomplete="off" placeholder="Voornaam" name="f_name" value="{{ old('f_name') }}"
                                 required>
                             @error('f_name')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -140,7 +140,7 @@
                             </div>
                             <div class="col-4">
                                 <input type="text" class="form-control @error('stage') is-invalid @enderror" id="stage"
-                                    autocomplete="off" placeholder="étage" name="stage" value="{{ old('stage') }}"
+                                    autocomplete="off" placeholder="Verdieping" name="stage" value="{{ old('stage') }}"
                                     required>
                                 @error('stage')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -480,8 +480,8 @@
                                 <label for="vat" class="form-label">Klantnummer:<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('client_number') is-invalid @enderror"
-                                    id="client_number" autocomplete="off" placeholder="Numéro de client"
-                                    name="client_number" value="{{ old('client_number') }}" required>
+                                    id="client_number" autocomplete="off" placeholder="Klantnummer" name="client_number"
+                                    value="{{ old('client_number') }}" required>
                                 @error('vat')
                                     <span class="invalid-feedback mb-2" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -509,7 +509,7 @@
                                 <label for="install_adress" class="form-label">Adresse<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('install_adress') is-invalid @enderror"
-                                    id="name" autocomplete="off" placeholder="Adress" name="install_adress"
+                                    id="name" autocomplete="off" placeholder="Adresse" name="install_adress"
                                     value="{{ old('install_adress') }}" required>
                                 @error('install_adress')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -521,7 +521,7 @@
                                 <label for="install_no" class="form-label">Nr:<span
                                         class="text-danger">*</span></label>
                                 <input type="no" class="form-control @error('install_no') is-invalid @enderror"
-                                    id="install_no" autocomplete="off" placeholder="N°" name="install_no"
+                                    id="install_no" autocomplete="off" placeholder="Nr" name="install_no"
                                     value="{{ old('install_no') }}" required>
                                 @error('install_no')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -533,7 +533,7 @@
                                 <label for="install_box" class="form-label">Bus:<span
                                         class="text-danger">*</span></label>
                                 <input type="install_box" class="form-control @error('install_box') is-invalid @enderror"
-                                    id="install_box" autocomplete="off" placeholder="Boite" name="install_box"
+                                    id="install_box" autocomplete="off" placeholder="Bus" name="install_box"
                                     value="{{ old('install_box') }}" required>
                                 @error('install_box')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -550,7 +550,7 @@
                                         class="text-danger">*</span></label>
                                 <input type="number"
                                     class="form-control @error('install_postal_code') is-invalid @enderror"
-                                    id="postal_code" autocomplete="off" placeholder="Postal Code" name="install_postal_code"
+                                    id="postal_code" autocomplete="off" placeholder="Postcode" name="install_postal_code"
                                     value="{{ old('install_postal_code') }}" required>
                                 @error('postal_code')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -562,7 +562,7 @@
                                 <label for="install_commune" class="form-label">Gemeente<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('install_commune') is-invalid @enderror"
-                                    id="install_commune" autocomplete="off" placeholder="commune" name="install_commune"
+                                    id="install_commune" autocomplete="off" placeholder="Gemeente" name="install_commune"
                                     value="{{ old('install_commune') }}" required>
                                 @error('install_commune')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -588,7 +588,7 @@
                                 <label for="iban_number" class="form-label">N° IBAN:<span
                                         class="text-danger">*</span></label>
                                 <input type="iban_number" class="form-control @error('iban_number') is-invalid @enderror"
-                                    id="iban_number" autocomplete="off" placeholder="IBAN Number" name="iban_number"
+                                    id="iban_number" autocomplete="off" placeholder="N° IBAN" name="iban_number"
                                     value="{{ old('iban_number') }}" required>
                                 @error('iban_number')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -600,7 +600,7 @@
                                 <label for="name_account_holder" class="form-label">Naam van bank account eigenaar
                                     :<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('name_account_holder') is-invalid @enderror"
-                                    id="name_account_holder" autocomplete="off" placeholder="commune"
+                                    id="name_account_holder" autocomplete="off" placeholder="Naam van bank account eigenaar"
                                     name="name_account_holder" value="{{ old('name_account_holder') }}" required>
                                 @error('name_account_holder')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -643,7 +643,7 @@
                                 <label for="made_in" class="form-label">Opgemaakt te:<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('made_in') is-invalid @enderror"
-                                    id="made_in" autocomplete="off" placeholder="Fait à" name="made_in"
+                                    id="made_in" autocomplete="off" placeholder="Opgemaakt te" name="made_in"
                                     value="{{ old('made_in') }}" required>
                                 @error('made_in')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -672,7 +672,7 @@
                                 <label for="dealer_reference" class="form-label">Scarlet dealer reference:<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('dealer_reference') is-invalid @enderror"
-                                    id="dealer_reference" autocomplete="off" placeholder="Référence du dealer Scarlet"
+                                    id="dealer_reference" autocomplete="off" placeholder="Scarlet dealer reference"
                                     name="dealer_reference" value="{{ old('dealer_reference') }}" required>
                                 @error('the')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -684,7 +684,7 @@
                                 <label for="agent" class="form-label">Naam Agent:
                                     <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('agent') is-invalid @enderror" id="the"
-                                    autocomplete="off" placeholder="Agent" name="agent" value="{{ old('agent') }}"
+                                    autocomplete="off" placeholder="Naam Agent" name="agent" value="{{ old('agent') }}"
                                     required>
                                 @error('agent')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -729,8 +729,8 @@
                                 <label for="main_line" class="form-label">Hoofdlijn<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('main_line') is-invalid @enderror"
-                                    id="main_line" maxlength="9" autocomplete="off" placeholder="Ligne principale"
-                                    name="main_line" value="{{ old('main_line') }}" required>
+                                    id="main_line" maxlength="9" autocomplete="off" placeholder="Hoofdlijn" name="main_line"
+                                    value="{{ old('main_line') }}" required>
                                 @error('main_line')
                                     <span class="invalid-feedback mb-2" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -741,7 +741,7 @@
                                 <label for="2nd_line" class="form-label">2e lijn<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('2nd_line') is-invalid @enderror"
-                                    id="2nd_line" maxlength="9" autocomplete="off" placeholder="2e ligne" name="2nd_line"
+                                    id="2nd_line" maxlength="9" autocomplete="off" placeholder="2e lijn" name="2nd_line"
                                     value="{{ old('2nd_line') }}" required>
                                 @error('2nd_line')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -771,7 +771,7 @@
                         <label for="holder_no" class="form-label">Naam titularis:<span
                                 class="text-danger">*</span></label>
                         <input type="text" class="form-control @error('holder_no') is-invalid @enderror" id="holder_no"
-                            autocomplete="off" placeholder="No du titulaire" name="holder_no"
+                            autocomplete="off" placeholder="Naam titularis" name="holder_no"
                             value="{{ old('holder_no') }}" required>
                         @error('holder_no')
                             <span class="invalid-feedback mb-2" role="alert">
@@ -788,7 +788,7 @@
                                 <label for="street" class="form-label">Straat:<span
                                         class="text-danger">*</span></label>
                                 <input type="name" class="form-control @error('street') is-invalid @enderror" id="street"
-                                    autocomplete="off" placeholder="Rue" name="street" value="{{ old('street') }}"
+                                    autocomplete="off" placeholder="Straat" name="street" value="{{ old('street') }}"
                                     required>
                                 @error('street')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -800,7 +800,7 @@
                                 <label for="number" class="form-label">Nummer:<span
                                         class="text-danger">*</span></label>
                                 <input type="name" class="form-control @error('number') is-invalid @enderror" id="number"
-                                    autocomplete="off" placeholder="Numéro" name="number" value="{{ old('number') }}"
+                                    autocomplete="off" placeholder="Nummer" name="number" value="{{ old('number') }}"
                                     required>
                                 @error('number')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -812,7 +812,7 @@
                                 <label for="add_box" class="form-label">Bus:<span
                                         class="text-danger">*</span></label>
                                 <input type="install_box" class="form-control @error('add_box') is-invalid @enderror"
-                                    id="add_box" autocomplete="off" placeholder="Boite" name="add_box"
+                                    id="add_box" autocomplete="off" placeholder="Bus" name="add_box"
                                     value="{{ old('add_box') }}" required>
                                 @error('add_box')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -829,7 +829,7 @@
                                         class="text-danger">*</span></label>
                                 <input type="postal_code"
                                     class="form-control @error('add_postal_code') is-invalid @enderror"
-                                    id="add_postal_code" autocomplete="off" placeholder="Postal Code" name="add_postal_code"
+                                    id="add_postal_code" autocomplete="off" placeholder="Postcode" name="add_postal_code"
                                     value="{{ old('add_postal_code') }}" required>
                                 @error('add_postal_code')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -841,7 +841,7 @@
                                 <label for="add_commune" class="form-label">Gemeente:<span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control @error('add_commune') is-invalid @enderror"
-                                    id="add_commune" autocomplete="off" placeholder="commune" name="add_commune"
+                                    id="add_commune" autocomplete="off" placeholder="Gemeente" name="add_commune"
                                     value="{{ old('add_commune') }}" required>
                                 @error('add_commune')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -857,7 +857,7 @@
                                 <label for="vat_number" class="form-label">BTW nummer (indien van toepassing):<span
                                         class="text-danger">*</span></label>
                                 <input type="name" class="form-control @error('vat_number') is-invalid @enderror"
-                                    id="vat_number" autocomplete="off" placeholder="Numéro de TVA (si d’application)"
+                                    id="vat_number" autocomplete="off" placeholder="BTW nummer (indien van toepassing)"
                                     name="vat_number" value="{{ old('vat_number') }}" required>
                                 @error('vat_number')
                                     <span class="invalid-feedback mb-2" role="alert">
@@ -869,8 +869,8 @@
                                 <label for="current_operator" class="form-label">Huidige operator:<span
                                         class="text-danger">*</span></label>
                                 <input type="name" class="form-control @error('current_operator') is-invalid @enderror"
-                                    id="current_operator" autocomplete="off" placeholder="Numéro" name="current_operator"
-                                    value="{{ old('current_operator') }}" required>
+                                    id="current_operator" autocomplete="off" placeholder="Huidige operator"
+                                    name="current_operator" value="{{ old('current_operator') }}" required>
                                 @error('current_operator')
                                     <span class="invalid-feedback mb-2" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -881,9 +881,8 @@
                                 <label for="cus_number" class="form-label">Klantnummer bij huidige operator:<span
                                         class="text-danger">*</span></label>
                                 <input type="install_box" class="form-control @error('cus_number') is-invalid @enderror"
-                                    id="cus_number" autocomplete="off"
-                                    placeholder="Numéro de client chez l’opérateur actuel" name="cus_number"
-                                    value="{{ old('cus_number') }}" required>
+                                    id="cus_number" autocomplete="off" placeholder="Klantnummer bij huidige operator"
+                                    name="cus_number" value="{{ old('cus_number') }}" required>
                                 @error('cus_number')
                                     <span class="invalid-feedback mb-2" role="alert">
                                         <strong>{{ $message }}</strong>

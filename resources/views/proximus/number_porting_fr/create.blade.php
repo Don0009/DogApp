@@ -99,8 +99,8 @@
                                 class="form-control @error('customer_other_network_number') is-invalid @enderror"
                                 id="customer_other_network_number" autocomplete="off"
                                 placeholder="Numéro de
-                                                                                                client chez l'opérateur concurrent (obligatoire)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    bij de andere operator"
+                                                                                                                                                                            client chez l'opérateur concurrent (obligatoire)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                bij de andere operator"
                                 name="customer_other_network_number" value="{{ old('customer_other_network_number') }}"
                                 required>
                             @error('customer_other_network_number')
@@ -114,9 +114,10 @@
                             <label for="email_address" class="form-label"><span class="text-danger">*</span>Adresse
                                 e-mail</label>
                             <input type="email_address" class="form-control @error('email_address') is-invalid @enderror"
-                                id="email_address" autocomplete="off" placeholder="Adresse
-                                                                                        e-mail" name="email_address"
-                                value="{{ old('email_address') }}" required>
+                                id="email_address" autocomplete="off"
+                                placeholder="Adresse
+                                                                                                                                                                    e-mail"
+                                name="email_address" value="{{ old('email_address') }}" required>
                             @error('email_address')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -136,9 +137,10 @@
                             <label for="company_name" class="form-label"><span class="text-danger">*</span>Nom de la
                                 société</label>
                             <input type="company_name" class="form-control @error('company_name') is-invalid @enderror"
-                                id="company_name" autocomplete="off" placeholder="Nom de la
-                                                                                    société" name="company_name"
-                                value="{{ old('company_name') }}" required>
+                                id="company_name" autocomplete="off"
+                                placeholder="Nom de la
+                                                                                                                                                                société"
+                                name="company_name" value="{{ old('company_name') }}" required>
                             @error('company_name')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -150,9 +152,10 @@
                             <label for="company_number" class="form-label"><span class="text-danger">*</span>Numéro
                                 d'entreprise</label>
                             <input type="company_number" class="form-control @error('company_number') is-invalid @enderror"
-                                id="company_number" autocomplete="off" placeholder="Numéro
-                                                                                d'entreprise" name="company_number"
-                                value="{{ old('company_number') }}" required>
+                                id="company_number" autocomplete="off"
+                                placeholder="Numéro
+                                                                                                                                                            d'entreprise"
+                                name="company_number" value="{{ old('company_number') }}" required>
                             @error('company_name')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -215,8 +218,8 @@
                                 de GSM à transférer de l'opérateur</label>
                             <input type="qua_of_num_port"
                                 class="form-control @error('qua_of_num_port') is-invalid @enderror" id="qua_of_num_port"
-                                autocomplete="off" placeholder="E-mailadres" name="qua_of_num_port"
-                                value="{{ old('qua_of_num_port') }}" required>
+                                autocomplete="off" placeholder="Numéros de GSM à transférer de l'opérateur"
+                                name="qua_of_num_port" value="{{ old('qua_of_num_port') }}" required>
                             @error('qua_of_num_port')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -224,14 +227,15 @@
                             @enderror
                         </div>
 
+
+
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">Gsm-nummers</th>
+                                    <th scope="col">Numéros de GSM</th>
                                     <th scope="col">Simkaartnummer bij andere operator</th>
-                                    <th colspan="2">Bij andere operator
-                                    </th>
-                                    <th colspan="2">Bij Proximus</th>
+                                    <th colspan="2">Chez l’opérateur concurrent</th>
+                                    <th colspan="2">Chez Proximus</th>
                                 </tr>
                             </thead>
 
@@ -239,28 +243,13 @@
                                 <tr>
                                     <td scope="row">
 
-                                        {{-- <div class="form-group mb-0">
 
-                                            <input name="gsm_num_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('gsm_num_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div> --}}
 
 
                                     </td>
 
                                     <td scope="row">
-                                        {{-- <div class="form-group mb-0">
 
-                                            <input name="sim_num_of_other_operator_1" type="text"
-                                                class="form-control border-0" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" required>
-                                            @error('sim_num_of_other_operator_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div> --}}
 
 
                                     </td>
@@ -279,21 +268,21 @@
 
                                     </td>
                                     <td scope="row">
-                                        HerlaadKaart
+                                        Carte de recharge
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="reload_card_7" value="0" required>
-                                            <label for="reload_card_7" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_2" value="0" required>
+                                            <label for="reload_card_2" class="form-label"> </label>
 
                                         </div>
 
 
                                     </td>
                                     <td colspan="2" scope="row">
-                                        Abonnment
+                                        Abonnement
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_7" value="0" required>
-                                            <label for="subscription_7" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_2" value="1" required>
+                                            <label for="reload_card_2" class="form-label"> </label>
 
                                         </div>
                                         {{-- test --}}
@@ -334,11 +323,11 @@
 
                                     </td>
                                     <td scope="row">
-                                        Herlaad Kaart
+                                        Carte de recharge
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="reload_card_2" value="0" required>
-                                            <label for="reload_card_2" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_3" value="0" required>
+                                            <label for="reload_card_3" class="form-label"> </label>
 
                                         </div>
 
@@ -347,15 +336,15 @@
                                     <td scope="row">
                                         Abonnment
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_2" value="1" required>
-                                            <label for="subscription_2" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_3" value="1" required>
+                                            <label for="reload_card_3" class="form-label"> </label>
 
                                         </div>
 
 
                                     </td>
                                     <td scope="row" colspan="2">
-                                        <p style="text-align: center;">Simkaartnummer bij Proximus</p>
+                                        <p style="text-align: center;">Numéro de carte SIM chez Proximus</p>
                                         <div class="form-group mb-0">
 
                                             <input name="simkaartnum_of_proximus_2" type="text"
@@ -368,11 +357,6 @@
 
 
                                     </td>
-
-
-
-
-
 
 
 
@@ -411,8 +395,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="reload_card_3" value="0" required>
-                                            <label for="reload_card_3" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_4" value="0" required>
+                                            <label for="reload_card_4" class="form-label"> </label>
 
                                         </div>
 
@@ -421,8 +405,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_3" value="1" required>
-                                            <label for="subscription_3" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_4" value="1" required>
+                                            <label for="reload_card_4" class="form-label"> </label>
 
                                         </div>
 
@@ -442,12 +426,6 @@
 
 
                                     </td>
-
-
-
-
-
-
 
 
                                 </tr>
@@ -484,8 +462,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="reload_card_4" value="0" required>
-                                            <label for="reload_card_4" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_5" value="0" required>
+                                            <label for="reload_card_5" class="form-label"> </label>
 
                                         </div>
 
@@ -494,8 +472,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_4" value="1" required>
-                                            <label for="subscription_4" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_5" value="1" required>
+                                            <label for="reload_card_5" class="form-label"> </label>
 
                                         </div>
 
@@ -558,8 +536,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="reload_card_5" value="0" required>
-                                            <label for="reload_card_5" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_6" value="0" required>
+                                            <label for="reload_card_6" class="form-label"> </label>
 
                                         </div>
 
@@ -568,8 +546,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_5" value="1" required>
-                                            <label for="subscription_5" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_6" value="1" required>
+                                            <label for="reload_card_6" class="form-label"> </label>
 
                                         </div>
 
@@ -632,8 +610,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="reload_card_6" value="0" required>
-                                            <label for="reload_card_6" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_7" value="0" required>
+                                            <label for="reload_card_7" class="form-label"> </label>
 
                                         </div>
 
@@ -642,8 +620,8 @@
                                     <td scope="row">
 
                                         <div class="form-group mb-0">
-                                            <input type="radio" name="subscription_6" value="1" required>
-                                            <label for="subscription_6" class="form-label"> </label>
+                                            <input type="radio" name="reload_card_7" value="1" required>
+                                            <label for="reload_card_7" class="form-label"> </label>
 
                                         </div>
 
@@ -666,16 +644,80 @@
                                     </td>
 
 
+                                    {{-- xyz --}}
+
+                                <tr>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="gsm_num_7" type="text" class="form-control border-0"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            @error('gsm_num_7')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="sim_num_of_other_operator_7" type="text"
+                                                class="form-control border-0" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" required>
+                                            @error('sim_num_of_other_operator_7')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="reload_card_8" value="0" required>
+                                            <label for="reload_card_8" class="form-label"> </label>
+
+                                        </div>
+
+
+                                    </td>
+                                    <td scope="row">
+
+                                        <div class="form-group mb-0">
+                                            <input type="radio" name="reload_card_8" value="1" required>
+                                            <label for="reload_card_8" class="form-label"> </label>
+
+                                        </div>
 
 
 
+                                    </td>
+                                    <td scope="row" colspan="2">
+
+                                        <div class="form-group mb-0">
+
+                                            <input name="simkaartnum_of_proximus_7" type="text"
+                                                class="form-control border-0" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" required>
+                                            @error('simkaartnum_of_proximus_7')
+                                                <span class="text-danger"> {{ $message }}</span>
+                                            @enderror
+                                        </div>
 
 
+                                    </td>
+
+                                    {{-- xyz --}}
 
 
                                 </tr>
                             </tbody>
                         </table>
+
 
                         {{-- Table to be added --}}
 
@@ -686,10 +728,8 @@
                                 l'opérateur</label>
                             <input type="land_line_to_be_ported"
                                 class="form-control @error('land_line_to_be_ported') is-invalid @enderror"
-                                id="land_line_to_be_ported" autocomplete="off"
-                                placeholder="Over te
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            dragen vaste telefoonnummers van operator"
-                                name="land_line_to_be_ported" value="{{ old('land_line_to_be_ported') }}" required>
+                                id="land_line_to_be_ported" autocomplete="off" placeholder="" name="land_line_to_be_ported"
+                                value="{{ old('land_line_to_be_ported') }}" required>
                             @error('land_line_to_be_ported')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -715,7 +755,7 @@
                         <div class="mb-3 col-md-3">
                             <label for="no" class="form-label"><span class="text-danger">*</span>N°</label>
                             <input type="no" class="form-control @error('no') is-invalid @enderror" id="no"
-                                autocomplete="off" placeholder="Nr" name="no" value="{{ old('no') }}" required>
+                                autocomplete="off" placeholder="N°" name="no" value="{{ old('no') }}" required>
                             @error('no')
                                 <span class="invalid-feedback mb-2" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -772,52 +812,30 @@
                             @enderror
                         </div>
                         {{-- table_2 --}}
-
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">Numéros de téléphone</th>
-                                    <th scope="col">Ou série de numéros de </th>
-                                    <th scope="col">À</th>
+                                    <th scope="col">Telefoonnummers</th>
+                                    <th scope="col">Of nummerreeks van</th>
+                                    <th scope="col">Tot</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td scope="row">
 
-                                        <div class="form-group mb-0">
 
-                                            <input name="TELEFOONNUMMERS" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('TELEFOONNUMMERS')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div>
 
 
                                     </td>
 
                                     <td>
 
-                                        <div class="form-group mb-0">
 
-                                            <input name="Of_nummerreeks_van" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('Of_nummerreeks_van')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div>
 
                                     </td>
                                     <td>
-                                        <div class="form-group mb-0">
 
-                                            <input name="tot_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('tot_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div>
                                     </td>
 
                                 </tr>
@@ -992,12 +1010,14 @@
 
                             </tbody>
                         </table>
+
                         {{-- table_2 --}}
 
 
                         <div class="mb-3 mt-4 col-md-12">
 
-                            <p style="text-align: center;"> Over te dragen diensten (internet / tv / andere) van operator
+                            <p style="text-align: center;"> Over te dragen diensten (internet / tv / andere) van
+                                operator
                             </p>
 
                         </div>
@@ -1006,7 +1026,8 @@
 
                         <div class="mb-3 mt-2 col-md-12">
 
-                            <p style="text-align: center;">N’oubliez pas d’annuler ces services auprès de votre opérateur
+                            <p style="text-align: center;">N’oubliez pas d’annuler ces services auprès de votre
+                                opérateur
                                 actuel! Une lettre de résiliation standard est disponible sur www.proximus.be
                             </p>
 

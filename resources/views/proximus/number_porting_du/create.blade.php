@@ -95,7 +95,7 @@
                                 class="form-control @error('customer_other_network_number') is-invalid @enderror"
                                 id="customer_other_network_number" autocomplete="off"
                                 placeholder="Klantennummer
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        bij de andere operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                bij de andere operator"
                                 name="customer_other_network_number" value="{{ old('customer_other_network_number') }}"
                                 required>
                             @error('customer_other_network_number')
@@ -238,15 +238,7 @@
                                     </td>
 
                                     <td scope="row">
-                                        {{-- <div class="form-group mb-0">
 
-                                            <input name="sim_num_of_other_operator_1" type="text"
-                                                class="form-control border-0" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" required>
-                                            @error('sim_num_of_other_operator_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div> --}}
 
 
                                     </td>
@@ -726,7 +718,7 @@
                                 class="form-control @error('land_line_to_be_ported') is-invalid @enderror"
                                 id="land_line_to_be_ported" autocomplete="off"
                                 placeholder="Over te
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                dragen vaste telefoonnummers van operator"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dragen vaste telefoonnummers van operator"
                                 name="land_line_to_be_ported" value="{{ old('land_line_to_be_ported') }}" required>
                             @error('land_line_to_be_ported')
                                 <span class="invalid-feedback mb-2" role="alert">
@@ -824,39 +816,18 @@
                                 <tr>
                                     <td scope="row">
 
-                                        {{-- <div class="form-group mb-0">
 
-                                            <input name="TELEFOONNUMMERS" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('TELEFOONNUMMERS')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div> --}}
 
 
                                     </td>
 
                                     <td>
 
-                                        {{-- <div class="form-group mb-0">
 
-                                            <input name="Of_nummerreeks_van" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('Of_nummerreeks_van')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div> --}}
 
                                     </td>
                                     <td>
-                                        {{-- <div class="form-group mb-0">
 
-                                            <input name="tot_1" type="text" class="form-control border-0"
-                                                id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                                            @error('tot_1')
-                                                <span class="text-danger"> {{ $message }}</span>
-                                            @enderror
-                                        </div> --}}
                                     </td>
 
                                 </tr>

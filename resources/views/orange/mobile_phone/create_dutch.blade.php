@@ -46,7 +46,7 @@
                                 {{-- end b --}}
 
                                 <div class="container">
-                                    <h6 style="color: orangered;" class="card-title">Identification du client Orange
+                                    <h6 style="color: orangered;" class="card-title">Identificatie van de Orange-klant
                                     </h6>
                                     {{-- box --}}
                                     <div class="mb-3 float-right">
@@ -544,7 +544,7 @@
                                                     class="form-control @error('postal_code_and_city') is-invalid @enderror"
                                                     id="postal_code_and_city" autocomplete="off"
                                                     placeholder="Postcode en
-                                                                                                                    gemeente" name="postal_code_and_city"
+                                                                                                                        gemeente" name="postal_code_and_city"
                                                     value="{{ old('postal_code_and_city') }}" required>
                                             </div>
                                             <div class="mr-3 ml-3 mt-2 col-2">

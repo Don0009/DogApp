@@ -558,25 +558,25 @@
                                              inputmode="numeric" id="date" name="date" value="{{ old('date') }}"
                                              type="date">
                                      </div>
-                                     <div class="mb-2 mt-2">
-                                         {{-- row remocved --}}
+                                     {{-- <div class="mb-2 mt-2">
+
                                          <label for="sign_of_customer"><b>Signature du
-                                                 client:<b></label>
-                                     </div>
-                                     <textarea name="sign_of_customer" id="" cols="30" rows="5" required></textarea>
+                                                 client:<b></label> --}}
                                  </div>
-
-
+                                 {{-- <textarea name="sign_of_customer" id="" cols="30" rows="5" required></textarea> --}}
                              </div>
+
+
                          </div>
-
                      </div>
-                     <button class="btn btn-primary mb-2 mt-3">Submit</button>
-                     <button class="btn btn-secondary mb-2 mt-3 ml-3">Cancel</button>
+
                  </div>
-
-
+                 <button class="btn btn-primary mb-2 mt-3">Submit</button>
+                 <button class="btn btn-secondary mb-2 mt-3 ml-3">Cancel</button>
              </div>
+
+
+     </div>
      </div>
      </form>
      </div>

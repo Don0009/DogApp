@@ -149,9 +149,9 @@ class ProximusNumberPortingFormFRController extends Controller
 
 
 
-                $pdf = new Pdf(public_path('unfilled_forms/telenet/contractapp_nofill.pdf'), [
+                $pdf = new Pdf(public_path('unfilled_forms/proximus/number_porting_fr/NPFR6.pdf'), [
 
-                    'command' => env('PDFTK_PATH'),
+                    'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
                 ]);
 
@@ -195,7 +195,7 @@ class ProximusNumberPortingFormFRController extends Controller
                 $lead_data['EMAIL'] = $orange->email_address;
                 $lead_data['LEAD_NAME'] = 'Proximus Number Porting (French) Lead';
                 $amo->add_lead($lead_data);
-                unlink(public_path($pdf_name));
+                //unlink(public_path($pdf_name));
 
 
                 return redirect()->route('proximus_number_porting_fr.index')->with('success', 'Proximus Number Porting (French) created successfully!');

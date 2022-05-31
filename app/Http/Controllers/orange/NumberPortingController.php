@@ -186,7 +186,7 @@ class NumberPortingController extends Controller
         $lead_data['EMAIL'] = $orange->email_address;
         $lead_data['LEAD_NAME'] = 'Number Porting Lead!';
         $amo->add_lead($lead_data);
-        unlink(public_path($pdf_name));
+        //unlink(public_path($pdf_name));
 
         return redirect()->route('number_porting.index')->with('success', 'Number Porting created successfully!');
         // return redirect()->route('number_porting.index');
