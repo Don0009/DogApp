@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="css/internet_tv.css">
 @endsection
 @section('content')
-
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
@@ -689,8 +688,8 @@
                                             <div class="col-6">
                                                 <div class="form-check topper">
 
-                                                    <input required class="form-check-input ml-4" type="radio"
-                                                        name="stopping_5" value="0">
+                                                    <input class="form-check-input ml-4" type="checkbox"
+                                                        name="stopping_5_two" value="0">
                                                     <label for="extra_decoder" class="form-label mt-1"
                                                         style="margin-left: 60px"><span style="">Supprimer (Uniquement
                                                             applicable avec Easy Switch)</span> </label>
@@ -712,8 +711,8 @@
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-check topper">
-                                                    <input required class="form-check-input" style="margin-left: 25px"
-                                                        type="radio" name="stopping_5" value="1">
+                                                    <input class="form-check-input" style="margin-left: 25px"
+                                                        type="checkbox" name="stopping_5_one" value="1">
                                                     <label for="extra_decoder" class="form-label mt-1"
                                                         style="margin-left: 60px">Supprimer (Uniquement applicable avec Easy
                                                         Switch)</label>

@@ -77,11 +77,7 @@ class OrangeInternetTvController extends Controller
             'id_card_number' => 'required',
             'orange_customer_number' => 'required',
             'name_of_your_current_provider' => 'required',
-            // 'one' => 'required',
-            // 'two' => 'required',
-            // 'three' => 'required',
-            // 'and' => 'required',
-            // 'neen' => 'required',
+
             'customer_number_at_your_current_supplier' => 'required',
             'id_card_number_d1' => 'required',
             'id_card_number_d2' => 'required',
@@ -157,18 +153,26 @@ class OrangeInternetTvController extends Controller
             'file_1' => 'required',
             'lan' => 'required',
 
+
+
         ]);
 
         $data = $request->all();
         $data['user_id'] = Auth::user()->id;
+
+       // dd($request->form_lang);
 
 
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator);
         }
 
-        if ($request->lang == 'fr') {
-            $pdf = new Pdf(public_path('unfilled_forms/orange/ITV.pdf'), [
+        if ($request->form_lang == 'fr')
+
+
+
+        {
+            $pdf = new Pdf(public_path('unfilled_forms/orange/ITV15.pdf'), [
 
                 'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 
@@ -176,7 +180,7 @@ class OrangeInternetTvController extends Controller
 
             ]);
         } else {
-            $pdf = new Pdf(public_path('unfilled_forms/orange/ITVDU11.pdf'), [
+            $pdf = new Pdf(public_path('unfilled_forms/orange/ITVDU21.pdf'), [
 
                 'command' =>'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 

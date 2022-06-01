@@ -691,7 +691,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="form-check topper">
-                                                <input class="form-check-input ml-4" type="radio" name="stopping_5"
+                                                <input class="form-check-input ml-4" type="checkbox" name="stopping_5_two"
                                                     value="0">
                                                 <label for="extra_decoder" class="form-label"
                                                     style="margin-left: 60px; margin-top:5px"><span style="">Stopzetten
@@ -714,7 +714,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="form-check topper">
-                                                <input class="form-check-input ml-4" type="radio" name="stopping_5"
+                                                <input class="form-check-input ml-4" type="checkbox" name="stopping_5_one"
                                                     value="1">
                                                 <label for="extra_decoder" class="form-label"
                                                     style="margin-left: 60px; margin-top:5px">Stopzetten (Enkel van

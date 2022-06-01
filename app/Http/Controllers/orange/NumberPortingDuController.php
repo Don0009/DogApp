@@ -128,7 +128,7 @@ class NumberPortingDuController extends Controller
 // Validation Ends
 
 
-        $pdf = new Pdf(public_path('unfilled_forms/orange/NPDU.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/orange/NPDU12.pdf'), [
 
             'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
         ]);

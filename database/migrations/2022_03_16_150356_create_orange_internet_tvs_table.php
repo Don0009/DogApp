@@ -98,7 +98,11 @@ class CreateOrangeInternetTvsTable extends Migration
             $table->string('original_operator_4');
             $table->string('desired_transfer_date_4');
             $table->boolean('immediately_5')->nullable();
-            $table->boolean('stopping_5')->nullable();
+            $table->boolean('stopping_5_two')->nullable();
+            $table->boolean('stopping_5_one')->nullable();
+
+            $table->boolean('Stopping')->nullable();
+
             $table->string('call_number_9');
             $table->string('op');
             $table->text('file_1');

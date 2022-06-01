@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 use App\Lampiris;
 use Illuminate\Support\Facades\Validator;
 
+
+use Carbon\Carbon;
+use mikehaertl\pdftk\Pdf;
+use \Mail;
+
+use App\Http\Controllers\AmoCRMController;
+
+use App\Http\Controllers\OKSign\OKSignController;
+use Illuminate\Support\Facades\Auth;
+
 class LampirisController extends Controller
 {
     /**
@@ -134,9 +144,97 @@ class LampirisController extends Controller
 
         ]);
 
+
+        $pdf = new Pdf(public_path('unfilled_forms/lampiris/LCFR.pdf'), [
+
+            'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
+
+        ]);
+
         $data = $request->all();
-        Lampiris::create($data);
-        return redirect()->route('lampiris.index');
+        $data = $orange = Lampiris::create($data);
+
+
+
+
+        $pdf_name = 'pdfs_generated/' . now()->timestamp . '.pdf';
+
+        $data = $data->toArray();
+
+
+
+        $result = $pdf->fillForm($data)->flatten()->needAppearances()
+            ->saveAs($pdf_name);
+           // dd($data);
+
+//Mail
+        $mail = Mail::send('emails.report', $data, function ($message) use ($data, $pdf, $pdf_name) {
+            $message->to('degis9000@gmail.com')
+                ->subject("You have got new Contract Lampiris (French) Lead...!")
+                ->cc(['lasha@studiodlvx.be'])
+//                ->bcc(['asim.raza@outstarttech.com', 'info@ecosafety.nyc', 'dev@weanio.com'])
+                ->attach(public_path($pdf_name), [
+                    'as' => 'Contract Lampiris (French) Lead.pdf',
+                    'mime' => 'application/pdf',
+                ]);
+            $message->from('no-reply@ecosafety.nyc');
+        });
+// Mail Code Ends
+
+
+//Mail
+
+
+        $amo = new AmoCRMController();
+        $lead_data = [];
+        $lead_data['NAME'] = $orange->name;
+        $lead_data['PHONE'] = $orange->telephone;
+        $lead_data['EMAIL'] = $orange->email_address;
+        $lead_data['LEAD_NAME'] = 'Lampiris (French) Lead';
+        $amo->add_lead($lead_data);
+       // unlink(public_path($pdf_name));
+
+
+
+
+
+       // return redirect()->route('proximus_multi_contact_fr.index')
+        return redirect()->route('lampiris.index')->with('success', 'Lampiris Contract (French) Lead created successfully!');;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     /**

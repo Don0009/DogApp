@@ -505,14 +505,14 @@
 
                         <div class="mb-2   col-md-3">
                             <h4 class="mb-4"><b class="">B. PACKS</b></h4>
-                            <input type="checkbox" name="tv_packs_options_a" class="ml-2" value="0" required>
+                            <input type="checkbox" name="tv_packs_options_a" class="ml-2" value="0">
                             <label for="tv_packs_options" class="form-label">Flex S (INT + TV)</label>
 
 
                         </div>
 
                         <div class="mb-2 mt-5 col-md-9">
-                            <input type="checkbox" name="tv_packs_options_b" class="ml-2" value="1" required>
+                            <input type="checkbox" name="tv_packs_options_b" class="ml-2" value="1">
                             <label for="tv_packs_options" class="form-label">Flex (INT + TV + TEL) + (Wifi Booster +
                                 Family
                                 life
@@ -521,14 +521,14 @@
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_packs_options_c" class="ml-2" value="2" required>
+                            <input type="checkbox" name="tv_packs_options_c" class="ml-2" value="2">
                             <label for="tv_packs_options" class="form-label">+ tv-optie</label>
                         </div>
 
 
                         <div class="mb-2 mt-5   col-md-9">
 
-                            <input type="checkbox" name="tv_packs_options_d" class="ml-2" value="3" required>
+                            <input type="checkbox" name="tv_packs_options_d" class="ml-2" value="3">
                             <label for="tv_packs_options" class="form-label"> Flex Premium (INT + TV(2) + TEL (BE+EU) +
                                 All
                                 Stars & Sports) +
@@ -539,57 +539,57 @@
                         {{-- Mobile Packs --}}
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_packs_options_a" class="ml-2" value="0" required>
+                            <input type="checkbox" name="mobile_packs_options_a" class="ml-2" value="0">
                             <label for="mobile_packs_options_a" class="form-label">Mobiel</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-3">
-                            <input type="checkbox" name="mobile_packs_options_b" class="ml-2" value="1" required>
+                            <input type="checkbox" name="mobile_packs_options_b" class="ml-2" value="1">
                             <label for="mobile_packs_options_b" class="form-label">Mobile Flex</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_packs_options_c" class="ml-2" value="2" required>
+                            <input type="checkbox" name="mobile_packs_options_c" class="ml-2" value="2">
                             <label for="mobile_packs_options_c" class="form-label">Mobile Flex +</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_packs_options_d" class="ml-2" value="3" required>
+                            <input type="checkbox" name="mobile_packs_options_d" class="ml-2" value="3">
                             <label for="mobile_packs_options_d" class="form-label">Unlimited Light</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_packs_options_e" class="ml-2" value="4" required>
+                            <input type="checkbox" name="mobile_packs_options_e" class="ml-2" value="4">
                             <label for="mobile_packs_options_e" class="form-label">Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_packs_options_f" class="ml-2" value="5" required>
+                            <input type="checkbox" name="mobile_packs_options_f" class="ml-2" value="5">
                             <label for="mobile_packs_options_f" class="form-label">Unlimited Premium</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_packs_options_g" class="ml-2" value="6" required>
+                            <input type="checkbox" name="mobile_packs_options_g" class="ml-2" value="6">
                             <label for="mobile_packs_options_g" class="form-label">Mobile Flex Full Control</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_packs_options_h" class="ml-2" value="7" required>
+                            <input type="checkbox" name="mobile_packs_options_h" class="ml-2" value="7">
                             <label for="mobile_packs_options_h" class="form-label">Mobile Flex + Full Control</label>
 
                             {{-- Epic Packs --}}
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="epic_packs_options_g" class="ml-2" value="0" required>
+                            <input type="checkbox" name="epic_packs_options_g" class="ml-2" value="0">
                             <label for="epic_packs_options_g" class="form-label">Pack Epic combo 'Light TV experience'
                                 Internet +
                                 TV app + Mobile</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="epic_packs_options_h" class="ml-2" value="1" required>
+                            <input type="checkbox" name="epic_packs_options_h" class="ml-2" value="1">
                             <label for="epic_packs_options" class="form-label">Pack Epic combo 'Full TV experience'
                                 Internet
                                 +
@@ -605,23 +605,20 @@
 
 
 
-                            <input type="checkbox" name="other_packages_starter_a" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="other_packages_starter_a" class="ml-2" value="0">
                             <label for="other_packages_starter_a" class="form-label">Pack (Start) Internet + TV +
                                 Tel</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="other_packages_starter_b" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="other_packages_starter_b" class="ml-2" value="1">
                             <label for="other_packages_starter_b" class="form-label">Pack Internet + Tel</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="other_packages_starter_c" class="ml-2" value="2"
-                                required>
+                            <input type="checkbox" name="other_packages_starter_c" class="ml-2" value="2">
                             <label for="other_packages_starter_c" class="form-label">Pack TV + Tel</label>
                         </div>
 
@@ -632,33 +629,33 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="met_mobilus_options_a" class="ml-2" value="0" required>
+                            <input type="checkbox" name="met_mobilus_options_a" class="ml-2" value="0">
                             <label for="met_mobilus_options" class="form-label">met Mobilus</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="met_mobilus_options_b" class="ml-2" value="1" required>
+                            <input type="checkbox" name="met_mobilus_options_b" class="ml-2" value="1">
                             <label for="met_mobilus_options" class="form-label">Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="met_mobilus_options_c" class="ml-2" value="2" required>
+                            <input type="checkbox" name="met_mobilus_options_c" class="ml-2" value="2">
                             <label for="met_mobilus_options" class="form-label">Unlimited Premium</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="met_mobilus_options_d" class="ml-2" value="3" required>
+                            <input type="checkbox" name="met_mobilus_options_d" class="ml-2" value="3">
                             <label for="met_mobilus_options" class="form-label">S</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="met_mobilus_options_e" class="ml-2" value="4" required>
+                            <input type="checkbox" name="met_mobilus_options_e" class="ml-2" value="4">
                             <label for="met_mobilus_options_d" class="form-label">M</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="met_mobilus_options_f" class="ml-2" value="5" required>
+                            <input type="checkbox" name="met_mobilus_options_f" class="ml-2" value="5">
                             <label for="met_mobilus_options_f" class="form-label">L</label>
                         </div>
 
@@ -669,35 +666,30 @@
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobilus_full_control_options_a" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="mobilus_full_control_options_a" class="ml-2" value="0">
                             <label for="mobilus_full_control_options_a" class="form-label">Met Mobilus
                                 FullControl</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobilus_full_control_options_b" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="mobilus_full_control_options_b" class="ml-2" value="1">
                             <label for="mobilus_full_control_options_b" class="form-label">Large</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobilus_full_control_options_c" class="ml-2" value="2"
-                                required>
+                            <input type="checkbox" name="mobilus_full_control_options_c" class="ml-2" value="2">
                             <label for="mobilus_full_control_option_c" class="form-label">Medium</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobilus_full_control_options_d" class="ml-2" value="3"
-                                required>
+                            <input type="checkbox" name="mobilus_full_control_options_d" class="ml-2" value="3">
                             <label for="mobilus_full_control_options_d" class="form-label">Small</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="mobilus_full_control_options_e" class="ml-2" value="4"
-                                required>
+                            <input type="checkbox" name="mobilus_full_control_options_e" class="ml-2" value="4">
                             <label for="mobilus_full_control_options_e" class="form-label">Flex S (INT + TV) - Tweede
                                 verblijf</label>
                         </div>
@@ -708,21 +700,18 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="business_package_types_a" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="business_package_types_a" class="ml-2" value="0">
                             <label for="business_package_types_a" class="form-label">Business Flex essential </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="business_package_types_b" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="business_package_types_b" class="ml-2" value="1">
                             <label for="business_package_types_b" class="form-label">Business Flex </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="business_package_types_c" class="ml-2" value="2"
-                                required>
+                            <input type="checkbox" name="business_package_types_c" class="ml-2" value="2">
                             <label for="business_package_types_c" class="form-label">Business Flex Premium</label>
                         </div>
 
@@ -730,40 +719,34 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mobile_business_types_a" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="mobile_business_types_a" class="ml-2" value="0">
                             <label for="mobile_business_types_a" class="form-label">Mobiel</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mobile_business_types_b" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="mobile_business_types_b" class="ml-2" value="1">
                             <label for="mobile_business_types_b" class="form-label">Business Mobile Flex</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mobile_business_types_c" class="ml-2" value="2"
-                                required>
+                            <input type="checkbox" name="mobile_business_types_c" class="ml-2" value="2">
                             <label for="mobile_business_types_c" class="form-label">Business Mobile Flex+</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mobile_business_types_d" class="ml-2" value="3"
-                                required>
+                            <input type="checkbox" name="mobile_business_types_d" class="ml-2" value="3">
                             <label for="mobile_business_types_d" class="form-label">Business Mobile Unlimited
                                 Light</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mobile_business_types_e" class="ml-2" value="4"
-                                required>
+                            <input type="checkbox" name="mobile_business_types_e" class="ml-2" value="4">
                             <label for="mobile_business_types_e" class="form-label">Business Mobile Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mobile_business_types_f" class="ml-2" value="5"
-                                required>
+                            <input type="checkbox" name="mobile_business_types_f" class="ml-2" value="5">
                             <label for="mobile_business_types_f" class="form-label"> Business Mobile Unlimited
                                 Premium</label>
                         </div>
@@ -775,50 +758,42 @@
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="other_options_packages_a" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="other_options_packages_a" class="ml-2" value="0">
                             <label for="other_options_packages_a" class="form-label">Bizz Online</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="other_options_packages_b" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="other_options_packages_b" class="ml-2" value="1">
                             <label for="other_options_packages_b" class="form-label"> Small</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="other_options_packages_c" class="ml-2" value="2"
-                                required>
+                            <input type="checkbox" name="other_options_packages_c" class="ml-2" value="2">
                             <label for="other_options_packages_c" class="form-label">Medium</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="other_options_packages_d" class="ml-2" value="3"
-                                required>
+                            <input type="checkbox" name="other_options_packages_d" class="ml-2" value="3">
                             <label for="other_options_packages_d" class="form-label">Large</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="other_options_packages_e" class="ml-2" value="4"
-                                required>
+                            <input type="checkbox" name="other_options_packages_e" class="ml-2" value="4">
                             <label for="other_options_packages_e" class="form-label">Bizz Guest Wifi</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="other_options_packages_f" class="ml-2" value="5"
-                                required>
+                            <input type="checkbox" name="other_options_packages_f" class="ml-2" value="5">
                             <label for="other_options_packages_f" class="form-label">Option Bizz Online Booking</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="other_options_packages_g" class="ml-2" value="6"
-                                required>
+                            <input type="checkbox" name="other_options_packages_g" class="ml-2" value="6">
                             <label for="other_options_packages_g" class="form-label"> Bizz Internet Guarantee</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="other_options_packages_h" class="ml-2" value="7"
-                                required>
+                            <input type="checkbox" name="other_options_packages_h" class="ml-2" value="7">
                             <label for="other_options_packages_h" class="form-label"> Option Bizz Online
                                 Marketing</label>
                         </div>
@@ -831,17 +806,17 @@
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="internet_customer_phase" class="ml-2" value="0" required>
+                            <input type="radio" name="internet_customer_phase" class="ml-2" value="0">
                             <label for="internet_customer_phase" class="form-label">Nieuw</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="internet_customer_phase" class="ml-2" value="1" required>
+                            <input type="radio" name="internet_customer_phase" class="ml-2" value="1">
                             <label for="internet_customer_phase" class="form-label">Conversie</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="internet_customer_phase" class="ml-2" value="2" required>
+                            <input type="radio" name="internet_customer_phase" class="ml-2" value="2">
                             <label for="internet_customer_phase" class="form-label">Port in (LOA)</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
@@ -873,53 +848,53 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="internet_types_a" class="ml-2" value="0" required>
+                            <input type="checkbox" name="internet_types_a" class="ml-2" value="0">
                             <label for="internet_types_a" class="form-label">Start</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="internet_types_b" class="ml-2" value="1" required>
+                            <input type="checkbox" name="internet_types_b" class="ml-2" value="1">
                             <label for="internet_types_b" class="form-label">Maxi</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="internet_types_c" class="ml-2" value="2" required>
+                            <input type="checkbox" name="internet_types_c" class="ml-2" value="2">
                             <label for="internet_types_c" class="form-label">Start/Student</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="internet_types_d" class="ml-2" value="3" required>
+                            <input type="checkbox" name="internet_types_d" class="ml-2" value="3">
                             <label for="internet_types_d" class="form-label">Maxi/Student</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="internet_types_e" class="ml-2" value="4" required>
+                            <input type="checkbox" name="internet_types_e" class="ml-2" value="4">
                             <label for="internet_types_e" class="form-label">Bizz Internet </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="internet_types_f" class="ml-2" value="5" required>
+                            <input type="checkbox" name="internet_types_f" class="ml-2" value="5">
                             <label for="internet_types_f" class="form-label">Extra Volume 20 GB</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="internet_types_g" class="ml-2" value="6" required>
+                            <input type="checkbox" name="internet_types_g" class="ml-2" value="6">
                             <label for="internet_types_g" class="form-label">Limited for VOIP</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="internet_types_h" class="ml-2" value="7" required>
+                            <input type="checkbox" name="internet_types_h" class="ml-2" value="7">
                             <label for="internet_types_h" class="form-label"> I-Office option/Fix IP Address</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="internet_types_security" class="ml-2" value="0" required>
+                            <input type="radio" name="internet_types_security" class="ml-2" value="0">
                             <label for="internet_types_security" class="form-label"> Norton Security 1</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="internet_types_security" class="ml-2" value="1" required>
+                            <input type="radio" name="internet_types_security" class="ml-2" value="1">
                             <label for="internet_types_security" class="form-label">Norton Security 5</label>
                         </div>
 
@@ -934,7 +909,7 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="tv_customer_phase" class="ml-2" value="1" required>
+                            <input type="radio" name="tv_customer_phase" class="ml-2" value="1">
                             <label for="tv_customer_phase" class="form-label">Nieuwe klant</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-12">
@@ -953,17 +928,17 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="tv_packages_a" class="ml-2" value="0" required>
+                            <input type="checkbox" name="tv_packages_a" class="ml-2" value="0">
                             <label for="tv_packages_a" class="form-label">TV met Internet</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="tv_packages_b" class="ml-2" value="1" required>
+                            <input type="checkbox" name="tv_packages_b" class="ml-2" value="1">
                             <label for="tv_packages_b" class="form-label">TV zonder Internet</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="tv_packages_c" class="ml-2" value="2" required>
+                            <input type="checkbox" name="tv_packages_c" class="ml-2" value="2">
                             <label for="tv_packages_c" class="form-label">TV Replay</label>
                         </div>
 
@@ -973,52 +948,52 @@
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_package_options_a" class="ml-2" value="0" required>
+                            <input type="checkbox" name="tv_package_options_a" class="ml-2" value="0">
                             <label for="tv_package_options_a" class="form-label">Family</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_package_options_b" class="ml-2" value="1" required>
+                            <input type="checkbox" name="tv_package_options_b" class="ml-2" value="1">
                             <label for="tv_package_options_b" class="form-label">Movies & Series</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_package_options_c" class="ml-2" value="2" required>
+                            <input type="checkbox" name="tv_package_options_c" class="ml-2" value="2">
                             <label for="tv_package_options_c" class="form-label">Studio 100 GO Pass</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_package_options_d" class="ml-2" value="3" required>
+                            <input type="checkbox" name="tv_package_options_d" class="ml-2" value="3">
                             <label for="tv_package_options_d" class="form-label">Be tv</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_package_options_e" class="ml-2" value="4" required>
+                            <input type="checkbox" name="tv_package_options_e" class="ml-2" value="4">
                             <label for="tv_package_options_e" class="form-label">All Sports</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_package_options_f" class="ml-2" value="5" required>
+                            <input type="checkbox" name="tv_package_options_f" class="ml-2" value="5">
                             <label for="tv_package_options_f" class="form-label">All Stars</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_package_options_g" class="ml-2" value="6" required>
+                            <input type="checkbox" name="tv_package_options_g" class="ml-2" value="6">
                             <label for="tv_package_options_g" class="form-label">All Stars and Sports</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="tv_package_options_h" class="ml-2" value="7" required>
+                            <input type="checkbox" name="tv_package_options_h" class="ml-2" value="7">
                             <label for="tv_package_options_h" class="form-label">Adult</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="tv_package_options_i" class="ml-2" value="8" required>
+                            <input type="checkbox" name="tv_package_options_i" class="ml-2" value="8">
                             <label for="tv_package_options_i" class="form-label">Netflix</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="tv_package_options_j" class="ml-2" value="9" required>
+                            <input type="checkbox" name="tv_package_options_j" class="ml-2" value="9">
                             <label for="tv_package_options_j" class="form-label">Net Gemist</label>
                         </div>
 
@@ -1034,12 +1009,12 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="fixed_line_customer_phase" class="ml-2" value="0" required>
+                            <input type="radio" name="fixed_line_customer_phase" class="ml-2" value="0">
                             <label for="fixed_line_customer_phase" class="form-label">Conversie naar</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="fixed_line_customer_phase" class="ml-2" value="0" required>
+                            <input type="radio" name="fixed_line_customer_phase" class="ml-2" value="0">
                             <label for="fixed_line_customer_phase" class="form-label">Port in (LOA)</label>
                         </div>
 
@@ -1073,34 +1048,29 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="phone_line_package_types_a" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="phone_line_package_types_a" class="ml-2" value="0">
                             <label for="phone_line_package_types_a" class="form-label">Phone Line</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="phone_line_package_types_b" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="phone_line_package_types_b" class="ml-2" value="1">
                             <label for="phone_line_package_types_b" class="form-label">Free Calls National</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="phone_line_package_types_c" class="ml-2" value="2"
-                                required>
+                            <input type="checkbox" name="phone_line_package_types_c" class="ml-2" value="2">
                             <label for="phone_line_package_types_c" class="form-label">Free Calls International</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-5">
 
-                            <input type="checkbox" name="phone_line_package_types_d" class="ml-2" value="3"
-                                required>
+                            <input type="checkbox" name="phone_line_package_types_d" class="ml-2" value="3">
                             <label for="phone_line_package_types_d" class="form-label">Unlimited Calls National
                                 (inbegrepen in
                                 Flex + Business Flex)</label>
                         </div>
                         <div class="mb-2 mt-3   col-md-12">
 
-                            <input type="checkbox" name="phone_line_package_types_e" class="ml-2" value="4"
-                                required>
+                            <input type="checkbox" name="phone_line_package_types_e" class="ml-2" value="4">
                             <label for="phone_line_package_types_e" class="form-label">Unlimited Calls
                                 National/International
                                 (Inbegrepen in Flex Premium
@@ -1195,19 +1165,19 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="multi_line_license" class="ml-2" value="0" required>
+                            <input type="radio" name="multi_line_license" class="ml-2" value="0">
                             <label for="multi_line_license" class="form-label">2 licenties inbegrepen in een Pack
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="ip_box_radio" class="ml-2" value="1" required>
+                            <input type="radio" name="ip_box_radio" class="ml-2" value="1">
                             <label for="ip_box_radio" class="form-label">Bizz IP box (voor PABX niet-Proximus)</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="ip_box_radio" class="ml-2" value="2" required>
+                            <input type="radio" name="ip_box_radio" class="ml-2" value="2">
                             <label for="ip_box_radio" class="form-label">Bizz IP box (voor PABX ISDN)</label>
                         </div>
 
@@ -1232,40 +1202,40 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mob_tele_pack_type_a" class="ml-2" value="0" required>
+                            <input type="checkbox" name="mob_tele_pack_type_a" class="ml-2" value="0">
                             <label for="mob_tele_pack_type" class="form-label">In een Pack Flex (Flex S, Flex of Flex
                                 Premium
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mob_tele_pack_type_b" class="ml-2" value="1" required>
+                            <input type="checkbox" name="mob_tele_pack_type_b" class="ml-2" value="1">
                             <label for="mob_tele_pack_type_a" class="form-label">In een anderPack</label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mob_tele_pack_type_c" class="ml-2" value="2" required>
+                            <input type="checkbox" name="mob_tele_pack_type_c" class="ml-2" value="2">
                             <label for="mob_tele_pack_type_b" class="form-label">Buiten een Pack </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mob_tele_pack_type_d" class="ml-2" value="3" required>
+                            <input type="checkbox" name="mob_tele_pack_type_d" class="ml-2" value="3">
                             <label for="mob_tele_pack_type_b" class="form-label"> In een Pack Business Flex</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="mob_tele_pack_type_e" class="ml-2" value="4" required>
+                            <input type="checkbox" name="mob_tele_pack_type_e" class="ml-2" value="4">
                             <label for="mob_tele_pack_type_c" class="form-label">Buiten een Pack Business Flex</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="mob_tele_pack_type" class="ml-2" value="5" required>
+                            <input type="radio" name="mob_tele_pack_type" class="ml-2" value="5">
                             <label for="mob_tele_pack_type" class="form-label"> Nieuwe klant</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="mob_tele_pack_type" class="ml-2" value="6" required>
+                            <input type="radio" name="mob_tele_pack_type" class="ml-2" value="6">
                             <label for="mob_tele_pack_type_d" class="form-label">Overdracht van
                                 Base/Orange/Telenet*</label>
                         </div>
@@ -1316,17 +1286,17 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="lang" class="ml-2" value="1" required>
+                            <input type="radio" name="lang" class="ml-2" value="1">
                             <label for="lang" class="form-label">F</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="lang" class="ml-2" value="2" required>
+                            <input type="radio" name="lang" class="ml-2" value="2">
                             <label for="lang" class="form-label">D</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="lang" class="ml-2" value="3" required>
+                            <input type="radio" name="lang" class="ml-2" value="3">
                             <label for="lang" class="form-label">EN</label>
                         </div>
 
@@ -1347,9 +1317,9 @@
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="sim_card_type" class="ml-5" value="0" required>
+                            <input type="radio" name="sim_card_type" class="ml-5" value="0">
                             <label for="sim_card_type" class="form-label">Nano</label>
-                            <input type="radio" name="sim_card_type" class="ml-5" value="1" required>
+                            <input type="radio" name="sim_card_type" class="ml-5" value="1">
                             <label for="sim_card_type" class="form-label">Normaal</label>
                         </div>
 
@@ -1376,63 +1346,57 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="residential_met_mobilus_a" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="residential_met_mobilus_a" class="ml-2" value="0">
                             <label for="residential_met_mobilus" class="form-label">met Mobilus</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="residential_met_mobilus_b" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="residential_met_mobilus_b" class="ml-2" value="0">
                             <label for="residential_met_mobilus" class="form-label">S</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="residential_met_mobilus_c" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="residential_met_mobilus_c" class="ml-2" value="0">
                             <label for="residential_met_mobilus" class="form-label">M</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="residential_met_mobilus_d" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="residential_met_mobilus_d" class="ml-2" value="0">
                             <label for="residential_met_mobilus" class="form-label">L</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="residential_met_mobilus_e" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="residential_met_mobilus_e" class="ml-2" value="0">
                             <label for="residential_met_mobilus" class="form-label">Unlimited</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="residential_met_mobilus_f" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="residential_met_mobilus_f" class="ml-2" value="0">
                             <label for="residential_met_mobilus" class="form-label"> Unlimited Premium</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="checkbox" name="residential_met_mobilus_limit_full_g" class="ml-2"
-                                value="0" required>
+                                value="0">
                             <label for="residential_met_mobilus_limit_full" class="form-label"> met Mobilus
                                 FullControl</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="checkbox" name="residential_met_mobilus_limit_full_h" class="ml-2"
-                                value="1" required>
+                                value="1">
                             <label for="residential_met_mobilus_limit_full" class="form-label"> S </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="checkbox" name="residential_met_mobilus_limit_full_i" class="ml-2"
-                                value="2" required>
+                                value="2">
                             <label for="residential_met_mobilus_limit_full" class="form-label"> M</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
                             <input type="checkbox" name="residential_met_mobilus_limit_full" class="ml-2"
-                                value="3" required>
+                                value="3">
                             <label for="residential_met_mobilus_limit_full" class="form-label">L</label>
                         </div>
 
@@ -1521,17 +1485,17 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="epic_offer_a" class="ml-2" value="3" required>
+                            <input type="checkbox" name="epic_offer_a" class="ml-2" value="3">
                             <label for="epic_offer" class="form-label">Epic stories</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="epic_offer_b" class="ml-2" value="4" required>
+                            <input type="checkbox" name="epic_offer_b" class="ml-2" value="4">
                             <label for="epic_offer" class="form-label">Epic videos</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="epic_offer_c" class="ml-2" value="5" required>
+                            <input type="checkbox" name="epic_offer_c" class="ml-2" value="5">
                             <label for="epic_offer" class="form-label">Epic Beats</label>
                         </div>
 
@@ -1602,34 +1566,34 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="bizz_mobile_size_p_i_1" class="ml-2" value="8" required>
+                            <input type="checkbox" name="bizz_mobile_size_p_i_1" class="ml-2" value="8">
                             <label for="bizz_mobile_size_p_i" class="form-label">S
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="bizz_mobile_size_p_i_2" class="ml-2" value="7" required>
+                            <input type="checkbox" name="bizz_mobile_size_p_i_2" class="ml-2" value="7">
                             <label for="bizz_mobile_size_p_i" class="form-label">M
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="bizz_mobile_size_p_i_3" class="ml-2" value="6" required>
+                            <input type="checkbox" name="bizz_mobile_size_p_i_3" class="ml-2" value="6">
                             <label for="bizz_mobile_size_p_i" class="form-label">L
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="bizz_mobile_size_p_i_4" class="ml-2" value="5" required>
+                            <input type="checkbox" name="bizz_mobile_size_p_i_4" class="ml-2" value="5">
                             <label for="bizz_mobile_size_p_i" class="form-label">Unlimited
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="bizz_mobile_size_p_i_5" class="ml-2" value="4" required>
+                            <input type="checkbox" name="bizz_mobile_size_p_i_5" class="ml-2" value="4">
                             <label for="bizz_mobile_size_p_i" class="form-label">5G International
                             </label>
                         </div>
@@ -1642,40 +1606,45 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="0" required>
+                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="0">
                             <label for="joint_data_offer_p_i" class="form-label">Special Deal (0 MB) € 0/maand
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="1" required>
-                            <label for="joint_data_offer_p_i" class="form-label">DataPhone (500 MB) €4,13/maand excl.
-                                btw
+                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="1>
+                                                                                                <label for="
+                                joint_data_offer_p_i" class="form-label">DataPhone
+                            (500
+                            MB)
+                            €4,13/maand
+                            excl.
+                            btw
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="2" required>
+                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="2">
                             <label for="joint_data_offer_p_i" class="form-label">DataPhone (1 GB) €8,26/maand excl. btw
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="3" required>
+                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="3">
                             <label for="joint_data_offer_p_i" class="form-label">DataPhone (1,5GB) €12,40/maand excl.
                                 btw
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="4" required>
+                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="4">
                             <label for="joint_data_offer_p_i" class="form-label">DataPhone (2 GB) € 16,53/maand excl.
                                 btw
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="5" required>
+                            <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="5">
                             <label for="joint_data_offer_p_i" class="form-label">DataPhone (2,5 GB) € 20,66/maand excl.
                                 btw
                             </label>
@@ -1704,7 +1673,7 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="1" required>
+                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="1">
                             <label for="mobile_social_apps_p_i" class="form-label">
 
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
@@ -1714,17 +1683,16 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="2" required>
-                            <label for="mobile_social_apps_p_i" class="form-label">
+                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="2" <label
+                                for="mobile_social_apps_p_i" class="form-label">
 
-                                <img class="mt-3" style="text-align: center; margin:0 auto;"
-                                    class="img-responsive" src="{{ asset('images/brands/instagram.png') }}"
-                                    height="25px" width="25px" alt="">
+                            <img class="mt-3" style="text-align: center; margin:0 auto;" class="img-responsive"
+                                src="{{ asset('images/brands/instagram.png') }}" height="25px" width="25px" alt="">
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="3" required>
+                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="3">
                             <label for="mobile_social_apps_p_i" class="form-label">
 
                                 <img class="mt-3" style="text-align: center; margin:0 auto;"
@@ -1736,7 +1704,7 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="4" required>
+                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="4">
                             <label for="mobile_social_apps_p_i" class="form-label">
 
 
@@ -1748,7 +1716,7 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="5" required>
+                            <input type="radio" name="mobile_social_apps_p_i" class="ml-2" value="5">
                             <label for="mobile_social_apps_p_i" class="form-label">
 
 
@@ -1763,8 +1731,7 @@
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="bizz_international_options_a" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="bizz_international_options_a" class="ml-2" value="0">
                             <label for="bizz_international_options" class="form-label">Optie Bizz International met
                                 Bizz
                                 Mobile
@@ -1773,15 +1740,13 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="bizz_international_options_b" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="bizz_international_options_b" class="ml-2" value="1">
                             <label for="bizz_international_options" class="form-label"> Mobile Coverage Extender
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="bizz_international_options_c" class="ml-2" value="2"
-                                required>
+                            <input type="checkbox" name="bizz_international_options_c" class="ml-2" value="2">
                             <label for="bizz_international_options" class="form-label">Smartphone Omnium
 
                             </label>
@@ -1796,14 +1761,14 @@
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="bizz_switch_i_a" class="ml-2" value="0" required>
+                            <input type="checkbox" name="bizz_switch_i_a" class="ml-2" value="0">
                             <label for="bizz_switch_i" class="form-label">Bizz Office Switch
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="bizz_switch_i_b" class="ml-2" value="1" required>
+                            <input type="checkbox" name="bizz_switch_i_b" class="ml-2" value="1">
                             <label for="bizz_switch_i" class="form-label">Bizz Mobile Switch
 
                             </label>
@@ -1824,14 +1789,14 @@
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="second_number_radio" class="ml-2" value="0" required>
+                            <input type="radio" name="second_number_radio" class="ml-2" value="0">
                             <label for="second_number_radio" class="form-label"> Privé of
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="second_number_radio" class="ml-2" value="1" required>
+                            <input type="radio" name="second_number_radio" class="ml-2" value="1">
                             <label for="second_number_radio" class="form-label">Professioneel
 
                             </label>
@@ -1850,16 +1815,14 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_internet_i_size_1" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="mobile_internet_i_size_1" class="ml-2" value="1">
                             <label for="mobile_internet_i_size" class="form-label">S
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="mobile_internet_i_size_2" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="mobile_internet_i_size_2" class="ml-2" value="1">
                             <label for="mobile_internet_i_size" class="form-label">M
 
                             </label>
@@ -1890,56 +1853,56 @@
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="voice_data_sms_1" class="ml-2" value="0" required>
+                            <input type="checkbox" name="voice_data_sms_1" class="ml-2" value="0">
                             <label for="voice_data_sms" class="form-label">Daily Travel Passport
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="voice_data_sms_2" class="ml-2" value="1" required>
+                            <input type="checkbox" name="voice_data_sms_2" class="ml-2" value="1">
                             <label for="voice_data_sms" class="form-label">1-Month Travel Passport Top 3
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="voice_data_sms_3" class="ml-2" value="2" required>
+                            <input type="checkbox" name="voice_data_sms_3" class="ml-2" value="2">
                             <label for="voice_data_sms" class="form-label">1-Month Travel Passport Top
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="voice_data_sms_4" class="ml-2" value="3" required>
+                            <input type="checkbox" name="voice_data_sms_4" class="ml-2" value="3">
                             <label for="voice_data_sms" class="form-label">Travel Passport Top
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="voice_data_sms_5" class="ml-2" value="4" required>
+                            <input type="checkbox" name="voice_data_sms_5" class="ml-2" value="4">
                             <label for="voice_data_sms" class="form-label">Travel Passport Top Intense
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="voice_data_sms_6" class="ml-2" value="5" required>
+                            <input type="checkbox" name="voice_data_sms_6" class="ml-2" value="5">
                             <label for="voice_data_sms" class="form-label">Travel Passport Outside EU&Top
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="voice_data_sms_7" class="ml-2" value="6" required>
+                            <input type="checkbox" name="voice_data_sms_7" class="ml-2" value="6">
                             <label for="voice_data_sms" class="form-label">Travel Passport World
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="checkbox" name="voice_data_sms_8" class="ml-2" value="7" required>
+                            <input type="checkbox" name="voice_data_sms_8" class="ml-2" value="7">
                             <label for="voice_data_sms" class="form-label"> Calls&SMS to EU, US, CA, CH
 
                             </label>
@@ -1954,21 +1917,21 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="voice_i_1" class="ml-2" value="0" required>
+                            <input type="checkbox" name="voice_i_1" class="ml-2" value="0">
                             <label for="voice_i" class="form-label">Bizz International
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="voice_i_2" class="ml-2" value="1" required>
+                            <input type="checkbox" name="voice_i_2" class="ml-2" value="1">
                             <label for="voice_i" class="form-label"> Travel World for Business
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="checkbox" name="voice_i_3" class="ml-2" value="2" required>
+                            <input type="checkbox" name="voice_i_3" class="ml-2" value="2">
                             <label for="voice_i" class="form-label"> Bizz No Limit International
 
                             </label>
@@ -1981,28 +1944,28 @@
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="data_i_1" class="ml-2" value="0" required>
+                            <input type="checkbox" name="data_i_1" class="ml-2" value="0">
                             <label for="data_i" class="form-label"> Daily Travel Surf
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="data_i_2" class="ml-2" value="1" required>
+                            <input type="checkbox" name="data_i_2" class="ml-2" value="1">
                             <label for="data_i" class="form-label"> Travel Surf Top
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="data_i_3" class="ml-2" value="2" required>
+                            <input type="checkbox" name="data_i_3" class="ml-2" value="2">
                             <label for="data_i" class="form-label"> Travel Surf Top Intense
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="checkbox" name="data_i_4" class="ml-2" value="3" required>
+                            <input type="checkbox" name="data_i_4" class="ml-2" value="3">
                             <label for="data_i" class="form-label"> Travel Surf World
 
                             </label>
@@ -2012,7 +1975,7 @@
 
                         <div class="mb-2 mt-5   col-md-12">
 
-                            <input type="checkbox" name="data_i_5" class="ml-2" value="4" required>
+                            <input type="checkbox" name="data_i_5" class="ml-2" value="4">
                             <label for="data_i" class="form-label">Travel Surf World Intense
                                 nb: Standaardoptie: Mobile Internet Travel Access - Volume
 
@@ -2041,8 +2004,7 @@
 
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="is_connection_present_in_house" class="ml-2" value="1"
-                                required>
+                            <input type="radio" name="is_connection_present_in_house" class="ml-2" value="1">
                             <label for="is_connection_present_in_house" class="form-label"> Neen
 
                             </label>
@@ -2062,13 +2024,13 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="mobile_modem_config_type" class="ml-2" value="1" required>
+                            <input type="radio" name="mobile_modem_config_type" class="ml-2" value="1">
                             <label for="mobile_modem_config_type" class="form-label">B-box3
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="mobile_modem_config_type" class="ml-2" value="2" required>
+                            <input type="radio" name="mobile_modem_config_type" class="ml-2" value="2">
                             <label for="mobile_modem_config_type" class="form-label"> Huur Hd-decoder - zonder harde
                                 schijf
 
@@ -2106,20 +2068,20 @@
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="device_delivery_type" class="ml-2" value="3" required>
+                            <input type="radio" name="device_delivery_type" class="ml-2" value="3">
                             <label for="device_delivery_type" class="form-label">Meegenomen
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="device_delivery_type" class="ml-2" value="4" required>
+                            <input type="radio" name="device_delivery_type" class="ml-2" value="4">
                             <label for="device_delivery_type" class="form-label">Thuislevering
                             </label>
                         </div>
 
                         <div class="mb-2 mt-5   col-md-8">
 
-                            <input type="radio" name="other_delivery_type_radio" class="ml-2" value="0" required>
+                            <input type="radio" name="other_delivery_type_radio" class="ml-2" value="0">
                             <label for="other_delivery_type" class="form-label">Ander afhaalpunt
                             </label>
                             <input type="other_delivery_type"
