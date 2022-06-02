@@ -1539,22 +1539,22 @@
 
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer" class="ml-2" value="5" required>
+                            <input type="radio" name="joint_data_offer" class="ml-2" value="5">
                             <label for="joint_data_offer" class="form-label">DataPhone (2,5 GB): €25/maand</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer" class="ml-2" value="6" required>
+                            <input type="radio" name="joint_data_offer" class="ml-2" value="6">
                             <label for="joint_data_offer" class="form-label">Mobile 10</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer" class="ml-2" value="7" required>
+                            <input type="radio" name="joint_data_offer" class="ml-2" value="7">
                             <label for="joint_data_offer" class="form-label">Mobile Coverage Extender</label>
                         </div>
                         <div class="mb-2 mt-5   col-md-4">
 
-                            <input type="radio" name="joint_data_offer" class="ml-2" value="8" required>
+                            <input type="radio" name="joint_data_offer" class="ml-2" value="8">
                             <label for="joint_data_offer" class="form-label">Smartphone Omnium
                             </label>
                         </div>
@@ -1613,7 +1613,7 @@
                         <div class="mb-2 mt-5   col-md-4">
 
                             <input type="radio" name="joint_data_offer_p_i" class="ml-2" value="1>
-                                                                                                <label for="
+                                                                                                            <label for="
                                 joint_data_offer_p_i" class="form-label">DataPhone
                             (500
                             MB)
@@ -2341,18 +2341,6 @@
 
                         <button class="btn btn-primary mb-2 mt-3">Submit</button>
                         <button class="btn btn-secondary mb-2 mt-3 ml-3">Cancel</button>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

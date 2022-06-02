@@ -198,7 +198,7 @@ class ProximusConnectionRequestFRController extends Controller
         $data = $request->all();
         $data = $orange = ProximusConnectionRequestFR::create($data);
 
-        $pdf = new Pdf(public_path('unfilled_forms/proximus/connection_request_fr/FCR17.pdf'), [
+        $pdf = new Pdf(public_path('unfilled_forms/proximus/connection_request_fr/FCR21.pdf'), [
 
             'command' => 'C:\Program Files (x86)\PDFtk Server\bin\pdftk.exe',
 

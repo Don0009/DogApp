@@ -40,7 +40,7 @@ class ProximusConnectionRequestFrExtend extends Migration
             $table->longText('extra_gb_packs_2_c')->nullable();
             $table->longText('extra_gb_packs_2_a')->nullable();
 
-
+            $table->longText('other_options_packages_1')->nullable();
             $table->longText('other_options_packages_2')->nullable();
             $table->longText('other_options_packages_3')->nullable();
             $table->longText('other_options_packages_4')->nullable();
@@ -49,7 +49,7 @@ class ProximusConnectionRequestFrExtend extends Migration
             $table->longText('other_options_packages_7')->nullable();
             $table->longText('other_options_packages_8')->nullable();
 
-
+            $table->longText('internet_types_1')->nullable();
             $table->longText('internet_types_2')->nullable();
             $table->longText('internet_types_3')->nullable();
             $table->longText('internet_types_4')->nullable();
@@ -59,6 +59,10 @@ class ProximusConnectionRequestFrExtend extends Migration
             $table->longText('internet_types_8')->nullable();
 
             $table->longText('met_mobilus_options_4')->nullable();
+            $table->longText('met_mobilus_options_1')->nullable();
+            $table->longText('met_mobilus_options_2')->nullable();
+            $table->longText('met_mobilus_options_3')->nullable();
+
 
             $table->longText('mobilus_full_control_options_1')->nullable();
             $table->longText('mobilus_full_control_options_2')->nullable();
@@ -109,21 +113,23 @@ class ProximusConnectionRequestFrExtend extends Migration
 
 
             $table->longText('smart_services_text');
-            $table->longText('mob_tele_pack_type_e')->nullable();
+
             $table->longText('mob_tele_pack_type')->nullable();
 
 
             $table->longText('payngo_text')->nullable();
-            $table->longText('residential_met_mobilus_a')->nullable();
-            $table->longText('residential_met_mobilus_b')->nullable();
-            $table->longText('residential_met_mobilus_c')->nullable();
-            $table->longText('residential_met_mobilus_d')->nullable();
-            $table->longText('residential_met_mobilus_e')->nullable();
-            $table->longText('residential_met_mobilus_f')->nullable();
+            $table->longText('residential_met_mobilus_1')->nullable();
+            $table->longText('residential_met_mobilus_2')->nullable();
+            $table->longText('residential_met_mobilus_3')->nullable();
+            $table->longText('residential_met_mobilus_4')->nullable();
+            $table->longText('residential_met_mobilus_5')->nullable();
+            $table->longText('residential_met_mobilus_6')->nullable();
 
-            $table->longText('residential_met_mobilus_limit_full_g')->nullable();
-            $table->longText('residential_met_mobilus_limit_full_h')->nullable();
-            $table->longText('residential_met_mobilus_limit_full_i')->nullable();
+            $table->longText('residential_met_mobilus_limit_full_1')->nullable();
+            $table->longText('residential_met_mobilus_limit_full_2')->nullable();
+            $table->longText('residential_met_mobilus_limit_full_3')->nullable();
+            $table->longText('residential_met_mobilus_limit_full_4')->nullable();
+
 
             $table->longText('joint_data_offer_a')->nullable();
             $table->longText('joint_data_offer_c')->nullable();
@@ -136,6 +142,8 @@ class ProximusConnectionRequestFrExtend extends Migration
             $table->longText('bizz_international_options_a')->nullable();
             $table->longText('bizz_international_options_b')->nullable();
             $table->longText('bizz_international_options_c')->nullable();
+            $table->longText('address_choose_m_text');
+
             $table->longText('second_number_text');
             $table->longText('international_rome_text');
 
@@ -248,10 +256,18 @@ class ProximusConnectionRequestFrExtend extends Migration
             // Mobile _ Telephone I
 
 
-            $table->longText('mob_tele_pack_type_a')->nullable();
-            $table->longText('mob_tele_pack_type_b')->nullable();
-            $table->longText('mob_tele_pack_type_c')->nullable();
-            $table->longText('mob_tele_pack_type_d')->nullable();
+            $table->longText('mob_tele_pack_type_1')->nullable();
+            $table->longText('mob_tele_pack_type_2')->nullable();
+            $table->longText('mob_tele_pack_type_3')->nullable();
+            $table->longText('mob_tele_pack_type_4')->nullable();
+            $table->longText('mob_tele_pack_type_5')->nullable();
+            $table->longText('mob_tele_pack_type_6')->nullable();
+            $table->longText('mob_tele_pack_type_7')->nullable();
+            $table->longText('mob_tele_pack_type_8')->nullable();
+            $table->longText('existing_proximus_customer_text');
+
+
+
 
             $table->longtext('payngo_radio');
            // $table->longtext('payngo_string');
@@ -273,9 +289,9 @@ class ProximusConnectionRequestFrExtend extends Migration
 
             $table->string('residential_met_mobilus_limit_full')->nullable();
             $table->text('mobile_social_app');
-            $table->text('epic_offer_a')->nullable();
-            $table->text('epic_offer_b')->nullable();
-            $table->text('epic_offer_c')->nullable();
+            $table->text('epic_offer_1')->nullable();
+            $table->text('epic_offer_2')->nullable();
+            $table->text('epic_offer_3')->nullable();
 
             $table->string('joint_data_offer');
 

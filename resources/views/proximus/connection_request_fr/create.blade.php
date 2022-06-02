@@ -1742,23 +1742,20 @@
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="bizz_international_options" class="ml-2" value="0"
-                                required>
+                            <input type="checkbox" name="bizz_international_options_a" class="ml-2" value="0">
                             <label for="bizz_international_options" class="form-label">Option Bizz International (avec
                                 Bizz Mobile L, Unlimited & International)
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="bizz_international_options" class="ml-2" value="1"
-                                required>
+                            <input type="checkbox" name="bizz_international_options_b" class="ml-2" value="1">
                             <label for="bizz_international_options" class="form-label"> Mobile Coverage Extender
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-3">
 
-                            <input type="radio" name="bizz_international_options" class="ml-2" value="2"
-                                required>
+                            <input type="checkbox" name="bizz_international_options_c" class="ml-2" value="2">
                             <label for="bizz_international_options" class="form-label">Smartphone Omnium
 
                             </label>
@@ -1773,14 +1770,14 @@
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="bizz_switch_i" class="ml-2" value="0">
+                            <input type="radio" name="bizz_switch_i_a" class="ml-2" value="0">
                             <label for="bizz_switch_i" class="form-label">Bizz Office Switch
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="bizz_switch_i" class="ml-2" value="1">
+                            <input type="radio" name="bizz_switch_i_b" class="ml-2" value="1">
                             <label for="bizz_switch_i" class="form-label">Bizz Mobile Switch
 
                             </label>
@@ -1956,29 +1953,29 @@
 
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="data_i_1" class="ml-2" value="0">
+                            <input type="checkbox" name="data_i_1" class="ml-2" value="0">
                             <label for="data_i" class="form-label"> Daily Travel Surf
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="data_i_2" class="ml-2" value="1">
+                            <input type="checkbox" name="data_i_2" class="ml-2" value="1">
                             <label for="data_i" class="form-label"> Travel Surf Top
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="data_i_3" class="ml-2" value="2">
+                            <input type="checkbox" name="data_i_3" class="ml-2" value="2">
                             <label for="data_i" class="form-label"> Travel Surf Top Intense
 
                             </label>
                         </div>
                         <div class="mb-2 mt-5   col-md-6">
 
-                            <input type="radio" name="data_i_4" class="ml-2" value="3">
-                            <label for="data_i class="   form-label"> Travel Surf World
+                            <input type="checkbox" name="data_i_4" class="ml-2" value="3">
+                            <label for="data_i class="        form-label"> Travel Surf World
 
                             </label>
                         </div>
@@ -1987,7 +1984,7 @@
 
                         <div class="mb-2 mt-5   col-md-12">
 
-                            <input type="radio" name="data_i_5" class="ml-2" value="4">
+                            <input type="checkbox" name="data_i_5" class="ml-2" value="4">
                             <label for="data_i" class="form-label">Travel Surf World Intense
                                 nb: Standaardoptie: Mobile Internet Travel Access - Volume
 
@@ -2282,7 +2279,7 @@
                                 class="form-control @error('address_choose_m_text') is-invalid @enderror"
                                 id="address_choose_m" autocomplete="off"
                                 placeholder="sous mon adresse de facturation
-                                                                                                                                                                                                                dans la catégorie professionnelle (facultatif)"
+                                                                                                                                                                                                                                    dans la catégorie professionnelle (facultatif)"
                                 name="address_choose_m_text" value="{{ old('address_choose_m_text') }}" required>
                             @error('address_choose_m_text')
                                 <span class="invalid-feedback mb-2" role="alert">
