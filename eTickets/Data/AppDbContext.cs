@@ -5,12 +5,9 @@ using System.Threading.Tasks;
 
 namespace eTickets.Data
 {
-    public enum MovieCategory
+    public class AppDbContext:Dbcontext
 
     {
-        Action =1,
-        Drama,
-        Comedy,
-        Documentry,
+
     }
 }
