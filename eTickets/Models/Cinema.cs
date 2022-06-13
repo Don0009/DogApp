@@ -20,6 +20,6 @@ namespace eTickets.Models
 
         // Relationships
 
-        public List<Movie> Movie { get; set; }
+        public List<Movie> Movies { get; set; }
     }
 }
