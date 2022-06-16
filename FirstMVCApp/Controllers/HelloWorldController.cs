@@ -20,7 +20,7 @@ namespace FirstMVCApp.Controllers
             return View(dogVm);
         }
 
-       
+        // for the form
 
         public IActionResult CreateDog(DogViewModel dogViewModel)
         {
