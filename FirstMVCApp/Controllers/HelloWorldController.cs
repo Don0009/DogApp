@@ -10,11 +10,8 @@ namespace FirstMVCApp.Controllers
         private static List<DogViewModel> dogs = new List<DogViewModel>();
         public IActionResult Index()
         {
-           
-
+          
              return View(dogs);
-
-
         }
 
         public IActionResult Create()
@@ -23,11 +20,10 @@ namespace FirstMVCApp.Controllers
             return View(dogVm);
         }
 
-        // for the form
+       
 
         public IActionResult CreateDog(DogViewModel dogViewModel)
         {
-            //return View("Index");
             dogs.Add(dogViewModel); 
             return RedirectToAction(nameof(Index));
 
