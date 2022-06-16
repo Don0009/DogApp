@@ -1,0 +1,15 @@
+﻿@model List<FirstMVCApp.Models.DogViewModel>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<p>This is ithe index page of the Hello World Controller</p>
+
+<ul>@foreach (var dog in Model)
+{
+    <li>@dog.Name (@dog.Age)</li>
+}</ul>
+
